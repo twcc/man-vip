@@ -1,5 +1,5 @@
 ---
-title: HFS 高速儲存服務
+title: HFS 高速檔案系統
 tags: Guide, HFS, TW
 GA: UA-155999456-1
 ---
