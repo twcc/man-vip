@@ -5,6 +5,7 @@ GA: UA-155999456-1
 ---
 
 {%hackmd @docsharedstyle/default %}
+
 :::warning
 <i class="fa fa-bullhorn" aria-hidden="true"></i> 若您的 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh)不適用以下畫面或流程，請 <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>點擊此連結</ins>](https://man.twcc.ai/@twsdocs/guide-hfs-zh) 參考操作說明。
 :::
@@ -15,75 +16,91 @@ GA: UA-155999456-1
 
 ## HFS 簡介
 
-### 可使用 HFS 的服務項目 
+### 空間資訊
 
-在 [TWCC](http://www.twcc.ai) 上 HFS 會被同時掛載到所有 GPU 節點的相同目錄下，因此，當使用者透過檔案傳輸節點將檔案上傳至 HFS 後，即可透過 [TWCC](http://www.twcc.ai) 提供的**開發型容器服務**、**任務型容器服務**及 **HPC 高速運算任務服務 (網頁介面、命令列介面)** 存取 HFS 檔案系統中的內容。此三項服務的預設儲存系統為 HFS，因此一連線容器、HPC 高速運算任務，就可以直接使用 HFS 的資料。
+註冊 TWCC 會員後，即提供用戶存取 HFS 檔案傳輸節點（data transfer node）的服務，並掛載 /home 與 /work 兩個路徑，提供免費儲存空間，您可以搭配上述運算服務使用。
 
-### HFS 檔案傳輸節點資訊
-
-本服務提供一個 HFS 檔案傳輸節點（data transfer node），並掛載 /home 與 /work 兩個路徑。系統提供的 HFS 檔案傳輸節點、掛載路徑與免費配額等資訊如下，未來如空間不敷使用時，亦可到 [Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 購買擴充。
-
-:::info
-:paperclip: **附註：** 購買價格與調整方式請參考[<ins>價目表</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS)
-:::
-
+HFS 檔案傳輸節點、掛載路徑與免費配額等資訊如下：
 
 
 | 項目 | 內容 |
 | -------- | -------- |
-| HFS 傳輸節點|xdata1.twcc.ai| 
+| HFS 檔案傳輸節點|xdata1.twcc.ai| 
 | HFS 埠號| 22|
 
 
-|掛載路徑|免費配額大小|
+|掛載路徑|免費配額容量|
  | -------- |-------- |
 |/home/<主機帳號名稱>|100 GB|
 |/work/<主機帳號名稱>|100 GB|
 
+:::info
 
-## 使用 SFTP + Filezilla 傳輸檔案
+{%hackmd @docsharedstyle/note-zh %}
 
-使用主機帳號登入 HFS 檔案傳輸節點，可將檔案以 SFTP 協定上傳至 HFS 檔案系統中，亦可將檔案從 HFS 中下載到本地端。以下範例說明如何使用 SFTP 上傳檔案。
+如空間不敷使用時，您可以到 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 購買擴充。購買價格與調整方式請參考[<ins>價目表</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS)。
+:::
 
-以下以 Windows 作業系統 + [FileZilla](https://filezilla-project.org) 為例 (macOS 也是類似的操作步驟)
+### 可搭配使用的運算服務
 
-### Step 1. 連線、登入服務 
+在 [TWCC](http://www.twcc.ai) 上 HFS 會被同時掛載到所有 GPU 節點的相同目錄下，因此，當使用者透過檔案傳輸節點將檔案上傳至 HFS 後，即可透過 [TWCC](http://www.twcc.ai) 提供的**開發型容器服務**、**任務型容器服務**及 **HPC 高速運算任務、台灣杉二號(命令列介面)** 存取 HFS 檔案系統中的內容。
 
-- TWCC 開發型容器服務的使用者，可透過 Jupyter Notebook 或 SSH 連線容器
-- TWCC 任務型容器、HPC (網頁介面、命令列介面) 的使用者，可透過 HPC (命令列介面) 登入節點
 
 :::info
-:paperclip: **附註：** 
-登入方法參見：
-- [開發型容器](https://www.twcc.ai/doc?page=container&euqinu=true#%E9%80%A3%E7%B7%9A%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F) - 連線使用方式
-- [HPC (命令列介面)](https://man.twcc.ai/s/B15nJXe-B#2-%E7%99%BB%E5%85%A5%E3%80%8C%E7%99%BB%E5%85%A5%E7%AF%80%E9%BB%9E%E3%80%8D) - 登入「登入節點」
+
+{%hackmd @docsharedstyle/note-zh %}
+此四項服務的預設儲存系統為 HFS，因此連線後即可直接使用 HFS 之資料，**無需先**[<ins>連線檔案傳輸節點</ins>](#連線檔案傳輸節點)。
+:::
+
+## 連線檔案傳輸節點
+
+您可以透過以下使用「**金鑰**」或「**主機密碼 + OTP 認證碼**」的方式連線傳輸節點。
+
+連線檔案傳輸節點，進入 HFS 空間後，您可將檔案透過 SFTP 協定上傳至 HFS 空間中，亦可將檔案從 HFS 下載到本地端。
+
+
+<!-- 1 start -->
+
+<details class="docspoiler">
+
+<summary><b>1. 使用金鑰連線</b></summary>
+
+以下以 Windows 作業系統 + [<ins>FileZilla</ins>](https://filezilla-project.org) 為例 (macOS 也是類似的操作步驟)
+
+### Step 1. 連線運算服務 
+
+- TWCC 開發型容器服務的使用者，可透過 Jupyter Notebook 或 SSH 連線容器
+- TWCC 任務型容器、高速運算任務、台灣杉二號 (命令列介面)的使用者，可透過 台灣杉二號 (命令列介面) 登入節點
+
+:::info
+{%hackmd @docsharedstyle/note-zh %}
+
+連線方法參見：
+- [<ins>開發型容器</ins>](https://www.twcc.ai/doc?page=container&euqinu=true#%E9%80%A3%E7%B7%9A%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F) - 連線使用方式
+- [<ins>台灣杉二號 (命令列介面)</ins>](https://man.twcc.ai/s/B15nJXe-B#2-%E7%99%BB%E5%85%A5%E3%80%8C%E7%99%BB%E5%85%A5%E7%AF%80%E9%BB%9E%E3%80%8D) - 連線「登入節點」
 :::
 
 ### Step 2. 儲存 SSH 私密金鑰至本機
 
 - 登入後，輸入以下指令讀取 SSH 私密金鑰
 
-```bash=
- cat ~/.ssh/id_dsa
+```bash
+$ cat ~/.ssh/id_dsa
 ```
 - 以登入 TWCC 開發型容器 Jupyter -> Terminal 為例
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0ce21b053250616fd41773cfbc967439.png)
 
 
-
-- 以登入 TWCC HPC login node ln01.twcc.ai 為例
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f3a72aa7738fe630090f7f771a0e88a9.png)
-
-
 - 儲存 SSH 私密金鑰到本機，複製紅色部分全部，開啟記事本貼上 (需包含頭尾資訊)
 
 :::info
-:paperclip: **附註：** macOS：可使用「文字編輯」軟體
+{%hackmd @docsharedstyle/note-zh %}
+
+macOS：可使用「文字編輯」軟體
 :::
    
-```bash=
+```bash
 -----BEGIN DSA PRIVATE KEY----- (這行也需複製)
 ...
 ...
@@ -93,7 +110,7 @@ GA: UA-155999456-1
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e417c2dcdb8ba67f5e68fdefb344b739.png)
 
 
-- 將記事本存檔：檔案位置與檔案名稱不限，副檔名需為`.ppk`，存檔類型請改為`所有檔案`。
+- 將記事本存檔：檔案位置與檔案名稱不限，副檔名需為 **`.ppk`**，存檔類型請改為 **`所有檔案`**。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_688acdfd3df164086cbc28988fcbfabb.png)
 
@@ -119,16 +136,77 @@ GA: UA-155999456-1
 
 
 
-- 登入成功後，右側「遠端站台」即為 HFS 檔案系統內之資料，左側「本機站台」為您本機的資料。
+</details>
+
+<!-- Space -->
+
+<div style="height:8px"></div>
+
+<!-- 2. start -->
+
+<details class="docspoiler">
+
+<summary><b>2. 使用主機密碼 + OTP 連線 </b></summary>
+
+
+除上述使用金鑰的登入方式，HFS 也可使用 `密碼 + OTP` 之方式登入，請參考下方說明：
+
+### Step 1. 下載支援 SFTP 連線並可兩段式驗證的軟體
+
+請下載安裝支援 SFTP 連線並可兩段式驗證的軟體 (例：[Filezilla](https://filezilla-project.org/)、[Cyberduck](https://cyberduck.io/download/)、[WinSCP](https://winscp.net/eng/download.php)...等)。
+
+### Step 2. 連線檔案傳輸節點
+
+以下以 [<ins>Filezilla</ins>](https://filezilla-project.org/) 為操作示範，開啟軟體後：
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e397c6423a00d4dada44e7f48f4201e4.png)
+
+1. 開啟左上「**站台管理員**」
+2. 協定：選擇 「**SFTP- SSH File Transfer Protocol**」
+3. 主機：輸入 「**xdata1.twcc.ai**」
+4. 登入型式： 選擇「**交談式**」
+5. 使用者：輸入您的主機帳號 
+6. 點選「**連線**」
+
+### Step 3. 輸入主機密碼及 OTP 
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_680e201882bdd5edae52e0819cd7492b.png)
+
+7. 輸入您的主機密碼
+8. 點選「**連線**」 
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a89fa3be8529464a6b97be3f3979efdd.png)
+
+9. 輸入「**OTP**」 
+10. 點選「**連線**」
+
+
+:::info
+
+{%hackmd @docsharedstyle/note-zh %}
+
+1. [<ins>忘記主機帳號？</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC)
+2. [<ins>忘記密碼？</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC)
+3. [<ins>如何取得 OTP？</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC)
+:::
+
+
+</details>
+
+<br>
+
+- 連線成功後，右側「遠端站台」即為 HFS 檔案系統內之資料，左側「本機站台」為您本機的資料。
 - 預設目錄即為使用者的 /home 目錄，下方為 /home 目錄底下的資料。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e69ea54b6ed112035eeee732fdda0016.png)
 
+<br>
 
+## 檔案管理
 
-### Step 4. 檔案管理
+以下檔案管理之操作方式以 Filzilla 範例，若您使用其他軟體連線，再請依該軟體之操作方式進行。
 
-#### 切換目錄
+### 1. 切換目錄
 
 - 於「遠端站台」將路徑「home」改為「work」即可將目錄切換至 /work 目錄
 
@@ -136,8 +214,7 @@ GA: UA-155999456-1
 
 
 
-
-#### 上傳與下載檔案
+### 2. 上傳與下載檔案
 
 - 可以「拖曳的方式」將本機檔案上傳至 HFS，或由 HFS 下載檔案至本機
 - 左下方提供資料傳輸的資訊
@@ -145,8 +222,7 @@ GA: UA-155999456-1
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cefd531e8baa06876fae839a389938db.png)
 
 
-
-#### 刪除檔案
+### 3. 刪除檔案
 
 - 對檔案點擊右鍵，選擇「刪除」
 
@@ -154,17 +230,15 @@ GA: UA-155999456-1
 
 
 
-
-#### 新增資料夾
+### 4. 新增資料夾
 
 - 對目錄空白處點擊右鍵，選擇「新增目錄」
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3e84de7c4d35a5bda347e9a16923925a.png)
+</div>
 
 
-
-
-## 查看容量
+### 5. 查看容量
 
 - 登入 TWCC 後，點入「查看服務概況」，即可查看 HFS 儲存容量
 
@@ -176,8 +250,6 @@ GA: UA-155999456-1
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a75b2e797810090b393de250d96dc0ca.png)
 
 
-
-
 ## HFS 空間管理政策
 
 ### 個人及公用磁碟核定空間
@@ -185,8 +257,9 @@ GA: UA-155999456-1
 - /work目錄 ： 每個帳號之公用目錄 (註冊帳號即可獲得 100 GB 免費空間)
 
 :::info
-:paperclip: **附註：** 如不敷使用時，敬請付費提出加大儲存空間之申請（/home、 /work ) ，
-申請說明請參考[<ins>價目表</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS) 
+{%hackmd @docsharedstyle/note-zh %}
+如不敷使用時，敬請付費提出加大儲存空間之申請（/home、 /work ) ，
+申請說明請參考[<ins>價目表</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS)。
 :::
 
 ### 公用磁碟空間管理政策與使用須知
@@ -200,10 +273,12 @@ GA: UA-155999456-1
 - 登入節點與檔案傳輸節點的/tmp 應避免存放重要資料。/tmp 儲存空間內的用戶暫存檔案，存放超過14天(含)以上會被系統自動刪除，當/tmp超過50%使用率時，中心將會通知占用容量的檔案擁有者搬移或刪除。
 
 :::info
-:paperclip: **附註：** 
+
+{%hackmd @docsharedstyle/note-zh %}
+
 查看檔案最後存取時間的指令為：
-```bash=
-ls -ula /path/to/your_scratch_file or directory
+```bash
+$ ls -ula /path/to/your_scratch_file or directory
 ```
 :::
    
