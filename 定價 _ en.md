@@ -426,7 +426,7 @@ deep learning inference performance, and supports NVLink communication to accele
 
 :::info
 <font face="sans-serif, Microsoft JhengHei">
-<SUP>&#8277</SUP><b>GPU Accelerated Computing instances:</b> offer GPUs to perform graphics operations and high-performance computing.</font><br><font face="sans-serif, Microsoft JhengHei" size=2px>
+<SUP>&#8277</SUP><b>GPU Accelerated Computing instances:</b> offer GPUs to perform graphics operations and high-performance computing.</font><br><font face="sans-serif, Microsoft JhengHei">
 How to get GPU resources? See <a href="https://man.twcc.ai/@staging-twccdocs/S1-YNPTL_#%E8%B3%87%E6%BA%90%E9%85%8D%E7%BD%AE%E8%88%87%E7%9B%A3%E6%8E%A7"><ins>FAQ-Resource monitoring & allocation-Q4</ins></a>  for more information.</font>
 :::
 
