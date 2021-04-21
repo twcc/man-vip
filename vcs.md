@@ -713,10 +713,6 @@ Host <INSTANCE_NAME>           #輸入虛擬運算個體的名稱
 
 * 進入虛擬運算個體快照管理頁面，會看到所有快照的列表資訊，最後創建的快照會列在最上面，等到狀態變成 **`ACTIVE`** 後才可以使用。
 * 不需使用的快照，可以點選該快照列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，再選擇「**刪除**」即可。
-    
-:::info 
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 選用此快照建立的虛擬運算個體，必需先删除該個體，才可成功删除此快照。
-:::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4ba238656c93c11c3a03958aee7c4a00.png)
 
@@ -728,7 +724,12 @@ Host <INSTANCE_NAME>           #輸入虛擬運算個體的名稱
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1e725b08b3cecf100723115f8f630eb2.png)
 
+:::info
 
+{%hackmd @docsharedstyle/note-zh %}
+
+選用快照建立虛擬運算個體，為確保個體可完整建立，個體建立中 (**`STARTING`**) 快照將無法刪除 (刪除失敗)。  
+:::
 
 
 # 鑰匙對
