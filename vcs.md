@@ -15,6 +15,11 @@ GA: UA-155999456-1
  
 虛擬運算個體是 TWCC 提供的傳統一般型主機租用服務，可以透過自動化工具及流程進行快速部署及回收，專門處理圖形任務的GPU核心資源，能快速完成大量運算。並可同時掛載多個虛擬磁碟，建立附加 Volume，自由彈性調配個體的儲存空間，為智算兼備、節省成本的最佳選擇。
 
+:::info
+{%hackmd @docsharedstyle/note-zh %}
+
+如何取得 GPU 資源？ 請參考 [<ins>FAQ-資源監控與配置-Q4</ins>](https://man.twcc.ai/@staging-twccdocs/SyaIieaUO#%E8%B3%87%E6%BA%90%E9%85%8D%E7%BD%AE%E8%88%87%E7%9B%A3%E6%8E%A7) 之說明。
+:::
 
 ## 建立虛擬運算個體
 
