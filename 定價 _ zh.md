@@ -427,9 +427,9 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
 
 :::info
 <font face="sans-serif, Microsoft JhengHei">
-<SUP>&#8277</SUP><b>GPU 加速運算個體</b>：提供專門處理圖形任務的 GPU 核心，能快速完成大量運算。</font>
+<SUP>&#8277</SUP><b>GPU 加速運算個體</b>：提供專門處理圖形任務的 GPU 核心，能快速完成大量運算。</font><br><font face="sans-serif, Microsoft JhengHei" size=2px>
+如何取得 GPU 資源？ 請參考 <a href="https://man.twcc.ai/@staging-twccdocs/S1-YNPTL_#%E8%B3%87%E6%BA%90%E9%85%8D%E7%BD%AE%E8%88%87%E7%9B%A3%E6%8E%A7"><ins>FAQ-資源監控與配置-Q4</ins></a> 之說明。</font>
 :::
-
 ---
 
 <font face="sans-serif, Microsoft JhengHei">
