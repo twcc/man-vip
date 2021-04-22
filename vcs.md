@@ -18,7 +18,7 @@ GA: UA-155999456-1
 :::info
 {%hackmd @docsharedstyle/note-zh %}
 
-如何取得 GPU 資源？ 請參考 [<ins>FAQ-資源監控與配置-Q4</ins>](https://man.twcc.ai/N_cq9fL_R3ipGaR7J3UO6A#%E8%B3%87%E6%BA%90%E9%85%8D%E7%BD%AE%E8%88%87%E7%9B%A3%E6%8E%A7) 之說明。
+如何取得 GPU 資源？ 請參考 [<ins>FAQ-資源監控與配置-Q4</ins>](https://man.twcc.ai/@staging-twccdocs/SyaIieaUO#%E8%B3%87%E6%BA%90%E9%85%8D%E7%BD%AE%E8%88%87%E7%9B%A3%E6%8E%A7) 之說明。
 :::
 
 ## 建立虛擬運算個體
