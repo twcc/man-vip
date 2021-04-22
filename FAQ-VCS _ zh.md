@@ -150,6 +150,7 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::
 
+<<<<<<< HEAD
 :::spoiler Q4. 請問該如何取得 GPU 資源？ 
 
 :::info
@@ -158,6 +159,8 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::
 
+=======
+>>>>>>> f1a1dac81ee28948b55e553ad656e4deae4ae95f
 ## 套件軟體
 :::spoiler Q1. 虛擬運算服務是否支援 SMTP？ 
 
