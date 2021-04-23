@@ -1,5 +1,5 @@
 ---
-title: HFS 高速儲存服務
+title: HFS 高速檔案系統
 tags: Guide, HFS, TW
 GA: UA-155999456-1
 ---
@@ -148,7 +148,6 @@ macOS：可使用「文字編輯」軟體
 
 <summary><b>2. 使用主機密碼 + OTP 連線 </b></summary>
 
-
 除上述使用金鑰的登入方式，HFS 也可使用 `密碼 + OTP` 之方式登入，請參考下方說明：
 
 ### Step 1. 下載支援 SFTP 連線並可兩段式驗證的軟體
@@ -159,26 +158,43 @@ macOS：可使用「文字編輯」軟體
 
 以下以 [<ins>Filezilla</ins>](https://filezilla-project.org/) 為操作示範，開啟軟體後：
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e397c6423a00d4dada44e7f48f4201e4.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1224ee0b5e7b5ec0f8733c15c8f67bbb.png)
+
 
 1. 開啟左上「**站台管理員**」
 2. 協定：選擇 「**SFTP- SSH File Transfer Protocol**」
 3. 主機：輸入 「**xdata1.twcc.ai**」
 4. 登入型式： 選擇「**交談式**」
 5. 使用者：輸入您的主機帳號 
-6. 點選「**連線**」
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8785be275b2352339c6959581fc47f07.png)
+
+
+
+6. 點選「**傳輸設定**」
+7. 勾選「**限制同時連線數**」並設定最大連線數「**1**」：避免每次傳輸檔案，需重新輸入 密碼 與 OTP 之步驟。
+
+:::info
+{%hackmd @docsharedstyle/note-zh %}
+
+勾選後，當多檔案進行傳輸時，一次僅能傳輸一個檔案，若使用上不便，建議改用金鑰的方式連線。
+:::
+
+8. 點選「**連線**」
 
 ### Step 3. 輸入主機密碼及 OTP 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_680e201882bdd5edae52e0819cd7492b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_92b59625eba5f2dbaff85d5c2c030e19.png)
 
-7. 輸入您的主機密碼
-8. 點選「**連線**」 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a89fa3be8529464a6b97be3f3979efdd.png)
+9. 輸入您的主機密碼
+10. 點選「**連線**」 
 
-9. 輸入「**OTP**」 
-10. 點選「**連線**」
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7aead02c0c6c3a346672cd55f878fe13.png)
+
+
+11. 輸入「**OTP**」 
+12. 點選「**連線**」
 
 
 :::info
