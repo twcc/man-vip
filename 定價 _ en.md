@@ -322,17 +322,20 @@ A deep learning framework designed for both efficiency and flexibility. It allow
 <br>
 <table class="tg">
    <tr>
-    <th class="tg-kfjo" colspan="9"><h4 style="font-weight:bold">Virtual Compute Service (VCS)</h4><font color=#AE0000 size=0.2>Service for sale soon! For more information, please contact Customer Service.</font></th>
+    <th class="tg-kfjo" colspan="9"><h4 style="font-weight:bold">Virtual Compute Service (VCS)</h4></th>
   </tr>
   <tr>
     <td class="tg-7g7n" colspan="8"><span style="font-style:italic"><ul style="list-style-type:circle;">
-        <li>Supports most common Linux distributions including Ubuntu, CentOS and Windows.</li><li><b>V-series instances</b> are equipped with Intel® Xeon® Gold 61 series processors, the maximum memory speed is up to 2666 MHz.</li><li><b>Vgp-series instances</b> are equipped with 8 NVDIA® P40 GPUs, and each GPU pairs 3,840 CUDA Cores, delivering over 47 TOPS of
-        deep learning inference performance.</li><li><b>Vgv-series instances</b> are equipped with 8 NVIDIA® Tesla V100 GPUs, and each GPU pairs 5,120 CUDA Cores and 640 Tensor Cores, delivering over 5120 TOPS of
-deep learning inference performance, and supports NVLink communication to accelerate AI training, inference and high-performance computing.</li><li>TWCC offers free 100 GB built-in disk space for VCS instances (disappear with instance deletion, but TWCC offers backup service), and you can freely grow your storage with Virtual Disk Service, and flexibly attach additional volumes to instances.</li><li><a href="https://www.twcc.ai/intro/VM"><span style="font-weight:bold;color:rgb(255, 72, 67)"> See more</span></a></td>
+        <li>Supports most common Linux distributions including Ubuntu, CentOS and Windows.</li><li><b>V-series instances</b> are equipped with Intel® Xeon® Gold 61 series processors, the maximum memory speed is up to 2666 MHz.</li>
+<!--         <li><b>Vgp-series instances</b> are equipped with 8 NVDIA® P40 GPUs, and each GPU pairs 3,840 CUDA Cores, delivering over 47 TOPS of
+        deep learning inference performance.</li>
+        <li><b>Vgv-series instances</b> are equipped with 8 NVIDIA® Tesla V100 GPUs, and each GPU pairs 5,120 CUDA Cores and 640 Tensor Cores, delivering over 5120 TOPS of
+deep learning inference performance, and supports NVLink communication to accelerate AI training, inference and high-performance computing.</li> -->
+<li>TWCC offers free 100 GB built-in disk space for VCS instances, and you can freely grow your storage with Virtual Disk Service, and flexibly attach additional volumes to instances. Also, we provide snapshot service for instance image backup and recovery. See <a href="#Virtual-Disk-Service-VDS"><ins>Virtual Disk Service (VDS)</ins></a> for more pricing information.</li><li><a href="https://www.twcc.ai/intro/VM"><span style="font-weight:bold;color:rgb(255, 72, 67)"> See more</span></a></td>
   </tr>
   <tr>
     <td class="tg-y29t">Instance Type</td>
-    <td class="tg-p1ie">GPU (pcs)</td>
+<!--     <td class="tg-p1ie">GPU (pcs)</td> -->
     <td class="tg-y29t">vCPU</td>
     <td class="tg-p1ie">Memory (GB)</td>
     <td class="tg-y29t">HDD (GB)</td>
@@ -342,7 +345,7 @@ deep learning inference performance, and supports NVLink communication to accele
   </tr>
   <tr>
     <td class="tg-8jvv">v.super</td>
-    <td class="tg-d4nv">-</td>
+<!--     <td class="tg-d4nv">-</td> -->
     <td class="tg-8jvv">2</td>
     <td class="tg-d4nv">16</td>
     <td class="tg-8jvv">100</td>
@@ -352,7 +355,7 @@ deep learning inference performance, and supports NVLink communication to accele
   </tr>
   <tr>
     <td class="tg-8jvv">v.xsuper</td>
-    <td class="tg-d4nv">-</td>
+<!--     <td class="tg-d4nv">-</td> -->
     <td class="tg-8jvv">4</td>
     <td class="tg-d4nv">32</td>
     <td class="tg-8jvv">100</td>
@@ -360,7 +363,7 @@ deep learning inference performance, and supports NVLink communication to accele
   </tr>
   <tr>
     <td class="tg-8jvv">v.2xsuper</td>
-    <td class="tg-d4nv">-</td>
+<!--     <td class="tg-d4nv">-</td> -->
     <td class="tg-8jvv">8</td>
     <td class="tg-d4nv">64</td>
     <td class="tg-8jvv">100</td>
@@ -368,7 +371,7 @@ deep learning inference performance, and supports NVLink communication to accele
   </tr>
   <tr>
     <td class="tg-8jvv">v.4xsuper</td>
-    <td class="tg-d4nv">-</td>
+<!--     <td class="tg-d4nv">-</td> -->
     <td class="tg-8jvv">16</td>
     <td class="tg-d4nv">128</td>
     <td class="tg-8jvv">100</td>
@@ -376,7 +379,7 @@ deep learning inference performance, and supports NVLink communication to accele
   </tr>
   <tr>
     <td class="tg-8jvv">v.8xsuper</td>
-    <td class="tg-d4nv">-</td>
+<!--     <td class="tg-d4nv">-</td> -->
     <td class="tg-8jvv">32</td>
     <td class="tg-d4nv">256</td>
     <td class="tg-8jvv">100</td>
@@ -390,7 +393,7 @@ deep learning inference performance, and supports NVLink communication to accele
     <td class="tg-8jvv">100</td>
     <td class="tg-d4nv">81.12</td>
   </tr> -->
-  <tr>
+<!--   <tr>
     <td class="tg-8jvx">vgv.xsuper<SUP>&#8277</SUP></td>
     <td class="tg-d4nx">1</td>
     <td class="tg-8jvx">8</td>
@@ -421,14 +424,14 @@ deep learning inference performance, and supports NVLink communication to accele
     <td class="tg-d4nx">720</td>
     <td class="tg-8jvx">100</td>
     <td class="tg-d4nx">659</td>
-  </tr>
+  </tr> -->
 </table>
 
-:::info
+<!-- :::info
 <font face="sans-serif, Microsoft JhengHei">
 <SUP>&#8277</SUP><b>GPU Accelerated Computing instances:</b> offer GPUs to perform graphics operations and high-performance computing.</font><br><font face="sans-serif, Microsoft JhengHei">
 How to get GPU resources? See <a href="https://man.twcc.ai/@staging-twccdocs/S1-YNPTL_#%E8%B3%87%E6%BA%90%E9%85%8D%E7%BD%AE%E8%88%87%E7%9B%A3%E6%8E%A7"><ins>FAQ-Resource monitoring & allocation-Q4</ins></a>  for more information.</font>
-:::
+::: -->
 
 <!-- /wp:shortcode -->
 
@@ -472,11 +475,11 @@ How to get GPU resources? See <a href="https://man.twcc.ai/@staging-twccdocs/S1-
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-kfjo" colspan="8"><h4 style="font-weight:bold">Virtual Disk Service (VDS)</h4><font color=#AE0000 size=0.2>Service for sale soon! For more information, please contact Customer Service.</font></th>
+    <th class="tg-kfjo" colspan="8"><h4 style="font-weight:bold">Virtual Disk Service (VDS)</h4></th>
   </tr>
   <tr>
     <td class="tg-3ze5" colspan="8"><ul style="list-style-type:circle;">
-    <li>BSS is designed for TWCC VCS and provides highly available, consistent, low-latency storage service.</li><li>TWCC offers free 100 GB built-in disk space for VCS instances (disappear with instance deletion, but TWCC offers backup service), and you can freely grow your storage by flexibly attach additional volumes to instances.<li>BSS provides <a href="https://en.wikipedia.org/wiki/Hard_disk_drive">Hard Disk Drives (HDD)</a> storage service:</li><ul></ul></li><ul><li>Provides a maximum throughput of 1750 MB/s for each VCS instance. HDD is best suited for large datases that are infrequently accessed and are not latency-sensitive.</li><li>Provides a maximum throughput of 1750 MB/s for each VCS instance.</li><li>Supports storage size up to 16 TB.</li></ul></li><li><a href="https://www.twcc.ai/intro/STORAGE"><span style="font-weight:bold;color:rgb(255, 72, 67)"> See more</span></a></li></td>
+    <li>VDS is designed for TWCC VCS and provides highly available, consistent, low-latency storage service.</li><li>Storage type: <a href="https://en.wikipedia.org/wiki/Hard_disk_drive">Hard Disk Drives (HDD)</a></li><li>Performance of VCS additional volumes:</li><ul></ul></li><ul><li>Provides a maximum throughput of 1750 MB/s for each VCS instance. HDD is best suited for large datases that are infrequently accessed and are not latency-sensitive.</li><li>Provides a maximum throughput of 1750 MB/s for each VCS instance.</li><li>Supports storage size up to 16 TB.</li></ul></li><li><a href="https://www.twcc.ai/intro/STORAGE"><span style="font-weight:bold;color:rgb(255, 72, 67)"> See more</span></a></li></td>
   </tr>
   <tr>
     <td class="tg-6f4s" colspan="8">Hard Disk Drives (HDD): 1.2 NTD/GB-month (Tax excluded)</td>
