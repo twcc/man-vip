@@ -13,9 +13,7 @@ TWCC 提供 NGC optimized MXNet 立即可用的工作環境。MXNet 是致力於
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">映像檔版本資訊</span>
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_68c18740ebc0a09eb817dd10aa57be17.png)
-
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_82aef548c67872a62f219bd48abefcbe.png)
 
 :::info
 {%hackmd @docsharedstyle/note-zh %}
@@ -26,16 +24,17 @@ TWCC 提供 NGC optimized MXNet 立即可用的工作環境。MXNet 是致力於
 
 <summary><b>點我參考詳細版本套件資訊</b></summary>
 
-- [mxnet-20.11-py3:latest](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_20-11.html#rel_20-11)
-- [mxnet-20.08-py3:latest](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_20-08.html#rel_20-08)
-- [mxnet-20.06-py3:latest](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_20-06.html#rel_20-06)
-- [mxnet-20.02-py3:latest](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_20-02.html#rel_20-02)
-- [mxnet-19.11-py3:latest](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_19-11.html#rel_19-11)
-- [mxnet-19.08-py3:latest](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_19-08.html#rel_19-08)
-- [mxnet-19.02-py3-v1:latest](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_19-02.html#rel_19-02)
-- [mxnet-18.12-py3-v1:latest](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_18.12.html#rel_18.12)
-- [mxnet-18.10-py3-v1:latest](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_18.10.html#rel_18.10)
-- [mxnet-18.08-py3-v1:latest](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_18.08.html#rel_18.08)
-- [mxnet-18.08-py2-v1:latest](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_18.08.html#rel_18.08)
+- [mxnet-21.02-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_21-02.html#rel_21-02)
+- [mxnet-20.11-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_20-11.html#rel_20-11)
+- [mxnet-20.08-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_20-08.html#rel_20-08)
+- [mxnet-20.06-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_20-06.html#rel_20-06)
+- [mxnet-20.02-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_20-02.html#rel_20-02)
+- [mxnet-19.11-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_19-11.html#rel_19-11)
+- [mxnet-19.08-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_19-08.html#rel_19-08)
+- [mxnet-19.02-py3-v1](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_19-02.html#rel_19-02)
+- [mxnet-18.12-py3-v1](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_18.12.html#rel_18.12)
+- [mxnet-18.10-py3-v1](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_18.10.html#rel_18.10)
+- [mxnet-18.08-py3-v1](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_18.08.html#rel_18.08)
+- [mxnet-18.08-py2-v1](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_18.08.html#rel_18.08)
 
 </details>
