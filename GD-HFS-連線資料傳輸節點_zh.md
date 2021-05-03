@@ -1,6 +1,6 @@
 ---
 tags: Guide, HFS, ZH
-title: 連線資料傳輸節點 | zh  
+title: 連線檔案傳輸節點 | zh  
 GA: UA-155999456-1
 ---
 
@@ -13,12 +13,22 @@ GA: UA-155999456-1
 
 連線檔案傳輸節點，進入 HFS 空間後，您可將檔案透過 SFTP 協定上傳至 HFS 空間中，亦可將檔案從 HFS 下載到本地端。
 
+:::info
+{%hackmd @docsharedstyle/note-zh %}
+
+TWCC 也提供用戶以 `rsync` 指令傳輸檔案，傳輸大量檔案使用體驗佳。但由於系統無提供 `rsync` 之傳輸紀錄，若有資安疑慮恐無法追查。若您同意承擔使用風險並授權 TWCC 開啟 `rsync` 功能，請您向 <ins><a href = "mailto: isupport@twcc.ai">isupport@twcc.ai</a></ins> 提出需求。
+
+
+:::
+
 
 <!-- 1 start -->
 
 <details class="docspoiler">
 
 <summary><b>1. 使用金鑰連線</b></summary>
+
+<br>
 
 以下以 Windows 作業系統 + [<ins>FileZilla</ins>](https://filezilla-project.org) 為例 (macOS 也是類似的操作步驟)
 
@@ -102,6 +112,8 @@ macOS：可使用「文字編輯」軟體
 <details class="docspoiler">
 
 <summary><b>2. 使用主機密碼 + OTP 連線 </b></summary>
+
+<br>
 
 除上述使用金鑰的登入方式，HFS 也可使用 `密碼 + OTP` 之方式登入，請參考下方說明：
 
