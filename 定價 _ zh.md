@@ -324,17 +324,18 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
 <br>
 <table class="tg">
   <tr>
-    <th class="tg-kfjo" colspan="9"><h4 style="font-family:sans-serif, Microsoft JhengHei;font-weight:bold">虛擬運算服務 (Virtual Compute Service, VCS)<font color=#AE0000 size=0.2> ※ 即將發售，請洽客服人員了解更多。</font></h4>
+    <th class="tg-kfjo" colspan="9"><h4 style="font-family:sans-serif, Microsoft JhengHei;font-weight:bold">虛擬運算服務 (Virtual Compute Service, VCS)</h4>
     </th>
   </tr>
   <tr>
     <td class="tg-7g7n" colspan="8"><span style="font-family:sans-serif, Microsoft JhengHei;font-style:italic"><ul style="list-style-type:circle;">
     <li>提供 Linux (Ubuntu、Ce</span>n<span style="font-family:sans-serif, Microsoft JhengHei;font-style:italic">tOS)、Windows 作業系統，智算兼備、節省成本最佳的方案。</li><li><b>v 系列個體</b>配備 Intel® Xeon® Gold 61系列處理器，記憶體處理速度可達 2666 MHz。</li>
-    <li><b>vgv 系列個體</b>配備 8 個 NVIDIA® Tesla V100 GPU，支援 5120 個 CUDA 核心與 640 個 Tensor 核心，每秒具 125 兆次浮點運算 (TOPS) 的推論效能，並支援 NVLink 進行 GPU 之間的資料傳輸，加速人工智慧訓練、推論與高效能運算。</li><li>TWCC 免費提供虛擬運算個體 100GB 內建硬碟空間 (隨個體刪除而消失，將提供您備份方式)。此外，您可使用虛擬磁碟服務，建立附加 Volume，自由彈性調配個體的儲存空間。</li><li><a href="https://www.twcc.ai/intro/VM"><span style="font-family:sans-serif, Microsoft JhengHei;font-weight:bold;color:rgb(255, 72, 67)">了解更多</li></span></a></td>
+<!--     <li><b>vgv 系列個體</b>配備 8 個 NVIDIA® Tesla V100 GPU，支援 5120 個 CUDA 核心與 640 個 Tensor 核心，每秒具 125 兆次浮點運算 (TOPS) 的推論效能，並支援 NVLink 進行 GPU 之間的資料傳輸，加速人工智慧訓練、推論與高效能運算。</li> -->
+    <li>TWCC 免費提供虛擬運算個體 100GB 內建硬碟空間。此外，您可使用虛擬磁碟服務，建立附加 Volume，自由彈性調配個體的儲存空間，也可建立快照儲存個體映像檔以備份與復原。費率請參考<a href="#虛擬磁碟服務-Virtual-Disk-Service-VDS"><ins>虛擬磁碟服務 (Virtual Disk Service, VDS)</ins></a>。</li><li><a href="https://www.twcc.ai/intro/VM"><span style="font-family:sans-serif, Microsoft JhengHei;font-weight:bold;color:rgb(255, 72, 67)">了解更多</li></span></a></td>
   </tr>
   <tr>
     <td class="tg-y29t">個體型號</td>
-    <td class="tg-p1ie">GPU (張)</td>
+<!--     <td class="tg-p1ie">GPU (張)</td> -->
     <td class="tg-y29t">vCPU</td>
     <td class="tg-p1ie">記憶體 (GB)</td>
     <td class="tg-y29t">HDD (GB)</td>
@@ -344,16 +345,16 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
   </tr>
   <tr>
     <td class="tg-8jvv">v.super</td>
-    <td class="tg-d4nv">-</td>
+<!--     <td class="tg-d4nv">-</td> -->
     <td class="tg-8jvv">2</td>
     <td class="tg-d4nv">16</td>
     <td class="tg-8jvv">100</td>
     <td class="tg-d4nv">3.38</td>
-    <td class="tg-eb95" colspan="11" rowspan="14"><br><br><br><br><br><br><br><br><br>請聯繫客服人員<br>定製專屬方案 <br><a href="mailto:iservice@twcc.ai">iservice@twcc.ai</a></td>
+    <td class="tg-eb95" colspan="11" rowspan="14"><br><br>請聯繫客服人員<br>定製專屬方案 <br><a href="mailto:iservice@twcc.ai">iservice@twcc.ai</a></td>
   </tr>
   <tr>
     <td class="tg-8jvv">v.xsuper</td>
-    <td class="tg-d4nv">-</td>
+<!--     <td class="tg-d4nv">-</td> -->
     <td class="tg-8jvv">4</td>
     <td class="tg-d4nv">32</td>
     <td class="tg-8jvv">100</td>
@@ -361,7 +362,7 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
   </tr>
   <tr>
     <td class="tg-8jvv">v.2xsuper</td>
-    <td class="tg-d4nv">-</td>
+<!--     <td class="tg-d4nv">-</td> -->
     <td class="tg-8jvv">8</td>
     <td class="tg-d4nv">64</td>
     <td class="tg-8jvv">100</td>
@@ -369,7 +370,7 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
   </tr>
   <tr>
     <td class="tg-8jvv">v.4xsuper</td>
-    <td class="tg-d4nv">-</td>
+<!--     <td class="tg-d4nv">-</td> -->
     <td class="tg-8jvv">16</td>
     <td class="tg-d4nv">128</td>
     <td class="tg-8jvv">100</td>
@@ -377,7 +378,7 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
   </tr>
   <tr>
     <td class="tg-8jvv">v.8xsuper</td>
-    <td class="tg-d4nv">-</td>
+<!--     <td class="tg-d4nv">-</td> -->
     <td class="tg-8jvv">32</td>
     <td class="tg-d4nv">256</td>
     <td class="tg-8jvv">100</td>
@@ -391,7 +392,7 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
     <td class="tg-8jvv">100</td>
     <td class="tg-d4nv">81.12</td>
   </tr> -->
-  <tr>
+<!--   <tr>
   <td class="tg-8jvx">vgv.xsuper<SUP>&#8277</SUP></td>
     <td class="tg-d4nx">1</td>
     <td class="tg-8jvx">8</td>
@@ -422,14 +423,14 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
     <td class="tg-d4nx">720</td>
     <td class="tg-8jvx">100</td>
     <td class="tg-d4nx">659</td>
-  </tr>
+  </tr> -->
 </table>
 
-:::info
+<!-- :::info
 <font face="sans-serif, Microsoft JhengHei">
 <SUP>&#8277</SUP><b>GPU 加速運算個體</b>：提供專門處理圖形任務的 GPU 核心，能快速完成大量運算。</font><br><font face="sans-serif, Microsoft JhengHei">
 如何取得 GPU 資源？ 請參考 <a href="https://man.twcc.ai/@staging-twccdocs/S1-YNPTL_#%E8%B3%87%E6%BA%90%E9%85%8D%E7%BD%AE%E8%88%87%E7%9B%A3%E6%8E%A7"><ins>FAQ-資源監控與配置-Q4</ins></a> 之說明。</font>
-:::
+::: -->
 
 ---
 
@@ -471,12 +472,11 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-kfjo" colspan="8"><h4 style="font-family:sans-serif, Microsoft JhengHei;font-weight:bold">虛擬磁碟服務 (Virtual Disk Service, VDS)
-    <font color=#AE0000 size=0.5>※ 即將發售，請洽客服人員了解更多。</font></h4></th>
+    <th class="tg-kfjo" colspan="8"><h4 style="font-family:sans-serif, Microsoft JhengHei;font-weight:bold">虛擬磁碟服務 (Virtual Disk Service, VDS)</h4></th>
   </tr>
   <tr>
     <td class="tg-3ze5" colspan="8"><ul style="list-style-type:circle;">
-    <li>專為 TWCC 虛擬運算服務設計之儲存空間，提供高可用性、一致性、低延遲的服務。</li></li><li>TWCC 提供虛擬運算個體 100 GB 內建硬碟空間 (將隨個體刪除而消失，TWCC 提供您備份方式)，您可使用虛擬磁碟服務，建立附加 Volume，自由彈性調配個體的儲存空間。</li><li>提供<a href="https://en.wikipedia.org/wiki/Hard_disk_drive"> 標準硬碟 (HDD)</a> 儲存服務：</li><ul><li>提供傳輸效能每 TB 250 MB/秒，適用於不頻繁存取與不易受延遲時間影響的大型資料。</li><li>提供每個虛擬運算個體最大傳輸量為 2,375 MB/秒。</li><li>最多可支援 16 TB 的儲存空間。</ul></li><li><a href="https://www.twcc.ai/intro/STORAGE"><span style="font-weight:bold;color:rgb(255, 72, 67)">了解更多</span></li></a></td>
+    <li>專為 TWCC 虛擬運算服務設計之儲存空間，提供高可用性、一致性、低延遲的服務。&emsp; &emsp; &emsp; &emsp; &ensp; </li></li><li>相關計費服務：虛擬運算個體附加 Volume、虛擬運算個體快照 (儲存個體備份之映像檔)。</li><li>儲存類型：<a href="https://en.wikipedia.org/wiki/Hard_disk_drive">標準硬碟 (HDD)</a></li> <li>虛擬運算個體之附加 Volume 效能：</li><ul><li>提供傳輸效能每 TB 250 MB/秒，適用於不頻繁存取與不易受延遲時間影響的大型資料。</li><li>提供每個虛擬運算個體最大傳輸量為 2,375 MB/秒。</li><li>最多可支援 16 TB 的儲存空間。</ul></li><li><a href="https://www.twcc.ai/intro/STORAGE"><span style="font-weight:bold;color:rgb(255, 72, 67)">了解更多</span></li></a></td>
   </tr>
 <!--   <tr>
     <td class="tg-6f4s" colspan="8">固態硬碟 (SSD): 2.6 NTD/GB-月 (未稅價) </td>
