@@ -18,7 +18,7 @@ GA: UA-155999456-1
 :::info
 {%hackmd @docsharedstyle/note-zh %}
 
-如何取得 GPU 資源？ 請參考 [<ins>FAQ-資源監控與配置-Q4</ins>](https://man.twcc.ai/@staging-twccdocs/SyaIieaUO#%E8%B3%87%E6%BA%90%E9%85%8D%E7%BD%AE%E8%88%87%E7%9B%A3%E6%8E%A7) 之說明。
+如何取得 GPU 資源？ 請參考 [<ins>FAQ-資源監控與配置-Q4</ins>](https://man.twcc.ai/N_cq9fL_R3ipGaR7J3UO6A#%E8%B3%87%E6%BA%90%E9%85%8D%E7%BD%AE%E8%88%87%E7%9B%A3%E6%8E%A7) 之說明。
 :::
 
 ## 建立虛擬運算個體
@@ -87,8 +87,6 @@ TWCC 作業系統映像檔版本：
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b07e58c36056e7bf120a6e35a70bc70c.png)
 
 
-
-
 * 輸入鑰匙對的名稱後點擊確認。
 * 公開金鑰為非必填資訊，目的是方便在使用不同的雲端服務時，可以使用同一把金鑰。因此，使用者可以將他們在其他雲端系統內的公開金鑰填入此處，之後就可以使用此金鑰存取本系統。
 
@@ -104,10 +102,9 @@ TWCC 作業系統映像檔版本：
 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> **重要**：TWCC 不負責紀錄及管理您的鑰匙對，請務必下載並妥善保存此鑰匙對 `pem` 檔案，若沒有此鑰匙對，您將無法連線虛擬運算個體。
 :::
 
-* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態變成 **`Ready`** 後即可開始連線使用。
+* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態由 **`Starting`** 變成 **`Ready`** 後即可開始連線使用。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0cf0278e435ce3fbaa96a8631e3f3ec7.png)
-
 
 
 #### **Window 個體請接著點擊「下一步：密碼>」**
@@ -125,9 +122,16 @@ TWCC 作業系統映像檔版本：
 :::
 
 
-* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，待個體狀態變成 **`Ready`** 後，再請稍等一段時間，即可開始連線使用。
+* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，待個體狀態由 **`Starting`** 變成 **`Ready`** 後，再請稍等一段時間，即可開始連線使用。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f062b7368287f59d3a7ffc77cb4140c2.png)
+
+:::danger
+
+{%hackmd @docsharedstyle/important-zh %}
+
+虛擬運算個體建立中 (**`Starting`**)，請勿刪除個體，否則將影響系統處理工作，導致個體錯誤 (**`Error`**)。
+:::
 
 
 ## 虛擬運算個體管理
@@ -173,8 +177,9 @@ TWCC 作業系統映像檔版本：
 - 「**停止**」個體的影響：
     - 個體將從實體主機上移除並釋放資源— GPU、CPU、vCPU、記憶體、作業系統磁碟。
     - 除記憶體資料將被清除，作業系統磁碟與附加磁碟之資料皆會完整保存。
-    - 個體的狀態轉換過程： `Ready` >`Stopping` >`Stopped`。
-
+    - 個體的狀態轉換過程： `Ready` >`Stopping` >`Stopped`。<br>
+    ※ <ins>虛擬運算個體停止中 (**`Stopping`**)，請勿刪除個體，否則將影響系統處理工作，導致虛擬運算個體錯誤 (**`Error`**)。</ins>
+      
 - 「**啟動**」個體的影響：
     - 多數情況下，個體將移至新的實體主機。
     - 個體的狀態轉換過程：`Stopped` > `Queueing`>`Starting` >`Ready`。
@@ -724,11 +729,11 @@ Host <INSTANCE_NAME>           #輸入虛擬運算個體的名稱
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1e725b08b3cecf100723115f8f630eb2.png)
 
-:::info
+:::danger
 
-{%hackmd @docsharedstyle/note-zh %}
+{%hackmd @docsharedstyle/important-zh %}
 
-選用快照建立虛擬運算個體，為確保個體可完整建立，個體建立中 (**`STARTING`**) 快照將無法刪除 (刪除失敗)。  
+選用快照建立虛擬運算個體，當狀態為建立中 (**`Starting`**) 時，為確保個體可完整建立，請勿刪除快照。
 :::
 
 
@@ -1761,6 +1766,3 @@ sudo systemctl restart ntp
 
 ## 外部資安資訊
 - 建議定期瀏覽資安相關網站，例如： [TWCERT/CC台灣電腦網路危機處理暨協調中心](https://www.twcert.org.tw)、[行政院國家資通安全會報技術服務中心](https://www.nccst.nat.gov.tw/)，以獲得新的資訊安全相關訊息。
-
-
-
