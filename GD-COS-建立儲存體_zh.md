@@ -1,5 +1,5 @@
 ---
-tags: COS-book
+tags: Guide, COS
 title: 建立儲存體 | zh
 GA: UA-155999456-1
 ---

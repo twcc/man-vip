@@ -11,7 +11,7 @@ GA: UA-155999456-1
 
 當容器服務狀態呈現 **`Ready`** 後即可開始使用，開發型容器服務預設提供 Jupyter Notebook 網頁開發環境及 SSH 兩種連線登入方式，操作步驟請參考以下說明。
 
-{%hackmd @preview-twccdocs/prerequisite-ccs-id-zh %}
+{%hackmd @preview-twccdocs/chunk-ccs-prerequisite-id-zh %}
 
 ## 連線容器
 

@@ -28,6 +28,6 @@ GA: UA-155999456-1
 ---
 
 <!-- - [Release Notes]() -->
-- [空間管理政策 <i class="fa fa-file-text" aria-hidden="true"></i>](/@preview-twccdocs/hfs-storage-mngmt-policies-zh)
-- [TWCC FAQs <i class="fa fa-question-circle" aria-hidden="true"></i>](/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh) 
+- [空間管理政策 <i class="fa fa-file-text" aria-hidden="true"></i>](/@preview-twccdocs/terms-hfs-storage-mngmt-policies-zh)
+- [TWCC FAQs <i class="fa fa-question-circle" aria-hidden="true"></i>](/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)[target=_blank] 
 - [TWCC 價目表 <i class="fa fa-th-list" aria-hidden="true"></i>](/@twccdocs/SJWlN3YDr#高速檔案系統-Hyper-File-System-HFS) 
