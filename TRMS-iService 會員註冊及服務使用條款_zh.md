@@ -1,6 +1,6 @@
 ---
-title: iService 會員註冊及服務使用條款
-tags: Terms, TW
+title: iService 會員註冊及服務使用條款 | zh
+tags: Terms, ZH
 GA: UA-155999456-1
 ---
 
