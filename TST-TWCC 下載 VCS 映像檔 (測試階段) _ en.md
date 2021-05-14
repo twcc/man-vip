@@ -16,14 +16,14 @@ GA: UA-155999456-1
 
 ## 準備工作
 
-請先將欲下載映像檔之虛擬運算個體，製作[快照](https://www.twcc.ai/doc?page=vm#%E5%BF%AB%E7%85%A7)。
+請先將欲下載映像檔之虛擬運算個體，建立[映像檔](https://man.twcc.ai/@twccdocs/r1DhqHdpN?type=view#%E6%98%A0%E5%83%8F%E6%AA%94)。
 
 ## 下載方式
 
 由於虛擬運算個體映像檔下載功能仍為測試階段，需請您透過 [TWCC VCS 映像檔下載申請表單](https://docs.google.com/forms/d/e/1FAIpQLSdzsAh08RWpfeAQPKrBCBD9GyooLl11YvARpoPSYVyH0zE4Sg/viewform)申請下載，提供相關資料，TWCC 維運團隊將協助您將映像檔下載至指定的雲端物件儲存空間。
 
 - 表單項目說明：
-  - **映像檔 ID**：虛擬運算個體快照 ID
+  - **映像檔 ID**：虛擬運算個體映像檔 ID
     ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_56565aea3d6ad0d2313a9cfc499a7399.png)
   - **個人 API 金鑰**：您的 API 金鑰
       ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1e4d90058e58c3f24c9274dbcf1e90fb.png)

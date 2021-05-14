@@ -1,5 +1,5 @@
 ---
-title: 製作虛擬運算個體快照的最佳做法 | en
+title: 建立虛擬運算個體快照的最佳做法 | en
 tags: Guide, VCS, EN
 GA: UA-155999456-1
 ---
@@ -7,12 +7,12 @@ GA: UA-155999456-1
 {%hackmd @docsharedstyle/default %}
 {%hackmd @docsharedstyle/eng-working-en %}
 
-# 製作虛擬運算個體快照的最佳做法
+# 建立虛擬運算個體快照的最佳做法
 
-您可於多種情況下製作 [TWCC 虛擬運算個體快照](https://www.twcc.ai/doc?page=vm#%E5%BF%AB%E7%85%A7)，**但在製作前，請您執行以下工作以確保有效取得快照**：
+您可於多種情況下建立 [TWCC 虛擬運算個體映像檔](https://man.twcc.ai/@twccdocs/r1DhqHdpN?type=view#%E6%98%A0%E5%83%8F%E6%AA%94)，**但在建立前，請您執行以下工作以確保有效取得映像檔**：
 
-- **[關機 (Shutdown)](#如何關機-shutdown？) 後再製作快照**，若個體狀態為 Ready 且仍有 I/O，快照所需時間較長，關機後再執行可確保製作時間不會過長。
-- **若個體已設定自動掛載 Volume，建議指令[加上 "nofail" 選項](#如何加上-nofail-選項？)後再製作快照**，以確保使用快照回復之個體，可以正常啟動與連線。
+- **[關機 (Shutdown)](#如何關機-shutdown？) 後再建立映像檔**，若個體狀態為 Ready 且仍有 I/O，建立所需時間較長，關機後再執行可確保製作時間不會過長。
+- **若個體已設定自動掛載 Volume，建議指令[加上 "nofail" 選項](#如何加上-nofail-選項？)後再建立映像檔**，以確保使用映像檔回復之個體，可以正常啟動與連線。
 
 
 ## 如何關機 (shutdown)？

@@ -33,7 +33,7 @@ GA: UA-155999456-1
 | 50.1     | `Cloud Virtual Resources (IaaS) Add-on`<br>HDD storage expansion: 100 GB     |Virtual Disk Service (VDS)|102
 | 51.1     | `Cloud Virtual Resources (IaaS) Add-on`<br>HDD storage expansion: 500 GB     |Virtual Disk Service (VDS)|510
  | 52.1     | `Cloud Virtual Resources (IaaS) Add-on`<br>HDD storage expansion: 1 TB     |Virtual Disk Service (VDS)|1,018
-| 58.1     | `Cloud Virtual Resources (IaaS) Add-on`<br>Snapshot 100GB    |VCS instance/volume snapshot|220
+| 58.1     | `Cloud Virtual Resources (IaaS) Add-on`<br>Snapshot 100GB    |VCS instance image / volume snapshot|220
 | 68.1     | `Cloud Virtual Resources (IaaS) Add-on`<br>Cloud VM backup 1 TB    |Cloud Object Storage (COS)|569
  | 69.1    | `Cloud Virtual Resources (IaaS) Add-on`<br>Cloud VM data backup 2 TB     |Cloud Object Storage (COS)|1,137
 | 70.1     | `Cloud Virtual Resources (IaaS) Add-on`<br>HD:SSD 100 GB     |Virtual Disk Service (VDS)|220
