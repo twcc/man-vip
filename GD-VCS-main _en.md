@@ -261,7 +261,7 @@ VCS image can preserve the state and data in the OS volume of a VCS instance at 
 2. For more information about instance states, operation, and billing, see [ <ins>VCS Instance Lifecycle</ins>](https://man.twcc.ai/@twccdocs/vcs-concept-lifecycle-en).
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_43da98a788cd1376b7c3ae552176b986.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dc29271dcc4dc04671aa6e3b24fc4512.png)
 
 * Enter the name and description for the image, then select **OK**.
 * It takes several minutes to create an image. When “**Processing**” window disappears, you may continue with other tasks.
@@ -273,11 +273,11 @@ VCS image can preserve the state and data in the OS volume of a VCS instance at 
 - We suggest adding **nofail** option to the automount entry for volumes to ensure starting and connecting to the instance properly.
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_278f64441c29590f7045e911d2b748ed.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ca980cfd6f20d04b0e165d5688f4265e.png)
 
 - After redirecting to **VCS Instance Image Management** page, you can use the image when it changes to **`ACTIVE`** state (**`QUEUED`** > **`SAVING`**  > **`ACTIVE`**).
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_82759487d56be062ee1aefafe19762d6.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8e5f868cdb3a6906a36966f6e3772826.png)
 
 
 ## Managing images
@@ -290,7 +290,7 @@ VCS image can preserve the state and data in the OS volume of a VCS instance at 
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **Note:** For the VCS instance restoring from an image, you need to delete the image before you can delete the instance.
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8cef531dcccc3b8d57c16a59b6d55f59.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_57bc95cba747af008f1a288c1e70db4a.png)
 
 
 ## Restoring an instance from an image
