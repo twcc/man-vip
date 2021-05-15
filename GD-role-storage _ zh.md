@@ -76,33 +76,33 @@ GA: UA-155999456-1
 TWCC CLI 可操控之服務 (雲端物件儲存) 角色權限皆與使用者介面相同。
 :::
 
-## 區塊儲存服務
+## 虛擬磁碟服務
 
 - 一般操作 
 
 | 功能 | 租戶管理員 | 租戶使用者 |
 | -------- | -------- | -------- |
-|建立 Volume|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視個人 Volume 資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視計畫內所有 Volume 資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|刪除個人 Volume|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|刪除計畫內所有 Volume|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|將個人 Volume 連結至個人個體|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|將個人 Volume 連結至其它成員個體|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|將其它成員 Volume 連結至個人個體|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|將其它成員 Volume 連結至其它成員之個體|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|建立資料磁碟|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|檢視個人資料磁碟資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|檢視計畫內所有資料磁碟資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|刪除個人資料磁碟|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|刪除計畫內所有資料磁碟|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|將個人資料磁碟連結至個人個體|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|將個人資料磁碟連結至其它成員個體|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|將其它成員資料磁碟連結至個人個體|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|將其它成員資料磁碟連結至其它成員之個體|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 
 
-- Volume 快照
+- 資料磁碟快照
 
 | 功能 | 租戶管理員 | 租戶使用者 |
 | -------- | -------- | -------- |
-|建立個人 Volume 快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|建立非個人 Volume 快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視個人 Volume 快照資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視計畫內所有 Volume 快照資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|刪除個人 Volume 快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|刪除計畫內所有 Volume 快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|使用個人 Volume 快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|使用計畫內所有 Volume 快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|建立個人資料磁碟快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|建立非個人資料磁碟快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|檢視個人資料磁碟快照資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|檢視計畫內所有資料磁碟快照資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|刪除個人資料磁碟快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|刪除計畫內所有資料磁碟快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|使用個人資料磁碟快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|使用計畫內所有資料磁碟快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 

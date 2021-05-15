@@ -25,7 +25,7 @@ A VCS instance, is a computer file, usually called an image, that behaves like a
 
 
 
-* On the basic information page, fill in the name and description of the instance, select the version of the image, and the specifications of the needed hardware, including different combinations of number of CPUs, memory size, storage volume, and credit limit. Click "NEXT: KEY PAIR>"
+* On the basic information page, fill in the name and description of the instance, select the version of the image, and the specifications of the needed hardware, including different combinations of number of CPUs, memory size, storage disk, and credit limit. Click "NEXT: KEY PAIR>"
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bc503fc7bc523848e591c037189a1cbb.png)
 
@@ -34,7 +34,7 @@ A VCS instance, is a computer file, usually called an image, that behaves like a
 * A key pair is a certificate with which to connect to a VCS instance. Before creating a VCS instance, you must first obtain or create a key pair in order to use the functions of an instance. If this is the first use, please click "＋CREATE KEY PAIR".
 
 :::info
-:bulb: Hint: 100 GB system disk space (built-in volume) is provided.
+:bulb: Hint: 100 GB OS disk space (built-in dsk) is provided.
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_72e73c2abb8c4a7c6cef29772fb9c75a.png)
@@ -66,15 +66,15 @@ On the network setup page, choose the network and enable automatic distribution 
 
 
 
-* On the storage information page, specify the size of volume in GB and choose volume type. Click “NEXT: REVIEW & CREATE>”.
+* On the storage information page, specify the size of disk in GB and choose disk type. Click “NEXT: REVIEW & CREATE>”.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_05fcdec6144be4096e0eee27d4b69637.png)
 
 :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **Note:** The additional volumes need to be initialized before they can be used. See 
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **Note:** The data disks need to be initialized before they can be used. See 
 
-- [<ins>HowTo：Initialize Volumes- Linux instances</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-en)
-- [<ins>HowTo：Initialize Volumes- Windows instances</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-en)
+- [<ins>HowTo：Initialize Disks- Linux instances</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-en)
+- [<ins>HowTo：Initialize Disks- Windows instances</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-en)
 :::
 
 * Review the entire VCS instance setup and estimated usage credits, click “CREATE” to finish the process. Wait a few minutes. When the instance status is changed to “Ready”, the instance is ready to be connected and used.
@@ -103,7 +103,7 @@ On the network setup page, choose the network and enable automatic distribution 
 <i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> **Important：**
 - When you **stop** an instance, the following happens:
     - We remove the instance from the host, and deallocate the resources.
-    - The RAM is erased. The data in boot volume (100 GB) and additional volumes id kept.
+    - The RAM is erased. The data in boot disk (100 GB) and data disk is kept.
     - Instance state transitions: `Ready` >`Stopping` >`Stopped`
 
 - When you **start** an instance, the following happens:
@@ -111,8 +111,8 @@ On the network setup page, choose the network and enable automatic distribution 
     - Instance state transitions: `Stopped` > `Queueing`>`Starting` >`Ready`.
     
 - When you **delete** an instance, the following happens:
-    - The boot volume (100 GB) is also erased, and please refer to [Snapshot](#Snapshot) for preserving your data.
-    - Additional volumes are preserved and detached from the instance.
+    - The boot disk (100 GB) is also erased, and please refer to [Snapshot](#Snapshot) for preserving your data.
+    - Data disks are preserved and detached from the instance.
     - Instance state transitions: `Deleting` > Disappear from the list on the management page.
 :::
 
@@ -244,10 +244,10 @@ Last login: Wed May 15 01:02:37 2019 from 59-124-220-27.hinet-ip.hinet.net <br>
 
 # Snapshot
 
-VCS snapshot can preserve the state and data in the OS volume of a VCS instance at a specific time. Usually, a snapshot is taken before an important system update or special software installation to enable returning the VCS instance to an earlier state when necessary.
+VCS snapshot can preserve the state and data in the OS disk of a VCS instance at a specific time. Usually, a snapshot is taken before an important system update or special software installation to enable returning the VCS instance to an earlier state when necessary.
 
 :::danger
-<i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> **Important:** Once a VCS instance is deleted, the 100 GB OS volume space (built-in volume) will disappear. Please refer to the following instance snapshot procedure to preserve your data before deleting the instance.
+<i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> **Important:** Once a VCS instance is deleted, the 100 GB OS disk space (built-in disk) will disappear. Please refer to the following instance snapshot procedure to preserve your data before deleting the instance.
 :::
 
 ## Creating a VCS instance snapshot
@@ -270,7 +270,7 @@ VCS snapshot can preserve the state and data in the OS volume of a VCS instance 
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **Note:** 
 
 - It takes longer for instances in the **`Ready`** state and with I/O traffic. We suggest **shutting down** instances to create a snapshot.
-- We suggest adding **nofail** option to the automount entry for volumes to ensure starting and connecting to the instance properly.
+- We suggest adding **nofail** option to the automount entry for disks to ensure starting and connecting to the instance properly.
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_278f64441c29590f7045e911d2b748ed.png)
@@ -333,77 +333,80 @@ After the key pair has been created, you must click “Download” and keep this
 
 ## Virtual Disk Service
 
-Virtual Disk Service can expand the volume of storage. Pay and use, flexible and convenient.
+Virtual Disk Service can expand the disk of storage. Pay and use, flexible and convenient.
 
-### Creating a Volume
+### Creating a disk
 
-* Click “Virtual Disk Service” on the service list to enter the “Virtual Disk Service”. On the Volume management page, click " ＋CREATE”
+* Click “Virtual Disk Service” on the service list to enter the “Virtual Disk Service”. On the Data Disk management page, click " ＋CREATE”.
 
-* Fill in the name, description, whether this Volume is a new creation or a restoration from a snapshot, size, and disk type. Click “NEXT: REVIEW & CREATE>”.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a2f264e953ae9fa6808d8ee4d547f984.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_028434b34a422eeaa629497f3c66741e.png)
+* Fill in the name, description, whether this disk is a new creation or a restoration from a snapshot, size, and disk type. Click “NEXT: REVIEW & CREATE>”.
 
-* Review the setup of the volume, confirm, and click “CREATE”.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7f25d31a70033b7751d2c3849d01ca8a.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3d606a894ce0a194d98577b7e717f279.png)
+* Review the setup of the disk, confirm, and click “CREATE”.
 
-### Connecting a volume to a VCS instance
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3a170626fe3be36bf40fddce130b9080.png)
 
-* After Volume has been created, you need to attach it to the VCS instance and connect to the instance to use it.
+### Connecting a disk to a VCS instance
 
-* After the volume has been created, it will be listed on the top of the list . It can be used once its status becomes "AVAILABLE". 
+* After a disk has been created, you need to attach it to the VCS instance and connect to the instance to use it.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bd4f520fc5379d429e3ab05467c71cd3.png)
+* After the disk has been created, it will be listed on the top of the list . It can be used once its status becomes "AVAILABLE". 
 
-* Click a volume in the list to enter the its detailed information page. Click “Attach”.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ede745d31d9f8b7e5325b9c44b306aaf.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2f83820f21fa291cd056e5df30fc491a.png)
+* Click a disk in the list to enter the its detailed information page. Click “Attach”.
 
-
-* After the “Attaching Volume” window appears, select the VCS instance that you wish to attach and click "OK".
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c4a9239f811473a1c6807469b84c217e.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_98bc6952d15db5d27a42aff6a1291255.png)
 
 
-* Once Volume is attached to the instance, click “Refresh”. Attached instance will show in the bottom part of the page.
+* After the “Attach Disk” window appears, select the VCS instance that you wish to attach and click "OK".
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1654c5f9988db5ffbdb1cd3d4ec48938.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7991611e74f389d9a99fcd730d04ca63.png)
+
+
+* Once the disk is attached to the instance, click “Refresh”. Attached instance will show in the bottom part of the page.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ee81cc5b7a29b6b2ea514445093fc925.png)
 
 
 * Continuing from the above diagram, click “Detach” and detach from the attached instance.
 
 :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **Note:** After attaching to a VCS instance, the additional volumes need to be initialized before they can be used. See 
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **Note:** After attaching to a VCS instance, the data disks need to be initialized before they can be used. See 
 
-- [<ins>HowTo：Initialize Volumes- Linux instances</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-en)
-- [<ins>HowTo：Initialize Volumes- Windows instances</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-en)
+- [<ins>HowTo：Initialize Disks- Linux instances</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-en)
+- [<ins>HowTo：Initialize Disks- Windows instances</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-en)
 :::
 
-### Deleting a Volume
-* Please note that a deleted Volume is forever gone. If a Volume is is "IN-USE" state, you need to detach the Volume. When the state of a Volume becomes "AVAILABLE", click “Delete” to delete this Volume.
+### Deleting a disk
+* Please note that a deleted disk is forever gone. If a disk is is "IN-USE" state, you need to detach the disk. When the state of a disk becomes "AVAILABLE", click “Delete” to delete this disk.
 
-### Volume Snapshot
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2e4f6dd85867d9fdc1b2dd08ae2e1038.png)
+
+### Data Disk Snapshot
     
 :::info
-:bulb: Note：If you want to backup data in additional volumes, please refer to the following volume snapshot steps.
+:bulb: Note：If you want to backup data in data disks, please refer to the following disk snapshot steps.
 :::
 
-* Volume Snapshot can preserve a snapshot for a Volume. On the detailed information page of Volume, click “Snapshot” to show the “Take a snapshot” window. Enter the name and description of the snapshot and click "OK".
+* Data Disk Snapshot can preserve a snapshot for a disk. On the detailed information page of disk, click “Snapshot” to show the “Take a snapshot” window. Enter the name and description of the snapshot and click "OK".
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_56ec80df76d2bdd4c4acbd1e0a6a99f0.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0cb54ad37fd5fce3b6326e27860e9e0b.png)
 
 
 ## Snapshot
-### Managing Volume Snapshot
+### Managing Data Disk Snapshot
 
-* The snapshot management page shows a list of information on all volumes, including the ID and name of the snapshot, Volume name, the state of the snapshot, creation time, and the user name who took it. The snapshot that was taken last is listed on top. Click a column name sorts the list by the values in that column or toggle between ascending and descending order.
+* The snapshot management page shows a list of information on all disks, including the ID and name of the snapshot, disk name, the state of the snapshot, creation time, and the user name who took it. The snapshot that was taken last is listed on top. Click a column name sorts the list by the values in that column or toggle between ascending and descending order.
 
 * In Search key in keywords to show all records with values matching those keywords.
 
 * Clicking![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fcb9cb1089eda6ce5a84a8f8787cad14.png)<span> menu button and click “Delete” to remove that snapshot.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_eb6ac7f0ff8ecd13c16e820d4a8da512.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_501af8a439374fac49a75e3c15a355ef.png)
 
 # Networking & Security
 ## Virtual Network

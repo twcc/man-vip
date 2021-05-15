@@ -26,7 +26,7 @@ GA: UA-155999456-1
 2. 如何縮減快照建立的時間？ 請參考[<ins>TWCC FAQ 虛擬運算服務 > 個體快照 > Q2</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-vcs-zh#%E5%80%8B%E9%AB%94%E5%BF%AB%E7%85%A7)。
 :::
 
-- 進入「**虛擬個體詳細資料頁**」，確認需調整的個體規格 (型號：**v.12xsuper**，規格：`vCPU 48 cores; Memory 100 GB; system volume 100 GB`)
+- 進入「**虛擬個體詳細資料頁**」，確認需調整的個體規格 (型號：**v.12xsuper**，規格：`vCPU 48 cores; Memory 100 GB; system disk 100 GB`)
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_83644a60028400826f375fda8fe245ad.png)
 
@@ -64,14 +64,14 @@ GA: UA-155999456-1
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_34b2f990876cda17c878bc38f82fc079.png)
 
 
-- 規格調整完成！成功利快照建立虛擬運算個體 (型號：**v.super**，規格：`vCPU 02 cores; Memory 16 GB; system volume 100 GB`)，將原個體資料轉移至新規格個體。
+- 規格調整完成！成功利快照建立虛擬運算個體 (型號：**v.super**，規格：`vCPU 02 cores; Memory 16 GB; system dsk 100 GB`)，將原個體資料轉移至新規格個體。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_199b4f0bd0ee1ced0db17ee0e9631fcc.png)
 
 
 :::info 
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：**
-- 若您原虛擬運算個體有連結 Volume，請先將 Volume 分離，再連結至新個體。
+- 若您原虛擬運算個體有連結資料磁碟，請先將資料磁碟分離，再連結至新個體。
 - 若原虛擬運算個體不再繼續使用，建議您刪除該個體，回收計算資源。
 :::
 

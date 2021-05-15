@@ -331,7 +331,7 @@ A deep learning framework designed for both efficiency and flexibility. It allow
         deep learning inference performance.</li>
         <li><b>Vgv-series instances</b> are equipped with 8 NVIDIA® Tesla V100 GPUs, and each GPU pairs 5,120 CUDA Cores and 640 Tensor Cores, delivering over 5120 TOPS of
 deep learning inference performance, and supports NVLink communication to accelerate AI training, inference and high-performance computing.</li> -->
-<li>TWCC offers free 100 GB built-in disk space for VCS instances, and you can freely grow your storage with Virtual Disk Service, and flexibly attach additional volumes to instances. Also, we provide snapshot service for instance image backup and recovery. See <a href="#Virtual-Disk-Service-VDS"><ins>Virtual Disk Service (VDS)</ins></a> for more pricing information.</li><li><a href="https://www.twcc.ai/intro/VM"><span style="font-weight:bold;color:rgb(255, 72, 67)"> See more</span></a></td>
+<li>TWCC offers free 100 GB built-in disk space for VCS instances, and you can freely grow your storage with Virtual Disk Service, and flexibly attach data disks to instances. Also, we provide snapshot service for instance image backup and recovery. See <a href="#Virtual-Disk-Service-VDS"><ins>Virtual Disk Service (VDS)</ins></a> for more pricing information.</li><li><a href="https://www.twcc.ai/intro/VM"><span style="font-weight:bold;color:rgb(255, 72, 67)"> See more</span></a></td>
   </tr>
   <tr>
     <td class="tg-y29t">Instance Type</td>
@@ -479,7 +479,7 @@ How to get GPU resources? See <a href="https://man.twcc.ai/@staging-twccdocs/S1-
   </tr>
   <tr>
     <td class="tg-3ze5" colspan="8"><ul style="list-style-type:circle;">
-    <li>VDS is designed for TWCC VCS and provides highly available, consistent, low-latency storage service.</li><li>Storage type: <a href="https://en.wikipedia.org/wiki/Hard_disk_drive">Hard Disk Drives (HDD)</a></li><li>Performance of VCS additional volumes:</li><ul></ul></li><ul><li>Provides a maximum throughput of 1750 MB/s for each VCS instance. HDD is best suited for large datases that are infrequently accessed and are not latency-sensitive.</li><li>Provides a maximum throughput of 1750 MB/s for each VCS instance.</li><li>Supports storage size up to 16 TB.</li></ul></li><li><a href="https://www.twcc.ai/intro/STORAGE"><span style="font-weight:bold;color:rgb(255, 72, 67)"> See more</span></a></li></td>
+    <li>VDS is designed for TWCC VCS and provides highly available, consistent, low-latency storage service.</li><li>Storage type: <a href="https://en.wikipedia.org/wiki/Hard_disk_drive">Hard Disk Drives (HDD)</a></li><li>Performance of VCS data disks:</li><ul></ul></li><ul><li>Provides a maximum throughput of 1750 MB/s for each VCS instance. HDD is best suited for large datases that are infrequently accessed and are not latency-sensitive.</li><li>Provides a maximum throughput of 1750 MB/s for each VCS instance.</li><li>Supports storage size up to 16 TB.</li></ul></li><li><a href="https://www.twcc.ai/intro/STORAGE"><span style="font-weight:bold;color:rgb(255, 72, 67)"> See more</span></a></li></td>
   </tr>
   <tr>
     <td class="tg-6f4s" colspan="8">Hard Disk Drives (HDD): 1.2 NTD/GB-month (Tax excluded)</td>
