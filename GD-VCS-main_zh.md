@@ -56,7 +56,7 @@ TWCC 作業系統映像檔版本：
 :::
 
 
-* 在儲存資訊頁面，設定外掛儲存空間 Volume 大小（GB）及類型（提供 HDD Volume）。
+* 在儲存資訊頁面，設定外掛儲存空間 Volume 大小（GB）及類型（提供 HDD、SSD Volume）。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ecbac0771afa689f98a5f6b31dbc221c.png)
 
@@ -770,7 +770,7 @@ Host <INSTANCE_NAME>           #輸入虛擬運算個體的名稱
 ### 建立 Volume
 
 * 由服務列表點選進入「**虛擬磁碟**」服務，在「Volume 管理」頁面，點擊「**＋建立**」。
-* 填寫 Volume 名稱、描述、此 Volume 是要重新建立或從還原快照、容量及磁碟類型 (提供 HDD Volume)，接著點擊「**下一步：檢閱+建立>**」。
+* 填寫 Volume 名稱、描述、此 Volume 是要重新建立或從還原快照、容量及磁碟類型 (提供 HDD、SSD Volume)，接著點擊「**下一步：檢閱+建立>**」。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_49b173771f65430385f1c1bbb7a16341.png)
 

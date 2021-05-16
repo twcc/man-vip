@@ -476,11 +476,13 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
   </tr>
   <tr>
     <td class="tg-3ze5" colspan="8"><ul style="list-style-type:circle;">
-    <li>專為 TWCC 虛擬運算服務設計之儲存空間，提供高可用性、一致性、低延遲的服務。&emsp; &emsp; &emsp; &emsp; &ensp; </li></li><li>相關計費服務：虛擬運算個體附加 Volume、虛擬運算個體快照 (儲存個體備份之映像檔)。</li><li>儲存類型：<a href="https://en.wikipedia.org/wiki/Hard_disk_drive">標準硬碟 (HDD)</a></li> <li>虛擬運算個體之附加 Volume 效能：</li><ul><li>提供傳輸效能每 TB 250 MB/秒，適用於不頻繁存取與不易受延遲時間影響的大型資料。</li><li>提供每個虛擬運算個體最大傳輸量為 2,375 MB/秒。</li><li>最多可支援 16 TB 的儲存空間。</ul></li><li><a href="https://www.twcc.ai/intro/STORAGE"><span style="font-weight:bold;color:rgb(255, 72, 67)">了解更多</span></li></a></td>
+    <li>專為 TWCC 虛擬運算服務設計之儲存空間，提供高可用性、一致性、低延遲的服務。&emsp; &emsp; &emsp; &emsp; &ensp; </li></li><li>相關計費服務：虛擬運算個體附加 Volume、虛擬運算個體快照 (儲存個體備份之映像檔)。</li><li>提供<a href="https://en.wikipedia.org/wiki/Solid-state_drive">固態硬碟 (SSD) </a>與<a href="https://en.wikipedia.org/wiki/Hard_disk_drive">標準硬碟 (HDD)</a> 兩種儲存選擇：</li><ul><li><b>固態硬碟 (SSD)</b>
+    <ul><li>提供低延遲的服務 (少於 10 毫秒) 與高效穩定的傳輸量 (from 3 IOPS/GB to 16 IOPS/GB)，增強應用程式的可靠性與延展性，適合需高效能處理的企業應用程式與高吞吐量的巨量資料工作。</li><li>提供每個虛擬運算個體最大傳輸量為 2,375 MB/秒。</li><li>最多可支援 16 TB 的儲存空間。</li></ul></li><li><b>標準硬碟 (HDD)</b><ul><li>提供傳輸效能每 TB 250 MB/秒，適用於不頻繁存取與不易受延遲時間影響的大型資料。</li><li>提供每個虛擬運算個體最大傳輸量為 2,375 MB/秒。</li><li>最多可支援 16 TB 的儲存空間。</li></ul></li></ul><li><a href="https://www.twcc.ai/intro/STORAGE"><span style="font-weight:bold;color:rgb(255, 72, 67)">了解更多</span></li></a></td>
   </tr>
-<!--   <tr>
+
+  <tr>
     <td class="tg-6f4s" colspan="8">固態硬碟 (SSD): 2.6 NTD/GB-月 (未稅價) </td>
-  </tr> -->
+  </tr>
   <tr>
     <td class="tg-6f4s" colspan="8">標準硬碟 (HDD): 1.2 NTD/GB-月 (未稅價)</td>
   </tr>

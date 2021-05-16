@@ -66,7 +66,7 @@ On the network setup page, choose the network and enable automatic distribution 
 
 
 
-* On the storage information page, specify the size of volume in GB and choose volume type. Click “NEXT: REVIEW & CREATE>”.
+* On the storage information page, specify the size of volume in GB and choose volume type (HDD or SSD). Click “NEXT: REVIEW & CREATE>”.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_05fcdec6144be4096e0eee27d4b69637.png)
 
@@ -339,7 +339,7 @@ Virtual Disk Service can expand the volume of storage. Pay and use, flexible and
 
 * Click “Virtual Disk Service” on the service list to enter the “Virtual Disk Service”. On the Volume management page, click " ＋CREATE”
 
-* Fill in the name, description, whether this Volume is a new creation or a restoration from a snapshot, size, and disk type. Click “NEXT: REVIEW & CREATE>”.
+* Fill in the name, description, whether this Volume is a new creation or a restoration from a snapshot, size, and disk type  (HDD or SSD). Click “NEXT: REVIEW & CREATE>”.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_028434b34a422eeaa629497f3c66741e.png)
 
