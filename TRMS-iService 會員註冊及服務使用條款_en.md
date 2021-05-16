@@ -8,7 +8,7 @@ GA: UA-155999456-1
 
 # iService Member Registration and Service Terms
 
-#### Version 2021/03/17 V2.0
+#### Version 2021/03/17 V2.0 |  [<ins>Prior version(s)</ins>](/@preview-twccdocs/prior-terms-en)
       
 Welcome to join the services (hereinafter referred to as "iServices") provided by National Center for High-Performance Computing Center, National Applied Research Laboratories (hereafter referred to as “NCHC”). Please read through the Member Registration and Service Terms (hereafter referred to as “Service Terms”). The Service Terms takes effect when you click an “I Accept” check box below. The Service terms govern the use of all Services and is an agreement between NCHC and you or the entity you represent. You represent to us that you are lawfully able to enter into contracts (e.g., you are an adult). If you are entering into this Service Terms for an entity or a company, you represent to us that you have legal authority to bind that entity or company.
 
