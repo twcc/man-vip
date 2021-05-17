@@ -5,6 +5,7 @@ GA: UA-155999456-1
 ---
 
 {%hackmd @docsharedstyle/default %}
+{%hackmd @docsharedstyle/twccheader-zh %}
 
 # 登入主機
 
@@ -13,6 +14,50 @@ GA: UA-155999456-1
 Windows 用戶請下載 SSH client 軟體 (例：[PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)) ；macOS 用戶可直接開啟內建終端機連線
 
 ## 本機為 Windows 系統
+
+<!-- 1 start -->
+
+<details class="docspoiler">
+
+<summary><b>使用第三方軟體：MobaXterm</b></summary>
+
+### Step 1. 開啟 MobaXterm
+
+下載 [MobaXterm](https://mobaxterm.mobatek.net/download-home-edition.html)、解壓縮之後，執行 **MobaXterm_Personal_[版本]**
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1a1e876714cd048e9886c992af469497.png)
+
+### Step 2. 建立連線
+
+點擊左上角的 「**Session**」
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_14193d66d4e18c0a81402307bd08b841.png)
+<br>
+
+並依照下圖與步驟，完成設定，建立連線：
+
+1. 點選 「**SSH**」
+2. 在`Remote host`輸入*登入節點網域名稱：ln01.twcc.ai*
+3. 在`Specify username`輸入*主機帳號*
+4. 點選 「**OK**」 建立連線
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_513dfb5381969fff75d9b6f192a0bfd2.png)
+
+
+5. 分別輸入*主機密碼* 與 *OTP*
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d3603c9cb64f35b513296bcb0f3100e4.png)
+
+
+6. 登入成功！可參考系統提供概略的操作注意事項、提交 job 使用說明。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_22e1a06c5a1547c3a09f4247e3eca50e.png)
+
+</details>
+
+<!-- Space -->
+
+<div style="height:8px"></div>
 
 <!-- 2. start -->
 
