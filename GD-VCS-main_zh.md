@@ -98,7 +98,7 @@ TWCC 作業系統映像檔版本：
 
 * 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態由 **`Starting`** 變成 **`Ready`** 後即可開始連線使用。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0cf0278e435ce3fbaa96a8631e3f3ec7.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bfe8255ffcd2417ba8a4e7823c171da9.png)
 
 
 #### **Window 個體請接著點擊「下一步：密碼>」**
@@ -118,7 +118,7 @@ TWCC 作業系統映像檔版本：
 
 * 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，待個體狀態由 **`Starting`** 變成 **`Ready`** 後，再請稍等一段時間，即可開始連線使用。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f062b7368287f59d3a7ffc77cb4140c2.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_60a37f0e8a985bf72b551e80d491491d.png)
 
 :::danger
 
@@ -149,7 +149,7 @@ TWCC 作業系統映像檔版本：
 
 ### 管理個體
 
-執行建立、啟動、停止、刪除、快照、重新整理頁面等功能：
+執行建立、啟動、停止、刪除、建立映像檔、重新整理頁面等功能：
 
 * 於管理頁面，上方功能列提供建立、啟動、停止、重新整理頁面的功能。
 * 點擊 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，可針對該個體執行「**啟動**」、「**停止**」 及 「**刪除**」 等功能。
@@ -161,7 +161,7 @@ TWCC 作業系統映像檔版本：
 :::
 
 
-* 進入詳細資料配置頁面，除了可對個體進行**啟動**、**停止**、**删除** 功能之外，還可以製作「**快照**」、「**重新整理**」頁面、編輯個體的描述。
+* 進入詳細資料配置頁面，除了可對個體進行**啟動**、**停止**、**删除** 功能之外，還可以建立「**映像檔**」、「**重新整理**」頁面、編輯個體的描述。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6f2781cedb5a762458df5a25711b11b7.png)
 
@@ -179,7 +179,7 @@ TWCC 作業系統映像檔版本：
     - 個體的狀態轉換過程：`Stopped` > `Queueing`>`Starting` >`Ready`。
     
 - 「**刪除**」個體的影響：
-   - 作業系統 (開機)  (100 GB) 資料將會隨之消失，若需保存此空間的資料，請參考建立虛擬運算個體[<ins>快照</ins>](#快照)的步驟。
+   - 開機磁碟 (100 GB) 資料將會隨之消失，若需保存此空間的資料，請參考建立虛擬運算個體[<ins>映像檔</ins>](#映像檔)的步驟。
    - 已與個體連結的資料磁碟，將會與個體自動分離並保存。
    - 個體的狀態轉換過程：`Deleting` > 從管理列表上消失。
 
@@ -671,55 +671,56 @@ Host <INSTANCE_NAME>           #輸入虛擬運算個體的名稱
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_efdbd4140922207a512b84da8e697024.png)
 
-# 快照
+# 映像檔
 
 
-虛擬運算個體快照功能可以保留某一時間點個體的狀態、作業系統內建的硬碟的檔案與資料，通常在進行重要的系統更新或特殊軟體安裝前會先製作快照，以便需要時可以回復到該時間點的狀態。
+虛擬運算個體映像檔功能可以保留某一時間點個體的狀態、作業系統內建的硬碟的檔案與資料，通常在進行重要的系統更新或特殊軟體安裝前會先建立映像檔，以便需要時可以回復到該時間點的狀態。
 
 :::danger
-<i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> **重要：** 虛擬運算個體刪除後，系統內建 100 GB 的硬碟儲存空間資料將會隨之消失，若您需保存此空間的資料，請參考以下步驟為個體製作快照，再刪除個體。
+<i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> **重要：** 虛擬運算個體刪除後，系統內建 100 GB 的硬碟儲存空間資料將會隨之消失，若您需保存此空間的資料，請參考以下步驟為個體建立映像檔，再刪除個體。
 :::
 
-## 建立虛擬運算個體快照
+## 建立虛擬運算個體映像檔
 
-* 製作快照前，請先參考[製作虛擬運算個體快照的最佳做法](https://man.twcc.ai/@twccdocs/guide-vcs-snapshot-best-practice-zh)。
-* 進入虛擬運算個體管理頁面，點選欲進行快照的個體列表，進入該個體的詳細資料頁面，並點擊「**快照**」。
+* 建立映像檔前，請先參考[建立虛擬運算個體映像檔的最佳做法](https://man.twcc.ai/@twccdocs/guide-vcs-snapshot-best-practice-zh)。
+* 進入虛擬運算個體管理頁面，點選欲建立映像檔的個體列表，進入該個體的詳細資料頁面，並點擊「**映像檔**」。
 :::danger
 <i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> **重要：** 
-1. 虛擬運算個體的狀態必須為 **`Ready`** 或 **`Shutdown`** ，皆可建立快照，但請您[<ins>關機 (Shutdown)</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-snapshot-best-practice-zh#%E5%A6%82%E4%BD%95%E9%97%9C%E6%A9%9F-shutdown%EF%BC%9F) 後再製作快照，若個體狀態為 Ready 且仍有 I/O，快照所需時間較長。
-2. 若個體已設定自動掛載資料磁碟，請在指令 [<ins>加上"nofail" 選項</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-snapshot-best-practice-zh#%E5%A6%82%E4%BD%95%E5%8A%A0%E4%B8%8A-nofail-%E9%81%B8%E9%A0%85%EF%BC%9F)後再製作快照，以確保使用快照回復之個體，可以正常啟動與連線。
+
+1. 虛擬運算個體的狀態必須為 **`Ready`** 或 **`Shutdown`** ，皆可建立映像檔，但請您[<ins>關機 (Shutdown)</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-snapshot-best-practice-zh#%E5%A6%82%E4%BD%95%E9%97%9C%E6%A9%9F-shutdown%EF%BC%9F) 後再製作映像檔，若個體狀態為 Ready 且仍有 I/O，建立所需時間較長。
+2. 若個體已設定自動掛載資料磁碟，請在指令 [<ins>加上"nofail" 選項</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-snapshot-best-practice-zh#%E5%A6%82%E4%BD%95%E5%8A%A0%E4%B8%8A-nofail-%E9%81%B8%E9%A0%85%EF%BC%9F)後再製作映像檔，以確保使用映像檔回復之個體，可以正常啟動與連線。
 3. 更多虛擬運算個體狀態、服務操作影響、計費與否之資訊，請參考[<ins>虛擬運算個體生命週期</ins>](https://man.twcc.ai/@twccdocs/concept-vcs-lifecycle-zh)。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_74ac25bf3bec4901a166a78cf4bdfd5e.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3c70e745f4052b117875a81aa2909ea4.png)
 
 
-* 確認視窗提示的資訊，並輸入快照的名稱、描述後按「**確定**」。
-* 建立快照需數分鐘，等待「**系統需求處理中...**」提示消失後，即可繼續進行其他工作。
+* 確認視窗提示的資訊，並輸入映像檔的名稱、描述後按「**確定**」。
+* 建立映像檔需數分鐘，等待「**系統需求處理中...**」提示消失後，即可繼續進行其他工作。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4ea887ff96b727c3130ecf948ef7bbce.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ed2e50a4cd9980029e9dd4d291761ede.png)
 
-* 頁面跳轉至虛擬運算個體快照管理頁，並等快照狀態由 **`QUEUED`** > **`SAVING`**  > 最後變為 **`ACTIVE`** 後即可使用。
+* 頁面跳轉至虛擬運算個體映像檔管理頁，並等映像檔狀態由 **`QUEUED`** > **`SAVING`**  > 最後變為 **`ACTIVE`** 後即可使用。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_26c2da5a2ee7cf2e327795b35b07e2ca.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e1a78aa185d26f10ab476109712e155a.png)
 
 :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 若快照狀態停止於 **`QUEUED`** 且久未轉為 **`ACTIVE`**，請洽詢技術支援團隊：<a href="mailto:isupport@twcc.ai">isupport@twcc.ai</a>，我們將協助您解決。
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 若映像檔狀態停止於 **`QUEUED`** 且久未轉為 **`ACTIVE`**，請洽詢技術支援團隊：<a href="mailto:isupport@twcc.ai">isupport@twcc.ai</a>，我們將協助您解決。
 :::
 
 
-## 虛擬運算個體快照管理 
+## 虛擬運算個體映像檔管理 
 
-* 進入虛擬運算個體快照管理頁面，會看到所有快照的列表資訊，最後創建的快照會列在最上面，等到狀態變成 **`ACTIVE`** 後才可以使用。
-* 不需使用的快照，可以點選該快照列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，再選擇「**刪除**」即可。
+* 進入虛擬運算個體映像檔管理頁面，會看到所有映像檔的列表資訊，最後創建的映像檔會列在最上面，等到狀態變成 **`ACTIVE`** 後才可以使用。
+* 不需使用的映像檔，可以點選該映像檔列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，再選擇「**刪除**」即可。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4ba238656c93c11c3a03958aee7c4a00.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fef6792d321ae679727ee90dcf12318d.png)
 
 
 
-## 以快照建立虛擬運算個體
+## 以映像檔建立虛擬運算個體
 
-建立好的快照會被儲存成映像檔，在創建新的虛擬運算個體時選擇所要回復的快照映像檔版本 (private)，再依照建立虛擬運算個體的流程創建個體即可。 
+在創建新的虛擬運算個體時選擇所要回復的映像檔版本 (private)，再依照建立虛擬運算個體的流程創建個體即可。 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1e725b08b3cecf100723115f8f630eb2.png)
 
@@ -727,7 +728,7 @@ Host <INSTANCE_NAME>           #輸入虛擬運算個體的名稱
 
 {%hackmd @docsharedstyle/important-zh %}
 
-選用快照建立虛擬運算個體，當狀態為建立中 (**`Starting`**) 時，為確保個體可完整建立，請勿刪除快照。
+選用映像檔建立虛擬運算個體，當狀態為建立中 (**`Starting`**) 時，為確保個體可完整建立，請勿刪除映像檔。
 :::
 
 

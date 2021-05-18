@@ -331,7 +331,7 @@ A deep learning framework designed for both efficiency and flexibility. It allow
         deep learning inference performance.</li>
         <li><b>Vgv-series instances</b> are equipped with 8 NVIDIA® Tesla V100 GPUs, and each GPU pairs 5,120 CUDA Cores and 640 Tensor Cores, delivering over 5120 TOPS of
 deep learning inference performance, and supports NVLink communication to accelerate AI training, inference and high-performance computing.</li> -->
-<li>TWCC offers free 100 GB built-in disk space for VCS instances, and you can freely grow your storage with Virtual Disk Service, and flexibly attach data disks to instances. Also, we provide snapshot service for instance image backup and recovery. See <a href="#Virtual-Disk-Service-VDS"><ins>Virtual Disk Service (VDS)</ins></a> for more pricing information.</li><li><a href="https://www.twcc.ai/intro/VM"><span style="font-weight:bold;color:rgb(255, 72, 67)"> See more</span></a></td>
+<li>TWCC offers free 100 GB built-in disk space for VCS instances, and you can freely grow your storage with Virtual Disk Service, and flexibly attach data disks to instances. Also, we provide image service for instance image backup and recovery. See <a href="#Virtual-Disk-Service-VDS"><ins>Virtual Disk Service (VDS)</ins></a> for more pricing information.</li><li><a href="https://www.twcc.ai/intro/VM"><span style="font-weight:bold;color:rgb(255, 72, 67)"> See more</span></a></td>
   </tr>
   <tr>
     <td class="tg-y29t">Instance Type</td>

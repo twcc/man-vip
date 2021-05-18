@@ -94,7 +94,7 @@ On the network setup page, choose the network and enable automatic distribution 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a6dffb05d1b6e68b5ebbe1db1eebf8ca.png)
 
 
-* The detailed information page shows basic information of the instance, detailed specifications, and network and storage information. Click “Connect” to see the way to connect to the instance or carry out start, stop, snapshot, delete, and refresh. 
+* The detailed information page shows basic information of the instance, detailed specifications, and network and storage information. Click “Connect” to see the way to connect to the instance or carry out start, stop, image, delete, and refresh. 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_970b4234bd43e83b34a2b547ee0a4421.png)
 
@@ -111,7 +111,7 @@ On the network setup page, choose the network and enable automatic distribution 
     - Instance state transitions: `Stopped` > `Queueing`>`Starting` >`Ready`.
     
 - When you **delete** an instance, the following happens:
-    - The boot disk (100 GB) is also erased, and please refer to [Snapshot](#Snapshot) for preserving your data.
+    - The boot volume (100 GB) is also erased, and please refer to [Image](#Image) for preserving your data.
     - Data disks are preserved and detached from the instance.
     - Instance state transitions: `Deleting` > Disappear from the list on the management page.
 :::
@@ -242,60 +242,60 @@ Last login: Wed May 15 01:02:37 2019 from 59-124-220-27.hinet-ip.hinet.net <br>
 </div> 
 
 
-# Snapshot
+# Image
 
-VCS snapshot can preserve the state and data in the OS disk of a VCS instance at a specific time. Usually, a snapshot is taken before an important system update or special software installation to enable returning the VCS instance to an earlier state when necessary.
+VCS image can preserve the state and data in the OS disk of a VCS instance at a specific time. Usually, an image of an instance is taken before an important system update or special software installation to enable returning the VCS instance to an earlier state when necessary.
 
 :::danger
-<i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> **Important:** Once a VCS instance is deleted, the 100 GB OS disk space (built-in disk) will disappear. Please refer to the following instance snapshot procedure to preserve your data before deleting the instance.
+<i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> **Important:** Once a VCS instance is deleted, the 100 GB OS disk space (built-in disk) will disappear. Please refer to the following instance image creation procedure to preserve your data before deleting the instance.
 :::
 
-## Creating a VCS instance snapshot
+## Creating a VCS instance image
 
 * On the **VCS Instance Management** page, select the instance on the list to enter **VCS Instance Details** page. 
-* Select **SNAPSHOT**.
+* Select **IMAGE**.
 
 :::info
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **Note:** 
-1. The instance must be in **`Ready`** or **`Shutdown`** state for a snapshot to be taken.
+1. The instance must be in **`Ready`** or **`Shutdown`** state for an image to be created.
 2. For more information about instance states, operation, and billing, see [ <ins>VCS Instance Lifecycle</ins>](https://man.twcc.ai/@twccdocs/vcs-concept-lifecycle-en).
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_43da98a788cd1376b7c3ae552176b986.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dc29271dcc4dc04671aa6e3b24fc4512.png)
 
-* Enter the name and description for the snapshot, then select **OK**.
-* It takes several minutes to build a snapshot. When “**Processing**” window disappears, you may continue with other tasks.
+* Enter the name and description for the image, then select **OK**.
+* It takes several minutes to create an image. When “**Processing**” window disappears, you may continue with other tasks.
 
 :::info
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **Note:** 
 
-- It takes longer for instances in the **`Ready`** state and with I/O traffic. We suggest **shutting down** instances to create a snapshot.
-- We suggest adding **nofail** option to the automount entry for disks to ensure starting and connecting to the instance properly.
+- It takes longer for instances in the **`Ready`** state and with I/O traffic. We suggest **shutting down** instances to create an image.
+- We suggest adding **nofail** option to the automount entry for diks to ensure starting and connecting to the instance properly.
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_278f64441c29590f7045e911d2b748ed.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ca980cfd6f20d04b0e165d5688f4265e.png)
 
-- After redirecting to **VCS Instance Snapshot Management** page, you can use the snapshot when it changes to **`ACTIVE`** state (**`QUEUED`** > **`SAVING`**  > **`ACTIVE`**).
+- After redirecting to **VCS Instance Image Management** page, you can use the image when it changes to **`ACTIVE`** state (**`QUEUED`** > **`SAVING`**  > **`ACTIVE`**).
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_82759487d56be062ee1aefafe19762d6.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8e5f868cdb3a6906a36966f6e3772826.png)
 
 
-## Managing snapshots
+## Managing images
 
-* On the **VCS Instance Snapshot Management** page, you can see a list of snapshots. The latest creat snapshot will be shown at the top of the list. 
-* For the unneeded snapshots, you can hover your mouse over <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> button, and the select **DELETE**.
+* On the **VCS Instance Image Management** page, you can see a list of images. The latest creat image will be shown at the top of the list. 
+* For the unneeded images, you can hover your mouse over <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> button, and the select **DELETE**.
 
 
 :::info 
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **Note:** For the VCS instance restoring from a snapshot, you need to delete the snapshot before you can delete the instance.
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **Note:** For the VCS instance restoring from an image, you need to delete the image before you can delete the instance.
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8cef531dcccc3b8d57c16a59b6d55f59.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_57bc95cba747af008f1a288c1e70db4a.png)
 
 
-## Restoring an instance from a snapshot
+## Restoring an instance from an image
 
-The taken snapshot is stored as an image. When creating a new VCS instance, you can restore the instance from the snapshot by selecting the snapshot image (private) and then just follow the normal instance creation procedure.
+When creating a new VCS instance, you can restore the instance from the image by selecting the image (private) and then just follow the normal instance creation procedure.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3842c6080a26f4f86792aca62169ff0e.png)
 
