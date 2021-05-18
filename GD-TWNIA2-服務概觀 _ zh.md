@@ -7,6 +7,8 @@ GA: UA-155999456-1
 {%hackmd @docsharedstyle/default %}
 {%hackmd @docsharedstyle/twccheader-zh %}
 
+# 服務概觀
+
 ## 台灣杉二號 - AI 超級電腦主機
 
 台灣杉二號為 AI 超級電腦主機，共運用 2,016 個 NVIDIA® Tesla® V100 GPU，以 9 PFLOPS（每秒執行 9 千兆次浮點運算) 的優異效能，在 2018 年底公布的[全球 500 大高速計算主機 (TOP500) 中排名第 20 名](https://www.top500.org/system/179590/)，[能源效率（Green500）排名第 10 名](https://www.top500.org/lists/green500/2018/11/)。
