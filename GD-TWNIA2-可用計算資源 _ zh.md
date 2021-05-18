@@ -5,16 +5,17 @@ GA: UA-155999456-1
 ---
 
 {%hackmd @docsharedstyle/default %}
+{%hackmd @docsharedstyle/twccheader-zh %}
 
 # 可用計算資源
 
-台灣杉二號 (命令列介面) 與容器運算服務 (CCS) 共享 **252 個計算節點** 及 **2,016 個 NVIDIA® Tesla® V100 GPU**，共可提供 **9 PFLOPS**（每秒執行 9 千兆次浮點運算) 的優異效能，並透過 NVLINK 支援最高 300 GB/s GPU 之間的通訊，亦提供高頻寬、低延遲的節點溝通網路。
+如服務概觀所述，台灣杉二號 (命令列介面) 與部分 TWCC 運算服務共享 **252 個計算節點** 及 **2,016 個 NVIDIA® Tesla® V100 GPU**，共可提供 **9 PFLOPS**（每秒執行 9 千兆次浮點運算) 的優異效能，並透過 NVLINK 支援最高 300 GB/s GPU 之間的通訊，亦提供高頻寬、低延遲的節點溝通網路。
 
 單節點規格如下：
 
 | 項目 | 描述 | 數量 |
 | -------- | -------- | -------- |
-| CPU    | Intel® Xeon® Gold 6154 18 Cores 3.0GHz   |  2    |
+| CPU    | Intel Xeon Gold 6154 18 Cores 3.0GHz   |  2    |
 | Memory    | 32GB DDR4-2666 RDIMM   |  24     |
 | 系統硬碟    | 2.5” 240GB SATAIII   |  2 (RAID 1)     |
 | 資料暫存硬碟    | 4TB NVMe   |  1     |
