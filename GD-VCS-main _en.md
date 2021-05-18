@@ -394,7 +394,7 @@ Virtual Disk Service can expand the disk of storage. Pay and use, flexible and c
 
 * Data Disk Snapshot can preserve a snapshot for a disk. On the detailed information page of disk, click “Snapshot” to show the “Take a snapshot” window. Enter the name and description of the snapshot and click "OK".
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0cb54ad37fd5fce3b6326e27860e9e0b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_15dd9d5a6dd27320e53423883a05bf53.png)
 
 
 ## Snapshot

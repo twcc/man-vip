@@ -58,7 +58,7 @@ TWCC 作業系統映像檔版本：
 
 * 在儲存資訊頁面，設定外掛資料磁碟 大小（GB）及類型（提供 HDD 磁碟）。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7d84125a6c6d94591958a312e41033ac.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d9dafe55ac87c92b4b0c06678699c836.png)
 
 :::info
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 虛擬運算個體建立後，外掛資料磁碟需經初始化才能使用，步驟請參考：
@@ -846,7 +846,7 @@ Host <INSTANCE_NAME>           #輸入虛擬運算個體的名稱
 
 * 資料磁碟快照可為磁碟建立快照，在資料磁碟詳細資料頁面，點擊「**快照**」，出現「建立快照」視窗，輸入快照的名稱及描述後，按下「**確定**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4b6c673e7c1a09689b7bbef316050b65.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6e6c2e6d70b981764777ac47c80b47ee.png)
 
 ## 快照
 ### 資料磁碟快照管理
