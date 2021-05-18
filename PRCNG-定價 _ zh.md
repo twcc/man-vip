@@ -331,7 +331,7 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
     <td class="tg-7g7n" colspan="8"><span style="font-family:sans-serif, Microsoft JhengHei;font-style:italic"><ul style="list-style-type:circle;">
     <li>提供 Linux (Ubuntu、Ce</span>n<span style="font-family:sans-serif, Microsoft JhengHei;font-style:italic">tOS)、Windows 作業系統，智算兼備、節省成本最佳的方案。</li><li><b>v 系列個體</b>配備 Intel® Xeon® Gold 61系列處理器，記憶體處理速度可達 2666 MHz。</li>
 <!--     <li><b>vgv 系列個體</b>配備 8 個 NVIDIA® Tesla V100 GPU，支援 5120 個 CUDA 核心與 640 個 Tensor 核心，每秒具 125 兆次浮點運算 (TOPS) 的推論效能，並支援 NVLink 進行 GPU 之間的資料傳輸，加速人工智慧訓練、推論與高效能運算。</li> -->
-    <li>TWCC 免費提供虛擬運算個體 100GB 內建硬碟空間。此外，您可使用虛擬磁碟服務，建立附加 Volume，自由彈性調配個體的儲存空間，也可建立快照儲存個體映像檔以備份與復原。費率請參考<a href="#虛擬磁碟服務-Virtual-Disk-Service-VDS"><ins>虛擬磁碟服務 (Virtual Disk Service, VDS)</ins></a>。</li><li><a href="https://www.twcc.ai/intro/VM"><span style="font-family:sans-serif, Microsoft JhengHei;font-weight:bold;color:rgb(255, 72, 67)">了解更多</li></span></a></td>
+    <li>TWCC 免費提供虛擬運算個體 100GB 內建硬碟空間。此外，您可使用虛擬磁碟服務，建立資料磁碟，自由彈性調配個體的儲存空間，也可建立快照儲存個體映像檔以備份與復原。費率請參考<a href="#虛擬磁碟服務-Virtual-Disk-Service-VDS"><ins>虛擬磁碟服務 (Virtual Disk Service, VDS)</ins></a>。</li><li><a href="https://www.twcc.ai/intro/VM"><span style="font-family:sans-serif, Microsoft JhengHei;font-weight:bold;color:rgb(255, 72, 67)">了解更多</li></span></a></td>
   </tr>
   <tr>
     <td class="tg-y29t">個體型號</td>
@@ -476,7 +476,7 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
   </tr>
   <tr>
     <td class="tg-3ze5" colspan="8"><ul style="list-style-type:circle;">
-    <li>專為 TWCC 虛擬運算服務設計之儲存空間，提供高可用性、一致性、低延遲的服務。&emsp; &emsp; &emsp; &emsp; &ensp; </li></li><li>相關計費服務：虛擬運算個體附加 Volume、虛擬運算個體快照 (儲存個體備份之映像檔)。</li><li>儲存類型：<a href="https://en.wikipedia.org/wiki/Hard_disk_drive">標準硬碟 (HDD)</a></li> <li>虛擬運算個體之附加 Volume 效能：</li><ul><li>提供傳輸效能每 TB 250 MB/秒，適用於不頻繁存取與不易受延遲時間影響的大型資料。</li><li>提供每個虛擬運算個體最大傳輸量為 2,375 MB/秒。</li><li>最多可支援 16 TB 的儲存空間。</ul></li><li><a href="https://www.twcc.ai/intro/STORAGE"><span style="font-weight:bold;color:rgb(255, 72, 67)">了解更多</span></li></a></td>
+    <li>專為 TWCC 虛擬運算服務設計之儲存空間，提供高可用性、一致性、低延遲的服務。&emsp; &emsp; &emsp; &emsp; &ensp; </li></li><li>相關計費服務：虛擬運算個體資料磁碟、虛擬運算個體快照 (儲存個體備份之映像檔)。</li><li>儲存類型：<a href="https://en.wikipedia.org/wiki/Hard_disk_drive">標準硬碟 (HDD)</a></li> <li>虛擬運算個體之資料磁碟效能：</li><ul><li>提供傳輸效能每 TB 250 MB/秒，適用於不頻繁存取與不易受延遲時間影響的大型資料。</li><li>提供每個虛擬運算個體最大傳輸量為 2,375 MB/秒。</li><li>最多可支援 16 TB 的儲存空間。</ul></li><li><a href="https://www.twcc.ai/intro/STORAGE"><span style="font-weight:bold;color:rgb(255, 72, 67)">了解更多</span></li></a></td>
   </tr>
 <!--   <tr>
     <td class="tg-6f4s" colspan="8">固態硬碟 (SSD): 2.6 NTD/GB-月 (未稅價) </td>

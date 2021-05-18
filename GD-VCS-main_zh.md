@@ -13,7 +13,7 @@ GA: UA-155999456-1
 :::
 
  
-虛擬運算個體是 TWCC 提供的傳統一般型主機租用服務，可以透過自動化工具及流程進行快速部署及回收。並可同時掛載多個虛擬磁碟，建立附加 Volume，自由彈性調配個體的儲存空間，為智算兼備、節省成本的最佳選擇。
+虛擬運算個體是 TWCC 提供的傳統一般型主機租用服務，可以透過自動化工具及流程進行快速部署及回收。並可同時掛載多個虛擬磁碟，建立資料磁碟，自由彈性調配個體的儲存空間，為智算兼備、節省成本的最佳選擇。
 
 ## 建立虛擬運算個體
 
@@ -56,12 +56,12 @@ TWCC 作業系統映像檔版本：
 :::
 
 
-* 在儲存資訊頁面，設定外掛儲存空間 Volume 大小（GB）及類型（提供 HDD Volume）。
+* 在儲存資訊頁面，設定外掛資料磁碟 大小（GB）及類型（提供 HDD 磁碟）。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ecbac0771afa689f98a5f6b31dbc221c.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d9dafe55ac87c92b4b0c06678699c836.png)
 
 :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 虛擬運算個體建立後，外掛 Volume 需經初始化才能使用，步驟請參考：
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 虛擬運算個體建立後，外掛資料磁碟需經初始化才能使用，步驟請參考：
 
 - [<ins>HowTo：初始化磁碟- Linux 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-zh)
 - [<ins>HowTo：初始化磁碟- Windows 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-zh)
@@ -69,7 +69,7 @@ TWCC 作業系統映像檔版本：
 
 
 <!-- :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 選擇使用附加 SSD 加密磁碟可加強您的資料安全性，但加密過程將可能略微影響存取效率。
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 選擇使用 SSD 加密資料磁碟可加強您的資料安全性，但加密過程將可能略微影響存取效率。
 ::: -->
 
 - 以上建立步驟 Linux 個體與 Windows 個體皆相同，而以下建立兩種作業系統不同的登入憑證：
@@ -169,8 +169,8 @@ TWCC 作業系統映像檔版本：
 <i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> **重要：**
 
 - 「**停止**」個體的影響：
-    - 個體將從實體主機上移除並釋放資源— CPU、vCPU、記憶體、作業系統磁碟。
-    - 除記憶體資料將被清除，作業系統磁碟與附加磁碟之資料皆會完整保存。
+    - 個體將從實體主機上移除並釋放資源— CPU、vCPU、記憶體、作業系統 (開機) 磁碟。
+    - 除記憶體資料將被清除，作業系統 (開機) 磁碟與資料磁碟之資料皆會完整保存。
     - 個體的狀態轉換過程： `Ready` >`Stopping` >`Stopped`。<br>
     ※ <ins>虛擬運算個體停止中 (**`Stopping`**)，請勿刪除個體，否則將影響系統處理工作，導致虛擬運算個體錯誤 (**`Error`**)。</ins>
       
@@ -179,8 +179,8 @@ TWCC 作業系統映像檔版本：
     - 個體的狀態轉換過程：`Stopped` > `Queueing`>`Starting` >`Ready`。
     
 - 「**刪除**」個體的影響：
-   - 開機磁碟 (100 GB) 資料將會隨之消失，若需保存此空間的資料，請參考建立虛擬運算個體[<ins>快照</ins>](#快照)的步驟。
-   - 已與個體連結的附加磁碟，將會與個體自動分離並保存。
+   - 作業系統 (開機)  (100 GB) 資料將會隨之消失，若需保存此空間的資料，請參考建立虛擬運算個體[<ins>快照</ins>](#快照)的步驟。
+   - 已與個體連結的資料磁碟，將會與個體自動分離並保存。
    - 個體的狀態轉換過程：`Deleting` > 從管理列表上消失。
 
 - 更多虛擬運算個體狀態、服務操作影響、計費與否之資訊，請參考[<ins>虛擬運算個體生命週期</ins>](https://man.twcc.ai/@twccdocs/concept-vcs-lifecycle-zh)。
@@ -192,7 +192,7 @@ TWCC 作業系統映像檔版本：
 * 進入詳細資料配置頁面，可連結相關服務：
     * **建立/移除**公用 IP
     * **掛載/移除** Auto Scaling 與 負載平衡
-    * **分離** Volume，並可進入 Volume 詳細資料頁面
+    * **分離** 資料磁碟，並可進入資料磁碟詳細資料頁面
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8e17516c8e7b7881aa3928cec176f759.png)
 
@@ -251,7 +251,7 @@ TWCC 入口網站之網路流量包含東西流量與南北流量的總和，而
 :::danger
 <i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> **重要：**
 
-- 藉由下列方式連線個體後，若您在 `/etc/fstab` 檔案有設定自動掛載 Volume (例：`/dev/vdb  /mnt ext4 defaults`)，我們建議您在設定後方加上`nofail`選項 (例：`/dev/vdb  /mnt ext4 defaults,nofail,x-systemd.device-timeout=1m`)，以確保您的個體可以正常啟動與連線。
+- 藉由下列方式連線個體後，若您在 `/etc/fstab` 檔案有設定自動掛載資料磁碟 (例：`/dev/vdb  /mnt ext4 defaults`)，我們建議您在設定後方加上`nofail`選項 (例：`/dev/vdb  /mnt ext4 defaults,nofail,x-systemd.device-timeout=1m`)，以確保您的個體可以正常啟動與連線。
 - 網路卡設定經修改後，將會導致無法連線進入虛擬運算個體，因此我們強烈不建議您更動網卡設定，請您操作與部署時特別留意。
 :::
 
@@ -687,7 +687,7 @@ Host <INSTANCE_NAME>           #輸入虛擬運算個體的名稱
 :::danger
 <i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> **重要：** 
 1. 虛擬運算個體的狀態必須為 **`Ready`** 或 **`Shutdown`** ，皆可建立快照，但請您[<ins>關機 (Shutdown)</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-snapshot-best-practice-zh#%E5%A6%82%E4%BD%95%E9%97%9C%E6%A9%9F-shutdown%EF%BC%9F) 後再製作快照，若個體狀態為 Ready 且仍有 I/O，快照所需時間較長。
-2. 若個體已設定自動掛載 Volume，請在指令 [<ins>加上"nofail" 選項</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-snapshot-best-practice-zh#%E5%A6%82%E4%BD%95%E5%8A%A0%E4%B8%8A-nofail-%E9%81%B8%E9%A0%85%EF%BC%9F)後再製作快照，以確保使用快照回復之個體，可以正常啟動與連線。
+2. 若個體已設定自動掛載資料磁碟，請在指令 [<ins>加上"nofail" 選項</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-snapshot-best-practice-zh#%E5%A6%82%E4%BD%95%E5%8A%A0%E4%B8%8A-nofail-%E9%81%B8%E9%A0%85%EF%BC%9F)後再製作快照，以確保使用快照回復之個體，可以正常啟動與連線。
 3. 更多虛擬運算個體狀態、服務操作影響、計費與否之資訊，請參考[<ins>虛擬運算個體生命週期</ins>](https://man.twcc.ai/@twccdocs/concept-vcs-lifecycle-zh)。
 :::
 
@@ -765,62 +765,62 @@ Host <INSTANCE_NAME>           #輸入虛擬運算個體的名稱
 
 ## 虛擬磁碟服務
 
-虛擬磁碟服務可為虛擬運算個體擴充儲存空間（Volume），隨用隨付，可自行設定容量大小，彈性方便。
+虛擬磁碟服務可為虛擬運算個體擴充儲存空間，隨用隨付，可自行設定容量大小，彈性方便。
 
-### 建立 Volume
+### 建立資料磁碟
 
-* 由服務列表點選進入「**虛擬磁碟**」服務，在「Volume 管理」頁面，點擊「**＋建立**」。
-* 填寫 Volume 名稱、描述、此 Volume 是要重新建立或從還原快照、容量及磁碟類型 (提供 HDD Volume)，接著點擊「**下一步：檢閱+建立>**」。
+* 由服務列表點選進入「**虛擬磁碟**」服務，在「資料磁碟管理」頁面，點擊「**＋建立**」。
+* 填寫資料磁碟名稱、描述、此資料磁碟是要重新建立或從還原快照、容量及磁碟類型 (提供 HDD 磁碟)，接著點擊「**下一步：檢閱+建立>**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_49b173771f65430385f1c1bbb7a16341.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_45c53d5003d1b66785e556a092b99f0a.png)
 
 
 
 <!-- :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 選擇使用附加 SSD 加密磁碟可加強您的資料安全性，但加密過程將可能略微影響存取效率。
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 選擇使用 SSD 加密資料磁碟可加強您的資料安全性，但加密過程將可能略微影響存取效率。
 ::: -->
 
 
-* 檢視 Volume 的設定，確認後按下「**建立**」。
+* 檢視資料磁碟的設定，確認後按下「**建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_741989ab73509ae98c01e6427d6cb4f0.png)
-
-
-### 連結 Volume
-
-* Volume 建立好後，需先與虛擬運算個體連結，連結後進入虛擬運算個體才可使用。
-*  Volume 建立後，會出現在 Volume 管理列表的最上方，等待其狀態變成 **AVAILABLE** 後即可開始連結至個體使用。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e30e1de20a0cf26da8a438dd97167444.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_062d6a00a7b7e9910dee1b34414b223c.png)
 
 
+### 連結資料磁碟
 
-* 點擊該列表進入 Volume 服務詳細資料頁面，點擊「**連結**」。
+* 資料磁碟建立好後，需先與虛擬運算個體連結，連結後進入虛擬運算個體才可使用。
+*  資料磁碟建立後，會出現在資料磁碟管理列表的最上方，等待其狀態變成 **AVAILABLE** 後即可開始連結至個體使用。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cdb66f234fbb4508ff65f483c31d372f.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6f7c1cc7ccb72aebc2efda985d717abf.png)
 
 
 
-* 出現「連結 Volume 視窗」後，選擇欲連結的虛擬運算個體後按下「**確定**」。
+* 點擊該列表進入資料磁碟詳細資料頁面，點擊「**連結**」。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2f6a1a074dcc0abaf7d0fa34b5a05518.png)
+
+
+
+* 出現「連結磁碟視窗」後，選擇欲連結的虛擬運算個體後按下「**確定**」。
 
 :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 下拉選單僅顯示可連結 Volume (狀態非 `Stopped`) 的虛擬運算個體。 
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 下拉選單僅顯示可連結資料磁碟 (狀態非 `Stopped`) 的虛擬運算個體。 
 :::
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d80803226a6f6e01cee14be33d10da1a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5025d37d70ede7ec72f9cd05fba6fa44.png)
 
 :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** Volume 連結至虛擬運算個體後，需經初始化才能使用，步驟請參考：
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 資料磁碟連結至虛擬運算個體後，需經初始化才能使用，步驟請參考：
 
 - [<ins>HowTo：初始化磁碟- Linux 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-zh)
 - [<ins>HowTo：初始化磁碟- Windows 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-zh)
 :::
 
 
-* Volume 連結至虛擬運算個體後，可按一下「**重新整理**」，已連結的個體會顯示在下方的區塊中。
+* 資料磁碟連結至虛擬運算個體後，可按一下「**重新整理**」，已連結的個體會顯示在下方的區塊中。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5f7b94e3b13b748a0dfc369bb9b15572.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fa75bdb78bc52059698a1e40d540a0da.png)
 
 
 :::info
@@ -828,38 +828,38 @@ Host <INSTANCE_NAME>           #輸入虛擬運算個體的名稱
 :::
 
 
-* 接續上圖，按下「**分離**」，即可將此 Volume 與所連接的個體分離。
+* 接續上圖，按下「**分離**」，即可將此資料磁碟與所連接的個體分離。
 
-### 刪除 Volume
-* 删除 Volume 前請注意，Volume 一旦删除將無法挽回，點擊「**删除**」按鈕即可將此 Volume 删除。
+### 刪除資料磁碟
+* 删除資料磁碟前請注意，磁碟一旦删除將無法挽回，點擊「**删除**」按鈕即可將此磁碟删除。
 
 
 :::danger
 <i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> **重要：**
-1. 若 Volume 的狀態為 **IN-USE** 必須先將該 Volume 自虛擬運算個體分離，狀態變成 **AVAILABLE** 後，才能刪除。
-2. 當 Volume 的快照存在時，將無法刪除該 Volume，請您先完成刪除 Volume 快照，再刪除 Volume。
+1. 若資料磁碟的狀態為 **IN-USE** 必須先將該磁碟自虛擬運算個體分離，狀態變成 **AVAILABLE** 後，才能刪除。
+2. 當資料磁碟的快照存在時，將無法刪除該磁碟，請您先完成刪除磁碟快照，再刪除磁碟。
 :::
 
-### Volume 快照
+### 資料磁碟快照
     
-若需備份附加 Volume 的資料，請參考以下 Volume 快照步驟。
+若需備份資料磁碟的資料，請參考以下資料磁碟快照步驟。
 
-* Volume 快照可為 Volume 建立快照，在 Volume 服務詳細資料頁面，點擊「**快照**」，出現「建立快照」視窗，輸入快照的名稱及描述後，按下「**確定**」。
+* 資料磁碟快照可為磁碟建立快照，在資料磁碟詳細資料頁面，點擊「**快照**」，出現「建立快照」視窗，輸入快照的名稱及描述後，按下「**確定**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4b6c673e7c1a09689b7bbef316050b65.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6e6c2e6d70b981764777ac47c80b47ee.png)
 
 ## 快照
-### Volume 快照管理
-* 進入快照管理頁面，會看到所有的 Volume 快照列表資訊，包括 **ID**、**快照名稱**、**Volume 名稱**、**快照狀態**、**建立時間**及**建立者**。最後創建的快照會列在最上面，點選欄位名稱可依該欄位值排列或改變排列順序。
+### 資料磁碟快照管理
+* 進入快照管理頁面，會看到所有的資料磁碟快照列表資訊，包括 **ID**、**快照名稱**、**資料磁碟名稱**、**快照狀態**、**建立時間**及**建立者**。最後創建的快照會列在最上面，點選欄位名稱可依該欄位值排列或改變排列順序。
 * 在「搜尋」列輸入關鍵字可篩選出列表的欄位中符合該特定條件的結果。
 * 點擊 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，再按一下「**刪除**」即可將該快照刪除。
 
 :::warning
 <i class="fa fa-lightbulb-o fa-20" aria-hidden="true"></i> **提示：** 
-- 最後創建的個體列在最上方，點選上方的欄位名稱，可改變排列順序。
+- 最後創建的快照列在最上方，點選上方的欄位名稱，可改變排列順序。
 :::
     
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a9252737d4d9e1c4c1391eb4086c0f11.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dd996b4165206c45aaefccb787b20f93.png)
 
 ## 個體資料備份
 
@@ -1754,7 +1754,7 @@ sudo systemctl restart ntp
 ```
 
 
-## 對 Volume 與檔案加密
+## 對磁碟與檔案加密
     
 - [請參考連結內容](https://drive.google.com/file/d/1A6gdyL0lUMauygwM9cLtgU8GwbRpK36s/view?usp=sharing)  
 

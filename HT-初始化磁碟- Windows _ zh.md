@@ -15,9 +15,9 @@ GA: UA-155999456-1
 
 ### Step 1. 確認磁碟已連結至個體
 
-[將資料磁碟連結至虛擬運算個體](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B5%90-Volume)後，請確認在使用者介面已正確連結。
+[將資料磁碟連結至虛擬運算個體](https://man.twcc.ai/@twccdocs/r1DhqHdpN?type=view#%E9%80%A3%E7%B5%90%E8%B3%87%E6%96%99%E7%A3%81%E7%A2%9F)後，請確認在使用者介面已正確連結。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5498c14ea137d3e6f9b6b058cda6eab1.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fa75bdb78bc52059698a1e40d540a0da.png)
 
 
 

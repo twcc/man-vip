@@ -15,9 +15,9 @@ GA: UA-155999456-1
 
 ### Step 1. 確認磁碟已連結至個體
 
-[將資料磁碟連結至虛擬運算個體](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B5%90-Volume)後，請確認在使用者介面已正確連結，並取得掛載路徑 (例：`/dev/vdb`)。
+[將資料磁碟連結至虛擬運算個體](https://man.twcc.ai/@twccdocs/r1DhqHdpN?type=view#%E9%80%A3%E7%B5%90%E8%B3%87%E6%96%99%E7%A3%81%E7%A2%9F)後，請確認在使用者介面已正確連結，並取得掛載路徑 (例：`/dev/vdb`)。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bf733cc8c17da592fef4e1230b182cf5.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fa75bdb78bc52059698a1e40d540a0da.png)
 
 [連線](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%87%B3-Linux-%E5%80%8B%E9%AB%94-%E6%9C%AC%E6%A9%9F%E7%82%BA-Windows)進入您的虛擬運算個體，輸入以下指令再次確認磁碟已連結至個體，並查看磁碟詳細資料，確認路徑和容量大小正確。
 
@@ -33,7 +33,7 @@ $ sudo fdisk -l
 輸入以下格式化指令，建立虛擬運算個體可使用的檔案系統。
 
 ```
-$ sudo mkfs -t ext4 <VOLUME_DEVICE>
+$ sudo mkfs -t ext4 <DISK_DEVICE>
 ```
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_33548e5fdec75ace065b50e9f5589536.png)
@@ -41,7 +41,7 @@ $ sudo mkfs -t ext4 <VOLUME_DEVICE>
 
 :::info
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 
-- `<VOLUME_DEVICE>`：磁碟裝置 (例：`/dev/vdb`)
+- `<DISK_DEVICE>`：磁碟裝置 (例：`/dev/vdb`)
 :::
 
 ### Step 3. 掛載磁碟
@@ -59,7 +59,7 @@ $ sudo mkdir <DIRECTORY>
 將磁碟掛載至資料夾。
 
 ```
-$ sudo mount <VOLUME_DEVICE> <DIRECTORY>
+$ sudo mount <DISK_DEVICE> <DIRECTORY>
 ```
 
 ### Step 4. 確認掛載狀況
