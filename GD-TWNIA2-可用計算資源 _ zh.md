@@ -19,5 +19,5 @@ GA: UA-155999456-1
 | Memory    | 32GB DDR4-2666 RDIMM   |  24     |
 | 系統硬碟    | 2.5” 240GB SATAIII   |  2 (RAID 1)     |
 | 資料暫存硬碟    | 4TB NVMe   |  1     |
-| GPU    | NVIDIA® Tesla® V100 SXM2   |  8     |
+| GPU    | [NVIDIA® Tesla® V100 SXM2](https://www.nvidia.com/en-us/data-center/v100/)   |  8     |
 | 網路卡    | Mellanox InfiniBand EDR 100Gb  |  4     |
