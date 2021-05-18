@@ -98,7 +98,7 @@ TWCC 作業系統映像檔版本：
 
 * 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態由 **`Starting`** 變成 **`Ready`** 後即可開始連線使用。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0cf0278e435ce3fbaa96a8631e3f3ec7.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bfe8255ffcd2417ba8a4e7823c171da9.png)
 
 
 #### **Window 個體請接著點擊「下一步：密碼>」**
@@ -118,7 +118,7 @@ TWCC 作業系統映像檔版本：
 
 * 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，待個體狀態由 **`Starting`** 變成 **`Ready`** 後，再請稍等一段時間，即可開始連線使用。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f062b7368287f59d3a7ffc77cb4140c2.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_60a37f0e8a985bf72b551e80d491491d.png)
 
 :::danger
 
