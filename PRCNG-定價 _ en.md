@@ -479,14 +479,15 @@ How to get GPU resources? See <a href="https://man.twcc.ai/@staging-twccdocs/S1-
   </tr>
   <tr>
     <td class="tg-3ze5" colspan="8"><ul style="list-style-type:circle;">
-    <li>VDS is designed for TWCC VCS and provides highly available, consistent, low-latency storage service.</li><li>Storage type: <a href="https://en.wikipedia.org/wiki/Hard_disk_drive">Hard Disk Drives (HDD)</a></li><li>Performance of VCS data disks:</li><ul></ul></li><ul><li>Provides a maximum throughput of 1750 MB/s for each VCS instance. HDD is best suited for large datases that are infrequently accessed and are not latency-sensitive.</li><li>Provides a maximum throughput of 1750 MB/s for each VCS instance.</li><li>Supports storage size up to 16 TB.</li></ul></li><li><a href="https://www.twcc.ai/intro/STORAGE"><span style="font-weight:bold;color:rgb(255, 72, 67)"> See more</span></a></li></td>
+    <li>VDS is designed for TWCC VCS and provides highly available, consistent, low-latency storage service.</li><li>VDS provides two strorage options: <a href="https://en.wikipedia.org/wiki/Solid-state_drive">Solid State Drive (SSD)</a> and <a href="https://en.wikipedia.org/wiki/Hard_disk_drive">Hard Disk Drives (HDD)</a></li><ul><li><b>Solid State Drives (SSD)</b>
+    <ul><li>Provides low-latency service (less than 10 ms) and consistent I/O performance with significantly high throughput (from 3 IOPS/GB to 16 IOPS/GB). SSD strengthens reliability and scalability for applications, and it is best suited for workloads with high throughput and enterprise applications that require high-performance.</li><li>Provides a maximum throughput of 1750 MB/s for each VCS instance.</li><li>Supports storage size up to 16 TB.</li></ul></li><li><b>Hard Disk Drives (HDD)</b><ul><li>Provides a maximum throughput of 1750 MB/s for each VCS instance. HDD is best suited for large datases that are infrequently accessed and are not latency-sensitive.</li><li>Provides a maximum throughput of 1750 MB/s for each VCS instance.</li><li>Supports storage size up to 16 TB.</li></ul></li></ul><li><a href="https://www.twcc.ai/intro/STORAGE"><span style="font-weight:bold;color:rgb(255, 72, 67)"> See more</span></a></td>
+    <tr>
+    <td class="tg-6f4s" colspan="8">Solid State Drives (SSD): 2.6 NTD/GB-month (Tax excluded)</td>
+>>>>>>> 34-netapp-ssd-for-data-vol
   </tr>
   <tr>
     <td class="tg-6f4s" colspan="8">Hard Disk Drives (HDD): 1.2 NTD/GB-month (Tax excluded)</td>
   </tr>
-<!--   <tr>
-    <td class="tg-6f4s" colspan="8">Solid State Drives (SSD): 2.6 NTD/GB-month (Tax excluded)</td>
-  </tr> -->
 </table>
 <!-- /wp:shortcode -->
 <br>

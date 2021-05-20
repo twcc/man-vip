@@ -65,8 +65,7 @@ On the network setup page, choose the network and enable automatic distribution 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9dc86baa98abd15a1df17a5ffb3aebb3.png)
 
 
-
-* On the storage information page, specify the size of disk in GB and choose disk type. Click “NEXT: REVIEW & CREATE>”.
+* On the storage information page, specify the size of disk in GB and choose disk type (HDD or SSD). Click “NEXT: REVIEW & CREATE>”.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_05fcdec6144be4096e0eee27d4b69637.png)
 
@@ -341,7 +340,7 @@ Virtual Disk Service can expand the disk of storage. Pay and use, flexible and c
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a2f264e953ae9fa6808d8ee4d547f984.png)
 
-* Fill in the name, description, whether this disk is a new creation or a restoration from a snapshot, size, and disk type. Click “NEXT: REVIEW & CREATE>”.
+* Fill in the name, description, whether this disk is a new creation or a restoration from a snapshot, size, and disk type (HDD or SSD). Click “NEXT: REVIEW & CREATE>”.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7f25d31a70033b7751d2c3849d01ca8a.png)
 
