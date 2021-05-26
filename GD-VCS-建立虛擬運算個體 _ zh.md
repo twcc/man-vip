@@ -1,20 +1,20 @@
 ---
-title: 建立虛擬運算個體 | zh
 tags: Guide, VCS, TW
-GA: UA-155999456-1
+title: 建立虛擬運算個體 | zh
+GA: 
 ---
 
 {%hackmd @docsharedstyle/default %}
-{%hackmd @TWSC/header-zh %}
+{%hackmd @docsharedstyle/twccheader-zh %}
 
 # 建立虛擬運算個體
 
-您可以系統預設資訊以簡單步驟完成建立虛擬運算個體，或是依需求選擇適合的個體型號。完整虛擬運算個體型號 (含資源數量與其他資源大小)，請參考[價目表](https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Virtual-Compute-Service-VCS)。
+您可以系統預設資訊以簡單步驟完成建立虛擬運算個體，或是依需求選擇適合的個體型號。完整虛擬運算個體型號 (含資源數量與其他資源大小)，請參考[價目表](https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#虛擬運算服務-Virtual-Compute-Service-VCS)。
 
-{%hackmd @TWSC/Hkx-ZdAld %}
+{%hackmd @twccdocs/chunk-before-you-begin-zh %}
 
 
-## 建立 Linux 個體
+### 建立 Linux 個體
 
 <!-- 1 start -->
 
@@ -49,7 +49,7 @@ GA: UA-155999456-1
 
 
 :::danger
-<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> **重要**：TWCC 不負責紀錄及管理您的鑰匙對，請務必下載並妥善保存此鑰匙對 `pem` 檔案，若沒有此鑰匙對，您將無法連線虛擬運算個體。
+<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> **重要**：TWCC 不負責紀錄及管理您的鑰匙對，請務必下載並妥善保存此鑰匙對 `pem` 檔案，若沒有此鑰匙對，您將無法[連線虛擬運算個體]()。
 :::
 
 * 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態變成 **`Ready`** 後即可開始連線使用。
@@ -57,7 +57,7 @@ GA: UA-155999456-1
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0cf0278e435ce3fbaa96a8631e3f3ec7.png)
 
 
-* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態變成 **`Ready`** 後即可開始連線使用。
+* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態變成 **`Ready`** 後即可開始[連線]()使用。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f062b7368287f59d3a7ffc77cb4140c2.png)
 
@@ -75,29 +75,32 @@ GA: UA-155999456-1
 
 <br>
 
+### 準備工作
+
+- 請先[建立鑰匙對]()
+
 
 ### 指令
 
 ```bash
-$ twccli mk vcs [-n]   #虛擬運算個體名稱
-                [-key] #鑰匙對名稱
-                [-img] #映像檔版本
-                [-ptype] #虛擬運算個體的型號
+$ twccli mk vcs -key   #鑰匙對名稱
+                [-n]   #虛擬運算個體名稱
+                
 ```
 :::info
-{%hackmd @TWSC/cli-optional-note-zh %}
-2. 若不帶任何參數則以預設資訊建立個體：
+{%hackmd @TWSC/cli-parameter-note-zh %}
+2. 若不帶選擇性參數，則以預設資訊建立個體：
 
-| 映像檔類型、映像檔 | 容器名稱 |硬體設定|
-| -------- | -------- | -------- |
-| Ubuntu 16.04    | v.2xsuper   | 0 GPU + 8 CPU + 064GB memory |
+| 映像檔類型、映像檔 | 型號 |網路資訊|規格|
+| -------- | -------- | -------- | -------- |
+| Ubuntu 16.04    | v.2xsuper  | default_network  | 0 GPU + 8 CPU + 064GB memory |
 
 
 </div>
 
 ### 範例
 
-- 使用鑰匙對 **`key1`** 建立名稱為 **`vcscli`**、映像檔類型 **`Caffe2`**，映像檔規格為 **`caffe2-18.08-py3-v1:latest`**、GPU 數量 **`2`** 的容器。
+- 使用鑰匙對 **`key1`** 建立名稱為 **`vcscli`** 的虛擬運算個體。
 
 ```bash
 $ twccli mk vcs -key key1 -n vcscli
@@ -119,7 +122,7 @@ $ twccli mk vcs -key key1 -n vcscli
 </details>
 
 
-## 建立 Windows 個體
+### 建立 Windows 個體
 
 <!-- 1 start -->
 
@@ -145,7 +148,7 @@ $ twccli mk vcs -key key1 -n vcscli
 :::
 
 
-* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後，等個體狀態變成 **`Ready`** 後即可開始連線使用。
+* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後，等個體狀態變成 **`Ready`** 後即可開始[<ins>連線</ins>](/@TWSC/vcs-guide-connect-to-windows-from-windows)使用。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f062b7368287f59d3a7ffc77cb4140c2.png)
 
