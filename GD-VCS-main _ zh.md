@@ -1,6 +1,7 @@
 ---
-tags: VCS-book
+tags: Guide, VCS, TW
 title: 虛擬運算服務 | zh
+GA:
 ---
 
 # 虛擬運算服務
@@ -10,16 +11,16 @@ title: 虛擬運算服務 | zh
 使用指南 <i class="fa fa-book" aria-hidden="true"></i>
 ---
 - ### ● 建立與連線個體
-    - [建立虛擬運算個體](/@TWSC/guide-vcs-create-zh)
-    - [建立客製化個體](/@TWSC/guide-vcs-create-custom-zh)
+    - [建立虛擬運算個體](https://man.twcc.ai/@TWSC/guide-vcs-create-zh)
+    - [建立客製化個體](https://man.twcc.ai/@TWSC/guide-vcs-create-custom-zh)
 - ### ● 連線個體
-    - [準備工作](/@TWSC/vcs-guide-connect-prerequisite-zh)
+    - [準備工作](https://man.twcc.ai/@TWSC/vcs-guide-connect-prerequisite-zh)
     - ### 連線至 Linux 個體
-        - [本機為 Windows](/@TWSC/vcs-guide-connect-to-linux-from-windows)
-        - [本機為 Linux / macOS](/@TWSC/vcs-guide-connect-to-linux-from-linux)
+        - [本機為 Windows](https://man.twcc.ai/@TWSC/vcs-guide-connect-to-linux-from-windows)
+        - [本機為 Linux / macOS](https://man.twcc.ai/@TWSC/vcs-guide-connect-to-linux-from-linux)
     - ### 連線至 Windows 個體 
-        - [本機為 Windows](/@TWSC/vcs-guide-connect-to-windows-from-windows)
-        - [本機為 macOS](/@TWSC/vcs-guide-connect-to-windows-from-macos)
+        - [本機為 Windows](https://man.twcc.ai/@TWSC/vcs-guide-connect-to-windows-from-windows)
+        - [本機為 macOS](https://man.twcc.ai/@TWSC/vcs-guide-connect-to-windows-from-macos)
 
 - ### ● 管理與監控
     - [檢視/編輯]()
@@ -75,5 +76,5 @@ title: 虛擬運算服務 | zh
 
 <!-- - [Release Notes]() -->
 - [TWCC FAQs <i class="fa fa-question-circle" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-vcs-zh)[target=_blank] 
-- [TWCC 價目表 <i class="fa fa-th-list" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/SJWlN3YDr)
+- [TWCC 價目表 <i class="fa fa-th-list" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#虛擬運算服務-Virtual-Compute-Service-VCS)
 - [教學影片 <i class="fa fa-video-camera" aria-hidden="true"></i>](https://www.youtube.com/watch?v=BNQ7npYQDSo&list=PLYcc4OEy5lEDzfHqN79Yu1KHXbRFVRtdX)[target=_blank]
