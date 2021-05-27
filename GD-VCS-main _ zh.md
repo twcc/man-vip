@@ -56,20 +56,15 @@ GA:
 
 概念說明 <i class="fa fa-commenting-o" aria-hidden="true"></i>
 ---
-- ### ● 虛擬運算個體
-    - [個體生命週期](/@twccdocs/concept-vcs-lifecycle-zh)
-    - [TWCC映像檔]()
+- [個體生命週期](/@twccdocs/concept-vcs-lifecycle-zh)
+- [TWCC映像檔]()
 
 案例教學 <i class="fa fa-lightbulb-o" aria-hidden="true"></i> 
 ---
 - [初始化磁碟- Linux 個體](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-zh)
 - [初始化磁碟- Windows 個體](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-zh)
 - [轉換 SSL 憑證](https://man.twcc.ai/@twccdocs/howo-lb-convert-cert-zh)
-- ### HowTo：架設安全、可負載高流量的網站
-    - [Intro](https://man.twcc.ai/@twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-intro-zh)
-    - [第一部分](https://man.twcc.ai/@twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-1-zh)
-    - [第二部分](https://man.twcc.ai/@twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-2-zh)
-    - [第三部分](https://man.twcc.ai/@twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-3-zh)
+- [HowTo：架設安全、可負載高流量的網站](https://man.twcc.ai/@twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-zh)[target=_blank]
 
 其他資訊 <i class="fa fa-info-circle" aria-hidden="true"></i>
 ---
