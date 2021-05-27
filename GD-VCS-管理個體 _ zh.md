@@ -4,15 +4,15 @@ title: 管理個體 | zh
 GA:
 ---
 
+
+{%hackmd @docsharedstyle/default %}
+{%hackmd @docsharedstyle/twccheader-zh %}
+
 # 管理個體：停止/啟動/關機/重開機/刪除
 
 您可以透過使用者網站於「**虛擬運算個體管理**」頁面，執行：刪除、停止、啟動虛擬運算個體，並透過在個體中操作將個體關機。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_aea803ee48d326a121ac5e11c4d44aae.png)
-
-:::warning
-<i class="fa fa-lightbulb-o fa-20" aria-hidden="true"></i> **提示：** 勾選虛擬運算個體左邊的複選框，即可同時對多項個體進行啟動、停止。
-:::
 
 ## 停止個體
 
@@ -25,11 +25,41 @@ GA:
 
 其他操作限制如下：
 
-- 不可連線登入
-- 不可建立/移除公用 IP
-- 不可連結/分離虛擬磁碟的資料磁碟
-- 不可建立個體映像檔
-- 不可掛載/移除 Auto Scaling 與負載平衡服務
+<i class="fa fa-times" aria-hidden="true"></i> 連線登入
+<i class="fa fa-times" aria-hidden="true"></i> 建立/移除公用 IP
+<i class="fa fa-times" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
+<i class="fa fa-times" aria-hidden="true"></i> 建立個體映像檔
+<i class="fa fa-times" aria-hidden="true"></i> 掛載/移除 Auto Scaling 與負載平衡服務
+
+<!-- 1 start -->
+
+<details class="docspoiler">
+
+<summary><b>TWCC 入口網站</b></summary>
+
+<br>
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fed3868fd9683c5e21bdddf2407afe84.png)
+
+
+
+</details>
+
+<!-- Space -->
+
+<div style="height:8px"></div>
+
+<!-- 2. start -->
+
+<details class="docspoiler">
+
+<summary><b>TWCC CLI</b> (尚無支援) </summary>
+
+<br>
+
+</details>
+
+<br>
 
 :::info
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：**  
@@ -41,6 +71,37 @@ GA:
 ## 重啟個體
 
 若要回復並使用已停止的個體，請點選「**啟動**」，個體狀態將呈現 **`Starting`**，正在重新分配資源中，並準備再次進入 **`Ready`** 狀態。
+
+<!-- 1 start -->
+
+<details class="docspoiler">
+
+<summary><b>TWCC 入口網站</b></summary>
+
+<br>
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_33b8fbf1523c8dba1e40300a6d47a3f6.png)
+
+
+</details>
+
+<!-- Space -->
+
+<div style="height:8px"></div>
+
+<!-- 2. start -->
+
+<details class="docspoiler">
+
+<summary><b>TWCC CLI</b> (尚無支援) </summary>
+
+<br>
+
+</details>
+
+<br>
+
+
 :::info
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：**  
 停止再啟動之個體，多數將建立於新的實體主機上。
@@ -49,6 +110,8 @@ GA:
 
 ## 個體關機
 
+**TWCC 入口網站、TWCC CLI 不支援關機功能，請您於個體中操作：**
+
 - Linux 個體：可以於個體中執行`sudo shutdown`、`sudo poweroff -f` 將個體關機
 - Windows 個體：可使用`shutdown -s`、點選桌面左下關機鈕執行關機。
  
@@ -56,11 +119,11 @@ GA:
 
 操作限制如下：
 
-- 不可連線登入
-- 不可建立/移除公用 IP
-- 可連結/分離虛擬磁碟的資料磁碟
-- 可建立個體映像檔
-- 不可掛載/分離 Auto Scaling 與負載平衡服務
+<i class="fa fa-times" aria-hidden="true"></i> 連線登入
+<i class="fa fa-times" aria-hidden="true"></i> 建立/移除公用 IP
+<i class="fa fa-check" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
+<i class="fa fa-check" aria-hidden="true"></i> 建立個體映像檔
+<i class="fa fa-times" aria-hidden="true"></i> 掛載/分離 Auto Scaling 與負載平衡服務
 
 :::info
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 與[<ins>停止個體</ins>](停止個體)不同，關機後除了會清除記憶體資料，**資源皆不釋放回資源池**，且儲存資料皆保留，重新開機後仍可使用。
@@ -70,14 +133,94 @@ GA:
 
 若要重新將已關機的個體開機，請點選「**啟動**」，個體狀態將呈現 **`Starting`**，正在開機中，並準備再次進入 **`Ready`** 狀態。
 
+<!-- 1 start -->
+
+<details class="docspoiler">
+
+<summary><b>TWCC 入口網站</b></summary>
+
+<br>
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_88bd1f7f4dc4adca776ffd5a5c3ca27f.png)
+
+
+</details>
+
+<!-- Space -->
+
+<div style="height:8px"></div>
+
+<!-- 2. start -->
+
+<details class="docspoiler">
+
+<summary><b>TWCC CLI</b> (尚無支援) </summary>
+
+<br>
+
+</details>
+
+<br>
+
 
 ## 刪除個體
 
 若要將個體永久刪除，不再使用，在點選刪除後，個體狀態將呈現 **`Deleting`**，個體成功刪除後，便<ins>**不再計費**</ins>，並從個體列表上消失。
 
 其他刪除的注意事項：
-- 作業系統 (開機) 磁碟內的資料亦將永久刪除，若需保留可[建立個體映像檔]()。
+- 作業系統 (開機) 磁碟內的資料亦將永久刪除，若需保留可[建立個體映像檔]()。:exclamation:
 - 資料磁碟則會自動分離保留
+
+<!-- 1 start -->
+
+<details class="docspoiler">
+
+<summary><b>TWCC 入口網站</b></summary>
+
+<br>
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_806c3c888ea507893c631722b2890dd6.png)
+
+
+
+</details>
+
+<!-- Space -->
+
+<div style="height:8px"></div>
+
+<!-- 2. start -->
+
+<details class="docspoiler">
+
+<summary><b>TWCC CLI</b></summary>
+
+<br>
+
+### 指令
+
+```bash
+$ twccli mk vcs -s   #個體 ID
+$ twccli ls vcs      #檢視結果
+```
+
+### 範例
+
+- 刪除 ID 為 **`937651`** 的虛擬運算個體，確認已刪除。
+
+```
+$ twccli rm vcs -s 937651
+$ twccli ls vcs
+```
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_024803eddc7136ec4fa25af5fe2ddc84.png)
+
+</details>
+
+<br>
+
+
+---
 
 :::warning
 {%hackmd @docsharedstyle/tip-zh %}

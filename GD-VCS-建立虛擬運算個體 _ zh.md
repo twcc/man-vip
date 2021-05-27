@@ -89,7 +89,7 @@ $ twccli mk vcs -key   #鑰匙對名稱
 | 映像檔類型、映像檔 | 型號 |網路資訊|規格|
 | -------- | -------- | -------- | -------- |
 | Ubuntu 16.04    | v.2xsuper  | default_network  | 0 GPU + 8 CPU + 064GB memory |
-
+:::
 
 </div>
 
@@ -107,6 +107,20 @@ $ twccli mk vcs -key key1 -n vcscli
 - 虛擬運算個體名稱命名字元條件：需為**小寫字母或數字**，**首字元需為小寫字母**，**長度 6-16 個字元**。
 -  若設定不符合以上條件，將出現以下錯誤訊息：
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_095834bd7ee5d99d3a70596a7c462629.png)
+:::
+
+:::warning
+{%hackmd @docsharedstyle/tip-zh %}
+
+其他相關 TWCC CLI 指令：
+
+```bash
+$ twccli ls vcs -img   #檢視所有映像檔規格
+$ twccli ls vcs -ptype #檢視所有產品型號與規格
+```
+
+
+:::
 
 
 </details>
