@@ -38,11 +38,11 @@ GA: UA-155999456-1
 
 建立個體後，系統將分配資源並初始化執行個體中，個體狀態將呈現 **`Starting`**，此時尚未能連線使用，但不久後即進入 **`Ready`** 狀態。在 **`Ready`** 狀態下，可操作內容如下：
 
-<i class="fa fa-check" aria-hidden="true"></i> 連線登入
-<i class="fa fa-check" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
-<i class="fa fa-check" aria-hidden="true"></i> 建立個體映像檔
-<i class="fa fa-check" aria-hidden="true"></i> 建立/移除公用 IP
-<i class="fa fa-check" aria-hidden="true"></i> 掛載/移除 Auto Scaling 與負載平衡服務
+- <i class="fa fa-check" aria-hidden="true"></i> 連線登入
+- <i class="fa fa-check" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
+- <i class="fa fa-check" aria-hidden="true"></i> 建立個體映像檔
+- <i class="fa fa-check" aria-hidden="true"></i> 建立/移除公用 IP
+- <i class="fa fa-check" aria-hidden="true"></i> 掛載/移除 Auto Scaling 與負載平衡服務
 
 :::info
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 建立步驟請參考[<ins>建立虛擬運算個體</ins>](https://man.twcc.ai/@TWSC/guide-vcs-create-zh)
@@ -52,11 +52,11 @@ GA: UA-155999456-1
 
 若您將持續一段時間不使用個體，並希望保留各項資源，您可以點選「停止」關機並回收個體資源，個體將呈現 **`Stopping`**，準備進入 **`Stopped`** 資源已釋放的狀態 。在 **`Stopped`** 狀態下，<ins>**個體將不再計費**</ins>。其他操作限制如下：
 
-<i class="fa fa-times" aria-hidden="true"></i> 連線登入
-<i class="fa fa-times" aria-hidden="true"></i> 建立/移除公用 IP
-<i class="fa fa-times" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
-<i class="fa fa-times" aria-hidden="true"></i> 建立個體映像檔
-<i class="fa fa-times" aria-hidden="true"></i> 掛載/移除 Auto Scaling 與負載平衡服務
+- <i class="fa fa-times" aria-hidden="true"></i> 連線登入
+- <i class="fa fa-times" aria-hidden="true"></i> 建立/移除公用 IP
+- <i class="fa fa-times" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
+- <i class="fa fa-times" aria-hidden="true"></i> 建立個體映像檔
+- <i class="fa fa-times" aria-hidden="true"></i> 掛載/移除 Auto Scaling 與負載平衡服務
 
 :::info
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：**  
@@ -82,11 +82,11 @@ GA: UA-155999456-1
 
 操作限制如下：
 
-<i class="fa fa-times" aria-hidden="true"></i> 連線登入
-<i class="fa fa-times" aria-hidden="true"></i> 建立/移除公用 IP
-<i class="fa fa-check" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
-<i class="fa fa-check" aria-hidden="true"></i> 建立個體映像檔
-<i class="fa fa-times" aria-hidden="true"></i> 掛載/分離 Auto Scaling 與負載平衡服務
+- <i class="fa fa-times" aria-hidden="true"></i> 連線登入
+- <i class="fa fa-times" aria-hidden="true"></i> 建立/移除公用 IP
+- <i class="fa fa-check" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
+- <i class="fa fa-check" aria-hidden="true"></i> 建立個體映像檔
+- <i class="fa fa-times" aria-hidden="true"></i> 掛載/分離 Auto Scaling 與負載平衡服務
 
 :::info
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 
