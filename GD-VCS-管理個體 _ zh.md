@@ -10,9 +10,12 @@ GA:
 
 # 管理個體：停止/啟動/關機/重開機/刪除
 
-您可以透過使用者網站於「**虛擬運算個體管理**」頁面，執行：刪除、停止、啟動虛擬運算個體，並透過在個體中操作將個體關機。
+您可以依需求與使用情境，對虛擬運算個體執行停止、啟動、關機、重開機、刪除之動作。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_aea803ee48d326a121ac5e11c4d44aae.png)
+:::info
+{%hackmd @docsharedstyle/note-zh %}
+租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-zh#虛擬運算服務)。
+:::
 
 ## 停止個體
 
@@ -23,14 +26,6 @@ GA:
 虛擬運算個體停止中 (**`Stopping`**)，請勿刪除個體，否則將影響系統處理工作，導致個體錯誤 (**`Error`**)。
 :::
 
-其他操作限制如下：
-
-<i class="fa fa-times" aria-hidden="true"></i> 連線登入
-<i class="fa fa-times" aria-hidden="true"></i> 建立/移除公用 IP
-<i class="fa fa-times" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
-<i class="fa fa-times" aria-hidden="true"></i> 建立個體映像檔
-<i class="fa fa-times" aria-hidden="true"></i> 掛載/移除 Auto Scaling 與負載平衡服務
-
 <!-- 1 start -->
 
 <details class="docspoiler">
@@ -39,8 +34,12 @@ GA:
 
 <br>
 
+- 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**停止**」。
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fed3868fd9683c5e21bdddf2407afe84.png)
 
+- 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**停止**」。
+- 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**停止**」。
 
 
 </details>
@@ -66,6 +65,12 @@ GA:
 1. 停止後將**釋放**個體資源 — GPU、CPU、vCPU、記憶體、作業系統磁碟。
 2. 停止後將**保留**公用 IP、資料磁碟、Auto Scaling、負載平衡。以上資源在重新啟動個體後，皆會自動連結回個體。
 3. 除了記憶體內的資料將被清除，儲存於個體的所有資料皆會保留。
+4. 其他操作限制如下：
+- <i class="fa fa-times" aria-hidden="true"></i> 連線登入
+- <i class="fa fa-times" aria-hidden="true"></i> 建立/移除公用 IP
+- <i class="fa fa-times" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
+- <i class="fa fa-times" aria-hidden="true"></i> 建立個體映像檔
+- <i class="fa fa-times" aria-hidden="true"></i> 掛載/移除 Auto Scaling 與負載平衡服務
 :::
 
 ## 重啟個體
@@ -80,8 +85,12 @@ GA:
 
 <br>
 
+- 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**啟動**」。
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_33b8fbf1523c8dba1e40300a6d47a3f6.png)
 
+- 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**啟動**」。
+- 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**啟動**」。
 
 </details>
 
@@ -117,16 +126,15 @@ GA:
  
 執行後，個體將進入 **`Shutdown`** 的已關機狀態。在關機狀態下，<ins>**個體將持續計費**</ins>。
 
-操作限制如下：
-
-<i class="fa fa-times" aria-hidden="true"></i> 連線登入
-<i class="fa fa-times" aria-hidden="true"></i> 建立/移除公用 IP
-<i class="fa fa-check" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
-<i class="fa fa-check" aria-hidden="true"></i> 建立個體映像檔
-<i class="fa fa-times" aria-hidden="true"></i> 掛載/分離 Auto Scaling 與負載平衡服務
-
 :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 與[<ins>停止個體</ins>](停止個體)不同，關機後除了會清除記憶體資料，**資源皆不釋放回資源池**，且儲存資料皆保留，重新開機後仍可使用。
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 
+1. 與[<ins>停止個體</ins>](#停止個體)不同，關機後除了會清除記憶體資料，**資源皆不釋放回資源池**，且儲存資料皆保留，重新開機後仍可使用。
+2. 操作限制如下：
+- <i class="fa fa-times" aria-hidden="true"></i> 連線登入
+- <i class="fa fa-times" aria-hidden="true"></i> 建立/移除公用 IP
+- <i class="fa fa-check" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
+- <i class="fa fa-check" aria-hidden="true"></i> 建立個體映像檔
+- <i class="fa fa-times" aria-hidden="true"></i> 掛載/分離 Auto Scaling 與負載平衡服務
 :::
 
 ## 個體重開機
@@ -141,8 +149,12 @@ GA:
 
 <br>
 
+- 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**啟動**」。
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_88bd1f7f4dc4adca776ffd5a5c3ca27f.png)
 
+- 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**啟動**」。
+- 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**啟動**」。
 
 </details>
 
@@ -168,7 +180,7 @@ GA:
 若要將個體永久刪除，不再使用，在點選刪除後，個體狀態將呈現 **`Deleting`**，個體成功刪除後，便<ins>**不再計費**</ins>，並從個體列表上消失。
 
 其他刪除的注意事項：
-- 作業系統 (開機) 磁碟內的資料亦將永久刪除，若需保留可[建立個體映像檔]()。:exclamation:
+- 作業系統 (開機) 磁碟內的資料亦將永久刪除，若需保留可[建立個體映像檔](https://man.twcc.ai/@TWSC/vcs-vds-instance-image-zh)。
 - 資料磁碟則會自動分離保留
 
 <!-- 1 start -->
@@ -179,9 +191,11 @@ GA:
 
 <br>
 
+- 進入「**虛擬運算個體管理**」頁 > 點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**刪除**」。
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_806c3c888ea507893c631722b2890dd6.png)
 
-
+- 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**刪除**」。
 
 </details>
 

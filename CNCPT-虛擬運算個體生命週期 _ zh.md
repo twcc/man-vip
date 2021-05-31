@@ -5,6 +5,7 @@ GA: UA-155999456-1
 ---
 
 {%hackmd @docsharedstyle/default %}
+{%hackmd @docsharedstyle/twccheader-zh %}
 
 # 虛擬運算個體生命週期
 
@@ -34,32 +35,78 @@ GA: UA-155999456-1
 
 ## 建立個體
 
-建立個體後，系統將分配資源並初始化執行個體中，個體狀態將呈現 `Starting`，此時尚未能連線使用，但不久後即進入 `Ready` 狀態。在 `Ready` 狀態下，可操作內容如下：
+建立個體後，系統將分配資源並初始化執行個體中，個體狀態將呈現 **`Starting`**，此時尚未能連線使用，但不久後即進入 **`Ready`** 狀態。在 **`Ready`** 狀態下，可操作內容如下：
 
-- 可連線登入
-- 可連結/分離虛擬磁碟的資料磁碟
-- 可建立個體映像檔
-- 可建立/移除公用 IP
-- 可掛載/移除 Auto Scaling 與負載平衡服務
+<i class="fa fa-check" aria-hidden="true"></i> 連線登入
+<i class="fa fa-check" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
+<i class="fa fa-check" aria-hidden="true"></i> 建立個體映像檔
+<i class="fa fa-check" aria-hidden="true"></i> 建立/移除公用 IP
+<i class="fa fa-check" aria-hidden="true"></i> 掛載/移除 Auto Scaling 與負載平衡服務
 
 :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 建立步驟請參考[<ins>建立虛擬運算個體</ins>](https://www.twcc.ai/doc?page=vm#%E5%BB%BA%E7%AB%8B%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 建立步驟請參考[<ins>建立虛擬運算個體</ins>](https://man.twcc.ai/@TWSC/guide-vcs-create-zh)
 :::
 
 ## 停止個體
 
-若您將持續一段時間不使用個體，並希望保留各項資源，您可以點選「停止」關機並回收個體資源，個體將呈現`Stopping`，準備進入 `Stopped` 資源已釋放的狀態 。在`Stopped` 狀態下，個體將不再計費。其他操作限制如下：
+若您將持續一段時間不使用個體，並希望保留各項資源，您可以點選「停止」關機並回收個體資源，個體將呈現 **`Stopping`**，準備進入 **`Stopped`** 資源已釋放的狀態 。在 **`Stopped`** 狀態下，<ins>**個體將不再計費**</ins>。其他操作限制如下：
 
-- 不可連線登入
-- 不可建立/移除公用 IP
-- 不可連結/分離虛擬磁碟的資料磁碟
-- 不可建立個體映像檔
-- 不可掛載/移除 Auto Scaling 與負載平衡服務
+<i class="fa fa-times" aria-hidden="true"></i> 連線登入
+<i class="fa fa-times" aria-hidden="true"></i> 建立/移除公用 IP
+<i class="fa fa-times" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
+<i class="fa fa-times" aria-hidden="true"></i> 建立個體映像檔
+<i class="fa fa-times" aria-hidden="true"></i> 掛載/移除 Auto Scaling 與負載平衡服務
 
 :::info
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：**  
 1. 停止後將**釋放**個體資源 — GPU、CPU、vCPU、記憶體、作業系統磁碟。
 2. 停止後將**保留**公用 IP、資料磁碟、Auto Scaling、負載平衡。以上資源在重新啟動個體後，皆會自動連結回個體。
 3. 除了記憶體內的資料將被清除，儲存於個體的所有資料皆會保留。
-4. 個體停止步驟請參考[<ins>管理虛擬運算個體</ins>](https://www.twcc.ai/doc?page=vm#%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94%E7%AE%A1%E7%90%86)
+4. 個體停止步驟請參考[<ins>停止虛擬運算個體</ins>](https://man.twcc.ai/@TWSC/vcs-guide-manage-instance-zh#%E5%81%9C%E6%AD%A2%E5%80%8B%E9%AB%94)
+:::
+
+## 重啟個體
+
+若要回復並使用已停止的個體，請點選「啟動」，個體狀態將呈現 **`Starting`**，正在重新分配資源中，並準備再次進入 **`Ready`** 狀態。
+:::info
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：**  
+1. 停止再啟動之個體，多數將建立於新的實體主機上。
+2. 個體啟動步驟請參閱[<ins>重啟虛擬運算個體</ins>](https://man.twcc.ai/@TWSC/vcs-guide-manage-instance-zh#%E9%87%8D%E5%95%9F%E5%80%8B%E9%AB%94)
+:::
+
+
+## 個體關機
+
+執行關機後，個體將進入 **`Shutdown`** 的已關機狀態，在 **`Shutdown`** 關機狀態下，<ins>**個體將持續計費**</ins>。
+
+操作限制如下：
+
+<i class="fa fa-times" aria-hidden="true"></i> 連線登入
+<i class="fa fa-times" aria-hidden="true"></i> 建立/移除公用 IP
+<i class="fa fa-check" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
+<i class="fa fa-check" aria-hidden="true"></i> 建立個體映像檔
+<i class="fa fa-times" aria-hidden="true"></i> 掛載/分離 Auto Scaling 與負載平衡服務
+
+:::info
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 
+- 與[<ins>停止個體</ins>](#停止個體)不同，關機後除了會清除記憶體資料，**資源皆不釋放回資源池**，且儲存資料皆保留，重新開機後仍可使用。
+- 關機步驟請參考[<ins>虛擬運算個體關機</ins>](https://man.twcc.ai/@TWSC/vcs-guide-manage-instance-zh#%E5%88%AA%E9%99%A4%E5%80%8B%E9%AB%94)
+:::
+
+## 個體重開機
+
+若要重新將已關機的個體開機，請點選「啟動」，個體狀態將呈現 **`Starting`**，正在開機中，並準備再次進入 **`Ready`** 狀態。
+
+:::info
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：**  個體重開機步驟請參考[<ins>虛擬運算個體重開機</ins>](https://man.twcc.ai/@twccdocs/concept-vcs-lifecycle-zh#%E5%80%8B%E9%AB%94%E9%87%8D%E9%96%8B%E6%A9%9F)
+:::
+
+## 刪除個體
+
+若要將個體永久刪除，不再使用，在點選刪除後，個體狀態將呈現`Deleting`，<ins>**個體成功刪除後，便不再計費**</ins>，並從個體列表上消失。其他刪除的注意事項：
+- 作業系統 (開機) 磁碟內的資料亦將永久刪除，若需保留可建立個體映像檔。
+- 資料磁碟則會自動分離保留
+
+:::info
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：**  個體刪除步驟請參考[<ins>刪除虛擬運算個體</ins>](https://man.twcc.ai/@TWSC/vcs-guide-manage-instance-zh#%E5%88%AA%E9%99%A4%E5%80%8B%E9%AB%94)
 :::

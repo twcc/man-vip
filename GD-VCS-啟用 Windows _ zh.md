@@ -9,11 +9,7 @@ GA:
 
 # 啟用 Windows
 
-Windows 虛擬運算個體建立完成後，部分版本需使用您已擁有的授權自行啟用 Windows：
-- Windows 10 企業版 LTSC
-- Windows 2016 Server
-
-以下提供兩種啟用的方法：
+Windows 虛擬運算個體建立完成後，需使用您已擁有的授權自行啟用 Windows，以下提供兩種啟用的方法：
 
 ## 使用數位授權啟用
 

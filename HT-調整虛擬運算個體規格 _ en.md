@@ -5,7 +5,9 @@ GA: UA-155999456-1
 ---
 
 {%hackmd @docsharedstyle/default %}
+{%hackmd @docsharedstyle/twccheader-zh %}
 {%hackmd @docsharedstyle/eng-working-en %}
+
 
 
 
@@ -15,7 +17,8 @@ GA: UA-155999456-1
 
 以下內容以 **v.8xsuper** 型號建立之個體，調整至 **v.super** 型號為操作範例，映像檔選用 Ubuntu。
 :::info 
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 完整型號、規格與價格之比較，請參考[<ins>價目表</ins>](https://www.twcc.ai/doc?page=price#%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Virtual-Compute-Service-VCS-%E2%80%BB-%E5%8D%B3%E5%B0%87%E7%99%BC%E5%94%AE%EF%BC%8C%E8%AB%8B%E6%B4%BD%E5%AE%A2%E6%9C%8D%E4%BA%BA%E5%93%A1%E4%BA%86%E8%A7%A3%E6%9B%B4%E5%A4%9A%E3%80%82)。
+{%hackmd @docsharedstyle/note-zh %}
+完整型號、規格與價格之比較，請參考[<ins>價目表</ins>](https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#虛擬運算服務-Virtual-Compute-Service-VCS)。
 :::
 
 
@@ -24,7 +27,7 @@ GA: UA-155999456-1
 透過對虛擬運算個體建立映像檔，保存個體資料。
 
 :::warning
-<i class="fa fa-lightbulb-o fa-20" aria-hidden="true"></i> **提示：** 
+{%hackmd @docsharedstyle/tip-zh %}
 1. 請問映像檔建立的時間需要多久？請參考[<ins>TWCC FAQ 虛擬運算服務 > 個體映像檔 > Q1</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-vcs-zh#%E5%80%8B%E9%AB%94%E5%BF%AB%E7%85%A7)。
 2. 如何縮減映像檔建立的時間？ 請參考[<ins>TWCC FAQ 虛擬運算服務 > 個體映像檔 > Q2</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-vcs-zh#%E5%80%8B%E9%AB%94%E5%BF%AB%E7%85%A7)。
 :::
@@ -74,9 +77,7 @@ GA: UA-155999456-1
 
 
 :::info 
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：**
+{%hackmd @docsharedstyle/note-zh %}
 - 若您原虛擬運算個體有連結資料磁碟，請先將資料磁碟分離，再連結至新個體。
 - 若原虛擬運算個體不再繼續使用，建議您刪除該個體，回收計算資源。
 :::
-
-

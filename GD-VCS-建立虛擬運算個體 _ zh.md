@@ -11,10 +11,17 @@ GA:
 
 您可以系統預設資訊以簡單步驟完成建立虛擬運算個體，或是依需求選擇適合的個體型號。完整虛擬運算個體型號 (含資源數量與其他資源大小)，請參考[價目表](https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#虛擬運算服務-Virtual-Compute-Service-VCS)。
 
+:::info
+{%hackmd @docsharedstyle/note-zh %}
+TWCC 提供下列映像檔：
+- **Linux**：Ubuntu-16.04、18.04、20.04; Centos-7.9、8.2
+- **Windows**：Windows 10 Pro、Windows 10 Enterprise LTSC; Windows Server 2016
+:::
+
 {%hackmd @twccdocs/chunk-before-you-begin-zh %}
 
 
-### 建立 Linux 個體
+### 建立 <i class="fa fa-linux" aria-hidden="true"></i> Linux 個體
 
 <!-- 1 start -->
 
@@ -49,11 +56,11 @@ GA:
 
 
 :::danger
-<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> **重要**：TWCC 不負責紀錄及管理您的鑰匙對，請務必下載並妥善保存此鑰匙對 `pem` 檔案，若沒有此鑰匙對，您將無法[連線虛擬運算個體]()。
+<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> **重要**：TWCC 不負責紀錄及管理您的鑰匙對，請務必下載並妥善保存此鑰匙對 `pem` 檔案，若沒有此鑰匙對，您將無法[<ins>連線虛擬運算個體</ins>](https://man.twcc.ai/@TWSC/vcs-guide-connect-to-linux-from-windows-zh)。
 :::
 
 
-* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態變成 **`Ready`** 後即可開始[連線]()使用。
+* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態變成 **`Ready`** 後即可開始[<ins>連線</ins>](https://man.twcc.ai/@TWSC/vcs-guide-connect-to-linux-from-windows)使用。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f062b7368287f59d3a7ffc77cb4140c2.png)
 
@@ -74,7 +81,7 @@ GA:
 
 ### 指令
 
-**Step 1.** 請先[<ins>建立鑰匙對</ins>]()
+**Step 1.** 請先[<ins>建立鑰匙對</ins>](https://man.twcc.ai/@TWSC/guide-vcs-keypair-zh)
 **Step 2.** 建立虛擬運算個體個體
 
 ```bash
@@ -126,7 +133,7 @@ $ twccli ls vcs -ptype #檢視所有產品型號與規格
 </details>
 
 
-### 建立 Windows 個體
+### 建立 <i class="fa fa-windows" aria-hidden="true"></i>  Windows 個體
 
 <!-- 1 start -->
 
@@ -152,7 +159,7 @@ $ twccli ls vcs -ptype #檢視所有產品型號與規格
 :::
 
 
-* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後，等個體狀態變成 **`Ready`** 後，再等候一些時間即可開始[<ins>連線</ins>](/@TWSC/vcs-guide-connect-to-windows-from-windows)使用。
+* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後，等個體狀態變成 **`Ready`** 後，再等候一些時間即可開始[<ins>連線</ins>](https://man.twcc.ai/@TWSC/vcs-guide-connect-to-windows-from-windows-zh)使用。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f062b7368287f59d3a7ffc77cb4140c2.png)
 
@@ -170,9 +177,3 @@ $ twccli ls vcs -ptype #檢視所有產品型號與規格
 - [<ins>HowTo：初始化磁碟- Windows 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-zh)
 :::
 
-:exclamation:
-
-:::info
-{%hackmd @docsharedstyle/note-zh %}
-1. TWCC 提供下列映像檔：<br><b>Linux</b>：Ubuntu-16.04、18.04、20.04; Centos-7.9、8.2<br><b>Windows</b>：Windows 10 Pro、Windows 10 Enterprise LTSC; Windows Server 2016<li>虛擬運算個體型號、資源比例與費率，請參考[<ins>價目表</ins>](https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#虛擬運算服務-Virtual-Compute-Service-VCS)。
-:::

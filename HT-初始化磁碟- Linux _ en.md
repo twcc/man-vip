@@ -5,6 +5,7 @@ GA: UA-155999456-1
 ---
 
 {%hackmd @docsharedstyle/default %}
+{%hackmd @docsharedstyle/twccheader-zh %}
 {%hackmd @docsharedstyle/eng-working-en %}
 
 # HowTo：初始化磁碟- Linux
@@ -15,11 +16,11 @@ GA: UA-155999456-1
 
 ### Step 1. 確認磁碟已連結至個體
 
-[將資料磁碟連結至虛擬運算個體](https://man.twcc.ai/@twccdocs/r1DhqHdpN?type=view#%E9%80%A3%E7%B5%90%E8%B3%87%E6%96%99%E7%A3%81%E7%A2%9F)後，請確認在使用者介面已正確連結，並取得掛載路徑 (例：`/dev/vdb`)。
+[將資料磁碟連結至虛擬運算個體](https://man.twcc.ai/@TWSC/guide-vcs-vds-manage-disk-zh#%E9%80%A3%E7%B5%90%E8%87%B3%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)後，請確認在使用者介面已正確連結，並取得掛載路徑 (例：`/dev/vdb`)。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fa75bdb78bc52059698a1e40d540a0da.png)
 
-[連線](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%87%B3-Linux-%E5%80%8B%E9%AB%94-%E6%9C%AC%E6%A9%9F%E7%82%BA-Windows)進入您的虛擬運算個體，輸入以下指令再次確認磁碟已連結至個體，並查看磁碟詳細資料，確認路徑和容量大小正確。
+[連線](https://man.twcc.ai/@TWSC/vcs-guide-connect-to-linux-from-windows-zh)進入您的虛擬運算個體，輸入以下指令再次確認磁碟已連結至個體，並查看磁碟詳細資料，確認路徑和容量大小正確。
 
 ```
 $ sudo fdisk -l
