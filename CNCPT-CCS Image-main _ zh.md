@@ -23,7 +23,7 @@ GA: UA-155999456-1
 - [<img class="ccsimgicon" src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3022d6e6790c870e499eac8e2c77d53c.png"> MXNet](/@preview-twccdocs/ccs-concept-image-mxnet-zh)
 - [<img class="ccsimgicon" src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b3382d3255e279896320ff106a1565d.png"> Caffe2](/@preview-twccdocs/ccs-concept-image-caffe2-zh)
 - [<img class="ccsimgicon" src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f55059e9d0a6ac45c44bcc0ec1bebff5.png"> TensorRT](/@preview-twccdocs/ccs-concept-image-tensorrt-zh)
-- [<img class="ccsimgicon" src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f55059e9d0a6ac45c44bcc0ec1bebff5.png" width="30" heigh="30"> TensorRT_Server](/@preview-twccdocs/ccs-concept-image-tensorrtserver-zh)
+- [<img class="ccsimgicon" src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f55059e9d0a6ac45c44bcc0ec1bebff5.png" width="30" heigh="30"> Triton Inference Server](/@preview-twccdocs/ccs-concept-image-tensorrtserver-zh)
 - [<img class="ccsimgicon" src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f55059e9d0a6ac45c44bcc0ec1bebff5.png"> Theano](/@preview-twccdocs/ccs-concept-image-theano-zh)
 - [<img class="ccsimgicon" src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f55059e9d0a6ac45c44bcc0ec1bebff5.png"> Torch](/@preview-twccdocs/ccs-concept-image-torch-zh)
 - [<img class="ccsimgicon" src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bb968fa9146487087f1c4634929d931f.png"> DIGITS](/@preview-twccdocs/ccs-concept-image-digits-zh)
