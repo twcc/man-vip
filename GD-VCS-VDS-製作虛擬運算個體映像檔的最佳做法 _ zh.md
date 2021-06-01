@@ -1,13 +1,13 @@
 ---
-title: 建立虛擬運算個體快照的最佳做法 | en
-tags: Guide, VCS, EN
+title: 製作虛擬運算個體快照的最佳做法 | zh
+tags: Guide, VCS, ZH
 GA: UA-155999456-1
 ---
 
 {%hackmd @docsharedstyle/default %}
-{%hackmd @docsharedstyle/eng-working-en %}
+{%hackmd @docsharedstyle/twccheader-zh %}
 
-# 建立虛擬運算個體快照的最佳做法
+# 建立虛擬運算個體映像檔的最佳做法
 
 您可於多種情況下建立 [TWCC 虛擬運算個體映像檔](https://man.twcc.ai/@twccdocs/r1DhqHdpN?type=view#%E6%98%A0%E5%83%8F%E6%AA%94)，**但在建立前，請您執行以下工作以確保有效取得映像檔**：
 
@@ -43,7 +43,7 @@ $ sudo shutdown
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_856cd2fa7cd4c6d40fe452e2502aafa9.png)
 
-- 請您在原設定後方加上 `nofail` 選項，避免掛載資料磁碟作業錯誤，造成您以快照建立的個體無法正常啟動與連線，
+- 請您在原設定後方加上 `nofail` 選項，避免掛載資料磁碟作業錯誤，造成您以映像檔建立的個體無法正常啟動與連線，
 (例：`,nofail,x-systemd.device-timeout=1m`)
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_95662b57c57e1a5e8a61ea55502359a8.png)
