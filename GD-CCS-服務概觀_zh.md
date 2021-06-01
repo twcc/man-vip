@@ -30,7 +30,7 @@ GA: UA-155999456-1
 
 ### <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d404fdf4e28033ae3c6185c87888ab51.png" width="35" heigh="25"> 多樣化的 AI 框架
 
-提供 Nvidia 優化之 TensorFlow、Caffe、CUDA、Torch、PyTorch、TensorRT 、TensorRT Server、CNTK、MXNet、Theano、DIGITS、RAPIDS 等等的 AI 框架，無需費心安裝，並能滿足不同模型訓練與推論的需求。
+提供 Nvidia 優化之 TensorFlow、Caffe、CUDA、Torch、PyTorch、TensorRT 、Triton Inference Server、CNTK、MXNet、Theano、DIGITS、RAPIDS 等等的 AI 框架，無需費心安裝，並能滿足不同模型訓練與推論的需求。
 
 ### <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cb712cc256270388197b36fdb9757d68.png" width="35" heigh="25"> 不同的容器選擇
 
