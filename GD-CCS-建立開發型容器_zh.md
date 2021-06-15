@@ -7,7 +7,6 @@ GA: UA-155999456-1
 {%hackmd @docsharedstyle/default %}
 {%hackmd @docsharedstyle/twccheader-zh %}
 
-
 # 建立開發型容器
 
 您可以系統預設資訊以一個指令完成容器建立，或是依需求選擇適合的容器型號。
@@ -34,9 +33,19 @@ GA: UA-155999456-1
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1c43aab7948fc1f045440c590f458fea.png)
 
 
-* 選擇映像檔類型：您可依據需求，選擇 NGC 優化之深度學習框架。
+* 選擇映像檔類型：您可瀏覽並選擇 NGC 優化之深度學習框架，或直接於左上方搜尋欲使用的框架名稱 (例：PyTorch, TensorFlow...等)。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_75771217b3c19975348dbc2197fd84b5.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a4c9a9e6996f373cc6be68c474257c50.png)
+
+
+:::warning
+{%hackmd @docsharedstyle/tip-zh %}
+1. TWCC 提供的 NGC 容器映像檔類型、版本、套件，請參考：[<ins>容器映像檔</ins>](https://man.twcc.ai/@twccdocs/ccs-concept-image-main-zh)[target=_blank]
+2. 首次選用後，映像檔會記錄儲存於「**最近使用**」區塊，加快您下次選用的速度。(清除瀏覽器歷史紀錄將會重新記錄)
+
+
+:::
+
 
 
 * 填寫容器基本資訊與硬體規格配置，接著點擊「**下一步：儲存資訊>**」。
