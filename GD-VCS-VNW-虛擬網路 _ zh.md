@@ -1,7 +1,7 @@
 ---
 tags: Guide, VCS, VNW, TW
 title: 虛擬網路 | zh
-GA: 
+GA: UA-155999456-1
 ---
 
 {%hackmd @docsharedstyle/default %}
@@ -44,7 +44,8 @@ GA:
 * 由服務列表點選進入「**虛擬網路**」服務，在「**虛擬網路管理**」頁面，點擊「**＋建立**」。
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2f0c668bc53fb7af69dc890a4adfe4ca.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_769685f38a2cf177b4fbdc42e4972919.png)
+
 
 * 輸入虛擬網路設定的資訊，完成後點擊「**下一步：檢閱+建立>**」。
     * 名稱：即網路名稱，不可重覆，名稱建立後不可再更改。
@@ -106,7 +107,8 @@ $ twccli mk vnet -cidr 172.16.0.0/24 -gw 172.16.0.254
 
 * 最新建立虛擬網路會出現在虛擬網路管理頁面的最上方，等待狀態變成 「**ACTIVE**」 後即可開始使用。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d4fce562a5314f70e7575c35a650f5e6.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_981b402f473e4f54ec791c45fc9b9b48.png)
+
 
 * 點選列表上的虛擬網路則可檢視其詳細資訊
 
@@ -156,7 +158,8 @@ $ twccli ls vnet -id 261894
 * 在「**虛擬網路管理**」頁面 > 勾選虛擬網路 > 點擊上方「**刪除**」。
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_83f61a3033db691791e7bdaf3ef80c3b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f8d17969e2b9e4677e39667dd4f6ff68.png)
+
 
 - 或點選虛擬網路旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**刪除**」。
 - 或進入「**虛擬網路詳細資料**」頁 > 點選上方「**刪除**」。
