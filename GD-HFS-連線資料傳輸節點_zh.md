@@ -115,7 +115,7 @@ macOS：可使用「文字編輯」軟體
 
 <br>
 
-除上述使用金鑰的登入方式，HFS 也可使用 `密碼 + OTP` 之方式登入，請參考下方說明：
+除上述使用金鑰的登入方式，HFS 也可使用 **密碼 + [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC)** 之方式登入，請參考下方說明：
 
 ### Step 1. 下載支援 SFTP 連線並可兩段式驗證的軟體
 
@@ -149,7 +149,7 @@ macOS：可使用「文字編輯」軟體
 
 8. 點選「**連線**」
 
-### Step 3. 輸入主機密碼及 OTP 
+### Step 3. 輸入主機密碼及 [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC) 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_92b59625eba5f2dbaff85d5c2c030e19.png)
 
