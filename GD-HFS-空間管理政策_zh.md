@@ -4,6 +4,9 @@ title: 空間管理政策 | zh
 GA: UA-155999456-1
 ---
 
+{%hackmd @docsharedstyle/default %}
+{%hackmd @docsharedstyle/twccheader-zh %}
+
 # 高速檔案系統 (HFS) 空間管理政策
 
 ### 個人及公用磁碟核定空間
