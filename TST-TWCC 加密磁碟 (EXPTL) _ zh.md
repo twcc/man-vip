@@ -22,11 +22,12 @@ TWCC 加密磁碟可保護用戶資料安全，以符合組織所需的安全性
 
 - 您可以在建立虛擬運算個體時，於儲存頁建立加密資料磁碟，可選擇 HDD 加密，或 SSD 加密磁碟，並設定磁碟容量。
 
-:point_right: 截圖
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cf9fc17017c6637a459907a36a787297.png)
   
 - 或是於虛擬磁碟管理頁建立加密磁碟，再將磁碟連結至虛擬運算個體。
 
-:point_right: 截圖
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_71e884dbfb16fc5c694c477d0847b305.png)
+
 
 :::info
 建立完成，參考下方文件將磁碟初始化後即可使用：
