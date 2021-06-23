@@ -32,13 +32,13 @@ TWCC VDS Encrpytion can protect your data below:
 
 :::info
 After create the disk and attach it to your instance, initialize the disk before you can use it:
-- [<ins>HowTo：Initialize a disk- Linux</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-bss-init-vol-linux-zh)
-- [<ins>HowTo：Initialize a disk- Windows</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-bss-init-vol-windows-zh)
+- [<ins>HowTo：Initialize a disk- Linux</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-en)
+- [<ins>HowTo：Initialize a disk- Windows</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-en)
 :::
 
 ### Move data in the old disk to the encrypted disk
 
-If you want to upgrade your disk to an encrypted one, you can create a new encrypted disk and attach it to your VCS instances, then move data to the new disk, and delete the old disk. For more information, see [Replace the data disk](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-bss-replace-data-vol-zh).
+If you want to upgrade your disk to an encrypted one, you can create a new encrypted disk and attach it to your VCS instances, then move data to the new disk, and delete the old disk. For more information, see [Replace the data disk](https://man.twcc.ai/@twccdocs/howto-bss-replace-data-vol-en).
 
 :::danger
 
