@@ -3,8 +3,9 @@ title: 註冊 TWCC 帳號
 tags: Guide, Project, TW
 GA: UA-155999456-1
 ---
-
+{%hackmd @docsharedstyle/twccheader-zh %}
 {%hackmd @docsharedstyle/default %}
+
 :::warning
 <i class="fa fa-bullhorn" aria-hidden="true"></i> 若您的 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh)不適用以下畫面或流程，請 <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>點擊此連結</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-signup-zh) 參考操作說明。
 :::
