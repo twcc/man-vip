@@ -4,6 +4,7 @@ tags: HowTo, ZH
 GA: UA-155999456-1
 ---
 
+{%hackmd @docsharedstyle/twccheader-zh %}
 {%hackmd @docsharedstyle/default %}
 
 # HowTo：解決手機收不到簡訊驗證碼
