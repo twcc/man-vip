@@ -4,43 +4,43 @@ title: 安裝 TWCC CLI | zh
 GA:
 ---
 
-# 安裝 TWCC CLI - Linux 環境
+{%hackmd @docsharedstyle/twccheader-zh %}
+{%hackmd @docsharedstyle/default %}
+
+# 安裝 TWCC CLI
+
+TWCC CLI 提供安裝於 Linux 環境，因此您可以安裝於**本機端 Linux/macOS**，或安裝於 **TWCC Linux 環境**使用。 
+
+## 開始之前
+
+- 若尚未註冊使用帳號，請先[註冊 TWCC](https://www.twcc.ai/)。
+- 若非使用本機，您可以透過 [TWCC 入口網站](https://www.twcc.ai/)，選擇建立任一 TWCC 提供的 Linux 環境：
+    - [<ins>TWCC 虛擬運算服務</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-create-zh)
+      > - Linux 個體已為用戶預安裝 TWCC CLI，建立個體後即可連線[登入](https://man.twcc.ai/@TWSC/cli-signin-zh)使用
+      > - 成本較開發型容器低，建議使用
+
+    - [<ins>TWCC 開發型容器</ins>](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/%2F%40twccdocs%2Fguide-ccs-create-zh)
+        > - `2021` 版本<ins>以後</ins>之容器已為用戶預安裝 TWCC CLI，建立後可[登入](https://man.twcc.ai/@TWSC/cli-signin-zh)使用
+        > - `2021` 版本<ins>以前</ins>的容器映像檔版本需自行安裝
+        > - 成本較高，建議先考慮是否符合成本規劃 
 
 ## 安裝步驟
-
-您可以在以下 Linux 環境使用 TWCC CLI：
-
-:::info
-
-1. 您的本機端環境
-      > - ==用戶需自行安裝==
-2. [<ins>TWCC 虛擬運算服務</ins>](https://www.twcc.ai/doc?page=vm)
-      > - Linux 個體已為用戶預安裝 TWCC CLI，建立個體後即可連線進入使用。
-      > - ==Windows 個體需用戶自行安裝。==
-
-3. [<ins>TWCC 開發型容器</ins>](https://www.twcc.ai/doc?page=container)
-> - `2021` 版本<ins>以後</ins>之容器已為用戶預安裝 TWCC CLI，
-> - `2021` 版本<ins>以前</ins>的容器映像檔版本需==自行安裝==，以下將示範容器安裝 TWCC CLI 之步驟。
-:::
-
 
 ### Step 1. 連線環境
 
 - 選擇本機端環境安裝，請開啟終端機；或
-- [建立](https://www.twcc.ai/doc?page=container#%E5%BB%BA%E7%AB%8B%E9%96%8B%E7%99%BC%E5%9E%8B%E5%AE%B9%E5%99%A8)並[連線進入開發型容器](https://www.twcc.ai/doc?page=container#%E9%80%A3%E7%B7%9A%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F)。
+- [連線虛擬運算個體](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-zh)。
 
 
 ### Step 2. 安裝 TWCC CLI
 
-使用以下指令安裝 TWCC CLI。
+使用以下指令安裝 TWCC CLI，完成後，接著請[登入](https://man.twcc.ai/@TWSC/cli-signin-zh)。
 
 ```bash
 $ pip install TWCC-CLI
 ```
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_74129ca51022a3c664d10fc3f69750f0.png)
-
-
 
 
 
