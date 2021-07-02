@@ -50,16 +50,8 @@ GA: UA-155999456-1
     - [srun](/@preview-twccdocs/guide-twnia2-srun-zh)
     - [strigger](/@preview-twccdocs/guide-twnia2-strigger-zh)
 
-- ### ● Module 使用
-    - [Module 基本說明](/@preview-twccdocs/guide-twnia2-module-intro-zh)
-    - [module list](/@preview-twccdocs/guide-twnia2-module-list-zh)
-    - [module avail](/@preview-twccdocs/guide-twnia2-module-avail-zh)
-    - [module load ](/@preview-twccdocs/guide-twnia2-module-load-zh)
-    - [module unload ](/@preview-twccdocs/guide-twnia2-module-unload-zh)
-    - [module swap ](/@preview-twccdocs/guide-twnia2-module-swap-zh)
-    - [module reset](/@preview-twccdocs/guide-twnia2-module-reset-zh)
-    - [module restore](/@preview-twccdocs/guide-twnia2-module-restore-zh)
-    - [module help](/@preview-twccdocs/guide-twnia2-module-help-zh)
+- ### ● Module
+    - [Module 說明與基本操作](/@preview-twccdocs/guide-twnia2-modules-zh)
 
 - ### ● MPI 執行範例
     - [module 選取](/@preview-twccdocs/guide-twnia2-available-module-zh)
