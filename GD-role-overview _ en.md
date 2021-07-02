@@ -9,7 +9,7 @@ GA: UA-155999456-1
 {%hackmd @docsharedstyle/eng-working-en %}
 
 :::warning
-<i class="fa fa-bullhorn" aria-hidden="true"></i> If the screenshots or process do not correspond with your [<ins>Service system <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh), please <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>click the link</ins>](https://man.twcc.ai/@twsdocs/role-overview-en) for the user manual.
+<i class="fa fa-bullhorn" aria-hidden="true"></i> If the screenshots or process do not correspond with your [<ins>Service system <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-en), please <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>click the link</ins>](https://man.twcc.ai/@twsdocs/role-overview-en) for the user manual.
 :::
 
 # 角色總覽
