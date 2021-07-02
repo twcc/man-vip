@@ -1,6 +1,6 @@
 ---
-title : FAQ-VCS | zh
-tags: FAQ, ZH
+title : FAQ-VCS | en
+tags: FAQ, EN
 GA: UA-155999456-1
 ---
 
