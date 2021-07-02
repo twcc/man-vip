@@ -116,6 +116,14 @@ $ twccli ls vcs -secg -s 937648 # 列出 ID 為 937648 個體的安全性群組
 協定：選擇欲管控的協定如 tcp、udp、icmp... 等。
 CIDR：指要套用此虛擬運算個體安全規則的 CIDR 網段。
 
+:::danger
+
+{%hackmd @docsharedstyle/important-zh %}
+
+考量資安風險，除 `0.0.0.0/0`，CIDR 請勿設定 `x.x.x.x/0` 之危險網段。
+
+:::
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_87b3c97049604d4ec2dc19a42e771180.png)
 
 
@@ -209,5 +217,6 @@ twccli rm vcs -secg ff781775
 </details>
 
 <br>
+
 
 
