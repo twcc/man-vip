@@ -4,6 +4,9 @@ tags: Guide, TWNIA2, TW
 GA: UA-155999456-1
 ---
 
+{%hackmd @docsharedstyle/default %}
+{%hackmd @docsharedstyle/twccheader-zh %}
+
 # 環境變數管理：Module
 
 在 HPC 使用情境中，當編譯 (compile) 或是執行應用程式時，常會有複雜的工具或函式庫 (library) 之間的相依性，因此常使用 Module 作為管理環境變數 (environment variable) 的工具，方便您在不同的工具間轉換環境變數。

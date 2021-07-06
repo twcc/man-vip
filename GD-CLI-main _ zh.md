@@ -1,7 +1,7 @@
 ---
 tags: Guide, CLI, ZH
 title: CLI-main | zh
-GA:
+GA: UA-155999456-1
 ---
 
 {%hackmd @docsharedstyle/default %}
@@ -11,7 +11,7 @@ GA:
 
 - [服務概觀](https://man.twcc.ai/@twccdocs/cli-overview-zh)
 
-使用指南
+使用指南 <i class="fa fa-book" aria-hidden="true"></i> 
 ---
 
 - [安裝 TWCC CLI](https://man.twcc.ai/@twccdocs/guide-cli-install-linux-zh)
@@ -24,7 +24,7 @@ GA:
     - [ ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a798c7edb1b5032ecf92265a3150a7ec.png) 雲端物件儲存](https://man.twcc.ai/@twccdocs/guide-cli-cos-zh)
 
 
-概念說明
+概念說明 <i class="fa fa-commenting-o" aria-hidden="true"></i>
 ---
 
 - ### ● 指令集
@@ -61,17 +61,17 @@ GA:
 
 
                  
-案例教學
+案例教學 <i class="fa fa-lightbulb-o" aria-hidden="true"></i> 
 ---
 
 - [自動完成運算及刪除容器](https://man.twcc.ai/@twccdocs/howto-cli-ccs-automate-compute-delete-with-twccli-zh)
 - [部署自動化 AI/ML pipeline](https://man.twcc.ai/@twccdocs/howto-cli-ccs-deploy-auto-aiml-pipeline-zh)
 
-其他資訊
+其他資訊 <i class="fa fa-info-circle" aria-hidden="true"></i>
 ---
 
-- [Release Notes](https://github.com/twcc/TWCC-CLI/tree/v0.5#twcc-cli-project)[target=_blank]
-- [TWCC FAQs](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-cli-deploy-zh)[target=_blank]
-- [TWCC 價目表](https://man.twcc.ai/@twccdocs/SJWlN3YDr)
+- [Release Notes <i class="fa fa-file" aria-hidden="true"></i>](https://github.com/twcc/TWCC-CLI/tree/v0.5#twcc-cli-project)[target=_blank]
+- [TWCC 價目表 <i class="fa fa-th-list" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/SJWlN3YDr)
+- [TWCC FAQs <i class="fa fa-question-circle" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-cli-deploy-zh)[target=_blank]
 
 
