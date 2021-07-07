@@ -1,12 +1,12 @@
 ---
-title: Contract Pricing
+title: (舊資料留存)共契服務價格-109 |en
 tags: Contract
 GA: UA-155999456-1
 ---
 
 {%hackmd @docsharedstyle/default %}
 
-<center> <h1>  Service Pricing for Inter-entity Supply Contract </h1> </center>
+<center> <h1>  Service Pricing for Inter-entity Supply Contract (109舊資料留存) </h1> </center>
 
 :::warning
 <p style="text-align:center;">The bid number of TWCC Cloud Services in 2020 Inter-entity Supply Contract: 1090202</p>
