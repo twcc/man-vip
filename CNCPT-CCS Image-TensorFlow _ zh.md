@@ -15,7 +15,7 @@ TWCC 提供 NGC optimized TensorFlow 共 20 種立即可用的工作環境。Ten
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">映像檔版本資訊</span> 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_04536542735d6138e04552c0bfe9b3db.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_389702a8737525d61ae9dc30713a9e85.png)
 
 :::info
 {%hackmd @docsharedstyle/note-zh %}
