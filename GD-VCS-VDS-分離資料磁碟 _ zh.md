@@ -31,14 +31,13 @@ Linux、Windows 卸載磁碟方式不同，請依據 OS 選擇操作步驟。
 
 <summary><b>Linux 個體</b></summary>
 
-- [連結進入 Linux 虛擬運算個體](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh)，並使用以下指令來卸載 `/dev/vdb` 磁碟裝置。
+<br>
+
+- [連結進入 Linux 虛擬運算個體](https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-to-linux-from-windows-zh)，並使用以下指令來卸載 `/dev/vdb` 磁碟裝置。
 
 ``` 
 $ sudo umount -d /dev/vdb
 ```
-
-<br>
-
 </details>
 
 <!-- Space -->
@@ -51,16 +50,15 @@ $ sudo umount -d /dev/vdb
 
 <summary><b>Windows 個體</b></summary>
 
-- [連線進入 Windows 虛擬運算個體](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-windows-zh)，並在 <i class="fa fa-search" aria-hidden="true"></i> 搜尋「**電腦管理**」，開啟應用程式。
+<br>
+
+- [連線進入 Windows 虛擬運算個體](https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-to-windows-from-windows-zh)，並在 <i class="fa fa-search" aria-hidden="true"></i> 搜尋「**電腦管理**」，開啟應用程式。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4dcce52be28b3142c19ab11b731c8f37.png)
 
 - (1) 點選「**磁碟管理**」 (2) 對需卸載的磁碟按滑鼠右鍵 (3) 點選「**離線**」即可卸載磁碟。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_663e1d9437c5e7622d644b46a4824761.png)
-
-
-<br>
 
 
 </details>

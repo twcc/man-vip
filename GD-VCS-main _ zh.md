@@ -34,7 +34,8 @@ GA:
 - ### ● 儲存
     - [![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a62be3bdf4bc257526e95e16b063a777.png) 虛擬磁碟服務概觀](https://man.twcc.ai/@TWSC/guide-vcs-vds-overview-zh)
     - [建立資料磁碟](https://man.twcc.ai/@TWSC/guide-vcs-vds-create-data-disk-zh)
-    - [管理資料磁碟](https://man.twcc.ai/@TWSC/guide-vcs-vds-manage-disk-zh)
+    - [檢視/連結/刪除資料磁碟](https://man.twcc.ai/@TWSC/guide-vcs-vds-manage-disk-zh)
+	- [分離資料磁碟](https://man.twcc.ai/@twccdocs/vcs-vds-guide-detach-data-disk-zh)
     - [備份磁碟](https://man.twcc.ai/@TWSC/guide-vcs-vds-disk-snapshot-zh)
 
 - ### ● 備份個體

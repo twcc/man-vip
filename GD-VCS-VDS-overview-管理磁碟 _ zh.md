@@ -131,37 +131,7 @@ $ twccli ls vds
 
 若需刪除資料磁碟，或需與其他虛擬運算個體連結，請先將磁碟自原虛擬運算個體分離，再執行其他動作。
 
-
-<!-- 1 start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br>
-
-* 進入「**資料磁碟詳細資料**」頁，按下「**分離**」，即可將此資料磁碟與所連接的個體分離。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_96812d1834246d8aec869b5bd37baa8c.png)
-
-* 磁碟狀態由 **`IN-USE`** 轉為 **`AVAILABLE`** 後，即可執行刪除或連結至其他虛擬運算個體。
-
-</details>
-
-<!-- Space -->
-
-<div style="height:8px"></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (尚未支援)</summary>
-
-<br>
-
-
-</details>
+卸載、分離資料磁碟詳細步驟，請參考 [分離資料磁碟](https://man.twcc.ai/@twccdocs/vcs-vds-guide-detach-data-disk-zh)。
 
 
 
