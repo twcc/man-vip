@@ -1,7 +1,7 @@
 ---
 tags: Guide, CLI, ZH
 title: TWCC CLI - CCS | zh
-GA:
+GA: UA-155999456-1
 ---
 
 {%hackmd @docsharedstyle/default %}
@@ -30,8 +30,8 @@ GA:
 
 以下以 `mk`、`ls`、`net`、`rm` ，將容器相關操作的指令區分為 4 大類，您可以點選連結，參考指令所帶的**必要**或**選擇性參數**的詳細說明：
 
-1. 建立容器 / 容器複本：[twccli mk ccs](https://man.twcc.ai/@TWSC/concept-cli-mk-ccs-zh)
-2. 檢視容器各項資訊：[twccli ls ccs](https://man.twcc.ai/@TWSC/concept-cli-ls-ccs-zh)
-3. 管理容器連接埠：[twccli net ccs](https://man.twcc.ai/@TWSC/concept-cli-net-ccs-zh)
-4. 刪除容器：[twccli rm ccs](https://man.twcc.ai/@TWSC/concept-cli-rm-ccs-zh)
+1. 建立容器 / 容器複本：[twccli mk ccs](https://man.twcc.ai/@twccdocs/concept-cli-mk-ccs-zh)
+2. 檢視容器各項資訊：[twccli ls ccs](https://man.twcc.ai/@twccdocs/concept-cli-ls-ccs-zh)
+3. 管理容器連接埠：[twccli net ccs](https://man.twcc.ai/@twccdocs/concept-cli-net-ccs-zh)
+4. 刪除容器：[twccli rm ccs](https://man.twcc.ai/@twccdocs/concept-cli-rm-ccs-zh)
 

@@ -1,7 +1,7 @@
 ---
 tags: Guide, CLI, ZH
 title: 登入 TWCC CLI | zh
-GA:
+GA: UA-155999456-1
 ---
 
 {%hackmd @docsharedstyle/twccheader-zh %}
