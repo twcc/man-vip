@@ -20,7 +20,7 @@ GA: UA-155999456-1
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 
 若登入後畫面空白、異常，可能是以下問題：
 1. 未申請帳號，請[<ins>先註冊使用帳號</ins>](https://iservice.nchc.org.tw/nchc_service/nchc_member_apply_1.php)。
-2. 未加入任何已啟用 TWCC 服務的計畫，請[<ins>申請計畫</ins>](https://www.twcc.ai/doc?page=project)，或通知租戶管理員將您加入計畫。
+2. 未加入任何已啟用 TWCC 服務的計畫，請[<ins>申請計畫</ins>](https://man.twcc.ai/@twccdocs/apply-project-and-credit-zh)，或通知租戶管理員將您加入計畫。
 3. TWCC 使用者網站更版，請清除瀏覽器快取後即可正常登入。
 :::
 

@@ -8,14 +8,14 @@ GA: UA-155999456-1
 {%hackmd @docsharedstyle/twccheader-zh %}
 
 :::warning
-<i class="fa fa-bullhorn" aria-hidden="true"></i> 若您的 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh)不適用以下畫面或流程，請 <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>點擊此連結</ins>](https://man.twcc.ai/@twsdocs/guide-service-manage-project-team-zh) 參考操作說明。
+<i class="fa fa-bullhorn" aria-hidden="true"></i> 若您的 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh)不適用以下畫面或流程，請 <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>點擊此連結</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-manage-project-team-zh) 參考操作說明。
 :::
 
 # 管理計畫成員
 
 :::info
 
-- 使用 TWCC 服務前請確認您已至 Service 會員服務系統申請計畫或已屬於某計畫內的成員，參考[申請使用計畫](https://www.twcc.ai/doc?page=project)、[確認已有可用計畫](https://www.twcc.ai/doc?page=check)
+- 使用 TWCC 服務前請確認您已至 Service 會員服務系統申請計畫或已屬於某計畫內的成員，參考[申請使用計畫](https://man.twcc.ai/@twccdocs/apply-project-and-credit-zh)、[確認已有可用計畫](https://man.twcc.ai/@twccdocs/guide-service-project-availability-zh)
 - 僅計畫主持人（建立者）」、「計畫管理員」有權限管理計畫成員
 :::
 
@@ -52,6 +52,3 @@ GA: UA-155999456-1
 -  <span>&#10103;</span> 點選動作按鈕可以檢視成員資料、改變成員身份：設為管理員/一般成員、刪除成員
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db80e6cf3ee846d39cdca06668beae11.png)
-
-
-
