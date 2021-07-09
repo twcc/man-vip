@@ -16,13 +16,13 @@ GA:
 
 TWCC CLI 目前版本為 **v0.5** (最新功能請參考 [Release notes](https://github.com/twcc/TWCC-CLI/tree/v0.5#index))，適合安裝於 Linux / macOS 環境，能夠操作管理以下 TWCC 服務的資源：
 
-- [![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0b81080da8a39866cd1e0aa0471e9552.png) 開發型容器](https://man.twcc.ai/@TWSC/guide-cli-ccs-zh)
-- [![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_af58322eb82b649d1f29aca1f201a117.png) 虛擬運算服務](https://man.twcc.ai/@TWSC/guide-cli-vcs-zh)
-- [ ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a798c7edb1b5032ecf92265a3150a7ec.png) 雲端物件儲存](https://man.twcc.ai/@TWSC/guide-cli-cos-zh)
+- [![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0b81080da8a39866cd1e0aa0471e9552.png) 開發型容器](https://man.twcc.ai/@twccdocs/guide-cli-ccs-zh)
+- [![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_af58322eb82b649d1f29aca1f201a117.png) 虛擬運算服務](https://man.twcc.ai/@twccdocs/guide-cli-vcs-zh)
+- [ ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a798c7edb1b5032ecf92265a3150a7ec.png) 雲端物件儲存](https://man.twcc.ai/@twccdocs/guide-cli-cos-zh)
 
 ## 如何開始？
 
-請先[註冊 TWCC](https://man.twcc.ai/@twccdocs/S1v-UAi6V?type=view)，[安裝 TWCC CLI](https://man.twcc.ai/@TWSC/cli-install-linux-zh)，[登入](https://man.twcc.ai/@TWSC/cli-signin-zh)後即可開始參考上方手冊操作資源！
+請先[註冊 TWCC](https://man.twcc.ai/@twccdocs/S1v-UAi6V?type=view)，[安裝 TWCC CLI](https://man.twcc.ai/@twccdocs/cli-install-linux-zh)，[登入](https://man.twcc.ai/@twccdocs/cli-signin-zh)後即可開始參考上方手冊操作資源！
 
 
 :::info
