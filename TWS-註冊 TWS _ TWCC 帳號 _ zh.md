@@ -12,9 +12,9 @@ tags: Guide, Project, TW
 
 :::info
 
-<i class="fa fa-question-circle-o" aria-hidden="true"></i> **TWS、TWCC 是什麼網站？**
+<i class="fa fa-question-circle-o" aria-hidden="true"></i> **TWS、TWCC 各是什麼網站？**
 - [<ins>**TWS**</ins>](https://tws.twcc.ai/tws_service/index.php?lang_type=zh_tw) 為「台灣智慧雲端服務股份有限公司 (台智雲, TWS)」的官方網站，同時也是管理台智雲 TWCC 用戶計畫、帳務之平台。
-- [<ins>**TWCC**</ins>](https://www.twcc.ai/) 為「台灣AI雲」，用戶使用、操作雲端運算服務之平台。
+- [<ins>**TWCC**</ins>](https://www.twcc.ai/)「臺灣AI雲」，為用戶使用、操作雲端運算服務之平台。
 - 兩平台帳號、密碼相同，以單一登入 (Single-Sign On) 機制整合。
 :::
 
