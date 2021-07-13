@@ -42,9 +42,11 @@ GA:
 
 ## 刪除容器
 
-若要將容器永久刪除，不再使用，在點選刪除後，個體狀態將呈現 **`Deleting`** ，<ins>**即不再計費**</ins>，刪除完成後，容器將從列表上消失。其他刪除的注意事項：
+若要將容器永久刪除，不再使用，在點選刪除後，個體狀態將呈現 **`Deleting`** ，<ins>**即不再計費**</ins>，刪除完成後，容器將從列表上消失。
+
+其他刪除的注意事項：
 - 容器系統目錄下的資料將永久刪除，若需保留可建立[容器複本](https://man.twcc.ai/@twccdocs/guide-ccs-duplicate-zh)。
-- /home、/work 資料夾 (高速檔案系統儲存空間) 則會保存。
+- /home、/work 資料 (高速檔案系統儲存空間) 將會留存，不會隨容器刪除而清除。
 
 :::info
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：**  個體刪除步驟請參考[<ins>刪除容器</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-manage-zh#%E5%88%AA%E9%99%A4%E5%AE%B9%E5%99%A8)
