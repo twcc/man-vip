@@ -9,7 +9,7 @@ GA: UA-155999456-1
 <center> <h1> Inter-entity Supply Contract </center> </h1> 
 
 :::warning
-:tada::tada: Taiwan Computing Cloud (TWCC) is a qualified Inter-entity Supply Contract (hereinafter referred to as the “Contract”)  supplier that has completed the qualification review of "The Second Computer Software Contract Procurement in 2021-Cloud Services" by Industrial Development Bureau (No. 1100202). We have initiated the Contract with entities since ==6/?/2021==.<br>
+:tada::tada: Taiwan Computing Cloud (TWCC) is a qualified Inter-entity Supply Contract (hereinafter referred to as the “Contract”)  supplier that has completed the qualification review of "The Second Computer Software Contract Procurement in 2021-Cloud Services" by Industrial Development Bureau (No. 1100202). We have initiated the Contract with entities since 6/16/2021.<br>
 All entities are welcome to utilize the Contract to conduct procurements of TWCC services!
 :::
 
@@ -23,18 +23,18 @@ In "The Second Computer Software Contract Procurement in 110-Cloud Services", TW
 
 | Item no. | Item name | TWCC services |
 | -------- | -------- | -------- |-------- |
- | 1.1   | `Cloud Virtual Resources (IaaS) General spec`<br>GPU:1/CPU:8Core/RAM:90GB /HD:100GB      |Virtual Compute Service (VCS), Container Compute Service (CCS)|
- | 2.1     | `Cloud Virtual Resources (IaaS) General spec`<br>GPU:2/CPU:16Core/RAM:180GB /HD:100GB |  Virtual Compute Service (VCS), Container Compute Service (CCS)|
-| 3.1     |`Cloud Virtual Resources (IaaS) General spec`<br>GPU:4/CPU:32Core/RAM:360GB /HD:100GB      |Virtual Compute Service (VCS), Container Compute Service (CCS)|
- | 4.1    | `Cloud Virtual Resources (IaaS) General spec`<br>GPU:8/CPU:64Core/RAM:720GB /HD:100GB      |Virtual Compute Service (VCS), Container Compute Service (CCS)|
- | 5.1     | `Cloud Virtual Resources (IaaS) Add-on`<br>HDD storage expansion: 100GB     |Hyper File System (HFS)|
- | 6.1     | `Cloud Virtual Resources (IaaS) Add-on`<br>Cloud Object Storage: 100GB     |Cloud Object Storage (COS)|
- | 7.1     | `Cloud Virtual Resources (IaaS) Add-on`<br>Block Storage: 100GB     |Virtual Disk Service (VDS)
- | 9.1     | `Cloud Virtual Resources (IaaS) Add-on`<br>Bandwidth: 10GB-40GB     |VCS outbound data transfers|
- | 10.1     | `Cloud Virtual Resources (IaaS) Add-on`<br>Bandwidth: 40GB-100GB     |VCS outbound data transfers|
-| 11.1     | `Cloud Virtual Resources (IaaS) Add-on`<br>Bandwidth: 100GB-1TB     |VCS outbound data transfers|
- | 12.1     | `Cloud Virtual Resources (IaaS) Add-on`<br>Bandwidth: 1TB-5TB     |VCS outbound data transfers|
- | 13.1     | `Cloud Virtual Resources (IaaS) Add-on`<br>Bandwidth: 5TB-10TB|VCS outbound data transfers|
+ | 1.1   | `Cloud Virtual Resources (GPU) General spec`<br>GPU:1/CPU:8Core/RAM:90GB /HD:100GB      |Virtual Compute Service (VCS), Container Compute Service (CCS)|
+ | 2.1     | `Cloud Virtual Resources (GPU) General spec`<br>GPU:2/CPU:16Core/RAM:180GB /HD:100GB |  Virtual Compute Service (VCS), Container Compute Service (CCS)|
+| 3.1     |`Cloud Virtual Resources (GPU) General spec`<br>GPU:4/CPU:32Core/RAM:360GB /HD:100GB      |Virtual Compute Service (VCS), Container Compute Service (CCS)|
+ | 4.1    | `Cloud Virtual Resources (GPU) General spec`<br>GPU:8/CPU:64Core/RAM:720GB /HD:100GB      |Virtual Compute Service (VCS), Container Compute Service (CCS)|
+ | 9.1     | `Cloud Virtual Resources (GPU) Add-on`<br>HDD storage expansion: 100GB     |Hyper File System (HFS)|
+ | 10.1     | `Cloud Virtual Resources (GPU) Add-on`<br>Cloud Object Storage: 100GB     |Cloud Object Storage (COS)|
+ | 11.1     | `Cloud Virtual Resources (GPU) Add-on`<br>Block Storage: 100GB     |Virtual Disk Service (VDS)
+ | 13.1     | `Cloud Virtual Resources (GPU) Add-on`<br>Bandwidth: 10GB-40GB     |VCS outbound data transfers|
+ | 14.1     | `Cloud Virtual Resources (GPU) Add-on`<br>Bandwidth: 40GB-100GB     |VCS outbound data transfers|
+| 15.1     | `Cloud Virtual Resources (GPU) Add-on`<br>Bandwidth: 100GB-1TB     |VCS outbound data transfers|
+ | 16.1     | `Cloud Virtual Resources (GPU) Add-on`<br>Bandwidth: 1TB-5TB     |VCS outbound data transfers|
+ | 17.1     | `Cloud Virtual Resources (GPU) Add-on`<br>Bandwidth: 5TB-10TB|VCS outbound data transfers|
 
 
 <center> <h2>  Procurement Process </h2> </center>
@@ -65,7 +65,7 @@ In addition to the procuring entity's internal purchase requisition process, you
     :::
 
 - ### Step 3 - Select TWCC services
-    - Select **Supply contract (applicable entity)** > **Service search** > **Integrated search** > Select Industrial Development Bureau for **Contracting entity**, Cloud Services for **Category**, and Cloud Virtual Resources (IaaS) or Cloud GPU Computing Resources for **Group** > When you are ready, select **Search** below
+    - Select **Supply contract (applicable entity)** > **Service search** > **Integrated search** > Select Industrial Development Bureau for **Contracting entity**, Cloud Services for **Category**, and Cloud GPU Computing Resources for **Group** > When you are ready, select **Search** below
 
     ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8a3c037837b2dddf95e66cf8a5c5bf7c.png)
 
