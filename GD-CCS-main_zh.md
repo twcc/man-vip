@@ -41,6 +41,7 @@ GA: UA-155999456-1
 
 - [容器映像檔](https://man.twcc.ai/@twccdocs/ccs-concept-image-main-zh)[target=_blank]
 - [記憶體容量換算 (GB vs. GiB)](https://man.twcc.ai/@twccdocs/concept-ccs-memory-conversion-zh)
+- [容器生命週期](https://man.twcc.ai/@preview-twccdocs/concept-ccs-lifecycle-zh)
 
 案例教學 <i class="fa fa-lightbulb-o" aria-hidden="true"></i> 
 ---
