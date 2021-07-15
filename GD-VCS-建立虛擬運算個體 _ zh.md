@@ -1,7 +1,7 @@
 ---
 tags: Guide, VCS, TW
 title: 建立虛擬運算個體 | zh
-GA: 
+GA: UA-155999456-1
 ---
 
 {%hackmd @docsharedstyle/default %}
@@ -31,7 +31,7 @@ TWCC 提供下列映像檔：
 
 <br>
 
-{%hackmd @TWSC/vcs-chunk-create-instance-zh %}
+{%hackmd @twccdocs/vcs-chunk-create-instance-zh %}
 
 - 接著點擊「**下一步：鑰匙對>**」
 
@@ -56,11 +56,11 @@ TWCC 提供下列映像檔：
 
 
 :::danger
-<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> **重要**：TWCC 不負責紀錄及管理您的鑰匙對，請務必下載並妥善保存此鑰匙對 `pem` 檔案，若沒有此鑰匙對，您將無法[<ins>連線虛擬運算個體</ins>](https://man.twcc.ai/@TWSC/vcs-guide-connect-to-linux-from-windows-zh)。
+<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> **重要**：TWCC 不負責紀錄及管理您的鑰匙對，請務必下載並妥善保存此鑰匙對 `pem` 檔案，若沒有此鑰匙對，您將無法[<ins>連線虛擬運算個體</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh)。
 :::
 
 
-* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態變成 **`Ready`** 後即可開始[<ins>連線</ins>](https://man.twcc.ai/@TWSC/vcs-guide-connect-to-linux-from-windows)使用。
+* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態變成 **`Ready`** 後即可開始[<ins>連線</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh)使用。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f062b7368287f59d3a7ffc77cb4140c2.png)
 
@@ -81,7 +81,7 @@ TWCC 提供下列映像檔：
 
 ### 指令
 
-**Step 1.** 請先[<ins>建立鑰匙對</ins>](https://man.twcc.ai/@TWSC/guide-vcs-keypair-zh)
+**Step 1.** 請先[<ins>建立鑰匙對</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-keypair-zh)
 **Step 2.** 建立虛擬運算個體個體
 
 ```bash
@@ -90,7 +90,7 @@ $ twccli mk vcs -key   #鑰匙對名稱
                 
 ```
 :::info
-{%hackmd @TWSC/cli-parameter-note-zh %}
+{%hackmd @twccdocs/cli-parameter-note-zh %}
 2. 若不帶選擇性參數，則以預設資訊建立個體：
 
 | 映像檔類型、映像檔 | 型號 |網路資訊|規格|
@@ -143,7 +143,7 @@ $ twccli ls vcs -ptype #檢視所有產品型號與規格
 
 <br>
 
-{%hackmd @TWSC/vcs-chunk-create-instance-zh %}
+{%hackmd @twccdocs/vcs-chunk-create-instance-zh %}
 
 
 - 建立 Windows 登入密碼。接著點擊「**下一步：檢閱 + 建立>**」
@@ -159,7 +159,7 @@ $ twccli ls vcs -ptype #檢視所有產品型號與規格
 :::
 
 
-* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後，等個體狀態變成 **`Ready`** 後，再等候一些時間即可開始[<ins>連線</ins>](https://man.twcc.ai/@TWSC/vcs-guide-connect-to-windows-from-windows-zh)使用。
+* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後，等個體狀態變成 **`Ready`** 後，再等候一些時間即可開始[<ins>連線</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-windows-zh)使用。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f062b7368287f59d3a7ffc77cb4140c2.png)
 
