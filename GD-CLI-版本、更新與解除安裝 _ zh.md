@@ -21,7 +21,7 @@ $ twccli config version
 :::info
 {%hackmd @docsharedstyle/note-zh %}
 
-安裝完成後，即可參考[<ins>登入 TWCC CLI</ins>](https://man.twcc.ai/@TWSC/Sk8jhvIgd) 進入 TWCC CLI 環境。
+安裝完成後，即可參考[<ins>登入 TWCC CLI</ins>](https://man.twcc.ai/@twccdocs/guide-cli-signin-zh) 進入 TWCC CLI 環境。
 :::
 
 

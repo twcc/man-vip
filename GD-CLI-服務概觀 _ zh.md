@@ -22,7 +22,7 @@ TWCC CLI 目前版本為 **v0.5** (最新功能請參考 [Release notes](https:/
 
 ## 如何開始？
 
-請先[註冊 TWCC](https://man.twcc.ai/@twccdocs/S1v-UAi6V?type=view)，[安裝 TWCC CLI](https://man.twcc.ai/@twccdocs/cli-install-linux-zh)，[登入](https://man.twcc.ai/@twccdocs/cli-signin-zh)後即可開始參考上方手冊操作資源！
+請先[註冊 TWCC](https://man.twcc.ai/@twccdocs/S1v-UAi6V?type=view)，[安裝 TWCC CLI](https://man.twcc.ai/@twccdocs/guide-cli-install-linux-zh)，[登入](https://man.twcc.ai/@twccdocs/guide-cli-signin-zh)後即可開始參考上方手冊操作資源！
 
 
 :::info

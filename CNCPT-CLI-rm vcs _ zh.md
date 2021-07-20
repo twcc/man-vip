@@ -57,4 +57,4 @@ N/A
 
 ## 範例
 
-請參考 [管理開發型容器](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/%2F%40twccdocs%2Fguide-ccs-create-zh) 其中以 TWCC CLI 操作的部分。
+請參考 [管理個體](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-manage-instance-zh40twccdocs%2Fguide-ccs-manage-zh)、[管理鑰匙對](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-keypair-zh#%E9%91%B0%E5%8C%99%E5%B0%8D%E7%AE%A1%E7%90%86)、[刪除安全性群組](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-sg-zh#%E5%88%A0%E9%99%A4%E5%AE%89%E5%85%A8%E6%80%A7%E7%BE%A4%E7%B5%84%E8%A6%8F%E5%89%87) 其中以 TWCC CLI 操作的部分。
