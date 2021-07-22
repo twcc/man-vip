@@ -4,6 +4,9 @@ tags: Guide, Service, ZH
 GA:
 ---
 
+{%hackmd @docsharedstyle/default %}
+{%hackmd @docsharedstyle/twccheader-zh %}
+
 # 檢視服務使用歷史紀錄
 
 您於 TWCC 使用者網站、TWCC CLI 使用的服務功能，皆是透過呼叫 TWCC API 以完成各項作業，而服務操作的歷史紀錄可透過 [TWCC 使用者網站檢視](#如何檢視使用紀錄？)，並[下載紀錄檔案](#下載使用紀錄)。
