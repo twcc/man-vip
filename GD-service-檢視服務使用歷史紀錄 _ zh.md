@@ -1,6 +1,6 @@
 ---
 title: 檢視服務使用歷史紀錄 | zh
-tags: Guide, API, ZH
+tags: Guide, Service, ZH
 GA:
 ---
 
