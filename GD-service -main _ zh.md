@@ -20,7 +20,7 @@ GA:
     - [查詢主機帳號、重置密碼與取得 OTP 認證碼](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh)
     - [API 金鑰](https://man.twcc.ai/@preview-twccdocs/S1RCu-w3_)
     - [資源配額管理](https://man.twcc.ai/@preview-twccdocs/S1RCu-w3_#%E8%B3%87%E6%BA%90%E9%85%8D%E9%A1%8D%E7%AE%A1%E7%90%86)
-
+    - [檢視服務使用歷史紀錄](https://man.twcc.ai/@preview-twccdocs/guide-service-user-activity-history-zh)
 
 - ### ● 計畫管理
     - [申請使用計畫](https://man.twcc.ai/@twccdocs/rkXUICiTE?type=view)
