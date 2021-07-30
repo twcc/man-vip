@@ -36,4 +36,4 @@ N/A
 
 ## 範例
 
-請參考 [管理開發型容器](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/%2F%40twccdocs%2Fguide-ccs-create-zh) 其中以 TWCC CLI 操作的部分。
+請參考 [管理開發型容器](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/%2F%40twccdocs%2Fguide-ccs-manage-zh) 其中以 TWCC CLI 操作的部分。

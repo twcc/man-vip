@@ -34,7 +34,7 @@ TWCC CLI 提供安裝於 Linux 環境，因此您可以安裝於**本機端 Linu
 
 ### Step 2. 安裝 TWCC CLI
 
-使用以下指令安裝 TWCC CLI，完成後，接著請[登入](https://man.twcc.ai/@twccdocs/cli-signin-zh)。
+使用以下指令安裝 TWCC CLI，完成後，接著請[登入](https://man.twcc.ai/@twccdocs/guide-cli-signin-zh)。
 
 ```bash
 $ pip install TWCC-CLI
