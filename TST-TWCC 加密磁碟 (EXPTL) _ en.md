@@ -46,3 +46,8 @@ If you want to upgrade your disk to an encrypted one, you can create a new encry
 
 Unlike standard disk types (HDD or SSD), **only the creator can delete encrypted disks**. Deleting encrypted disks by others (e.g., Tenant Administrator) will result in an error.
 :::
+
+
+### Disk sapshots
+
+Sorry! Snapshot is not enabled for encrypted disks and will be available to you with an optimized user experience.
