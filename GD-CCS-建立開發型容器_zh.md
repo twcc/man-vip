@@ -85,7 +85,7 @@ $ twccli mk ccs [-n] #容器名稱
                 [-gpu] #GPU 數量
 ```
 :::info
-{%hackmd @TWSC/cli-optional-note-zh %}
+{%hackmd @twccdocs/cli-parameter-note-zh %}
 若不帶任何參數則以預設資訊建立容器：
 
 | 映像檔類型、映像檔 | 容器名稱 |硬體設定|
