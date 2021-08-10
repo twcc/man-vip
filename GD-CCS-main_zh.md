@@ -47,6 +47,7 @@ GA: UA-155999456-1
 ---
 - [Python 套件安裝指南](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)
 - [設定開發型容器的服務埠](https://man.twcc.ai/@twccdocs/howto-ccs-config-service-port-zh)
+- [設定容器環境變數](https://man.twcc.ai/@preview-twccdocs/howto-ccs-vcs-setup-env-variable-zh)
 - [Jupyter Notebook 增加 Python3 Kernel](https://man.twcc.ai/@twccdocs/howto-css-jupyter-add-python3-kernel-zh)
 - [確保計算工作持續不中斷](https://man.twcc.ai/@twccdocs/ry74RpjT4?type=view)
 - [使用 TensorFlow Inception V3 訓練影像辨識模型、生成推論引擎](https://man.twcc.ai/@twccdocs/rkOTAaoa4?type=view)

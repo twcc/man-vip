@@ -1,7 +1,7 @@
 ---
 tags: Guide, CCS, ZH
 title: 建立開發型容器 | zh
-GA: UA-155999456-1
+GA: 
 ---
 
 {%hackmd @docsharedstyle/default %}
@@ -51,12 +51,20 @@ GA: UA-155999456-1
 * 填寫容器基本資訊與硬體規格配置，接著點擊「**下一步：儲存資訊>**」。
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_328858c1df4e6de8c66d0490500be44c.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7390690ecd337d3aa94d3792b6aa31e2.png)
+
 
 
 * 容器建立後系統會自動掛載高速檔案系統 (HFS) 的兩個目錄 (/home 與 /work) 至容器，以利使用者在運行人工智慧運算時擁有更好的性能，亦可使用 TWCC 雲端物件儲存服務。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b11f0c5bbb89d7b5975d1ccd4552cf8d.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f5b935f93932bb7d4cfd8982701943e5.png)
+
+
+* 接著點擊「**下一步：環境變數>**」，可設定符合您需求的環境變數，詳細說明與設定範例請參考 [<ins>HowTo：設定環境變數</ins>](https://man.twcc.ai/@preview-twccdocs/howto-ccs-vcs-setup-env-variable-zh)。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d10aff1357d25a13881c2f17a19f895b.png)
+
+
 
 * 點擊「**下一步：檢閱+建立>**」，檢視整個容器的規格和價格，確定後點選「**建立**」即完成。
 
@@ -83,15 +91,19 @@ $ twccli mk ccs [-n] #容器名稱
                 [-itype] #映像檔類型
                 [-img] #映像檔版本
                 [-gpu] #GPU 數量
+                [-envk] #環境變數 Key
+                [-envv] #環境變數 Value
 ```
 :::info
 {%hackmd @TWSC/cli-optional-note-zh %}
-若不帶任何參數則以預設資訊建立容器：
+
+- 若不帶任何參數則以預設資訊建立容器：
 
 | 映像檔類型、映像檔 | 容器名稱 |硬體設定|
 | -------- | -------- | -------- |
 | TensorFlow (latest environment)    | twcc-cli     | 1 GPU + 04 cores + 090GB memory |
 
+- 環境變數詳細說明與設定範例請參考 [<ins>HowTo：設定環境變數</ins>](https://man.twcc.ai/@preview-twccdocs/howto-ccs-vcs-setup-env-variable-zh)。
 
 </div>
 
@@ -134,5 +146,5 @@ $ twccli mk ccs -itype "Caffe2" -img "caffe2-18.08-py3-v1:latest" -gpu 2 -n cusc
 
 :::warning
 <i class="fa fa-book fa-20" aria-hidden="true"></i> **相關文件：** 
-- <a href="https://man.twcc.ai/@preview-twccdocs/doc-cos-main-zh"><ins>雲端物件儲存服務</ins></a>、<a href="https://man.twcc.ai/@preview-twccdocs/doc-hfs-main-zh"><ins>高速檔案系統</ins></ins></a>
+- <a href="https://man.twcc.ai/@twccdocs/doc-cos-main-zh"><ins>雲端物件儲存服務</ins></a>、<a href="https://man.twcc.ai/@twccdocs/doc-hfs-main-zh"><ins>高速檔案系統</ins></ins></a>
 :::

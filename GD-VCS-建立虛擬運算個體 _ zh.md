@@ -1,7 +1,6 @@
 ---
-tags: Guide, VCS, TW
 title: 建立虛擬運算個體 | zh
-GA: UA-155999456-1
+tags: Guide, VCS, TW
 ---
 
 {%hackmd @docsharedstyle/default %}
@@ -37,7 +36,8 @@ TWCC 提供下列映像檔：
 
 * 鑰匙對是登入 Linux 虛擬運算個體的憑證，必須透過鑰匙對，才能連線使用虛擬運算個體功能。可選擇已建立的鑰匙對，若第一次使用請按「**＋建立鑰匙對**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b07e58c36056e7bf120a6e35a70bc70c.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_76b85e1d767f1024086a2e69d0793241.png)
+
 
 
 * 輸入鑰匙對的名稱後點擊確認。
@@ -50,7 +50,8 @@ TWCC 提供下列映像檔：
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_57a261c1f9903c2753530ce5e16bfa85.png)
 
 
-* 鑰匙對建立後，請務必立即按「**下載**」並妥善保存此鑰匙對，若沒有此鑰匙對，將無法連線該虛擬運算個體，下載後即可關閉此對話視窗，接著點擊「**下一步：檢閱 + 建立>**」
+
+* 鑰匙對建立後，請務必立即按「**下載**」並妥善保存此鑰匙對，若沒有此鑰匙對，將無法連線該虛擬運算個體，下載後即可關閉此對話視窗。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4d64cb97650700d44ec73f9bc5c5ba46.png)
 
@@ -60,7 +61,13 @@ TWCC 提供下列映像檔：
 :::
 
 
-* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態變成 **`Ready`** 後即可開始[<ins>連線</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh)使用。
+* 接著點擊「**下一步：環境變數>**」，可設定符合您需求的環境變數，詳細說明與設定範例請參考 [<ins>HowTo：設定環境變數</ins>](https://man.twcc.ai/@preview-twccdocs/howto-ccs-vcs-setup-env-variable-zh)。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2ffe89808b9c161fabc71302d825392a.png)
+
+
+
+* 接著點擊「**下一步：檢閱 + 建立>**」，檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態變成 **`Ready`** 後即可開始[<ins>連線</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh)使用。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f062b7368287f59d3a7ffc77cb4140c2.png)
 

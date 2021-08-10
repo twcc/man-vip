@@ -66,6 +66,7 @@ GA:
 案例教學 <i class="fa fa-lightbulb-o" aria-hidden="true"></i> 
 ---
 - [建立預設虛擬網路](https://man.twcc.ai/@twccdocs/howto-vnw-create-default-network-zh)
+- [設定個體環境變數](https://man.twcc.ai/@preview-twccdocs/howto-ccs-vcs-setup-env-variable-zh)
 - [使用帳密 SSH 連線 Linux 個體](https://man.twcc.ai/@twccdocs/howto-vcs-create-usr-linux-zh)
 - [初始化磁碟- Linux 個體](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-zh)
 - [初始化磁碟- Windows 個體](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-zh)
