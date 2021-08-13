@@ -1,8 +1,18 @@
 ---
-title: 定價 | zh
+title: TWS 定價 | zh
 tags: Pricing, ZH
 GA: UA-155999456-1
 ---
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-310X2Q419P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-310X2Q419P');
+</script>
 
 
 {%hackmd @docsharedstyle/default %}
@@ -130,7 +140,7 @@ GA: UA-155999456-1
     <td class="tg-price-c">464.00</td>
   </tr>
   <tr>
-    <td class="tg-u4qj" rowspan="4">記憶體優化容器<SUP>&#8277&#8277&#8277</SUP></td>
+    <td class="tg-u4qj" rowspan="5">記憶體優化容器<SUP>&#8277&#8277&#8277</SUP></td>
     <td class="tg-u4qj">cm.super</td>
     <td class="tg-uhm5">1</td>
     <td class="tg-bud4">4</td>
@@ -160,6 +170,14 @@ GA: UA-155999456-1
     <td class="tg-u4qj">32</td>
     <td class="tg-y8h4">480</td>
     <td class="tg-u4qj">240</td>
+    <td class="tg-price-cm">464.00</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">cm1.4xsuper</td>
+    <td class="tg-y8h4">8</td>
+    <td class="tg-u4qj">32</td>
+    <td class="tg-y8h4">360</td>
+    <td class="tg-u4qj">360</td>
     <td class="tg-price-cm">464.00</td>
   </tr>
 </table>
