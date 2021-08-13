@@ -40,3 +40,11 @@ $ pip install -U TWCC-CLI
 ```bash
 $ pip uninstall TWCC-CLI
 ```
+
+:::info
+
+{%hackmd @docsharedstyle/note-zh %}
+
+以上指令適用 Python 2，若您的環境安裝 Python 3，請將 `pip` 改為 `pip3`。  
+
+:::
