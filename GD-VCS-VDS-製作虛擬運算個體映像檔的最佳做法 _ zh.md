@@ -41,9 +41,9 @@ $ sudo shutdown
 - 若您曾在 /etc/fstab 檔案內有設定自動掛載資料磁碟指令
 (例：`/dev/vdb /mnt ext4 defaults`)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_856cd2fa7cd4c6d40fe452e2502aafa9.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_09ddb7ad46cfae66dcb3fa7cb75244c0.png)
 
 - 請您在原設定後方加上 `nofail` 選項，避免掛載資料磁碟作業錯誤，造成您以映像檔建立的個體無法正常啟動與連線，
 (例：`,nofail,x-systemd.device-timeout=1m`)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_95662b57c57e1a5e8a61ea55502359a8.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d82af67186cc021e21a4f4d59630cc4d.png)
