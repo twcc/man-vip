@@ -5,6 +5,7 @@ title: 安全性評估 | zh
 
 {%hackmd @docsharedstyle/default %}
 {%hackmd @docsharedstyle/twccheader-zh %}
+{%hackmd @docsharedstyle/alpha-testing-zh %}
 
 # 安全性評估
 

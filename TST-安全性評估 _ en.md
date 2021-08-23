@@ -6,6 +6,7 @@ title: 安全性評估 | en
 
 {%hackmd @docsharedstyle/default %}
 {%hackmd @docsharedstyle/twccheader-en %}
+{%hackmd @docsharedstyle/alpha-testing-en %}
 
 # Security Scan
 
