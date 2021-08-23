@@ -13,6 +13,7 @@ tags: Guide, Member-project-billing, TW
 
 - ### ● 會員 | 金鑰 | 資源配額
     - [註冊帳號](https://man.twcc.ai/@twsdocs/guide-service-signup-zh)
+	- [登入 TWCC](https://man.twcc.ai/@twsdocs/guide-service-signin-twcc-zh)
     - [進入會員系統](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh)
     - [更改會員資料](https://man.twcc.ai/@twsdocs/guide-service-update-your-info-zh)
     - [重置使用者網站密碼](https://man.twcc.ai/@twsdocs/guide-service-reset-portal-pwd-zh)
