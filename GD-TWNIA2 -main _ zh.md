@@ -51,7 +51,7 @@ GA: UA-155999456-1
     - [strigger](/@twccdocs/guide-twnia2-strigger-zh)
 
 - ### ● Module
-    - [Module 說明與基本操作](/@twccdocs/guide-twnia2-modules-zh)
+    - [Module 與可用軟體套件](/@twccdocs/guide-twnia2-module-main-zh)[target=_blank]
 
 - ### ● MPI 執行範例
     - [module 選取](/@twccdocs/guide-twnia2-available-module-zh)
