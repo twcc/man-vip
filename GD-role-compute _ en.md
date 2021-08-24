@@ -111,7 +111,7 @@ GA: UA-155999456-1
 :::info
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 
 - 其他相關服務權限：
-    - 區塊儲存請參考[<ins>此說明</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-zh#%E5%8D%80%E5%A1%8A%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99)。
+    - 虛擬磁碟請參考[<ins>此說明</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-zh#%E5%8D%80%E5%A1%8A%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99)。
     - 虛擬網路、VPN、負載平衡、Auto Scaling、進階安全請參考[<ins>此說明</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh)。
 - TWCC CLI 可操控之功能之角色權限皆與使用者介面相同。
 :::

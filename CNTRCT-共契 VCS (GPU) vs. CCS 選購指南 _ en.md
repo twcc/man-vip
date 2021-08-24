@@ -31,7 +31,7 @@ TWCC [共契服務](https://man.twcc.ai/@twccdocs/supplycontract-zh)在**雲端 
 | 服務特色 |<ul><li>提供虛擬機服務，並可搭配使用自動擴展與負載平衡機制，無需擔心流量過載導致服務中斷。</li><li>Site-to-site VPN、安全性群組、Web應用程式防火牆、入侵防禦系統...等，提供多項彈性、完整的資安防護。</ul>  | <ul><li>提供輕量級且能秒級部署、啟動速度較快的容器環境，可攜性佳。</li><li>內建便利的 Jupyter Notebook 功能，使用者無需開啟本機端指令列連線容器，透過網路即可隨時上線完成工作。</li><li>可隨開隨用，以秒計費。</li><li>單一計畫最高可依需求開出8核在單一容器中，且最高同時可開出十個容器（合計80核）。</li><li>獨家開發「容器白名單」功能，可有效控管可連線之服務網路範圍，確保資料不被竊取及盜用。</li></ul>|
 | 硬體資源 |<ul><li>使用新型 [Intel® Xeon® Gold 6248](https://ark.intel.com/content/www/us/en/ark/products/192446/intel-xeon-gold-6248-processor-27-5m-cache-2-50-ghz.html) CPU，支援多執行緒，能有效利用資源。</li><li>提供最佳比例的資源配置機制，規格優於業界水準。</li><li>除一般 CPU 虛擬運算個體，亦提供 GPU 加速運算個體的選擇。</li></ul>| <ul><li>所有容器皆具備所有容器皆具備 [NVIDIA® V100 GPU](https://www.nvidia.com/en-us/data-center/v100/)，資源可全力支援運算。</li><li>經 Nvidia 公司全力技術支援的容器環境，使用者不需安裝驅動程式及訓練環境，馬上開設、立馬使用。</li><li>配合 [TWCC-CLI](https://github.com/TW-NCHC/TWCC-CLI/tree/v0.5) 使用，可結合 [Kubeflow](https://www.kubeflow.org/) 及 [Airflow](https://airflow.apache.org/) 等工作流程管理平台，達到 AI/ML 自動化。 </li></ul> |
 | 軟體資源 | 提供 Windows、Linux 作業系統選擇；映像檔含作業系統，環境部署時間較容器來得長，但您可擁有底層作業系統的管理權限。| 非一般作業系統，為 NGC 搭建的容器環境。並已預載多樣化的 AI 深度學習框架。|
-| 儲存系統 | 區塊儲存 (Block Storage Service, BSS)，可掛載多個高速、低延遲的 SSD 磁碟。| <ul><li>採用 InfiniBand 網路串接高速檔案系統 (Hyper File System, HFS)，具極高的吞吐量和極低的延遲，資料傳輸效能佳，儲存空間可彈性擴增容量。</li><li>每位使用者可免費使用 200GB (work/ 及 home/）空間。</li>|
+| 儲存系統 | 虛擬磁碟 (Virtual Disk Service, VDS)，可掛載多個高速、低延遲的 SSD 磁碟。| <ul><li>採用 InfiniBand 網路串接高速檔案系統 (Hyper File System, HFS)，具極高的吞吐量和極低的延遲，資料傳輸效能佳，儲存空間可彈性擴增容量。</li><li>每位使用者可免費使用 200GB (work/ 及 home/）空間。</li>|
 | 適用情境 | 適用於工作負載小的應用程式，例：網站架設，AI 推論服務。| <ul><li>適用於大規模且資料密集的高負載工作。<br> </li><li>適合建立AI模型訓練</li>|
 
 
