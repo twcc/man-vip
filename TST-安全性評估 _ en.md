@@ -8,7 +8,7 @@ title: 安全性評估 | en
 {%hackmd @docsharedstyle/twccheader-en %}
 {%hackmd @docsharedstyle/alpha-testing-en %}
 
-# Security Scan
+# Security Scan<sup>`Beta`</sup>
 
 This document can help Tenant Admins operate the Security Scan service on TWCC portal.
 

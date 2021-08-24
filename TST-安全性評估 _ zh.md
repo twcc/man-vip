@@ -7,7 +7,7 @@ title: 安全性評估 | zh
 {%hackmd @docsharedstyle/twccheader-zh %}
 {%hackmd @docsharedstyle/alpha-testing-zh %}
 
-# 安全性評估
+# 安全性評估<sup>`Beta`</sup>
 
 本文目的在使租戶管理員能夠透過這份文件，在使用者網站上操作安全性評估服務 (Security Scan)。
 
