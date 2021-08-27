@@ -172,7 +172,7 @@ Dedicated Hosts</th>
     <td class="tg-uyty">90<SUP>&#8277&#8277</SUP></td>
     <td class="tg-xtxx">-</td>
     <td class="tg-uyty">82</td>
-    <td class="tg-mkg1" colspan="2" rowspan="8"><br><br><br><br>Please contact customer service to customize your plan<br><a href="mailto:iservice@twcc.ai">iservice@twcc.ai</a>
+    <td class="tg-mkg1" colspan="2" rowspan="9"><br><br><br><br>Please contact customer service to customize your plan<br><a href="mailto:iservice@twcc.ai">iservice@twcc.ai</a>
   </tr>
   <tr>
     <td class="tg-855q">c.xsuper</td>
@@ -230,6 +230,14 @@ Dedicated Hosts</th>
     <td class="tg-u4qj">240</td>
     <td class="tg-y8h4">656</td>
   </tr>
+  <tr>
+    <td class="tg-u4qj">cm1.4xsuper<SUP>&#8277&#8277&#8277</SUP></td>
+    <td class="tg-y8h4">8</td>
+    <td class="tg-u4qj">32</td>
+    <td class="tg-y8h4">360</td>
+    <td class="tg-u4qj">360</td>
+    <td class="tg-y8h4">656</td>
+  </tr>  
 </table>
 <!-- /wp:shortcode -->
 

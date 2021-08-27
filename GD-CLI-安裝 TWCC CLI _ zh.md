@@ -40,6 +40,14 @@ TWCC CLI 提供安裝於 Linux 環境，因此您可以安裝於**本機端 Linu
 $ pip install TWCC-CLI
 ```
 
+:::info
+
+{%hackmd @docsharedstyle/note-zh %}
+
+以上指令適用 Python 2，若您的環境安裝 Python 3，請將 `pip` 改為 `pip3`。  
+
+:::
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_74129ca51022a3c664d10fc3f69750f0.png)
 
 

@@ -95,9 +95,9 @@ $ twccli mk ccs [-n] #容器名稱
                 [-envv] #環境變數 Value
 ```
 :::info
-{%hackmd @TWSC/cli-optional-note-zh %}
 
-- 若不帶任何參數則以預設資訊建立容器：
+{%hackmd @twccdocs/cli-parameter-note-zh %}
+若不帶任何參數則以預設資訊建立容器：
 
 | 映像檔類型、映像檔 | 容器名稱 |硬體設定|
 | -------- | -------- | -------- |
