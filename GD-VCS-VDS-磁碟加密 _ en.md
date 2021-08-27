@@ -1,11 +1,12 @@
 ---
-tags: Test, EN
-title: TWCC 加密磁碟 (EXPTL) | en
+tags: Guide, VCS, VDS, EN
+title: 虛擬磁碟加密 | en
 ---
 
-{%hackmd /@docsharedstyle/exptl-testing-en %}
+{%hackmd @docsharedstyle/default %}
+{%hackmd @docsharedstyle/twccheader-en %}
 
-# TWCC VDS Encryption (`EXPTL`)
+# VDS Encryption
 
 TWCC VDS Encryption can protect your data security and help you comply with your organization security standards and regulations. The usage of encrypted disks is identical to standard disks but will automatically encrypt your disks with [Advanced Encryption Standard (AES-256)](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) (which might only slightly impact I/O performance).
 
@@ -39,13 +40,6 @@ After create the disk and attach it to your instance, initialize the disk before
 ### Move data in the old disk to the encrypted disk
 
 If you want to upgrade your disk to an encrypted one, you can create a new encrypted disk and attach it to your VCS instances, then move data to the new disk, and delete the old disk. For more information, see [Replace the data disk](https://man.twcc.ai/@twccdocs/howto-bss-replace-data-vol-en).
-
-:::danger
-
-{%hackmd @docsharedstyle/important-en %}
-
-Unlike standard disk types (HDD or SSD), **only the creator can delete encrypted disks**. Deleting encrypted disks by others (e.g., Tenant Administrator) will result in an error.
-:::
 
 
 ### Disk sapshots

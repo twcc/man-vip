@@ -39,7 +39,7 @@ title: 建立個體 | zh
 :::
 
 
-* 在儲存資訊頁面，設定外掛資料磁碟 大小（GB）及類型（提供 HDD、SSD 磁碟）。
+* 在儲存資訊頁面，設定外掛資料磁碟 大小（GB）及類型（提供 4 種磁碟類型：HDD、SSD、HDD 加密、SSD 加密）。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d9dafe55ac87c92b4b0c06678699c836.png)
 
