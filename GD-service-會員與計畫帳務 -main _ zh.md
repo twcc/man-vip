@@ -35,6 +35,7 @@ GA: UA-155999456-1
 概念說明 <i class="fa fa-commenting-o" aria-hidden="true"></i> [close]
 ---
 - [使用者角色與權限](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-overview-zh)[target=_blank]
+- [錢包負值、計畫到期與資源操作限制](https://man.twcc.ai/@twccdocs/concept-service-negative-wallet-expired-project-resource-limitation-zh)
 
 案例教學 <i class="fa fa-lightbulb-o" aria-hidden="true"></i> [close]
 ---
