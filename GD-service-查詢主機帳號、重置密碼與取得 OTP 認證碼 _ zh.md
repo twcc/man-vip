@@ -8,7 +8,7 @@ GA: UA-155999456-1
 {%hackmd @docsharedstyle/default %}
 
 :::warning
-<i class="fa fa-bullhorn" aria-hidden="true"></i> 若您的 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh)不適用以下畫面或流程，請 <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>點擊此連結</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-hostname-pwd-otp-zh) 參考操作說明。
+<i class="fa fa-bullhorn" aria-hidden="true"></i> 若您的[<ins>會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh)不適用以下畫面或流程，請 <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>點擊此連結</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-hostname-pwd-otp-zh) 參考操作說明。
 :::
 
 # 查詢主機帳號、重置密碼與取得 OTP 認證碼
@@ -24,7 +24,7 @@ GA: UA-155999456-1
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_70ee9ebd93b3782ed7efc34c76617eef.png)
 
 
-頁面引導至 Service 會員服務系統後，請進入「**會員中心**」 > 「**會員資訊**」 > 「**主機帳號資訊**」頁面。
+頁面引導至會員中心後，請進入「**會員中心**」 > 「**會員資訊**」 > 「**主機帳號資訊**」頁面。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1c2252d8916fc06142d37e2c04b48159.png)
 
@@ -53,14 +53,14 @@ GA: UA-155999456-1
 <i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> **重要：**
 
 TWCC 會員與主機密碼最長有效期限為 180 天。
-當密碼即將到期前（期前七天、前三天，當天）會寄發密碼提醒通知，請用戶撥冗登入 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 進行變更。
+當密碼即將到期前（期前七天、前三天，當天）會寄發密碼提醒通知，請用戶撥冗登入[<ins>會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 進行變更。
 :::
 
 ## 取得 OTP 認證碼
 
-有多種方式可取得 OTP 認證碼，以下提供 **Service 會員服務系統網頁**、**電腦其他方式**、**手機和平板電腦**的取得方式。
+有多種方式可取得 OTP 認證碼，以下提供 **會員中心網頁**、**電腦其他方式**、**手機和平板電腦**的取得方式。
 
-### 1. 由 [Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 取得
+### 1. 由 [會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 取得
 
 **Step 1.** 同[查詢主機帳號](#查詢主機帳號)之頁面，請至「**主機帳號資訊**」頁面。
 **Step 2.** 點擊「**顯示**」即可取得 OTP 認證碼
@@ -132,7 +132,7 @@ TWCC 會員與主機密碼最長有效期限為 180 天。
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4e17126ed97b4b52106e6e65b665acc4.png)
 
 
-**Step 2.** 安裝完打開應用程式，掃描 [Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 網頁 「**點我複製 OTP 金鑰**」上的 QR code，應用程式即能查詢 OTP 認證碼。
+**Step 2.** 安裝完打開應用程式，掃描[會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 網頁 「**點我複製 OTP 金鑰**」上的 QR code，應用程式即能查詢 OTP 認證碼。
   
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_41e14e47dda849f93df3d4af53766d94.png)
 

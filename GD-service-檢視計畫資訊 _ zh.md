@@ -64,7 +64,7 @@ GA: UA-155999456-1
 
 :::info
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 
-若需了解更多計畫資訊 (計畫成員、錢包資訊、資源用量)，請點選「帳戶計畫資訊」連結至 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 檢視。
+若需了解更多計畫資訊 (計畫成員、錢包資訊、資源用量)，請點選「帳戶計畫資訊」連結至[<ins>會員中心<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 檢視。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d4898d7d844c8a3ed3fd759a19af1caa.png)
 

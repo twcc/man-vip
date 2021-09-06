@@ -48,7 +48,7 @@ GA: UA-155999456-1
 注意事項：
 - 以下定價均為未稅價
 - 貨幣單位：新台幣 (NTD)
-- 實際收費皆以 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 出帳為準
+- 實際收費皆以 [<ins>會員中心<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 出帳為準
 - 本公司有權隨時變更牌價，變更後牌價將於公告後實施
 :::
 
@@ -502,7 +502,7 @@ GA: UA-155999456-1
 <table class="tg">
   <tr>
     <td class="tg-3ze5" colspan="8"><ul style="list-style-type:circle;">
-    <li>註冊帳號即可享有 100 GB (/home) + 100 GB (/work) 免費使用的儲存空間！</li><li>可獨立作為一般資料儲存空間，並適用於 TWCC 容器運算服務、高速運算服務的運算資料存放與傳輸。</li><li>支援擴充儲存空間，/home 與 /work 最多皆可升級至 10 TB：<ul><li>請進入 <a href="https://man.twcc.ai/@twsdocs/howto-service-access-service-zh">Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></a> 並至 會員中心 > 會員資訊 > 高速檔案系統 (HFS) 調整儲存空間。<li>加大空間者，提出申請後將立即生效，並會在計畫的可用額度進行扣款。</li><li>減少空間者，僅提供申請一次 (每月)，減量設定則於下月一日生效。</li>
+    <li>註冊帳號即可享有 100 GB (/home) + 100 GB (/work) 免費使用的儲存空間！</li><li>可獨立作為一般資料儲存空間，並適用於 TWCC 容器運算服務、高速運算服務的運算資料存放與傳輸。</li><li>支援擴充儲存空間，/home 與 /work 最多皆可升級至 10 TB：<ul><li>請進入 <a href="https://man.twcc.ai/@twsdocs/howto-service-access-service-zh">會員中心<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></a> 並至會員中心 > 會員資訊 > 高速檔案系統 (HFS) 調整儲存空間。<li>加大空間者，提出申請後將立即生效，並會在計畫的可用額度進行扣款。</li><li>減少空間者，僅提供申請一次 (每月)，減量設定則於下月一日生效。</li>
 </ul><li><a href="https://www.twcc.ai/intro/STORAGE"><span style="font-family:sans-serif, Microsoft JhengHei;font-weight:bold;color:rgb(255, 72, 67)">了解更多</span></li></a></td>
 <tr>
     <td class="tg-9gig" colspan="7" style="color:white">儲存空間</td>

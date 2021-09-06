@@ -8,7 +8,7 @@ GA: UA-155999456-1
 {%hackmd @docsharedstyle/twccheader-zh %}
 
 :::warning
-<i class="fa fa-bullhorn" aria-hidden="true"></i> 若您的 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh)不適用以下畫面或流程，請 <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>點擊此連結</ins>](https://man.twcc.ai/@twsdocs/apply-project-and-credit-zh) 參考操作說明。
+<i class="fa fa-bullhorn" aria-hidden="true"></i> 若您的[<ins>會員中心<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh)不適用以下畫面或流程，請 <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>點擊此連結</ins>](https://man.twcc.ai/@twsdocs/apply-project-and-credit-zh) 參考操作說明。
 :::
 
 # 購買計畫額度
@@ -26,7 +26,7 @@ GA: UA-155999456-1
 
 
 
-- 進入 [Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 後，<span>&#10102;</span> 點選會員中心 :arrow_right: <span>&#10103;</span> 申購管理 :arrow_right: <span>&#10104;</span> 申購計算額度
+- 進入 [會員中心<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 後，<span>&#10102;</span> 點選會員中心 :arrow_right: <span>&#10103;</span> 申購管理 :arrow_right: <span>&#10104;</span> 申購計算額度
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_01eb46a969a64972a725d47e6929b0f8.png)
 

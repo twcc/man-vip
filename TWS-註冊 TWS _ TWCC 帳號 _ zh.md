@@ -75,7 +75,7 @@ tags: Guide, Project, TW
 
 ### Step 2. 閱讀個資及權利義務聲明
 
-頁面跳轉至 Service 會員服務系統，請閱讀個資及權利義務聲明，並下拉頁面，點選「**我同意**」
+頁面跳轉至會員中心，請閱讀個資及權利義務聲明，並下拉頁面，點選「**我同意**」
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_924fa2b6d02f0971ce538bb3f908ee58.png)
 
