@@ -8,7 +8,7 @@ GA: UA-155999456-1
 {%hackmd @docsharedstyle/default %}
 
 :::warning
-<i class="fa fa-bullhorn" aria-hidden="true"></i> 若您的 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh)不適用以下畫面或流程，請 <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>點擊此連結</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fapply-project-and-credit-zh) 參考操作說明。
+<i class="fa fa-bullhorn" aria-hidden="true"></i> 若您的 [<ins>會員中心<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh)不適用以下畫面或流程，請 <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>點擊此連結</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fapply-project-and-credit-zh) 參考操作說明。
 :::
 
 # 申請使用計畫
@@ -22,7 +22,7 @@ GA: UA-155999456-1
 
 ## Step 1. 新增計畫
 
-- 完成 TWCC 帳號註冊後，使用相同帳密登入 [Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh)，點選「立即申請計畫」
+- 完成 TWCC 帳號註冊後，使用相同帳密登入 [會員中心<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh)，點選「立即申請計畫」
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f6708e68d4e6f102178d80715768c621.png)
 
@@ -71,6 +71,6 @@ GA: UA-155999456-1
 
 ## Step 4. 檢視計畫狀態
 
-- 計畫的「審核狀態」將會顯示在 [Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) （會員中心 > 我的計畫）請等待國網中心審核，審核通過後計畫狀態將顯示「申請通過」
+- 計畫的「審核狀態」將會顯示在 [會員中心<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) （會員中心 > 我的計畫）請等待國網中心審核，審核通過後計畫狀態將顯示「申請通過」
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ec5d10c4ae537ee323cc5e78391caf4a.png)

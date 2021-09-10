@@ -7,7 +7,7 @@ GA: UA-155999456-1
 {%hackmd @docsharedstyle/default %}
 
 :::warning
-<i class="fa fa-bullhorn" aria-hidden="true"></i> 若您的 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh)不適用以下畫面或流程，請 <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>點擊此連結</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-signup-zh) 參考操作說明。
+<i class="fa fa-bullhorn" aria-hidden="true"></i> 若您的 [<ins>會員中心<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh)不適用以下畫面或流程，請 <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>點擊此連結</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-signup-zh) 參考操作說明。
 :::
 
 # 註冊 TWCC 帳號
@@ -23,7 +23,7 @@ GA: UA-155999456-1
 
 ## Step 2. 閱讀個資及權利義務聲明
 
-- 頁面跳轉至 Service 會員服務系統，請閱讀個資及權利義務聲明，並下拉頁面，點選「我同意」
+- 頁面跳轉至會員中心，請閱讀個資及權利義務聲明，並下拉頁面，點選「我同意」
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_924fa2b6d02f0971ce538bb3f908ee58.png)
 

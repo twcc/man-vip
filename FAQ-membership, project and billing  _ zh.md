@@ -10,11 +10,11 @@ GA: UA-155999456-1
 
 ## 會員相關
 
-:::spoiler Q1. 如何進入 Service 會員服務系統?
+:::spoiler Q1. 如何進入會員中心?
 
 :::info
 
-進入 Service 會員服務系統之方式，請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fhowto-service-access-service-zh)。
+進入會員中心之方式，請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fhowto-service-access-service-zh)。
 
 :::
 
@@ -53,9 +53,9 @@ GA: UA-155999456-1
 
 ## 帳務相關
 
-#### 請至 Service 會員系統的常見問題內查詢，如無法進入請聯繫客服人員 。 
+#### 請至會員中心的常見問題內查詢，如無法進入請聯繫客服人員 。 
 :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 進入 Service 會員系統的方式請參考 FAQ 會員相關 Q1。
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 進入會員中心的方式請參考 FAQ 會員相關 Q1。
 :::
 <!-- :::spoiler Q1. 提報科技部專題研究計畫時，如何編列國網中心電腦使用費經費？
 

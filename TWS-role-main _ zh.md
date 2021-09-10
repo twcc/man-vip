@@ -11,7 +11,7 @@ GA: UA-155999456-1
 - [角色總覽](https://man.twcc.ai/@twsdocs/role-overview-zh)
 
 
-## TWS 會員服務系統
+## TWS 會員中心
 - [各項服務](https://man.twcc.ai/@twsdocs/role-tws-zh)
 
 ## TWCC 運算資源平台

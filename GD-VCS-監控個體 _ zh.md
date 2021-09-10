@@ -9,7 +9,7 @@ GA:
 
 # 監控個體
 
-TWCC 入口網站可檢視虛擬運算個體監控的資訊，可監控 **CPU 使用量**、**記憶體**、**硬碟讀取/寫入速度**及**網路輸出/輸入速**率。
+TWCC 入口網站可檢視虛擬運算個體監控的資訊，可監控 **CPU 使用量**、**記憶體**、**硬碟讀取/寫入速度**及**網路輸出/輸入速率**。
 
 :::info
 {%hackmd @docsharedstyle/note-zh %}
@@ -35,7 +35,7 @@ TWCC 入口網站可檢視虛擬運算個體監控的資訊，可監控 **CPU �
 
 :::info
 {%hackmd @docsharedstyle/note-zh %}
-TWCC 入口網站之網路流量包含東西流量與南北流量的總和，而 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 之額度用量、資源用量紀錄則僅顯示南北流量。
+TWCC 入口網站之網路流量包含東西流量與南北流量的總和，而[<ins>會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 之額度用量、資源用量紀錄則僅顯示南北流量。
 :::
 
 ## 進階操作
