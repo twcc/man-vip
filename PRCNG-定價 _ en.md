@@ -526,7 +526,7 @@ How to get GPU resources? See <a href="https://man.twcc.ai/@staging-twccdocs/S1-
 :::info
 <font face="sans-serif, Microsoft JhengHei">
 <p class="has-background has-small-font-size has-very-light-gray-background-color">
-<SUP>&#8277</SUP> The free quota of /work directory for MST project users has been raised from 100 GB to 1500 GB since Sep/1/2021.
+<SUP>&#8277</SUP> The free quota of /work directory for MST project users has been raised to 1500 GB since Sep/1/2021. By default, you can get 100 GB storage quota, and if you need more space, please go to [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) to increase your storage.
 :::
 
 <!-- /wp:shortcode -->
