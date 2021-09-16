@@ -27,8 +27,8 @@ GA: UA-155999456-1
 | 儲存空間   | ● 高速檔案系統 (HFS)<sup>[1][2]</sup>        | ● 虛擬運算個體系統碟 (100 GB)<br>● 虛擬磁碟服務 (VDS) 附加資料碟，可自行選擇容量                                                                   | ● 高速檔案系統 (HFS)<sup>[1][2]</sup>           |
 
 
-<sup>[1]</sup> 註冊帳號及獲得 200 GB (/home 與 /work 各 100 GB)，可依需求增購空間。
-<sup>[1]</sup> 自2021年9月1日起，科技部計畫下每個帳號之的暫存工作目錄區域(/work)免費額度，由原本的 100 GB，提高到 1500 GB。
+- <sup>[1]</sup> 註冊帳號及獲得 200 GB (/home 與 /work 各 100 GB)，可依需求增購空間。
+- <sup>[2]</sup> 自2021年9月1日起，科技部計畫下每個帳號之暫存工作目錄區域(/work) 1500 GB 內免費使用。系統僅提供預設配額 100 GB，若需調高配額請至[<ins> 會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 調整。
 
 
 :::
