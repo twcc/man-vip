@@ -526,7 +526,7 @@ How to get GPU resources? See <a href="https://man.twcc.ai/@staging-twccdocs/S1-
 :::info
 <font face="sans-serif, Microsoft JhengHei">
 <p class="has-background has-small-font-size has-very-light-gray-background-color">
-<SUP>&#8277</SUP> The free quota of /work directory for MST project users has been raised to 1500 GB since Sep/1/2021. By default, you can get 100 GB storage quota, and if you need more space, please go to [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) to increase your storage.
+<SUP>&#8277</SUP> The free quota of /work directory for MST project users has been raised to 1500 GB since Sep/1/2021. By default, you can get 100 GB storage quota, and if you need more space, lease go to <a href="https://man.twcc.ai/@twsdocs/howto-service-access-service-en"><ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins></a> to increase your storage.
 :::
 
 <!-- /wp:shortcode -->
@@ -588,5 +588,5 @@ How to get GPU resources? See <a href="https://man.twcc.ai/@staging-twccdocs/S1-
 :::danger
 - Currency: New Taiwan dollar (NTD)
 - The above prices are exclusive of tax.
-- Actual charges are subject to [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) billing.
+- Actual charges are subject to [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-en) billing.
 - The credits related terms in the <a href="https://www.twcc.ai/doc?page=sla">Service Level Agreement (SLA)</a> are not applied to services that are offered free of charge, and NCHC will ensure uninterrupted services as far as possible. The SLA terms associated with valid contracts are still applied to services provided to paid users. If you have any questions or concerns, please contact Customer Service.
