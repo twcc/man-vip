@@ -513,13 +513,21 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
   </tr>
   <tr>
     <td class="tg-3ze5" colspan="8"><ul style="list-style-type:circle;">
-    <li>註冊帳號即可享有 100 GB (/home) + 100 GB (/work) 的免費儲存空間！</li><li>可獨立作為一般資料儲存空間，並適用於 TWCC 容器運算服務、高速運算服務的運算資料存放與傳輸。</li><li>支援擴充儲存空間，/home 與 /work 最多皆可升級至 10 TB：<ul><li>請進入 <a href="https://man.twcc.ai/@twsdocs/howto-service-access-service-zh">會員中心<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></a> 並至會員中心 > 會員資訊 > 高速檔案系統 (HFS) 調整儲存空間。<li>加大空間者，提出申請後將立即生效，並會在計畫的可用額度進行扣款。</li><li>減少空間者，僅提供申請一次 (每月)，減量設定則於下月一日生效。</li>
+    <li>註冊帳號即可享有 100 GB (/home) + 100 GB (/work)<SUP>&#8277</SUP> 的免費儲存空間！</li><li>可獨立作為一般資料儲存空間，並適用於 TWCC 容器運算服務、高速運算服務的運算資料存放與傳輸。</li><li>支援擴充儲存空間，/home 與 /work 最多皆可升級至 10 TB：<ul><li>請進入 <a href="https://man.twcc.ai/@twsdocs/howto-service-access-service-zh">會員中心<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></a> 並至會員中心 > 會員資訊 > 高速檔案系統 (HFS) 調整儲存空間。<li>加大空間者，提出申請後將立即生效，並會在計畫的可用額度進行扣款。</li><li>減少空間者，僅提供申請一次 (每月)，減量設定則於下月一日生效。</li>
 <li>若需購買更多空間並享大量升級優惠，請洽客服人員：<a href="mailto:iservice@twcc.ai">iservice@twcc.ai。</a></li></ul><li><a href="https://www.twcc.ai/intro/STORAGE"><span style="font-family:sans-serif, Microsoft JhengHei;font-weight:bold;color:rgb(255, 72, 67)">了解更多</span></li></a></td>
   </tr>
   <tr>
     <td class="tg-6f4s" colspan="8">4 NTD/GB-月 (未稅價)</td>
   </tr>
 </table>
+
+
+:::info
+<font face="sans-serif, Microsoft JhengHei">
+<p class="has-background has-small-font-size has-very-light-gray-background-color">
+<SUP>&#8277</SUP> 自2021年9月1日起，科技部計畫每個帳號之的暫存工作目錄區域(/work)免費額度，由原本的 100 GB，提高到 1500 GB。
+:::
+
 <!-- /wp:shortcode -->
 
 <!-- wp:paragraph {"backgroundColor":"very-light-gray","fontSize":"small"} -->

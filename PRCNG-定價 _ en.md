@@ -491,7 +491,6 @@ How to get GPU resources? See <a href="https://man.twcc.ai/@staging-twccdocs/S1-
     <ul><li>Provides low-latency service (less than 10 ms) and consistent I/O performance with significantly high throughput (from 3 IOPS/GB to 16 IOPS/GB). SSD strengthens reliability and scalability for applications, and it is best suited for workloads with high throughput and enterprise applications that require high-performance.</li><li>Provides a maximum throughput of 1750 MB/s for each VCS instance.</li><li>Supports storage size up to 16 TB.</li></ul></li><li><b>Hard Disk Drives (HDD)</b><ul><li>Provides a maximum throughput of 1750 MB/s for each VCS instance. HDD is best suited for large datases that are infrequently accessed and are not latency-sensitive.</li><li>Provides a maximum throughput of 1750 MB/s for each VCS instance.</li><li>Supports storage size up to 16 TB.</li></ul></li></ul><li><a href="https://www.twcc.ai/intro/STORAGE"><span style="font-weight:bold;color:rgb(255, 72, 67)"> See more</span></a></td>
     <tr>
     <td class="tg-6f4s" colspan="8">Solid State Drives (SSD): 2.6 NTD/GB-month (Tax excluded)</td>
->>>>>>> 34-netapp-ssd-for-data-vol
   </tr>
   <tr>
     <td class="tg-6f4s" colspan="8">Hard Disk Drives (HDD): 1.2 NTD/GB-month (Tax excluded)</td>
@@ -515,7 +514,7 @@ How to get GPU resources? See <a href="https://man.twcc.ai/@staging-twccdocs/S1-
   </tr>
   <tr>
     <td class="tg-3ze5" colspan="8"><ul style="list-style-type:circle;">
-    <li>Sign up and get 100 GB (/home) + 100 GB (/work) of free storage!
+    <li>Sign up and get 100 GB (/home) + 100 GB (/work)<SUP>&#8277</SUP> of free storage!
 </li><li>HFS can be used as a general data storage space independently and is suitable for the storage and transmission of computing data of TWCC Container Compute Service and High-performance Computing.</li><li>You can increase the storage capacity to 10 TB for both /home and /work:<ul><li>Please access the <a href="https://man.twcc.ai/@twsdocs/howto-service-access-service-en">Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></a> and go to HFS page (Member center > Member profile > HFS)</a> to manage your storage quota.<li>When you upgrade your plan, the storage increase takes effect instantly after you apply; your project available credits will be paid for the bill.</li><li>When you downgrade your plan (you can only apply one time in a month), the storage decrease takes effect on the first day of next month.</li>
 <li>If you need more space and have a discount on buying a large amount of storage, please contact us: <a href="mailto:iservice@twcc.ai">iservice@twcc.ai</a></li></ul><li><a href="https://www.twcc.ai/intro/STORAGE"><span style="font-weight:bold;color:rgb(255, 72, 67)"> See more</span></a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
   </tr>
@@ -523,6 +522,13 @@ How to get GPU resources? See <a href="https://man.twcc.ai/@staging-twccdocs/S1-
     <td class="tg-6f4s" colspan="8">4 NTD/GB-month (Tax excluded)</td>
   </tr>
 </table>
+
+:::info
+<font face="sans-serif, Microsoft JhengHei">
+<p class="has-background has-small-font-size has-very-light-gray-background-color">
+<SUP>&#8277</SUP> The free quota of /work directory for MST project users has been raised from 100 GB to 1500 GB since Sep/1/2021.
+:::
+
 <!-- /wp:shortcode -->
 
 <!-- wp:paragraph {"backgroundColor":"very-light-gray","fontSize":"small"} -->

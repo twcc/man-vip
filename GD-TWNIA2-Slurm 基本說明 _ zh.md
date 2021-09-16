@@ -29,8 +29,15 @@ Slurmd 提供可容錯的分層通信機制，相關命令包含：sacct、sallo
 在檔案傳輸節點上，分別將HFS掛載到/home (為/fs02之softlink)，/work (為/fs01之softlink)之下，使用者可在這兩個目錄下以自己的主機帳號建立目錄，並於該目錄下進行檔案管理。HFS會同時掛載到所有GPU節點的相同目錄上，因此當使用者透過檔案傳輸節點將檔案上傳至HFS後，使用者即可透過上述之HPC服務，或 www.twcc.ai 上之 容器、HPC 高速運算服務存取HFS中的內容。
 
 磁碟空間限制。目前規劃，個人及公用磁碟空間核定如下：
-/home/username 目錄：每個帳號之家目錄，免費提供100 GB
-/work/username目錄：每個帳號之公用目錄，免費提供100 GB
+/home 目錄：每個帳號之家目錄，免費提供100 GB<sup>[2]</sup> 
+/work 目錄：每個帳號之暫存工作目錄，免費提供100 GB<sup>[1][2]</sup> 
+
+:::info
+
+{%hackmd @docsharedstyle/note-zh %}
+- [1] 自2021年9月1日起，科技部計畫每個帳號之的暫存工作目錄區域(/work)免費額度，由原本的 100 GB，提高到 1500 GB。
+- [2] 如空間不敷使用時，您可以到[<ins>會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 購買擴充。購買價格與調整方式請參考[<ins>價目表</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS)。
+:::
 
 ### 系統運算節點
 

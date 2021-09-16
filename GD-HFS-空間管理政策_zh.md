@@ -11,13 +11,13 @@ GA: UA-155999456-1
 
 ### 個人及公用磁碟核定空間
 - /home 目錄：每個帳號之家目錄 (註冊帳號即可獲得 100 GB 免費空間)
-- /work目錄 ： 每個帳號之公用目錄 (註冊帳號即可獲得 100 GB 免費空間)
+- /work 目錄：每個帳號之暫存工作目錄 (註冊帳號即可獲得 100 GB 免費空間)
 
 :::info
 
 {%hackmd @docsharedstyle/note-zh %}
-
-如空間不敷使用時，您可以到 [<ins>會員中心<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 購買擴充。購買價格與調整方式請參考[<ins>價目表</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS)。
+- [1] 自2021年9月1日起，科技部計畫每個帳號之的暫存工作目錄區域(/work)免費額度，由原本的 100 GB，提高到 1500 GB。
+- [2] 如空間不敷使用時，您可以到[<ins>會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 購買擴充。購買價格與調整方式請參考[<ins>價目表</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS)。
 :::
 
 ### 公用磁碟空間管理政策與使用須知
@@ -40,10 +40,10 @@ $ ls -ula /path/to/your_scratch_file or directory
 ```
 :::
    
-- 個人磁碟空間(/home )、 公用磁碟空間(/work ) 備份政策
+- 個人磁碟空間 (/home )、 公用磁碟空間 (/work ) 備份政策
     
 
-|  | /Home |/Work|
+|  | /home |/work|
 | -------- | -------- |-------- |
 | 備份政策  | :white_check_mark: |:negative_squared_cross_mark:|
 | 檔案清理政策 | :negative_squared_cross_mark:  | 28天 (免費或付費空間均須遵守)、禁止 touch |
