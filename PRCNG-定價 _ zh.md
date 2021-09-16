@@ -525,7 +525,7 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
 :::info
 <font face="sans-serif, Microsoft JhengHei">
 <p class="has-background has-small-font-size has-very-light-gray-background-color">
-<SUP>&#8277</SUP> 自2021年9月1日起，科技部計畫每個帳號之的暫存工作目錄區域(/work)免費額度，由原本的 100 GB，提高到 1500 GB。
+<SUP>&#8277</SUP> 自2021年9月1日起，科技部計畫下每個帳號之的暫存工作目錄區域(/work)免費額度，由原本的 100 GB，提高到 1500 GB。
 :::
 
 <!-- /wp:shortcode -->
