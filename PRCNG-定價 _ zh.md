@@ -525,7 +525,7 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
 :::info
 <font face="sans-serif, Microsoft JhengHei">
 <p class="has-background has-small-font-size has-very-light-gray-background-color">
-<SUP>&#8277</SUP> 自2021年9月1日起，科技部計畫下每個帳號之暫存工作目錄區域(/work) 1500 GB 內免費使用。系統僅提供預設配額 100 GB，若需調高配額請至[<ins> 會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 調整。
+<SUP>&#8277</SUP> 自2021年9月1日起，科技部計畫下每個帳號之暫存工作目錄區域(/work) 1500 GB 內免費使用。系統僅提供預設配額 100 GB，若需調高配額請至<a href="https://man.twcc.ai/@twsdocs/howto-service-access-service-en"><ins>會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins></a> 調整。
 :::
 
 <!-- /wp:shortcode -->
@@ -588,8 +588,3 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
 - 實際收費皆以 [<ins>會員中心<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 出帳為準
 - 若為無償使用情況下，不適用服務層級協議 (SLA) 抵免額相關條款，但本中心將盡可能確保服務不中斷。已付費使用之用戶仍適用有效合約其相關 SLA 條款。若有疑問，請您洽詢客服人員。</tr>
 :::
-
-
-
-
-
