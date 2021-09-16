@@ -1,13 +1,16 @@
 ---
 tags: Guide, VCS, VPN, TW
-title: 虛擬私有網路 | zh
+title: VPN (Beta) | zh
 GA:
 ---
 
 {%hackmd @docsharedstyle/default %}
 {%hackmd @docsharedstyle/twccheader-zh %}
+{%hackmd @docsharedstyle/beta-testing-zh %}
 
-# ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d9bf6c4925efee137a33e4218349c813.png)  虛擬私有網路
+:arrow_backward:  [回到進入方式說明](https://man.twcc.ai/@preview-twccdocs/vpnentry)
+
+# ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d9bf6c4925efee137a33e4218349c813.png)  TWCC VPN<sup>`Beta`</sup>
 
 
 TWCC VPN 虛擬私有網路服務支援 IPsec/IKE 安全通訊協議，讓租戶建立 Site-to-Site VPN，以確保兩個站點之間安全地傳輸數據。
