@@ -87,3 +87,12 @@ GA: UA-155999456-1
 頁面中所顯示的已使用容量需一段時間進行更新，請您在刪除檔案約 1-2 小時後，再至頁面查看。
 
 :::
+
+:::spoiler Q9. Jupyter Notebook 刪除檔案後沒有立即釋放空間？
+
+:::info
+
+- 在 Jupyter Notebook UI 介面上刪除檔案，檔案不會立即刪除，而會移至 `/home/<主機帳號>/.local/share/Trash` 下。
+- 若需立即刪除檔案並釋放空間，則需在 Jupyter Terminal 執行 `rm -r /home/<主機帳號>/.local/share/Trash`，或是透過[<ins>其他方式</ins>](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh/%2F%40twccdocs%2Fguide-hfs-connect-to-data-transfer-node-zh)連線 HFS 並刪除檔案，即可立即釋放空間。
+
+:::
