@@ -41,4 +41,4 @@ GA:
 :::
 
 
-**Step 3.** 相關操作說明可參考：[VPN 使用手冊](https://man.twcc.ai/@twccdocs/guide-vcs-vpn-zh)
+**Step 3.** 相關操作說明可參考：[VPN 使用手冊](https://man.twcc.ai/@preview-twccdocs/guide-vcs-vpn-zh)
