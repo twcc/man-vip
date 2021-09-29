@@ -23,7 +23,7 @@ GA: UA-155999456-1
 |使用計畫所有虛擬網路|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
 |刪除計畫所有虛擬網路|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 
-
+<!-- 
 ## VPN
 
 | 功能 | 租戶管理員 | 租戶使用者 |
@@ -38,6 +38,7 @@ GA: UA-155999456-1
 |檢視計畫所有 VPN 資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 |刪除計畫所有 VPN|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 |虛擬運算個體受 VPN 影響|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+-->
 
 ## 安全性群組
 
