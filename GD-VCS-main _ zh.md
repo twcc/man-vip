@@ -53,7 +53,7 @@ GA:
     
 - ### ● 網路 [close]
     - [![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c7ecced96f77b12664677d4cef97a3cc.png) 虛擬網路](https://man.twcc.ai/@TWSC/guide-vcs-vnw-zh)
-    - [![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d9bf6c4925efee137a33e4218349c813.png) 虛擬私有網路](https://man.twcc.ai/@TWSC/guide-vcs-vpn-zh)
+    <!-- - [![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d9bf6c4925efee137a33e4218349c813.png) 虛擬私有網路](https://man.twcc.ai/@TWSC/guide-vcs-vpn-zh)-->
     - [![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5eaf2d8a3b112a4b8c49a853eaab60d8.png) 負載平衡](https://man.twcc.ai/@TWSC/guide-vcs-lbs-zh)
     - [![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fe3143064a67e3d04615d38683938427.png) Auto Scaling](https://man.twcc.ai/@TWSC/guide-vcs-auto-sacling-zh)
 
