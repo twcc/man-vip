@@ -31,6 +31,7 @@ GA:
     - [檢視/編輯](https://man.twcc.ai/@TWSC/guide-vcs-view-and-edit-instance-zh)
     - [停止/啟動/關機/重開機/刪除](https://man.twcc.ai/@TWSC/vcs-guide-manage-instance-zh)
     - [監控](https://man.twcc.ai/@TWSC/vcs-guide-monitor-instance-zh)
+	- [Console - 除錯與維護工具](https://man.twcc.ai/@TWSC/guide-vcs-debug-tool-console-zh)
     - [調整規格](https://man.twcc.ai/@twccdocs/howto-vcs-resize-instance-zh)
 
 - ### ● 儲存 [close]
