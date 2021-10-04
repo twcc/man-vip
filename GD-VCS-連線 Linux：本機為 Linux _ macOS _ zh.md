@@ -126,6 +126,12 @@ Host <INSTANCE_NAME>           #輸入虛擬運算個體的名稱
 
 <br>
 
+:::info
+{%hackmd @docsharedstyle/note-zh %}
+
+若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](https://man.twcc.ai/@preview-twccdocs/guide-vcs-debug-tool-console-zh)，可加速工作流程。
+:::
+
 :::danger
 {%hackmd @docsharedstyle/important-zh %}
 

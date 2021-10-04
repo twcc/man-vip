@@ -37,7 +37,17 @@ GA:
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_efdbd4140922207a512b84da8e697024.png)
 
-:::info
+:::warning
+
+{%hackmd @docsharedstyle/tip-zh %}
+
 帳號：administrator
 密碼：使用者自行定義之個體密碼
+:::
+
+
+:::info
+{%hackmd @docsharedstyle/note-zh %}
+
+若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](https://man.twcc.ai/@preview-twccdocs/guide-vcs-debug-tool-console-zh)，可加速工作流程。
 :::
