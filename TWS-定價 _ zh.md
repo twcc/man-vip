@@ -15,22 +15,13 @@ GA:
 </script>
 
 
-<style>
-
-<style>
-.ent-pricing h1, .ent-pricing p {
-    display: inline;  
-}
-
-</style>
-
 {%hackmd @docsharedstyle/default %}
 
 <p style="text-align:right; font-size:15px;">版次：20211008v1.0</p>
 
 <center><a href="https://tws.twcc.ai/"><img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_96ffe100f3e137a29ebcf7a3d3b7793a.png" width="200"></a></center>
-<div class="ent-pricing"><center><font face="sans-serif, Microsoft JhengHei">
-<h1 style="text-align:center; display:inline;">&nbsp;&nbsp;&nbsp;TWCC 產品企業促銷價</h1>&nbsp;&nbsp;<p style="text-align:right; display:inline; font-size:10px;">20211008v1.0</p></div>
+<div <center><font face="sans-serif, Microsoft JhengHei">
+<h1 style="text-align:center; display:inline;">&nbsp;&nbsp;&nbsp;TWCC 產品企業促銷價</h1>&nbsp;&nbsp;</div>
 <h2 style="text-align:center">&#9745; 付費方案多元 &#9745; 無需預付 &#9745; 無終止費用</h2>
 </font></center>
 
@@ -198,7 +189,7 @@ GA:
 <font face="sans-serif, Microsoft JhengHei">
 <SUP>&#8277</SUP>可用記憶體容量若以 GiB (1 GiB =  2<sup>30</sup> bytes) 為計算單位，以 c.super 為例，則可用記憶體容量為 84 GiB，請參考<ins><a href="https://man.twcc.ai/@twccdocs/concept-ccs-memory-conversion-zh">記憶體容量換算</a></ins>了解更多。<br><br>
 <SUP>&#8277&#8277</SUP>記憶體含 1 GB 共享記憶體。<br><br>
-<SUP>&#8277&#8277&#8277</SUP>記憶體優化容器可負擔記憶體內部處理大型資料集之工作負載，加強效能，提供給 PyTorch、Torch、MXNet 等容器環境使用。</font>
+<SUP>&#8277&#8277&#8277</SUP>記憶體優化容器可負擔記憶體內部處理大型資料集之工作負載，加強效能，提供給 PyTorch、Torch、MXNet、clara、CUDA、Matlab 等容器環境使用。</font>
 :::
 <!-- /wp:paragraph -->
 <!-- wp:shortcode -->
@@ -272,8 +263,8 @@ GA:
 
 :::info
 <font face="sans-serif, Microsoft JhengHei">
-<SUP>&#8277</SUP> 可彈性自訂 GPU 數量，其餘資源按 1 GPU : 4 CPU : 90 GB 記憶體之比例分配<br><font size = 2 px>例：指定使用 18 個 GPU，可以取得 18 GPU：72 CPU：1620 GB 記憶體，並以每小時 1,044(58.00*18) 元計費。</font><br><br>
-<SUP>&#8277</SUP> 可用記憶體容量若以 GiB (1 GiB =  2<sup>30</sup> bytes) 為計算單位，以 h.super 為例，則可用記憶體容量為 84 GiB，請參考<ins><a href="https://man.twcc.ai/@twccdocs/concept-ccs-memory-conversion-zh">記憶體容量換算</a></ins>了解更多。</font>
+<SUP>&#8277</SUP>可彈性自訂 GPU 數量，其餘資源按 1 GPU : 4 CPU : 90 GB 記憶體之比例分配<br><font size = 2 px>例：指定使用 18 個 GPU，可以取得 18 GPU：72 CPU：1620 GB 記憶體，並以每小時 1,044(58.00*18) 元計費。</font><br><br>
+<SUP>&#8277</SUP>可用記憶體容量若以 GiB (1 GiB =  2<sup>30</sup> bytes) 為計算單位，以 h.super 為例，則可用記憶體容量為 84 GiB，請參考<ins><a href="https://man.twcc.ai/@twccdocs/concept-ccs-memory-conversion-zh">記憶體容量換算</a></ins>了解更多。</font>
 :::
 
 ## 虛擬運算服務 (Virtual Compute Service, VCS)
@@ -293,10 +284,10 @@ GA:
     <td class="tg-y29t" rowspan="2"  style="color:white">HDD<br>(GB)</td>
     <td class="tg-p1ie" colspan="3" style="color:white"><center>定價<br>(小時)</center></td>
   </tr>
-    <td class="tg-p1ie" colspan="1" style="color:white">免費 OS<br></td>  
-    <td class="tg-p1ie" colspan="1" style="color:white">附帶微軟 Windows Server 標準版授權
+    <td class="tg-p1ie" colspan="1" style="color:white">Linux*<br></td>  
+    <td class="tg-p1ie" colspan="1" style="color:white">Windows Server**
 <br></td>
-    <td class="tg-p1ie" colspan="1" style="color:white">附帶微軟 Windows Server標準版及 SQL 標準版授權
+    <td class="tg-p1ie" colspan="1" style="color:white">微軟 SQL Server***
 <br></td>
   </tr>
   </tr>
@@ -402,6 +393,14 @@ GA:
 <SUP>&#8277</SUP><b>GPU 加速運算個體</b>：提供專門處理圖形任務的 GPU 核心，能快速完成大量運算。</font><br><font face="sans-serif, Microsoft JhengHei">
 如何取得 GPU 資源？ 請參考 <a href="https://man.twcc.ai/@staging-twccdocs/S1-YNPTL_#%E8%B3%87%E6%BA%90%E9%85%8D%E7%BD%AE%E8%88%87%E7%9B%A3%E6%8E%A7"><ins>FAQ-資源監控與配置-Q4</ins></a> 之說明。</font>
 ::: -->
+
+:::info
+<font face="sans-serif, Microsoft JhengHei">
+<SUP>&#8277</SUP>提供 CentOS 以及 Ubuntu Linux<br><br>
+<SUP>&#8277 &#8277</SUP>附帶微軟 Windows Server 標準版授權<br><br>
+<SUP>&#8277 &#8277 &#8277</SUP>附帶微軟 Windows Server 標準版以及 SQL Server 標準版授權
+</font>
+:::
 
 ---
 
