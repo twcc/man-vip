@@ -17,7 +17,7 @@ TWS 提供您 TWCC 附帶授權的虛擬運算加值服務，無需自行購買�
 
 ## 定價
 
-定價資訊，請參考 [TWS 產品價格](https://man.twcc.ai/@twsdocs/pricing-zh)。
+定價資訊，請參考 [TWS 產品價格](https://man.twcc.ai/@twsdocs/pricing-zh#%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Virtual-Compute-Service-VCS)。
 
 {%hackmd @twccdocs/chunk-before-you-begin-zh %}
 
