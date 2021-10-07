@@ -17,7 +17,7 @@ TWS 提供您 TWCC 附帶授權的虛擬運算加值服務，無需自行購買�
 
 ## 定價
 
-定價資訊，請參考 [TWS 產品價格](https://man.twcc.ai/@twsdocs/pricing-zh#%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Virtual-Compute-Service-VCS)。
+定價資訊，請參考 [TWS 產品價格](https://man.twcc.ai/@twsdocs/pricing-zh)。
 
 {%hackmd @twccdocs/chunk-before-you-begin-zh %}
 
@@ -74,5 +74,6 @@ SQL Server 個體連線進入後，請打開 <i class="fa fa-windows" aria-hidde
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f33ed3c88ede57b37df1a796479b5517.png)
 
+## 最佳實務案例
 
-進階資料庫應用說明 (資料匯入、備份還原、效能優化)，請敬請期待！
+進階 SQL Server 資料庫最佳實務案例說明 (資料匯入、備份還原、效能優化)，請敬請期待！
