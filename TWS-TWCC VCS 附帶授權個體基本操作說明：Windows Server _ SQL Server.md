@@ -13,7 +13,7 @@ TWS 提供您 TWCC 附帶授權的虛擬運算加值服務，無需自行購買�
 - ### 附帶授權的 Windows Server (2016)
 > 提供內含授權的 Windows Server 個體，具多項新功能，包含增強 Nano Server 功能性、更完整的安全防護，以及更簡易及強化的 IT 管理能力。
 - ### 附帶授權的 Windows Server (2016) +  Microfost SQL Server (2016)
-> 提供內含授權的 Windows Server 個體，具多項新功能，包含增強 Nano Server 功能性、更完整的安全防護，以及更簡易及強化的 IT 管理能力。標準版關聯式資料庫的個體具備易上手的介面操作工具，可智慧整合、管理您的海量資料，並視覺化呈現數據。
+> 提供內含授權的 Windows Server 並可執行 Microsoft SQL Server 關聯式資料庫。具備易上手的介面操作工具，可智慧整合、管理您的海量資料，並視覺化呈現數據。
 
 ## 定價
 
@@ -58,6 +58,8 @@ TWS 提供您 TWCC 附帶授權的虛擬運算加值服務，無需自行購買�
 <summary><b>TWCC CLI </b>(TBD)</summary>
 
 <br>
+
+目前 TWCC CLI 尚未支援建立 Windows 個體，請使用 TWCC 入口網站建立。
 
 </details>
 
