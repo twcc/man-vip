@@ -189,7 +189,7 @@ GA:
 <font face="sans-serif, Microsoft JhengHei">
 <SUP>&#8277</SUP>可用記憶體容量若以 GiB (1 GiB =  2<sup>30</sup> bytes) 為計算單位，以 c.super 為例，則可用記憶體容量為 84 GiB，請參考<ins><a href="https://man.twcc.ai/@twccdocs/concept-ccs-memory-conversion-zh">記憶體容量換算</a></ins>了解更多。<br><br>
 <SUP>&#8277&#8277</SUP>記憶體含 1 GB 共享記憶體。<br><br>
-<SUP>&#8277&#8277&#8277</SUP>記憶體優化容器可負擔記憶體內部處理大型資料集之工作負載，加強效能，提供給 PyTorch、Torch、MXNet、clara、CUDA、Matlab 等容器環境使用。</font>
+<SUP>&#8277&#8277&#8277</SUP>記憶體優化容器可負擔記憶體內部處理大型資料集之工作負載，加強效能，提供給 PyTorch、Torch、MXNet、Clara、CUDA、Matlab 等容器環境使用。</font>
 :::
 <!-- /wp:paragraph -->
 <!-- wp:shortcode -->
