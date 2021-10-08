@@ -17,7 +17,7 @@ TWCC 提供 NGC’s Triton Inference Server 立即可用的工作環境。Triton
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">映像檔版本資訊</span> 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ec504f3718db99e02bd607b8ebb33379.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a46ea6fbf1039c6395d7dfcc42afbe30.png)
 
 
 
@@ -30,6 +30,8 @@ TWCC 提供 NGC’s Triton Inference Server 立即可用的工作環境。Triton
 
 <summary><b>點我參考詳細版本套件資訊</b></summary>
 
+- [tritonserver-21.08-py3](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_21-08.html#rel_21-08)
+- [tritonserver-21.06-py3](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_21-06.html#rel_21-06)
 - [tritonserver-21.02-py3](https://docs.nvidia.com/deeplearning/triton-inference-server/release-notes/rel_21-02.html#rel_21-02)
 - [tensorrtserver-20.02-py3](https://docs.nvidia.com/deeplearning/triton-inference-server/release-notes/rel_20-02.html#rel_20-02)
 - [tensorrtserver-19.02-py3-v1](https://docs.nvidia.com/deeplearning/triton-inference-server/release-notes/rel_19-02.html#rel_19-02)

@@ -15,7 +15,7 @@ TWCC 提供 NGC optmized PyTorch 10 種立即可用的工作環境。PyTorch 是
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">映像檔版本資訊</span> 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_195b9e138cd380c1c1c6359b0d12ee13.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3bb2766e8d468fe3a830307ba2eda2b4.png)
 
 
 :::info
@@ -27,6 +27,7 @@ TWCC 提供 NGC optmized PyTorch 10 種立即可用的工作環境。PyTorch 是
 
 <summary><b>點我參考詳細版本套件資訊</b></summary>
 
+- [pytorch-21.08-py3](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_21-08.html#rel_21-08)
 - [pytorch-21.06-py3](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_21-06.html#rel_21-06)
 - [pytorch-21.02-py3](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_21-02.html#rel_21-02)
 - [pytorch-20.11-py3](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_20-11.html#rel_20-11)

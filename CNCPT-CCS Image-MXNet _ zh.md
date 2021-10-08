@@ -14,7 +14,7 @@ TWCC 提供 NGC optimized MXNet 立即可用的工作環境。MXNet 是致力於
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">映像檔版本資訊</span>
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c6ca9e3df6a80fc104f1a7c1258ccca1.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_583d099d5b65e536231dc2e079ed8c95.png)
 
 :::info
 {%hackmd @docsharedstyle/note-zh %}
@@ -25,6 +25,7 @@ TWCC 提供 NGC optimized MXNet 立即可用的工作環境。MXNet 是致力於
 
 <summary><b>點我參考詳細版本套件資訊</b></summary>
 
+- [mxnet-21.08-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_21-08.html#rel_21-08)
 - [mxnet-21.06-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_21-06.html#rel_21-06)
 - [mxnet-21.02-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_21-02.html#rel_21-02)
 - [mxnet-20.11-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_20-11.html#rel_20-11)
