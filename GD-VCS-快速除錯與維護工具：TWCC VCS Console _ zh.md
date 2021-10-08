@@ -62,3 +62,9 @@ TWCC 虛擬運算服務 (VCS) 提供 Console，讓您無需在本地端安裝 Cl
 完成 Step 1 ~ Step 3，即可讓您在短時間內連線進入進虛擬運算個體，快速進行問題解決，加速系統維運的工作流程！
 
 
+:::danger
+
+{%hackmd @docsharedstyle/important-zh %}
+
+在您的工作階段結束後，請務必於 Console 執行登出，以確保個體安全。
+:::
