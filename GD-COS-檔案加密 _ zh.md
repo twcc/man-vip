@@ -87,7 +87,7 @@ TWCC 會在上傳檔案至雲端物件儲存空間時，為您的檔案進行加
 
 **Step 1. 進入設定頁面**
 
-點選 **Tool** > **Server-Side-Encryption** > **+Add**
+點選 **Tools** > **Server-Side-Encryption** > **+Add**
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4828b14743452f78d82e199429e0eb94.png)
 
@@ -98,7 +98,7 @@ TWCC 會在上傳檔案至雲端物件儲存空間時，為您的檔案進行加
 **Step 2. 設定加密內容**
 
 - Bucket name or mask：輸入檔案需加密的「**儲存體**」名稱
-- Encryption type：選擇 **Server-Side-Encrption with Customer Keys Stored in AWS KNS (SSE-KMS)**
+- Encryption type：選擇 **Server-Side-Encrption with Customer Keys Stored in AWS KMS (SSE-KMS)**
 - KMS key type：選擇 **Enter KMS master key ARN**，並輸入 TWCC 提供的 **加密金鑰 ID**
 - 點選 **Save changes** 確認設定
 
