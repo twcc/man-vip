@@ -54,7 +54,7 @@ GA: UA-155999456-1
     
 * 出現上傳完成後提示後點擊「完成」。
     
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d3eefe1c07cf5e9c2f6a24d180ed6e93.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9bcdf1d73e3d33fe0fcbc8ac42fcfb24.png)
 
 
 :::warning
