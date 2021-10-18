@@ -234,7 +234,7 @@ $ goofys --endpoint https://cos.twcc.ai mytwccbucket ~/mount_cos
 掛載指令：
 
 ```bash
-$ s3fs mytwccbucket ~/mount_s3 -o url=https://cos.twcc.ai/ -o use_path_request_style
+$ s3fs mytwccbucket ~/mount_cos -o url=https://cos.twcc.ai/ -o use_path_request_style
 ```
 
 ### 存取方式
