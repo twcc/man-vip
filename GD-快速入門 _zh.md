@@ -136,10 +136,7 @@ GA: UA-155999456-1
 
 - 點擊任一服務即可快速選用該項服務
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7e0ddfdc711801c7c07033bc0007e8a8.png)
-
-
-
+{%hackmd @twccdocs/ui-chunk-favorites-for-quick-guide-zh %}
 
 
 ## 建立雲端物件儲存體
@@ -147,10 +144,7 @@ GA: UA-155999456-1
 ### Step 1. 進入雲端物件儲存管理頁面
 - 點擊頁面或是服務列表中的「雲端物件儲存」，進入雲端物件儲存管理頁面
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e6133136519261fba902a3ad60d04ca7.png)
-
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f67d7a1c7eda158d21de8004e79f7998.png)
+{%hackmd @twccdocs/ui-chunk-favorites-zh %}
 
 
 

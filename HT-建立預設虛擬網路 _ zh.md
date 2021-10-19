@@ -15,7 +15,7 @@ GA: UA-155999456-1
 
 * 登入 TWCC 頁面後，於服務列表選取「**虛擬網路**」
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c1d8215bd467a359eba7ec079cf76781.png)
+{%hackmd @twccdocs/ui-chunk-favorites-zh %}
 
 <!-- 
 EN PIC

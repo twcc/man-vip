@@ -4,6 +4,8 @@ title: 建立個體 | zh
 ---
  
  * 進入「**虛擬運算**」服務，在「**虛擬運算個體管理**」頁面，點擊「**＋建立**」。
+ 
+{%hackmd @twccdocs/ui-chunk-favorites-zh %}
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d01d3f3ce8149085f0247b35f5775c71.png)
 

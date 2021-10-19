@@ -38,6 +38,11 @@ Auto Scaling 是一種自動彈性調整的監控機制，本服務能夠在指�
 <br>
 
 * 由服務列表點選「**Auto Scaling**」進入「**Auto Scaling 管理**」頁面，點擊「**＋建立**」
+
+{%hackmd @twccdocs/ui-chunk-favorites-zh %}
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_66eb58d832264fa3d0c2e55b1c3f0070.png)
+
 * 輸入下列設定資訊，完成後點擊「**下一步：檢閱+建立>**」：
     * **名稱**：輸入 Auto Scaling 的名稱。
     * **描述**：輸入 Auto Scaling 的描述，非必填。

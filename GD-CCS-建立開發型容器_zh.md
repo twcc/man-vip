@@ -30,6 +30,8 @@ GA:
 
 - 由服務列表點選「**開發型容器**」，在「**開發型容器管理**」頁面，點擊「**＋建立**」。
 
+{%hackmd @twccdocs/ui-chunk-favorites-zh %}
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1c43aab7948fc1f045440c590f458fea.png)
 
 

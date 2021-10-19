@@ -26,7 +26,7 @@ GA: UA-155999456-1
 
 - 於登入後首頁，選擇 「**雲端物件儲存**」
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7228332df0f55bd14cd19c7b4de1dba8.png)
+{%hackmd @twccdocs/ui-chunk-favorites-zh %}
 
 - 進入「**雲端物件儲存管理**」頁面後，即可檢視計畫內所有的儲存體
 

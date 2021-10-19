@@ -20,6 +20,8 @@ GA:
 ## 建立基礎虛擬防火牆
 
  * 進入「**基礎虛擬防火牆**」服務，在「**基礎虛擬防火牆管理**」頁面，點擊「**＋建立**」。
+ 
+{%hackmd @twccdocs/ui-chunk-favorites-zh %}
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3d980c2ba500bb27a05baca13e6aadc4.png)
 
