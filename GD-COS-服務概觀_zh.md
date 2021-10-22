@@ -9,7 +9,7 @@ GA: UA-155999456-1
 
 # 服務概觀 <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a798c7edb1b5032ecf92265a3150a7ec.png" width="30" heigh="30">
 
-TWCC 雲端物件儲存服務提供與 Amazon S3 相容之物件儲存 (Object Storage) 系統。使用者可從本機將檔案上傳至 TWCC 雲端物件儲存系統內，並可於容器服務內使用<sup>[1]</sup>，以利後續進行人工智慧運算使用。
+TWCC 雲端物件儲存服務提供與 Amazon S3 相容之物件儲存 (Object Storage) 系統。使用者可從本機將檔案上傳至 TWCC 雲端物件儲存系統內，支援加密上傳與下載，並可於容器服務內使用<sup>[1]</sup>，以利後續進行人工智慧運算使用。
 
 
 雲端物件儲存空間區分兩種使用空間，符合多元的使用情境：
@@ -27,3 +27,4 @@ TWCC 雲端物件儲存服務提供與 Amazon S3 相容之物件儲存 (Object S
 <!-- - 一般檔案管理 (上傳/下載/Metadata搜尋/設定通知)，可直接透過 TWCC 入口網站操作，參見以下說明。 -->
 
 :::
+

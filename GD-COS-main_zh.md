@@ -20,6 +20,7 @@ GA: UA-155999456-1
 - ### ● 檔案管理
     - [上傳、下載檔案、建立資料夾](/@preview-twccdocs/guide-cos-upload-download-files-zh)
     - [檢視、搜尋、刪除檔案](/@preview-twccdocs/guide-cos-view-search-delete-files-zh)
+    - [檔案加密](https://man.twcc.ai/@preview-twccdocs/guide-cos-encryption-zh)
 - ### ● 使用第三方軟體管理檔案
     - [連線資訊](https://man.twcc.ai/@preview-twccdocs/guide-cos-connect-info-zh)
     - [S3 Browser](/@preview-twccdocs/guide-cos-s3browser-zh)

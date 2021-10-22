@@ -27,24 +27,34 @@ GA: UA-155999456-1
 
 <br>
 
-* 進入儲存體的內容頁面，點擊「上傳」。
+* 進入儲存體的內容頁面，點擊「**上傳**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3b3a5169d1605068a998ef3737eab6c4.png)
-
-
-* 出現上傳檔案視窗後可以直接將檔案或資料夾拖曳到此或點擊「選擇檔案」。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d97b737fb7f6323081cd194a5cef89df.png)
+![](https://i.imgur.com/p35M2hQ.png)
 
 
-* 選擇好欲上傳的檔案後點擊「上傳」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_af7830bc4a34620c4f39f6c75e881c95.png)
+* 出現上傳檔案視窗後，可以直接**拖曳檔案或資料夾**或點擊「**選擇檔案**」。
+
+![](https://i.imgur.com/5OELjU4.png)
+
+
+
+* 選擇好欲上傳的檔案後，可勾選左上「**加密**」將檔案使用金鑰加密。完成後，點擊「**上傳**」。
+
+:::info
+
+{%hackmd @docsharedstyle/note-zh %}
+
+更多檔案加密說明，請參考：[<ins>檔案加密</ins>](https://man.twcc.ai/@TWSC/guide-cos-encryption-zh)。
+:::
+
+![](https://i.imgur.com/fCSF7DS.png)
+
 
     
 * 出現上傳完成後提示後點擊「完成」。
     
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d3eefe1c07cf5e9c2f6a24d180ed6e93.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9bcdf1d73e3d33fe0fcbc8ac42fcfb24.png)
 
 
 :::warning
