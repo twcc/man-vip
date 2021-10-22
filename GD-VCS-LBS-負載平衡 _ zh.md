@@ -25,6 +25,8 @@ TWCC 所提供的負載平衡器服務支援**應用程式負載平衡器 (HTTP 
 
 * 由服務列表點選「**負載平衡**」進入「負載平衡器管理」頁面，點擊「**＋建立**」。
 
+{%hackmd @twccdocs/ui-chunk-favorites-zh %}
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_94405b5839f87f053913feffa6a0e83d.png)
 
 

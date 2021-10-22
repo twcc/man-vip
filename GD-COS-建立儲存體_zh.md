@@ -30,7 +30,7 @@ GA: UA-155999456-1
 * 從服務列表選擇「**雲端物件儲存**」，進入雲端物件儲存管理頁面後，點擊「**建立**」。
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e9ca6e3c85e37663547603538277a02a.png)
+{%hackmd @twccdocs/ui-chunk-favorites-zh %}
 
 
 

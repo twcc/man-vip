@@ -30,6 +30,8 @@ GA:
 * 由服務列表點選進入「**虛擬磁碟**」服務，在「**資料磁碟管理**」頁面，點擊「**＋建立**」。
 * 填寫資料磁碟名稱、描述、此資料磁碟是要重新建立或從還原快照、容量及磁碟類型 (提供 HDD、SSD 磁碟)，接著點擊「**下一步：檢閱+建立>**」。
 
+{%hackmd @twccdocs/ui-chunk-favorites-zh %}
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_45c53d5003d1b66785e556a092b99f0a.png)
 
 

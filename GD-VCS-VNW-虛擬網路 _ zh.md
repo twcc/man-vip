@@ -43,6 +43,8 @@ GA: UA-155999456-1
 
 * 由服務列表點選進入「**虛擬網路**」服務，在「**虛擬網路管理**」頁面，點擊「**＋建立**」。
 
+{%hackmd @twccdocs/ui-chunk-favorites-zh %}
+
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_769685f38a2cf177b4fbdc42e4972919.png)
 
