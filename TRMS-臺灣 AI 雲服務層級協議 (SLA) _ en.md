@@ -9,7 +9,7 @@ GA: UA-155999456-1
 
 # Taiwan Computing Cloud Service Level Agreement (SLA)
 
-##### Version 2021/10/01 V5.0 |  [<ins>Prior version(s)</ins>](https://man.twcc.ai/@twccdocs/prior-sla-en)
+##### Version 2021/09/29 V5.0 |  [<ins>Prior version(s)</ins>](https://man.twcc.ai/@twccdocs/prior-sla-en)
 
 This Taiwan Computing Cloud Service Level Agreement (this “SLA”) is an agreement between National Center for High-performance Computing, National Applied Research Laboratories (hereinafter as “NCHC”) and Customer with respect to the use of Taiwan Computing Cloud (hereinafter as “TWCC”). 
 
