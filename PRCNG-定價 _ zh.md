@@ -562,6 +562,10 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
     <li>僅計費 TWCC VCS 傳出的流量費用，傳入 TWCC VCS、TWCC VCS 之間的流量皆免費使用！</li><li>將依所有虛擬個體使用之總流出流量，按月結算每月出帳。</li></td>
   </tr>
   <tr>
+    <td class="tg-3ze5" colspan="8"><ul style="list-style-type:circle;">
+    <li>僅計費 TWCC VCS 傳出的流量費用，傳入 TWCC VCS、TWCC VCS 之間的流量皆免費使用！</li><li>將依所有虛擬個體使用之總流出流量，按月結算每月出帳。</li></td>
+  </tr>
+  <tr>
     <td class="tg-6f4s" colspan="8">傳入 TWCC VCS 的流量：免費使用</td>
   </tr>
     <tr>
@@ -581,6 +585,196 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
 .tg .tg-dy2r{font-family:sans-serif, Microsoft JhengHei;font-size:15px;background-color:#c0c0c0;color:#656565;border-color:#c0c0c0;text-align:left;vertical-align:top}
 </style>
 
+
+---
+<font face="sans-serif, Microsoft JhengHei">
+<h1>人工智慧</h1></font>
+
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-kfjo" colspan="8"><h4 style="font-family:sans-serif, Microsoft JhengHei;font-weight:bold">OneAI</h4></th>
+  </tr>
+  <tr>
+    <td class="tg-3ze5" colspan="8"><ul style="list-style-type:circle;">
+    <li><a href="https://man.twcc.ai/@twccdocs/doc-oneai-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Foneai-subscription-policy-zh">訂閱</a>後即可開通使用。</li><li>訓練任務的運算配備至多 8 個 NVIDIA® Tesla V100 GPU。</li><li>容器服務與推論的運算配備虛擬運算個體，並可另外加裝至多 2 個 NVIDIA® T4 GPU加速器。</li>
+<li><a href="https://man.twcc.ai/@twccdocs/doc-oneai-main-zh"><span style="font-weight:bold;color:rgb(255, 72, 67)">了解更多</span></a></td></li>
+  </tr>
+  <tr>
+    <td class="tg-9gig" >類型</td>
+    <td class="tg-9gig" >OneAI型號</td>
+    <td class="tg-ih9v" colspan="2">規格</td>
+    <td class="tg-9gig" colspan="2">單位</td>
+    <td class="tg-9gig" >隨用隨付方案<br>(NTD, 未稅價)</td>
+  <tr>
+    <td class="tg-xtxx" rowspan="1">訂閱</td>
+    <td class="tg-xtxx">oai.subscription</td>
+    <td class="tg-uyty" colspan="2" >按周期計價</td>
+    <td class="tg-uyty" colspan="2" >每月</td>
+    <td class="tg-xtxx" >推廣期間免費試用</td>
+ </tr>
+  <tr>
+    <td class="tg-xtxx" rowspan="1">儲存</td>
+    <td class="tg-xtxx">oai.storage</td>
+    <td class="tg-uyty" colspan="2" >標準儲存</td>
+    <td class="tg-uyty" colspan="2" >每GB月</td>
+    <td class="tg-xtxx" >1.2</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx" rowspan="1">服務</td>
+    <td class="tg-xtxx">oai.annot</td>
+    <td class="tg-uyty" colspan="2" >標準標註服務</td>
+    <td class="tg-uyty" colspan="2" >每小時</td>
+    <td class="tg-xtxx" >推廣期間免費試用</td>
+  </tr>
+  <tr>
+    <td class="tg-9gig">類型</td>
+    <td class="tg-9gig">OneAI型號</td>
+    <td class="tg-ih9v">GPU V100 (張)</td>
+    <td class="tg-9gig">vCPU</td>
+    <td class="tg-ih9v">記憶體 (GB)</td>
+    <td class="tg-9gig">共享記憶體 (GB)</td>
+    <td class="tg-9gig" >隨用隨付方案<br>(NTD/小時, 未稅價)</td>
+  </tr>
+    <td class="tg-u4qj" rowspan="9">訓練</td>
+    <td class="tg-u4qj">oai.train1v</td>
+    <td class="tg-uhm5">1</td>
+    <td class="tg-bud4">4</td>
+    <td class="tg-uhm5">90</td>
+    <td class="tg-bud4">-</td>
+    <td class="tg-y8h4">82</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.train2v</td>
+    <td class="tg-uhm5">2</td>
+    <td class="tg-bud4">8</td>
+    <td class="tg-uhm5">180</td>
+    <td class="tg-bud4">-</td>
+    <td class="tg-y8h4">164</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.train4v</td>
+    <td class="tg-uhm5">4</td>
+    <td class="tg-bud4">16</td>
+    <td class="tg-uhm5">360</td>
+    <td class="tg-bud4">-</td>
+    <td class="tg-y8h4">324</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.train8v</td>
+    <td class="tg-uhm5">8</td>
+    <td class="tg-bud4">32</td>
+    <td class="tg-uhm5">720</td>
+    <td class="tg-bud4">-</td>
+    <td class="tg-y8h4">648</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.mtrain1v</td>
+    <td class="tg-uhm5">1</td>
+    <td class="tg-bud4">4</td>
+    <td class="tg-uhm5">60</td>
+    <td class="tg-bud4">30</td>
+    <td class="tg-y8h4">82</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.mtrain2v</td>
+    <td class="tg-uhm5">2</td>
+    <td class="tg-bud4">8</td>
+    <td class="tg-uhm5">120</td>
+    <td class="tg-bud4">60</td>
+    <td class="tg-y8h4">164</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.mtrain4v</td>
+    <td class="tg-uhm5">4</td>
+    <td class="tg-bud4">16</td>
+    <td class="tg-uhm5">240</td>
+    <td class="tg-bud4">120</td>
+    <td class="tg-y8h4">324</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.mtrain8v</td>
+    <td class="tg-uhm5">8</td>
+    <td class="tg-bud4">32</td>
+    <td class="tg-uhm5">480</td>
+    <td class="tg-bud4">240</td>
+    <td class="tg-y8h4">648</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.m1train8v</td>
+    <td class="tg-uhm5">8</td>
+    <td class="tg-bud4">32</td>
+    <td class="tg-uhm5">360</td>
+    <td class="tg-bud4">360</td>
+    <td class="tg-y8h4">648</td>
+  </tr>
+  <tr>
+    <td class="tg-9gig">類型</td>
+    <td class="tg-9gig">OneAI型號</td>
+    <td class="tg-9gig">GPU T4<br>(張)</td>
+    <td class="tg-9gig">vCPU</td>
+    <td class="tg-ih9v" colspan="2">記憶體 (GB)</td>
+    <td class="tg-9gig" >隨用隨付方案<br>(NTD/小時, 未稅價)</td>
+ </tr>
+  </tr>
+    <td style="width:20%" class="tg-xtxx" rowspan="9">計算<br>(通用)</td>
+    <td class="tg-xtxx">oai.comp.c2m4</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">2</td>
+    <td class="tg-xtxx" colspan="2">4</td>
+    <td class="tg-xtxx" rowspan="9"><br><br><br><br>推廣期間免費試用</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c4m8</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">4</td>
+    <td class="tg-xtxx" colspan="2">8</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx"> oai.comp.c8m16</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">8</td>
+    <td class="tg-xtxx" colspan="2">16</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c4m16</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">4</td>
+    <td class="tg-xtxx" colspan="2">16</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c8m32</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">8</td>
+    <td class="tg-xtxx" colspan="2">32</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c16m64</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">16</td>
+    <td class="tg-xtxx" colspan="2">64</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c4m64gt1</td>
+    <td class="tg-xtxx">1</td>
+    <td class="tg-xtxx">4</td>
+    <td class="tg-xtxx" colspan="2">64</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c8m64gt1</td>
+    <td class="tg-xtxx">1</td>
+    <td class="tg-xtxx">8</td>
+    <td class="tg-xtxx" colspan="2">64</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c8m128gt2</td>
+    <td class="tg-xtxx">2</td>
+    <td class="tg-xtxx">8</td>
+    <td class="tg-xtxx" colspan="2">128</td>
+  </tr>
+
+</table>
+
 ---
 :::danger
 - 貨幣單位：新台幣 (NTD)
@@ -588,3 +782,9 @@ GPU 加速的張量運算框架，並以 Python 為前端語言。使用常見�
 - 實際收費皆以 [<ins>會員中心<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 出帳為準
 - 若為無償使用情況下，不適用服務層級協議 (SLA) 抵免額相關條款，但本中心將盡可能確保服務不中斷。已付費使用之用戶仍適用有效合約其相關 SLA 條款。若有疑問，請您洽詢客服人員。</tr>
 :::
+
+
+
+
+
+

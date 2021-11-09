@@ -526,7 +526,7 @@ How to get GPU resources? See <a href="https://man.twcc.ai/@staging-twccdocs/S1-
 :::info
 <font face="sans-serif, Microsoft JhengHei">
 <p class="has-background has-small-font-size has-very-light-gray-background-color">
-<SUP>&#8277</SUP> The free quota of /work directory for MST project users has been raised to 1500 GB since Sep/1/2021. By default, you can get 100 GB storage quota, and if you need more space, lease go to <a href="https://man.twcc.ai/@twsdocs/howto-service-access-service-en"><ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins></a> to increase your storage.
+<SUP>&#8277</SUP> The free quota of /work directory for MST project users has been raised to 1500 GB since Sep/1/2021. By default, you can get 100 GB storage quota, and if you need more space, please go to <a href="https://man.twcc.ai/@twsdocs/howto-service-access-service-en"><ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins></a> to increase your storage.
 :::
 
 <!-- /wp:shortcode -->
@@ -584,9 +584,198 @@ How to get GPU resources? See <a href="https://man.twcc.ai/@staging-twccdocs/S1-
 </style>
 
 ---
+<font face="sans-serif, Microsoft JhengHei">
+<h1>Artificial Intelligence</h1></font>
+
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-kfjo" colspan="8"><h4 style="font-family:sans-serif, Microsoft JhengHei;font-weight:bold">OneAI</h4></th>
+  </tr>
+  <tr>
+    <td class="tg-3ze5" colspan="8"><ul style="list-style-type:circle;">
+    <li>OneAI will be accessible upon <a href="https://man.twcc.ai/@twccdocs/doc-oneai-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Foneai-subscription-policy-zh">your subscription</a>.</li><li>Up to 8 NVIDIA® Tesla V100 GPUs for you to run training jobs.</li><li>Equipped with up to 2 NVIDIA® T4 GPUs for your processing and inference instances.</li>
+<li><a href="https://man.twcc.ai/@twccdocs/doc-oneai-main-zh"><span style="font-weight:bold;color:rgb(255, 72, 67)">See more</span></a></td></li>
+  </tr>
+  <tr>
+    <td class="tg-9gig" >Type</td>
+    <td class="tg-9gig" >Model</td>
+    <td class="tg-ih9v" colspan="2">Spec</td>
+    <td class="tg-9gig" colspan="2">Unit</td>
+    <td class="tg-9gig" >On-Demand (NTD, tax excluded)</td>
+  <tr>
+    <td class="tg-xtxx" rowspan="1">Subscription</td>
+    <td class="tg-xtxx">oai.subscription</td>
+    <td class="tg-uyty" colspan="2" >OneAI subscription</td>
+    <td class="tg-uyty" colspan="2" >per month</td>
+    <td class="tg-xtxx" >Free Trial</td>
+ </tr>
+  <tr>
+    <td class="tg-xtxx" rowspan="1">Storage</td>
+    <td class="tg-xtxx">oai.storage</td>
+    <td class="tg-uyty" colspan="2" >OneAI standard Storage</td>
+    <td class="tg-uyty" colspan="2" >per GB-month</td>
+    <td class="tg-xtxx" >1.2</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx" rowspan="1">Service</td>
+    <td class="tg-xtxx">oai.annot</td>
+    <td class="tg-uyty" colspan="2" >standard annotation service</td>
+    <td class="tg-uyty" colspan="2" >per hour</td>
+    <td class="tg-xtxx" >Free Trial</td>
+  </tr>
+  <tr>
+    <td class="tg-9gig">Type</td>
+    <td class="tg-9gig">Model</td>
+    <td class="tg-ih9v">GPU V100 (pcs)</td>
+    <td class="tg-9gig">vCPU</td>
+    <td class="tg-ih9v">Memory (GB)</td>
+    <td class="tg-9gig">Shared Memory (GB)</td>
+    <td class="tg-9gig" >On-Demand (NTD/Hour, tax excluded)</td>
+  </tr>
+    <td class="tg-u4qj" rowspan="9">Training</td>
+    <td class="tg-u4qj">oai.train1v</td>
+    <td class="tg-uhm5">1</td>
+    <td class="tg-bud4">4</td>
+    <td class="tg-uhm5">90</td>
+    <td class="tg-bud4">-</td>
+    <td class="tg-y8h4">82</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.train2v</td>
+    <td class="tg-uhm5">2</td>
+    <td class="tg-bud4">8</td>
+    <td class="tg-uhm5">180</td>
+    <td class="tg-bud4">-</td>
+    <td class="tg-y8h4">164</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.train4v</td>
+    <td class="tg-uhm5">4</td>
+    <td class="tg-bud4">16</td>
+    <td class="tg-uhm5">360</td>
+    <td class="tg-bud4">-</td>
+    <td class="tg-y8h4">324</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.train8v</td>
+    <td class="tg-uhm5">8</td>
+    <td class="tg-bud4">32</td>
+    <td class="tg-uhm5">720</td>
+    <td class="tg-bud4">-</td>
+    <td class="tg-y8h4">648</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.mtrain1v</td>
+    <td class="tg-uhm5">1</td>
+    <td class="tg-bud4">4</td>
+    <td class="tg-uhm5">60</td>
+    <td class="tg-bud4">30</td>
+    <td class="tg-y8h4">82</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.mtrain2v</td>
+    <td class="tg-uhm5">2</td>
+    <td class="tg-bud4">8</td>
+    <td class="tg-uhm5">120</td>
+    <td class="tg-bud4">60</td>
+    <td class="tg-y8h4">164</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.mtrain4v</td>
+    <td class="tg-uhm5">4</td>
+    <td class="tg-bud4">16</td>
+    <td class="tg-uhm5">240</td>
+    <td class="tg-bud4">120</td>
+    <td class="tg-y8h4">324</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.mtrain8v</td>
+    <td class="tg-uhm5">8</td>
+    <td class="tg-bud4">32</td>
+    <td class="tg-uhm5">480</td>
+    <td class="tg-bud4">240</td>
+    <td class="tg-y8h4">648</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.m1train8v</td>
+    <td class="tg-uhm5">8</td>
+    <td class="tg-bud4">32</td>
+    <td class="tg-uhm5">360</td>
+    <td class="tg-bud4">360</td>
+    <td class="tg-y8h4">648</td>
+  </tr>
+  <tr>
+    <td class="tg-9gig">Type</td>
+    <td class="tg-9gig">Model</td>
+    <td class="tg-9gig">GPU T4<br>(pcs)</td>
+    <td class="tg-9gig">vCPU</td>
+    <td class="tg-ih9v" colspan="2">Memory (GB)</td>
+    <td class="tg-9gig" >On-Demand (NTD/Hour, tax excluded)</td>
+ </tr>
+  </tr>
+    <td style="width:20%" class="tg-xtxx" rowspan="9">Compute</td>
+    <td class="tg-xtxx">oai.comp.c2m4</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">2</td>
+    <td class="tg-xtxx" colspan="2">4</td>
+    <td class="tg-xtxx" rowspan="9"><br><br><br><br>Free Trial</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c4m8</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">4</td>
+    <td class="tg-xtxx" colspan="2">8</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx"> oai.comp.c8m16</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">8</td>
+    <td class="tg-xtxx" colspan="2">16</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c4m16</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">4</td>
+    <td class="tg-xtxx" colspan="2">16</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c8m32</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">8</td>
+    <td class="tg-xtxx" colspan="2">32</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c16m64</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">16</td>
+    <td class="tg-xtxx" colspan="2">64</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c4m64gt1</td>
+    <td class="tg-xtxx">1</td>
+    <td class="tg-xtxx">4</td>
+    <td class="tg-xtxx" colspan="2">64</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c8m64gt1</td>
+    <td class="tg-xtxx">1</td>
+    <td class="tg-xtxx">8</td>
+    <td class="tg-xtxx" colspan="2">64</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c8m128gt2</td>
+    <td class="tg-xtxx">2</td>
+    <td class="tg-xtxx">8</td>
+    <td class="tg-xtxx" colspan="2">128</td>
+  </tr>
+
+</table>
+
+---
 
 :::danger
 - Currency: New Taiwan dollar (NTD)
 - The above prices are exclusive of tax.
-- Actual charges are subject to [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-en) billing.
+- Actual charges are subject to [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) billing.
 - The credits related terms in the <a href="https://www.twcc.ai/doc?page=sla">Service Level Agreement (SLA)</a> are not applied to services that are offered free of charge, and NCHC will ensure uninterrupted services as far as possible. The SLA terms associated with valid contracts are still applied to services provided to paid users. If you have any questions or concerns, please contact Customer Service.

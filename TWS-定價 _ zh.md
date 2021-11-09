@@ -17,7 +17,20 @@ GA:
 
 {%hackmd @docsharedstyle/default %}
 
-<p style="text-align:right; font-size:15px;">版次：20211008v1.0</p>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-310X2Q419P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-310X2Q419P');
+</script>
+
+
+{%hackmd @docsharedstyle/default %}
+
+<p style="text-align:right; font-size:15px;">版次：20211108v1.0</p>
 
 <center><a href="https://tws.twcc.ai/"><img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_96ffe100f3e137a29ebcf7a3d3b7793a.png" width="200"></a></center>
 <div <center><font face="sans-serif, Microsoft JhengHei">
@@ -189,7 +202,7 @@ GA:
 <font face="sans-serif, Microsoft JhengHei">
 <SUP>&#8277</SUP>可用記憶體容量若以 GiB (1 GiB =  2<sup>30</sup> bytes) 為計算單位，以 c.super 為例，則可用記憶體容量為 84 GiB，請參考<ins><a href="https://man.twcc.ai/@twccdocs/concept-ccs-memory-conversion-zh">記憶體容量換算</a></ins>了解更多。<br><br>
 <SUP>&#8277&#8277</SUP>記憶體含 1 GB 共享記憶體。<br><br>
-<SUP>&#8277&#8277&#8277</SUP>記憶體優化容器可負擔記憶體內部處理大型資料集之工作負載，加強效能，提供給 PyTorch、Torch、MXNet、Clara、CUDA、Matlab 等容器環境使用。</font>
+<SUP>&#8277&#8277&#8277</SUP>記憶體優化容器可負擔記憶體內部處理大型資料集之工作負載，加強效能，提供給 PyTorch、Torch、MXNet、clara、CUDA、Matlab 等容器環境使用。</font>
 :::
 <!-- /wp:paragraph -->
 <!-- wp:shortcode -->
@@ -546,3 +559,257 @@ GA:
 .tg th{font-family:sans-serif, Microsoft JhengHei;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
 .tg .tg-dy2r{font-family:sans-serif, Microsoft JhengHei;font-size:15px;background-color:#c0c0c0;color:#656565;border-color:#c0c0c0;text-align:left;vertical-align:top}
 </style>
+
+---
+
+## 人工智慧：OneAI
+
+<!-- /wp:heading -->
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:sans-serif, Microsoft JhengHei;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:sans-serif, Microsoft JhengHei;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-eb95{font-family:sans-serif, Microsoft JhengHei;background-color:#ecf4ff;font-size:15px;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-8jvv{font-family:sans-serif, Microsoft JhengHei;font-size:15px;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-8jvx{font-family:sans-serif, Microsoft JhengHei;font-size:15px;border-color:inherit;text-align:left;vertical-align:top;background-color:#efefef}
+.tg .tg-1ja1{font-family:sans-serif, Microsoft JhengHei;font-size:20px;background-color:#56c1df;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-7g7n{font-family:sans-serif, Microsoft JhengHei;font-size:15px;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-y29t{font-family:sans-serif, Microsoft JhengHei;font-size:15px;background-color:#008ad8;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-p1ie{font-family:sans-serif, Microsoft JhengHei;background-color:#008ad8;font-size:15px;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-d4nv{font-family:sans-serif, Microsoft JhengHei;background-color:#ffffff;font-size:15px;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-d4nx{font-family:sans-serif, Microsoft JhengHei;background-color:#efefef;font-size:15px;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+
+<!-- wp:shortcode -->
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:sans-serif, Microsoft JhengHei;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:sans-serif, Microsoft JhengHei;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-9gig{font-family:sans-serif, Microsoft JhengHei;font-size:15px;background-color:#008ad8;border-color:#c0c0c0;text-align:left;vertical-align:top}
+.tg .tg-xtxx{font-family:sans-serif, Microsoft JhengHei;font-size:15px;background-color:#ffffff;border-color:#c0c0c0;text-align:left;vertical-align:top}
+.tg .tg-bud4{font-family:sans-serif, Microsoft JhengHei;font-size:15px;background-color:#efefef;border-color:#c0c0c0;text-align:left;vertical-align:top}
+.tg .tg-3ze5{font-family:sans-serif, Microsoft JhengHei;font-style:italic;font-size:15px;border-color:#c0c0c0;text-align:left;vertical-align:top}
+.tg .tg-mkg1{font-family:sans-serif, Microsoft JhengHei;font-size:15px;background-color:#ecf4ff;border-color:#c0c0c0;text-align:left;vertical-align:top}
+.tg .tg-uyty{font-family:sans-serif, Microsoft JhengHei;background-color:#ffffff;font-size:15px;border-color:#c0c0c0;text-align:left;vertical-align:top}
+.tg .tg-price-c{font-family:sans-serif, Microsoft JhengHei;background-color:#ffffff;font-size:15px;border-color:#c0c0c0;text-align:right;vertical-align:top}
+.tg .tg-ih9v{font-family:sans-serif, Microsoft JhengHei;background-color:#008ad8;font-size:15px;border-color:#c0c0c0;text-align:left;vertical-align:top}
+.tg .tg-kfjo{font-family:sans-serif, Microsoft JhengHei;font-size:20px;background-color:#56c1df;border-color:#c0c0c0;text-align:left;vertical-align:top}
+.tg .tg-855q{background-color:#ffffff;border-color:#c0c0c0;text-align:left;vertical-align:top}
+.tg .tg-u4qj{background-color:#efefef;border-color:#c0c0c0;text-align:left;vertical-align:top}
+.tg .tg-uhm5{font-family:sans-serif, Microsoft JhengHei;background-color:#efefef;font-size:15px;border-color:#c0c0c0;text-align:left;vertical-align:top}
+.tg .tg-price-cm{font-family:sans-serif, Microsoft JhengHei;background-color:#efefef;font-size:15px;border-color:#c0c0c0;text-align:right;vertical-align:top}
+.tg .tg-y8h4{background-color:#efefef;border-color:#c0c0c0;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <td class="tg-3ze5" colspan="8"><ul style="list-style-type:circle;">
+    <li>每月<a href="https://man.twcc.ai/@twccdocs/doc-oneai-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Foneai-subscription-policy-zh">訂閱</a>定價模式<ul><li>每月付款</li><li>首月按天數比例付款</li><li>取消訂閱不退款</li></ul></li><li>訓練任務的運算配備至多 8 個 NVIDIA® Tesla V100 GPU。</li><li>容器服務與推論的運算配備虛擬運算個體，並可另外加裝至多 2 個 NVIDIA® T4 GPU加速器。</li>
+<li><a href="https://man.twcc.ai/@twccdocs/doc-oneai-main-zh"><span style="font-weight:bold;color:rgb(255, 72, 67)">了解更多</span></a></td></li>
+  </tr>
+  <tr>
+    <td class="tg-9gig" style="color:white">類型</td>
+    <td class="tg-9gig" style="color:white">OneAI型號</td>
+    <td class="tg-ih9v" colspan="2" style="color:white">規格</td>
+    <td class="tg-9gig" colspan="2" style="color:white">單位</td>
+    <td class="tg-9gig" style="color:white">定價</td>
+    <td class="tg-9gig" style="color:white">搶先體驗費率<br>(至111/02/08  00:00 為止)</td>
+  <tr>
+    <td class="tg-xtxx" rowspan="1">訂閱</td>
+    <td class="tg-xtxx">oai.subscription</td>
+    <td class="tg-uyty" colspan="2" >按周期計價</td>
+    <td class="tg-uyty" colspan="2" >每月</td>
+    <td class="tg-xtxx" >敬請期待</td>
+    <td class="tg-price-c" style="width:30%" >0.00<br></td>
+ </tr>
+  <tr>
+    <td class="tg-xtxx" rowspan="1">儲存</td>
+    <td class="tg-xtxx">oai.storage</td>
+    <td class="tg-uyty" colspan="2" >標準儲存</td>
+    <td class="tg-uyty" colspan="2" >每GB月</td>
+    <td class="tg-xtxx" >1.20</td>
+    <td class="tg-price-c" style="width:30%" >0.60
+<br></td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx" rowspan="1">服務</td>
+    <td class="tg-xtxx">oai.annot</td>
+    <td class="tg-uyty" colspan="2" >標準標註服務</td>
+    <td class="tg-xtxx" colspan="2">每小時</td>
+    <td class="tg-xtxx" >7.00</td>
+    <td class="tg-price-c">3.50</td>
+  </tr>
+  <tr>
+    <td class="tg-9gig" style="color:white">類型</td>
+    <td class="tg-9gig" style="color:white">OneAI型號</td>
+    <td class="tg-ih9v" style="color:white">GPU V100 (張)</td>
+    <td class="tg-9gig" style="color:white">vCPU</td>
+    <td class="tg-ih9v" style="color:white">記憶體 (GB)</td>
+    <td class="tg-9gig" style="color:white">共享記憶體 (GB)</td>
+    <td class="tg-price-title" style="color:white">定價<br>(小時)</td>
+    <td class="tg-9gig" style="color:white">搶先體驗費率<br>(至111/02/08  00:00 為止)</td>
+  </tr>
+    <td class="tg-u4qj" rowspan="9">訓練</td>
+    <td class="tg-u4qj">oai.train1v</td>
+    <td class="tg-uhm5">1</td>
+    <td class="tg-bud4">4</td>
+    <td class="tg-uhm5">90</td>
+    <td class="tg-bud4">-</td>
+    <td class="tg-price-cm">58.00</td>
+    <td class="tg-price-cm">29.00</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.train2v</td>
+    <td class="tg-uhm5">2</td>
+    <td class="tg-bud4">8</td>
+    <td class="tg-uhm5">180</td>
+    <td class="tg-bud4">-</td>
+    <td class="tg-price-cm">116.00</td>
+    <td class="tg-price-cm">58.00</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.train4v</td>
+    <td class="tg-uhm5">4</td>
+    <td class="tg-bud4">16</td>
+    <td class="tg-uhm5">360</td>
+    <td class="tg-bud4">-</td>
+    <td class="tg-price-cm">232.00</td>
+    <td class="tg-price-cm">116.00</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.train8v</td>
+    <td class="tg-uhm5">8</td>
+    <td class="tg-bud4">32</td>
+    <td class="tg-uhm5">720</td>
+    <td class="tg-bud4">-</td>
+    <td class="tg-price-cm">464.00</td>
+    <td class="tg-price-cm">232.00</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.mtrain1v</td>
+    <td class="tg-uhm5">1</td>
+    <td class="tg-bud4">4</td>
+    <td class="tg-uhm5">60</td>
+    <td class="tg-bud4">30</td>
+    <td class="tg-price-cm">58.00</td>
+    <td class="tg-price-cm">29.00</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.mtrain2v</td>
+    <td class="tg-uhm5">2</td>
+    <td class="tg-bud4">8</td>
+    <td class="tg-uhm5">120</td>
+    <td class="tg-bud4">60</td>
+    <td class="tg-price-cm">116.00</td>
+    <td class="tg-price-cm">58.00</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.mtrain4v</td>
+    <td class="tg-uhm5">4</td>
+    <td class="tg-bud4">16</td>
+    <td class="tg-uhm5">240</td>
+    <td class="tg-bud4">120</td>
+    <td class="tg-price-cm">232.00</td>
+    <td class="tg-price-cm">116.00</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.mtrain8v</td>
+    <td class="tg-uhm5">8</td>
+    <td class="tg-bud4">32</td>
+    <td class="tg-uhm5">480</td>
+    <td class="tg-bud4">240</td>
+    <td class="tg-price-cm">464.00</td>
+    <td class="tg-price-cm">232.00</td>
+  </tr>
+  <tr>
+    <td class="tg-u4qj">oai.m1train8v</td>
+    <td class="tg-uhm5">8</td>
+    <td class="tg-bud4">32</td>
+    <td class="tg-uhm5">360</td>
+    <td class="tg-bud4">360</td>
+    <td class="tg-price-cm">464.00</td>
+    <td class="tg-price-cm">232.00</td>
+  </tr>
+  <tr>
+    <td class="tg-9gig" style="color:white">類型</td>
+    <td class="tg-9gig" style="color:white">OneAI型號</td>
+    <td class="tg-9gig" style="color:white">GPU T4<br>(張)</td>
+    <td class="tg-9gig" style="color:white">vCPU</td>
+    <td class="tg-ih9v" style="color:white" colspan="2">記憶體 (GB)</td>
+    <td class="tg-price-title" style="color:white">定價<br>(小時）</td>
+    <td class="tg-9gig" style="color:white">搶先體驗費率<br>(至111/02/08  00:00 為止)</td>
+ </tr>
+  </tr>
+    <td style="width:20%" class="tg-xtxx" rowspan="9">計算<br>(通用)</td>
+    <td class="tg-xtxx">oai.comp.c2m4</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">2</td>
+    <td class="tg-xtxx" colspan="2">4</td>
+    <td class="tg-price-c">2.05</td>
+    <td class="tg-price-c">1.02</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c4m8</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">4</td>
+    <td class="tg-xtxx" colspan="2">8</td>
+    <td class="tg-price-c">4.10</td>
+    <td class="tg-price-c">2.05</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx"> oai.comp.c8m16</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">8</td>
+    <td class="tg-xtxx" colspan="2">16</td>
+    <td class="tg-price-c">8.20</td>
+    <td class="tg-price-c">4.10</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c4m16</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">4</td>
+    <td class="tg-xtxx" colspan="2">16</td>
+    <td class="tg-price-c">5.00</td>
+    <td class="tg-price-c">2.50</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c8m32</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">8</td>
+    <td class="tg-xtxx" colspan="2">32</td>
+    <td class="tg-price-c">10.00</td>
+    <td class="tg-price-c">5.00</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c16m64</td>
+    <td class="tg-xtxx">-</td>
+    <td class="tg-xtxx">16</td>
+    <td class="tg-xtxx" colspan="2">64</td>
+    <td class="tg-price-c">20.00</td>
+    <td class="tg-price-c">10.00</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c4m64gt1</td>
+    <td class="tg-xtxx">1</td>
+    <td class="tg-xtxx">4</td>
+    <td class="tg-xtxx" colspan="2">64</td>
+    <td class="tg-price-c">16.00</td>
+    <td class="tg-price-c">8.00</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c8m64gt1</td>
+    <td class="tg-xtxx">1</td>
+    <td class="tg-xtxx">8</td>
+    <td class="tg-xtxx" colspan="2">64</td>
+    <td class="tg-price-c">21.00</td>
+    <td class="tg-price-c">10.50</td>
+  </tr>
+  <tr>
+    <td class="tg-xtxx">oai.comp.c8m128gt2</td>
+    <td class="tg-xtxx">2</td>
+    <td class="tg-xtxx">8</td>
+    <td class="tg-xtxx" colspan="2">128</td>
+    <td class="tg-price-c">30.00</td>
+    <td class="tg-price-c">15.00</td>
+  </tr>
+
+</table>
