@@ -9,7 +9,7 @@ GA: UA-155999456-1
 
 # 臺灣 AI 雲服務層級協議 (SLA)
 
-##### 版次 2021/10/01 V5.0 | [<ins>歷史版本</ins>](https://man.twcc.ai/@twccdocs/prior-sla-zh)
+##### 版次 2021/09/29 V5.0 | [<ins>歷史版本</ins>](https://man.twcc.ai/@twccdocs/prior-sla-zh)
 
 此服務層級協議 (Service Level Agreement，以下簡稱「SLA」，為財團法人國家實驗研究院國家高速網路與計算中心 (以下簡稱「本中心」) 與用戶、會員 (以下簡稱「客戶」) 間就臺灣 AI 雲 (Taiwan Computing Cloud，以下簡稱「TWCC」) 所約定服務契約 (以下簡稱「服務契約」) 的一部分。除另有約定外，SLA 與服務契約之內容如有不一致之處，SLA 優先適用。
 
