@@ -16,6 +16,11 @@ const config = {
   organizationName: 'twcc', // Usually your GitHub org/user name.
   projectName: 'man', // Usually your repo name.
 
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'zh-TW'],
+  },
+
   presets: [
     [
       'classic',
@@ -56,7 +61,10 @@ const config = {
             position: 'left',
             label: 'Categories',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/docs/faq', label: 'FAQ', position: 'left'},
+          {to: '/docs/api', label: 'API', position: 'left'},
+          {to: '/blog', label: 'Release Notes', position: 'left'},
+          {to: '/docs/tws-doc', label: '🪵 TWS', position: 'right'},
           {to: 'https://www.twcc.ai', label: 'TWCC', position: 'right'},
         ],
       },
