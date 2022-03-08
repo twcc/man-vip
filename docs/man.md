@@ -26,6 +26,8 @@ npm run start
 
 4. it will pop up a url [http://localhost:3000](http://localhost:3000)
 
+##  for Windows
+ [安裝方法](/docs/man/windows)
 
 ##  for Writing 
 
