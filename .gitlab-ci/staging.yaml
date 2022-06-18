@@ -1,5 +1,5 @@
 .ssh_config_default: &standard_ssh_operation
-  image: alpine:latest
+  image: node:latest
   stage: build
   artifacts:
     paths:
