@@ -1,24 +1,42 @@
-.ssh_config_default: &standard_ssh_operation
-  image: node:alpine3.16
+.ssh_config_and_build: &standard_operation
+  #image: node:alpine3.16
+  image: node:latest
   stage: build
   artifacts:
     paths:
       - build/*
+    expire_in: 1 week
   before_script:
-    - apk add --no-cache rsync openssh
+    #- apk add --no-cache rsync openssh
     - mkdir -p ~/.ssh
     - echo "$MAN_SERVER_SSH_KEY" >> ~/.ssh/id_dsa
     - chmod 600 ~/.ssh/id_dsa
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-
-
-building-staging:
-  <<: *standard_ssh_operation
-  script:
     - npm install
     - npm run build
     - ls -alh build
+
+
+building-staging:
+  <<: *standard_operation
+  script:
     - rsync -ravz --delete build/ ubuntu@man.twcc.vip:./staging/
   only:
-    - docusaurus
+    - merge_requests
 
+building-preview:
+  <<: *standard_operation
+  stage: test
+  script:
+    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:./preview/
+  only:
+    - docusaurus-dev
+
+building-production:
+  <<: *standard_operation
+  stage: deploy
+  script:
+    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:./production/
+  only:
+    - docusaurus-master
+  when: manual
