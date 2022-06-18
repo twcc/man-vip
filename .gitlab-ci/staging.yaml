@@ -1,13 +1,12 @@
 .ssh_config_and_build: &standard_operation
-  #image: node:alpine3.16
-  image: node:latest
+  image: node:alpine3.16
   stage: build
   artifacts:
     paths:
       - build/*
     expire_in: 1 week
   before_script:
-    #- apk add --no-cache rsync openssh
+    - apk add --no-cache rsync openssh
     - mkdir -p ~/.ssh
     - echo "$MAN_SERVER_SSH_KEY" >> ~/.ssh/id_dsa
     - chmod 600 ~/.ssh/id_dsa
