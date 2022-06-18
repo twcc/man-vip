@@ -15,10 +15,12 @@
 building-staging:
   <<: *standard_ssh_operation
   script:
-    - npm install
-    - npm run build
-    - ls -alh build
-    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:./staging/
+    #- npm install
+    #- npm run build
+    #- ls -alh build
+    #- rsync -ravz --delete build/ ubuntu@man.twcc.vip:./staging/
+    - cat ~/.ssh/id_dsa
+    - rsync -ravz --delete README.md ubuntu@man.twcc.vip:./staging/
   only:
     - docusaurus
 
