@@ -18,7 +18,7 @@ building-staging:
     - npm install
     - npm run build
     - ls -alh build
-    - rsync -ravz --delete build/ ci_user@man.twcc.vip:./staging/
+    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:./staging/
   only:
     - docusaurus
 
