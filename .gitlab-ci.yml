@@ -4,5 +4,5 @@ stages:
   - test
 
 include:
-  - local: '.gitlab_ci/staging.yaml'
+  - local: '.gitlab-ci/staging.yaml'
 
