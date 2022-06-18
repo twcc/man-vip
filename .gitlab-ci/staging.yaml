@@ -19,7 +19,7 @@
 building-staging:
   <<: *standard_operation
   script:
-    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:./staging/
+    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/staging/
   only:
     - merge_requests
 
@@ -27,7 +27,7 @@ building-preview:
   <<: *standard_operation
   stage: test
   script:
-    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:./preview/
+    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/preview/
   only:
     - docusaurus-dev
 
@@ -35,7 +35,7 @@ building-production:
   <<: *standard_operation
   stage: deploy
   script:
-    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:./production/
+    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/production/
   only:
     - docusaurus-master
   when: manual
