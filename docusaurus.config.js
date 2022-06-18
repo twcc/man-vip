@@ -36,7 +36,7 @@ const config = {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://tws.twcc.ai',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -70,8 +70,8 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
-          {
+         links: [
+         {
             title: 'Manuals',
             items: [
               {
@@ -106,11 +106,11 @@ const config = {
             items: [
               {
                 label: 'Release Notes',
-                to: '/release',
+                to: '/docs/release',
               },
               {
                 label: 'FAQ',
-                to: '/faq',
+                to: '/docs/faq',
               },
             ],
           },

@@ -1,0 +1,8 @@
+stages:
+  - build
+  - deploy
+  - test
+
+include:
+  - local: '.gitlab_ci/staging.yaml'
+
