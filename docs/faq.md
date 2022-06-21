@@ -9,4 +9,6 @@ keywords:
 # FAQ 
 
 
+大家好，這裡是 FAQ
+
 here is `/docs/faq`
