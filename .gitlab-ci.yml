@@ -46,7 +46,7 @@ building-production:
   when: manual
 
 send-GitHub:
-  <<: *standard_operation
+  image: ubuntu:latest
   stage: test
   script:
     - git clone https://$GITHUB_USRERNAME:$GITHUB_APIKEY@github.com/twcc/man-vip
