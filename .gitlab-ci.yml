@@ -46,7 +46,7 @@ building-production:
   when: manual
 
 send-GitHub:
-  image: ubuntu:latest
+  image: python:3.9
   stage: test
   script:
     - apt update && apt install -y git gnupg2
