@@ -59,7 +59,7 @@ send-GitHub:
     - git fetch github
     - git config --global user.email "August.Chao@twsc.io"
     - git config --global user.name $GITHUB_USRERNAME
-    - git merge -s ours github/master --no-commit --no-ff --allow-unrelated-histories
+    - git merge -s ours github/main --no-commit --no-ff --allow-unrelated-histories
     - git checkout -b $CI_COMMIT_SHORT_SHA
     - git push --set-upstream github $CI_COMMIT_SHORT_SHA
     - /usr/bin/gh pr create --title "v$CI_COMMIT_SHORT_SHA" --body-file /tmp/release_note_tmp
