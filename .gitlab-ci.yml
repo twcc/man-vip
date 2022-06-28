@@ -47,7 +47,7 @@ building-production:
 
 send-GitHub:
   <<: *standard_operation
-  stage: deploy
+  stage: test
   script:
     - git clone https://$GITHUB_USRERNAME:$GITHUB_APIKEY@github.com/twcc/man-vip
     - cd man-vip
@@ -67,5 +67,5 @@ send-GitHub:
     - /usr/bin/gh pr create --title "v$CI_COMMIT_SHORT_SHA" --body-file /tmp/release_note_tmp
     - /usr/bin/gh release create "$CI_COMMIT_SHORT_SHA" --title "v$CI_COMMIT_SHORT_SHA"
   only:
-    - docusaurus-master
+    - docusaurus
   when: manual
