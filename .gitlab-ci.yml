@@ -49,7 +49,6 @@ send-GitHub:
   image: python:3.9
   stage: test
   script:
-    - apt update && apt install -y git gnupg2
     - apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
     - apt update && apt install -y software-properties-common
     - apt-add-repository https://cli.github.com/packages
@@ -61,7 +60,7 @@ send-GitHub:
     - git config --global user.name $GITHUB_USRERNAME
     - git merge -s ours github/main --no-commit --no-ff --allow-unrelated-histories
     - git checkout -b $CI_COMMIT_SHORT_SHA
-    - git push --set-upstream github $CI_COMMIT_SHORT_SHA
+    - git push -u github $CI_COMMIT_SHORT_SHA
     - /usr/bin/gh pr create --title "v$CI_COMMIT_SHORT_SHA" --body-file /tmp/release_note_tmp
     - /usr/bin/gh release create "$CI_COMMIT_SHORT_SHA" --title "v$CI_COMMIT_SHORT_SHA"
   only:
