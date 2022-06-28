@@ -59,7 +59,7 @@ const config = {
           },
           {to: '/docs/faq', label: 'FAQ', position: 'left'},
           {to: '/docs/api', label: 'API', position: 'left'},
-          {to: '/docs/tws-doc', label: '🪵 TWS', position: 'right'},
+          {to: '/docs/tws-doc', label: '🪵 TWS', position: 'right'}
           {to: 'https://www.twcc.ai' label: 'TWCC', position: 'right'},
         ],
       },
