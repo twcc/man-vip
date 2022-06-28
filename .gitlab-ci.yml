@@ -49,6 +49,11 @@ send-GitHub:
   image: ubuntu:latest
   stage: test
   script:
+    - apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+    - apt update && apt install -y software-properties-common
+    - apt-add-repository https://cli.github.com/packages
+    - apt update && apt install -y gh git
+    - export GITHUB_TOKEN=$GITHUB_APIKEY
     - git clone https://$GITHUB_USRERNAME:$GITHUB_APIKEY@github.com/twcc/man-vip
     - cd man-vip
     - git remote add upstream $CI_REPOSITORY_URL
@@ -59,11 +64,6 @@ send-GitHub:
     - git checkout -b $CI_COMMIT_SHORT_SHA
     - git commit . -m "-- Release $CI_COMMIT_SHORT_SHA --"
     - git push --set-upstream origin $CI_COMMIT_SHORT_SHA
-    - apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-    - apt update && apt install -y software-properties-common
-    - apt-add-repository https://cli.github.com/packages
-    - apt update && apt install -y gh
-    - export GITHUB_TOKEN=$GITHUB_APIKEY
     - /usr/bin/gh pr create --title "v$CI_COMMIT_SHORT_SHA" --body-file /tmp/release_note_tmp
     - /usr/bin/gh release create "$CI_COMMIT_SHORT_SHA" --title "v$CI_COMMIT_SHORT_SHA"
   only:
