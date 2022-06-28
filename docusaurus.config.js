@@ -75,10 +75,6 @@ const config = {
                 label: 'by scenarios',
                 to: '/docs/scenarios',
               },
-              {
-                label: 'best practises',
-                to: '/docs/best-practises',
-              },
             ],
           },
           {
