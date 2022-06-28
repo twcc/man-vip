@@ -1,5 +1,3 @@
-// THIS FILE is for staging usage!!
-//
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
@@ -45,7 +43,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: '🔥 🔥 🔥 Manual 🔥 🔥 🔥',
+        title: '👀 👀 Manual 👀 👀',
         logo: {
           alt: 'TWCC',
           src: 'https://www.twcc.ai/assets/38d04ec9712f0089bc84f57b180b2512.svg',
