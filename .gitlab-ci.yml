@@ -1,0 +1,68 @@
+stages:
+  - build
+  - deploy
+  - test
+
+.ssh_config_and_build: &standard_operation
+  image: node:alpine3.16
+  stage: build
+  artifacts:
+    paths:
+      - build/*
+    expire_in: 1 week
+  before_script:
+    - apk add --no-cache rsync openssh
+    - mkdir -p ~/.ssh
+    - echo "$MAN_SERVER_SSH_KEY" >> ~/.ssh/id_dsa
+    - chmod 600 ~/.ssh/id_dsa
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - npm install
+    - npm run build
+    - ls -alh build
+
+
+building-staging:
+  <<: *standard_operation
+  script:
+    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/staging/
+  only:
+    - merge_requests
+
+building-preview:
+  <<: *standard_operation
+  stage: test
+  script:
+    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/preview/
+  only:
+    - docusaurus-dev
+
+building-production:
+  <<: *standard_operation
+  stage: deploy
+  script:
+    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/production/
+  only:
+    - docusaurus-master
+  when: manual
+
+send-GitHub:
+  image: python:3.9
+  stage: test
+  script:
+    - apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+    - apt update && apt install -y software-properties-common
+    - apt-add-repository https://cli.github.com/packages
+    - apt update && apt install -y gh
+    - export GITHUB_TOKEN=$GITHUB_APIKEY
+    - git remote add github https://$GITHUB_USRERNAME:$GITHUB_APIKEY@github.com/twcc/man-vip
+    - git fetch --unshallow github
+    - git config --global user.email "August.Chao@twsc.io"
+    - git config --global user.name $GITHUB_USRERNAME
+    - git merge -s ours github/main --no-commit --no-ff --allow-unrelated-histories
+    - git checkout -b $CI_COMMIT_SHORT_SHA
+    - git push -u github $CI_COMMIT_SHORT_SHA
+    - /usr/bin/gh pr create --title "v$CI_COMMIT_SHORT_SHA" --body "Release TWCC manual"
+    - /usr/bin/gh release create "$CI_COMMIT_SHORT_SHA" --title "v$CI_COMMIT_SHORT_SHA"
+  only:
+    - docusaurus
+  when: manual
