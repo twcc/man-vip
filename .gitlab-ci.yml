@@ -49,10 +49,11 @@ send-GitHub:
   image: ubuntu:latest
   stage: test
   script:
+    - apt update && apt install -y git gnupg2
     - apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
     - apt update && apt install -y software-properties-common
     - apt-add-repository https://cli.github.com/packages
-    - apt update && apt install -y gh git
+    - apt update && apt install -y gh
     - export GITHUB_TOKEN=$GITHUB_APIKEY
     - git clone https://$GITHUB_USRERNAME:$GITHUB_APIKEY@github.com/twcc/man-vip
     - cd man-vip
