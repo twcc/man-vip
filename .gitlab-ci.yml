@@ -5,7 +5,6 @@ stages:
 
 .ssh_config_and_build: &standard_operation
   image: node:alpine3.16
-  stage: build
   artifacts:
     paths:
       - build/*
@@ -16,22 +15,25 @@ stages:
     - echo "$MAN_SERVER_SSH_KEY" >> ~/.ssh/id_dsa
     - chmod 600 ~/.ssh/id_dsa
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-    - npm install
-    - npm run build
-    - ls -alh build
 
 
 building-staging:
   <<: *standard_operation
+  stage: build
   script:
+    - npm install
+    - npm run build
     - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/staging/
   only:
     - merge_requests
 
 building-preview:
   <<: *standard_operation
-  stage: test
+  stage: deploy
   script:
+    - cp docusaurus.config.js.preview docusaurus.config.js
+    - npm install
+    - npm run build
     - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/preview/
   only:
     - docusaurus-dev
@@ -40,6 +42,10 @@ building-production:
   <<: *standard_operation
   stage: deploy
   script:
+    - cp docusaurus.config.js.prod docusaurus.config.js
+    - npm install
+    - npm run build
+    - ls -alh build
     - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/production/
   only:
     - docusaurus-master
