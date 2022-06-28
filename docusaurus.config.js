@@ -29,8 +29,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          //editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          editUrl: 'https://git.twcc.ai/twcc/manual/-/edit/docusaurus/',
+          editUrl: 'https://github.com/twcc/man-vip/edit/main/',
         },
         blog: false,
         theme: {
