@@ -55,7 +55,7 @@ send-GitHub:
     - apt update && apt install -y gh
     - export GITHUB_TOKEN=$GITHUB_APIKEY
     - git remote add github https://$GITHUB_USRERNAME:$GITHUB_APIKEY@github.com/twcc/man-vip
-    - git fetch github
+    - git fetch --unshallow github
     - git config --global user.email "August.Chao@twsc.io"
     - git config --global user.name $GITHUB_USRERNAME
     - git merge -s ours github/main --no-commit --no-ff --allow-unrelated-histories
