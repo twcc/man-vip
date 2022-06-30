@@ -96,7 +96,7 @@ sync-from-GitHub:
     - git fetch --unshallow github
     - git checkout github/tws-sync
     - export TZ=Asia/Taipei
-    - export VERSION=`date +"v%Y-%m-%d_%Hhrs"`
+    - export VERSION=`date +"Github-%Y%m%d_%Hhrs"`
     - git checkout -b $VERSION
     - git push -u gitAug $VERSION
   only:
