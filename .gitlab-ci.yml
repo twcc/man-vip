@@ -30,7 +30,7 @@ build-test:
   only:
     - merge_requests
 
-building-staging:
+deploy-staging:
   <<: *standard_operation
   stage: deploy
   script:
@@ -41,7 +41,7 @@ building-staging:
     - merge_requests
   when: manual
 
-building-preview:
+deploy-preview:
   <<: *standard_operation
   stage: deploy
   script:
@@ -52,7 +52,7 @@ building-preview:
   only:
     - docusaurus-dev
 
-building-production:
+deploy-production:
   <<: *standard_operation
   stage: deploy
   script:
@@ -65,7 +65,7 @@ building-production:
     - docusaurus-master
   when: manual
 
-send-GitHub:
+send-to-GitHub:
   image: python:3.9
   stage: test
   script:
