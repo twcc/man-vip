@@ -72,3 +72,18 @@ send-GitHub:
   only:
     - docusaurus-master
   when: manual
+
+sync-from-GitHub:
+  image: python:3.9
+  stage: build
+  script:
+    - git remote add github https://$GITHUB_USRERNAME:$GITHUB_APIKEY@github.com/twcc/man-vip
+    - git fetch --unshallow github
+    - git checkout github/tws-sync
+    - git merge -s ours origin/main --no-commit --no-ff --allow-unrelated-histories
+    - export VERSION=`date +"%Y-%m-%d %H:%M:%S"`
+    - git checkout -b $VERSION
+    - git push -u origin $VERSION
+  only:
+    - sync_from_github
+  when: manual
