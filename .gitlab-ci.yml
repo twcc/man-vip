@@ -18,8 +18,12 @@ stages:
 
 
 build-test:
-  <<: *standard_operation
-  stage: test
+  image: node:alpine3.16
+  artifacts:
+    paths:
+      - build/*
+    expire_in: 1 week
+  stage: build
   script:
     - echo "Test Done!"
   only:
@@ -27,7 +31,7 @@ build-test:
 
 building-staging:
   <<: *standard_operation
-  stage: test
+  stage: deploy
   script:
     - npm install
     - npm run build
