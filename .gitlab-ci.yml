@@ -81,7 +81,7 @@ sync-from-GitHub:
     - git fetch --unshallow github
     - git checkout github/tws-sync
     - git merge -s ours origin/main --no-commit --no-ff --allow-unrelated-histories
-    - export VERSION=`date +"%Y-%m-%d %H:%M:%S"`
+    - export VERSION=`date +"v%Y-%m-%d_%Hhrs"`
     - git checkout -b $VERSION
     - git push -u origin $VERSION
   only:
