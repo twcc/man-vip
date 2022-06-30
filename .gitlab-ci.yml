@@ -25,7 +25,8 @@ build-test:
     expire_in: 1 week
   stage: build
   script:
-    - echo "Test Done!"
+    - npm install
+    - npm run build
   only:
     - merge_requests
 
