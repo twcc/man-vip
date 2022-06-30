@@ -97,8 +97,7 @@ sync-from-GitHub:
     - export TZ=Asia/Taipei
     - export VERSION=`date +"v%Y-%m-%d_%Hhrs"`
     - git checkout -b $VERSION
-    - git push -u origin $VERSION
-    - git push http://${AUG_USERNAME}:${AUG_ACCESS_TOKEN}@gitlab.mycompany.home/developers/benchmarks.git HEAD:master
+    - git push -u http://${AUG_USERNAME}:${AUG_ACCESS_TOKEN}@gitlab.mycompany.home/developers/benchmarks.git origin $VERSION
   only:
     - sync_from_github
   when: manual
