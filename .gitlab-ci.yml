@@ -69,7 +69,7 @@ send-to-GitHub:
     - git checkout -b $CI_COMMIT_SHORT_SHA
     - git push -u github $CI_COMMIT_SHORT_SHA
     - /usr/bin/gh pr create --title "v$CI_COMMIT_SHORT_SHA" --body "Release TWCC manual"
-    - /usr/bin/gh release create "$CI_COMMIT_SHORT_SHA" --title "v$CI_COMMIT_SHORT_SHA"
+    - /usr/bin/gh release create "v$CI_COMMIT_SHORT_SHA" --title "v$CI_COMMIT_SHORT_SHA"
   only:
     - docusaurus-master
   when: manual
