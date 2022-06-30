@@ -92,12 +92,13 @@ sync-from-GitHub:
   stage: build
   script:
     - git remote add github https://${GITHUB_USRERNAME}:${GITHUB_APIKEY}@github.com/twcc/man-vip
+    - git remote add gitAug http://${AUG_USERNAME}:${AUG_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git
     - git fetch --unshallow github
     - git checkout github/tws-sync
     - export TZ=Asia/Taipei
     - export VERSION=`date +"v%Y-%m-%d_%Hhrs"`
     - git checkout -b $VERSION
-    - git push -u http://${AUG_USERNAME}:${AUG_ACCESS_TOKEN}@gitlab.mycompany.home/developers/benchmarks.git origin $VERSION
+    - git push -u gitAug $VERSION
   only:
     - sync_from_github
   when: manual
