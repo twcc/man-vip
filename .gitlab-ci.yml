@@ -94,6 +94,7 @@ sync-from-GitHub:
     - git remote add github https://$GITHUB_USRERNAME:$GITHUB_APIKEY@github.com/twcc/man-vip
     - git fetch --unshallow github
     - git checkout github/tws-sync
+    - export TZ=Asia/Taipei
     - export VERSION=`date +"v%Y-%m-%d_%Hhrs"`
     - git checkout -b $VERSION
     - git push -u origin $VERSION
