@@ -17,22 +17,9 @@ stages:
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 
 
-build-test:
-  image: node:alpine3.16
-  artifacts:
-    paths:
-      - build/*
-    expire_in: 1 week
-  stage: build
-  script:
-    - npm install
-    - npm run build
-  only:
-    - merge_requests
-
 deploy-staging:
   <<: *standard_operation
-  stage: deploy
+  stage: build
   script:
     - npm install
     - npm run build
