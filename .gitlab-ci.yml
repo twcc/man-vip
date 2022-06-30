@@ -17,15 +17,24 @@ stages:
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 
 
+build-test:
+  <<: *standard_operation
+  stage: test
+  script:
+    - echo "Test Done!"
+  only:
+    - merge_requests
+
 building-staging:
   <<: *standard_operation
-  stage: build
+  stage: test
   script:
     - npm install
     - npm run build
     - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/staging/
   only:
     - merge_requests
+  when: manual
 
 building-preview:
   <<: *standard_operation
