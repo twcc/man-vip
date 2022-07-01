@@ -87,5 +87,5 @@ sync-from-GitHub:
     - git checkout -b $VERSION
     - git push -u gitAug $VERSION
   only:
-    - sync_from_github
+    - docusaurus-dev
   when: manual
