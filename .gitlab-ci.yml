@@ -5,7 +5,6 @@ stages:
 
 .ssh_config_and_build: &standard_operation
   image: node:alpine3.16
-  stage: build
   artifacts:
     paths:
       - build/*
@@ -16,36 +15,44 @@ stages:
     - echo "$MAN_SERVER_SSH_KEY" >> ~/.ssh/id_dsa
     - chmod 600 ~/.ssh/id_dsa
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+
+
+deploy-staging:
+  <<: *standard_operation
+  stage: build
+  script:
     - npm install
     - npm run build
-    - ls -alh build
-
-
-building-staging:
-  <<: *standard_operation
-  script:
     - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/staging/
   only:
     - merge_requests
+  when: manual
 
-building-preview:
+deploy-preview:
   <<: *standard_operation
-  stage: test
+  stage: deploy
   script:
+    - cp docusaurus.config.js.preview docusaurus.config.js
+    - npm install
+    - npm run build
     - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/preview/
   only:
     - docusaurus-dev
 
-building-production:
+deploy-production:
   <<: *standard_operation
   stage: deploy
   script:
+    - cp docusaurus.config.js.prod docusaurus.config.js
+    - npm install
+    - npm run build
+    - ls -alh build
     - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/production/
   only:
     - docusaurus-master
   when: manual
 
-send-GitHub:
+send-to-GitHub:
   image: python:3.9
   stage: test
   script:
@@ -64,5 +71,21 @@ send-GitHub:
     - /usr/bin/gh pr create --title "v$CI_COMMIT_SHORT_SHA" --body "Release TWCC manual"
     - /usr/bin/gh release create "$CI_COMMIT_SHORT_SHA" --title "v$CI_COMMIT_SHORT_SHA"
   only:
-    - docusaurus
+    - docusaurus-master
+  when: manual
+
+sync-from-GitHub:
+  image: python:3.9
+  stage: build
+  script:
+    - git remote add github https://${GITHUB_USRERNAME}:${GITHUB_APIKEY}@github.com/twcc/man-vip
+    - git remote add gitAug http://${AUG_USERNAME}:${AUG_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git
+    - git fetch --unshallow github
+    - git checkout github/tws-sync
+    - export TZ=Asia/Taipei
+    - export VERSION=`date +"Github-%Y%m%d_%Hhrs"`
+    - git checkout -b $VERSION
+    - git push -u gitAug $VERSION
+  only:
+    - sync_from_github
   when: manual
