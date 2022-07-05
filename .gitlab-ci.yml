@@ -22,7 +22,7 @@ deploy-staging:
   stage: build
   script:
     - npm install
-    - npm run build
+    - npm run staging
     - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/staging/
   only:
     - merge_requests
@@ -34,7 +34,7 @@ deploy-preview:
   script:
     - cp docusaurus.config.js.preview docusaurus.config.js
     - npm install
-    - npm run build
+    - npm run preview
     - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/preview/
   only:
     - docusaurus-dev
@@ -45,7 +45,7 @@ deploy-production:
   script:
     - cp docusaurus.config.js.prod docusaurus.config.js
     - npm install
-    - npm run build
+    - npm run production
     - ls -alh build
     - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/production/
   only:
