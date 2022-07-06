@@ -1,5 +1,3 @@
-// THIS FILE is for staging usage!!
-//
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
@@ -8,19 +6,25 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'TWCC Manual Pages, The Man!',
-  tagline: 'The one, you must have!',
-  url: 'https://man.twcc.ai',
+  title: 'TWCC Documentation',
+  tagline: 'Find TWCC user guide, concepts, and more.',
+  url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'https://www.twcc.ai/assets/favicon.ico',
-  organizationName: 'twcc', // Usually your GitHub org/user name.
-  projectName: 'man-vip', // Usually your repo name.
+  favicon: 'img/favicon.ico',
 
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
+  organizationName: 'facebook', // Usually your GitHub org/user name.
+  projectName: 'docusaurus', // Usually your repo name.
+
+  // Even if you don't use internalization, you can use this field to set useful
+  // metadata like html lang. For example, if your site is Chinese, you may want
+  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'zh-TW'],
+    locales: ['en', 'zh'],
   },
 
   presets: [
@@ -31,9 +35,17 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/twcc/man-vip/edit/main/',
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: false,
+        blog: {
+          showReadingTime: true,
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -45,68 +57,86 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: '🔥 🔥 🔥 Manual 🔥 🔥 🔥',
+        title: 'Home',
         logo: {
-          alt: 'TWCC',
-          src: 'https://www.twcc.ai/assets/38d04ec9712f0089bc84f57b180b2512.svg',
+          alt: 'My Site Logo',
+          src: 'img/logo.png',
         },
         items: [
-          {
+          /** {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Categories',
+            label: 'Tutorial',
+          }, */
+          {
+            to: '/home-navigation-page',
+            position: 'left',
+            label: '服務指南',
           },
-          {to: '/docs/faq', label: 'FAQ', position: 'left'},
-          {to: '/docs/api', label: 'API', position: 'left'},
-          {to: '/docs/tws-doc', label: '🪵 TWS', position: 'right'},
-          {to: 'https://www.twcc.ai', label: 'TWCC', position: 'right'},
+          {
+            to: '/home-navigation-page',
+            position: 'left',
+            label: '常見問題',
+          },
+          {
+            to: '/home-navigation-page',
+            position: 'left',
+            label: '定價',
+          },
+          /**{to: '/blog', label: 'Blog', position: 'left'},*/
+		  {type: 'localeDropdown',position: 'right'},
+		  {
+            href: 'https://github.com/facebook/docusaurus',
+            label: 'GitHub',
+            position: 'right',
+          },
         ],
       },
       footer: {
         style: 'dark',
-         links: [
-         {
-            title: 'Manuals',
+        links: [
+          {
+            title: 'Docs',
             items: [
               {
-                label: 'by services',
-                to: '/docs/services',
-              },
-              {
-                label: 'by scenarios',
-                to: '/docs/scenarios',
+                label: 'Tutorial',
+                to: '/docs/intro',
               },
             ],
           },
           {
-            title: 'Members',
+            title: 'Community',
             items: [
               {
-                label: 'Academic Users',
-                href: 'https://iservice.nchc.org.tw',
+                label: 'TWS',
+                href: 'https://tws.twcc.ai',
               },
               {
-                label: 'Enterprise Users',
-                href: 'https://tws.twcc.ai',
+                label: 'Discord',
+                href: 'https://discordapp.com/invite/docusaurus',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/docusaurus',
               },
             ],
           },
           {
             title: 'More',
             items: [
+              /**{
+                label: 'Blog',
+                to: '/blog',
+              },*/
               {
-                label: 'Release Notes',
-                to: '/docs/release',
-              },
-              {
-                label: 'FAQ',
-                to: '/docs/faq',
+                label: 'GitHub',
+                href: 'https://github.com/facebook/docusaurus',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} <a href="https://www.twcc.ai" target="_blank">TWCC.ai</a>.`,
+        copyright: `Copyright © ${new Date().getFullYear()} TWSC. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

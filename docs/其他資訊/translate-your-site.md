@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 ---
 
 # Translate your site
@@ -71,7 +71,7 @@ module.exports = {
 
 The locale dropdown now appears in your navbar:
 
-![Locale Dropdown](/img/tutorial/localeDropdown.png)
+![Locale Dropdown](./img/localeDropdown.png)
 
 ## Build your localized site
 
