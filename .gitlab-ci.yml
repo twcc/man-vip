@@ -32,7 +32,6 @@ deploy-preview:
   <<: *standard_operation
   stage: deploy
   script:
-    - cp docusaurus.config.js.preview docusaurus.config.js
     - npm install --legacy-peer-deps
     - npm run preview
     - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/preview/
@@ -43,7 +42,6 @@ deploy-production:
   <<: *standard_operation
   stage: deploy
   script:
-    - cp docusaurus.config.js.prod docusaurus.config.js
     - npm install --legacy-peer-deps
     - npm run production
     - ls -alh build
