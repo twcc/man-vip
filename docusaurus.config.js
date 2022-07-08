@@ -1,3 +1,9 @@
+const env_list = {
+  staging: 'Staging',
+  preview: 'Preview',
+  production: 'TWCC'
+}
+
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
@@ -6,7 +12,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'TWCC',
+  title: env_list[process.env.Target],
   tagline: 'TWCC Manual',
   url: 'https://man.twcc.vip',
   baseUrl: '/',
@@ -20,7 +26,7 @@ const config = {
   projectName: 'Manual', // Usually your repo name.
 
   i18n: {
-    defaultLocale: 'en',
+    defaultLocale: 'zh-Hant',
     locales: ['en','zh-Hant'],
   },
   plugins: [
