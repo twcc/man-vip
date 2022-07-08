@@ -50,7 +50,24 @@ const config = {
         showLastUpdateTime: true,
       }),
     ],
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: "apiDocs",
+        docsPluginId: "classic",
+        config: {
+          petstore: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
+            specPath: "openapi/vcsapi.yaml", // Path to designated spec file
+            outputDir: "docs/api/vcs", // Output directory for generated .mdx docs
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          },
+        }
+      },
+    ]
   ],
+  themes: ["docusaurus-theme-openapi-docs"], // Allows use of @theme/ApiItem and other components
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -92,6 +109,12 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'api',
             label: 'API',
+            position: 'left',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'faq',
+            label: 'FAQ',
             position: 'left',
           },
           {
