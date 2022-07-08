@@ -3,7 +3,7 @@ id: introduction
 sidebar_position: 1
 ---
 
-# Tutorial Intro from en file
+# Tutorial Intro from zh file
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
