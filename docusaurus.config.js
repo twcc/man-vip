@@ -12,7 +12,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: env_list[process.env.Target],
+  title: env_list[process.env.Target||'production'],
   tagline: 'TWCC Manual',
   url: 'https://man.twcc.vip',
   baseUrl: '/',
@@ -56,12 +56,32 @@ const config = {
         id: "apiDocs",
         docsPluginId: "classic",
         config: {
-          petstore: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
+          vcsapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
             specPath: "openapi/vcsapi.yaml", // Path to designated spec file
-            outputDir: "docs/api/vcs", // Output directory for generated .mdx docs
+            outputDir: "docs/api/VCS", // Output directory for generated .mdx docs
             sidebarOptions: {
               groupPathsBy: "tag",
             },
+          },
+          ccsapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
+            specPath: "openapi/ccsapi.yaml", // Path to designated spec file
+            outputDir: "docs/api/CCS", // Output directory for generated .mdx docs
+          },
+          slurmapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
+            specPath: "openapi/slurm.yaml", // Path to designated spec file
+            outputDir: "docs/api/Slurm", // Output directory for generated .mdx docs
+          },
+          harborapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
+            specPath: "openapi/harbor.yaml", // Path to designated spec file
+            outputDir: "docs/api/Harbor", // Output directory for generated .mdx docs
+          },
+          cephapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
+            specPath: "openapi/ceph.yaml", // Path to designated spec file
+            outputDir: "docs/api/Ceph", // Output directory for generated .mdx docs
+          },
+          commonapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
+            specPath: "openapi/common.yaml", // Path to designated spec file
+            outputDir: "docs/api/Common", // Output directory for generated .mdx docs
           },
         }
       },
