@@ -94,6 +94,12 @@ const config = {
             label: 'API',
             position: 'left',
           },
+          /**{
+            type: 'docSidebar',
+            sidebarId: 'faq',
+            label: 'FAQ',
+            position: 'left',
+          },*/
           {
             type: 'localeDropdown',
             position: 'right',
