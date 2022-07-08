@@ -254,11 +254,11 @@
     "message": "短時間內即能建立安全穩固、彈性應用的虛擬運算服務 (VCS) 個體",
     "description": "Create a safe, secure, and flexible Virtual Compute Service instance in short order."
   },
-  "homepage.services.HSS.desc": {
+  "homepage.services.HSS.title": {
     "message": "數據匯集",
     "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
   },
-  "homepage.services.HSS.title": {
+  "homepage.services.HSS.desc": {
     "message": "註冊帳號即可享有高速檔案系統 (HFS) 100 GB + 100 GB 的免費儲存空間！",
     "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
   }
