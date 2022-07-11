@@ -1,0 +1,27 @@
+---
+id: get-favorite-context-of-a-specific-project-name
+sidebar_label: Get Favorite context of a specific project name
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["project"],"description":"Get Favorite context of a specific project name","parameters":[{"name":"project_name","in":"path","description":"The name of the project","required":true,"schema":{"type":"string"}},{"name":"x-api-host","in":"header","description":"認證必要參數","required":true,"schema":{"type":"string","default":"goc"}}],"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"required":["favorite"],"type":"object","properties":{"favorite":{"type":"string"}}}}}}},"method":"get","path":"/projects/{project_name}/favorites/","servers":[{"description":"production url","url":"https://apigateway.twcc.ai/api/v3/"},{"description":"staging url","url":"https://apigateway.twcc.tw/api/v3/"}],"security":[{"ApiKeyAuth":[]}],"securitySchemes":{"ApiKeyAuth":{"type":"apiKey","in":"header","name":"x-api-key"}},"info":{"version":"1.1.1","title":"Common API"},"postman":{"name":"Get Favorite context of a specific project name","description":{"content":"Get Favorite context of a specific project name","type":"text/plain"},"url":{"path":["projects",":project_name","favorites",""],"host":["{{baseUrl}}"],"query":[],"variable":[{"disabled":false,"description":{"content":"(Required) The name of the project","type":"text/plain"},"type":"any","value":"","key":"project_name"}]},"header":[{"disabled":false,"description":{"content":"(Required) 認證必要參數","type":"text/plain"},"key":"x-api-host","value":""},{"key":"Accept","value":"application/json"}],"method":"GET"}}
+sidebar_class_name: "get api-method"
+info_path: docs/api/Common/common-api
+---
+
+import ParamsItem from "@theme/ParamsItem";
+import SchemaItem from "@theme/SchemaItem"
+import ApiTabs from "@theme/ApiTabs";
+import TabItem from "@theme/TabItem";
+
+## Get Favorite context of a specific project name
+
+
+
+Get Favorite context of a specific project name
+
+<details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Path Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"project_name","in":"path","description":"The name of the project","required":true,"schema":{"type":"string"}}}></ParamsItem></ul></div></details><details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Header Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"x-api-host","in":"header","description":"認證必要參數","required":true,"schema":{"type":"string","default":"goc"}}}></ParamsItem></ul></div></details><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
+
+OK
+
+</div><div><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"favorite"} required={true} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined}></SchemaItem></ul></details></div></TabItem></ApiTabs></div>
+      

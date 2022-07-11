@@ -1,0 +1,38 @@
+{
+  "link.title.Docs": {
+    "message": "Docs",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Members": {
+    "message": "Members",
+    "description": "The title of the footer links column with title=Members in the footer"
+  },
+  "link.title.More": {
+    "message": "More",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.Introduction": {
+    "message": "Introduction",
+    "description": "The label of footer link with label=Introduction linking to /docs/introduction"
+  },
+  "link.item.label.Academic Users": {
+    "message": "Academic Users",
+    "description": "The label of footer link with label=Academic Users linking to https://iservice.nchc.org.tw"
+  },
+  "link.item.label.Enterprise Users": {
+    "message": "Enterprise Users",
+    "description": "The label of footer link with label=Enterprise Users linking to https://tws.twcc.ai"
+  },
+  "link.item.label.Blog": {
+    "message": "Blog",
+    "description": "The label of footer link with label=Blog linking to /blog"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/twcc/man-vip"
+  },
+  "copyright": {
+    "message": "Copyright © 2022 TWCC, Inc. Built with TWS.",
+    "description": "The footer copyright"
+  }
+}
