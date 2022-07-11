@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="VM_icon" transform="translate(2 2)">
+    <rect id="Bounds" width="24" height="24" transform="translate(-2 -2)" fill="#07263b" opacity="0"/>
+    <g id="Group_1219" data-name="Group 1219">
+      <path id="Path_1390" data-name="Path 1390" d="M0,0H17V13H0Z" transform="translate(1.5 1.472)" fill="#46a7ce"/>
+      <path id="Path_1383" data-name="Path 1383" d="M8,17,6,20v1h8V20l-2-3Z" transform="translate(0 -1)" fill="#707070" fill-rule="evenodd"/>
+      <path id="Path_1389" data-name="Path 1389" d="M19,2H3A2.006,2.006,0,0,0,1,4V16a2.006,2.006,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V4A2.006,2.006,0,0,0,19,2Zm0,14H3V4H19Z" transform="translate(-1 -2)" fill="#bababa" fill-rule="evenodd"/>
+      <path id="Path_1391" data-name="Path 1391" d="M6,20v1h8V20Z" transform="translate(0 -1)" fill="#bababa" fill-rule="evenodd"/>
+      <g id="icon" transform="translate(5 2.5)">
+        <path id="形狀_15" data-name="形狀 15" d="M11.726,9.7l-4.5,2.269a.022.022,0,0,0-.015,0,.485.485,0,0,1-.437,0L2.274,9.7A.5.5,0,0,1,2,9.25V3.8a.5.5,0,0,1,.06-.229c0-.007.005-.013.009-.02a.5.5,0,0,1,.155-.162c.005,0,.008-.011.014-.014s.009,0,.013,0a.116.116,0,0,1,.024-.016l4.5-2.269a.5.5,0,0,1,.45,0l4.5,2.269c.009,0,.016.011.024.016s.009,0,.012,0a.094.094,0,0,0,.014.014.494.494,0,0,1,.156.162c0,.006,0,.013.008.019A.5.5,0,0,1,12,3.8V9.25A.5.5,0,0,1,11.726,9.7ZM3,8.943l3.5,1.765V6.38L3,4.615V8.943Zm4-6.85L3.609,3.8l.828.417L7,5.513,10.391,3.8Z" transform="translate(-2 -1.035)" fill="#c4edff" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>
