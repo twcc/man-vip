@@ -1,0 +1,27 @@
+---
+id: start-or-stop-a-job
+sidebar_label: start or stop a job
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["job"],"description":"start or stop a job","parameters":[{"name":"job_id","in":"path","description":"Job ID","required":true,"schema":{"type":"integer","format":"int32"}},{"name":"action","in":"path","required":true,"schema":{"type":"string","enum":["submit","stop"]}},{"name":"x-api-host","in":"header","description":"認證必要參數","required":true,"schema":{"type":"string","default":"k8s-taichung-default"},"examples":{"production":{"summary":"production","value":"k8s-taichung-default"},"staging":{"summary":"staging","value":"k8s-taichung-default"}}}],"responses":{"201":{"description":"Created","content":{}}},"method":"post","path":"/jobs/{job_id}/{action}/","servers":[{"description":"production url","url":"https://apigateway.twcc.ai/api/v3/k8s-taichung-default/"},{"description":"staging url","url":"https://apigateway.twcc.tw/api/v3/k8s-taichung-default/"}],"security":[{"ApiKeyAuth":[]}],"securitySchemes":{"ApiKeyAuth":{"type":"apiKey","in":"header","name":"x-api-key"}},"info":{"version":"1.3.0","title":"CCS API"},"postman":{"name":"start or stop a job","description":{"content":"start or stop a job","type":"text/plain"},"url":{"path":["jobs",":job_id",":action",""],"host":["{{baseUrl}}"],"query":[],"variable":[{"disabled":false,"description":{"content":"(Required) Job ID","type":"text/plain"},"type":"any","value":"","key":"job_id"},{"disabled":false,"description":{"content":"(Required) ","type":"text/plain"},"type":"any","value":"","key":"action"}]},"header":[{"disabled":false,"description":{"content":"(Required) 認證必要參數","type":"text/plain"},"key":"x-api-host","value":""}],"method":"POST"}}
+sidebar_class_name: "post api-method"
+info_path: docs/api/CCS/ccs-api
+---
+
+import ParamsItem from "@theme/ParamsItem";
+import SchemaItem from "@theme/SchemaItem"
+import ApiTabs from "@theme/ApiTabs";
+import TabItem from "@theme/TabItem";
+
+## start or stop a job
+
+
+
+start or stop a job
+
+<details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Path Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"job_id","in":"path","description":"Job ID","required":true,"schema":{"type":"integer","format":"int32"}}}></ParamsItem><ParamsItem className={"paramsItem"} param={{"name":"action","in":"path","required":true,"schema":{"type":"string","enum":["submit","stop"]}}}></ParamsItem></ul></div></details><details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Header Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"x-api-host","in":"header","description":"認證必要參數","required":true,"schema":{"type":"string","default":"k8s-taichung-default"},"examples":{"production":{"summary":"production","value":"k8s-taichung-default"},"staging":{"summary":"staging","value":"k8s-taichung-default"}}}}></ParamsItem></ul></div></details><div><ApiTabs><TabItem label={"201"} value={"201"}><div>
+
+Created
+
+</div><div></div></TabItem></ApiTabs></div>
+      

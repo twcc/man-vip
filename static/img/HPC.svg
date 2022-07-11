@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="HPC" transform="translate(-1782 -1003)">
+    <rect id="Bounds" width="24" height="24" transform="translate(1782 1003)" fill="#fff" opacity="0"/>
+    <path id="Path_1457" data-name="Path 1457" d="M15,4H1A1,1,0,0,1,0,3V1A1,1,0,0,1,1,0H15a1,1,0,0,1,1,1V3A1,1,0,0,1,15,4ZM1,6H11v4H1A1,1,0,0,1,0,9V7A1,1,0,0,1,1,6Zm0,6H11v1a1,1,0,0,0,1,1h1v2H1a1,1,0,0,1-1-1V13A1,1,0,0,1,1,12Z" transform="translate(1785 1007)" fill="#1e71a3" fill-rule="evenodd"/>
+    <path id="Path_1458" data-name="Path 1458" d="M0,14V12H2v2ZM0,6H2V8H0ZM0,0H2V2H0Z" transform="translate(1787 1008)" fill="#ffc41b" fill-rule="evenodd"/>
+    <path id="Path_1459" data-name="Path 1459" d="M0,0H7L4,5H7L2,12V7H0Z" transform="translate(1797 1013)" fill="#ffc41b" fill-rule="evenodd"/>
+  </g>
+</svg>

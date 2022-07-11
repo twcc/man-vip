@@ -1,0 +1,26 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.api": {
+    "message": "api",
+    "description": "The label for category api in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.cli": {
+    "message": "cli",
+    "description": "The label for category cli in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.open api": {
+    "message": "open api",
+    "description": "The label for category open api in sidebar tutorialSidebar"
+  },
+  "sidebar.api.category.cli": {
+    "message": "cli",
+    "description": "The label for category cli in sidebar api"
+  },
+  "sidebar.api.category.open api": {
+    "message": "open api",
+    "description": "The label for category open api in sidebar api"
+  }
+}
