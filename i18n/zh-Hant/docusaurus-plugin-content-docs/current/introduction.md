@@ -11,8 +11,8 @@ Let's discover **Docusaurus in less than 5 minutes**.
 
 Get started by **creating a new site**.
 
-[ccs](/docs/ccs/lead.md)
-[vcs](/docs/vcs/lead.md)
+[ccs](/docs/ccs/intro.md)
+[vcs](/docs/vcs/intro.md)
 
 Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
 
