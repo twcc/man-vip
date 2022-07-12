@@ -2,8 +2,13 @@ const env_list = {
   staging: 'Staging',
   preview: 'Preview',
   production: 'TWCC'
+}, i18nDirPath = {
+  docs: 'docusaurus-plugin-content-docs/current',
+  community: 'docusaurus-plugin-content-docs-community/current'
 }
-
+const replaceDir = (versionDocsDirPath) => {
+  return rdir = i18nDirPath[versionDocsDirPath], rdir ? versionDocsDirPath.replace(versionDocsDirPath,rdir) : versionDocsDirPath
+}
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
@@ -40,7 +45,7 @@ const config = {
         routeBasePath: 'community',
         editUrl: ({locale, versionDocsDirPath, docPath}) => {
           if (locale !== 'en') {
-            return `https://github.com/twcc/man-vip/edit/tree/tws-sync/i18n/${locale}/${versionDocsDirPath}/${docPath}`;
+            return `https://github.com/twcc/man-vip/edit/tree/tws-sync/i18n/${locale}/${replaceDir(versionDocsDirPath)}/${docPath}`;
           }
           return `https://github.com/twcc/man-vip/edit/tree/tws-sync/${versionDocsDirPath}/${docPath}`;
         },
@@ -97,7 +102,9 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [require('mdx-mermaid')],
           editUrl: ({locale, versionDocsDirPath, docPath}) => {
-            if (locale !== 'en') return `https://github.com/twcc/man-vip/edit/tree/tws-sync/i18n/${locale}/${versionDocsDirPath}/${docPath}`;
+            if (locale !== 'en') {
+              return `https://github.com/twcc/man-vip/edit/tree/tws-sync/i18n/${locale}/${replaceDir(versionDocsDirPath)}/${docPath}`;
+            }
             return `https://github.com/twcc/man-vip/edit/tree/tws-sync/${versionDocsDirPath}/${docPath}`;
           }
         },
