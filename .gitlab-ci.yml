@@ -16,6 +16,14 @@ stages:
     - chmod 600 ~/.ssh/id_dsa
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 
+test-build:
+  <<: *standard_operation
+  stage: test
+  script:
+    - npm install --legacy-peer-deps
+    - npm run staging
+  only:
+    - merge_requests
 
 deploy-staging:
   <<: *standard_operation
@@ -37,6 +45,7 @@ deploy-preview:
     - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/preview/
   only:
     - docusaurus-dev
+  when: manual
 
 deploy-production:
   <<: *standard_operation
