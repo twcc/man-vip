@@ -7,28 +7,20 @@ const env_list = {
     docs: "docusaurus-plugin-content-docs/current",
     community: "docusaurus-plugin-content-docs-community/current",
   };
-const replaceDir = (versionDocsDirPath) => {
-  return (
-    (rdir = i18nDirPath[versionDocsDirPath]),
-    rdir
-      ? versionDocsDirPath.replace(versionDocsDirPath, rdir)
-      : versionDocsDirPath
-  );
-};
+const set_edit_url = (locale, versionDocsDirPath, docPath) => {
+  const baseUrl = `https://github.com/twcc/man-vip/edit/tree/tws-sync`,
+        enUrl = `${baseUrl}/${versionDocsDirPath}/${docPath}`;
+  if (docPath === 'releaseNotes.md') return enUrl;
+  const rdir = i18nDirPath[versionDocsDirPath];
+  if (locale !== "en" && rdir) return `${baseUrl}/i18n/${locale}/${versionDocsDirPath.replace(versionDocsDirPath,rdir)}/${docPath}`;
+  return enUrl
+}
+
+
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
-
-function set_edit_url(locale, versionDocsDirPath, docPath) {
-  if (locale !== "en") {
-    return `https://github.com/twcc/man-vip/edit/tree/tws-sync/i18n/${locale}/${replaceDir(
-      versionDocsDirPath
-    )}/${docPath}`;
-  }
-  return `https://github.com/twcc/man-vip/edit/tree/tws-sync/${versionDocsDirPath}/${docPath}`;
-}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -58,9 +50,7 @@ const config = {
         id: "community",
         path: "community",
         routeBasePath: "community",
-        editUrl: ({ locale, versionDocsDirPath, docPath }) => {
-          return set_edit_url(locale, versionDocsDirPath, docPath);
-        },
+        editUrl: ({ locale, versionDocsDirPath, docPath }) => set_edit_url(locale, versionDocsDirPath, docPath),
         editCurrentVersion: true,
         sidebarPath: require.resolve("./sidebarsCommunity.js"),
         showLastUpdateAuthor: true,
@@ -74,37 +64,37 @@ const config = {
         docsPluginId: "classic",
         config: {
           vcsapi: {
-            specPath: "openapi/vcsapi.yaml", 
-            outputDir: "docs/api/VCS", 
+            specPath: "openapi/vcsapi.yaml",
+            outputDir: "docs/api/VCS",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
           },
           ccsapi: {
-            specPath: "openapi/ccsapi.yaml", 
+            specPath: "openapi/ccsapi.yaml",
             outputDir: "docs/api/CCS",
           },
           slurmapi: {
             specPath: "openapi/slurm.yaml",
-            outputDir: "docs/api/Slurm", 
+            outputDir: "docs/api/Slurm",
           },
           harborapi: {
-            specPath: "openapi/harbor.yaml", 
+            specPath: "openapi/harbor.yaml",
             outputDir: "docs/api/Harbor",
           },
           cephapi: {
-            specPath: "openapi/ceph.yaml", 
-            outputDir: "docs/api/Ceph", 
+            specPath: "openapi/ceph.yaml",
+            outputDir: "docs/api/Ceph",
           },
           commonapi: {
-            specPath: "openapi/common.yaml", 
-            outputDir: "docs/api/Common", 
+            specPath: "openapi/common.yaml",
+            outputDir: "docs/api/Common",
           },
         },
       },
     ],
   ],
-  themes: ["docusaurus-theme-openapi-docs"], 
+  themes: ["docusaurus-theme-openapi-docs"],
   presets: [
     [
       "@docusaurus/preset-classic",
@@ -113,9 +103,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           remarkPlugins: [require("mdx-mermaid")],
-          editUrl: ({ locale, versionDocsDirPath, docPath }) => {
-            return set_edit_url(locale, versionDocsDirPath, docPath);
-          },
+          editUrl: ({ locale, versionDocsDirPath, docPath }) => set_edit_url(locale, versionDocsDirPath, docPath),
         },
         pages: {},
         blog: false,
@@ -163,8 +151,9 @@ const config = {
             position: "left",
           },
           {
+            type:"doc",
             label: "Release Notes",
-            to: "/releaseNotes",
+            docId: "release-notes",
             position: "left",
           },
           {
