@@ -613,7 +613,7 @@ components:
           format: int64
         metadata:
           type: object
-          properties:
+          properties: 
             gpu_type:
               type: string
         name:

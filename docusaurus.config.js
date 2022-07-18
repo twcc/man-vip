@@ -56,40 +56,61 @@ const config = {
       }),
     ],
     [
-      'docusaurus-plugin-openapi-docs',
+      "docusaurus-plugin-openapi-docs",
       {
-        id: "apiDocs",
+        id: "openapi",
         docsPluginId: "classic",
         config: {
-          vcsapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
-            specPath: "openapi/vcsapi.yaml", // Path to designated spec file
-            outputDir: "docs/api/VCS", // Output directory for generated .mdx docs
+          CCS: {
+            specPath: "openapi/CCS.yaml",
+            outputDir: "docs/api/CCS",
             sidebarOptions: {
               groupPathsBy: "tag",
-            },
+              categoryLinkSource: "tag"
+            }
           },
-          ccsapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
-            specPath: "openapi/ccsapi.yaml", // Path to designated spec file
-            outputDir: "docs/api/CCS", // Output directory for generated .mdx docs
+          Ceph: {
+            specPath: "openapi/Ceph.yaml",
+            outputDir: "docs/api/Ceph",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag"
+            }
           },
-          slurmapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
-            specPath: "openapi/slurm.yaml", // Path to designated spec file
-            outputDir: "docs/api/Slurm", // Output directory for generated .mdx docs
+          Common: {
+            specPath: "openapi/Common.yaml",
+            outputDir: "docs/api/Common",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag"
+            }
           },
-          harborapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
-            specPath: "openapi/harbor.yaml", // Path to designated spec file
-            outputDir: "docs/api/Harbor", // Output directory for generated .mdx docs
+          Harbor: {
+            specPath: "openapi/Harbor.yaml",
+            outputDir: "docs/api/Harbor",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag"
+            }
           },
-          cephapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
-            specPath: "openapi/ceph.yaml", // Path to designated spec file
-            outputDir: "docs/api/Ceph", // Output directory for generated .mdx docs
+          Slurm: {
+            specPath: "openapi/Slurm.yaml",
+            outputDir: "docs/api/Slurm",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag"
+            }
           },
-          commonapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
-            specPath: "openapi/common.yaml", // Path to designated spec file
-            outputDir: "docs/api/Common", // Output directory for generated .mdx docs
-          },
+          VCS: {
+            specPath: "openapi/VCS.yaml",
+            outputDir: "docs/api/VCS",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag"
+            }
+          }
         }
-      },
+      }
     ]
   ],
   themes: ["docusaurus-theme-openapi-docs"], // Allows use of @theme/ApiItem and other components
@@ -106,7 +127,9 @@ const config = {
               return `https://github.com/twcc/man-vip/edit/tree/tws-sync/i18n/${locale}/${replaceDir(versionDocsDirPath)}/${docPath}`;
             }
             return `https://github.com/twcc/man-vip/edit/tree/tws-sync/${versionDocsDirPath}/${docPath}`;
-          }
+          },
+          docLayoutComponent: "@theme/DocPage",
+          docItemComponent: "@theme/ApiItem" // Derived from docusaurus-theme-openapi
         },
         blog: false,
         theme: {
@@ -133,10 +156,9 @@ const config = {
             position: 'left',
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'api',
-            label: 'API',
-            position: 'left',
+            label: "API",
+            position: "left",
+            to: "/docs/api/CCS"
           },
           /**{
             type: 'docSidebar',

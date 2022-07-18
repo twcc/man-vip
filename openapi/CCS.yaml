@@ -1,0 +1,2143 @@
+openapi: 3.0.0
+servers:
+  - description: production url
+    url: https://apigateway.twcc.ai/api/v3/k8s-taichung-default/
+  - description: staging url
+    url: https://apigateway.twcc.tw/api/v3/k8s-taichung-default/
+info:
+  version: 1.3.0
+  title: CCS API
+security:
+  - ApiKeyAuth: []
+tags:
+  - name: project
+  - name: flavor
+  - name: site
+  - name: job
+paths:
+  /projects/:
+    get:
+      tags:
+        - project
+      summary: 取得專案列表
+      description: 查詢所有擁有的專案
+      parameters:
+        - in: query
+          name: name
+          description: 利用專案名查詢
+          required: false
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: 取得專案詳細資訊
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GroupSerializer'
+  /projects/{project_id}/:
+    get:
+      tags:
+        - project
+      summary: 取得單一專案訊息
+      description: |
+        查詢所有擁有的專案
+      parameters:
+        - $ref: '#/components/parameters/ProjectInPathParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: 取得專案詳細資訊
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupDetailSerializer'
+  /project_quotas/:
+    get:
+      tags:
+        - project
+      summary: get project quotas
+      description: get project quotas
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProjectQuotaSerializer'
+  /projects/{project_id}/solutions/:
+    get:
+      tags:
+        - project
+      summary: 取得專案的解決方案list
+      description: |
+        查詢該專案的解決放案(Res: 解決方案ID)
+      parameters:
+        - $ref: '#/components/parameters/ProjectInPathParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  解決方案
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  solutions:
+                    type: array
+                    items:
+                      type: integer
+  /projects/{project_id}/solutions/{solutions_id}/:
+    get:
+      tags:
+        - project
+      summary: Get extra properties of a solution for a project
+      parameters:
+        - $ref: '#/components/parameters/ProjectInPathParam'
+        - $ref: '#/components/parameters/SolutionsIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  解決方案
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                  site_extra_prop:
+                    $ref: '#/components/schemas/site_extra_prop'
+  /flavors/:
+    get:
+      tags:
+        - flavor
+      summary: List flavors
+      parameters:
+        - in: query
+          name: is_public
+          description: Flavor is_public
+          required: false
+          schema:
+            type: boolean
+        - in: query
+          name: project
+          description: Project ID to filter matchLabels
+          required: false
+          schema:
+            type: integer
+            format: int32
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FlavorSerializer'
+  /flavors/{flavor_id}/:
+    get:
+      tags:
+        - flavor
+      summary: Get details of a flavor
+      parameters:
+        - $ref: '#/components/parameters/FlavorIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: 取得詳細flavor
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FlavorDetailSerializer'
+  /sites/:
+    get:
+      tags:
+      - site
+      summary: List sites
+      description: List sites
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - name: sol_categ
+          in: query
+          description: Solution Categories
+          schema:
+            type: string
+            default: container
+        - name: all_users
+          in: query
+          description: List resources of all users. 租戶管理員使用
+          schema:
+            type: integer
+            format: int32
+            enum: [ 0, 1]
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SiteSerializer'
+    post:
+      tags:
+      - site
+      summary: Create a site
+      description: Create a site
+      parameters:
+        - name: x-extra-property-image
+          in: header
+          description: The extra property of image (Just for example)
+          schema:
+            type: string
+        - name: x-extra-property-flavor
+          in: header
+          description: The extra property of flavor (Just for example)
+          schema:
+            type: string
+        - name: x-extra-property-gpfs01-mount-path
+          in: header
+          description: 
+          schema:
+            type: string
+        - name: x-extra-property-gpfs02-mount-path
+          in: header
+          description: 
+          schema:
+            type: string
+        - name: x-extra-property-env
+          in: header
+          description: env 參數
+          schema:
+            type: string
+            example: '[{"TASK_ID":"gpu_burn"},{"testkey1":"testvalue1"}]'
+        - name: x-extra-property-command
+          in: header
+          description: command
+          schema:
+            type: string
+            example: 'su test /home/test/run.sh'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: body
+        content:
+          application/json:
+            schema:
+              required:
+              - name
+              - project
+              - solution
+              type: object
+              properties:
+                project:
+                  type: integer
+                desc:
+                  type: string
+                  example: Description (optional)
+                solution:
+                  type: integer
+                name:
+                  type: string
+                  example: TestSite (required)
+      responses:
+        201:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SiteSerializer' 
+  /sites/{site_id}/:
+    get:
+      tags:
+      - site
+      summary: Get details of a site
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                 $ref: '#/components/schemas/SiteSerializer'
+    delete:
+      tags:
+      - site
+      summary: Delete a site
+      description: Delete a site
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
+    put:
+      tags:
+      - site
+      summary: Update site extra-property
+      description: Update site extra-property
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - name: x-extra-property-flavor
+          in: header
+          description: The extra property of flavor (Just for example)
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                 $ref: '#/components/schemas/SiteDetailSerializer'
+    patch:
+      tags:
+      - site
+      summary: Patch details of a site
+      description: Patch details of a site
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: body
+        content:
+          application/json:
+            schema:
+              properties:
+                desc:
+                  type: string
+                  description: Site description
+                termination_protection:
+                  type: boolean
+                  description: Site termination protection
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SiteDetailSerializer'
+  /sites/{site_id}/container/:
+    get:
+      tags:
+      - site
+      summary: Get site detail of containers
+      description: Get site detail of containers
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContainerSerializer'
+  /sites/{site_id}/container/action/:
+    put:
+      tags:
+      - site
+      summary: Execute an action to a pod
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: Request body
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ContainerActionData'
+            examples:
+              associateIP example:
+                summary: Example with associateIP
+                value:
+                  action: associateIP
+                  pod_name: string
+                  ports: [{targetPort: 5000}]
+              disassociateIP example:
+                summary: Example with disassociateIP
+                value:
+                  action: disassociateIP
+                  pod_name: string
+                  ports: [{targetPort: 5000}]
+        required: true
+      responses:
+        202:
+          description: Accepted
+          content: {}
+  /sites/{site_id}/container/logs/:
+    get:
+      tags:
+      - site
+      summary: Get logs of a container from a kubernetes site
+      description: Get logs of a container from a kubernetes site
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - name: pod_name
+          in: query
+          description: Pod name
+          required: true
+          schema:
+            type: string
+        - name: container_name
+          in: query
+          description: Container name
+          required: true
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: 'Aug 14 06:51:45 localhost dhclient: DHCPACK of 192.168.111.42
+                    from 192.168.111.4'
+  /sites/{site_id}/container/gpu/:
+    get:
+      tags:
+      - site
+      summary: Get GPU utilization of a pod
+      description: Get GPU utilization of a pod
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - name: pod_name
+          in: query
+          description: Pod name
+          required: true
+          schema:
+            type: string
+        - name: begin_time
+          in: query
+          description: Default is two hours before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the util before the end time. Default is now.
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GPUUtilSerializer'
+  /sites/{site_id}/container/gpu_memory/:
+    get:
+      tags:
+      - site
+      summary: Get gpu memory utilization of a pod
+      description: Get gpu memory utilization of a pod
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - name: pod_name
+          in: query
+          description: Pod name
+          required: true
+          schema:
+            type: string
+        - name: begin_time
+          in: query
+          description: Default is two hours before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the util before the end time. Default is now.
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ContainerGPUMemoryUtilSerializer'
+  /sites/{site_id}/container/cpu/:
+    get:
+      tags:
+      - site
+      summary: Get CPU utilization of a pod
+      description: Get CPU utilization of a pod
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - name: pod_name
+          in: query
+          description: Pod name
+          required: true
+          schema:
+            type: string
+        - name: begin_time
+          in: query
+          description: Default is two hours before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the util before the end time. Default is now.
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ContainerCPUUtilSerializer'
+  /sites/{site_id}/container/memory/:
+    get:
+      tags:
+      - site
+      summary: Get memory utilization of a pod
+      description: Get memory utilization of a pod
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - name: pod_name
+          in: query
+          description: Pod name
+          required: true
+          schema:
+            type: string
+        - name: begin_time
+          in: query
+          description: Default is two hours before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the util before the end time. Default is now.
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ContainerMemoryUtilSerializer'
+  /sites/{site_id}/container/disk/:
+    get:
+      tags:
+      - site
+      summary: Get disk utilization of a pod
+      description: Get disk utilization of a pod
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - name: pod_name
+          in: query
+          description: Pod name
+          required: true
+          schema:
+            type: string
+        - name: meter_name
+          in: query
+          description: Query meter name
+          required: true
+          schema:
+            type: string
+            enum:
+            - disk_read_bytes_rate
+            - disk_write_bytes_rate
+        - name: begin_time
+          in: query
+          description: Default is two hours before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the util before the end time. Default is now.
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ContainerIOUtilSerializer'
+              examples:
+                disk_read_bytes_rate:
+                  summary: disk read bytes rate
+                  value:
+                    [
+                      {
+                        "disk_read_bytes_rate": "99.2",
+                        "timestamp": "2018-09-25T09:55:00Z",
+                        "unit": "B/s"
+                      }
+                    ]
+                disk_write_bytes_rate:
+                  summary: disk write bytes rate
+                  value:
+                    [
+                      {
+                        "disk_write_bytes_rate": "113.6",
+                        "timestamp": "2018-09-25T09:55:00Z",
+                        "unit": "B/s"
+                      }
+                    ]
+  /sites/{site_id}/container/net/:
+    get:
+      tags:
+      - site
+      summary: Get network utilization of a pod
+      description: Get network utilization of a pod
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - name: pod_name
+          in: query
+          description: Pod name
+          required: true
+          schema:
+            type: string
+        - name: meter_name
+          in: query
+          description: Query meter name
+          required: true
+          schema:
+            type: string
+            enum:
+            - network_incoming_bytes_rate
+            - network_outgoing_bytes_rate
+        - name: begin_time
+          in: query
+          description: Default is two hours before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the util before the end time. Default is now.
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ServerNetworkIncomingSerializer'
+              examples:
+                network_read_bytes_rate:
+                  summary: network read bytes rate
+                  value:
+                    [
+                      {
+                        "network_incoming_bytes_rate": "589.1",
+                        "timestamp": "2018-09-25T09:55:00Z",
+                        "unit": "B/s"
+                      }
+                    ]
+                network_write_bytes_rate:
+                  summary: network write bytes rate
+                  value:
+                    [
+                      {
+                        "network_outgoing_bytes_rate": "112.4",
+                        "timestamp": "2018-09-25T09:55:00Z",
+                        "unit": "B/s"
+                      }
+                    ]
+  /jobs/:
+    get:
+      tags:
+      - job
+      summary: List jobs
+      description: List jobs
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - name: tag
+          in: query
+          description: Tag for exclude filter
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/JobAbstrationSerializer'
+    post:
+      tags:
+      - job
+      summary: Create job
+      description: List jobs
+      parameters:
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: Request body
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WriteJobData'
+        required: true
+      responses:
+        201:
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobAbstrationSerializer'
+  /jobs/{job_id}/:
+    get:
+      tags:
+      - job
+      summary: Get details of a job
+      description: Get details of a job
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobAbstrationDetailSerializer'
+    delete:
+      tags:
+      - job
+      summary: Delete a job
+      description: Delete a job
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
+    patch:
+      tags:
+      - job
+      summary: Update a Job
+      description: Update a Job
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: Request body
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WriteJobDetailData'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobAbstrationDetailSerializer'
+  /jobs/{job_id}/runs/:
+    get:
+      tags:
+      - job
+      summary: List job runs
+      description: List job runs
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RunSerializer'
+  /jobs/{job_id}/runs/{run_id}/:
+    get:
+      tags:
+      - job
+      summary: Get a specific run
+      description: Get a specific run
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - $ref: '#/components/parameters/RunIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RunSerializer'
+  /jobs/{job_id}/runs/{run_id}/gpu/:
+    get:
+      tags:
+      - job
+      summary: Get GPU utilization of a run
+      description: Get GPU utilization of a run
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - $ref: '#/components/parameters/RunIDParam'
+        - name: begin_time
+          in: query
+          description: Default is two hours before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the util before the end time. Default is now.
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/JobGPUUtilSerializer'
+  /jobs/{job_id}/runs/{run_id}/gpu_memory/:
+    get:
+      tags:
+      - job
+      summary: Get gpu memory utilization of a run
+      description: Get gpu memory utilization of a run
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - $ref: '#/components/parameters/RunIDParam'
+        - name: begin_time
+          in: query
+          description: Default is two hours before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the util before the end time. Default is now.
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/JobGPUMemoryUtilSerializer'
+  /jobs/{job_id}/runs/{run_id}/cpu/:
+    get:
+      tags:
+      - job
+      summary: Get CPU utilization of a run
+      description: Get CPU utilization of a run
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - $ref: '#/components/parameters/RunIDParam'
+        - name: begin_time
+          in: query
+          description: Default is two hours before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the util before the end time. Default is now.
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/JobCPUUtilSerializer'
+  /jobs/{job_id}/runs/{run_id}/memory/:
+    get:
+      tags:
+      - job
+      summary: Get memory utilization of a run
+      description: Get memory utilization of a run
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - $ref: '#/components/parameters/RunIDParam'
+        - name: begin_time
+          in: query
+          description: Default is two hours before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the util before the end time. Default is now.
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/JobMemoryUtilSerializer'
+  /jobs/{job_id}/runs/{run_id}/disk/:
+    get:
+      tags:
+      - job
+      summary: Get disk utilization of a run
+      description: Get disk utilization of a run
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - $ref: '#/components/parameters/RunIDParam'
+        - name: begin_time
+          in: query
+          description: Default is two hours before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the util before the end time. Default is now.
+          schema:
+            type: string
+        - name: meter_name
+          in: query
+          description: Query meter name
+          required: true
+          schema:
+            type: string
+            enum:
+            - disk_read_bytes_rate
+            - disk_write_bytes_rate
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/JobIOUtilSerializer'
+              examples:
+                disk_read_bytes_rate:
+                  summary: disk read bytes rate
+                  value:
+                    [
+                      {
+                        "pod_name": "demo-job-run-pod",
+                        "utilizations": [
+                          {
+                            "disk_read_bytes_rate": "99.2",
+                            "timestamp": "2018-09-25T09:55:00Z",
+                            "unit": "B/s"
+                          }
+                        ]
+                      }
+                    ]
+                disk_write_bytes_rate:
+                  summary: disk write bytes rate
+                  value:
+                    [
+                      {
+                        "pod_name": "demo-job-run-pod",
+                        "utilizations": [
+                          {
+                            "disk_write_bytes_rate": "113.6",
+                            "timestamp": "2018-09-25T09:55:00Z",
+                            "unit": "B/s"
+                          }
+                        ]
+                      }
+                    ]
+  /jobs/{job_id}/{action}/:
+    post:
+      tags:
+      - job
+      summary: start or stop a job
+      description: start or stop a job
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - name: action
+          in: path
+          required: true
+          schema:
+            type: string
+            enum:
+            - submit
+            - stop
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        201:
+          description: Created
+          content: {}
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-api-key
+  schemas:
+    GroupSerializer:
+      type: object
+      properties:
+        matchLabels:
+          type: array
+          items:
+            type: string
+        id:
+          format: int64
+          type: integer
+        name:
+          type: string
+        platform:
+          type: string
+        transparent_mode:
+          type: boolean
+      required:
+        - matchLabels
+        - id
+        - name
+        - platform
+        - transparent_mode
+    GroupDetailSerializer:
+      type: object
+      properties:
+        desc:
+          type: string
+        id:
+          format: int64
+          type: integer
+        matchLabels:
+          type: array
+          items:
+            type: string
+            example: twsc
+        name:
+          type: string
+          example: ENT123456
+        status:
+          type: string
+          example: Ready
+        status_reason:
+          type: string
+        tm_uuid:
+          type: string
+        transparent_mode:
+          type: boolean
+          example: false
+        uuid:
+          type: string
+          format: uuid
+      required:
+        - desc
+        - id
+        - matchLabels
+        - name
+        - status
+        - status_reason
+        - tm_uuid
+        - transparent_mode
+        - uuid
+    ProjectQuotaSerializer:
+      required:
+      - cpu
+      - gpu
+      - memory
+      - project
+      type: object
+      properties:
+        project:
+          $ref: '#/components/schemas/GroupSerializer'
+        gpu:
+          type: integer
+          format: int64
+        cpu:
+          type: integer
+          format: int64
+        memory:
+          type: integer
+          format: int64
+        ipvs_port:
+          type: integer
+          format: int64
+        floatingip:
+          type: integer
+          format: int32
+    FlavorDetailSerializer:
+      required:
+      - desc
+      - id
+      - metadata
+      - name
+      - platform
+      - resource
+      type: object
+      properties:
+        desc:
+          type: string
+        id:
+          type: integer
+          format: int64
+        metadata:
+          type: object
+          properties: {}
+        name:
+          type: string
+        platform:
+          type: string
+        is_enabled:
+          type: boolean
+        is_public:
+          type: boolean
+        reason:
+          type: string
+        labels:
+          type: array
+          items:
+            type: string
+        resource:
+          type: object
+          properties:
+            cpu:
+              type: integer
+              format: int64
+            memory:
+              type: integer
+              format: int64
+            disk:
+              type: integer
+              format: int64
+            gpu:
+              type: number
+              format: float
+            shm:
+              type: integer
+              format: int64
+            nic:
+              type: integer
+              format: int64
+    FlavorSerializer:
+      required:
+      - id
+      - metadata
+      - name
+      - platform
+      - resource
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        metadata:
+          type: object
+          properties: 
+            gpu_type:
+              type: string
+        name:
+          type: string
+        platform:
+          type: string
+        is_public:
+          type: boolean
+        labels:
+          type: array
+          items:
+            type: string
+        is_enabled:
+          type: boolean
+        reason:
+          type: string
+        resource:
+          type: object
+          properties:
+            cpu:
+              type: integer
+              format: int64
+            memory:
+              type: integer
+              format: int64
+            disk:
+              type: integer
+              format: int64
+            gpu:
+              type: integer
+              format: int64
+            nic:
+              type: integer
+              format: int64
+            shm:
+              type: integer
+              format: int64
+    SiteSerializer:
+      required:
+      - callback
+      - create_time
+      - id
+      - is_preemptive
+      - name
+      - platform
+      - progress
+      - project
+      - public_ip
+      - solution
+      - status
+      - termination_protection
+      - user
+      type: object
+      properties:
+        callback:
+          type: string
+        create_time:
+          type: string
+          format: date-time
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        platform:
+          type: string
+        progress:
+          type: integer
+          format: int64
+        project:
+          type: integer
+          format: int64
+        public_ip:
+          type: string
+        solution:
+          type: integer
+          format: int64
+        status:
+          type: string
+        is_preemptive:
+          type: boolean
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+        servers:
+          type: array
+          items:
+            type: object
+            properties:
+              flavor_id:
+                type: integer
+                format: int64
+              id:
+                type: integer
+                format: int64
+              hostname:
+                type: string
+              status:
+                type: string
+        termination_protection:
+          type: boolean
+    SiteDetailSerializer:
+      required:
+      - callback
+      - create_time
+      - desc
+      - id
+      - is_preemptive
+      - name
+      - platform
+      - progress
+      - project
+      - public_ip
+      - servers
+      - solution
+      - status
+      - status_reason
+      - termination_protection
+      - user
+      type: object
+      properties:
+        callback:
+          type: string
+        create_time:
+          type: string
+          format: date-time
+        desc:
+          type: string
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        platform:
+          type: string
+        progress:
+          type: integer
+          format: int64
+        project:
+          type: integer
+          format: int64
+        public_ip:
+          type: string
+        servers:
+          type: array
+          items:
+            type: object
+            properties:
+              flavor_id:
+                type: integer
+                format: int64
+              id:
+                type: integer
+                format: int64
+              hostname:
+                type: string
+              status:
+                type: string
+        solution:
+          type: integer
+          format: int64
+        status:
+          type: string
+        status_reason:
+          type: string
+        is_preemptive:
+          type: boolean
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+        termination_protection:
+          type: boolean
+    UserSerializer:
+      required:
+      - display_name
+      - email
+      - id
+      - username
+      type: object
+      properties:
+        id:
+          type: string
+        display_name:
+          type: string
+        username:
+          type: string
+        email:
+          type: string
+    ContainerSerializer:
+      type: object
+      properties:
+        Pod:
+          type: array
+          items:
+            $ref: '#/components/schemas/PodObject'
+        Service:
+          type: array
+          items:
+            $ref: '#/components/schemas/ServiceObject'
+        ReplicationController:
+          type: array
+          items:
+            $ref: '#/components/schemas/RCObject'
+        Deployment:
+          type: array
+          items:
+            $ref: '#/components/schemas/RCObject'
+    PodObject:
+      type: object
+      properties:
+        name:
+          type: string
+        status:
+          type: string
+        reason:
+          type: string
+        message:
+          type: string
+        pod_ip:
+          type: string
+        flavor:
+          type: string
+        host_ip:
+          type: string
+        hostname:
+          type: string
+        public_ip:
+          type: string
+        container:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              image:
+                type: string
+              ports:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    protocol:
+                      type: string
+                    port:
+                      type: integer
+              volumes:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                    path:
+                      type: string
+                    mountPath:
+                      type: string
+                    readOnly:
+                      type: boolean
+        annotations:
+          type: object
+          properties:
+            key:
+              type: string
+              example: value
+    ServiceObject:
+      type: object
+      properties:
+        name:
+          type: string
+        net_type:
+          type: string
+        cluster_ip:
+          type: string
+        public_ip:
+          type: string
+        association:
+          type: array
+          items:
+            type: string
+        annotations:
+          type: object
+          properties:
+            key:
+              type: string
+              example: value
+        ports:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: integer
+              target_port:
+                type: integer
+              protocol:
+                type: string
+              port:
+                type: integer
+              node_port:
+                type: integer
+    RCObject:
+      type: object
+      properties:
+        name:
+          type: string
+        desired:
+          type: integer
+        current:
+          type: integer
+        replicas:
+          type: integer
+        annotations:
+          type: object
+          properties:
+            key:
+              type: string
+              example: value
+        history:
+          type: array
+          items:
+            $ref: '#/components/schemas/HistoryObj'
+    HistoryObj:
+      type: object
+      properties:
+        revision:
+          type: string
+        change-cause:
+          type: string
+    ContainerActionData:
+      required:
+      - action
+      - pod_name
+      - ports
+      type: object
+      properties:
+        pod_name:
+          type: string
+        action:
+          type: string
+          description: The action for a pod.
+          enum:
+            - associateIP
+            - disassociateIP
+        ports:
+          description: A list of port mapping
+          type: array
+          items:
+            $ref: '#/components/schemas/ServicePortData'
+    ServicePortData:
+      required:
+      - targetPort
+      type: object
+      properties:
+        targetPort:
+          type: integer
+          format: int64
+    GPUUtilSerializer:
+      required:
+      - gpu_util
+      - timestamp
+      - unit
+      type: object
+      properties:
+        gpu_util:
+          type: string
+          example: "66.2"
+        timestamp:
+          type: string
+          format: date-time
+        unit:
+          type: string
+    ContainerMemoryUtilSerializer:
+      required:
+      - memory_usage
+      - timestamp
+      - unit
+      type: object
+      properties:
+        memory_usage:
+          type: string
+          example: "1102.3"
+        timestamp:
+          type: string
+          format: date-time
+        unit:
+          type: string
+    ContainerGPUMemoryUtilSerializer:
+      required:
+      - timestamp
+      - unit
+      type: object
+      properties:
+        memory_usage:
+          type: string
+          example: "1102.3"
+        timestamp:
+          type: string
+          format: date-time
+        unit:
+          type: string
+    ContainerCPUUtilSerializer:
+      required:
+      - cpu_util
+      - timestamp
+      - unit
+      type: object
+      properties:
+        cpu_util:
+          type: string
+          example: "66.2"
+        timestamp:
+          type: string
+          format: date-time
+        unit:
+          type: string
+    ContainerIOUtilSerializer:
+      required:
+      - timestamp
+      - unit
+      type: object
+      properties:
+        network_incoming_bytes_rate:
+          type: string
+        network_outgoing_bytes_rate:
+          type: string
+        disk_read_bytes_rate:
+          type: string
+        disk_write_bytes_rate:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+        unit:
+          type: string
+    ServerNetworkIncomingSerializer:
+      required:
+      - network_incoming_bytes_rate
+      - timestamp
+      - unit
+      type: object
+      properties:
+        network_incoming_bytes_rate:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+        unit:
+          type: string
+    JobAbstrationSerializer:
+      required:
+      - callback
+      - create_time
+      - id
+      - name
+      - project
+      - status
+      - tag
+      - type
+      - user
+      type: object
+      properties:
+        callback:
+          type: string
+        create_time:
+          type: string
+          format: date-time
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        project:
+          type: integer
+          format: int64
+        status:
+          type: string
+        tag:
+          type: string
+        type:
+          type: string
+          enum:
+          - SLURM:SINGULARITY
+          - KUBERNETES:DOCKER
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+    JobAbstrationDetailSerializer:
+      required:
+      - callback
+      - create_time
+      - id
+      - name
+      - project
+      - schedule
+      - status
+      - steps
+      - tag
+      - type
+      - user
+      type: object
+      properties:
+        callback:
+          type: string
+        create_time:
+          type: string
+          format: date-time
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        project:
+          type: integer
+          format: int64
+        steps:
+          type: array
+          items:
+            $ref: '#/components/schemas/JobStepSerializer'
+        schedule:
+          type: string
+        status:
+          type: string
+        tag:
+          type: string
+        type:
+          type: string
+          enum:
+          - SLURM:SINGULARITY
+          - KUBERNETES:DOCKER
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+    WriteJobData:
+      required:
+      - name
+      - project
+      - steps
+      - type
+      type: object
+      properties:
+        callback:
+          type: string
+          description: 自動停止任務的迴叫網址，預設為空
+        first_submit:
+          type: boolean
+          description: 自動運行任務旗標，預設為否
+        name:
+          type: string
+          description: Job name
+        project:
+          type: integer
+          format: int64
+          description: Project ID
+        schedule:
+          type: string
+          description: Run the job periodically with Cron format
+        tag:
+          type: string
+          description: 過濾用任務標籤，預設為空
+        type:
+          type: string
+          description: Job type
+          enum:
+          - KUBERNETES:DOCKER
+        steps:
+          type: array
+          items:
+            $ref: '#/components/schemas/WriteJobStepSerializer'
+    JobStepSerializer:
+      required:
+      - availability_zone
+      - command
+      - dependency_policy
+      - depends_on
+      - env
+      - flavor
+      - image
+      - runs
+      - stepname
+      - volumes
+      type: object
+      properties:
+        stepname:
+          type: string
+        availability_zone:
+          type: string
+        depends_on:
+          type: array
+          items:
+            type: string
+        dependency_policy:
+          type: string
+          enum:
+          - AFTEROK
+          - AFTERNOTOK
+          - AFTERANY
+        command:
+          type: string
+        env:
+          type: object
+          properties: {}
+        image:
+          type: string
+        flavor:
+          $ref: '#/components/schemas/JobFlavorSerializer'
+        runs:
+          type: integer
+          format: int32
+        slots:
+          type: integer
+          format: int32
+        volumes:
+          type: array
+          items:
+            $ref: '#/components/schemas/JobVolumeSerializer'
+    JobFlavorSerializer:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+    WriteJobStepSerializer:
+      required:
+      - flavor
+      - image
+      - stepname
+      type: object
+      properties:
+        stepname:
+          type: string
+          description: Step name
+        availability_zone:
+          type: string
+          description: Job
+        depends_on:
+          type: array
+          description: Specify the name of the steps on which this step depends. Only suppored by Slurm platform.
+          items:
+            type: string
+        dependency_policy:
+          type: string
+          description: The policy of the dependency
+          enum:
+          - AFTEROK
+          - AFTERNOTOK
+          - AFTERANY
+        command:
+          type: string
+          description: The command need to be executed in the image
+        env:
+          type: object
+          description: 任務容器環境變數，預設為{}
+          properties: {}
+        image:
+          type: string
+          description: The image used for this step
+        flavor:
+          type: integer
+          format: int32
+          description: Flavor ID
+        runs:
+          type: integer
+          format: int32
+          description: How many concurrent runs should be lauched at once
+        slots:
+          type: integer
+          format: int32
+          description: How many slotPerWorker should be lauched in single mpi worker
+        volumes:
+          type: array
+          items:
+            $ref: '#/components/schemas/WriteJobVolumeSerializer'
+    WriteJobDetailData:
+      type: object
+      properties:
+        callback:
+          description: 自動停止任務的迴叫網址
+          type: string
+        name:
+          description: Job name
+          type: string
+        schedule:
+          description: Run the job periodically with Cron format
+          type: string
+        # stepname:
+        #   description: Replace the stepname to the real stepname to which you want to update
+        #   type: object
+        #   properties:
+        #     availability_zone:
+        #       type: string
+        #     depends_on:
+        #       description: Specify the name of the steps on which this step depends
+        #       type: array
+        #       items:
+        #         type: string
+        #     dependency_policy:
+        #       description: The policy of the dependency
+        #       type: string
+        #       enum:
+        #       - AFTEROK
+        #       - AFTERNOTOK
+        #       - AFTERANY
+        #     image:
+        #       description: The image used for this step
+        #       type: string
+        #     command:
+        #       description: The command need to be executed in the image
+        #       type: string
+        #     env:
+        #       description: 任務容器環境變數
+        #       type: object
+        #       properties: {}
+        #     runs:
+        #       description: How many concurrent runs should be lauched at once
+        #       type: integer
+        #       format: int32
+        #     slots:
+        #       description: How many slotPerWorker should be lauched in single mpi worker
+        #       type: integer
+        #       format: int32
+        #     volumes:
+        #       type: array
+        #       items:
+        #         $ref: '#/components/schemas/WriteJobVolumeSerializer'
+        tag:
+          description: 過濾用任務標籤
+          type: string
+    WriteJobVolumeSerializer:
+      required:
+      - mountPath
+      - type
+      type: object
+      properties:
+        server:
+          description: The hostname or IP address of an NFS server.(This value takes effect only on the type NFS)
+          type: string
+        path:
+          description: mount source(This value takes effect on the types NFS and HOSTPATH)
+          type: string
+        subpath:
+          description: subpath mount source(This value takes effect on HOSTPATH)
+          type: string
+        bucket:
+          description: Ceph bucket Name(This value takes effect only on the type CEPH)
+          type: string
+        mountPath:
+          description: mount destination
+          type: string
+        type:
+          description: job name
+          type: string
+          enum:
+          - HOSTPATH
+          - NFS
+          - CEPH
+    RunSerializer:
+      required:
+      - count
+      - results
+      type: object
+      properties:
+        count:
+          type: integer
+          format: int64
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/RunDetailSerializer'
+    RunDetailSerializer:
+      required:
+      - create_time
+      - end_time
+      - id
+      - start_time
+      - status
+      - stepname
+      type: object
+      properties:
+        create_time:
+          type: string
+          format: date-time
+        end_time:
+          type: string
+          format: date-time
+        id:
+          type: integer
+          format: int64
+        stepname:
+          type: string
+        start_time:
+          type: string
+          format: date-time
+        status:
+          type: string
+    JobGPUUtilSerializer:
+      required:
+      - pod_name
+      - utilizations
+      type: object
+      properties:
+        pod_name:
+          type: string
+        utilizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/GPUUtilSerializer'
+    JobGPUMemoryUtilSerializer:
+      required:
+      - pod_name
+      - utilizations
+      type: object
+      properties:
+        pod_name:
+          type: string
+        utilizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContainerGPUMemoryUtilSerializer'
+    JobCPUUtilSerializer:
+      required:
+      - pod_name
+      - utilizations
+      type: object
+      properties:
+        pod_name:
+          type: string
+        utilizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContainerCPUUtilSerializer'
+    JobMemoryUtilSerializer:
+      required:
+      - pod_name
+      - utilizations
+      type: object
+      properties:
+        pod_name:
+          type: string
+        utilizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContainerMemoryUtilSerializer'
+    JobIOUtilSerializer:
+      required:
+      - pod_name
+      - utilizations
+      type: object
+      properties:
+        pod_name:
+          type: string
+        utilizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContainerIOUtilSerializer'
+    site_extra_prop:
+      type: object
+      properties:
+        static-ip:
+          type: array
+          items:
+            type: string
+        locale:
+          type: array
+          items:
+            type: string
+        image:
+          type: array
+          items:
+            type: string
+        private-network:
+          type: array
+          items:
+            type: string
+        timezone:
+          type: array
+          items:
+            type: string
+        system-volume-type:
+          type: array
+          items:
+            type: string
+        floating-ip:
+          type: array
+          items:
+            type: string
+        flavor:
+          type: array
+          items:
+            type: string
+        volume-type:
+          type: array
+          items:
+            type: string
+        password:
+          type: string
+        ports:
+          type: string
+        volume-size:
+          type: string
+  parameters:
+    ProjectInQueryParam:
+      name: project
+      in: query
+      description: 需要project ID才能請求
+      required: true
+      schema:
+        type: integer
+    ProjectInPathParam:
+      name: project_id
+      in: path
+      description: 專案ID
+      required: true
+      schema:
+        type: integer
+    SiteIDParam:
+      name: site_id
+      in: path
+      description: Site ID
+      required: true
+      schema:
+        type: integer
+    FlavorIDParam:
+      name: flavor_id
+      in: path
+      description: flavor ID
+      required: true
+      schema:
+        type: integer
+    JobIDParam:
+      name: job_id
+      in: path
+      description: Job ID
+      required: true
+      schema:
+        type: integer
+        format: int32
+    RunIDParam:
+      name: run_id
+      in: path
+      description: Run ID
+      required: true
+      schema:
+        type: integer
+        format: int32
+    SolutionsIDParam:
+      name: solutions_id
+      in: path
+      description: 方案ID
+      required: true
+      schema:
+        type: integer
+    ApiHostParam:
+      name: x-api-host
+      in: header
+      description: 認證必要參數
+      required: true
+      schema:
+        type: string
+        default: k8s-taichung-default
+      examples:
+        production:
+          summary: production
+          value: k8s-taichung-default
+        staging:
+          summary: staging
+          value: k8s-taichung-default
