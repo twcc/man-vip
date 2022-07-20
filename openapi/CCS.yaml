@@ -210,12 +210,10 @@ paths:
             type: string
         - name: x-extra-property-gpfs01-mount-path
           in: header
-          description: 
           schema:
             type: string
         - name: x-extra-property-gpfs02-mount-path
           in: header
-          description: 
           schema:
             type: string
         - name: x-extra-property-env
@@ -1661,6 +1659,26 @@ components:
           - KUBERNETES:DOCKER
         user:
           $ref: '#/components/schemas/UserSerializer'
+    JobVolumeSerializer:
+      required:
+      - mountPath
+      - type
+      type: object
+      properties:
+        server:
+          type: string
+        path:
+          type: string
+        subpath:
+          type: string
+        mountPath:
+          type: string
+        type:
+          type: string
+          enum:
+          - HOSTPATH
+          - NFS
+          - CEPH
     JobAbstrationDetailSerializer:
       required:
       - callback
