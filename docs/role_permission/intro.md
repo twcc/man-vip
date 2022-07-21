@@ -15,7 +15,7 @@ sidebar_position: 1
 
 兩平台的使用者角色可互相對應，對應關係如下，其中 TWS會員服務系統的計畫建立者、計畫管理員兩種角色，在 TWCC 皆屬於租戶管理員：
 
-|角色|  [<img style={{width:50+'px', height:10+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_70d96777dde1a5c9760751788d5e5d90.png' />](https://iservice.nchc.org.tw/nchc_service/index.php) | [<img style={{width:50+'px', height:10+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_37a176a14aad4b6919b50a13c355774d.jpg' />](https://www.twcc.ai/)|
+|角色|  [<img style={{width:100+'px', height:40+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_70d96777dde1a5c9760751788d5e5d90.png' />](https://iservice.nchc.org.tw/nchc_service/index.php) | [<img style={{width:100+'px', height:20+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_37a176a14aad4b6919b50a13c355774d.jpg' />](https://www.twcc.ai/)|
 | -------- | -------- |-------- |
 |  1  | 計畫建立者    |**租戶管理員**|
 |  2  |  計畫管理員   |**租戶管理員**|
