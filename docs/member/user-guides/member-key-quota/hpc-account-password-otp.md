@@ -33,7 +33,6 @@ import TabItem from '@theme/TabItem';
 
 
 :::info
-**附註：**
 1. 主機帳號長度 8-12 個字元，限定小寫英數混合，首字英文。
 2. 主機密碼長度至少需 12 字元，不可過於簡單
 3. 主機密碼可為數字、英文字母(大小寫視為 2 種)、其他特殊字元等 4 種型式，至少須包含 3 種。
@@ -43,8 +42,6 @@ import TabItem from '@theme/TabItem';
 
 
 :::caution
-**重要：**
-
 TWCC 會員與主機密碼最長有效期限為 180 天。
 當密碼即將到期前（期前七天、前三天，當天）會寄發密碼提醒通知，請用戶撥冗登入 [<ins>TWS 會員中心</ins>](https://member.twcc.ai/)進行變更。
 :::
@@ -122,7 +119,7 @@ TWCC 會員與主機密碼最長有效期限為 180 天。
 
 
 :::info
-**附註：** 其他作業系統請參考[<ins>此網頁</ins>](https://alternativeto.net/software/winauth/)下載其他軟體。
+其他作業系統請參考[<ins>此網頁</ins>](https://alternativeto.net/software/winauth/)下載其他軟體。
 :::
 
 
@@ -140,7 +137,7 @@ TWCC 會員與主機密碼最長有效期限為 180 天。
 
 
 :::info
-**附註：** 除了 Microsoft Authenticator，其他應用程式可參考[<ins>此網頁</ins>](https://alternativeto.net/software/microsoft-authenticator/)。
+除了 Microsoft Authenticator，其他應用程式可參考[<ins>此網頁</ins>](https://alternativeto.net/software/microsoft-authenticator/)。
 :::
 
 

@@ -18,7 +18,6 @@ import TabItem from '@theme/TabItem';
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fa750b6f934afc81dfd47057df3f6747.png)
 
 :::info
-**附註：** 
 若登入後畫面空白、異常，可能是以下問題：
 1. 未申請帳號，請[<ins>先註冊使用帳號</ins>](https://member.twcc.ai/)。
 2. 未加入任何已啟用 TWCC 服務的專案，請您通知租戶管理員將您加入專案，或洽詢 TWS 業務建立新專案。
@@ -38,7 +37,7 @@ import TabItem from '@theme/TabItem';
 <span>&#10102;</span> 使用者身份：身分可能為「租戶管理員」或是「租戶使用者」，除名稱不同外，圖示亦有分別
 
 :::info
-**附註：** 租戶管理員與租戶使用者使用 TWCC 之功能權限差異，請參考[<ins>使用者權限比較</ins>](https://man.twcc.ai/@twccdocs/role-main-zh)。
+租戶管理員與租戶使用者使用 TWCC 之功能權限差異，請參考[<ins>使用者權限比較</ins>](https://man.twcc.ai/@twccdocs/role-main-zh)。
 :::
 
 <span>&#10103;</span> 專案名稱、代碼
