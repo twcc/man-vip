@@ -63,36 +63,57 @@ const config = {
         id: "apiDocs",
         docsPluginId: "classic",
         config: {
-          vcsapi: {
-            specPath: "openapi/vcsapi.yaml",
+          CCS: {
+            specPath: "openapi/CCS.yaml",
+            outputDir: "docs/api/CCS",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag"
+            }
+          },
+          Ceph: {
+            specPath: "openapi/Ceph.yaml",
+            outputDir: "docs/api/Ceph",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag"
+            }
+          },
+          Common: {
+            specPath: "openapi/Common.yaml",
+            outputDir: "docs/api/Common",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag"
+            }
+          },
+          Harbor: {
+            specPath: "openapi/Harbor.yaml",
+            outputDir: "docs/api/Harbor",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag"
+            }
+          },
+          Slurm: {
+            specPath: "openapi/Slurm.yaml",
+            outputDir: "docs/api/Slurm",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag"
+            }
+          },
+          VCS: {
+            specPath: "openapi/VCS.yaml",
             outputDir: "docs/api/VCS",
             sidebarOptions: {
               groupPathsBy: "tag",
-            },
-          },
-          ccsapi: {
-            specPath: "openapi/ccsapi.yaml",
-            outputDir: "docs/api/CCS",
-          },
-          slurmapi: {
-            specPath: "openapi/slurm.yaml",
-            outputDir: "docs/api/Slurm",
-          },
-          harborapi: {
-            specPath: "openapi/harbor.yaml",
-            outputDir: "docs/api/Harbor",
-          },
-          cephapi: {
-            specPath: "openapi/ceph.yaml",
-            outputDir: "docs/api/Ceph",
-          },
-          commonapi: {
-            specPath: "openapi/common.yaml",
-            outputDir: "docs/api/Common",
-          },
-        },
-      },
-    ],
+              categoryLinkSource: "tag"
+            }
+          }
+        }
+      }
+    ]
   ],
   themes: ["docusaurus-theme-openapi-docs"],
   presets: [
@@ -104,6 +125,8 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           remarkPlugins: [require("mdx-mermaid")],
           editUrl: ({ locale, versionDocsDirPath, docPath }) => set_edit_url(locale, versionDocsDirPath, docPath),
+          docLayoutComponent: "@theme/DocPage",
+          docItemComponent: "@theme/ApiItem" // Derived from docusaurus-theme-openapi
         },
         pages: {},
         blog: false,
@@ -139,10 +162,9 @@ const config = {
             position: "left",
           },
           {
-            type: "docSidebar",
-            sidebarId: "api",
             label: "API",
             position: "left",
+            to: "/docs/api/CCS"
           },
           {
             type: "docSidebar",
