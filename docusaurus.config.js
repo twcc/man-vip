@@ -60,7 +60,7 @@ const config = {
     [
       "docusaurus-plugin-openapi-docs",
       {
-        id: "openapi",
+        id: "apiDocs",
         docsPluginId: "classic",
         config: {
           CCS: {

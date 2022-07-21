@@ -256,7 +256,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SiteSerializer' 
+                $ref: '#/components/schemas/SiteSerializer'
   /sites/{site_id}/:
     get:
       tags:
@@ -1172,7 +1172,7 @@ components:
           format: int64
         metadata:
           type: object
-          properties: 
+          properties:
             gpu_type:
               type: string
         name:

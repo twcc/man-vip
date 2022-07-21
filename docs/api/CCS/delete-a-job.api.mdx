@@ -3,7 +3,7 @@ id: delete-a-job
 sidebar_label: Delete a job
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["job"],"description":"Delete a job","parameters":[{"name":"job_id","in":"path","description":"Job ID","required":true,"schema":{"type":"integer","format":"int32"}},{"name":"x-api-host","in":"header","description":"認證必要參數","required":true,"schema":{"type":"string","default":"k8s-taichung-default"},"examples":{"production":{"summary":"production","value":"k8s-taichung-default"},"staging":{"summary":"staging","value":"k8s-taichung-default"}}}],"responses":{"204":{"description":"No Content","content":{}}},"method":"delete","path":"/jobs/{job_id}/","servers":[{"url":"/"}],"security":[{"ApiKeyAuth":[]}],"securitySchemes":{"ApiKeyAuth":{"type":"apiKey","in":"header","name":"x-api-key"}},"info":{"version":"1.3.0","title":"CCS API"},"postman":{"name":"Delete a job","description":{"content":"Delete a job","type":"text/plain"},"url":{"path":["jobs",":job_id",""],"host":["{{baseUrl}}"],"query":[],"variable":[{"disabled":false,"description":{"content":"(Required) Job ID","type":"text/plain"},"type":"any","value":"","key":"job_id"}]},"header":[{"disabled":false,"description":{"content":"(Required) 認證必要參數","type":"text/plain"},"key":"x-api-host","value":""}],"method":"DELETE"}}
+api: {"tags":["job"],"description":"Delete a job","parameters":[{"name":"job_id","in":"path","description":"Job ID","required":true,"schema":{"type":"integer","format":"int32"}},{"name":"x-api-host","in":"header","description":"認證必要參數","required":true,"schema":{"type":"string","default":"k8s-taichung-default"},"examples":{"production":{"summary":"production","value":"k8s-taichung-default"},"staging":{"summary":"staging","value":"k8s-taichung-default"}}}],"responses":{"204":{"description":"No Content","content":{}}},"method":"delete","path":"/jobs/{job_id}/","servers":[{"description":"production url","url":"https://apigateway.twcc.ai/api/v3/k8s-taichung-default/"},{"description":"staging url","url":"https://apigateway.twcc.tw/api/v3/k8s-taichung-default/"}],"security":[{"ApiKeyAuth":[]}],"securitySchemes":{"ApiKeyAuth":{"type":"apiKey","in":"header","name":"x-api-key"}},"info":{"version":"1.3.0","title":"CCS API"},"postman":{"name":"Delete a job","description":{"content":"Delete a job","type":"text/plain"},"url":{"path":["jobs",":job_id",""],"host":["{{baseUrl}}"],"query":[],"variable":[{"disabled":false,"description":{"content":"(Required) Job ID","type":"text/plain"},"type":"any","value":"","key":"job_id"}]},"header":[{"disabled":false,"description":{"content":"(Required) 認證必要參數","type":"text/plain"},"key":"x-api-host","value":""}],"method":"DELETE"}}
 sidebar_class_name: "delete api-method"
 info_path: docs/api/CCS/ccs-api
 ---
@@ -11,7 +11,6 @@ info_path: docs/api/CCS/ccs-api
 import ParamsItem from "@theme/ParamsItem";
 import SchemaItem from "@theme/SchemaItem"
 import ApiTabs from "@theme/ApiTabs";
-import SchemaTabs from "@theme/SchemaTabs";
 import TabItem from "@theme/TabItem";
 
 ## Delete a job
