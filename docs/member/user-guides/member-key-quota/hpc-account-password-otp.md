@@ -147,5 +147,5 @@ TWCC 會員與主機密碼最長有效期限為 180 天。
 :::info
 **聯絡我們：**
 - 業務聯絡 | <ins><a href = "mailto: sales@twsc.io">sales@twsc.io</a></ins>
-- 客戶服務及支援| <ins><a href = "mailto: sales@twsc.io">service@twsc.io</a></ins>
+- 客戶服務及支援 | <ins><a href = "mailto: sales@twsc.io">service@twsc.io</a></ins>
 :::

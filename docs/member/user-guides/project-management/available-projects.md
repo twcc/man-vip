@@ -30,5 +30,5 @@ import TabItem from '@theme/TabItem';
 :::info
 **聯絡我們：**
 - 業務聯絡 | <ins><a href = "mailto: sales@twsc.io">sales@twsc.io</a></ins>
-- 客戶服務及支援| <ins><a href = "mailto: sales@twsc.io">service@twsc.io</a></ins>
+- 客戶服務及支援 | <ins><a href = "mailto: sales@twsc.io">service@twsc.io</a></ins>
 :::
