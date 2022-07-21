@@ -16,7 +16,7 @@ import TabItem from '@theme/TabItem';
 
 ### Step 1. 計畫細節頁面
 
-- 登入 [<ins>TWS</ins>](https://tws.twcc.ai/)後，<span>&#10102;</span> 點選「**會員中心**」:arrow_right: <span>&#10103;</span>「**計畫管理**」 :arrow_right: <span>&#10104;</span>「**我的計畫** 」:arrow_right: <span>&#10105;</span> 點選計畫
+- 登入 [<ins>TWS</ins>](https://tws.twcc.ai/) 後，<span>&#10102;</span> 點選「**會員中心**」:arrow_right: <span>&#10103;</span>「**計畫管理**」 :arrow_right: <span>&#10104;</span>「**我的計畫** 」:arrow_right: <span>&#10105;</span> 點選計畫
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_07b4594f06f8839b7fc44205fe3b9dfa.png)
 
