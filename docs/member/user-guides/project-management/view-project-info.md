@@ -44,3 +44,34 @@ import TabItem from '@theme/TabItem';
 <span>&#10103;</span> 專案名稱、代碼
 
 <span>&#10104;</span> 點擊「會員中心」可檢視專案成員列表，並可編輯成員 (新增/刪除/設為管理員、一般成員)
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f293d8c1fac70ac4162b3f6756155c7b.png)
+
+<span>&#10105;</span> 點擊「資源列表」可檢視以下使用的資源
+
+- 儲存用量：高速檔案系統 (HFS) 之 /home 目錄 與 /work 目錄容量：
+    - 已使用容量
+    - 可使用容量
+    - 總儲存容量來源 (免費或加購)
+- 運算 & 分析與資料庫：已建立之資源服務數量
+- 網路與安全：已建立之資源服務數量
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_126c7a5c11c3f36d9f470826c17dfffe.png)
+
+<span>&#10106;</span> 點擊「用量資訊」，選擇服務後，可檢視各服務資源用量紀錄
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5720fe9874de02fe3ab2b069dcc15a76.png)
+
+<span>&#10107;</span> 點擊「額度資訊」，選擇服務後，可檢視各服務資源用量紀錄
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_50a039fc2e7721f8938ab575831ac944.png)
+
+
+
+:::info
+
+透過以上連結進入會員中心後，您可以檢視更多其他專案相關資訊：訂單、發票、服務啟用狀態、用量統計...等。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1d42d4eb2fd3397c85bba854e53721d5.png)
+
+:::
