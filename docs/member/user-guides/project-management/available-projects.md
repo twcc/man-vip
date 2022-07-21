@@ -19,8 +19,7 @@ import TabItem from '@theme/TabItem';
 
 
 
-:::danger
-
+:::info
 若無適用於 TWCC 的計畫，您可以：
   - 請計畫主持人 (建立者) 或租戶管理員，將您加入計畫，參考 [<ins>管理計畫成員</ins>](https://man.twcc.ai/@twsdocs/guide-service-manage-project-team-zh)
   - 或請您聯繫 TWS 業務，我們將深入了解您的使用需求，並協助您新增使用計畫與額度。

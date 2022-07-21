@@ -42,7 +42,7 @@ import TabItem from '@theme/TabItem';
 :::
 
 <span>&#10103;</span> 專案名稱、代碼
-
+<div></div>
 <span>&#10104;</span> 點擊「會員中心」可檢視專案成員列表，並可編輯成員 (新增/刪除/設為管理員、一般成員)
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f293d8c1fac70ac4162b3f6756155c7b.png)

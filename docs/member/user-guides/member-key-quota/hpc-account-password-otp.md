@@ -42,7 +42,7 @@ import TabItem from '@theme/TabItem';
 :::
 
 
-:::danger
+:::caution
 **重要：**
 
 TWCC 會員與主機密碼最長有效期限為 180 天。
