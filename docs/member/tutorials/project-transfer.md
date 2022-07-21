@@ -22,7 +22,7 @@ sidebar_position: 2
 請依您的本地端作業系統參考[本地端為 Windows 環境](#本地端為-Windows-環境) 或 [本地端為 Linux 環境](#本地端為-Linux-環境)。
 
 :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 因高速檔案系統 (HFS) 是依附於個人帳號，非依附於計畫，因此此儲存空間之資料無需轉移，於新計畫仍可存取使用。
+因高速檔案系統 (HFS) 是依附於個人帳號，非依附於計畫，因此此儲存空間之資料無需轉移，於新計畫仍可存取使用。
 :::
 
 
@@ -33,7 +33,6 @@ sidebar_position: 2
 虛擬運算服務用戶可參考[此文件](https://www.twcc.ai/doc?page=backup)，先將舊計畫虛擬運算個體的資料備份至 COS。
 
 :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 
 因容器運算服務、台灣杉二號之計算資源使用的預設儲存系統為高速檔案系統 (HFS)，個人資料可跨計畫使用，因此可略過此步驟。
 :::
 
@@ -72,7 +71,6 @@ S3 browser 不支援直接移轉資料，因此請選取您需轉移的檔案，
 虛擬運算服務用戶可參考[此文件](https://www.twcc.ai/doc?page=backup)，先將舊計畫虛擬運算個體的資料備份至 COS。
 
 :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 
 因容器運算服務、台灣杉二號之計算資源使用的預設儲存系統為高速檔案系統 (HFS)，個人資料可跨計畫使用，因此可略過此步驟。
 :::
 

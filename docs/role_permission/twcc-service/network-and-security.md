@@ -11,7 +11,7 @@ sidebar_position: 3
 
 | 功能 | 租戶管理員 | 租戶使用者 |
 | -------- | -------- | -------- |
-|建立虛擬網路|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|建立虛擬網路|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
 |檢視計畫所有虛擬網路資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
 |使用計畫所有虛擬網路|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
 |刪除計畫所有虛擬網路|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>

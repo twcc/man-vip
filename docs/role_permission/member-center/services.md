@@ -15,10 +15,10 @@ sidebar_position: 1
 |檢視計畫資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
 |變更個人高速檔案系統 (HFS) 儲存空間|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
 |變更計畫成員高速檔案系統 (HFS) 儲存空間|<i class="fa fa-times" aria-hidden="true"></i> | <i class="fa fa-times" aria-hidden="true"></i>| 
-|檢視訂單資訊<要換行>(含報價單下載)|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
+|檢視訂單資訊<div></div>(含報價單下載)|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
 |編輯付款方式|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
 |檢視付款方式|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
-|  編輯計畫成員<要換行>(檢視成員基本資料、新增/刪除成員、指派身分)|<i class="fa fa-check" aria-hidden="true"></i>|  <i class="fa fa-times" aria-hidden="true"></i>|
+|  編輯計畫成員<div></div>(檢視成員基本資料、新增/刪除成員、指派身分)|<i class="fa fa-check" aria-hidden="true"></i>|  <i class="fa fa-times" aria-hidden="true"></i>|
 |錢包管理|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
 |檢視錢包管理資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
 |檢視個人錢包異動紀錄|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
