@@ -31,7 +31,7 @@ sync-openapi:
   script:
     - apk add --no-cache git
     - git clone https://github.com/twcc/openapidoc.git
-    - git clone http://${AUG_USERNAME}:${AUG_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git
+    - git clone https://${SEAN_USERNAME}:${SEAN_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git
     - cd manual
     - git checkout docusaurus-dev
     - export TZ=Asia/Taipei
