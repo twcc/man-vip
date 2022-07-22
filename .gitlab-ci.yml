@@ -37,7 +37,7 @@ sync-openapi:
     - export TZ=Asia/Taipei
     - export VERSION=`date +"openapi-sync-%Y%m%d_%H%M"`
     - git checkout -b $VERSION
-    - cp -r ../openapidoc/Main/yaml ./openapi
+    - cp -r ../openapidoc/Main/yaml/. ./openapi
     - npm install --legacy-peer-deps
     - npm run clear-api
     - npm run gen-api
