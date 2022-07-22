@@ -11,8 +11,8 @@ import TabItem from '@theme/TabItem';
 
 您可以從歷史記錄判斷：
 
-- 啟動作業的成員^[1]^
-- 啟動作業的方法 (`GET`/`PUT`/`PATCH`/`POST`/`DELETE`)^[2]^
+- 啟動作業的成員<sup>[1]</sup>
+- 啟動作業的方法 (`GET`/`PUT`/`PATCH`/`POST`/`DELETE`)<sup>[2]</sup>
 - 對哪些服務進行操作
 - 作業的狀態
 - 作業回應時間
