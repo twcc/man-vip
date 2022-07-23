@@ -28,12 +28,18 @@ TensorFlow 映像檔預設開啟 Tensor Core math：
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<Tabs>
-  <TabItem value="TWCC 入口網站" label="TWCC 入口網站" default>
+<details class="docspoiler">
+
+<summary><b>TWCC 入口網站</b></summary>
+
 
 :::info
 以下以開發型容器為範例，虛擬運算個體也是相同的設定方式，在[<ins>建立個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh)時指定環境變數。
 :::
+
+
+
+
 
 在 [<ins>建立容器</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-create-zh) 時，在「**環境變數**」頁指定環境變數，並建立容器，即部署完成。
 
@@ -41,6 +47,7 @@ import TabItem from '@theme/TabItem';
 
 :::info
 環境變數 Key 與 Value，設定格式如下 (JSON)，可一次設定多筆變數：
+
 ```
     {
     "Key1":"Value-a",
@@ -48,17 +55,29 @@ import TabItem from '@theme/TabItem';
     "Key3":100
     }
 ```
+
 :::
 
-  </TabItem>
-  <TabItem value="TWCC CLI" label="TWCC CLI">
+</details>
+
+
+<!-- Space -->
+
+<div style={{height:8+'px'}}></div>
+
+<!-- 2. start -->
+
+<details class="docspoiler">
+
+<summary><b>TWCC CLI</b></summary>
+
 
 ```
-$ twccli mk ccs -envk TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH -envv 1  
+twccli mk ccs -envk TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH -envv 1  
 ```
 
-  </TabItem>
-</Tabs>
+</details>
+
 
 ### Step 2. 確認環境變數
 
