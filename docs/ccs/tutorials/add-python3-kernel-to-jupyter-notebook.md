@@ -3,6 +3,8 @@ sidebar_position: 3
 ---
 
 # 設定環境變數
+
+
 本文說明如何透過 TWCC 使用者網站、TWCC CLI，在建立[<ins>開發型容器</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-create-zh) / [<ins>虛擬運算個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh)時，指定您所需的環境變數，動態調整應用程式的設定，以符合您對環境的需求。
 
 :::info
@@ -25,8 +27,7 @@ TensorFlow 映像檔預設開啟 Tensor Core math：
 
 ### Step 1. 建立容器 / 虛擬運算個體、指定環境變數
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+<!-- 1 start -->
 
 <details class="docspoiler">
 
@@ -58,8 +59,9 @@ import TabItem from '@theme/TabItem';
 
 :::
 
-</details>
 
+
+</details>
 
 <!-- Space -->
 
@@ -70,7 +72,6 @@ import TabItem from '@theme/TabItem';
 <details class="docspoiler">
 
 <summary><b>TWCC CLI</b></summary>
-
 
 ```
 twccli mk ccs -envk TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH -envv 1  
@@ -89,7 +90,6 @@ echo $BUFFER
 
 :::info
 [<ins>連線虛擬運算個體</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-zh)，並使用以下指令確認環境變數已寫入個體。
-
 <div></div>
 
 ```bash
