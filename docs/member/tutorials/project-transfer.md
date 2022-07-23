@@ -86,7 +86,7 @@ S3 browser 不支援直接移轉資料，因此請選取您需轉移的檔案，
 輸入以下指令，將舊計畫 COS 檔案下載至本機端
 
 ```bash
-$ s3cmd get --recursive s3://<BUCKET_NAME>/<FOLDER_NAME or FILE_NAME> <LOCAL_DIR>
+s3cmd get --recursive s3://<BUCKET_NAME>/<FOLDER_NAME or FILE_NAME> <LOCAL_DIR>
 ```
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_753677494251c17c870f9b816d6ec86e.png)
@@ -103,7 +103,7 @@ $ s3cmd get --recursive s3://<BUCKET_NAME>/<FOLDER_NAME or FILE_NAME> <LOCAL_DIR
 再將本地端檔案上傳至新計畫 COS 後，就成功將資料轉移至新計畫囉！
 
 ```bash
-$ s3cmd put  --recursive <LOCAL_FILE_NAME> s3://<BUCKET_NAME>
+s3cmd put  --recursive <LOCAL_FILE_NAME> s3://<BUCKET_NAME>
 ```
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_20989598f5d1c34d52fce285a7c766cc.png)
