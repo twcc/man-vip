@@ -5,6 +5,8 @@ sidebar_position: 6
 # 使用 TensorFlow Inception V3 訓練影像辨識模型、生成推論引擎
 
 :::success
+<i class="fa fa-star" aria-hidden="true"></i>
+
 **適用情境：適合用什麼 TWCC 服務來執行深度學習的運算？**
 
 *您是否也有相同的困擾？讓我們手把手帶您組合 TWCC 雲端服務架構，輕鬆解決您的問題！*
