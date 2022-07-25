@@ -16,6 +16,17 @@ const set_edit_url = (locale, versionDocsDirPath, docPath) => {
   return enUrl
 }
 
+// check this block
+//   staging: 'Staging',
+//   preview: 'Preview',
+//   production: 'TWCC'
+// }, i18nDirPath = {
+//   docs: 'docusaurus-plugin-content-docs/current',
+//   community: 'docusaurus-plugin-content-docs-community/current'
+// }
+// const replaceDir = (versionDocsDirPath) => {
+//   return rdir = i18nDirPath[versionDocsDirPath], rdir ? versionDocsDirPath.replace(versionDocsDirPath,rdir) : versionDocsDirPath
+// }
 
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
@@ -51,6 +62,16 @@ const config = {
         path: "community",
         routeBasePath: "community",
         editUrl: ({ locale, versionDocsDirPath, docPath }) => set_edit_url(locale, versionDocsDirPath, docPath),
+        // check this!!!
+        // id: 'community',
+        // path: 'community',
+        // routeBasePath: 'community',
+        // editUrl: ({locale, versionDocsDirPath, docPath}) => {
+        //   if (locale !== 'en') {
+        //     return `https://github.com/twcc/man-vip/edit/tree/tws-sync/i18n/${locale}/${replaceDir(versionDocsDirPath)}/${docPath}`;
+        //   }
+        //   return `https://github.com/twcc/man-vip/edit/tree/tws-sync/${versionDocsDirPath}/${docPath}`;
+        // },
         editCurrentVersion: true,
         sidebarPath: require.resolve("./sidebarsCommunity.js"),
         showLastUpdateAuthor: true,
@@ -127,6 +148,15 @@ const config = {
           editUrl: ({ locale, versionDocsDirPath, docPath }) => set_edit_url(locale, versionDocsDirPath, docPath),
           docLayoutComponent: "@theme/DocPage",
           docItemComponent: "@theme/ApiItem" // Derived from docusaurus-theme-openapi
+          // check this
+          // sidebarPath: require.resolve('./sidebars.js'),
+          // remarkPlugins: [require('mdx-mermaid')],
+          // editUrl: ({locale, versionDocsDirPath, docPath}) => {
+          //   if (locale !== 'en') {
+          //     return `https://github.com/twcc/man-vip/edit/tree/tws-sync/i18n/${locale}/${replaceDir(versionDocsDirPath)}/${docPath}`;
+          //   }
+          //   return `https://github.com/twcc/man-vip/edit/tree/tws-sync/${versionDocsDirPath}/${docPath}`;
+          // }
         },
         pages: {},
         blog: false,
