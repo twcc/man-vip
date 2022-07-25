@@ -71,8 +71,8 @@ export TF_ENABLE_AUTO_MIXED_PRECISION_GRAPH_REWRITE=1
 ```
 
 :::info
-:bulb: TWCC 開發型容器 (TensorFlow 19.08-p3:latest) 已預設啟用自動混合精度運算，可使用 ```echo $TF_ENABLE_AUTO_MIXED_PRECISION``` 指令驗證：
-回應 = 1 表示**已啟用**自動混合精度運算
+:bulb: TWCC 開發型容器 (TensorFlow 19.08-p3:latest) 已預設啟用自動混合精度運算，可使用 ```echo $TF_ENABLE_AUTO_MIXED_PRECISION``` 指令驗證：<div></div>
+回應 = 1 表示**已啟用**自動混合精度運算<div></div>
 回應 = 0 表示**已停止**自動混合精度運算
 :::
 
@@ -130,8 +130,8 @@ print('Time for model.compile:', elapsed_time)
 | 5| :white_check_mark:     | :white_check_mark:     | 單、半精準度混合     | 512    |
 
 
-:::info
-註：Accelerated Linear Algebra (XLA) 能優化 TensorFlow 運算，加速執行速度。
+:::info 附註
+Accelerated Linear Algebra (XLA) 能優化 TensorFlow 運算，加速執行速度。
 :::
 
 建立 TWCC 開發型容器 (TensorFlow 19.08-p3:latest) 後，ResNet-50 v1.5 範例程式已存在於 `/workspace/nvidia-examples/resnet50v1.5` 目錄內，在此目錄下創建新的目錄 (例：results) 用來存放模型資料。在命令列輸入指令如下：
@@ -248,11 +248,15 @@ GPU 記憶體的使用量 19.29 GB：
 
 > 開啟 AMP、XLA | 單、半精準度混合 ｜Batch size = 512
 
-:::info
-**ResNet-50 v1.5 Benchmark 效能分析 運行範例**<div></div>
+<details>
+<summary><b>ResNet-50 v1.5 Benchmark 效能分析 運行範例</b></summary>
+<div>
+
 你可直接透過下列指令進行 ResNet-50 的運行效能分析，運行時間約 3 分鐘<div></div>
 `wget -q -O - http://bit.ly/TWCC_CCS_AMP-XLA | bash`
-:::
+
+</div>
+</details>
 
 因為 AMP 大大地降低 GPU 記憶體的使用量，所以我們再加倍 Batch Size 企圖增加執行效能，直接於命令列輸入指令如下：
 
