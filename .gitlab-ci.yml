@@ -25,6 +25,29 @@ test-build:
   only:
     - merge_requests
 
+sync-openapi:
+  <<: *standard_operation
+  stage: test
+  script:
+    - apk add --no-cache git
+    - git clone https://github.com/twcc/openapidoc.git
+    - git clone https://${SEAN_USERNAME}:${SEAN_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git
+    - cd manual
+    - git checkout docusaurus-dev
+    - export TZ=Asia/Taipei
+    - export VERSION=`date +"openapi-sync-%Y%m%d_%H%M"`
+    - git checkout -b $VERSION
+    - cp -r ../openapidoc/Main/yaml/. ./openapi
+    - npm install --legacy-peer-deps
+    - npm run clear-api
+    - npm run gen-api
+    - git config --global user.email "sean.chang@twsc.io"
+    - git config --global user.name "sean.chang@twsc.io"
+    - git add .
+    - git commit -m $VERSION
+    - git push -u origin $VERSION
+  when: manual
+
 deploy-staging:
   <<: *standard_operation
   stage: build
