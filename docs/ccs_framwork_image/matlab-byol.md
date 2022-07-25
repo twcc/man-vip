@@ -4,7 +4,7 @@ sidebar_position: 5
 ---
 
 
-# Matlab (BYOL)
+# <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3022d6e6790c870e499eac8e2c77d53c.png' /> Matlab (BYOL)
 
 
 TWCC 提供 Matlab，目前為功能預覽階段。採用 Cloud 授權模式，需要自行輸入 MathWorks 帳號密碼啟動 Matlab。

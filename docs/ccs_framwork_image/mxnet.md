@@ -4,7 +4,7 @@ sidebar_position: 8
 ---
 
 
-# MXNet
+# <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3022d6e6790c870e499eac8e2c77d53c.png' /> MXNet
 
 
 TWCC 提供 NGC optimized MXNet 立即可用的工作環境。MXNet 是致力於提高效能和靈活度的深度學習框架，能讓使用者混合使用符號程式、指令程式的設計風格，將效能和生產力提升到最大值。核心功能是動態相依的調度程式 (dynamic dependency scheduler)，能自動採用平行化運算。最上層的的圖像最佳化層能快速地執行符號程式，並使記憶體運行效率更高。輕量級的可攜式函式庫，能擴展至多個 GPU 與多台機器上運算。

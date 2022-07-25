@@ -4,7 +4,7 @@ sidebar_position: 10
 ---
 
 
-# TensorRT
+# <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f55059e9d0a6ac45c44bcc0ec1bebff5.png' /> TensorRT
 
 
 TWCC 提供 NGC’s TensorRT 立即可用的工作環境。NVIDIA TensorRT 是一個 C++ 函式庫，可以加快在 NVIDIA GPU 上的高效能推理運算，能結合常用於訓練的深度學習框架。TensorRT 致力於在 GPU 上快速有效地運行已訓練過的神經網路，並產生推理的結果。

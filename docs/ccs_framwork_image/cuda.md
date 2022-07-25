@@ -4,7 +4,7 @@ sidebar_position: 4
 ---
 
 
-# CUDA
+# <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b3382d3255e279896320ff106a1565d.png' /> CUDA
 
 
 TWCC 提供 NGC’s CUDA 立即可用的工作環境。CUDA® 是Nvidia 開發的平行運算平台與應用程式設計介面 (API) 的模型。提供軟體開發者與工程師使用支援CUDA的GPU進行通用運算處理。CUDA 的平台支援 C、C++、Fortran 語言，為使用GPU 資源來執行平行運算的專家提供友善的環境。

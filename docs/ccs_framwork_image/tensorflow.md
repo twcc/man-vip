@@ -4,7 +4,7 @@ sidebar_position: 2
 ---
 
 
-# TensorFlow
+# <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f55059e9d0a6ac45c44bcc0ec1bebff5.png' /> TensorFlow
 
 
 TWCC 提供 NGC optimized TensorFlow 共 20 種立即可用的工作環境。TensorFlow 是利用資料流程圖來表達抽象數值運算過程的開放式原始碼函式庫。流程圖中的節點 (nodes) 表示數學運算，而邊 (edges) 則表示聯繫節點的多維數據陣列，亦稱為張量 (tensors)。靈活的架構設計能輕鬆地在不同裝置上運算，例如 PC 一個或多個的 CPU/GPU、智慧行動裝置等等。

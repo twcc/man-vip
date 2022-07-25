@@ -4,7 +4,7 @@ sidebar_position: 9
 ---
 
 
-# Caffe2
+# <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b3382d3255e279896320ff106a1565d.png' /> Caffe2
 
 
 TWCC 提供 NGC optimized Caffe2 立即可用的工作環境。NVIDIA 開發的深度學習軟體開發套件，加速了深度學習框架的廣泛應用，如Caffe2™。Caffe2 是個深度學習框架，能透過Python API 輕鬆使用所有模型，例如卷積神經網路 (CNNs)、遞迴神經網路 (RNNs) 等，並使用效率高的 C++ 語言和後端的CUDA® 來執行運算。
