@@ -4,8 +4,7 @@ sidebar_position: 10
 
 # 在容器中啟動 TensorBoard - ML 實驗視覺化工具
 
-:::tip
-**案例情境**：**容器有機器學習的視覺化工具可以使用嗎？**<div></div>
+:::tip **案例情境**：**容器有機器學習的視覺化工具可以使用嗎？**<div></div>
 *您是否也有相同的困擾？讓我們手把手帶您組合 TWCC 雲端服務架構，輕鬆解決您的問題！*
 :::
 
@@ -13,7 +12,7 @@ sidebar_position: 10
 
 TWCC 的容器環境中已為用戶安裝 TensorBoard，本篇文章將教學如何啟動 TensorBoard 工具。更多 Tensorboard 介紹與使用方法，請參考[ TensorFlow 官網](https://www.tensorflow.org/tensorboard)。
 
-:::caution
+:::caution 提示
 建議在 TensorFlow 容器中啟動，較能發揮 TensorBoard 的功能，用於其他容器功能將受限。
 :::
 
@@ -30,7 +29,7 @@ TWCC 的容器環境中已為用戶安裝 TensorBoard，本篇文章將教學如
 tensorboard --logdir=~/logdir --port 5000
 ```
 
-:::info
+:::info 附註
 1. 您需要指定一個作為 TensorBoard 提供網頁服務使用的連接埠 (port)。<div></div>
 在 TWCC 的容器環境中，有三個 port 可供用戶使用，分別是`5000`、`5001`、`5002`，在此以 port `5000` 做為範例。<div></div>
 更多資訊可參考 [<ins>HowTo：設定開發型容器的服務埠</ins>](https://www.twcc.ai/doc?page=howto-ccs-config-service-port)。
@@ -70,6 +69,6 @@ tensorboard --logdir=~/logdir --port 5000
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_efab9cdf24eb0d8abbc3b75bd60e3eac.png)
 
 
-:::info
+:::info 附註
 更多 Tensorboard 介紹與使用方法，請參考[<ins>TensorFlow 官網</ins>](https://www.tensorflow.org/tensorboard)。
 :::
