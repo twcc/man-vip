@@ -8,12 +8,12 @@ const env_list = {
     community: "docusaurus-plugin-content-docs-community/current",
   };
 const set_edit_url = (locale, versionDocsDirPath, docPath) => {
-  const baseUrl = `https://github.com/twcc/man-vip/edit/tree/tws-sync`,
-        enUrl = `${baseUrl}/${versionDocsDirPath}/${docPath}`;
-  if (docPath === 'releaseNotes.md') return enUrl;
+  const baseUrl = `https://github.com/twcc/man-vip/edit/tws-sync`,
+        zhUrl = `${baseUrl}/${versionDocsDirPath}/${docPath}`;
+  if (docPath === 'releaseNotes.md') return zhUrl;
   const rdir = i18nDirPath[versionDocsDirPath];
-  if (locale !== "en" && rdir) return `${baseUrl}/i18n/${locale}/${versionDocsDirPath.replace(versionDocsDirPath,rdir)}/${docPath}`;
-  return enUrl
+  if (locale !== "zh-Hant" && rdir) return `${baseUrl}/i18n/${locale}/${versionDocsDirPath.replace(versionDocsDirPath,rdir)}/${docPath}`;
+  return zhUrl
 }
 
 // check this block
