@@ -6,16 +6,8 @@ keywords:
   - twcc
   - faq
 ---
-# FAQ 
-
-Okay
-
-大家好，這裡是 FAQ
-
-here is `/docs/faq`
+# TWCC FAQs
 
 
-testoo
-
-yaya
+Our FAQs will help you to find answers to your questions quickly and easily, without needing to contact us.
 
