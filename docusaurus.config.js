@@ -8,7 +8,7 @@ const env_list = {
     community: "docusaurus-plugin-content-docs-community/current",
   };
 const set_edit_url = (locale, versionDocsDirPath, docPath) => {
-  const baseUrl = `https://github.com/twcc/man-vip/edit/tws-sync`,
+  const baseUrl = `https://github.dev/twcc/man-vip/blob/tws-sync`,
         zhUrl = `${baseUrl}/${versionDocsDirPath}/${docPath}`;
   if (docPath === 'releaseNotes.md') return zhUrl;
   const rdir = i18nDirPath[versionDocsDirPath];
