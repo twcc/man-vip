@@ -5,21 +5,23 @@ sidebar_position: 1
 
 # 服務文件
 
-## 會員/專案/帳號
+## 會員與專案
+
+- [會員/專案](/docs/member/get-started)
 
 ## 運算
 
 - [開發型容器](/docs/ccs/intro)
-- 任務型容器
+- [任務型容器](/docs/ccs_scheduled/intro)
 - HPC 高速運算任務
-- [虛擬運算服務](/docs/vcs/intro)
+- 虛擬運算服務
 - 台灣杉二號 (命令列介面)
 
 ## 儲存
 
-- 雲端物件儲存
+- [雲端物件儲存](/docs/cos/intro)
 - 虛擬磁碟
-- 高速檔案系統
+- [高速檔案系統](/docs/hfs/intro)
 - 資料備份
 - 雲端檔案服務 
 
