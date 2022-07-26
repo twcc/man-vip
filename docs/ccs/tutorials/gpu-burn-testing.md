@@ -36,7 +36,11 @@ tensorboard --logdir=~/logdir --port 5000
 3. 上述指令中的 `--logdir` 為 log 檔存放位置，您可自行設定，本文以 `~/logdir` 做為範例。
 :::
 
-// TODO
+<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
+$ wei1803106@cwfs6actr1611034753151-lkffh:~$ tensorboard --logdir=~/logdir --port 5000<div></div>
+2021-01-19 13:39:58.453097: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic librarylibcudart.so.11.0<div></div>
+TensorBoard 2.3.0+nv at http://cwfs6actr1611034753151-lkffh:5000/ (Press CTRL+C to quit)
+</div>
 
 
 
