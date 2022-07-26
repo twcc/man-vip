@@ -204,6 +204,12 @@ const config = {
           },
           {
             type:"doc",
+            label: "Pricing",
+            docId: "pricing",
+            position: "left",
+          },
+          {
+            type:"doc",
             label: "Release Notes",
             docId: "release-notes",
             position: "left",
