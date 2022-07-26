@@ -3,4 +3,38 @@ id: pricing
 sidebar_label: Pricing
 ---
 
-# Pricing
+# <center> TWCC 產品企業促銷價 </center>  
+
+<p style={{'text-align':'right', 'font-size':'15px'}}>版次：20220630v1.0</p>
+
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f2602f6b2fb896ba5da3d3e50da7ea9f.png)
+
+## <center>以秒計費</center>
+
+<center>&#9745; 付費方案多元 &#9745; 無需預付 &#9745; 無終止費用</center>
+
+<center>方案皆採以秒計費的模式計價，無需擔心用不滿一小時的部分將被收費，讓您的投資皆可精準的用在測試與開發。⁕</center>
+
+:::note
+⁕試算範例：容器 c.super 使用時間為 11 小時 35 分 10 秒 = 41710 秒 = 11.5861 小時，隨需方案的定價為 58 元/時，則費用是 11.5861*58 = 671.9938，共 672 元 (四捨五入進位至元)。
+:::
+
+### 容器運算服務 (Container Compute Service, CCS)
+
+- 服務項目包含開發型容器、任務型容器。
+- 配備 8 個 NVIDIA® Tesla V100 GPU，加速人工智慧訓練、推論與高效能運算，支援 5120 個 CUDA 核心與 640 個 Tensor 核心，並支援 NVLink 進行 GPU 之間的資料傳輸，加速人工智慧訓練、推論與高效能運算。
+- 了解更多
+
+| 容器類別 | 容器型號 | GPU (張) |CPU (實體核心) |記憶體 (GB)⁕ |共享記憶體 (GB)⁕|定價 (小時)|
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| 標準AI容器⁕⁕    | c.super    | 1     |4  |90     |-     |58.00     |
+
+
+:::info
+⁕可用記憶體容量若以 GiB (1 GiB = 230 bytes) 為計算單位，以 c.super 為例，則可用記憶體容量為 84 GiB，請參考記憶體容量換算了解更多。
+
+⁕⁕記憶體含 1 GB 共享記憶體。
+
+⁕⁕⁕記憶體優化容器可負擔記憶體內部處理大型資料集之工作負載，加強效能，提供給 PyTorch、Torch、MXNet、clara、CUDA、Matlab 等容器環境使用。
+:::
