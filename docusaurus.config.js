@@ -1,116 +1,167 @@
 const env_list = {
-  staging: 'Staging',
-  preview: 'Preview',
-  production: 'TWCC'
-}, i18nDirPath = {
-  docs: 'docusaurus-plugin-content-docs/current',
-  community: 'docusaurus-plugin-content-docs-community/current'
+    staging: "Staging",
+    preview: "Preview",
+    production: "TWCC",
+  },
+  i18nDirPath = {
+    docs: "docusaurus-plugin-content-docs/current",
+    community: "docusaurus-plugin-content-docs-community/current",
+  };
+const set_edit_url = (locale, versionDocsDirPath, docPath) => {
+  const baseUrl = `https://github.com/twcc/man-vip/edit/tree/tws-sync`,
+        enUrl = `${baseUrl}/${versionDocsDirPath}/${docPath}`;
+  if (docPath === 'releaseNotes.md') return enUrl;
+  const rdir = i18nDirPath[versionDocsDirPath];
+  if (locale !== "en" && rdir) return `${baseUrl}/i18n/${locale}/${versionDocsDirPath.replace(versionDocsDirPath,rdir)}/${docPath}`;
+  return enUrl
 }
-const replaceDir = (versionDocsDirPath) => {
-  return rdir = i18nDirPath[versionDocsDirPath], rdir ? versionDocsDirPath.replace(versionDocsDirPath,rdir) : versionDocsDirPath
-}
+
+// check this block
+//   staging: 'Staging',
+//   preview: 'Preview',
+//   production: 'TWCC'
+// }, i18nDirPath = {
+//   docs: 'docusaurus-plugin-content-docs/current',
+//   community: 'docusaurus-plugin-content-docs-community/current'
+// }
+// const replaceDir = (versionDocsDirPath) => {
+//   return rdir = i18nDirPath[versionDocsDirPath], rdir ? versionDocsDirPath.replace(versionDocsDirPath,rdir) : versionDocsDirPath
+// }
+
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: env_list[process.env.Target||'production'],
-  tagline: 'TWCC Manual',
-  url: 'https://man.twcc.vip',
-  baseUrl: '/',
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  title: env_list[process.env.Target || "production"],
+  tagline: "TWCC Manual",
+  url: "https://man.twcc.vip",
+  baseUrl: "/",
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'TWS', // Usually your GitHub org/user name.
-  projectName: 'Manual', // Usually your repo name.
+  organizationName: "TWS Co. Ltd.", // Usually your GitHub org/user name.
+  projectName: "Manual", // Usually your repo name.
 
   i18n: {
-    defaultLocale: 'zh-Hant',
-    locales: ['en','zh-Hant'],
+    defaultLocale: "zh-Hant",
+    locales: ["en", "zh-Hant"],
   },
   plugins: [
-    'docusaurus-plugin-sass',
+    "docusaurus-plugin-sass",
     [
-      'content-docs',
+      "content-docs",
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       ({
-        id: 'community',
-        path: 'community',
-        routeBasePath: 'community',
-        editUrl: ({locale, versionDocsDirPath, docPath}) => {
-          if (locale !== 'en') {
-            return `https://github.com/twcc/man-vip/edit/tree/tws-sync/i18n/${locale}/${replaceDir(versionDocsDirPath)}/${docPath}`;
-          }
-          return `https://github.com/twcc/man-vip/edit/tree/tws-sync/${versionDocsDirPath}/${docPath}`;
-        },
+        id: "community",
+        path: "community",
+        routeBasePath: "community",
+        editUrl: ({ locale, versionDocsDirPath, docPath }) => set_edit_url(locale, versionDocsDirPath, docPath),
+        // check this!!!
+        // id: 'community',
+        // path: 'community',
+        // routeBasePath: 'community',
+        // editUrl: ({locale, versionDocsDirPath, docPath}) => {
+        //   if (locale !== 'en') {
+        //     return `https://github.com/twcc/man-vip/edit/tree/tws-sync/i18n/${locale}/${replaceDir(versionDocsDirPath)}/${docPath}`;
+        //   }
+        //   return `https://github.com/twcc/man-vip/edit/tree/tws-sync/${versionDocsDirPath}/${docPath}`;
+        // },
         editCurrentVersion: true,
-        sidebarPath: require.resolve('./sidebarsCommunity.js'),
+        sidebarPath: require.resolve("./sidebarsCommunity.js"),
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
       }),
     ],
     [
-      'docusaurus-plugin-openapi-docs',
+      "docusaurus-plugin-openapi-docs",
       {
         id: "apiDocs",
         docsPluginId: "classic",
         config: {
-          vcsapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
-            specPath: "openapi/vcsapi.yaml", // Path to designated spec file
-            outputDir: "docs/api/VCS", // Output directory for generated .mdx docs
+          CCS: {
+            specPath: "openapi/CCS.yaml",
+            outputDir: "docs/api/CCS",
             sidebarOptions: {
               groupPathsBy: "tag",
-            },
+              categoryLinkSource: "tag"
+            }
           },
-          ccsapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
-            specPath: "openapi/ccsapi.yaml", // Path to designated spec file
-            outputDir: "docs/api/CCS", // Output directory for generated .mdx docs
+          Ceph: {
+            specPath: "openapi/Ceph.yaml",
+            outputDir: "docs/api/Ceph",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag"
+            }
           },
-          slurmapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
-            specPath: "openapi/slurm.yaml", // Path to designated spec file
-            outputDir: "docs/api/Slurm", // Output directory for generated .mdx docs
+          Common: {
+            specPath: "openapi/Common.yaml",
+            outputDir: "docs/api/Common",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag"
+            }
           },
-          harborapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
-            specPath: "openapi/harbor.yaml", // Path to designated spec file
-            outputDir: "docs/api/Harbor", // Output directory for generated .mdx docs
+          Harbor: {
+            specPath: "openapi/Harbor.yaml",
+            outputDir: "docs/api/Harbor",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag"
+            }
           },
-          cephapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
-            specPath: "openapi/ceph.yaml", // Path to designated spec file
-            outputDir: "docs/api/Ceph", // Output directory for generated .mdx docs
+          Slurm: {
+            specPath: "openapi/Slurm.yaml",
+            outputDir: "docs/api/Slurm",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag"
+            }
           },
-          commonapi: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
-            specPath: "openapi/common.yaml", // Path to designated spec file
-            outputDir: "docs/api/Common", // Output directory for generated .mdx docs
-          },
+          VCS: {
+            specPath: "openapi/VCS.yaml",
+            outputDir: "docs/api/VCS",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag"
+            }
+          }
         }
-      },
+      }
     ]
   ],
-  themes: ["docusaurus-theme-openapi-docs"], // Allows use of @theme/ApiItem and other components
+  themes: ["docusaurus-theme-openapi-docs"],
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          remarkPlugins: [require('mdx-mermaid')],
-          editUrl: ({locale, versionDocsDirPath, docPath}) => {
-            if (locale !== 'en') {
-              return `https://github.com/twcc/man-vip/edit/tree/tws-sync/i18n/${locale}/${replaceDir(versionDocsDirPath)}/${docPath}`;
-            }
-            return `https://github.com/twcc/man-vip/edit/tree/tws-sync/${versionDocsDirPath}/${docPath}`;
-          }
+          sidebarPath: require.resolve("./sidebars.js"),
+          remarkPlugins: [require("mdx-mermaid")],
+          editUrl: ({ locale, versionDocsDirPath, docPath }) => set_edit_url(locale, versionDocsDirPath, docPath),
+          docLayoutComponent: "@theme/DocPage",
+          docItemComponent: "@theme/ApiItem" // Derived from docusaurus-theme-openapi
+          // check this
+          // sidebarPath: require.resolve('./sidebars.js'),
+          // remarkPlugins: [require('mdx-mermaid')],
+          // editUrl: ({locale, versionDocsDirPath, docPath}) => {
+          //   if (locale !== 'en') {
+          //     return `https://github.com/twcc/man-vip/edit/tree/tws-sync/i18n/${locale}/${replaceDir(versionDocsDirPath)}/${docPath}`;
+          //   }
+          //   return `https://github.com/twcc/man-vip/edit/tree/tws-sync/${versionDocsDirPath}/${docPath}`;
+          // }
         },
+        pages: {},
         blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.scss'),
+          customCss: require.resolve("./src/css/custom.scss"),
         },
       }),
     ],
@@ -119,79 +170,92 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      announcementBar: {
+        id: "support_us",
+        content:
+          'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
+        backgroundColor: "#fafbfc",
+        textColor: "#091E42",
+        isCloseable: false,
+      },
       navbar: {
         title: undefined,
         logo: {
-          alt: 'TWCC Logo',
-          src: 'img/LOGO.svg',
+          alt: "TWCC Logo",
+          src: "img/LOGO.svg",
         },
         items: [
           {
-            type: 'doc',
-            label: 'Docs',
-            docId: 'introduction',
-            position: 'left',
+            type: "doc",
+            label: "Docs",
+            docId: "introduction",
+            position: "left",
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'api',
-            label: 'API',
-            position: 'left',
-          },
-          /**{
-            type: 'docSidebar',
-            sidebarId: 'faq',
-            label: 'FAQ',
-            position: 'left',
-          },*/
-          {
-            type: 'docSidebar',
-            sidebarId: 'faq',
-            label: 'FAQ',
-            position: 'left',
+            label: "API",
+            position: "left",
+            to: "/docs/api/CCS"
           },
           {
-            type: 'localeDropdown',
-            position: 'right',
+            type: "docSidebar",
+            sidebarId: "faq",
+            label: "FAQ",
+            position: "left",
           },
           {
-            href: 'https://github.com/twcc/man-vip/',
-            label: 'GitHub',
-            position: 'right',
+            type:"doc",
+            label: "Pricing",
+            docId: "pricing",
+            position: "left",
+          },
+          {
+            type:"doc",
+            label: "Release Notes",
+            docId: "release-notes",
+            position: "left",
+          },
+          {
+            type: "localeDropdown",
+            position: "right",
+          },
+          {
+            href: "https://github.com/twcc/man-vip/",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Introduction',
-                to: '/docs/introduction',
+                label: "Introduction",
+                to: "/docs/introduction",
               },
             ],
           },
           {
-            title: 'Members',
+            title: "Members",
             items: [
               {
-                label: 'Academic Users',
-                href: 'https://iservice.nchc.org.tw',
+                label: "Academic Users",
+                href: "https://iservice.nchc.org.tw",
               },
               {
-                label: 'Enterprise Users',
-                href: 'https://tws.twcc.ai',
+                label: "Enterprise Users",
+                href: "https://tws.twcc.ai",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/twcc/man-vip',
+                label: "GitHub",
+                href: "https://github.com/twcc/man-vip",
               },
             ],
           },
