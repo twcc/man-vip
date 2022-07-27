@@ -23,7 +23,7 @@ sidebar_position: 13
 
 本文範例將使用 TWCC 虛擬運算個體做為 local 端主機，已為使用者安裝 TWCC CLI，可快速執行部署容器自動化管理流程，您也可將 TWCC CLI 安裝於自己的電腦操作。
 
-:::info **附註**
+:::info
 TWCC-CLI 安裝步驟與資源操作指令，可參考 [<ins>TWCC-CLI α</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05)。
 :::
 
@@ -92,7 +92,7 @@ ssh-copy-id <USERNAME>@<CCS_IP> -p <PORT>
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4aba0afaefcbda5d00554ed19da64eac.png)
 
-:::info **附註**
+:::info
 [<ins>忘記主機密碼？</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC)
 :::
 
@@ -191,7 +191,7 @@ TWCC_CLI_CMD ls ccs
 ```
 - 按 <kbd>Esc</kbd> 鍵並輸入 `:wq!` 存檔。
 
-:::info **附註**
+:::info
 * 步驟 **echo "4. RUN GPU"** 可依據您的程式，修改 `"cd gpu-burn;/bin/bash --login -c './gpu_burn 150'"` 此部分 script。
 :::
 

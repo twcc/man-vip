@@ -29,7 +29,7 @@ TWCC 的容器環境中已為用戶安裝 TensorBoard，本篇文章將教學如
 tensorboard --logdir=~/logdir --port 5000
 ```
 
-:::info 附註
+:::info
 1. 您需要指定一個作為 TensorBoard 提供網頁服務使用的連接埠 (port)。<div></div>
 在 TWCC 的容器環境中，有三個 port 可供用戶使用，分別是`5000`、`5001`、`5002`，在此以 port `5000` 做為範例。<div></div>
 更多資訊可參考 [<ins>HowTo：設定開發型容器的服務埠</ins>](https://www.twcc.ai/doc?page=howto-ccs-config-service-port)。
@@ -73,6 +73,6 @@ TensorBoard 2.3.0+nv at http://cwfs6actr1611034753151-lkffh:5000/ (Press CTRL+C 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_efab9cdf24eb0d8abbc3b75bd60e3eac.png)
 
 
-:::info 附註
+:::info
 更多 Tensorboard 介紹與使用方法，請參考[<ins>TensorFlow 官網</ins>](https://www.tensorflow.org/tensorboard)。
 :::

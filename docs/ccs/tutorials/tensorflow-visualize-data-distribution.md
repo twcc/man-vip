@@ -130,7 +130,7 @@ print('Time for model.compile:', elapsed_time)
 | 5| :white_check_mark:     | :white_check_mark:     | 單、半精準度混合     | 512    |
 
 
-:::info 附註
+:::info
 Accelerated Linear Algebra (XLA) 能優化 TensorFlow 運算，加速執行速度。
 :::
 
