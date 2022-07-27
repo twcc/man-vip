@@ -63,7 +63,6 @@ import TabItem from '@theme/TabItem';
 
 - **Step 2.** 在本地端電腦中，開啟 Terminal 並且填入 SSH 登入之相關資訊即可完成，登入的帳號及密碼為 iService 中所設定之主機帳號與密碼，另可使用其他第三方軟體如 Putty 等工具進行連線。
 
-
 <div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
 
 C:\Users\Janice_Chiang><span style={{'background-color':'#fcf8e3', 'color': '#000', 'padding':'3.2px'}}>ssh twcctest1234@203.145.219.134 -p 58794</span>
