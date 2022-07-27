@@ -15,7 +15,7 @@ TWCC 提供 NGC optimized Caffe2 立即可用的工作環境。NVIDIA 開發的�
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_988af03ed1d907afb2c3fe0e844f307d.png)
 
 
-:::info 附註
+:::info
 `py3` 與 `py2` 則為 Python 之版本差異。
 :::
 

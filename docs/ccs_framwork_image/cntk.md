@@ -14,7 +14,7 @@ TWCC 提供 NGC optimized Cognitive Toolkit™ 立即可用的工作環境。NVI
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_631b4734c2721a20dfbe97c6cc5cf43a.png)
 
 
-:::info 附註
+:::info
 `py3` 與 `py2` 為 Python 版本差異。
 :::
 

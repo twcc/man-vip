@@ -31,7 +31,7 @@ TWCC 提供多種 [NGC](https://www.nvidia.com/zh-tw/gpu-cloud/containers/) AI �
 - 範例：`tensorflow-20.11-tf2-py3:latest`
 - 說明：**`AI訓練框架`**-**`NGC發行日期 (年.月)`**-**`NGC定義之次版本`**-**`Python版本`**:**`TWCC最新調適之版本`**。
 
-:::info 附註
+:::info
 - 大部分映像檔皆適用以上名稱說明，少數映像檔則會另外加註適用之套件名稱，例 `digits-19.08-tensorflow:latest`；或使用該映像檔原版本名稱，例：`matlab-r2019b:latest`。
 - `v1` 表 TWCC 調整最佳化之版本。
 - 自訂映像檔 (Custom Image) 可自訂識別標籤 (tag)，取代 `latest` 呈現於映像檔名稱。

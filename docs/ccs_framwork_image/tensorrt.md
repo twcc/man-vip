@@ -15,7 +15,7 @@ TWCC 提供 NGC’s TensorRT 立即可用的工作環境。NVIDIA TensorRT 是�
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1a5476938720e686dfc41d59b630d713.png)
 
-:::info 附註
+:::info
 `py3` 與 `py2` 則為 Python 之版本差異。
 :::
 

@@ -13,7 +13,7 @@ TWCC 提供 NGC optimized MXNet 立即可用的工作環境。MXNet 是致力於
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_583d099d5b65e536231dc2e079ed8c95.png)
 
-:::info 附註
+:::info
 `py3` 與 `py2` 為 Python 版本差異。
 :::
 

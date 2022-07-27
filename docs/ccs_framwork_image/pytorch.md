@@ -13,7 +13,7 @@ TWCC 提供 NGC optmized PyTorch 10 種立即可用的工作環境。PyTorch 是
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a7588de317f7bb27b056f5de1be5186e.png)
 
 
-:::info 附註
+:::info
 `py3` 與 `py2` 為 Python 版本差異。
 :::
 

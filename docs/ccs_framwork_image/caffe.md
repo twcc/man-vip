@@ -17,7 +17,7 @@ TWCC 提供 NGC’s NVCaffe 立即可用的工作環境。NVIDIA開發的深度�
 
 
 
-:::info 附註
+:::info
 `py3` 與 `py2` 則為 Python 之版本差異。
 :::
 

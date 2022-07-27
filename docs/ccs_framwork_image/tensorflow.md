@@ -21,7 +21,7 @@ TWCC 提供 NGC optimized TensorFlow 共 20 種立即可用的工作環境。Ten
 
 </details>
 
-:::info 附註
+:::info
 同版號但區分 `tf2`、`tf1` 者，為 TensorFlow 版本差異；區分 `py3` 與 `py2` 則為 Python 之版本差異。
 :::
 
