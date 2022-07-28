@@ -141,8 +141,6 @@ import TabItem from '@theme/TabItem';
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0a32c8b3217f41650022c5092fb565c8.png)
 
 
-
-    
-* 完成編輯後，防火牆的狀態會變成 **`PENDING_UPDATE`**。數分鐘後等狀態變成 **`ACITVE`**，即代表此防火牆設定已生效。    
+* 完成編輯後，防火牆的狀態會變成 **`PENDING_UPDATE`**。數分鐘後等狀態變成 **`ACITVE`**，即代表此防火牆設定已生效。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4fd245f3c9d0f43dd6e175dbd2939613.png)
