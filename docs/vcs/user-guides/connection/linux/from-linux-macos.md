@@ -84,10 +84,10 @@ Last login: Wed May 15 01:02:37 2019 from 59-124-220-27.hinet-ip.hinet.net <br/>
 - 打開 config 檔後，複製並貼上以下格式，填入一[<ins>虛擬運算個體的資訊</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-zh)；若有多個個體，也可以複製貼上數份修改。輸入完成後請存檔。
 
 ```bash
-Host <INSTANCE_NAME>           #輸入虛擬運算個體的名稱
-    HostName <PUBLIC_IP>       #輸入公用 IP
-    User <IMAGE_TYPE>          #輸入 ubuntu 或 centos
-    IdentityFile ~/.ssh/<.pem> #輸入.pem 檔鑰匙對名稱
+Host <INSTANCE_NAME>            # 輸入虛擬運算個體的名稱
+    HostName <PUBLIC_IP>        # 輸入公用 IP
+    User <IMAGE_TYPE>           # 輸入 ubuntu 或 centos
+    IdentityFile ~/.ssh/<.pem>  # 輸入.pem 檔鑰匙對名稱
 ```
 
 
