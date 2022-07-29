@@ -182,6 +182,7 @@ twccli mk vcs -key   #鑰匙對名稱
 ```
 
 :::info
+1. **[ ]** 中括號內為選擇性參數，其餘為必要參數。
 2. 若不帶選擇性參數，則以預設資訊建立個體：
 
 | 映像檔類型、映像檔 | 型號 |網路資訊|規格|
@@ -292,8 +293,7 @@ twccli ls vcs -ptype # 檢視所有產品型號與規格
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5f16ac8f01c7141e7f5fd22120e120c2.png)
 
 
-:::danger
-{%hackmd @docsharedstyle/important-zh %}
+:::caution
 1. 為保護您的虛擬運算個體安全，密碼設定建議至少包含 **17 個字元**。
 2. 此密碼為私人使用，TWCC 將不負責紀錄及管理。請務必妥善保存，若沒有密碼，將無法連線虛擬運算個體。
 :::
