@@ -1,15 +1,17 @@
 ---
 name: MOVE_DOC
 about: General Tasks for man-vip
-title: "[中文搬家] - "
+title: "[搬家] - "
 labels: transformer
 assignees: ''
 
 ---
 
-----
-lang: zh-Hant, En
-----
+> lang
+> - [ ] zh-Hant 
+> - [ ] En
+
+
 
 ## Source docs
 
