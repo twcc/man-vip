@@ -1,5 +1,5 @@
 # man-vip
-The TWCC manual wee-prepared for VIPs.
+The TWCC manual well-prepared for VIPs.
 =======
 
 # Website
