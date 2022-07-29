@@ -229,10 +229,10 @@ PuTTY 使用的鑰匙對格式為`.ppk`，需先將鑰匙對 `.pem` 檔經由 Pu
 - 打開 config 檔後，複製並貼上以下格式，填入一虛擬運算個體的資訊；若有多個個體，也可以複製貼上數份修改。輸入完成後請存檔。
 
 ```bash
-Host <INSTANCE_NAME>           #輸入虛擬運算個體的名稱
-    HostName <PUBLIC_IP>       #輸入公用 IP
-    User <IMAGE_TYPE>          #輸入 ubuntu 或 centos
-    IdentityFile ~/.ssh/<.pem> #輸入.pem 檔鑰匙對名稱
+Host <INSTANCE_NAME>            # 輸入虛擬運算個體的名稱
+    HostName <PUBLIC_IP>        # 輸入公用 IP
+    User <IMAGE_TYPE>           # 輸入 ubuntu 或 centos
+    IdentityFile ~/.ssh/<.pem>  # 輸入.pem 檔鑰匙對名稱
 ```
 
 
