@@ -47,7 +47,7 @@ import TabItem from '@theme/TabItem';
 <summary><b>TWCC CLI</b> </summary>
 
 <br/>
-    
+
 ### 指令
 
 ```bash
