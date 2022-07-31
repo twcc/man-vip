@@ -36,13 +36,16 @@ title: '產品概觀'
 | 搭配運算服務 | ● 容器運算服務 (CCS)<br/>● 高速運算服務 (HPC)<br/> | ● 虛擬運算服務 (VCS)<br/> | ● 藉由 TWCC CLI 與容器運算服務及虛擬運算服務傳輸資料        |
 | 價位 | 高 | 中 | 低 |
 | 資料傳輸 | ● 透過 SFTP 上傳及下載檔案<br/> ● 透過 TWCC CLI 與雲端物件儲存服務 (COS) 進行傳輸 | ● 透過 TWCC CLI 與雲端物件儲存服務 (COS) 進行傳輸 <br/> ● 使用 SSH 連線虛擬運算個體，掛載且初始化虛擬磁碟，並透過 SFTP 上傳與下載檔案| ● 透過第三方軟體上傳及下載檔案 |
+
 </details>
 
 <details class="docspoiler">
 
 <summary> Q3. 容器運算 (CCS) 跟虛擬運算 (VCS) 使用上分別適用於那些情境？</summary>
+
 - 容器運算 (CCS) 適用於大規模且資料密集的高負載工作，例：建立 AI 模型訓練。
 - 虛擬運算 (VCS) 適用於工作負載小的應用程式，例：網站架設，AI 推論服務。
+
 </details>
 
 <details class="docspoiler">
