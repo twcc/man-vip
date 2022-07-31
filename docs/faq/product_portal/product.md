@@ -5,7 +5,7 @@ title: '產品概觀'
 
 # TWCC FAQs | 產品概觀
 
-<details class="docspoiler">
+<details>
 
 <summary> Q1. 容器運算 (CCS)、虛擬運算 (VCS) 及高速運算 (HPC) 有什麼不同？</summary>
 
@@ -25,7 +25,7 @@ title: '產品概觀'
 </details>
 
 
-<details class="docspoiler">
+<details>
 
 <summary> Q2. 高速檔案系統 (HFS)、虛擬磁碟服務 (VDS) 及雲端物件儲存服務 (COS) 有什麼不同？</summary>
 
@@ -39,7 +39,7 @@ title: '產品概觀'
 
 </details>
 
-<details class="docspoiler">
+<details>
 
 <summary> Q3. 容器運算 (CCS) 跟虛擬運算 (VCS) 使用上分別適用於那些情境？</summary>
 
@@ -48,7 +48,7 @@ title: '產品概觀'
 
 </details>
 
-<details class="docspoiler">
+<details>
 
 <summary> Q4. TWCC 資訊安全相關認證與機制？</summary>
 關於 TWCC 的資安認證與機制請參考<ins><a href = "(https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fsecurity-overview-zh">此文件</a></ins>之說明。
