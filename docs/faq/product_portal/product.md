@@ -11,15 +11,15 @@ title: '產品概觀'
 
 三種服務的功能與特色、資源規格、儲存空間比較如下：
 
-| 服務       | 容器運算服務 (CCS)                                                       | 虛擬運算服務 (VCS)                                                     | 高速運算 (HPC) |
+| <p align="left" style={{width:60+'pt'}}>服務</p> |  <p align="left" style={{width:100+'pt'}}>容器運算服務 (CCS)</p>| <p align="left" style={{width:120+'pt'}}>虛擬運算服務 (VCS)</p>| <p align="left" style={{width:90+'pt'}}>高速運算 (HPC)</p>|
 | -------- | -------- | -------- | -------- |
-| 功能與特色 | ● 適用 AI 模型訓練與推斷<br/>● 可隨時調整參數，利於開發<br/>● 資源選項固定 | ● 功能與一般虛擬機雷同，適合架設服務伺服器<br/>● 可調整網路及安全相關設定<br/>● 資源選項固定 | ● 跨節點運算<br/>● 命令列介面<br/>● 彈性選用 GPU 數量          |
+| 功能與特色 | ● 適用 AI<br/>模型訓練與推斷<br/>● 可隨時調整參數，利於開發<br/>● 資源選項固定 | ● 功能與一般虛擬機雷同，適合架設服務伺服器<br/>● 可調整網路及安全相關設定<br/>● 資源選項固定 | ● 跨節點運算<br/>● 命令列介面<br/>● 彈性選用 GPU 數量          |
 | 資源規格   | ● 最多可調用 8 顆 GPU<br/>● 資源比 GPU:CPU:RAM(GB) 為 1:4:90              | ● 提供 vCPU，最多可調用 48 核                                                                   | ● 可彈性依<br/>需求調整 GPU 數量       |
-| 儲存空間   | ● 高速檔案系統 (HFS)<sup> [1][2] </sup>        | ● 虛擬運算個體系統碟 (100 GB)<br/>● 虛擬磁碟服務 (VDS) 附加資料碟，可自行選擇容量                                                                   | ● 高速檔案系統 (HFS)<sup> [1][2] </sup>           |
+| 儲存空間   | ● 高速檔案系統 (HFS)<sup> [1][2] </sup>        | ● 虛擬運算個體系統碟 (100 GB)<br/>● 虛擬磁碟服務 (VDS) 附加資料碟，可自行選擇容量                                                                   | ● 高速檔案系統 <br/>(HFS)<sup> [1][2] </sup>           |
 
 
 - <sup>[1]</sup> 註冊帳號及獲得 200 GB (/home 與 /work 各 100 GB)，可依需求增購空間。
-- <sup>[2]</sup> 自2021年9月1日起，國科會(原科技部)計畫下每個帳號之暫存工作目錄區域(/work) 1500 GB 內免費使用。系統僅提供預設配額 100 GB，若需調高配額請至[<ins> 會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 調整。
+- <sup>[2]</sup> 自2021年9月1日起，國科會(原科技部)計畫下每個帳號之暫存工作目錄區域(/work) 1500 GB 內免費使用。系統僅提供預設配額 100 GB，若需調高配額請至<ins><a href = "https://man.twcc.ai/@twsdocs/howto-service-access-service-zh"> 會員中心 </a></ins> 調整。
 
 
 </details>
@@ -31,7 +31,7 @@ title: '產品概觀'
 
 三種服務的搭配運算服務與價位、存取速度、特色比較如下：
 
-| 服務 | 高速檔案系統 (HFS) | 虛擬磁碟服務 (VDS)     | 雲端物件儲存服務 (COS) |
+| <p align="left" style={{width:60+'pt'}}>服務</p> | <p align="left" style={{width:100+'pt'}}>高速檔案系統 (HFS)</p> | <p align="left" style={{width:120+'pt'}}>虛擬磁碟服務 (VDS)</p>     | <p align="left" style={{width:90+'pt'}}>雲端物件儲存服務 (COS)</p> |
 | -------- | -------- | -------- | -------- |
 | 搭配運算服務 | ● 容器運算服務 (CCS)<br/>● 高速運算服務 (HPC)<br/> | ● 虛擬運算服務 (VCS)<br/> | ● 藉由 TWCC CLI 與容器運算服務及虛擬運算服務傳輸資料        |
 | 價位 | 高 | 中 | 低 |
@@ -43,8 +43,8 @@ title: '產品概觀'
 
 <summary> Q3. 容器運算 (CCS) 跟虛擬運算 (VCS) 使用上分別適用於那些情境？</summary>
 
-- 容器運算 (CCS) 適用於大規模且資料密集的高負載工作，例：建立 AI 模型訓練。
-- 虛擬運算 (VCS) 適用於工作負載小的應用程式，例：網站架設，AI 推論服務。
+    容器運算 (CCS) 適用於大規模且資料密集的高負載工作，例：建立 AI 模型訓練。
+    虛擬運算 (VCS) 適用於工作負載小的應用程式，例：網站架設，AI 推論服務。
 
 </details>
 
