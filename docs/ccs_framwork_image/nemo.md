@@ -7,3 +7,21 @@ sidebar_position: 15
 # NeMo
 
 
+TWCC提供 NGC NeMo (Neural Modules) 立即可用的工作環境。通過可相互連接的 API 模組輕鬆構建最先進的語音和自然語言處理 (NLP) 網路，並可使用 PyTorch Lightning 進行簡單且高性能的多 GPU/多節點混合精度訓練。
+
+## <span class="ccsimglist">映像檔版本資訊</span> <i class="fa fa-sticky-note" aria-hidden="true"></i>
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2e3dc086621f4ec1952ea0f665061a71.png)
+
+
+
+
+
+<details class="docspoiler">
+
+<summary><b>點我參考詳細版本套件資訊</b></summary>
+
+- [NGC NeMo](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo) 
+
+</details>
+
