@@ -4,3 +4,11 @@ title: '虛擬網路'
 ---
 
 # TWCC FAQs | 虛擬網路
+
+<details>
+
+<summary> Q1. 在建虛擬運算服務的時候要選填虛擬網路才能建立，但無法去建立虛擬網路？ </summary>
+
+- [<ins>建立虛擬網路</ins>](https://www.twcc.ai/doc?page=virtual_network)，使用者身分必須為 **`租戶管理員`**。若您的身分為 **`租戶使用者`**，需請 **`租戶管理員`** 提高您的權限；或是通知 **`租戶管理員`** 建立一虛擬網路。
+
+</details>
