@@ -5,74 +5,26 @@ import TOCInline from '@theme/TOCInline';
 
 # 第一部分：搭建網站服務架構
 
-網站服務將由**負載平衡器**做為整體網頁架構的最前端，在使用者發起連線後，負載平衡器將會把使用者流量疏導至**後方的網頁伺服器**，並決定由哪一台伺服器提供網頁服務。
+以下教學如何搭建兩個網站服務：建立虛擬運算個體、使用 Nginx 架設 2 個網頁服務，開啟個體 80 連接埠。
 
-<TOCInline toc={toc} />
+### Step 1. 建立虛擬運算個體
 
-### Step 1. 建立前端負載平衡器
+- 進入虛擬運算管理頁，建立一台名為 `virtualhost` 的虛擬運算個體。
 
-- 由服務列表點選「**負載平衡**」進入「**負載平衡器管理**」頁面，點擊「**＋建立**」
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c7e75e34255e492c11ea7122aba0d3fd.png)
-
-- 輸入負載平衡器設定資訊，完成後點擊「**下一步：檢閱+建立>**」<br/>
-　1. 類型：選擇「**應用程式負載平衡器**」<br/>
-　2. 監聽器： <br/>
-　　a. 協定選擇 「**HTTP**」，連接埠設定 「**80**」，提供 HTTP 服務<br/>
-　　b. 協定選擇 「**HTTPS with SSL**」，連接埠設定 「**443**」，提供 HTTPS 加密傳輸服務<br/>
-　3. 平衡方法：選擇 「**ROUND_ROBIN**」<br/>
-　4. 虛擬網路：選擇需架設負載平衡器的網段
- 
-:::caution
-負載平衡器與 [Step 2](#Step-2-建立後方網頁伺服器，架設-NGINX-網頁服務) 的虛擬運算個體建立於相同虛擬網路上，才能發揮平衡流量之作用。
-:::
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_49af40e14447056a7f51c2af26ffd7c0.png)
 
 :::info
-TWCC 提供三種負載平衡器平衡方法：
-1. **ROUND_BIN** (循環分配)：負載平衡器會輪流將使用者分配至不同伺服器，因每台伺服器權重皆相同，所以會照順序輪流提供使用者服務。
-2. **LEAST_CONNECTION** (依連線數分配)：負載平衡器會偵測伺服器群，將使用者分配至連線數少的伺服器。
-3. **SOURCE_IP** (依來源 IP 分配)：此模式是依來源位址（使用者的 IP），由負載平衡器來分配使用者至不同的網頁伺服器，在下一次進行連線時，系統會再重新分配。 
+- 詳細虛擬運算個體建立步驟，請參考[<ins>虛擬運算服務</ins>](https://www.twcc.ai/doc?page=vm&euqinu=true#%E5%BB%BA%E7%AB%8B%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)。
+- 範例選用 **Ubuntu 20.04** 映像檔建立 **(此文件不支援 Ubuntu 16.04)**，請**開啟公用 IP** 供後續網站管理員維護使用，其他設定皆以預設資訊建立。
 :::
- 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_42cb4df35a247c39e34d7728cb4b06ff.png)
 
+### Step 2. 建立網頁伺服器，架設 Nginx 網頁服務
 
-- 建立完成後，回到負載平衡器列表，請點選該筆平衡器。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f9163f8b43bd366a88b426110ab75cd4.png)
-
-- 進入詳細資料頁，等到狀態變成 **`ACTIVE`** 後，才可繼續編輯。
-- **VIP (Virtual IP)**，**可申請 DNS 以對外提供給使用者，透過此 IP 使用您的網頁服務**。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0c8ac54118d4d0147631330cf651aa78.png)
-
-### Step 2. 建立後方網頁伺服器，架設 NGINX 網頁服務
-
-- 進入虛擬運算管理頁，建立名為 *lbssl01* 與 *lbssl02* 的兩台虛擬運算個體。
+使用公用 IP 連線進入個體後，分別使用以下 3 個指令，安裝 Nginx 架設網頁服務：
 
 :::info
-- 詳細虛擬運算個體建立步驟，請參考[<ins>虛擬運算服務</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-create-zh)。
-- 範例選用 **Ubuntu 映像** 檔建立，**虛擬網路和負載平衡選用相同網路**，請**開啟公用 IP** 供後續網站管理員維護使用，其他設定皆以預設資訊建立。
-:::
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d4f2f49e5f6d8dca5b95e7211d24e557.png)
-
-:::caution
-您也可以在*lbssl01* 個體將網頁架設完成後，再使用[<ins>映像檔</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-vds-instance-image-zh)快速建立 *lbssl02* 網頁伺服器，節省應用程式重複安裝的成本。
-:::
-
-:::info
-後續步驟將使用虛擬運算個體的私有 IP，請進入詳細資料頁面，並將此資訊記下來方便後續使用。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6f0cfb8d596d4e72674ffa2913537fed.png)
-
-:::
-
-- 使用公用 IP 連線進入 *lbssl01* 與 *lbssl02* 個體後，分別使用以下 3 個指令，**將 2 台個體安裝 NGINX 架設網頁服務**：
-
-:::info
-1. 詳細虛擬運算個體連線步驟，請參考[<ins>連線虛擬運算個體</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-zh)。
-2. 範例以 NGINX 做為架設網站的工具，您可以依需求安裝不同工具。
+- 詳細虛擬運算個體連線步驟，請參考[<ins>連線虛擬運算個體</ins>](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)。
+- 範例以 Nginx 做為架設網站的工具，您可以依需求安裝不同工具。
 :::
 
 ```bash
@@ -81,56 +33,96 @@ apt update
 apt install -y nginx
 ```
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_356eef8571553c734c82ba43d4d33c46.png)
-- 安裝好後，即可開始在 *lbssl01* 的個體，架設您的網頁，或依照範例輸入以下指令，編輯靜態網頁示意內容：
-    
+
+- 建立兩個根目錄資料夾，未來將分別放入不同的網站服務內容
+
+```bash
+cd /var/www/html
+mkdir service1
+mkdir service2 
+```
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f4a75bc450074531c8919cfb6e4697af.png)
+
+- 執行以下內容，編輯網頁資料
+ 
 ```bash
 vim /var/www/html/index.nginx-debian.html
 ```
-- 鍵盤按下 <kbd>i</kbd> 進入編輯模式，並將`\<h1>\</h1>`中間字串，改為 「**Hi, this is VCS lbssl01!**」
+- 鍵盤按下 <kbd>i</kbd> 進入編輯模式，並將`<h1> 與 </h1>`中間字串，改為 「**Hi, this is VCS Service 1!**」
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a35c3a18c88ac9d6d8e77915f5060085.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_aecda0f46fd5ebf2ef6f55463cbed710.png)
+
+
 - 再按下鍵盤 <kbd>Esc</kbd> 跳離編輯模式，並輸入 `:wq!` 與按下 <kbd>Enter</kbd>，存檔離開。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_11d0e73d06fd1c04a98c0ce201aff26f.png)
-- 再輸入指令，重啟 NGINX
+
+- 接著執行以下指令，將網頁檔案移至 `service1` 資料夾下 > 進入 `service1` 資料夾 > 將檔案複製至 `service2` 資料夾 > 編輯 `service2` 的網頁檔案
+
+```
+mv index.nginx-debian.html service1
+cd service1
+cp index.nginx-debian.html /var/www/html/service2/
+vim /var/www/html/service2/index.nginx-debian.html
+```
+
+- 鍵盤按下 <kbd>i</kbd> 進入編輯模式，並將`<h1>與</h1>`中間字串，改為 「**Hi, this is VCS Service 2!**」
+
+![](https://i.imgur.com/vWAiU1N.png)
+
+- 再按下鍵盤 <kbd>Esc</kbd> 跳離編輯模式，並輸入 `:wq!` 與按下 <kbd>Enter</kbd>，存檔離開。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_11d0e73d06fd1c04a98c0ce201aff26f.png)
+
+- 更改 Nginx 設定檔，設定網站根目錄的路徑：在`root /var/www/html` 後方加上網頁資料夾名稱，如範例 `service1` 。
+```
+vim /etc/nginx/sites-available/default
+```
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b3360ec80ec2af839bf8b4c6d0cea62d.PNG)
+
+- 再按下鍵盤 <kbd>Esc</kbd> 跳離編輯模式，並輸入 `:wq!` 與按下 <kbd>Enter</kbd>，存檔離開。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_11d0e73d06fd1c04a98c0ce201aff26f.png)
+
+- 重新啟動 Ngix
 
 ```
 systemctl restart nginx
 ```
-- 接著同樣以上述的步驟，修改 *lbssl02* 的內容，網頁顯示字串可以修改為不同的內容：「**Hi, this is VCS lbssl02!**」以利檢查負載平衡的作用。
-
 ### Step 3. 設定個體的安全性群組：開啟 80 連接埠
 
-透過設定安全性群組，建立 80 連接埠，讓負載平衡器能串接後方網頁伺服器 (虛擬運算個體)、分配使用者的請求，並取得回覆傳送給使用者。
+透過設定安全性群組，建立 80 連接埠，讓服務使用者可以成功訪問服務。
 
 - 請點選左側「**聯網與資安**」> 「**安全性群組**」
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1770e397f5db929bb15ef6a3113fdb6d.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_22ac1a1d24dbe8ce74cb82831ca8c706.png)
 
-- 並點選建立的 *lbssl01* 個體
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b54eb467c3a00a9a248379b13455684b.png)
+- 並點選建立的 **virtualhost** 個體
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_511f118d2982327ffbba67b52484c755.png)
+
 
 - 再點選進入個體的安全性群組，點選「**+建立**」
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1db8872b58bc054f1e07149e2a858444.png)
- 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_011613e49d548d34c3f1937a2c8ef3db.png)
+
 - 設定資訊
     1. **方向**：選擇「**Ingress**」(使用者從外部連線，進入此個體使用網頁服務)
     2. **連接埠範圍(最小)、連接埠範圍(最大)**：皆設定「**80**」(僅開放 80 連接埠，提供 HTTP 服務，網頁程式將自動將連線導向 443 連接埠，提供 HTTPS 網頁服務。)
     3. **協定**：選擇「**TCP**」
-    4. **CIDR**：填入虛擬網路之 CIDR，確保同網段的負載平衡器可存取此個體<br/> 
+    4. **CIDR**：填入 CIDR，這裡以 0.0.0.0/0 作為範例，若有限制連入網段需求，請自行設定。<br/> 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_21b645ec6844d6adcd71f72f8f9f2581.png)
- 
-- 個體 *lbssl02*，也請依相同步驟新增 80 連接埠。
-    
-### Step 4. 將虛擬運算個體連結至負載平衡器
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a0d24db55d6ac0ab5eb67d166325729a.png)
 
-- 進入「**負載平衡器詳細資料頁**」> 點選「**編輯**」。
-- 先將 *lbssl01* 個體 **`<私有IP>:<連接埠> (80)`** 資訊，新增到此負載平衡器 > 點選「**確認**」，完成設定。
-:::caution
-**此時請勿新增** *lbssl02* 至負載平衡器，請待 SSL 憑證申請完成後再新增。
-:::
+### Step 4. 確認開通 80 連接埠 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cdd28b73c171b5801cf2a8e3d461f540.png)
+- 複製虛擬運算個體的公有 IP
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7a177b11c31e1b184dc9434378f194da.png)
+
+- 將公用 IP，輸入瀏覽器網址列，確認有成功開通 80 連接埠
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8bb77232c2a6d01f93eab6fa3ed8ce0e.png)
