@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 import TOCInline from '@theme/TOCInline';
 
-# 第一部分：搭建網站服務架構
+# 第一部分：搭建同網域的網站服務
 
 以下教學如何搭建兩個網站服務：建立虛擬運算個體、使用 Nginx 架設 2 個網頁服務，開啟個體 80 連接埠。
 
