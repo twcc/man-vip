@@ -2,18 +2,13 @@
 sidebar_position: 8
 ---
 
+import TOCInline from '@theme/TOCInline';
+
 # Activate TensorFlow automatic mixed-precision computing and execution performance analysis
 
 This article will teach users how to use the TWCC Interactive Container step by step to train a handwritten digit recognition model on MNIST dataset with the automatic mixed precision (hereinafter referred to as AMP) enabled in TensorFlow to maintain the model accuracy and shorten the computing time. Finally, using ResNet-50 to perform a simple performance analysis. The content outline is as follows:
 
-
-- [Introduction to AMP ](#Introduction-to-AMP)
-- [Create a TWCC Interactive Container](#Create-a-TWCC-Interactive-Container)
-- [SSH connection to enter container](#SSH-connection-to-enter-container)
-- [Enable AMP](#Enable-AMP) 
-    - [Environment variable setting method](#Environment-variable-setting-method)
-    - [Example of MNIST handwriting recognition program](#Example-of-MNIST-handwriting-recognition-program)
-- [Benchmark performance analysis:ResNet-50 v1.5](#Benchmark-performance-analysis:ResNet-50-v1.5)
+<TOCInline toc={toc} />
 
 
 ## Introduction to AMP
