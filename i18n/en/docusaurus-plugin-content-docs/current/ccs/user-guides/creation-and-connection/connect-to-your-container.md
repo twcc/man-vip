@@ -9,6 +9,10 @@ import TabItem from '@theme/TabItem';
 
 When the container state is in **`Ready`**, you can start using it. You can connect to interactive containers via Jupyter Notebook (browser-based web development environment) or SSH. Please refer to the following instructions for the process steps.
 
+## Prerequisites
+- Create [Interactive Containers](https://man.twcc.ai/@twccdocs/guide-ccs-create-en).
+- To operate using the TWCC portal: once the container is created, click on the container you want to connect to on the **Interactive Container Management** page and enter the **Interactive Container Details** page.
+- To operate using the TWCC CLI: please obtain the [Container's ID](https://man.twcc.ai/@twccdocs/guide-ccs-manage-zh#%E6%AA%A2%E8%A6%96%E8%B3%87%E8%A8%8A) first.
 
 ## Connect to your container
 

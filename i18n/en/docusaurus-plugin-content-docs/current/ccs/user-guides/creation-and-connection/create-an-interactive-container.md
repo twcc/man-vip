@@ -11,6 +11,12 @@ You can create an interactive container with one command with the default settin
 
 For the detailed information of container types (including the number of GPUs and other resource sizes), see [TWCC Pricing](https://www.twcc.ai/doc?page=price#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS)。
 
+## Before we get started
+
+- If you haven't sign up for a user account, please [sign up for TWCC](https://www.twcc.ai/) first.
+- If you would like to operate with TWCC portal, please sign in to [TWCC portal ](https://www.twcc.ai/)first.
+==**Need to update:exclamation:**==
+- If you would like to operate with TWCC CLI, please [install TWCC CLI](https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-2-%E5%AE%89%E8%A3%9DTWCC-CLI) first, and then [sign in](https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-3-%E9%80%B2%E5%85%A5-TWCC_CLI-%E7%92%B0%E5%A2%83%E4%B8%A6%E9%96%8B%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8B%99).
 
 
 ## How to an create Interactive Container?
