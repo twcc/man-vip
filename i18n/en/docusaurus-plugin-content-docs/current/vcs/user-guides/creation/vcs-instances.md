@@ -23,11 +23,10 @@ TWCC provides the following image:
 
 <!-- 1 start -->
 
-<details class="docspoiler">
+<Tabs>
 
-<summary><b>TWCC Portal</b></summary>
+<TabItem value="TWCC Portal" label="TWCC Portal">
 
-<br/>
 
 
 {%hackmd @twccdocs/vcs-chunk-create-instance-en %}
@@ -67,18 +66,9 @@ TWCC is not responsible for recording and managing your key pair. Please downloa
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_069ef79ec5b926c0eefe04f0c00aee65.png)
 
 
-</details>
+</TabItem>
 
-
-<!-- Space -->
-
-<div style={{"height":"8px"}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 
 ### Command
@@ -127,18 +117,18 @@ twccli ls vcs -ptype    # View all instance types and specifications
 :::
 
 
-</details>
+</TabItem>
+
+</Tabs>
 
 
 ### Create <i class="fa fa-windows" aria-hidden="true"></i>  Windows instances
 
 <!-- 1 start -->
 
-<details class="docspoiler">
+<Tabs>
 
-<summary><b>TWCC Portal</b></summary>
-
-<br/>
+<TabItem value="TWCC Portal" label="TWCC Portal">
 
 {%hackmd @twccdocs/vcs-chunk-create-instance-en %}
 
@@ -159,7 +149,9 @@ twccli ls vcs -ptype    # View all instance types and specifications
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ad0449c9897ecfaf0a261e525a98203c.png)
 
 
-</details>
+</TabItem>
+
+</Tabs>
 
 
 ---

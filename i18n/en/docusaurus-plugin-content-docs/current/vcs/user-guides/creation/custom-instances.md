@@ -20,10 +20,9 @@ For the permission differences in VCS instance between Tenant Admins and Tenant 
 
 ## Create a custom instance
 
-<details class="docspoiler">
+<Tabs>
 
-<summary><b>TWCC Portal</b></summary>
-<br/>
+<TabItem value="TWCC Portal" label="TWCC Portal">
 
 Select an **Image** (`(private)xxx, xxx is your custome image file name`) to restore your VCS instance. For detailed instance creation steps, see [<ins>Create VCS instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-en) for more information.
 
@@ -32,21 +31,15 @@ Select an **Image** (`(private)xxx, xxx is your custome image file name`) to res
 
 
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{"height":"8px"}}></div>
-
-<!-- CLI start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (TBD) </summary>
-
-</details>
+<TabItem value="TWCC CLI" label="TWCC CLI(TBD)">
 
 <br/>
+
+</TabItem>
+
+</Tabs>
 
 :::caution
 To ensure an instance can be created from an image completely, **do not delete the image** when the instance is in the **`Starting`** state.
