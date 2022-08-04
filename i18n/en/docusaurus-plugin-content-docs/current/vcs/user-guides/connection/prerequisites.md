@@ -47,7 +47,7 @@ twccli net vcs -s   # VCS instance ID
 ```
 
 :::info
-{%hackmd @twccdocs/cli-parameter-note-en %}
+1. The square brackets **[ ]** indicate optional parameters, and the rest are required parameters.
 :::
 
 
