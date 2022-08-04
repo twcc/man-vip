@@ -55,13 +55,13 @@ git clone https://github.com/TW-NCHC/AI-Services.git
  
  - Enter the **Tutorial_Three** directory
  
- ```bash
+```bash
  cd AI-Services/Tutorial_Three
- ``` 
+``` 
  
  - Perform model training
  
- ```bash
+```bash
 bash V3_training.sh --path ./cifar-10-python.tar.gz
 ``` 
 
