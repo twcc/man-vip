@@ -12,7 +12,7 @@ sidebar_position: 10
 
 TWCC 的容器環境中已為用戶安裝 TensorBoard，本篇文章將教學如何啟動 TensorBoard 工具。更多 Tensorboard 介紹與使用方法，請參考[ TensorFlow 官網](https://www.tensorflow.org/tensorboard)。
 
-:::caution 提示
+:::tip
 建議在 TensorFlow 容器中啟動，較能發揮 TensorBoard 的功能，用於其他容器功能將受限。
 :::
 
