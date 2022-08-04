@@ -19,7 +19,11 @@ Please note that you can connect to the instance only if its state is **`Ready`*
 
 <details class="docspoiler">
 
-<summary><b>1. Built-in command line (Terminal)</b></summary>
+<summary>
+
+## 1. Built-in command line (Terminal)
+
+</summary>
 
 Open terminal on your local computer, enter the commands sequentially according to the [<ins>obtained connection information</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-en) to change the permission of the key pair and connect to the VCS instance.
 <div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
@@ -45,23 +49,33 @@ Last login: Wed May 15 01:02:37 2019 from 59-124-220-27.hinet-ip.hinet.net <br/>
 
 <details class="docspoiler">
 
-<summary><b>2. Third-party software: VScode</b></summary>
+<summary>
+
+## 2. Third-party software: VScode
+
+</summary>
 
 If you already use VScode for application development, you can also directly use this software to connect to your VCS instance. VScode supports a variety of platforms, and provides many extensions that are easy to install and use. The following steps are performed in Windows, and the steps are similar in Linux or macOS. For more detailed instructions, see [<ins>VScode instructions</ins>](https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks).
 
-### Step 1. Download and install VScode
+<br/>
+
+**Step 1. Download and install VScode**
 
 Go to [VScode](https://code.visualstudio.com/Download) to download and install VScode, and then open it.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_010a76dabe0d66c94562e776fe3b3a6a.png)
 
-### Step 2. Install SSH extension
+<br/>
+
+**Step 2. Install SSH extension**
 
 Click **Extensions** > enter *remote ssh* in the search bar > select **Remote- SSH** and click **Install**.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_38c0c0011b900d9a5547a5f4487f4fce.png)
 
-### Step 3. Build configuration file
+<br/>
+
+**Step 3. Build configuration file**
 
 - After the installation, click the icon in the lower left corner of VScode to open the remote connection list.
 
@@ -93,7 +107,9 @@ Host <INSTANCE_NAME>           #enter the name of VCS instance
 
 
 
-### Step 4. Connect to the VCS instance
+<br/>
+
+**Step 4. Connect to the VCS instance**
 
 - Click the icon in the lower left corner of VScode again > select **Remote-SSH: Connect to Host...** 
 

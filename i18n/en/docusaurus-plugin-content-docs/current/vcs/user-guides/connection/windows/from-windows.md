@@ -14,7 +14,7 @@ After finished [Preparation and Obtain connection information](https://man.twcc.
 The created instance will enter the **`Ready`** state, and it will take some time before you can connect remotely to it.
 :::
 
-:::cuation
+:::caution
 1. Due to frequent information security incidents, if your connection comes from the following countries, we will disable your remote connection to Windows instances (port: 9833): China, Germany, France, South Korea, Netherlands, Poland, Russia. If you need to connect to TWCC Windows instance, please contact Customer Service.
 2. You cannot connect to VCS instance once the settings of the network interface card are modified. Therefore, we strongly recommend that you do not change the network interface card settings. Please beware when operating and deploying.
 :::

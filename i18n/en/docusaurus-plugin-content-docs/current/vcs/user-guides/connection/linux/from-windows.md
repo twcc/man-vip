@@ -20,7 +20,11 @@ Please note that the instance must be in the **`Ready`** state before you can co
 
 <details class="docspoiler">
 
-<summary><b>1. Built-in Command Prompt</b></summary>
+<summary>
+
+## 1. Built-in Command Prompt
+
+</summary>
 
 <br/>
 
@@ -32,13 +36,17 @@ Maybe this : https://docs.microsoft.com/en-us/windows-server/administration/open
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9242485b84ba91f9e8777e4bea275744.png)
 
-### Step 2. Change the permissions of key pair
+<br/>
+
+**Step 2. Change the permissions of key pair**
     
 Follow the steps in [<ins>Prerequisites</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-en) to obtain the connection information and enter commands in to change the key pair permissions.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_02120b912a3077ba14f49054f320b674.png)
 
-### Step 3. Connect to your VCS instance
+<br/>
+
+**Step 3. Connect to your VCS instance**
 
 Enter the commands obtained by following the [<ins>Preparation</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-en) to SSH into your instance.
 
@@ -76,21 +84,28 @@ Last login: Tue May 14 14:14:37 2019 from 220-141-25-168.dynamic-ip.hinet.net
 
 <details class="docspoiler">
 
-<summary><b>2. Third-party software: MobaXterm</b></summary>
+<summary>
+
+## 2. Third-party software: MobaXterm
+
+</summary>
 
 <br/>
 
 MobaXterm's graphical user interface is intuitive and easy to use. The key pair can be used directly without conversion.
 
-### Step 1. Download MobaXterm
+<br/>
+
+**Step 1. Download MobaXterm**
 
 
 Please download the [<ins>MobaXterm Home Edition (Portable edition)</ins>](https://mobaxterm.mobatek.net/download-home-edition.html), unzip it, and run **MobaXterm_Personal_[version]**.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1f3324a847dcf480c383ceed1d7c56a4.png)
 
+<br/>
 
-### Step 2. Create a connection
+**Step 2. Create a connection**
 
 Click **Session** in the upper left corner.
 
@@ -123,17 +138,25 @@ Connection established!
 
 <details class="docspoiler">
 
-<summary><b>3. Third-party software: PuTTY</b></summary>
+<summary>
+
+## 3. Third-party software: PuTTY
+
+</summary>
 
 <br/>
     
 PuTTY does not support the key pair format `.pem`  , so please convert the `.pem` file to `.ppk`by using PuTTYgen.
 
-### Step 1. Download and install PuTTY
+<br/>
+
+**Step 1. Download and install PuTTY**
 
 Please download the [<ins>PuTTY</ins>](https://www.putty.org/) and complete the installation.
 
-### Step 2. Convert the key pair (`.pem`> `.ppk`)
+<br/>
+
+**Step 2. Convert the key pair (`.pem`> `.ppk`)**
 
 - Open **PuTTYgen**
 
@@ -158,8 +181,9 @@ Please download the [<ins>PuTTY</ins>](https://www.putty.org/) and complete the 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dee36992482a38800d667001f9e9a3c2.png)
 
 
+<br/>
 
-### Step 3. **Connect to the instance using PuTTY**
+**Step 3. Connect to the instance using PuTTY**
 
 - Open **PuTTY**
        
@@ -195,20 +219,28 @@ Please download the [<ins>PuTTY</ins>](https://www.putty.org/) and complete the 
 
 <details class="docspoiler">
 
-<summary><b>4. Third-party software: VScode</b></summary>
+<summary>
+
+## 4. Third-party software: VScode
+
+</summary>
 
 <br/>
 
 
 If you are already using VScode to develop your program, you may directly using this software to connect to your VCS instance. VScode supports a variety of platforms, and there are many plug-in software packages available, easy to install, and quite suitable for novices. For complete instructions, please refer to [<ins>Official documentation</ins>](https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks).
 
-### Step 1. Download and install VScode
+<br/>
+
+**Step 1. Download and install VScode**
 
 Please download [<ins>VScode</ins>](https://code.visualstudio.com/Download) and open the application.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_010a76dabe0d66c94562e776fe3b3a6a.png)
 
-### Step 2. Install SSH package
+<br/>
+
+**Step 2. Install SSH package**
 
 
 Click **Extensions** > search for *remote ssh* > select **Remote- SSH** and click **Install**.
@@ -216,7 +248,9 @@ Click **Extensions** > search for *remote ssh* > select **Remote- SSH** and clic
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_38c0c0011b900d9a5547a5f4487f4fce.png)
 
-### Step 3. Create config file
+<br/>
+
+**Step 3. Create config file**
 
 - After the installation is complete, click the icon in the lower left corner of the window to open the remote connection.
 
@@ -246,8 +280,9 @@ Host <INSTANCE_NAME>            # Enter the name of the VCS instance
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_871749523146661c11306b59bea27ce0.png)
 
+<br/>
 
-### Step 4. Connect to VCS instance
+**Step 4. Connect to VCS instance**
 
 - In VScode, click the icon in the lower left corner > select **Remote-SSH: Connect to Host...**.
 
