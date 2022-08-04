@@ -55,11 +55,9 @@ import TabItem from '@theme/TabItem';
 
 <!-- 1 start -->
 
-<details class="docspoiler">
+<Tabs>
 
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 進入「**虛擬運算**」服務，在「**虛擬運算個體管理**」頁面，點擊「**＋建立**」。
 
@@ -157,18 +155,9 @@ TWCC 不負責紀錄及管理您的鑰匙對，請務必下載並妥善保存此
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f062b7368287f59d3a7ffc77cb4140c2.png)
 
-</details>
+</TabItem>
 
-
-<div style={{"height":"8px"}}> </div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 ### 指令
 
@@ -214,19 +203,15 @@ twccli ls vcs -ptype # 檢視所有產品型號與規格
 :::
 
 
-</details>
+</TabItem>
+</Tabs>
 
 
 
 ### 建立 <i class="fa fa-windows" aria-hidden="true"></i>  Windows 個體
 
-<!-- 1 start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<Tabs>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 進入「**虛擬運算**」服務，在「**虛擬運算個體管理**」頁面，點擊「**＋建立**」。
 
@@ -303,8 +288,9 @@ twccli ls vcs -ptype # 檢視所有產品型號與規格
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f062b7368287f59d3a7ffc77cb4140c2.png)
 
-</details>
+</TabItem>
 
+</Tabs>
 
 ---
 

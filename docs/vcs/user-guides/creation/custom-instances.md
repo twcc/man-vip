@@ -31,20 +31,9 @@ import TabItem from '@theme/TabItem';
 
 ### 選用計畫內建立的映像檔
 
-<details class="docspoiler">
+<Tabs>
 
-<summary><b>TWCC 入口網站</b></summary>
-<br/>
-
-建立步驟同 [<ins>建立虛擬運算個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh)，僅「**映像檔**」改選擇所要回復的映像檔版本 `(private)xxx您自訂的映像檔名稱xxx`，即可完成建立。
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_020639a28b42ede29aa4ca4ceb1612a5.png)
-
-
-</details>
-
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 :::tip
 <details>
@@ -56,47 +45,41 @@ import TabItem from '@theme/TabItem';
 </details>
 :::
 
-<!-- Space -->
+建立步驟同 [<ins>建立虛擬運算個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh)，僅「**映像檔**」改選擇所要回復的映像檔版本 `(private)xxx您自訂的映像檔名稱xxx`，即可完成建立。
+    
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_020639a28b42ede29aa4ca4ceb1612a5.png)
 
-<div style={{'height':'8px'}}> </div>
 
+</TabItem>
 
-<!-- CLI start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (TBD) </summary>
-
-</details>
+<TabItem value="TWCC CLI" label="TWCC CLI(TBD)">
 
 <br/>
+
+</TabItem>
+
+</Tabs>
 
 
 ### 選用來源計畫分享的映像檔
 
-<details class="docspoiler">
+<Tabs>
 
-<summary><b>TWCC 入口網站</b></summary>
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 建立步驟同 [<ins>建立虛擬運算個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh)，僅「**映像檔類型**」需先依映像檔的作業系統，選擇 Custom Image Linux 或 Custom Image Windows，才能接續選擇來源計畫分享的映像檔。
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cbe7e981b40b59d824db31876356bddf.png)
 
-</details>
+</TabItem>
 
+<TabItem value="TWCC CLI" label="TWCC CLI(TBD)">
 
-<!-- Space -->
+<br/>
 
-<div style={{'height':'8px'}}></div>
+</TabItem>
 
-<!-- CLI start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (TBD) </summary>
-
-</details>
+</Tabs>
 
 <br/>
 

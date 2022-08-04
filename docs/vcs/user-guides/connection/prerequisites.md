@@ -19,11 +19,9 @@ import TabItem from '@theme/TabItem';
 
 <!-- Portal start -->
 
-<details class="docspoiler">
+<Tabs>
 
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 - 進入欲連線的虛擬運算個體詳細資料頁面。
 
@@ -45,18 +43,9 @@ import TabItem from '@theme/TabItem';
 ![](https://i.imgur.com/tS0RGPU.png)
 
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-
-<!-- CLI start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 ### 指令
 
@@ -80,16 +69,19 @@ twccli ls vcs
 ```
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_565a7f89f09a26306182a00123a02929.png)
 
-</details>
+
+</TabItem>
+
+</Tabs>
 
 
 ## Step 2. 取得連線資訊
 
 <!-- Portal start -->
 
-<details class="docspoiler">
+<Tabs>
 
-<summary><b>TWCC 入口網站</b></summary>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 #### Linux 個體
 
@@ -120,18 +112,12 @@ twccli ls vcs
     **帳號：administrator**<br/>
     **密碼：使用者自行定義之個體密碼**
 
-</details>
+</TabItem>
 
-<!-- CLI start -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- Space -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (TBD)</summary>
-
-</details>
+<TabItem value="TWCC CLI" label="TWCC CLI(TBD)">
 
 <br/>
+
+</TabItem>
+
+</Tabs>
