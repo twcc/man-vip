@@ -25,31 +25,30 @@ Please refer to the table<sup>[2]</sup> below for the conversion of **Memory** a
 ### Container Compute Service (CCS)
 
 > Services include: **Interactive Container**, **Scheduled Container**
+
 | Container type | GPU (pieces)| CPU (core) | Memory (GB) |<font color='#27a5bd'>**Available Memory**</font> |Shared memory (GB)|<font color='#27a5bd'>Available Shared Memory</font>|
 | -------- | -------- | -------- |-------- |-------- |-------- |-------- |
-| c.super   | 1     | 4     |90     |<font color='#27a5bd', fontWeight'bold'>84 GiB</font><font color='#27a5bd'> =</font><br/><font color='#27a5bd'>86,016  MiB </font>   |-|-|
-| c.xsuper   | 2    | 8    |180     |<font color='#27a5bd', fontWeight'bold'>168 GiB</font><font color='#27a5bd'> =</font><br/><font color='#27a5bd'>172,032  MiB </font>       |-|-|
-| c.2xsuper   | 4     | 16    |360     |<font color='#27a5bd', fontWeight'bold'>335 GiB</font><font color='#27a5bd'> =</font><br/><font color='#27a5bd'>343,040  MiB </font>      |-|-|
-| c.4xsuper  | 8     | 32     |720     |<font color='#27a5bd', fontWeight'bold'>671 GiB</font><font color='#27a5bd'> =</font><br/><font color='#27a5bd'>687,104  MiB </font>      |-|-|
-| cm.super   | 1     | 4     |60     | <font color='#27a5bd', fontWeight'bold'>56 GiB</font><font color='#27a5bd'> =</font><br/><font color='#27a5bd'>57,344  MiB </font>    | 30    | <font color='#27a5bd', fontWeight'bold'>28 GiB</font><font color='#27a5bd'> =</font><br/><font color='#27a5bd'>28,672  MiB </font>    |
-| cm.xsuper  | 2     | 8     |120     |  <font color='#27a5bd', fontWeight'bold'>112 GiB</font><font color='#27a5bd'> =</font><br/><font color='#27a5bd'>114,688  MiB </font>     | 60    |  <font color='#27a5bd', fontWeight'bold'>56 GiB</font><font color='#27a5bd'> =</font><br/><font color='#27a5bd'>57,344  MiB </font>   |
-| cm.2xsuper   | 4     | 16     |240     | <font color='#27a5bd', fontWeight'bold'>224 GiB</font><font color='#27a5bd'> =</font><br/><font color='#27a5bd'>229,376  MiB </font>     | 120    |<font color='#27a5bd'>**112 GiB**</font><font color='#27a5bd'> =</font><br/><font color='#27a5bd'>114,688  MiB </font>     |
-| cm.4xsuper   | 8     | 32     |480     |  <font color='#27a5bd', fontWeightbold'>447 GiB</font><font color='#27a5bd'> =</font><br/><font color='#27a5bd'>457,728  MiB </font>   |  240    |<font color='#27a5bd', fontWeight'bold'>224 GiB</font><font color='#27a5bd'> =</font><br/><font color='#27a5bd'>229,376  MiB </font>     |
+| c.super   | 1     | 4     |90     |<font color='#27a5bd'>**84 GiB**</font><font color='#27a5bd'> =</font><div></div><font color='#27a5bd'>86,016  MiB </font>   |-|-|
+| c.xsuper   | 2    | 8    |180     |<font color='#27a5bd'>**168 GiB**</font><font color='#27a5bd'> =</font><div></div><font color='#27a5bd'>172,032  MiB </font>       |-|-|
+| c.2xsuper   | 4     | 16    |360     |<font color='#27a5bd'>**335 GiB**</font><font color='#27a5bd'> =</font><div></div><font color='#27a5bd'>343,040  MiB </font>      |-|-|
+| c.4xsuper  | 8     | 32     |720     |<font color='#27a5bd'>**671 GiB**</font><font color='#27a5bd'> =</font><div></div><font color='#27a5bd'>687,104  MiB </font>      |-|-|
+| cm.super   | 1     | 4     |60     | <font color='#27a5bd'>**56 GiB**</font><font color='#27a5bd'> =</font><div></div><font color='#27a5bd'>57,344  MiB </font>    | 30    | <font color='#27a5bd'>**28 GiB**</font><font color='#27a5bd'> =</font><div></div><font color='#27a5bd'>28,672  MiB </font>    |
+| cm.xsuper  | 2     | 8     |120     |  <font color='#27a5bd'>**112 GiB**</font><font color='#27a5bd'> =</font><div></div><font color='#27a5bd'>114,688  MiB </font>     | 60    |  <font color='#27a5bd'>**56 GiB**</font><font color='#27a5bd'> =</font><div></div><font color='#27a5bd'>57,344  MiB </font>   |
+| cm.2xsuper   | 4     | 16     |240     | <font color='#27a5bd'>**224 GiB**</font><font color='#27a5bd'> =</font><div></div><font color='#27a5bd'>229,376  MiB </font>     | 120    |<font color='#27a5bd'>**112 GiB**</font><font color='#27a5bd'> =</font><div></div><font color='#27a5bd'>114,688  MiB </font>     |
+| cm.4xsuper   | 8     | 32     |480     |  <font color='#27a5bd'>**447 GiB**</font><font color='#27a5bd'> =</font><div></div><font color='#27a5bd'>457,728  MiB </font>   |  240    |<font color='#27a5bd'>**224 GiB**</font><font color='#27a5bd'> =</font><div></div><font color='#27a5bd'>229,376  MiB </font>     |
 
 ### High-performance Computing (HPC)
 
 > Services include: **Taiwania 2 (HPC CLI)**, **HPC Job (Web Interface)**
+
 | Job type | GPU (pieces)| CPU (core) | Memory (GB) |<font color='#27a5bd'>**Available**</font> |
 | -------- | -------- | -------- |-------- |-------- |
-| h.super   | 1     | 4     |90     |<font color='#27a5bd', fontWeight:'bold'>84 GiB</font><font color='#27a5bd'> =</font><br/><font color='#27a5bd'>86,016  MiB </font>   |
-| h.xsuper   | 2    | 8    |180     |<font color='#27a5bd', fontWeight'bold'>168 GiB</font><font color='#27a5bd'> =</font><br/><font color='#27a5bd'>172,032  MiB </font>       |
-| h.2xsuper   | 4     | 16    |360     |<font color='#27a5bd', fontWeight'bold'>335 GiB</font><font color='#27a5bd'> =</font><br/><font color='#27a5bd'>343,040  MiB </font>      |
-| h.4xsuper  | 8     | 32     |720     |<font color='#27a5bd', fontWeight'bold'>671 GiB</font><font color='#27a5bd'> =</font><br/><font color='#27a5bd'>687,104  MiB </font>      |
-
-
-
+| h.super   | 1     | 4     |90     |<font color='#27a5bd'>**84 GiB**</font><font color='#27a5bd'> =</font><div></div><font color='#27a5bd'>86,016  MiB </font>   |
+| h.xsuper   | 2    | 8    |180     |<font color='#27a5bd'>**168 GiB**</font><font color='#27a5bd'> =</font><div></div><font color='#27a5bd'>172,032  MiB </font>       |
+| h.2xsuper   | 4     | 16    |360     |<font color='#27a5bd'>**335 GiB**</font><font color='#27a5bd'> =</font><div></div><font color='#27a5bd'>343,040  MiB </font>      |
+| h.4xsuper  | 8     | 32     |720     |<font color='#27a5bd'>**671 GiB**</font><font color='#27a5bd'> =</font><div></div><font color='#27a5bd'>687,104  MiB </font>      |
 
 :::info
-[1] It is the actual memory capacity that can be used by the user.
+[1] It is the actual memory capacity that can be used by the user.<br/>
 [2] The value is rounded to the nearest whole number.
 :::
