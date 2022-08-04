@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# sattah
+# sattach
 
 可將標準輸入、輸出，和錯誤訊息等多次掛載與卸載在當前運行的任務或任務集中。sattach 會附加到一個執行中的slurm 任務集中的特定任務步驟，透過attaching將會使Slurm任務中所有步驟的IO Streams變為可使用狀態，也適用於平行運算除錯工具使用，例如TotalView。例如我們將一個腳本內容改為直行多個srun，即為多個任務步驟，運行之後，可使用sattach 瀏覽步驟狀態。
 
