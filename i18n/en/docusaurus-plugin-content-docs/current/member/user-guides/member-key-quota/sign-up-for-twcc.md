@@ -5,7 +5,7 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 註冊帳號
+# Sign up for an TWCC account
 
 
 :::warning

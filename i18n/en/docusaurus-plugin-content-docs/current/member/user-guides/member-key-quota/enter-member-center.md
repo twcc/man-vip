@@ -5,7 +5,7 @@ sidebar_position: 2
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 進入會員中心
+# Enter Member Center
 
 Member Center is a system for unified management of the projects, members, quotas, resource usage, and billing that you use in TWCC.
 
