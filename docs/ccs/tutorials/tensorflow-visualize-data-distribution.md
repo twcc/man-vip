@@ -148,7 +148,7 @@ mkdir results
 
 因環境預設開啟自動混合精度運算，所以執行對照組需先將環境變數強制停止自動混合精度運算，直接於命令列輸入執行指令如下：
 
-```bash=
+```bash
 export TF_ENABLE_AUTO_MIXED_PRECISION=0
 export TF_ENABLE_AUTO_MIXED_PRECISION_GRAPH_REWRITE=0
 python ./main.py --mode=training_benchmark --warmup_steps 200 \
@@ -260,7 +260,7 @@ GPU 記憶體的使用量 19.29 GB：
 
 因為 AMP 大大地降低 GPU 記憶體的使用量，所以我們再加倍 Batch Size 企圖增加執行效能，直接於命令列輸入指令如下：
 
-```bash=
+```bash
 rm -rf results/*
 python ./main.py --mode=training_benchmark --warmup_steps 200 \
        --num_iter 500 --batch_size 512 --iter_unit batch --results_dir results
