@@ -2,6 +2,9 @@
 sidebar_position: 3
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 設定環境變數
 
 
@@ -27,12 +30,9 @@ TensorFlow 映像檔預設開啟 Tensor Core math：
 
 ### Step 1. 建立容器 / 虛擬運算個體、指定環境變數
 
-<!-- 1 start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
+<Tabs>
+  <TabItem value="TWCC 入口網站" label="TWCC 入口網站" default>
+    
 
 :::info
 以下以開發型容器為範例，虛擬運算個體也是相同的設定方式，在[<ins>建立個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh)時指定環境變數。
@@ -61,24 +61,17 @@ TensorFlow 映像檔預設開啟 Tensor Core math：
 
 
 
-</details>
-
-<!-- Space -->
-
-<div style={{height:8+'px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
+  </TabItem>
+  <TabItem value="TWCC CLI" label="TWCC CLI">
+    
 
 ```
 twccli mk ccs -envk TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH -envv 1  
 ```
 
-</details>
 
+  </TabItem>
+</Tabs>
 
 ### Step 2. 確認環境變數
 
