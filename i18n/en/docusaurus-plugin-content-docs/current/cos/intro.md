@@ -3,7 +3,7 @@ sidebar_label: '服務概觀'
 sidebar_position: 1
 ---
 
-# Service overview <img width=30, heigh=30 src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a798c7edb1b5032ecf92265a3150a7ec.png' />
+# Service overview <img style={{width:35+'px', height:35+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a798c7edb1b5032ecf92265a3150a7ec.png' />
 
 TWCC Cloud Object Storage service provides an object storage system that is compatible with Amazon S3. Users may upload files from local computers to TWCC Cloud Object Storage system and connect them to container service<sup>[1]</sup> for AI computing.
 
