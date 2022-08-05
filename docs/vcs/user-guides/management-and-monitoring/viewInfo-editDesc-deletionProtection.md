@@ -18,13 +18,9 @@ import TabItem from '@theme/TabItem';
 
 檢視個體 ID、名稱、公用/私有 IP、狀態、建立時間、建立者、映像檔版本、資源比例、鑰匙對、網路連線、儲存、…等資訊。
 
-<!-- UI start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 進入虛擬運算個體管理頁面，可檢視所有建立個體的列表資訊：**ID**、**名稱**、**對外 IP**、**個體狀態**、**建立時間**及**建立者**。
 * 在「**搜尋**」列輸入關鍵字可篩選出列表的欄位中符合該特定條件的結果。
@@ -40,18 +36,9 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4b5b513960169c831bdc6ba0d8613e8a.png)
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- CLI start -->
-
-<details class="docspoiler">
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 - 檢視個體 ID、名稱、建立時間、狀態。
 
@@ -66,18 +53,15 @@ twccli ls vcs
 ```bash
 twccli ls vcs -all
 ```
+</TabItem>
 
-</details>
+</Tabs>
 
 ## 編輯描述
 
-<!-- UI start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 進入「**虛擬運算個體詳細資料**」頁，點選「<i class="fa fa-pencil" aria-hidden="true"></i>」即可編輯、加入虛擬運算個體的描述內容，以區辨不同的虛擬運算個體。
 
@@ -88,31 +72,22 @@ twccli ls vcs -all
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4b5b513960169c831bdc6ba0d8613e8a.png)
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- CLI start -->
-
-<details class="docspoiler">
-<summary><b>TWCC CLI</b> (尚未支援) </summary>
+<TabItem value="TWCC CLI" label="TWCC CLI (尚無支援)">
 
 <br/>
 
-</details>
+</TabItem>
+
+</Tabs>
 
 
 ## 開啟/關閉 刪除保護機制
 
-<!-- UI start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 進入「**虛擬運算個體詳細資料**」頁，點選可「**開啟**」或「**關閉**」資源刪除保護機制。
 
@@ -123,12 +98,6 @@ twccli ls vcs -all
 開啟刪除保護機制，在您刪除資源之前，需先關閉保護機制後才能繼續進行刪除步驟，可防止資源誤刪，導致服務中斷。
 :::
 
-
-</details>
-
-
-<br/>
-
 :::tip
 <details>
 
@@ -137,18 +106,14 @@ twccli ls vcs -all
 ![](https://i.imgur.com/8v36pAf.gif)
 
 </details>
-:::     
+:::
 
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- CLI start -->
-
-<details class="docspoiler">
-<summary><b>TWCC CLI</b> (TBD) </summary>
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
 
 <br/>
 
-</details>
+</TabItem>
+
+</Tabs>

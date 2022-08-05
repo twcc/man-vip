@@ -24,13 +24,9 @@ import TabItem from '@theme/TabItem';
 
 若您將持續一段時間不使用個體，並希望保留各項資源，您可以點選「**停止**」關機並回收個體資源，個體將呈現 **`Stopping`**，準備進入 **`Stopped`** 資源已釋放的狀態。在 **`Stopped`** 狀態下，<ins>**個體將不再計費**</ins>。
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 - 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**停止**」。
 
@@ -39,24 +35,15 @@ import TabItem from '@theme/TabItem';
 - 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**停止**」。
 - 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**停止**」。
 
+</TabItem>
 
-</details>
-
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (尚無支援) </summary>
+<TabItem value="TWCC CLI" label="TWCC CLI (尚無支援)">
 
 <br/>
 
-</details>
+</TabItem>
 
-<br/>
+</Tabs>
 
 
 停止後操作限制如下：
@@ -82,13 +69,9 @@ import TabItem from '@theme/TabItem';
 
 若要回復並使用已停止的個體，或將已關機的個體開機使用，請點選「**啟動**」，個體狀態將呈現 **`Starting`**，正在重新分配資源中，並準備再次進入 **`Ready`** 狀態。
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 - 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**啟動**」。
 
@@ -97,21 +80,15 @@ import TabItem from '@theme/TabItem';
 - 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**啟動**」。
 - 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**啟動**」。
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (尚無支援) </summary>
+<TabItem value="TWCC CLI" label="TWCC CLI (尚無支援)">
 
 <br/>
 
-</details>
+</TabItem>
+
+</Tabs>
 
 <br/>
 
@@ -124,13 +101,9 @@ import TabItem from '@theme/TabItem';
 
 若要將 **`Ready`** 狀態的個體執行重開機 (關機並開機)，請點選「**重開機**」，個體狀態將呈現 **`Rebooting`**，正在重開機中，並準備再次進入 **`Ready`** 狀態。
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 - 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**重開機**」。
 
@@ -140,21 +113,15 @@ import TabItem from '@theme/TabItem';
 - 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**重開機**」。
 - 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**重開機**」。
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (尚無支援) </summary>
+<TabItem value="TWCC CLI" label="TWCC CLI (尚無支援)">
 
 <br/>
 
-</details>
+</TabItem>
+
+</Tabs>
 
 <br/>
 
@@ -194,13 +161,9 @@ import TabItem from '@theme/TabItem';
 - 作業系統 (開機) 磁碟內的資料亦將永久刪除，若需保留可[建立個體映像檔](https://man.twcc.ai/@TWSC/vcs-vds-instance-image-zh)。
 - 資料磁碟則會自動分離保留
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 - 進入「**虛擬運算個體管理**」頁 > 點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**刪除**」。
 
@@ -208,19 +171,9 @@ import TabItem from '@theme/TabItem';
 
 - 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**刪除**」。
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 ### 指令
 
@@ -240,7 +193,9 @@ twccli ls vcs
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_024803eddc7136ec4fa25af5fe2ddc84.png)
 
-</details>
+</TabItem>
+
+</Tabs>
 
 <br/>
 
