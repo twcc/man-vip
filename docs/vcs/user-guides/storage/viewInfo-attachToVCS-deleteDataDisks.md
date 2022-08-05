@@ -17,13 +17,9 @@ import TabItem from '@theme/TabItem';
 
 檢視您的資料磁碟建立時間、ID、名稱、容量、類型、狀態、已連結之虛擬運算個體、掛載的路徑。
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 - 進入「**資料磁碟管理**」頁，可檢視磁碟概略資訊。
 
@@ -33,20 +29,9 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2c8742497a8cf2272b14d8fd77964bfd.png)
 
+</TabItem>
 
-</details>
-
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 - 檢視磁碟 ID、名稱、建立時間、掛載路徑、容量、狀態、類型。
 
@@ -56,19 +41,18 @@ twccli ls vds
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c976443120fa105196269359143aeb3a.png)
 
-</details>
+</TabItem>
+
+</Tabs>
+
 
 ## 連結至虛擬運算個體
 
 資料磁碟建立好後，需先與虛擬運算個體連結，連結後進入虛擬運算個體，將磁碟初始化後才可使用。
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 *  資料磁碟建立後，會出現在資料磁碟管理列表的最上方，等待其狀態變成 **`AVAILABLE`** 後即可開始連結至個體使用。
 
@@ -96,23 +80,15 @@ twccli ls vds
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fa75bdb78bc52059698a1e40d540a0da.png)
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (尚未支援)</summary>
+<TabItem value="TWCC CLI" label="TWCC CLI (尚未支援)">
 
 <br/>
 
-</details>
+</TabItem>
 
-<br/>
+</Tabs>
 
 
 :::info
@@ -141,13 +117,9 @@ twccli ls vds
 :::
 
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 - 進入「**資料磁碟管理**」頁 > 勾選磁碟 > 點選上方「**刪除**」。
 
@@ -156,19 +128,9 @@ twccli ls vds
 - 或點選磁碟旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**刪除**」。
 - 或進入「**資料磁碟詳細資料**」頁 > 點選上方「**刪除**」。
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 ### 指令
 
@@ -195,7 +157,6 @@ twccli rm vds -id 376749
 twccli rm vds -id 376749 -f
 ```
 
-</details>
+</TabItem>
 
-
-
+</Tabs>

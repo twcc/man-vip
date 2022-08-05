@@ -18,32 +18,20 @@ import TabItem from '@theme/TabItem';
 
 Linux、Windows 卸載磁碟方式不同，請依據 OS 選擇操作步驟。
 
-<!-- 1 start -->
 
-<details class="docspoiler">
+<Tabs>
 
-<summary><b>Linux 個體</b></summary>
-
-<br/>
+<TabItem value="Linux 個體" label="Linux 個體">
 
 - [連結進入 Linux 虛擬運算個體](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh)，並使用以下指令來卸載 `/dev/vdb` 磁碟裝置。
 
 ``` 
 sudo umount -d /dev/vdb
 ```
-</details>
 
-<!-- Space -->
+</TabItem>
 
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>Windows 個體</b></summary>
-
-<br/>
+<TabItem value="Windows 個體" label="Windows 個體">
 
 - [連線進入 Windows 虛擬運算個體](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-windows-zh)，並在 <i class="fa fa-search" aria-hidden="true"></i> 搜尋「**電腦管理**」，開啟應用程式。
 
@@ -53,29 +41,24 @@ sudo umount -d /dev/vdb
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_663e1d9437c5e7622d644b46a4824761.png)
 
+</TabItem>
 
-</details>
+</Tabs>
 
 
 ## Step 2. 分離磁碟
 
 卸載完成後，您可以透過以下方式分離磁碟。
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 - **方法一**：
 
     * 進入「**虛擬個體詳細資料**」頁，將頁面拉至最下方，按下「**分離磁碟**」，即可將此資料磁碟與所連接的個體分離。
     
     ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_01c132346ceae317a3e8030f7988e51f.png)
-
-
 
     * 進入資料磁碟管理頁，磁碟狀態由 **`IN-USE`** 轉為 **`AVAILABLE`** 後，即可執行刪除或連結至其他虛擬運算個體。
     
@@ -92,19 +75,12 @@ sudo umount -d /dev/vdb
     
     ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_42fa93fc331006627f6111c6ff66addf.png)
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (尚未支援)</summary>
+<TabItem value="TWCC CLI" label="TWCC CLI (尚未支援)">
 
 <br/>
 
+</TabItem>
 
-</details>
+</Tabs>

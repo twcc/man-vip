@@ -9,13 +9,9 @@ import TabItem from '@theme/TabItem';
 
 若虛擬運算個體儲存空間不足，您可以建立資料磁碟，再連結至個體、將磁碟初始化後即可使用。
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 ### 1. 建立虛擬運算個體時建立
 
@@ -49,19 +45,9 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_062d6a00a7b7e9910dee1b34414b223c.png)
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 
 ### 指令
@@ -90,5 +76,6 @@ twccli mk vds -n clitest -sz 10
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3da7383c28c4700cd8429fbbb282a58d.png)
 
+</TabItem>
 
-</details>
+</Tabs>

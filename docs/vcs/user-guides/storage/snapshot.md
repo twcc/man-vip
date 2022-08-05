@@ -19,34 +19,23 @@ import TabItem from '@theme/TabItem';
 
 為您的資料磁碟建立快照，備份資料。
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 在「**資料磁碟詳細資料**」頁面，點擊「**快照**」，出現「**建立快照**」視窗，輸入快照的名稱及描述後，按下「**確定**」，即可建立成功。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6e6c2e6d70b981764777ac47c80b47ee.png)
 
+</TabItem>
 
-</details>
-
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (尚無支援) </summary>
+<TabItem value="TWCC CLI" label="TWCC CLI (尚無支援)">
 
 <br/>
 
-</details>
+</TabItem>
+
+</Tabs>
 
 
 
@@ -54,13 +43,9 @@ import TabItem from '@theme/TabItem';
 
 檢視快照 ID、名稱、建立時間、建立者等資訊。
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 進入「**資料磁碟快照管理**」頁面，會看到所有的資料磁碟快照列表資訊，包括 **ID**、**快照名稱**、**資料磁碟名稱**、**快照狀態**、**建立時間**及**建立者**。最後創建的快照會列在最上面，點選欄位名稱可依該欄位值排列或改變排列順序。
 
@@ -69,22 +54,15 @@ import TabItem from '@theme/TabItem';
 
 * 在「搜尋」列輸入關鍵字可篩選出列表的欄位中符合該特定條件的結果。
 
+</TabItem>
 
-</details>
-
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (尚無支援) </summary>
+<TabItem value="TWCC CLI" label="TWCC CLI (尚無支援)">
 
 <br/>
 
-</details>
+</TabItem>
+
+</Tabs>
 
 ## 刪除磁碟快照
 
@@ -92,13 +70,9 @@ import TabItem from '@theme/TabItem';
 快照一旦刪除，資料將無法恢復！
 :::
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 進入「**資料磁碟快照管理**」頁面 > 勾選快照 > 按下上方「**刪除**」即可刪除快照。
 
@@ -106,18 +80,12 @@ import TabItem from '@theme/TabItem';
 
 * 或點擊 「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 選單按鈕，點選「**刪除**」即可將該快照刪除。
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (尚無支援) </summary>
+<TabItem value="TWCC CLI" label="TWCC CLI (尚無支援)">
 
 <br/>
 
-</details>
+</TabItem>
+
+</Tabs>
