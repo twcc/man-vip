@@ -20,33 +20,18 @@ import TabItem from '@theme/TabItem';
 
 :::
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 進入「**虛擬運算個體映像檔管理**」頁面，可看到所有映像檔的列表資訊，最近建立的映像檔會列在最上面。建立後待狀態從 **`QUEUED`** 變成 **`ACTIVE`** 後，即可使用映像檔建立個體。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0d9ecb3bedb6ef58181d2679c9aac6c2.png)
 
 
+</TabItem>
 
-</details>
-
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> </summary>
-
-<br/>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 ### 指令
 
@@ -69,8 +54,9 @@ twccli ls vcs -cus-img -s 2580765
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9762c16e87a59a78efc40158b19911ae.png)
 
 
+</TabItem>
 
-</details>
+</Tabs>
 
 <br/>
 
@@ -89,13 +75,9 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 - 被分享與分享後的映像檔，各自獨立不互相影響，並各自計算儲存用量。
 :::
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 ### 分享映像檔
 
@@ -126,8 +108,6 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 僅租戶管理員能檢視本人 (非全計畫) 的映像檔分享資訊。
 :::
 
-</details>
-
 <br/>
 
 :::tip
@@ -138,23 +118,17 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 ![](https://i.imgur.com/xWeCtYz.gif)
 
 </details>
-:::     
+:::
 
-<!-- Space -->
+</TabItem>
 
-<div style={{'height':'8px'}}></div>
-
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (TBD) </summary>
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
 
 <br/>
 
+</TabItem>
 
-</details>
+</Tabs>
 
 <br/>
 
@@ -167,37 +141,24 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 選用映像檔建立虛擬運算個體，當狀態為建立中 (**`Starting`**) 時，為確保個體可完整建立，**請勿刪除映像檔**。
 :::
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 不需使用的映像檔，可以點選該映像檔列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，再選擇「**刪除**」即可。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5a0e622ee77a6f942ec70dbd03915a55.png)
 
 
+</TabItem>
 
-</details>
-
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (TBD) </summary>
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
 
 <br/>
 
-</details>
+</TabItem>
 
-<br/>
+</Tabs>
 
 
 

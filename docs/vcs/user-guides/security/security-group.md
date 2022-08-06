@@ -17,13 +17,9 @@ TWCC 提供安全性群組功能，使用者可透過設定安全規則進行虛
 
 ## 檢視虛擬運算個體安全性群組規則
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 由服務列表點選「**安全性群組**」進入「**安全性群組管理 (虛擬運算個體列表)**」頁面，點選可用的虛擬運算個體。
 
@@ -31,27 +27,18 @@ TWCC 提供安全性群組功能，使用者可透過設定安全規則進行虛
 
 * 進入網路安全規則管理頁面，會顯示目前的網路安全規則，
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 ```bash
 twccli ls vcs                   # 列出現有虛擬運算個體
 twccli ls vcs -secg -s 937648   # 列出 ID 為 937648 個體的安全性群組
 ```
-</details>
 
-<br/>
+</TabItem>
+
+</Tabs>
 
 <details>
 
@@ -80,24 +67,21 @@ twccli ls vcs -secg -s 937648   # 列出 ID 為 937648 個體的安全性群組
 | egress     | IPv6     |      | |ANY |::/0 |
 :::
 
+</details>
+
+<br/>
+
 :::caution
 因資安事件頻傳，如果您的連線來自以下這些國家，我們將關閉您使用遠端連線至 Windows 個體的功能 (連接埠：9833)：中國、德國、法國、韓國、荷蘭、波蘭、俄國
 
 若需連線 TWCC Windows 個體，請您與客服聯絡。
 :::
 
-</details>
-
-
 ## 建立安全性群組規則
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 由服務列表點選「**安全性群組**」進入「**安全性群組管理 (虛擬運算個體列表)**」頁面，點選可用的虛擬運算個體。
 
@@ -128,20 +112,9 @@ CIDR：指要套用此虛擬運算個體安全規則的 CIDR 網段。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c5d589961bf300f37721dd0c994e59c3.png)
 
+</TabItem>
 
-</details>
-
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 :::info
 若要進行設定網路安全性群組，請使用 `twccli net vcs --help` 進行查詢各細項功能
@@ -162,7 +135,9 @@ twccli ls vcs -secg -s 892486
 
 </details>
 
-</details>
+</TabItem>
+
+</Tabs>
 
 <br/>
 
@@ -175,13 +150,9 @@ twccli ls vcs -secg -s 892486
 
 ## 删除安全性群組規則
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 進入「**安全性群組規則管理**」頁面 > 勾選規則 > 點擊上方「**刪除**」。
 
@@ -189,19 +160,9 @@ twccli ls vcs -secg -s 892486
 
 - 或點擊規則右邊之 「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 選單按鈕，並點擊「**刪除**」。
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 
 若要取消已設定的安全性群組，可使用 :point_right: `twccli rm vcs -secg $SecurityGroupId `
@@ -216,4 +177,6 @@ UUID 最短僅需提供==前8碼==，即可進行刪除。
 twccli rm vcs -secg ff781775
 ```
 
-</details>
+</TabItem>
+
+</Tabs>

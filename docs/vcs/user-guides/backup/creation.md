@@ -26,13 +26,9 @@ import TabItem from '@theme/TabItem';
 
 手動操作建立映像檔。
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 進入虛擬運算個體管理頁面，點選欲建立映像檔的個體列表，進入該個體的詳細資料頁面，並點擊「**映像檔**」。
 
@@ -48,26 +44,15 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e1a78aa185d26f10ab476109712e155a.png)
 
+</TabItem>
 
-</details>
-
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 ### 指令
 
 ```bash
-twccli mk vcs -s        # 個體 ID  
-              -cus-img  # 建立映像檔
+twccli mk vcs -s            # 個體 ID  
+              -cus-img      # 建立映像檔
 ```
 
 :::info
@@ -81,7 +66,9 @@ twccli mk vcs -s        # 個體 ID
 twccli mk vcs -s 918628 -cus-img
 ```
 
-</details>
+</TabItem>
+
+</Tabs>
 
 <br/>
 
@@ -89,28 +76,15 @@ twccli mk vcs -s 918628 -cus-img
 
 可利用 `crontab` 設定自動定時建立映像檔。
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b> (尚未支援) </summary>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站 (尚未支援)">
 
 <br/>
 
+</TabItem>
 
-</details>
-
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 - 使用 `crontab -e` 進行設定，相關使用功能請參照 [<ins>CronHowTo</ins>](https://help.ubuntu.com/community/CronHowto)。
 ![](https://i.imgur.com/1zRke01.png)
@@ -118,5 +92,6 @@ twccli mk vcs -s 918628 -cus-img
 - 指定任意時間進行快照工作，在此為範例為==午夜 01:01==。
 ![](https://i.imgur.com/mQp1kUr.png)
 
+</TabItem>
 
-</details>
+</Tabs>

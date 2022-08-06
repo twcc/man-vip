@@ -2,6 +2,8 @@
 sidebar_position: 6
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # 鑰匙對
 
@@ -15,13 +17,9 @@ TWCC 不負責紀錄及管理您的鑰匙對，建立後請務必下載並妥善
 
 
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 ### 1. 於建立虛擬運算個體時建立
 
@@ -46,19 +44,9 @@ TWCC 不負責紀錄及管理您的鑰匙對，建立後請務必下載並妥善
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0cdcfc942c9d1bb34462b038a6d6e5f3.png)
 
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 
 - 建立名為 **`key1`** 的鑰匙對
@@ -71,8 +59,9 @@ twccli mk key -n key1
 為方便管理，建議為每項鑰匙對命名
 :::
 
+</TabItem>
 
-</details>
+</Tabs>
 
 
 
@@ -80,13 +69,9 @@ twccli mk key -n key1
 
 - ### 檢視鑰匙對
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 進入「**鑰匙對管理頁**」面，剛建立好的 鑰匙對項目會列在最上方。
 
@@ -98,19 +83,9 @@ twccli mk key -n key1
 
 
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 - 檢視鑰匙對資訊
 
@@ -120,20 +95,16 @@ twccli ls key
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_752e44d40060a214fa67fba1db2a1ead.png)
 
+</TabItem>
 
-
-</details>
+</Tabs>
 
 
 - ### 刪除鑰匙對
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 進入「**鑰匙對管理**」頁面 > 勾選鑰匙對 > 點選上方「**刪除**」
 
@@ -143,19 +114,9 @@ twccli ls key
 - 或進入「**鑰匙對詳細資料**」頁 > 點選上方「**刪除**」。
 
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 - 刪除名稱為 `key1` 的鑰匙對 
 ```bash
@@ -172,4 +133,6 @@ twccli rm key -n key1
 </details>
 :::
 
-</details>
+</TabItem>
+
+</Tabs>

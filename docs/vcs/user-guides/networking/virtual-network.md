@@ -25,18 +25,12 @@ import TabItem from '@theme/TabItem';
 2. CIDR 請使用 RFC1918 定義的 private network 網段範圍，避免產生連線錯誤：
     - 10.0.0.0/8
     - 172.16.0.0/12
-<!-- - 192.168.0.0/16 -->
 3. 192.168.1.0/24 目前系統保留中，請勿使用。
 :::
 
+<Tabs>
 
-<!-- 1 start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 由服務列表點選進入「**虛擬網路**」服務，在「**虛擬網路管理**」頁面，點擊「**＋建立**」。
 
@@ -61,27 +55,18 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c7ffcca6dd6ebe84f2576b5b8ce0c8f9.png)
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
-
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 - 以網段 `172.16.0.0/24` 及閘道 `172.16.0.254` 建立虛擬網路
 ```bash
 twccli mk vnet -cidr 172.16.0.0/24 -gw 172.16.0.254
 ```
 
-</details>
+</TabItem>
+
+</Tabs>
 
 
 
@@ -98,13 +83,9 @@ twccli mk vnet -cidr 172.16.0.0/24 -gw 172.16.0.254
 :::
 
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 最新建立虛擬網路會出現在虛擬網路管理頁面的最上方，等待狀態變成 「**ACTIVE**」 後即可開始使用。
 
@@ -115,20 +96,9 @@ twccli mk vnet -cidr 172.16.0.0/24 -gw 172.16.0.254
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7ca00fdeabd4b31f089d50f8ac9764ec.png)
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
-
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 - 檢視所有虛擬網路
 ```bash
@@ -142,19 +112,17 @@ twccli ls vnet -id 261894
 ```
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e50cd7936738b7be4055b0212adf4d21.png)
 
-</details>
+</TabItem>
+
+</Tabs>
 
 
 
 - ### 刪除虛擬網路
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 在「**虛擬網路管理**」頁面 > 勾選虛擬網路 > 點擊上方「**刪除**」。
 
@@ -165,20 +133,9 @@ twccli ls vnet -id 261894
 - 或點選虛擬網路旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**刪除**」。
 - 或進入「**虛擬網路詳細資料**」頁 > 點選上方「**刪除**」。
 
+</TabItem>
 
-</details>
-
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
-<br/>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 
 - 刪除 ID 為 **`261894`** 的虛擬網路
@@ -190,4 +147,6 @@ twccli rm vnet -id 261894
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f0d90990195ff56580020b195dd744be.png)
 
-</details>
+</TabItem>
+
+</Tabs>

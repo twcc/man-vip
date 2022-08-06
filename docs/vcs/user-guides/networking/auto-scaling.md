@@ -26,13 +26,9 @@ Auto Scaling 是一種自動彈性調整的監控機制，本服務能夠在指�
 
 您可以建立一 Auto Scaling 範本，連結至多個虛擬運算個體使用。
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * 由服務列表點選「**Auto Scaling**」進入「**Auto Scaling 管理**」頁面，點擊「**＋建立**」
 
@@ -58,34 +54,23 @@ Auto Scaling 是一種自動彈性調整的監控機制，本服務能夠在指�
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4d6ead43c71053ed1ed4ea23c555af56.png)
 
-</details>
+</TabItem>
 
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (尚未支援)</summary>
+<TabItem value="TWCC CLI" label="TWCC CLI (尚未支援)">
 
 <br/>
 
-</details>
+</TabItem>
+
+</Tabs>
 
 ## Auto Scaling 管理
 
 檢視資訊、刪除 Auto Scaling。
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
-
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 * Auto Scaling 管理頁面，剛建立好的 Auto Scaling 項目會列在最上方。點選 Auto Scaling 列表，可檢視 Auto Scaling 的設定資訊，或執行「**删除**」、「**重新整理**」。
 
@@ -94,22 +79,15 @@ Auto Scaling 是一種自動彈性調整的監控機制，本服務能夠在指�
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d45d79ec30149116d764da4f957937c7.png)
 
+</TabItem>
 
-</details>
-
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (尚未支援)</summary>
+<TabItem value="TWCC CLI" label="TWCC CLI (尚未支援)">
 
 <br/>
 
-</details>
+</TabItem>
+
+</Tabs>
 
 
 
@@ -117,13 +95,9 @@ Auto Scaling 是一種自動彈性調整的監控機制，本服務能夠在指�
 
 將 Auto Scaling 連結/掛載至虛擬運算個體後，搭配[負載平衡](https://man.twcc.ai/@twccdocs/guide-vcs-lbs-zh)才能發揮其功能，自動平衡虛擬運算個體的負載。
 
-<!-- 1 start -->
+<Tabs>
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
-
-<br/>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 *  進入「**虛擬運算個體**」服務，在「**虛擬運算個體管理**」頁面點選欲掛載的個體，進入虛擬運算個體詳細資料頁面，按一下 Auto Scaling 後的「**掛載**」按鈕。
 
@@ -138,19 +112,12 @@ Auto Scaling 是一種自動彈性調整的監控機制，本服務能夠在指�
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_982b1da32467ef04536b5a7897bbd197.png)
 
-</details>
+</TabItem>
 
-
-<!-- Space -->
-
-<div style={{'height':'8px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b> (尚未支援)</summary>
+<TabItem value="TWCC CLI" label="TWCC CLI (尚未支援)">
 
 <br/>
 
-</details>
+</TabItem>
+
+</Tabs>
