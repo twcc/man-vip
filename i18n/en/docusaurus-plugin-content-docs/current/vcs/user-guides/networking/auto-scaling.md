@@ -35,7 +35,6 @@ You can create an Auto Scaling template and connect it to multiple VCS instances
     * **Name**: enter a name of the Auto Scaling.
     * **Description**: enter the description for the Auto Scaling (Optional).
     * **Meter name**: Select a monitor meter name, the resource indicator of the Auto Scaling policy. to determine whether to increase or decrease the number of the instances. The monitor meter names include <ins>*cpuutil*</ins> `(CPU usage)`, <ins>*memory.usage*</ins> ` (Memory usage)`, <ins>*network.income.bytes.rate*</ins> `(Network incoming rate)`, and <ins>*network.outgoing.usage*</ins> `(Network outgoing rate)`.
-　
     * **Upper Threshold**: Set the highest threshold of the meter. For example: cpuutil for the meter and 80 for the upper threshold represents that the number of VCS instances will increase when the CPU usage exceeds 80%.
     * **Lower Threshold**: Set the minimum threshold of the meter. Below this threshold, the number of VCS instances will decrease.
     * **Max VCS instance no.**：Set the maximum value of the number of VCS instances, the default value is 2 (Auto scaling requires at least 2 VCS instances).

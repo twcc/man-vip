@@ -124,7 +124,6 @@ twccli rm key -n key1
 ```
 :::caution
 After deleting, please delete the key pair on your local machine.
-:::spoiler
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0ebc5f5ed8ea2bff1c5e0d8311873eb5.png)
 :::
 
