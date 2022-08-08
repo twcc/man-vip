@@ -19,8 +19,8 @@ We will use the Singularity container to wrap the packages needed for computing 
 
 
 :::info
-[1] NVIDIA provides many [<ins>deep learning examples</ins>](https://github.com/NVIDIA/DeepLearningExamples) to improve the accessibility.
-[2] NGC version numbers consist of **year, month**: `NGC 20.09` is the version released in September 2020. Refer to [<ins>NGC Support Matrix</ins>](https://docs.nvidia.com/deeplearning/frameworks/support-matrix/index.html) to know more about differences between NGC's AI frameworks and packages version numbers.
+[1] NVIDIA provides many [<ins>deep learning examples</ins>](https://github.com/NVIDIA/DeepLearningExamples) to improve the accessibility.<br/>
+[2] NGC version numbers consist of **year, month**: `NGC 20.09` is the version released in September 2020. Refer to [<ins>NGC Support Matrix</ins>](https://docs.nvidia.com/deeplearning/frameworks/support-matrix/index.html) to know more about differences between NGC's AI frameworks and packages version numbers.<br/>
 [3] You may also download containers from Docker Hub or other container registry, for more information, see [<ins>HowTo: Create TAIWANIA2 containers</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-en).
 :::
 
@@ -78,7 +78,7 @@ Stage: build
 ```
 
 :::info 
-[5] For more information about how to customize the container, see [<ins>Customize Singularity Containers</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-en#2-%E5%AE%A2%E8%A3%BD%E5%8C%96-Singularity-%E5%AE%B9%E5%99%A8).
+[5] For more information about how to customize the container, see [<ins>Customize Singularity Containers</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-en#2-%E5%AE%A2%E8%A3%BD%E5%8C%96-Singularity-%E5%AE%B9%E5%99%A8).<br/>
 [6] For the containers from NGC, TensorFlow already installed Horovod, but PyTorch does not. So, additional installation is required for PyTorch.
 :::
 

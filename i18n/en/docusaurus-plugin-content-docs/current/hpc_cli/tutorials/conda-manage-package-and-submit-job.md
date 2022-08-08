@@ -73,14 +73,18 @@ Here is an example of using Conda to create a virtual environment, install Tenso
 ```bash
 # Clear the module to make sure that the environment is clean
 module purge
+
 # Load Conda. Here we use miniconda3 with python3 as an example
 module load miniconda3
+
 # Because the miniconda module designed by TWCC will automatically initialize environment variables, there is no need to run conda init.
 # We recommended you remove the conda initialized contents 
 conda init --reverse
+
 # Create a Conda virtual environment (named mytf_gpu in this example), and install Anaconda tensorflow-gpu.
 # The environment is pre-installed with CUDA and cuDNN, you do not need to install them by yourself.
 conda create --name mytf_gpu tensorflow-gpu
+
 # Enter the virtual environment
 conda activate mytf_gpu
 ```
@@ -96,6 +100,7 @@ tensorflow-gpu version 2.2 is currently installed by default
 ```bash
 # deactivate the virtual environment named mytf_gpu
 conda deactivate
+
 # delete the virtual environment named mytf_gpu 
 conda remove --name mytf_gpu --all
 ```
@@ -116,6 +121,7 @@ module unload miniconda3
 # When Conda is no longer used, you can delete the remaining Conda installation files/configuration files (Be careful! Make sure the files in the directory are no longer in need before you run this command.)
 # Check the contents of this path file first (usually only ~/.conda)
 ls ~/.condarc ~/.conda ~/.continuum
+
 # Then, delete the files
 rm -rf ~/.condarc ~/.conda ~/.continuum
 ```
@@ -155,11 +161,14 @@ You may write `.sh`  files using the editor you're used to. We use vim in this e
 #SBATCH --time=00:10:00          ## Run for up to 10 minutes (remember to change it after testing, or delete this line directly)
 #SBATCH --account=PROJECT_ID     ## PROJECT_ID (e.g.,  MST108XXX). The billing project
 #SBATCH --partition=gtest        ## gtest is a testing queue. After testing, you can change the queue to gp1d (Max. time: 1 day), gp2d (Max. time: 2 days), or gp4d (Max. time: 4 days)
+
 module purge
 module load miniconda3
 conda activate mytf_gpu
+
 # For most Conda users, the programs do not enable communication trough MPI.
 # Therefore, you do not need to add srun/mpirun, just add the commands that need to be run.
+
 python $(your command) 
 ```
 

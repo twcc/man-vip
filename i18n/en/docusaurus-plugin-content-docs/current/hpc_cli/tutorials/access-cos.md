@@ -69,6 +69,7 @@ vim ~/.s3cfg
 host_base = cos.twcc.ai
 host_bucket = cos.twcc.ai
 use_https = True
+
 # Setup access keys
 access_key = <COS Access Key>
 secret_key = <COS Secret Key>
@@ -105,6 +106,7 @@ We demonstrate each example using `S3cmd` and `TWCC CLI` in order.
 ```bash
 # for S3cmd
 s3cmd mb s3://mytwccbucket
+
 # for TWCC CLI
 twccli mk cos -bkt mytwccbucket
 ```
@@ -121,6 +123,7 @@ Copy the file to `mytwccbucket` bucket
 ```bash
 # for S3cmd
 s3cmd put ~/myfile s3://mytwccbucket/
+
 # for TWCC CLI
 twccli cp cos -bkt mytwccbucket -fn myfile -sync to-cos
 ```
@@ -130,6 +133,7 @@ Check if the upload is successful
 ```bash
 # for S3cmd
 s3cmd ls s3://mytwccbucket/myfile
+
 # for TWCC CLI
 twccli ls cos -bkt mytwccbucket
 ```
@@ -139,6 +143,7 @@ Delete myfile just uploaded
 ```bash
 # for S3cmd
 s3cmd rm s3://mytwccbucket/myfile
+
 # for TWCC CLI
 twccli rm cos -bkt mytwccbucket -okey myfile
 ```
@@ -149,6 +154,7 @@ Please make sure the bucket is empty before deleting it.
 ```bash
 # for S3cmd
 s3cmd rb s3://mytwccbucket
+
 # for TWCC CLI
 twccli rm cos -bkt mytwccbucket
 ```
