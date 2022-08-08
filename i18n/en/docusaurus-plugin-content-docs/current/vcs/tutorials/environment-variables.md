@@ -2,6 +2,9 @@
 sidebar_position: 3
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Set environment variables
 
 In this document, we will explain how to set the required environment variables which can adjust the settings of the program to meet your needs when creating [<ins>interactive container</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-create-en) / [ <ins>VCS instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-en).
@@ -83,7 +86,6 @@ echo $BUFFER
 :::info
 [<ins>Connect to the VCS instance</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-en) and execute the following command to confirm that the environment variables have been set into the instance.
 
-<br/>
 
 ```bash
 echo $Key
