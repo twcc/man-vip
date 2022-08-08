@@ -2,7 +2,7 @@
 sidebar_position: 12
 ---
 
-# TWCC CLI to automatically complete computing and delete containers
+# Use TWCC CLI to automatically complete computing and delete containers
 
 
 :::tip **Case scenario: When computing finishes, can containers be automatically deleted to save the cost?**

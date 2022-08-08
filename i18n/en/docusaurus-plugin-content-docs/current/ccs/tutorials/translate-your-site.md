@@ -5,7 +5,7 @@ sidebar_position: 13
 # Deploy automated AI/ML pipeline using TWCC CLI
 
 
-:::success **Case scenario:Is there a set of workflows that can automatically create containers, perform model training, and delete containers?**
+:::tip **Case scenario:Is there a set of workflows that can automatically create containers, perform model training, and delete containers?**
 *Do you have the same problem? Let us take you hand in hand to assemble the TWCC cloud service architecture to easily solve your problems!*
 :::
 
