@@ -4,7 +4,7 @@ sidebar_position: 14
 ---
 
 
-# DIGITS
+# <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bb968fa9146487087f1c4634929d931f.png' /> DIGITS
 
 
 TWCC 提供 NGC’s DIGITS 立即可用的工作環境。Learning GPU Training System (DIGITS) 將深度學習的力量交給工程師和資料科學家掌控。 DIGITS 可用於快速地訓練高準確度的深度神經網絡 (DNNs)，能應用於圖像分類、分割和物體偵測。DIGITS 簡化了常見的深度學習任務，例如數據管理、在多 GPU 上設計並訓練神經網路、使用極佳的視覺化系統即時監控性能，並能從成果瀏覽系統中選取效能最佳的模型進行部署。DIGITS 具極佳的互動性，因此資料科學家能專注於神經網路的設計和訓練而非程式編寫和除錯。

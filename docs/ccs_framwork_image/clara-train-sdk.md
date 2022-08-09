@@ -4,7 +4,7 @@ sidebar_position: 17
 ---
 
 
-# Clara Train SDK
+# <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b3382d3255e279896320ff106a1565d.png' /> Clara Train SDK
 
 TWCC 提供 NGC's Clara Train SDK 立即可用的工作環境。Clara Train SDK 是針對深度學習領域最佳化的開發人員應用程式框架，其中包括用於AI輔助註釋的 AIAA，這可讓任何醫學應用工具都具備 AI 能力。Clara Train SDK基於 TensorFlow 的訓練框架並支援 Pre-train Model，Transfer Learning，Federated Learning 和 AutoML 等技術。
 
