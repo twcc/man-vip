@@ -3,7 +3,21 @@ sidebar_label: 'RAPIDS'
 sidebar_position: 16
 ---
 
+# <img class="ccsimgicon" src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bb968fa9146487087f1c4634929d931f.png' /> RAPIDS
 
-# RAPIDS
+TWCC provides ready-to-use working environment of NGC's RAPIDS. RAPIDS is a GPU-acceleration platform built on CUDA that leverages the power of the GPUs and is designed for data science and machine learning to let scientists rapidly gain knowledge from ever-growing datasets. This framework gives you the ability to execute end-to-end data pipeline, including data preparation, model training, and visualization.
+
+## <i class="fa fa-sticky-note" aria-hidden="true"></i>
+<span class="ccsimglist">Information of Image file version
+</span> 
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fecc114b4d5558bb74391e31d72f91fa.png)
 
 
+<details class="docspoiler">
+
+<summary><b>Detailed package version information</b></summary>
+
+- [NGC RAPIDS](https://ngc.nvidia.com/catalog/containers/nvidia:rapidsai:rapidsai)
+
+</details>
