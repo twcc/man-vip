@@ -4,10 +4,7 @@ sidebar_position: 4
 
 # Jupyter Notebook 增加 Python 3 kernel
 
-:::success
-<i class="fa fa-star" aria-hidden="true"></i>
-
-**適用情境：我想使用 Python 3，但 Jupyter Notebook 只有 Python 2？**
+:::success **適用情境：我想使用 Python 3，但 Jupyter Notebook 只有 Python 2？**
 
 *您是否也有相同的困擾？讓我們手把手帶您組合 TWCC 雲端服務架構，輕鬆解決您的問題！*
 :::
