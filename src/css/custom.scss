@@ -19,7 +19,7 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary: #3aaac4;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
@@ -27,4 +27,52 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+
+/* Sidebar Method labels */
+.api-method>.menu__link {
+  align-items: center;
+  justify-content: start;
+}
+
+.api-method>.menu__link::before {
+  width: 50px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  border: 1px solid;
+  margin-right: var(--ifm-spacing-horizontal);
+  text-align: center;
+  flex-shrink: 0;
+  border-color: transparent;
+  color: white;
+}
+
+.get>.menu__link::before {
+  content: "get";
+  background-color: var(--ifm-color-primary);
+}
+
+.put>.menu__link::before {
+  content: "put";
+  background-color: var(--openapi-code-blue);
+}
+
+.post>.menu__link::before {
+  content: "post";
+  background-color: var(--openapi-code-green);
+}
+
+.delete>.menu__link::before {
+  content: "del";
+  background-color: var(--openapi-code-red);
+}
+
+.patch>.menu__link::before {
+  content: "patch";
+  background-color: var(--openapi-code-orange);
 }

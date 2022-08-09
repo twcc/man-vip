@@ -16,6 +16,37 @@ stages:
     - chmod 600 ~/.ssh/id_dsa
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 
+test-build:
+  <<: *standard_operation
+  stage: test
+  script:
+    - npm install --legacy-peer-deps
+    - npm run staging
+  only:
+    - merge_requests
+
+sync-openapi:
+  <<: *standard_operation
+  stage: test
+  script:
+    - apk add --no-cache git
+    - git clone https://github.com/twcc/openapidoc.git
+    - git clone https://${SEAN_USERNAME}:${SEAN_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git
+    - cd manual
+    - git checkout docusaurus-dev
+    - export TZ=Asia/Taipei
+    - export VERSION=`date +"openapi-sync-%Y%m%d_%H%M"`
+    - git checkout -b $VERSION
+    - cp -r ../openapidoc/Main/yaml/. ./openapi
+    - npm install --legacy-peer-deps
+    - npm run clear-api
+    - npm run gen-api
+    - git config --global user.email "sean.chang@twsc.io"
+    - git config --global user.name "sean.chang@twsc.io"
+    - git add .
+    - git commit -m $VERSION
+    - git push -u origin $VERSION
+  when: manual
 
 deploy-staging:
   <<: *standard_operation
@@ -37,6 +68,7 @@ deploy-preview:
     - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/preview/
   only:
     - docusaurus-dev
+  when: manual
 
 deploy-production:
   <<: *standard_operation
@@ -67,6 +99,7 @@ send-to-GitHub:
     - git checkout -b $CI_COMMIT_SHORT_SHA
     - git push -u github $CI_COMMIT_SHORT_SHA
     - /usr/bin/gh pr create --title "v$CI_COMMIT_SHORT_SHA" --body "Release TWCC manual"
+    - /usr/bin/gh pr create --base tws-sync --title "v$CI_COMMIT_SHORT_SHA" --body "Release TWCC manual"
     - /usr/bin/gh release create "v$CI_COMMIT_SHORT_SHA" --title "v$CI_COMMIT_SHORT_SHA"
   only:
     - docusaurus-master
