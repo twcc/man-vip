@@ -9,13 +9,13 @@ import TabItem from '@theme/TabItem';
 
 您可以系統預設資訊以一個指令完成容器建立，或是依需求選擇適合的容器型號。
 
-完整容器型號 (含 GPU 數量與其他資源大小)，請參考[價目表](https://www.twcc.ai/doc?page=price#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS)。
+完整容器型號 (含 GPU 數量與其他資源大小)，請參考[價目表](TBD)。
 
 ## 開始之前
 
 - 若尚未註冊使用帳號，請先[註冊 TWCC](https://www.twcc.ai/)。
 - 若選擇使用 TWCC 入口網站操作，請先登入 [TWCC 入口網站](https://www.twcc.ai/)。
-- 若選擇使用 TWCC CLI 操作，請先[安裝 TWCC CLI](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-install-linux-zh)[target=_blank] 、並[登入](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-signin-zh)[target=_blank]。
+- 若選擇使用 TWCC CLI 操作，請先[安裝 TWCC CLI](TBD) 、並[登入](TBD)。
 
 
 
@@ -39,7 +39,7 @@ import TabItem from '@theme/TabItem';
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a4c9a9e6996f373cc6be68c474257c50.png)
 
 :::tip
-1. TWCC 提供的 NGC 容器映像檔類型、版本、套件，請參考：[<ins>容器映像檔</ins>](https://man.twcc.ai/@twccdocs/ccs-concept-image-main-zh)
+1. TWCC 提供的 NGC 容器映像檔類型、版本、套件，請參考：[<ins>容器映像檔</ins>](TBD)
 2. 首次選用後，映像檔會記錄儲存於「**最近使用**」區塊，加快您下次選用的速度。(清除瀏覽器歷史紀錄將會重新記錄)
 :::
 
@@ -56,7 +56,7 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f5b935f93932bb7d4cfd8982701943e5.png)
 
-* 接著點擊「**下一步：環境變數>**」，可設定符合您需求的環境變數，詳細說明與設定範例請參考 [<ins>HowTo：設定環境變數</ins>](https://man.twcc.ai/@preview-twccdocs/howto-ccs-vcs-setup-env-variable-zh)。
+* 接著點擊「**下一步：環境變數>**」，可設定符合您需求的環境變數，詳細說明與設定範例請參考 [<ins>HowTo：設定環境變數</ins>](TBD)。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d10aff1357d25a13881c2f17a19f895b.png)
 
@@ -85,7 +85,7 @@ twccli mk ccs [-n]      #容器名稱
 | -------- | -------- | -------- |
 | TensorFlow (latest environment)    | twcc-cli     | 1 GPU + 04 cores + 090GB memory |
 
-- 環境變數詳細說明與設定範例請參考 [<ins>HowTo：設定環境變數</ins>](https://man.twcc.ai/@twccdocs/howto-ccs-vcs-setup-env-variable-zh)。
+- 環境變數詳細說明與設定範例請參考 [<ins>HowTo：設定環境變數</ins>](TBD)。
 :::
 
 ### 範例
@@ -108,9 +108,9 @@ twccli mk ccs -itype "Caffe2" -img "caffe2-18.08-py3-v1:latest" -gpu 2 -n cusccs
 ---
 
 :::info
-1. 詳細映像檔介紹與說明請參考 [<ins>TWCC 容器映像檔</ins>](https://man.twcc.ai/@twccdocs/ccs-concept-image-main-zh)。
-2. 容器型號、資源比例與費率，請參考[<ins>價目表</ins>](https://man.twcc.ai/@twccdocs/SJWlN3YDr#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS)。
-3. **可用記憶體容量**若以 GiB (1 GiB = 2<sup>30</sup> bytes) 為計算單位，以 c.super 為例，則可用記憶體容量為 84 GiB，請參考[<ins>記憶體容量換算</ins>](https://man.twcc.ai/@twccdocs/concept-ccs-memory-conversion-zh)了解更多。
+1. 詳細映像檔介紹與說明請參考 [<ins>TWCC 容器映像檔</ins>](TBD)。
+2. 容器型號、資源比例與費率，請參考[<ins>價目表</ins>](hTBD)。
+3. **可用記憶體容量**若以 GiB (1 GiB = 2<sup>30</sup> bytes) 為計算單位，以 c.super 為例，則可用記憶體容量為 84 GiB，請參考[<ins>記憶體容量換算</ins>](TBD)了解更多。
 :::
 
 :::caution
@@ -120,6 +120,6 @@ twccli mk ccs -itype "Caffe2" -img "caffe2-18.08-py3-v1:latest" -gpu 2 -n cusccs
 
 :::info
 **相關文件：**
-- <a href="https://man.twcc.ai/@twccdocs/doc-cos-main-zh">雲端物件儲存服務</a>
-- <a href="https://man.twcc.ai/@twccdocs/doc-hfs-main-zh">高速檔案系統</a>
+- <a href="TBD">雲端物件儲存服務</a>
+- <a href="TBD">高速檔案系統</a>
 :::
