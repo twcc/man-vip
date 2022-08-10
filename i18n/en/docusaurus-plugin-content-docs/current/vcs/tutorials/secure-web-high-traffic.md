@@ -3,6 +3,8 @@ displayed_sidebar: vcs_secure_web_high_traffic
 sidebar_position: 9
 ---
 
+# Build a secure website which handles high traffic
+
 :::success **Scenario: My web server crashes when too many people are accessing it at the same time. What should I do?**
 *Do you have the same problem? Let us show you how to integrate TWCC services to solve the problems you are facing with!*
 :::
