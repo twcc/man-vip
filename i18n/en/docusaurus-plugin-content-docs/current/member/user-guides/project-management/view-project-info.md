@@ -24,6 +24,8 @@ If the page is blank or abnormal after login, it may be caused by the following 
 3. TWCC portal update. Please clear the browser cache to sign in normally.
 :::
 
+<br/>
+
 ### Step 2. View project information
 
 After sign in, you can view the project information on the overview page. The information includes:
@@ -60,6 +62,7 @@ There are difference betwen Tenant admins and Tenant Users to use TWCC functions
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f21ac33b7c4c15afc871d00dfc34b910.png)
 
+<br/>
 
 :::info
 For more project information (project members, wallet information, resource usage). Please click the "Account & Project" and link to [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) to view more project information (project members, wallet information, resource usage).

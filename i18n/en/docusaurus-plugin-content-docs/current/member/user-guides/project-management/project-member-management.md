@@ -22,6 +22,9 @@ If your <ins>Member Center <i class="fa fa-question-circle fa-question-circle-fo
 - Only the project host (creator)" and "project administrator" have the authority to manage project members
 :::
 
+<br/>
+
+
 ## Step 1. Project details page
 
 
@@ -35,6 +38,7 @@ If your <ins>Member Center <i class="fa fa-question-circle fa-question-circle-fo
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4eeb394c655aefef88488f8c3b1f5ae9.png)
 
 
+<br/>
 
 
 ## Step 2. Manage project members

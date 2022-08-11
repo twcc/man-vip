@@ -20,21 +20,27 @@ If you need to update member data such as name, mobile phone, contact and backup
 ### Step 1. Sign In TWCC
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c50d73165833858c26df65776ce65774.png)
 
+<br/>
+
 ### Step 2. Account & Project
 
 After sign in, click "**Username**" > "**Account & Project**" to  link to Member Center.
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_02a1a2c2763cec4dfd61bfa79a171294.png)
 
+<br/>
 
 ###  Step 3. Personal information
 
 After enter Member Center, click "**Member Center**" > "**Member Profile**" > "**Personal**"
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_20f85ec2e50a62a5cbf4c428eb7da6eb.png)
 
+<br/>
 
 ###  Step 4. Update and submit 
 
 Update your data and click "**Submit**".
+
+<br/>
 
 :::info
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db98ec174de3f26e42cb8258d83fd370.png)

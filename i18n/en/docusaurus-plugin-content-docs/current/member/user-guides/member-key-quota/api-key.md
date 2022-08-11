@@ -45,6 +45,8 @@ import TabItem from '@theme/TabItem';
 ![](https://man.twcc.ai/uploads/upload_a6ddab233062bca6eb9c1eb92a5b344c.png)
 -->
 
+<br/>
+
 ## API key management
 
 The TWCC system provides each tenant with a master key (API key). The key will vary according to the project, user, and role. With this key, you can use TWCC related services through API calls. "API Key" provides functions such as key information, extension, adding, and deleting. Please manage your keys properly.
@@ -60,6 +62,7 @@ The TWCC system provides each tenant with a master key (API key). The key will v
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0e9634d29046ae48c411d7ded63618cf.png)
 
 
+<br/>
 
 
 ### Extension of the key validity period
@@ -80,11 +83,16 @@ The TWCC system provides each tenant with a master key (API key). The key will v
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b4ffdfbe009875229be993af44f6b5c3.png)
 
+<br/>
+
+
 ### Create API Key
 
 * Click "+Create API Key", and then click "Confirm" in the "Create API Key" window to generate a new key.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a0ba1e9772f2c6f0249bb1f5f9517467.png)
+
+<br/>
 
 
 ### Delete API Key

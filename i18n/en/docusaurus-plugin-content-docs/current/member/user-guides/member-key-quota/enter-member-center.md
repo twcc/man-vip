@@ -39,6 +39,8 @@ Access methods are differentiated by users, please refer to the following steps:
     
     ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_935daeeeb63f6f79e5428ab924c15611.png)
 
+<br/>
+
 ### Method 2:
 
 Directly sign in via [iService](https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=) to enter Member Center.
