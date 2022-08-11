@@ -111,12 +111,14 @@ Members in the same project can share and use all duplicates, and you can see al
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
+
 - Create a container with the image type `Custom Image`, image configuration and tag `tensorrt-19.08-py3:dup1`, and name the duplicate as `dupcli`.
 
 ```bash
 twccli ls ccs -img "Custom Image"
 twccli mk ccs -itype "Custom Image" -img "tensorrt-19.08-py3:dup1" -n dupcli
 ```
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3310c270ae57370c22704b470cccbe60.png)
 
 
