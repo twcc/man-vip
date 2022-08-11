@@ -15,6 +15,7 @@ After the container is created, you can view the container information or delete
 For the difference between Tenant Admin and Tenant User's permission of Interactive Container, please refer to [<ins>Comparison of role permissions of TWCC</ins>](https://man.twcc.ai/@twccdocs/role-main-ㄍen/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#%E9%96%8B%E7%99%BC%E5%9E%8B%E5%AE%B9%E5%99%A8)。
 :::
 
+<br/>
 
 
 ## View the information
@@ -61,6 +62,7 @@ twccli ls ccs -all
 
 </Tabs>
 
+<br/>
 
 ## Delete the container
 

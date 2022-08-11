@@ -35,6 +35,7 @@ There are two ways to monitor container in TWCC portal. You can monitor the util
 You can select 1 hour, 6 hours, 12 hours, 1 day, 7 days, and 30 days for the monitoring period.
 :::
 
+<br/>
 
 ## Monitoring Interactive Container page
 
@@ -54,6 +55,7 @@ You can select 1 hour, 6 hours, 12 hours, 1 day, 7 days, and 30 days for the mon
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6411c83470541a125399dab70f789b79.png)
 
 
+<br/>
 
 
 :::info

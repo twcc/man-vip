@@ -22,9 +22,10 @@ Besides, the billing started when the container is created. When a container is 
 If you have any problems, please contact our Technical Support or Customer Service, thank you!
 :::
 
+<br/>
 
 
-## 建立開發型容器複本
+## Create Interactive Container duplicate
 
 <Tabs>
 <TabItem value="TWCC Portal" label="TWCC Portal">
@@ -74,6 +75,7 @@ twccli ls ccs -dup
 The container duplicate cannot be deleted after creating.
 :::
 
+<br/>
 
 
 ## Create a custom container from a duplicate
