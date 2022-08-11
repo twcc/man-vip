@@ -1,6 +1,5 @@
 ---
 title: HPC 高速運算任務
-tags: Guide, HPC Job, TW
 GA: UA-155999456-1
 sync_original_production: 'url'
 sync_original_preview: 'url'
@@ -32,7 +31,7 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
 
 
-:::caution
+:::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
@@ -150,8 +149,8 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 
 <div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
     
-[janice2019@ln01-twnia2 ~]$ sinfo -V
-slurm 18.08.8
+[janice2019@ln01-twnia2 ~]$ sinfo -V <br/>
+slurm 18.08.8 <br/>
 [janice2019@ln01-twnia2 ~]$
 
 </div>
@@ -182,12 +181,14 @@ slurm 18.08.8
 
 ```
 $ sinfo
-PARTITION       AVAIL TIMELIMIT    NODES     STATE     NODELIST
-SlurmDefault*    up 1-00:00:00            1     drain*   gn1101.twcc.ai
-SlurmDefault*    up 1-00:00:00           98     drain    gn0101.twcc.ai,gn0103.twcc.ai,gn0104.twcc.ai,gn0107.twcc.ai,gn0109.twcc.ai,gn0111.twcc.ai,gn0112.twcc.ai,gn0114.twcc.ai,gn0115.twcc.ai,gn0204.twcc.ai,gn0206.twcc.ai,gn0207.twcc.ai,gn0208.twcc.ai,gn0211.twcc.ai,gn0212.twcc.ai,gn0214.twcc.ai,gn0216.twcc.ai,gn0301.twcc.ai,gn0302.twcc.ai,gn0306.twcc.ai,gn0310.twcc.ai,gn0311.twcc.ai,gn0315.twcc.ai,gn0317.twcc.ai,gn0318.twcc.ai,gn0405.twcc.ai,gn0410.twcc.ai,gn0411.twcc.ai,gn0415.twcc.ai,gn0416.twcc.ai,gn0501.twcc.ai,gn0502.twcc.ai,gn0503.twcc.ai,gn0510.twcc.ai,gn0511.twcc.ai,gn0513.twcc.ai,gn0515.twcc.ai,gn0516.twcc.ai,gn0517.twcc.ai,gn0602.twcc.ai,gn0606.twcc.ai,gn0608.twcc.ai,gn0609.twcc.ai,gn0612.twcc.ai,gn0613.twcc.ai,gn0617.twcc.ai,gn0703.twcc.ai,gn0705.twcc.ai,gn0708.twcc.ai,gn0709.twcc.ai,gn0710.twcc.ai,gn0711.twcc.ai,gn0713.twcc.ai,gn0714.twcc.ai,gn0801.twcc.ai,gn0802.twcc.ai,gn0806.twcc.ai,gn0811.twcc.ai,gn0812.twcc.ai,gn0818.twcc.ai,gn0911.twcc.ai,gn0914.twcc.ai,gn0915.twcc.ai,gn0918.twcc.ai,gn1003.twcc.ai,gn1005.twcc.ai,gn1006.twcc.ai,gn1010.twcc.ai,gn1011.twcc.ai,gn1013.twcc.ai,gn1016.twcc.ai,gn1018.twcc.ai,gn1026.twcc.ai,gn1027.twcc.ai,gn1102.twcc.ai,gn1104.twcc.ai,gn1107.twcc.ai,gn1109.twcc.ai,gn1110.twcc.ai,gn1112.twcc.ai,gn1114.twcc.ai,gn1115.twcc.ai,gn1119.twcc.ai,gn1120.twcc.ai,gn1122.twcc.ai,gn1127.twcc.ai,gn1202.twcc.ai,gn1203.twcc.ai,gn1207.twcc.ai,gn1208.twcc.ai,gn1210.twcc.ai,gn1212.twcc.ai,gn1214.twcc.ai,gn1218.twcc.ai,gn1222.twcc.ai,gn1226.twcc.ai,gn1228.twcc.ai,gn1230.twcc.ai
-SlurmDefault*    up 1-00:00:00          152     idle     gn0102.twcc.ai,gn0105.twcc.ai,gn0106.twcc.ai,gn0108.twcc.ai,gn0110.twcc.ai,gn0113.twcc.ai,gn0116.twcc.ai,gn0117.twcc.ai,gn0118.twcc.ai,gn0201.twcc.ai,gn0202.twcc.ai,gn0203.twcc.ai,gn0205.twcc.ai,gn0209.twcc.ai,gn0210.twcc.ai,gn0213.twcc.ai,gn0215.twcc.ai,gn0217.twcc.ai,gn0218.twcc.ai,gn0303.twcc.ai,gn0304.twcc.ai,gn0305.twcc.ai,gn0307.twcc.ai,gn0308.twcc.ai,gn0309.twcc.ai,gn0312.twcc.ai,gn0313.twcc.ai,gn0314.twcc.ai,gn0316.twcc.ai,gn0401.twcc.ai,gn0402.twcc.ai,gn0403.twcc.ai,gn0404.twcc.ai,gn0406.twcc.ai,gn0407.twcc.ai,gn0408.twcc.ai,gn0409.twcc.ai,gn0412.twcc.ai,gn0413.twcc.ai,gn0414.twcc.ai,gn0417.twcc.ai,gn0418.twcc.ai,gn0504.twcc.ai,gn0505.twcc.ai,gn0506.twcc.ai,gn0507.twcc.ai,gn0508.twcc.ai,gn0509.twcc.ai,gn0512.twcc.ai,gn0514.twcc.ai,gn0518.twcc.ai,gn0601.twcc.ai,gn0603.twcc.ai,gn0604.twcc.ai,gn0605.twcc.ai,gn0607.twcc.ai,gn0610.twcc.ai,gn0611.twcc.ai,gn0614.twcc.ai,gn0615.twcc.ai,gn0616.twcc.ai,gn0618.twcc.ai,gn0701.twcc.ai,gn0702.twcc.ai,gn0704.twcc.ai,gn0706.twcc.ai,gn0707.twcc.ai,gn0712.twcc.ai,gn0715.twcc.ai,gn0716.twcc.ai,gn0717.twcc.ai,gn0718.twcc.ai,gn0803.twcc.ai,gn0804.twcc.ai,gn0805.twcc.ai,gn0807.twcc.ai,gn0808.twcc.ai,gn0809.twcc.ai,gn0810.twcc.ai,gn0813.twcc.ai,gn0814.twcc.ai,gn0815.twcc.ai,gn0816.twcc.ai,gn0817.twcc.ai,gn0901.twcc.ai,gn0902.twcc.ai,gn0903.twcc.ai,gn0904.twcc.ai,gn0905.twcc.ai,gn0906.twcc.ai,gn0907.twcc.ai,gn0908.twcc.ai,gn0909.twcc.ai,gn0910.twcc.ai,gn0912.twcc.ai,gn0913.twcc.ai,gn0916.twcc.ai,gn0917.twcc.ai,gn1001.twcc.ai,gn1002.twcc.ai,gn1004.twcc.ai,gn1007.twcc.ai,gn1008.twcc.ai,gn1009.twcc.ai,gn1012.twcc.ai,gn1014.twcc.ai,gn1015.twcc.ai,gn1017.twcc.ai,gn1019.twcc.ai,gn1020.twcc.ai,gn1021.twcc.ai,gn1022.twcc.ai,gn1023.twcc.ai,gn1024.twcc.ai,gn1025.twcc.ai,gn1028.twcc.ai,gn1029.twcc.ai,gn1030.twcc.ai,gn1103.twcc.ai,gn1105.twcc.ai,gn1106.twcc.ai,gn1108.twcc.ai,gn1113.twcc.ai,gn1116.twcc.ai,gn1117.twcc.ai,gn1118.twcc.ai,gn1121.twcc.ai,gn1123.twcc.ai,gn1124.twcc.ai,gn1125.twcc.ai,gn1126.twcc.ai,gn1128.twcc.ai,gn1129.twcc.ai,gn1130.twcc.ai,gn1201.twcc.ai,gn1204.twcc.ai,gn1205.twcc.ai,gn1206.twcc.ai,gn1209.twcc.ai,gn1211.twcc.ai,gn1213.twcc.ai,gn1215.twcc.ai,gn1216.twcc.ai,gn1217.twcc.ai,gn1219.twcc.ai,gn1220.twcc.ai,gn1221.twcc.ai,gn1223.twcc.ai,gn1224.twcc.ai,gn1225.twcc.ai,gn1227.twcc.ai,gn1229.twcc.ai
-SlurmDefault*    up 1-00:00:00            1     down     gn1111.twcc.ai
 ```
+
+    PARTITION       AVAIL TIMELIMIT    NODES     STATE     NODELIST
+    SlurmDefault*    up 1-00:00:00            1     drain*   gn1101.twcc.ai
+    SlurmDefault*    up 1-00:00:00           98     drain    gn0101.twcc.ai,gn0103.twcc.ai,gn0104.twcc.ai,gn0107.twcc.ai,gn0109.twcc.ai,gn0111.twcc.ai,gn0112.twcc.ai,gn0114.twcc.ai,gn0115.twcc.ai,gn0204.twcc.ai,gn0206.twcc.ai,gn0207.twcc.ai,gn0208.twcc.ai,gn0211.twcc.ai,gn0212.twcc.ai,gn0214.twcc.ai,gn0216.twcc.ai,gn0301.twcc.ai,gn0302.twcc.ai,gn0306.twcc.ai,gn0310.twcc.ai,gn0311.twcc.ai,gn0315.twcc.ai,gn0317.twcc.ai,gn0318.twcc.ai,gn0405.twcc.ai,gn0410.twcc.ai,gn0411.twcc.ai,gn0415.twcc.ai,gn0416.twcc.ai,gn0501.twcc.ai,gn0502.twcc.ai,gn0503.twcc.ai,gn0510.twcc.ai,gn0511.twcc.ai,gn0513.twcc.ai,gn0515.twcc.ai,gn0516.twcc.ai,gn0517.twcc.ai,gn0602.twcc.ai,gn0606.twcc.ai,gn0608.twcc.ai,gn0609.twcc.ai,gn0612.twcc.ai,gn0613.twcc.ai,gn0617.twcc.ai,gn0703.twcc.ai,gn0705.twcc.ai,gn0708.twcc.ai,gn0709.twcc.ai,gn0710.twcc.ai,gn0711.twcc.ai,gn0713.twcc.ai,gn0714.twcc.ai,gn0801.twcc.ai,gn0802.twcc.ai,gn0806.twcc.ai,gn0811.twcc.ai,gn0812.twcc.ai,gn0818.twcc.ai,gn0911.twcc.ai,gn0914.twcc.ai,gn0915.twcc.ai,gn0918.twcc.ai,gn1003.twcc.ai,gn1005.twcc.ai,gn1006.twcc.ai,gn1010.twcc.ai,gn1011.twcc.ai,gn1013.twcc.ai,gn1016.twcc.ai,gn1018.twcc.ai,gn1026.twcc.ai,gn1027.twcc.ai,gn1102.twcc.ai,gn1104.twcc.ai,gn1107.twcc.ai,gn1109.twcc.ai,gn1110.twcc.ai,gn1112.twcc.ai,gn1114.twcc.ai,gn1115.twcc.ai,gn1119.twcc.ai,gn1120.twcc.ai,gn1122.twcc.ai,gn1127.twcc.ai,gn1202.twcc.ai,gn1203.twcc.ai,gn1207.twcc.ai,gn1208.twcc.ai,gn1210.twcc.ai,gn1212.twcc.ai,gn1214.twcc.ai,gn1218.twcc.ai,gn1222.twcc.ai,gn1226.twcc.ai,gn1228.twcc.ai,gn1230.twcc.ai
+    SlurmDefault*    up 1-00:00:00          152     idle     gn0102.twcc.ai,gn0105.twcc.ai,gn0106.twcc.ai,gn0108.twcc.ai,gn0110.twcc.ai,gn0113.twcc.ai,gn0116.twcc.ai,gn0117.twcc.ai,gn0118.twcc.ai,gn0201.twcc.ai,gn0202.twcc.ai,gn0203.twcc.ai,gn0205.twcc.ai,gn0209.twcc.ai,gn0210.twcc.ai,gn0213.twcc.ai,gn0215.twcc.ai,gn0217.twcc.ai,gn0218.twcc.ai,gn0303.twcc.ai,gn0304.twcc.ai,gn0305.twcc.ai,gn0307.twcc.ai,gn0308.twcc.ai,gn0309.twcc.ai,gn0312.twcc.ai,gn0313.twcc.ai,gn0314.twcc.ai,gn0316.twcc.ai,gn0401.twcc.ai,gn0402.twcc.ai,gn0403.twcc.ai,gn0404.twcc.ai,gn0406.twcc.ai,gn0407.twcc.ai,gn0408.twcc.ai,gn0409.twcc.ai,gn0412.twcc.ai,gn0413.twcc.ai,gn0414.twcc.ai,gn0417.twcc.ai,gn0418.twcc.ai,gn0504.twcc.ai,gn0505.twcc.ai,gn0506.twcc.ai,gn0507.twcc.ai,gn0508.twcc.ai,gn0509.twcc.ai,gn0512.twcc.ai,gn0514.twcc.ai,gn0518.twcc.ai,gn0601.twcc.ai,gn0603.twcc.ai,gn0604.twcc.ai,gn0605.twcc.ai,gn0607.twcc.ai,gn0610.twcc.ai,gn0611.twcc.ai,gn0614.twcc.ai,gn0615.twcc.ai,gn0616.twcc.ai,gn0618.twcc.ai,gn0701.twcc.ai,gn0702.twcc.ai,gn0704.twcc.ai,gn0706.twcc.ai,gn0707.twcc.ai,gn0712.twcc.ai,gn0715.twcc.ai,gn0716.twcc.ai,gn0717.twcc.ai,gn0718.twcc.ai,gn0803.twcc.ai,gn0804.twcc.ai,gn0805.twcc.ai,gn0807.twcc.ai,gn0808.twcc.ai,gn0809.twcc.ai,gn0810.twcc.ai,gn0813.twcc.ai,gn0814.twcc.ai,gn0815.twcc.ai,gn0816.twcc.ai,gn0817.twcc.ai,gn0901.twcc.ai,gn0902.twcc.ai,gn0903.twcc.ai,gn0904.twcc.ai,gn0905.twcc.ai,gn0906.twcc.ai,gn0907.twcc.ai,gn0908.twcc.ai,gn0909.twcc.ai,gn0910.twcc.ai,gn0912.twcc.ai,gn0913.twcc.ai,gn0916.twcc.ai,gn0917.twcc.ai,gn1001.twcc.ai,gn1002.twcc.ai,gn1004.twcc.ai,gn1007.twcc.ai,gn1008.twcc.ai,gn1009.twcc.ai,gn1012.twcc.ai,gn1014.twcc.ai,gn1015.twcc.ai,gn1017.twcc.ai,gn1019.twcc.ai,gn1020.twcc.ai,gn1021.twcc.ai,gn1022.twcc.ai,gn1023.twcc.ai,gn1024.twcc.ai,gn1025.twcc.ai,gn1028.twcc.ai,gn1029.twcc.ai,gn1030.twcc.ai,gn1103.twcc.ai,gn1105.twcc.ai,gn1106.twcc.ai,gn1108.twcc.ai,gn1113.twcc.ai,gn1116.twcc.ai,gn1117.twcc.ai,gn1118.twcc.ai,gn1121.twcc.ai,gn1123.twcc.ai,gn1124.twcc.ai,gn1125.twcc.ai,gn1126.twcc.ai,gn1128.twcc.ai,gn1129.twcc.ai,gn1130.twcc.ai,gn1201.twcc.ai,gn1204.twcc.ai,gn1205.twcc.ai,gn1206.twcc.ai,gn1209.twcc.ai,gn1211.twcc.ai,gn1213.twcc.ai,gn1215.twcc.ai,gn1216.twcc.ai,gn1217.twcc.ai,gn1219.twcc.ai,gn1220.twcc.ai,gn1221.twcc.ai,gn1223.twcc.ai,gn1224.twcc.ai,gn1225.twcc.ai,gn1227.twcc.ai,gn1229.twcc.ai
+    SlurmDefault*    up 1-00:00:00            1     down     gn1111.twcc.ai
+
 
 
 ### 提交、查看、刪除單一任務
@@ -196,43 +197,32 @@ SlurmDefault*    up 1-00:00:00            1     down     gn1111.twcc.ai
 
 ```
 $ srun -J demo sleep 100 &
-[1] 384146
 ```
+![image](https://user-images.githubusercontent.com/109254397/184206098-e43782b4-cadc-480c-b959-23e71c886e09.png)
+
 
 * 使用 sacct 指令查看最近的任務狀況，由最下方確認有一個名為 demo 的任務正在執行中，Job ID 為 1962。
 
 ```
 $ sacct
-JobID         JobName    Partition    Account     AllocCPUS   State          ExitCode 
------------- ----------  ----------   ----------  ----------  ----------     -------- 
-1959         sleep        SlurmDefa+       root         1     COMPLETED      0:0 
-1960         sleep        SlurmDefa+       root         1     COMPLETED      0:0 
-1961         sleep        SlurmDefa+       root         1     CANCELLED+     0:0 
-1962         demo         SlurmDefa+       root         1     RUNNING        0:0
 ```
+![image](https://user-images.githubusercontent.com/109254397/184206909-440fdbbd-6d84-4b01-8612-81c8a8ae6696.png)
 
 * 使用 scancel 指令刪除 ID 為 1962 的任務，再下一次 Enter 確認終止後，即可終止該任務。　
 
 ```
 $ scancel 1962
-srun: Force Terminated job 1962
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** STEP 1962.0 ON gn0102.twcc.ai CANCELLED AT 2018-11-22T01:16:55 ***
-srun: error: gn0102.twcc.ai: task 0: Terminated
-
-[1]+  Exit 143                srun -J demo sleep 100
 ```
+![image](https://user-images.githubusercontent.com/109254397/184207594-2e409d2f-2dfb-4dc4-a5ad-28c01e095654.png)
+
+
 * 再使用 sacct 查看，即可發現 ID 1962 的任務已被終止（粗體字部分）。
 
 ```
 $ sacct
-JobID         JobName    Partition    Account     AllocCPUS         State   ExitCode 
-------------      ----------      ----------      ----------      ----------       ----------     -------- 
-1959         sleep        SlurmDefa+       root         1     COMPLETED      0:0 
-1960         sleep        SlurmDefa+       root         1     COMPLETED      0:0 
-1961         sleep        SlurmDefa+       root         1     CANCELLED+     0:0 
-1962         demo         SlurmDefa+       root         1     CANCELLED+     0:0
 ```
+![image](https://user-images.githubusercontent.com/109254397/184207841-fb9b8111-f814-48ca-8222-baee3da121ea.png)
+
 
 ### 使用 sbatch 搭配 Singularity 提交容器任務
 
@@ -240,29 +230,12 @@ JobID         JobName    Partition    Account     AllocCPUS         State   Exit
 
 ```
 $ sbatch --wrap='singularity exec docker://registry.twcc.ai/ngc/nvidia/ubuntu-v1:latest date'
-Submitted batch job 1963
 ```
+![image](https://user-images.githubusercontent.com/109254397/184208055-6f66fc16-83a7-43bf-b9f1-446cee618d80.png)
+
 * 直接透過 tail 指令，瀏覽該目錄下的 Log 資訊。Log 格式為 slurm-Job_ID.out，如上範例為「slurm-1963.out」。可看到 Image 被解開啟用，隨後執行 date 指令顯示時間。
 
 ```
 $ tail -f slurm-1963.out 
-Docker image path: registry.twcc.ai/ngc/nvidia/ubuntu-v1:latest
-Cache folder set to /fs02/u9833157/.singularity/docker
-[14/14] |===================================| 100.0% 
-Creating container runtime...
-Exploding layer: sha256:18d680d616571900d78ee1c8fff0310f2a2afe39c6ed0ba2651ff667af406c3e.tar.gz
-Exploding layer: sha256:0addb6fece630456e0ab187b0aa4304d0851ba60576e7f6f9042a97ee908a796.tar.gz
-Exploding layer: sha256:78e58219b215b359fe002f0ca1f416617b75ca9b36cb274c98d7a5f808711179.tar.gz
-Exploding layer: sha256:eb6959a66df2ea26a26452ba11f84fb64bb45af90204374862ec71ee59f795e7.tar.gz
-Exploding layer: sha256:40949492ab8fcc77af5dfcc06d09f733f8d4d3a4ae8a481ff77735668ad2cf3e.tar.gz
-Exploding layer: sha256:43a734014567cc943aacae0a58ef60b306cc09200adb13a901ec788b105f1063.tar.gz
-Exploding layer: sha256:75343688c06be5f506ca2e0176d81fde772e6f7b0cfe52db012f5a7d4f631bd4.tar.gz
-Exploding layer: sha256:c520ea778ddb6af4f1f9ae91993af23708920d64d59c81ec12d86863fdbc2aeb.tar.gz
-Exploding layer: sha256:a7d35a2112b48491e0e783f614399c175f4700463edb55b9cd8a644412cf4ea1.tar.gz
-Exploding layer: sha256:a090e68b7f9e4e0a287da043133bc2079a31bed8f674341b112b869a8e14a28e.tar.gz
-Exploding layer: sha256:2af4fcd8dbcd9f6fa89bd1606d1ae99edc5f9c322b5e174b5564f654a7dec023.tar.gz
-Exploding layer: sha256:64f5d98688b70ee3a99201181d63f036842681764ec03daae96288933d7c26fa.tar.gz
-Exploding layer: sha256:10d405844eaaf19921cd2df52b8092965b444a1a99f268a781e60c2e7295e11c.tar.gz
-Exploding layer: sha256:43a5bce2a8794841d36cca01784e47882868ccebe19f229fe27d702c4052374a.tar.gz
-Exploding layer: sha256:8b46bfb2568cade5d8c833931b9f682e8adf5839c94b2de07b2150c73cf346cf.tar.gz
-Thu Nov 22 01:43:22 CST 2018```
+```
+![image](https://user-images.githubusercontent.com/109254397/184208732-9fbc9c5c-6a22-4606-91e4-ec57f861dbd4.png)

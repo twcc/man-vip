@@ -1,6 +1,5 @@
 ---
 title: 任務型容器
-tags: Guide, CCS, Scheduled, TW
 GA: UA-155999456-1
 sync_original_production: 'url'
 sync_original_preview: 'url'
@@ -21,7 +20,7 @@ sync_original_preview: 'url'
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
 
 
-:::caution
+:::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
