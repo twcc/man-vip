@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-dns-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-dns-en' 
 ---
 
 # Configure the container DNS server

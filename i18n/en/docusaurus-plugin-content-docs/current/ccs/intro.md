@@ -2,6 +2,8 @@
 title: '服務概觀'
 sidebar_label: '服務概觀'
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-overview-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-overview-en' 
 ---
 
 

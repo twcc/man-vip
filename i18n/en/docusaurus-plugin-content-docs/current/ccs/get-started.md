@@ -1,6 +1,8 @@
 ---
 sidebar_label: '從零開始'
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/getstarted-ccs-create-connec-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/getstarted-ccs-create-connec-en' 
 ---
 
 import Tabs from '@theme/Tabs';
