@@ -1,9 +1,11 @@
 ---
 sidebar_label: 'DIGITS'
 sidebar_position: 14
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-digits-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-digits-en'
 ---
 
-# <img class="ccsimgicon" src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bb968fa9146487087f1c4634929d931f.png' /> DIGITS
+# <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bb968fa9146487087f1c4634929d931f.png' /> DIGITS
 
 
 TWCC provides ready-to-use working environment of NGC’s DIGITS. The NVIDIA Deep Learning GPU Training System (DIGITS) puts the power of deep learning into the hands of engineers and data scientists. DIGITS can be used to rapidly train the highly accurate deep neural network (DNNs) for image classification, segmentation and object detection tasks. DIGITS simplifies common deep learning tasks such as managing data, designing and training neural networks on multi-GPU systems, monitoring performance in real time with advanced visualizations, and selecting the best performing model from the results browser for deployment. DIGITS is completely interactive so that data scientists can focus on designing and training networks rather than programming and debugging.

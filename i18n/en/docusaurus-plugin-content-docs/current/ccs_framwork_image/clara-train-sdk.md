@@ -1,9 +1,11 @@
 ---
 sidebar_label: 'Clara Train SDK'
 sidebar_position: 17
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-clara-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-clara-en'
 ---
 
-# <img class="ccsimgicon" src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b3382d3255e279896320ff106a1565d.png' />  Clara
+# <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b3382d3255e279896320ff106a1565d.png' /> Clara
 
 TWCC provides ready-to-use working environment of Nvidias Clara Train SDK. Clara Train SDK is a domain optimized developer application framework that includes APIs for AI-Assisted Annotation. This enables any medical viewer to be AI capable and enables a TensorFlow based training framework with pre-trained models to start AI development with techniques such as Transfer Learning, Federated Learning, and AutoML.
 
