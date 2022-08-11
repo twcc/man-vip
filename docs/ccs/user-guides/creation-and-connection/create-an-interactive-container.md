@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-create-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-create-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -39,7 +41,7 @@ import TabItem from '@theme/TabItem';
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a4c9a9e6996f373cc6be68c474257c50.png)
 
 :::tip
-1. TWCC 提供的 NGC 容器映像檔類型、版本、套件，請參考：[<ins>容器映像檔</ins>](TBD)
+1. TWCC 提供的 NGC 容器映像檔類型、版本、套件，請參考：[<ins>容器映像檔</ins>](https://man.twcc.ai/@twccdocs/ccs-concept-image-main-zh)[target=_blank]
 2. 首次選用後，映像檔會記錄儲存於「**最近使用**」區塊，加快您下次選用的速度。(清除瀏覽器歷史紀錄將會重新記錄)
 :::
 

@@ -1,6 +1,8 @@
 ---
 sidebar_label: '從零開始'
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/getstarted-ccs-create-connec-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/getstarted-ccs-create-connec-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -39,16 +41,27 @@ import TabItem from '@theme/TabItem';
 
 ### Step 1. 準備工作：帳號、計畫(專案)、額度
 
-<Tabs className="unique-tabs">
-<TabItem value="Academic" label="Academic">
+<details class="docspoiler">
 
-1. [註冊帳號](/docs/api.md)
+<summary><font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}> <b>&nbsp;Academic&nbsp;</b></font></summary> 
+
+1. [註冊帳號](https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=)
 2. 完成後，您可以[新申請計畫](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fapply-project-and-credit-zh)，或請 [租戶管理員<i class="fa fa-question-circle" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-overview-zh) 將您[加入已存在之計畫](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-manage-project-team-zh)。
 3. 若您為租戶管理員，請為您的計畫[購買計畫額度](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2FS17dwAja4%3Ftype%3Dview)，計畫需有額度才能建立並使用 TWCC 資源。
 4. 若您為租戶管理員，額度申請完成後，可將計畫母錢包拆分成多個子錢包分配固定額度給成員使用，若無拆分則統一使用計畫母錢包扣抵額度。請參考 [計畫錢包管理](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-manage-project-wallet-zh) 了解更多。
 
-</TabItem>
-<TabItem value="Enterprise" label="Enterprise">
+
+</details>
+
+<!-- Space -->
+
+<div style={{'height':'8px'}}></div>
+
+<!-- 2. start -->
+
+<details class="docspoiler">
+
+<summary><font style={{'background-color':'#008ad8', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}> <b>&nbsp;Enterprise&nbsp;</b></font></summary>
 
 1. [註冊帳號](https://tws.twcc.ai/)
 2. 完成後，您可以
@@ -56,8 +69,8 @@ import TabItem from '@theme/TabItem';
     - 聯絡業務 (sales@twsc.io) 我們將深入了解您的使用需求，並協助您新增使用專案與額度，或
     - 請 [租戶管理員<i class="fa fa-question-circle" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-overview-zh) 將您[加入已存在之專案](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-manage-project-team-zh)。
 
-</TabItem>
-</Tabs>
+
+</details>
 
 
 ### Step 2. 登入 TWCC 使用者網站
@@ -78,8 +91,8 @@ Step 1. 準備工作完成後，您就可以輸入帳號、密碼輕鬆[登入 T
 - 動手試試看！使用網站預設設定，點擊幾步就能建立您專屬的容器！
 - 有多樣來自 NGC 的完整優化 AI framework 提供您選擇，請參考 [<ins>TWCC 容器映像檔</ins>](https://man.twcc.ai/@twccdocs/ccs-concept-image-main-zh) 了解更多。
 - [<ins>刪除容器</ins>](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-ccs-manage-zh#%E5%88%AA%E9%99%A4%E5%AE%B9%E5%99%A8)，可停止繼續計費。
-- 費率資訊請參考價目表：<a href="https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS">Academic</a>、<a href="https://man.twcc.ai/@twsdocs/pricing-zh#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS">Enterprise</a>
-- 您可於會員中心檢視額度與資源用量 <a href="https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-view-billing-resource-usage-zh">Academic</a>
+- 費率資訊請參考價目表：<a href="https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS"><font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}><b>&nbsp;Academic&nbsp;</b></font></a>、<a href="https://man.twcc.ai/@twsdocs/pricing-zh#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS"><font style={{'background-color':'#008ad8', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}><b>&nbsp;Enterprise&nbsp;</b></font></a>
+- 您可於會員中心檢視額度與資源用量 <a href="https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-view-billing-resource-usage-zh"><font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}><b>&nbsp;Academic&nbsp;</b></font></a>
 
 :::
 
