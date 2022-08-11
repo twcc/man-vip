@@ -73,8 +73,6 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-<br/>
-
 **指令**
 
 ```bash

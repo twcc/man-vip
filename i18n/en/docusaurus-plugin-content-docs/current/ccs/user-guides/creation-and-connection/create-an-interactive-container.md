@@ -70,8 +70,6 @@ For the detailed information of container types (including the number of GPUs an
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-<br/>
-
 **Command**
 
 ```bash
