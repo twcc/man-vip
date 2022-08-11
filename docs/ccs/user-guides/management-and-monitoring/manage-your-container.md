@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-manage-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-manage-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -32,7 +34,7 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cf118734826fcdd287da97a30865c0d5.png)
 
-:::danger
+:::caution
 - 「容器日誌」功能無法確保您的所有紀錄在容器結束運行後，仍可保存及取得，建議您將日誌轉存至 [TWCC HFS](https://man.twcc.ai/@preview-twccdocs/doc-hfs-main-zh) 或 上傳到 [TWCC COS](https://man.twcc.ai/@preview-twccdocs/doc-cos-main-zh) 中，以確保紀錄可用性。
 - 若希望由 TWCC 維運人員協助您取得完整紀錄，請您來信授權處理 (isupport@twcc.io)，並請勿存放機敏資料。
 :::
