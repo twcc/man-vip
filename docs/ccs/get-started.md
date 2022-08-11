@@ -13,6 +13,7 @@ import TabItem from '@theme/TabItem';
 
 【從零開始 TWCC】系列教學文件將以主題式方式為新手用戶深入淺出說明 TWCC 使用方式，將相關文件統整於此，讓您方便參考所需的資訊，順利邁開使用 TWCC 運算資源的第一步！<i class="fa fa-hand-peace-o" aria-hidden="true"></i>
 
+<br/>
 
 ## 主題與步驟說明
 
@@ -36,6 +37,8 @@ import TabItem from '@theme/TabItem';
 :::info
 本篇文章將使用到的 TWCC 服務：會員中心、[<ins>開發型容器</ins>](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh)。
 :::
+
+<br/>
 
 ## 操作步驟教學
 
@@ -72,11 +75,13 @@ import TabItem from '@theme/TabItem';
 
 </details>
 
+<br/>
 
 ### Step 2. 登入 TWCC 使用者網站
     
 Step 1. 準備工作完成後，您就可以輸入帳號、密碼輕鬆[登入 TWCC](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-signin-twcc-zh)！ 
-    
+
+<br/>
 
 
 ### Step 3. 建立並連線開發型容器
@@ -84,6 +89,7 @@ Step 1. 準備工作完成後，您就可以輸入帳號、密碼輕鬆[登入 T
 1. 請按照 [建立開發型容器](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-ccs-create-zh#%E5%BB%BA%E7%AB%8B%E9%96%8B%E7%99%BC%E5%9E%8B%E5%AE%B9%E5%99%A81) 教學步驟一步步完成，您將了解如何在 TWCC 使用者網站中建立容器。
 2. 建立完成後，請按照 [連線容器 - Jupyter Notebook](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-ccs-connect-zh#Jupyter-Notebook) 步驟，即可快速連線進入您的容器。
 
+<br/>
 
 
 :::info
@@ -96,6 +102,7 @@ Step 1. 準備工作完成後，您就可以輸入帳號、密碼輕鬆[登入 T
 
 :::
 
+<br/>
 
 
 ## 相關 FAQ 

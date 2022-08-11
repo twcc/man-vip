@@ -13,12 +13,16 @@ import TabItem from '@theme/TabItem';
 
 完整容器型號 (含 GPU 數量與其他資源大小)，請參考[價目表](TBD)。
 
+<br/>
+
+
 ## 開始之前
 
 - 若尚未註冊使用帳號，請先[註冊 TWCC](https://www.twcc.ai/)。
 - 若選擇使用 TWCC 入口網站操作，請先登入 [TWCC 入口網站](https://www.twcc.ai/)。
 - 若選擇使用 TWCC CLI 操作，請先[安裝 TWCC CLI](TBD) 、並[登入](TBD)。
 
+<br/>
 
 
 ## 建立開發型容器
@@ -69,7 +73,9 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### 指令
+<br/>
+
+**指令**
 
 ```bash
 twccli mk ccs [-n]      #容器名稱
@@ -90,7 +96,9 @@ twccli mk ccs [-n]      #容器名稱
 - 環境變數詳細說明與設定範例請參考 [<ins>HowTo：設定環境變數</ins>](TBD)。
 :::
 
-### 範例
+<br/>
+
+**範例**
 
 - 建立名稱為 **`cusccs`**、映像檔類型 **`Caffe2`**，映像檔規格為 **`caffe2-18.08-py3-v1:latest`**、GPU 數量 **`2`** 的容器。
 

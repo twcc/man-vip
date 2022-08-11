@@ -11,6 +11,7 @@ import TabItem from '@theme/TabItem';
 
 當容器服務狀態呈現 **`Ready`** 後即可開始使用，開發型容器服務預設提供 Jupyter Notebook 網頁開發環境及 SSH 兩種連線登入方式，操作步驟請參考以下說明。
 
+<br/>
 
 ## 準備工作
 
@@ -18,11 +19,13 @@ import TabItem from '@theme/TabItem';
 - 若選擇使用 TWCC 入口網站操作，容器建立後，請於「**開發型容器管理頁**」點選欲連線的容器，進入「**開發型容器詳細資料頁**」。
 - 若選擇使用 TWCC CLI 操作，請先取得[容器 ID](https://man.twcc.ai/@twccdocs/guide-ccs-manage-zh#%E6%AA%A2%E8%A6%96%E8%B3%87%E8%A8%8A)。
 
+<br/>
 
 ## 連線容器
 
 您可透過 Jupyter Notebook 或是 SSH 連線容器。
 
+<br/>
 
 ### Jupyter Notebook
 
@@ -53,6 +56,7 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
+<br/>
 
 ### SSH
 

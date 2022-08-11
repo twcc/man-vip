@@ -15,6 +15,7 @@ TWCC 開發型容器開放 22、8888、5000、5001、5002，5 個**目標埠**�
 
 您可以自行運用的**目標埠**為：5000、5001、5002。將架設於容器內服務的 daemon 設置在其中一個目標埠，並關聯對外埠，完成後，系統將配置一個對應的**對外埠 (50000 ~ 60000)**，您即可於透過公用 IP 和對外埠，對外提供該服務 (例：[AI 推論服務](https://man.twcc.ai/@twccdocs/rkOTAaoa4?type=view)或是[網站服務](https://man.twcc.ai/@twccdocs/howto-ccs-config-service-port-zh))。
 
+<br/>
 
 
 ## 準備工作
@@ -23,6 +24,7 @@ TWCC 開發型容器開放 22、8888、5000、5001、5002，5 個**目標埠**�
 - 若選擇使用 TWCC 入口網站操作，容器建立後，請於「**開發型容器管理頁**」點選欲連線的容器，進入「**開發型容器詳細資料頁**」。
 - 若選擇使用 TWCC CLI 操作，請先取得[容器 ID](https://man.twcc.ai/@twccdocs/guide-ccs-manage-zh#%E6%AA%A2%E8%A6%96%E8%B3%87%E8%A8%8A)。
 
+<br/>
 
 
 ## 檢視服務埠資訊
@@ -50,6 +52,7 @@ twccli ls ccs -p -s 886330
 </TabItem>
 </Tabs>
 
+<br/>
 
 
 ## 關聯服務埠
@@ -80,6 +83,7 @@ twccli net ccs -p 5000 -open -s 886330
 </TabItem>
 </Tabs>
 
+<br/>
 
 
 ## 解除關聯服務埠

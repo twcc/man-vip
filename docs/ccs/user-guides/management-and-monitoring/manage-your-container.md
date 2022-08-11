@@ -15,6 +15,7 @@ import TabItem from '@theme/TabItem';
 租戶管理員、租戶使用者對於開發型容器使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-zh#%E9%96%8B%E7%99%BC%E5%9E%8B%E5%AE%B9%E5%99%A8)。
 :::
 
+<br/>
 
 ## 檢視資訊
 
@@ -64,6 +65,7 @@ twccli ls ccs -all
 </TabItem>
 </Tabs>
 
+<br/>
 
 ## 刪除容器
 
@@ -94,6 +96,7 @@ twccli rm ccs -s 934369
 </TabItem>
 </Tabs>
 
+<br/>
 
 :::info
 若已開啟「[刪除保護機制](https://man.twcc.ai/@twccdocs/guide-ccs-manage-zh#%E6%AA%A2%E8%A6%96%E8%B3%87%E8%A8%8A)」，將無法直接刪除資源，請您先關閉後再執行刪除。
