@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-manage-project-team-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-manage-project-team-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -12,6 +14,7 @@ import TabItem from '@theme/TabItem';
 - 僅「**計畫主持人（建立者）**」、「**計畫管理員**」有權限管理計畫成員。
 :::
 
+<br/>
 
 
 ### Step 1. 計畫細節頁面
@@ -20,6 +23,7 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_07b4594f06f8839b7fc44205fe3b9dfa.png)
 
+<br/>
 
 
 ### Step 2. 管理計畫成員
@@ -33,6 +37,7 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d85ed7477cf29d2c3a28dcb0570ef401.png)
 
+<br/>
 
 
 :::info

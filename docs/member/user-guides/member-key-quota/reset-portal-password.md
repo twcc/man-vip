@@ -1,5 +1,7 @@
 ---
 sidebar_position: 4
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-reset-portal-pwd-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-reset-portal-pwd-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -10,14 +12,22 @@ import TabItem from '@theme/TabItem';
 
 系統未紀錄您的使用者網站密碼，因此若忘記登入密碼，請您依下方流程重置，並妥善保存密碼。
 
+<br/>
+
+
 ### Step 1. 點選【登入】按鈕
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2005786ec2b27f9501a096de69232717.png)
+
+<br/>
 
 
 ### Step 2. 選擇【忘記密碼】
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8730e798e1aa4e56e410a8e326b4c08c.png)
+
+<br/>
+
 
 ### Step 3. 選擇服務提供者
 
@@ -25,17 +35,21 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_02552b94893353e73d26423412062906.png)
 
+<br/>
+
 
 ### Step 4. 輸入註冊會員的 e-mail
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3cff6c7564b60f6d11ca8eadb89e7996.png)
 
+<br/>
 
 
 ### Step 5. 檢視並點選【確定】
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_81d998c60b62cfa261bc6039b44ba369.png)
 
+<br/>
 
 
 ### Step 6. 【會員忘記密碼驗證信】 通知信
@@ -44,12 +58,14 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_be29b5401400188b54266cca93b36690.png)
 
+<br/>
 
 
 ### Step 7. 重設使用者網站密碼
   
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_34ef1664b84a8182be9f3eda39a58ef5.png)
 
+<br/>
 
 
 :::info
@@ -59,6 +75,8 @@ import TabItem from '@theme/TabItem';
 4. 本中心資訊服務帳號密碼（會員或主機帳號）最長有效期限為 180 天。
 5. 當密碼即將到期前（期前七天、前三天，當天）會寄發密碼提醒通知，請用戶撥冗登入 [Service 會員服務系統](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 進行變更。
 :::
+
+<br/>
 
 
 ### Step 8. 完成密碼重設
@@ -71,6 +89,8 @@ import TabItem from '@theme/TabItem';
 同時也會寄出【會員密碼變更成功通知】至會員信箱。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2ee8c760a2778f9b9ddb430f5b5c9b59.png)
+
+<br/>
 
 
 :::info
