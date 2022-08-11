@@ -40,8 +40,4 @@ After enter Member Center, click "**Member Center**" > "**Member Profile**" > "*
 
 Update your data and click "**Submit**".
 
-<br/>
-
-:::info
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db98ec174de3f26e42cb8258d83fd370.png)
-:::

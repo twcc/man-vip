@@ -96,7 +96,7 @@ The TWCC portal can display up to 1000 latest data at once, and the old data wil
 <br/>
 
 
-:::caution
+:::tip
 
 Due to encoding issues, after the report is downloaded, clicking the file directly to open it in Excel may result in garbled characters.
 

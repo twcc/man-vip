@@ -23,13 +23,10 @@ Access methods are differentiated by users, please refer to the following steps:
 ### Method 1: TWCC 
 
 - Step 1. Sign in TWCC
-
     - Go to the TWCC portal and Click to sign in.
-    
     ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cd9b6df79c2209ff5fbe7a48b14ffaa4.png)
-
     - Select "**國網學研用戶(NCHC users in academic and research circles)**" portal, enter your account and password to login.
-==**Need to update:exclamation:**==
+    ==**Need to update:exclamation:**==
     ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2f4b809434719e28fd359695264cf884.png)
 
 

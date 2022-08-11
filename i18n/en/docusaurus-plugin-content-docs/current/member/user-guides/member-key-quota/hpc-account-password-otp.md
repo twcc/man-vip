@@ -161,6 +161,3 @@ For other operating system please refer to [<ins>this page</ins>](https://altern
 :::info
 Other than Microsoft Authenticator, other applications can refer to [<ins>this page</ins>](https://alternativeto.net/software/microsoft-authenticator/).
 :::
-:::info
-Other than Microsoft Authenticator, other applications can refer to [<ins>this page</ins>](https://alternativeto.net/software/microsoft-authenticator/).
-:::

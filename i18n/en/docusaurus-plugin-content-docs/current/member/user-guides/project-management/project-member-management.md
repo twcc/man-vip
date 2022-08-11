@@ -51,4 +51,5 @@ If your <ins>Member Center <i class="fa fa-question-circle fa-question-circle-fo
 
 -  <span>&#10102;</span> The project host (creator) or administrator can add members by clicking the "+" icon above
 -  <span>&#10103;</span> Click the button shown to view member information and change membership status: set as administrators/general members, or delete members
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b64002a9e3fddd6c8d28eec3eda79c92.png)
