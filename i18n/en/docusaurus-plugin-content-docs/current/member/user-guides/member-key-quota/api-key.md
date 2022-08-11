@@ -1,5 +1,7 @@
 ---
 sidebar_position: 6
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-api-key-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-api-key-en' 
 ---
 
 import Tabs from '@theme/Tabs';

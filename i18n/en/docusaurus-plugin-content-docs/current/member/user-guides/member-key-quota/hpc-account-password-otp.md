@@ -1,5 +1,7 @@
 ---
 sidebar_position: 5
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-hostname-pwd-otp-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-hostname-pwd-otp-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -7,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 # Inquire supercomputer account, reset password and obtain OTP authentication code
 
-:::warning
+:::caution
 ==**Need to update:exclamation:**==<br/>
 If your [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) not applicable for the footage or process below, please refer to this <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>link</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-signup-zh) for manual instructions.
 :::
@@ -96,8 +98,6 @@ There are many ways to obtain an OTP authentication code, such as **Member Cente
 
 <summary><b>B. WinAuth (Windows user)</b></summary>
 
-:::info
-
 **Step 1.** Download [WinAuth]( https://github.com/winauth/winauth )
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_aff24c0f6f427c7c8e4c0cf3c9ccfaaa.png)
 
@@ -110,13 +110,10 @@ There are many ways to obtain an OTP authentication code, such as **Member Cente
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b7240fae8a132dfad9cec0fe0cdb1ab4.png)
 
 
-
-
 **Step 4.** Right Click **Auto Refresh**, let OTP refresh automatically and it's done!
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b3555bbc286592bcbe1e0ea2cdfeb636.png)
 
-:::
 
 </details>
 
@@ -140,6 +137,9 @@ For other operating system please refer to [<ins>this page</ins>](https://altern
 
 
 
+:::info
+Other than Microsoft Authenticator, other applications can refer to [<ins>this page</ins>](https://alternativeto.net/software/microsoft-authenticator/).
+:::
 :::info
 Other than Microsoft Authenticator, other applications can refer to [<ins>this page</ins>](https://alternativeto.net/software/microsoft-authenticator/).
 :::

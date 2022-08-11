@@ -1,5 +1,7 @@
 ---
 sidebar_position: 8
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-service-user-activity-history-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-service-user-activity-history-en' 
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-manage-project-team-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-manage-project-team-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -9,7 +11,7 @@ import TabItem from '@theme/TabItem';
 # Project members management 
 
 
-:::warning
+:::caution
 ==Need to update:exclamation:==<br/>
 If your <ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins> not applicable for the footage or process below, please refer to this <i class="fa fa-sign-out" aria-hidden="true"></i> <ins>link</ins> for manual instructions.
 :::

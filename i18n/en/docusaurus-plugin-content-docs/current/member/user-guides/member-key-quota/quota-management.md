@@ -1,5 +1,7 @@
 ---
 sidebar_position: 7
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-quota-mngmnt-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-quota-mngmnt-en' 
 ---
 
 import Tabs from '@theme/Tabs';

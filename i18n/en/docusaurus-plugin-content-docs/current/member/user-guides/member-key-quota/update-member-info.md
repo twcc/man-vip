@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-update-your-info-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-update-your-info-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 # Update member information
 
-:::warning
+:::caution
 ==Need to update:exclamation:==<br/>
 If your [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) not applicable for the footage or process below, please refer to this <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>link</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-signup-zh) for manual instructions.
 :::
