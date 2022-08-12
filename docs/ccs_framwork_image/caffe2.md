@@ -12,6 +12,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-
 
 TWCC 提供 NGC optimized Caffe2 立即可用的工作環境。NVIDIA 開發的深度學習軟體開發套件，加速了深度學習框架的廣泛應用，如Caffe2™。Caffe2 是個深度學習框架，能透過Python API 輕鬆使用所有模型，例如卷積神經網路 (CNNs)、遞迴神經網路 (RNNs) 等，並使用效率高的 C++ 語言和後端的CUDA® 來執行運算。
 
+<br/>
+
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">映像檔版本資訊</span> 
 
@@ -21,6 +23,8 @@ TWCC 提供 NGC optimized Caffe2 立即可用的工作環境。NVIDIA 開發的�
 :::info
 `py3` 與 `py2` 則為 Python 之版本差異。
 :::
+
+<br/>
 
 
 <details class="docspoiler">

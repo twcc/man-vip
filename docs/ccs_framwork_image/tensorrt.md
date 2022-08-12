@@ -12,6 +12,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-
 
 TWCC 提供 NGC’s TensorRT 立即可用的工作環境。NVIDIA TensorRT 是一個 C++ 函式庫，可以加快在 NVIDIA GPU 上的高效能推理運算，能結合常用於訓練的深度學習框架。TensorRT 致力於在 GPU 上快速有效地運行已訓練過的神經網路，並產生推理的結果。
 
+<br/>
 
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">映像檔版本資訊</span> 
@@ -21,6 +22,8 @@ TWCC 提供 NGC’s TensorRT 立即可用的工作環境。NVIDIA TensorRT 是�
 :::info
 `py3` 與 `py2` 則為 Python 之版本差異。
 :::
+
+<br/>
 
 
 <details class="docspoiler">

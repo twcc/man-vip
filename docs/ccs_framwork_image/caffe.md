@@ -12,6 +12,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-
 
 TWCC 提供 NGC’s NVCaffe 立即可用的工作環境。NVIDIA開發的深度學習軟體開發套件，加速了深度學習框架的廣泛應用，如 NVCaffe™。Caffe™ 最初由柏克萊視覺學習中心 (BVLC) 和其他社群貢獻者共同開發。它是一個深度學習的框架，以運算式、速度和模組化為基礎。
 
+<br/>
+
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">映像檔版本資訊</span> 
 
@@ -23,6 +25,8 @@ TWCC 提供 NGC’s NVCaffe 立即可用的工作環境。NVIDIA開發的深度�
 :::info
 `py3` 與 `py2` 則為 Python 之版本差異。
 :::
+
+<br/>
 
 <details class="docspoiler">
 

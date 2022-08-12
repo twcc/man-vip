@@ -12,6 +12,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-
 
 TWCC 提供 NGC optimized MXNet 立即可用的工作環境。MXNet 是致力於提高效能和靈活度的深度學習框架，能讓使用者混合使用符號程式、指令程式的設計風格，將效能和生產力提升到最大值。核心功能是動態相依的調度程式 (dynamic dependency scheduler)，能自動採用平行化運算。最上層的的圖像最佳化層能快速地執行符號程式，並使記憶體運行效率更高。輕量級的可攜式函式庫，能擴展至多個 GPU 與多台機器上運算。
 
+<br/>
+
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">映像檔版本資訊</span>
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_583d099d5b65e536231dc2e079ed8c95.png)
@@ -19,6 +21,8 @@ TWCC 提供 NGC optimized MXNet 立即可用的工作環境。MXNet 是致力於
 :::info
 `py3` 與 `py2` 為 Python 版本差異。
 :::
+
+<br/>
 
 <details class="docspoiler">
 

@@ -42,7 +42,6 @@ TWCC 提供多種 [NGC](https://www.nvidia.com/zh-tw/gpu-cloud/containers/) AI �
 - 自訂映像檔 (Custom Image) 可自訂識別標籤 (tag)，取代 `latest` 呈現於映像檔名稱。
 :::
 
-<br/>
 
 ## 版本與功能
 
