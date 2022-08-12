@@ -2,6 +2,8 @@
 sidebar_label: '容器映像檔'
 sidebar_position: 1
 title: 映像檔概觀
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-overview-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-overview-zh' 
 ---
 
 

@@ -1,6 +1,9 @@
 ---
 sidebar_label: 'TensorRT'
 sidebar_position: 10
+title: TensorRT
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-tensorrt-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-tensorrt-zh' 
 ---
 
 

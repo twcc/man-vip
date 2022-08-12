@@ -1,6 +1,9 @@
 ---
 sidebar_label: 'CNTK'
 sidebar_position: 7
+title: CNTK
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-cntk-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-cntk-zh' 
 ---
 
 # <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b3382d3255e279896320ff106a1565d.png' /> CNTK

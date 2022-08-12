@@ -1,8 +1,10 @@
 ---
 displayed_sidebar: ccs_framwork_image
 sidebar_label: '容器映像檔'
-title: 映像檔概觀
 sidebar_position: 3
+title: 映像檔概觀
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-overview-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-overview-zh' 
 ---
 
 # TWCC 容器映像檔概觀

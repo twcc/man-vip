@@ -1,6 +1,9 @@
 ---
 sidebar_label: 'Matlab (BYOL)'
 sidebar_position: 5
+title: Matlab (BYOL)
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-matlab-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-matlab-zh' 
 ---
 
 

@@ -1,6 +1,9 @@
 ---
 sidebar_label: 'MXNet'
 sidebar_position: 8
+title: MXNet
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-mxnet-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-mxnet-zh' 
 ---
 
 

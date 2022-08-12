@@ -1,6 +1,9 @@
 ---
 sidebar_label: 'CUDA'
 sidebar_position: 4
+title: CUDA
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-cuda-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-cuda-zh' 
 ---
 
 

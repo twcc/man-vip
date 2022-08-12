@@ -1,6 +1,9 @@
 ---
 sidebar_label: 'PyTorch'
 sidebar_position: 3
+title: PyTorch
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-pytorch-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-pytorch-zh' 
 ---
 
 

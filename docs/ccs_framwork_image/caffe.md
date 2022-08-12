@@ -1,6 +1,9 @@
 ---
 sidebar_label: 'Caffe'
 sidebar_position: 6
+title: Caffe
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-caffe-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-caffe-zh' 
 ---
 
 
