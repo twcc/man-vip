@@ -84,6 +84,7 @@ If you do not input any parameters, the container will be created with the defau
 | Image type, Image | Name of container |Container type|
 | -------- | -------- | -------- |
 | TensorFlow (latest environment)    | twcc-cli     | c.super (1 GPU + 04 cores + 90 GB memory) |
+:::
 
 <br/>
 
@@ -96,12 +97,9 @@ twccli mk ccs -itype "Caffe2" -img "caffe2-18.08-py3-v1:latest" -gpu 2 -n cusccs
 ```
 
 :::caution
-
 - Container name requirements: It must be **6-16 characters in length** and must contains **lowercase letters or numbers**, and **the first character must be a lowercase letter.**.
 -  If the settings do not meet the above requirements, the following error message will appear:
-
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_095834bd7ee5d99d3a70596a7c462629.png)
-
 :::
 
 <!-- :::spoiler 操作範例截圖(點我)

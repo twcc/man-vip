@@ -17,8 +17,7 @@ Besides, the billing started when the container is created. When a container is 
 
 :::caution
 1. The scope of the container duplicate does not include the data in the default directories /home and /work of the container. Please note the package installation location before creating a duplicate. For the notice of installing the Python package, please refer to: [<ins>TWCC Interactive Container - Python package installation guide</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-en).
-2. When you store more than 10 GB of data in the container system directory (not /home or /work directory of [<ins>Hyper File System (HFS)</ins>](https://man.twcc.ai/@twccdocs/doc-hfs-main-en)), the container duplicate might not be created normally.
-
+2. When you store more than 10 GB of data in the container system directory (not /home or /work directory of [<ins>Hyper File System (HFS)</ins>](https://man.twcc.ai/@twccdocs/doc-hfs-main-en)), the container duplicate might not be created normally.<br/>
 If you have any problems, please contact our Technical Support or Customer Service, thank you!
 :::
 

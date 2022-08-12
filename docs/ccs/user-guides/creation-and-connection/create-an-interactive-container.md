@@ -126,8 +126,6 @@ twccli mk ccs -itype "Caffe2" -img "caffe2-18.08-py3-v1:latest" -gpu 2 -n cusccs
 2. **容器建立後，在您刪除之前將會持續計費**。
 :::
 
-:::info
-**相關文件：**
-- <a href="TBD">雲端物件儲存服務</a>
-- <a href="TBD">高速檔案系統</a>
+:::info **相關文件：**
+- <a href="TBD">雲端物件儲存服務</a>、<a href="TBD">高速檔案系統</a>
 :::
