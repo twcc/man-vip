@@ -1,7 +1,7 @@
 ---
 sidebar_position: 8
-sync_original_production: 'https://man.twcc.ai/@twccdocs/BJ-sMMc2r' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/BJ-sMMc2r' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-activate-tensorflow-amp-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-activate-tensorflow-amp-en' 
 ---
 
 import TOCInline from '@theme/TOCInline';

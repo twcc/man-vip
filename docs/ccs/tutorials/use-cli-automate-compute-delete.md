@@ -1,7 +1,7 @@
 ---
 sidebar_position: 11
-sync_original_production: 'https://man.twcc.ai/@twccdocs/ByXcZRspE' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ByXcZRspE' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-gpu-burn-testing-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-gpu-burn-testing-zh' 
 ---
 
 # 檢視運算資源概況－GPU Burn Testing

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 9
-sync_original_production: 'https://man.twcc.ai/@twccdocs/rJXNbRoaV' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/rJXNbRoaV' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-tensorflow-visualize-data-distribution-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorflow-visualize-data-distribution-en' 
 ---
 
 # Visualize data distribution-implement Linear-Regression with TensorFlow

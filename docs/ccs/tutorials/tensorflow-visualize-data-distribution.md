@@ -1,7 +1,7 @@
 ---
 sidebar_position: 8
-sync_original_production: 'https://man.twcc.ai/@twccdocs/BJ-sMMc2r' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/BJ-sMMc2r' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-activate-tensorflow-amp-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-activate-tensorflow-amp-zh' 
 ---
 
 # 開啟 TensorFlow 自動混合精度運算與執行效能分析

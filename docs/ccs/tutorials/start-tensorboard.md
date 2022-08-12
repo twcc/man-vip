@@ -1,7 +1,7 @@
 ---
 sidebar_position: 9
-sync_original_production: 'https://man.twcc.ai/@twccdocs/rJXNbRoaV' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/rJXNbRoaV' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-tensorflow-visualize-data-distribution-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorflow-visualize-data-distribution-zh' 
 ---
 
 # 視覺化呈現資料分佈－用 TensorFlow 實作 Linear-Regression
