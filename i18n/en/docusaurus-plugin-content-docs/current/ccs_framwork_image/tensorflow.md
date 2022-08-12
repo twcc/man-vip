@@ -1,6 +1,9 @@
 ---
 sidebar_label: 'TensorFlow'
 sidebar_position: 2
+title: TensorFlow
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-overview-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-overview-en' 
 ---
 
 
@@ -9,6 +12,7 @@ sidebar_position: 2
 
 TWCC provides a total of 20 ready-to-use working environments of NGC optimized TensorFlow. TensorFlow is an open source software library for numerical computation using data flow graphs. Nodes in the graph represent mathematical operations, while the graph edges represent the multidimensional data arrays (tensors) that flow between them. This flexible architecture lets you deploy computation to one or more CPUs or GPUs in a desktop, server, or mobile device without rewriting code.
 
+<br/>
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">Image version information</span> 
 
@@ -17,6 +21,8 @@ TWCC provides a total of 20 ready-to-use working environments of NGC optimized T
 :::info
 Those with the same version number but distinguishing `tf2` and `tf1` are different in the TensorFlow versions.; distinguishing `py3` and `py2` are different in the PyTorch versions.
 :::
+
+<br/>
 
 <details class="docspoiler">
 
