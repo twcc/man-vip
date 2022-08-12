@@ -1,13 +1,10 @@
 ---
 sidebar_position: 12
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-cli-ccs-automate-compute-delete-with-twccli-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-cli-ccs-automate-compute-delete-with-twccli-zh' 
 ---
 
 # 使用 TWCC CLI 自動完成運算及刪除容器
-
-
-:::tip **案例情境：容器運算完是否可以自動刪除，節省持續開啟的成本？**
-*您是否也有相同的困擾？讓我們手把手帶您組合 TWCC 雲端服務架構，輕鬆解決您的問題！*
-:::
 
 這篇文章將幫助使用者了解如何運用 [TWCC CLI](https://man.twcc.ai/@twccdocs/doc-cli-main-zh) **自動化執行以下工作**：
 
@@ -18,10 +15,14 @@ sidebar_position: 12
 
 在入口網站或使用 TWCC CLI 建立[開發型容器](https://www.twcc.ai/doc?page=container)後，您可將手動執行的工作交由 script 自動化完成、刪除容器，降低容器持續開啟所需的成本。而運算程式與資料皆會保留在容器預設儲存空間 - [高速檔案系統 (HFS)](https://www.twcc.ai/doc?page=hfs)，無須擔心資料將隨容器刪除而消失。
 
+<br/>
+
 
 ### Step 1. 將運算程式上傳至容器
 
 參考[<ins>使用 SFTP + Filezilla 傳輸檔案</ins>](https://man.twcc.ai/@twccdocs/rypYCr_TN?type=view#%E4%BD%BF%E7%94%A8-SFTP--Filezilla-%E5%82%B3%E8%BC%B8%E6%AA%94%E6%A1%88)，將訓練程式上傳到容器預設儲存空間 - 高速檔案系統 (HFS) 空間。
+
+<br/>
 
 
 ### Step 2. 安裝並登入 TWCC CLI
@@ -35,6 +36,8 @@ sidebar_position: 12
 
 - 安裝完成後請[登入](https://man.twcc.ai/@twccdocs/guide-cli-signin-zh)。
 
+<br/>
+
 
 ### Step 3. 檢視開發型容器 ID
 - 輸入以下指令，檢視現在使用的容器 ID：
@@ -42,6 +45,8 @@ sidebar_position: 12
 twccli ls ccs
 ```
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9dbab117e8ee86d346497b2296382ed2.png)
+
+<br/>
 
 
 ### Step 4. 撰寫自動化 Script
@@ -66,6 +71,8 @@ TWCC_CLI_CMD rm ccs -f -s <CCS_ID>
 
 - 按 <kbd>Esc</kbd> 鍵並輸入 `:wq!` 存檔。
 
+<br/>
+
 
 ### Step 5. 執行自動化 Script
 
@@ -74,6 +81,8 @@ TWCC_CLI_CMD rm ccs -f -s <CCS_ID>
 ```
 bash auto.sh
 ```
+
+<br/>
 
 ### Step 6. 確認容器已自動刪除
 

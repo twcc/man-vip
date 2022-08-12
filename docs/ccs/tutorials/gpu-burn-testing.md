@@ -1,12 +1,10 @@
 ---
 sidebar_position: 10
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-launch-tensorboard-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-launch-tensorboard-zh' 
 ---
 
 # 在容器中啟動 TensorBoard - ML 實驗視覺化工具
-
-:::tip **案例情境**：**容器有機器學習的視覺化工具可以使用嗎？**<div></div>
-*您是否也有相同的困擾？讓我們手把手帶您組合 TWCC 雲端服務架構，輕鬆解決您的問題！*
-:::
 
 為了增加機器學習模型辨識的準確度，觀察模型訓練變化、除去錯誤，都是必要但複雜的工作。而 TensorBoard 以網頁形式視覺化呈現 TensorFlow 模型資料的變化，可繪製多種圖形，讓資料科學家可輕鬆檢視並理解神經網路的結構與實驗結果，快速找到優化模型的解決方案。
 
@@ -16,9 +14,13 @@ TWCC 的容器環境中已為用戶安裝 TensorBoard，本篇文章將教學如
 建議在 TensorFlow 容器中啟動，較能發揮 TensorBoard 的功能，用於其他容器功能將受限。
 :::
 
+<br/>
+
 ## Step 1. 連線進入開發型容器
 
 請參考[<ins>連線方式</ins>](https://man.twcc.ai/@twccdocs/SJlZnSOaN?type=view#%E4%BD%BF%E7%94%A8-Jupyter-Notebook)連線進入您的開發型容器。
+
+<br/>
 
 
 ## Step 2. 啟動 TensorBoard 服務
@@ -42,6 +44,7 @@ $ wei1803106@cwfs6actr1611034753151-lkffh:~$ tensorboard --logdir=~/logdir --por
 TensorBoard 2.3.0+nv at http://cwfs6actr1611034753151-lkffh:5000/ (Press CTRL+C to quit)
 </div>
 
+<br/>
 
 
 ## Step 3. 關聯容器服務埠
@@ -61,6 +64,8 @@ TensorBoard 2.3.0+nv at http://cwfs6actr1611034753151-lkffh:5000/ (Press CTRL+C 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1be6b67ca36f92a6c0333ab90e8a2995.png)
 
+<br/>
+
 
 ## Step 4. 連線 Tensorboard 服務
 - 在容器資訊頁面取得容器的 **「公用 IP」**。
@@ -71,6 +76,8 @@ TensorBoard 2.3.0+nv at http://cwfs6actr1611034753151-lkffh:5000/ (Press CTRL+C 
 - 打開網頁瀏覽器，在網址列輸入 **`容器 IP : 對外埠`**，依範例為 `203.xxx.xxx.xxx:53081` ，即可連線進入Tensorboard。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_efab9cdf24eb0d8abbc3b75bd60e3eac.png)
+
+<br/>
 
 
 :::info
