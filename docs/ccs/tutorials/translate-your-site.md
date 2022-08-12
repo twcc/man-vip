@@ -188,7 +188,7 @@ vi AI_ML.sh
 TWCC_CLI_CMD=/usr/local/bin/twccli
 
 echo "1. Creating CCS"      # 建立開發型容器
-TWCC_CLI_CMD mk ccs -gpu 1 -wait -json > ccs_res.log
+$TWCC_CLI_CMD mk ccs -gpu 1 -wait -json > ccs_res.log
 
 CCS_ID=$(cat ccs_res.log | jq '.id')
 echo "2. CCS ID:" $CCS_ID   # 開發型容器 ID
@@ -201,10 +201,10 @@ ssh -t -o "StrictHostKeyChecking=no" `$TWCC_CLI_CMD ls ccs -gssh -s $CCS_ID` "cd
 # 可依據您的程式，修改 "cd gpu-burn;/bin/bash --login -c './gpu_burn 150'"
 
 echo "5. GC GPU"            # 刪除開發型容器
-TWCC_CLI_CMD rm ccs -f -s $CCS_ID
+$TWCC_CLI_CMD rm ccs -f -s $CCS_ID
 
 echo "6. Checking CCS"      # 檢視容器狀態
-TWCC_CLI_CMD ls ccs
+$TWCC_CLI_CMD ls ccs
 ```
 - 按 <kbd>Esc</kbd> 鍵並輸入 `:wq!` 存檔。
 

@@ -65,7 +65,7 @@ echo "1. 執行運算"
 # 輸入運算程式的執行檔
 
 echo "2. 刪除開發型容器"
-TWCC_CLI_CMD rm ccs -f -s <CCS_ID>
+$TWCC_CLI_CMD rm ccs -f -s <CCS_ID>
 # <CCS_ID>：Step 3 的容器 ID
 ```
 

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 9
+sync_original_production: 'https://man.twcc.ai/@twccdocs/rJXNbRoaV' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/rJXNbRoaV' 
 ---
 
 # Visualize data distribution-implement Linear-Regression with TensorFlow
@@ -11,10 +13,14 @@ sidebar_position: 9
 
 - If you don’t have an account yet, please refer to [Sign up for a TWCC account](https://www.twcc.ai/doc?page=register_account).
 
+<br/>
+
 ### Step 2.  Create an Interactive Container
 
 - Please refer to [Interactive Container](https://www.twcc.ai/doc?page=container#建立開發型容器) to create a Interactive Container.
 - Please select TensorFlow for the image type (For image, please select a version with Python 2 before 19.08 (`not including 19.08`)).
+
+<br/>
 
 
 ### Step 3. Connect to the Container
@@ -24,6 +30,8 @@ sidebar_position: 9
 :::info
 :book: See [Connection method](https://www.twcc.ai/doc?page=container#連線使用方式)
 :::
+
+<br/>
 
 
 ### Step 4. Execute Linear-Regression program
@@ -69,7 +77,7 @@ for step in range(201):
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d7aa8421020677a326adb22f508f0ef4.png)
 
-
+<br/>
 
 ### Step 5. Visualize data distribution
 
@@ -85,17 +93,23 @@ for step in range(201):
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0d2ff561591c061432b01fc7728eca4c.png)
 :::
 
+<br/>
+
 ## 2. Using SSH or Jupyter Notebook (Terminal) for connection
 
 :::info
 :bulb: The following example is from [TensorFlow Official Tutorial](https://www.tensorflow.org/api_guides/python/regression_examples)
 :::
 
+<br/>
+
 ### Step 1. Using SSH to log in or open Jupyter Notebook (Terminal)
 
 :::info
 :book: See [Using Jupyter Notebook](https://www.twcc.ai/doc?page=container#使用-Jupyter-Notebook)
 :::
+
+<br/>
 
 ### Step 2. Download the TensorFlow program from GitHub
 
@@ -105,6 +119,8 @@ git clone https://github.com/tensorflow/tensorflow.git
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_94baa375f655c1c8a10cecd3ca0c0d4b.png)
 
+<br/>
+
 
 ### Step 3. Switch to branch Tensorflow 1.10
 
@@ -113,6 +129,7 @@ cd tensorflow && git checkout r1.10
 ```
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b54848bfd66229b4d336c2a804a4584.png)
 
+<br/>
 
 
 ### Step 4. Switch to the example/regression directory
@@ -122,6 +139,8 @@ cd tensorflow/examples/get_started/regression
 ```
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5a7ccd02f252fa2873aa6b5ad6c7f3f3.png)
+
+<br/>
 
 
 ### Step 5. Run the sample program using Python commands
