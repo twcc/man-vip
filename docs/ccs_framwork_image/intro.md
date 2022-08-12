@@ -12,6 +12,8 @@ TWCC 提供多種 [NGC](https://www.nvidia.com/zh-tw/gpu-cloud/containers/) AI �
 
 容器映像檔類型、映像檔名稱說明如下，您可選擇左側映像檔類型，了解各項 TWCC 映像檔之 AI 訓練框架與套件版本資訊。
 
+<br/>
+
 ## 映像檔類型
 
 - **TWCC 映像檔**
@@ -24,6 +26,7 @@ TWCC 提供多種 [NGC](https://www.nvidia.com/zh-tw/gpu-cloud/containers/) AI �
 
     使用上述 TWCC 映像檔建立容器後，您可以部署所需套件，並建立[容器複本](https://www.twcc.ai/doc?page=container)將環境打包成自訂映像檔 (Custom Image)，即可重複建立相同環境。
 
+<br/>
 
 
 ## 映像檔名稱說明
@@ -37,6 +40,7 @@ TWCC 提供多種 [NGC](https://www.nvidia.com/zh-tw/gpu-cloud/containers/) AI �
 - 自訂映像檔 (Custom Image) 可自訂識別標籤 (tag)，取代 `latest` 呈現於映像檔名稱。
 :::
 
+<br/>
 
 ## 版本與功能
 
