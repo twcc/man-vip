@@ -78,8 +78,8 @@ b. 容器 Jupyter Notebook 之 Terminal 內：執行以下程式，可監控 GPU
 nvidia-smi
 ```
 
-`GPU數量` 以編號0遞增顯示，下圖範例為1顆GPU
-`GPU溫度` 以攝氏溫度呈現，下圖範例為31度C
-`GPU電量` 以瓦數方式程式，下圖範例為43W
+`GPU數量` 以編號0遞增顯示，下圖範例為1顆GPU<br/>
+`GPU溫度` 以攝氏溫度呈現，下圖範例為31度C<br/>
+`GPU電量` 以瓦數方式程式，下圖範例為43W<br/>
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_412e74892656a239328ed35fea78c191.png)

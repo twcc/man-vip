@@ -108,6 +108,8 @@ for step in range(201):
 :bulb: 以下範例參考自 TensorFlow 官方教學
 :::
 
+<br/>
+
 ### Step 1. 利用 SSH 登入方式或開啟 Jupyter Notebook (Terminal)
 
 :::info

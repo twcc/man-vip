@@ -82,9 +82,9 @@ b. In the Terminal of Jupyter Notebook in the container, you can run the followi
 ```bash
 nvidia-smi
 ```
-`GPU quantity` Displayed in increments of number 0, the example in the figure below is 1 GPU
-`GPU temperature` Displayed in Celsius, the example in the figure below is 31 degrees C
-`GPU power usage` Displayed in wattage, the example in the figure below is 43W
+`GPU quantity` Displayed in increments of number 0, the example in the figure below is 1 GPU<br/>
+`GPU temperature` Displayed in Celsius, the example in the figure below is 31 degrees C<br/>
+`GPU power usage` Displayed in wattage, the example in the figure below is 43W<br/>
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_412e74892656a239328ed35fea78c191.png)
