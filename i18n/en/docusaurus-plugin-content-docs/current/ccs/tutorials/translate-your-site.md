@@ -94,6 +94,7 @@ twccli mk ccs -gpu 1
 
 ```bash
 ssh-copy-id <USERNAME>@<CCS_IP> -p <PORT>
+
 # <USERNAME>    supercomputer account
 # <CCS_IP>      container public IP
 # <PORT>        container SSH port 
@@ -117,6 +118,7 @@ In this article, we use GPU burn testing as an example. You can refer to the fol
 - Enter the following command to enter the container environment
 ```bash
 ssh <USERNAME>@<CCS_IP> -p <PORT>
+
 # <USERNAME>    supercomputer account
 # <CCS_IP>      container public IP
 # <PORT>        container SSH port 
@@ -153,6 +155,7 @@ twccli ls ccs
 - Delete the container for deploying the environment
 ```bash
 twccli rm ccs -f -s <SITE_ID>
+
 # <SITE_ID>     Container ID
 ```
 
