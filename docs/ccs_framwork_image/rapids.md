@@ -1,6 +1,7 @@
 ---
 sidebar_label: 'RAPIDS'
 sidebar_position: 16
+title: 'RAPIDS'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-rapids-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-rapids-zh'
 ---

@@ -1,6 +1,7 @@
 ---
 sidebar_label: 'DIGITS'
 sidebar_position: 14
+title: 'DIGITS'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-digits-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-digits-zh'
 ---
