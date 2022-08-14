@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-1-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-1-zh'
 ---
 import TOCInline from '@theme/TOCInline';
 
@@ -57,7 +59,7 @@ TWCC 提供三種負載平衡器平衡方法：
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d4f2f49e5f6d8dca5b95e7211d24e557.png)
 
-:::caution
+:::tip
 您也可以在*lbssl01* 個體將網頁架設完成後，再使用[<ins>映像檔</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-vds-instance-image-zh)快速建立 *lbssl02* 網頁伺服器，節省應用程式重複安裝的成本。
 :::
 
