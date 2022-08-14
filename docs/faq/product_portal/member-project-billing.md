@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: '會員、計畫與帳務'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-membership-project-billing-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-membership-project-billing-zh'
 ---
 
 # TWCC FAQs | 會員、計畫與帳務
@@ -40,7 +42,7 @@ title: '會員、計畫與帳務'
 請至服務網站上點選登入完後點選忘記密碼即可，詳細步驟請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-reset-portal-pwd-zh)。
 
 </details>
-
+<div style={{height:10+'px'}}></div>
 
 ## 計畫相關
 
@@ -52,7 +54,7 @@ title: '會員、計畫與帳務'
 - 儲存於雲端物件儲存服務 (COS) 、虛擬磁碟服務 (VDS) 及各計算資源中的資料，**在計畫到期後，請盡快聯絡客服人員詢問相關事宜。**
 
 </details>
-
+<div style={{height:10+'px'}}></div>
 
 ## 帳務相關
 
