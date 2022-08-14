@@ -1,6 +1,8 @@
 ---
 sidebar_position: 8
 title: 空間管理政策
+sync_original_production: 'https://man.twcc.ai/@twccdocs/terms-hfs-storage-mngmt-policies-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/terms-hfs-storage-mngmt-policies-en'
 ---
 
 # Hyper File System (HFS) storage management policies

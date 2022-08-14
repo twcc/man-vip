@@ -1,6 +1,8 @@
 ---
 sidebar_label: '從零開始'
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/getstarted-hfs-adjust-connec-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/getstarted-hfs-adjust-connec-zh'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -65,7 +67,7 @@ import TabItem from '@theme/TabItem';
 
 <!-- Space -->
 
-<div style={{height:8+'px'}}></div>
+<div style={{height:15+'px'}}></div>
 
 <!-- 2. start -->
 
@@ -94,7 +96,7 @@ import TabItem from '@theme/TabItem';
 
 
 </details>
-
+<div style={{height:15+'px'}}></div>
 
 ### Step 2. 調整 HFS 容量
 
@@ -133,7 +135,7 @@ TWCC 提供您至少 /home、/work 各 100 GB 的免費容量空間，若需調�
 
 <!-- Space -->
 
-<div style={{height:8+'px'}}></div>
+<div style={{height:15+'px'}}></div>
 
 <!-- 2. start -->
 
@@ -165,7 +167,7 @@ TWCC 提供您至少 /home、/work 各 100 GB 的免費容量空間，若需調�
 
 
 </details>
-
+<div style={{height:15+'px'}}></div>
 
 :::info
 - 費率資訊請參考價目表：<a href="https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS">
@@ -174,7 +176,7 @@ TWCC 提供您至少 /home、/work 各 100 GB 的免費容量空間，若需調�
 <b>&nbsp;Academic&nbsp;</b></font></font></a> <a href="https://man.twcc.ai/@twsdocs/pricing-zh#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS">
 <font style={{backgroundColor:'#008ad8', borderRadius:30+'px', padding:0.3+'em', fontZize:16+'px'}}>
 <font style={{color:'white'}}> 
-<b>&nbsp;Enterprise&nbsp;</b></font></font></a>
+<b>&nbsp;Enterprise&nbsp;</b></font></font></a><div style={{height:15+'px'}}></div>
 - 您可於會員中心檢視額度與資源用量 <a href="https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-view-billing-resource-usage-zh"><font style={{backgroundColor:'#FF0000', borderRadius:30+'px', padding:0.3+'em', fontZize:16+'px'}}>
 <font style={{color:'white'}}>  <b>&nbsp;Academic&nbsp;</b></font></font></a>
 :::

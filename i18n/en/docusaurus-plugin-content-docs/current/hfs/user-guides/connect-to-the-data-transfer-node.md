@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-hfs-connect-to-data-transfer-node-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-hfs-connect-to-data-transfer-node-en'
 ---
 
 # Connect to the data transfer node

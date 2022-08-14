@@ -1,5 +1,7 @@
 ---
 sidebar_position: 7
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-hfs-share-files-between-user-accounts-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-hfs-share-files-between-user-accounts-zh'
 ---
 
 # 跨帳號分享 HFS 檔案
