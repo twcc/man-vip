@@ -45,12 +45,16 @@ import TabItem from '@theme/TabItem';
 
 </details>
 
+<br/>
+
 
 ## 開始之前
 
 - 若尚未註冊使用帳號，請先[註冊 TWCC](https://www.twcc.ai/)。
 - 若選擇使用 TWCC 入口網站操作，請先登入 [TWCC 入口網站](https://www.twcc.ai/)。
 - 若選擇使用 TWCC CLI 操作，請先[安裝 TWCC CLI](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-install-linux-zh)、並[登入](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-signin-zh)。
+
+<br/>
 
 
 ### 建立 <i class="fa fa-linux" aria-hidden="true"></i> Linux 個體
@@ -161,7 +165,7 @@ TWCC 不負責紀錄及管理您的鑰匙對，請務必下載並妥善保存此
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### 指令
+**指令**
 
 **Step 1.** 請先[<ins>建立鑰匙對</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-keypair-zh)
 **Step 2.** 建立虛擬運算個體個體
@@ -181,7 +185,9 @@ twccli mk vcs -key   #鑰匙對名稱
 | Ubuntu 16.04    | v.2xsuper  | default_network  | 0 GPU + 8 CPU + 064GB memory |
 :::
 
-### 範例
+<br/>
+
+**範例**
 
 - 使用鑰匙對 **`key1`** 建立名稱為 **`vcscli`** 的虛擬運算個體。
 

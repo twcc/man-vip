@@ -22,23 +22,25 @@ import TabItem from '@theme/TabItem';
 
 <summary><b>1. 內建命令提示字元</b></summary>
 
-<br/>
-
-### Step 1. 確認 SSH 程式已安裝
+**Step 1. 確認 SSH 程式已安裝**
 
 開啟您本機的命令提示字元，輸入`ssh -V` 檢查本機端是否已具備 SSH 用戶端程式。若有，將會顯示程式的版本，若無請[<ins>參考 Microsoft 官方文件</ins>](https://docs.microsoft.com/zh-tw/windows-server/administration/openssh/openssh_install_firstuse#installing-openssh-from-the-settings-ui-on-windows-server-2019-or-windows-10-1809)，快速安裝 OpenSSH Client，或參考其他連線方式。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1452929755721f4bf64645dbf93c5389.png)
 
+<br/>
 
-### Step 2. 變更鑰匙對存取權限
+
+**Step 2. 變更鑰匙對存取權限**
     
 依照[<ins>準備工作</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-zh)取得的連線資訊，依序輸入指令，變更鑰匙對權限。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a8c1e0e1469023aa30e6b049b00b251c.png)
 
+<br/>
 
-### Step 3. 連線虛擬運算個體
+
+**Step 3. 連線虛擬運算個體**
 
 同樣依照[<ins>準備工作</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-zh)取得的連線資訊，使用 SSH 指令連線。
 
@@ -81,21 +83,24 @@ Last login: Tue May 14 14:14:37 2019 from 220-141-25-168.dynamic-ip.hinet.net
 
 <summary><b>2. 第三方軟體：MobaXterm</b></summary>
 
-<br/>
-
 MobaXterm 圖形化的使用者介面，直覺好用，鑰匙對不需經轉檔即可直接使用。
 
-### Step 1. 下載 MobaXterm
+<br/>
+
+**Step 1. 下載 MobaXterm**
 
 請由 [<ins>MobaXterm Home Edition (Portable edition)</ins>](https://mobaxterm.mobatek.net/download-home-edition.html)下載軟體，解壓縮之後，執行**MobaXterm_Personal_[版本]**
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1a1e876714cd048e9886c992af469497.png)
 
-### Step 2. 建立連線
+<br/>
+
+**Step 2. 建立連線**
 
 點擊左上角的 「**Session**」
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_14193d66d4e18c0a81402307bd08b841.png)
+
 <br/>
 
 並依照下圖與步驟，完成設定，建立連線：
@@ -113,6 +118,7 @@ MobaXterm 圖形化的使用者介面，直覺好用，鑰匙對不需經轉檔�
 連線完成！
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6eb2f5ac0a37b94f360b5cc7e72b955d.png)
+
 </details>
 
 <!-- Space -->
@@ -125,15 +131,17 @@ MobaXterm 圖形化的使用者介面，直覺好用，鑰匙對不需經轉檔�
 
 <summary><b>3. 第三方軟體：PuTTY</b></summary>
 
-<br/>
-
 PuTTY 使用的鑰匙對格式為`.ppk`，需先將鑰匙對 `.pem` 檔經由 PuTTYgen 轉檔至 `.ppk`。
 
-### Step 1. 下載安裝 PuTTY
+<br/>
+
+**Step 1. 下載安裝 PuTTY**
 
 請由 [<ins>PuTTY</ins>](https://www.putty.org/) 下載軟體並完成安裝。
 
-### Step 2. 將鑰匙對轉檔 (`.pem` > `.ppk`)
+<br/>
+
+**Step 2. 將鑰匙對轉檔 (`.pem` > `.ppk`)**
 
 - 開啟 「**PuTTYgen**」
 
@@ -154,14 +162,14 @@ PuTTY 使用的鑰匙對格式為`.ppk`，需先將鑰匙對 `.pem` 檔經由 Pu
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_11268348b7997861d1288a4d1cd7a5ba.png)
 
+<br/>
 
-### Step 3. **使用 PuTTY 連線至個體**
+
+**Step 3. **使用 PuTTY 連線至個體****
 
 - 開啟 「**PuTTY**」
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5a0782c28ef264664f3e37c4dcc7f3fa.png)
-
-
 
 - 左側點選「**Session**」、輸入 Host Name (可於配置頁點選「連線」查看) 與 Port (22) 
     
@@ -194,23 +202,27 @@ PuTTY 使用的鑰匙對格式為`.ppk`，需先將鑰匙對 `.pem` 檔經由 Pu
 
 <summary><b>4. 第三方軟體：VScode</b></summary>
 
-<br/>
-
 若已有在使用 VScode 開發您的程式，也可以直接使用此軟體連線您的虛擬運算個體。VScode 支援多種平台，並有許多外掛軟體套件可使用，安裝方便，也相當適合新手。完整操作說明請參考[<ins>官方說明文件</ins>](https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks)。
 
-### Step 1. 下載安裝 VScode
+<br/>
+
+**Step 1. 下載安裝 VScode**
 
 請至 [<ins>VScode</ins>](https://code.visualstudio.com/Download) 下載，完成後開啟程式。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_010a76dabe0d66c94562e776fe3b3a6a.png)
 
-### Step 2. 安裝 SSH 套件
+<br/>
+
+**Step 2. 安裝 SSH 套件**
 
 點選 「**Extensions**」 > 搜尋 *remote ssh* > 選擇 「**Remote- SSH**」 並點選 「**Install**」
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_38c0c0011b900d9a5547a5f4487f4fce.png)
 
-### Step 3. 建立 Config 檔
+<br/>
+
+**Step 3. 建立 Config 檔**
 
 - 安裝完成後，點選視窗左下角圖示，開啟遠端連線指令列表
 
@@ -240,8 +252,10 @@ Host <INSTANCE_NAME>            # 輸入虛擬運算個體的名稱
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_871749523146661c11306b59bea27ce0.png)
 
+<br/>
 
-### Step 4. 連線虛擬運算個體
+
+**Step 4. 連線虛擬運算個體**
 
 - 再次開啟 VScode 左下角圖示 > 選擇 「**Remote-SSH: Connect to Host...**」
 

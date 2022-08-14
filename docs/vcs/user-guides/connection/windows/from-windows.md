@@ -21,6 +21,8 @@ import TabItem from '@theme/TabItem';
 2. 若您修改網路卡設定，將會導致無法連線進入虛擬運算個體，因此我們強烈不建議您更動網卡設定，請您操作與部署時特別留意。
 :::
 
+<br/>
+
 ## 連線方式
 
 
@@ -47,7 +49,6 @@ import TabItem from '@theme/TabItem';
 帳號：administrator<br/>
 密碼：使用者自行定義之個體密碼
 :::
-
 
 :::info
 若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](https://man.twcc.ai/@preview-twccdocs/guide-vcs-debug-tool-console-zh)，可加速工作流程。

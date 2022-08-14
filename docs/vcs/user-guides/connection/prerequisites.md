@@ -49,7 +49,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### 指令
+**指令**
 
 ```bash
 twccli net vcs -s   # 虛擬運算個體 ID
@@ -60,8 +60,10 @@ twccli net vcs -s   # 虛擬運算個體 ID
 **[ ]** 中括號內為選擇性參數，其餘為必要參數。
 :::
 
+<br/>
 
-### 範例
+
+**範例**
 
 為 ID **`937648`** 的虛擬運算個體，建立公用 IP，並檢視是否建立成功
 
@@ -75,6 +77,8 @@ twccli ls vcs
 </TabItem>
 
 </Tabs>
+
+<br/>
 
 
 ## Step 2. 取得連線資訊
@@ -103,7 +107,9 @@ twccli ls vcs
 此範例以 Ubuntu 為例，不同作業系統的虛擬運算個體，系統提示資訊將有所不同。
 :::
 
-#### Windows 個體
+<br/>
+
+**Windows 個體**
 
 * 進入欲連線的虛擬運算個體詳細資料頁面，點擊「**連線**」按鈕後，系統將提供連線提示 
 
