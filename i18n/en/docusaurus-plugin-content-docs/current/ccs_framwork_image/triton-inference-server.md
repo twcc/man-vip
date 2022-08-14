@@ -1,6 +1,7 @@
 ---
 sidebar_label: 'Triton Inference Server'
 sidebar_position: 11
+title: 'Triton '
 sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-tensorrtserver-en'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-tensorrtserver-en'
 ---

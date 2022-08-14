@@ -1,6 +1,7 @@
 ---
 sidebar_label: 'Theano'
 sidebar_position: 12
+title: 'Theano'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-theano-en'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-theano-en'
 ---
