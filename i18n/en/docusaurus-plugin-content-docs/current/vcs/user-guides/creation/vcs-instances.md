@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
-title: '虛擬運算個體'
+title: 'VCS instances'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-create-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-create-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -18,12 +20,16 @@ TWCC provides the following image:
 - **Windows**：Windows 10 Pro、Windows 10 Enterprise LTSC; Windows Server 2016
 :::
 
+<br/>
+
 ## Before we get started
 
 - If you haven't sign up for a user account, please [sign up for TWCC](https://www.twcc.ai/) first.
 - If you would like to operate with TWCC portal, please sign in to [TWCC portal ](https://www.twcc.ai/)first.
 ==**Need to update:exclamation:**==
 - If you would like to operate with TWCC CLI, please [install TWCC CLI](https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-2-%E5%AE%89%E8%A3%9DTWCC-CLI) first, and then [sign in](https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-3-%E9%80%B2%E5%85%A5-TWCC_CLI-%E7%92%B0%E5%A2%83%E4%B8%A6%E9%96%8B%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8B%99).
+
+<br/>
 
 
 ### Create <i class="fa fa-linux" aria-hidden="true"></i> Linux instances
@@ -43,8 +49,6 @@ TWCC provides the following image:
 * Select an image type. TWCC provides commonly used OS images of Linux and Windows that you can create instances and use instantly. You may browse and select, or directly search for the name of the OS at the top left (e.g., Ubuntu, Windows 10, etc.).
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c1b597e6700c8ee4f0c615025fd9ee50.png)
-
-
 
 
 :::tip
@@ -121,7 +125,7 @@ TWCC is not responsible for recording and managing your key pair. Please downloa
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
 
-### Command
+**Command**
 
 **Step 1.** Please [<ins>create a key pair</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-keypair-en) first.
 **Step 2.** Then, create a VCS instance
@@ -140,7 +144,9 @@ twccli mk vcs -key  # Key pair name
 | Ubuntu 16.04    | v.2xsuper  | default_network  | 0 GPU + 8 CPU + 064GB memory |
 :::
 
-### Example
+<br/>
+
+**Example**
 
 - Use the key pair **`key1`** to create a VCS instance named **`vcscli`**.
 
@@ -170,6 +176,8 @@ twccli ls vcs -ptype    # View all instance types and specifications
 </TabItem>
 
 </Tabs>
+
+<br/>
 
 
 ### Create <i class="fa fa-windows" aria-hidden="true"></i>  Windows instances

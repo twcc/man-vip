@@ -89,7 +89,7 @@ twccli ls vcs
 
 <TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-#### Linux 個體
+**Linux 個體**
 
 * 進入欲連線的虛擬運算個體詳細資料頁面
 

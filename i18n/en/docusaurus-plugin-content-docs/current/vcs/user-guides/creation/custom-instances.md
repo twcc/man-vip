@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
-title: '客製化個體'
+title: 'Custom instances'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-create-custom-instance-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-create-custom-instance-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -14,6 +16,8 @@ import TabItem from '@theme/TabItem';
 For the permission differences in VCS instance between Tenant Admins and Tenant Users, see [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務) for more information.
 :::
 
+<br/>
+
 
 ## Before we get started
 
@@ -24,6 +28,8 @@ For the permission differences in VCS instance between Tenant Admins and Tenant 
 
 
 - [Create a VCS instance](https://man.twcc.ai/@twccdocs/guide-vcs-create-en), deploy working environment and create a instance [image file](https://man.twcc.ai/@twccdocs/vcs-vds-instance-image-en).
+
+<br/>
 
 ## Create a custom instance
 

@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
-title: '準備工作'
+title: 'Prerequisites'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-prerequisite-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,8 +10,8 @@ import TabItem from '@theme/TabItem';
 
 # Connect to VCS instances: Prerequisites
 
-## Step 1. Create a public IP address
 
+## Step 1. Create a public IP address
 
 Please create a public IP to your VCS instance before you connect to it from the Internet. Once a public IP is assigned to the instance, it is recommended to configure the [Security Group](https://man.twcc.ai/@twccdocs/guide-vcs-sg-en) to protect your instance and reduce the information security risk.
 
@@ -33,13 +35,11 @@ Please create a public IP to your VCS instance before you connect to it from the
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_332db3cd75fba44465151638e9bfcbf6.png)
 
 
-
-
 </TabItem>
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### Commands
+**Commands**
 
 ```bash
 twccli net vcs -s   # VCS instance ID
@@ -50,8 +50,9 @@ twccli net vcs -s   # VCS instance ID
 1. The square brackets **[ ]** indicate optional parameters, and the rest are required parameters.
 :::
 
+<br/>
 
-### Examples
+**Examples**
 
 Create a public IP address for a VCS instance with ID **`937648`**, and check if the creation is successful.
 
@@ -65,6 +66,8 @@ twccli ls vcs
 
 </Tabs>
 
+<br/>
+
 ## Step 2. Obtain connection information
 
 <!-- Portal start -->
@@ -73,7 +76,7 @@ twccli ls vcs
 
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-#### Linux instances
+**Linux instances**
 
 * Go to the detailed information page of the VCS instance to be connected.
 
@@ -92,7 +95,9 @@ twccli ls vcs
 In this instruction, we use Ubuntu as an example. The system prompts will be different for VCS instances of different operating systems.
 :::
 
-#### Windows instances
+<br/>
+
+**Windows instances**
 
 * Go to the detailed information page of the VCS instance to be connected, and click the **Connect** button to check the connection steps.
 
