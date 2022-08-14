@@ -40,6 +40,9 @@ import TabItem from '@theme/TabItem';
 
 ## 操作步驟教學
 
+### Step 1. 準備工作：帳號、計畫(專案)、額度
+
+<!-- 1 start -->
 <details class="docspoiler">
 
 <summary>
