@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: '準備工作'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-prerequisite-zh' 
 ---
 
 import Tabs from '@theme/Tabs';

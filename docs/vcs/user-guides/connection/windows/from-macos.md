@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: '本機為 macOS'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-macos-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-to-windows-from-macos-zh' 
 ---
 
 import Tabs from '@theme/Tabs';

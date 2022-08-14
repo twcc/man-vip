@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: '本機為 Linux / macOS'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-linux-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-to-linux-from-linux-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
