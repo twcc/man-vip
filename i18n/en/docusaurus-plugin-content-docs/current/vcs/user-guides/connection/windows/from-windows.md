@@ -21,6 +21,8 @@ The created instance will enter the **`Ready`** state, and it will take some tim
 2. You cannot connect to VCS instance once the settings of the network interface card are modified. Therefore, we strongly recommend that you do not change the network interface card settings. Please beware when operating and deploying.
 :::
 
+<br/>
+
 ## Connection method
 
 
@@ -39,6 +41,8 @@ Remember to add the port number `9833` after the public IP. E.g., 203.145.222.23
 - **Step 3.** Enter the password, and your connection is successful!
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_85a08f020c91828bcd92f5d2800af23a.png)
+
+<br/>
 
 :::info
 Account: administrator<br/>
