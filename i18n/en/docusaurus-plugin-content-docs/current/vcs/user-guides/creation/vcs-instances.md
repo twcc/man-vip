@@ -131,9 +131,8 @@ TWCC is not responsible for recording and managing your key pair. Please downloa
 **Step 2.** Then, create a VCS instance
 
 ```bash
-twccli mk vcs -key  # Key pair name
-              [-n]  # VCS instance name
-                
+twccli mk vcs -key      # Key pair name
+              [-n]      # VCS instance name
 ```
 :::info
 1. The square brackets **[ ]** indicate optional parameters, and the rest are required parameters.

@@ -40,6 +40,11 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
+建立步驟同 [<ins>建立虛擬運算個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh)，僅「**映像檔**」改選擇所要回復的映像檔版本 `(private)xxx您自訂的映像檔名稱xxx`，即可完成建立。
+    
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_020639a28b42ede29aa4ca4ceb1612a5.png)
+
+
 :::tip
 <details>
 
@@ -49,11 +54,6 @@ import TabItem from '@theme/TabItem';
 
 </details>
 :::
-
-建立步驟同 [<ins>建立虛擬運算個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh)，僅「**映像檔**」改選擇所要回復的映像檔版本 `(private)xxx您自訂的映像檔名稱xxx`，即可完成建立。
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_020639a28b42ede29aa4ca4ceb1612a5.png)
-
 
 </TabItem>
 

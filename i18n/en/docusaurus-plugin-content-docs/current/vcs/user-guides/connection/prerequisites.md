@@ -106,7 +106,7 @@ In this instruction, we use Ubuntu as an example. The system prompts will be dif
 
 - Login account and password：
 
-    **Account: administrator**
+    **Account: administrator**<br/>
     **Password: User-defined VCS instance password**
 
 </TabItem>

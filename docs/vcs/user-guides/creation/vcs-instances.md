@@ -168,12 +168,12 @@ TWCC 不負責紀錄及管理您的鑰匙對，請務必下載並妥善保存此
 **指令**
 
 **Step 1.** 請先[<ins>建立鑰匙對</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-keypair-zh)
+
 **Step 2.** 建立虛擬運算個體個體
 
 ```bash
-twccli mk vcs -key   #鑰匙對名稱
-              [-n]   #虛擬運算個體名稱
-                
+twccli mk vcs -key      # 鑰匙對名稱
+              [-n]      # 虛擬運算個體名稱
 ```
 
 :::info
@@ -205,8 +205,8 @@ twccli mk vcs -key key1 -n vcscli
 其他相關 TWCC CLI 指令：
 
 ```bash
-twccli ls vcs -img   # 檢視所有映像檔規格
-twccli ls vcs -ptype # 檢視所有產品型號與規格
+twccli ls vcs -img      # 檢視所有映像檔規格
+twccli ls vcs -ptype    # 檢視所有產品型號與規格
 ```
 :::
 
