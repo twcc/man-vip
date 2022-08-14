@@ -92,13 +92,13 @@ for step in range(201):
 - TensorFlow will slowly find the weight value of fitting and draw a linear regression line
 
 :::info 0 [-0.7029411] [0.33094117]
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fb0b79090def125ce1173c78dad6362a.png)
+<img style={{'background-color':'white'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fb0b79090def125ce1173c78dad6362a.png"/>
 :::
 :::info 100 [0.03479815] [0.33622062]
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_257640a2d6ddf46bc0c7eea9ea26efc8.png)
+<img style={{'background-color':'white'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_257640a2d6ddf46bc0c7eea9ea26efc8.png"/>
 :::
 :::info 200 [0.09321669] [0.30376825]
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0d2ff561591c061432b01fc7728eca4c.png)
+<img style={{'background-color':'white'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0d2ff561591c061432b01fc7728eca4c.png"/>
 :::
 
 <br/>
