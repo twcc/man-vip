@@ -1,8 +1,8 @@
 ---
 title: HPC 高速運算任務
 GA: UA-155999456-1
-sync_original_production: 'url'
-sync_original_preview: 'url'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/doc-hpc-job-main-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-hpc-job-main-zh'
 ---
 
 # HPC 高速運算任務
@@ -180,7 +180,7 @@ slurm 18.08.8 <br/>
 
 
 ```
-$ sinfo
+sinfo
 ```
 
     PARTITION       AVAIL TIMELIMIT    NODES     STATE     NODELIST
@@ -196,7 +196,7 @@ $ sinfo
 * 使用 `srun` 指令派送一個名為 demo 的任務，任務內容為 sleep 100。
 
 ```
-$ srun -J demo sleep 100 &
+srun -J demo sleep 100 &
 ```
 ![image](https://user-images.githubusercontent.com/109254397/184206098-e43782b4-cadc-480c-b959-23e71c886e09.png)
 
@@ -204,14 +204,14 @@ $ srun -J demo sleep 100 &
 * 使用 sacct 指令查看最近的任務狀況，由最下方確認有一個名為 demo 的任務正在執行中，Job ID 為 1962。
 
 ```
-$ sacct
+sacct
 ```
 ![image](https://user-images.githubusercontent.com/109254397/184206909-440fdbbd-6d84-4b01-8612-81c8a8ae6696.png)
 
 * 使用 scancel 指令刪除 ID 為 1962 的任務，再下一次 Enter 確認終止後，即可終止該任務。　
 
 ```
-$ scancel 1962
+scancel 1962
 ```
 ![image](https://user-images.githubusercontent.com/109254397/184207594-2e409d2f-2dfb-4dc4-a5ad-28c01e095654.png)
 
@@ -219,7 +219,7 @@ $ scancel 1962
 * 再使用 sacct 查看，即可發現 ID 1962 的任務已被終止（粗體字部分）。
 
 ```
-$ sacct
+sacct
 ```
 ![image](https://user-images.githubusercontent.com/109254397/184207841-fb9b8111-f814-48ca-8222-baee3da121ea.png)
 
@@ -229,13 +229,13 @@ $ sacct
 使用 sbatch 指令提交一個任務，並使用 wrap 選項將要執行的內容包起來。內容為執行一段 singulatiry 的指令，該指令為使用「```docker://registry.twcc.ai/ngc/nvidia/ubuntu-v1:latest```」的鏡像檔來啟用容器，並在容器內執行「date」指令。任務提交後，系統回傳 Job ID 為 1963。
 
 ```
-$ sbatch --wrap='singularity exec docker://registry.twcc.ai/ngc/nvidia/ubuntu-v1:latest date'
+sbatch --wrap='singularity exec docker://registry.twcc.ai/ngc/nvidia/ubuntu-v1:latest date'
 ```
 ![image](https://user-images.githubusercontent.com/109254397/184208055-6f66fc16-83a7-43bf-b9f1-446cee618d80.png)
 
 * 直接透過 tail 指令，瀏覽該目錄下的 Log 資訊。Log 格式為 slurm-Job_ID.out，如上範例為「slurm-1963.out」。可看到 Image 被解開啟用，隨後執行 date 指令顯示時間。
 
 ```
-$ tail -f slurm-1963.out 
+tail -f slurm-1963.out 
 ```
 ![image](https://user-images.githubusercontent.com/109254397/184208732-9fbc9c5c-6a22-4606-91e4-ec57f861dbd4.png)

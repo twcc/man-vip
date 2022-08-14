@@ -1,8 +1,8 @@
 ---
 title: 任務型容器
 GA: UA-155999456-1
-sync_original_production: 'url'
-sync_original_preview: 'url'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/doc-ccs-scheduled-main-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-ccs-scheduled-main-zh'
 ---
 
 # 任務型容器
