@@ -69,30 +69,7 @@ import TabItem from '@theme/TabItem';
 
 - **Step 2.** 在本地端電腦中，開啟 Terminal 並且填入 SSH 登入之相關資訊即可完成，登入的帳號及密碼為 iService 中所設定之主機帳號與密碼，另可使用其他第三方軟體如 Putty 等工具進行連線。
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
-
-C:\Users\Janice_Chiang><span style={{'background-color':'#fcf8e3', 'color': '#000', 'padding':'3.2px'}}>ssh twcctest1234@203.145.219.134 -p 58794</span><br/>
-The authenticity of host '[203.145.219.134]:58794 ([203.145.219.134]:58794)' can't be established.<br/>
-ECDSA key fingerprint is SHA256:ynH3b3yiP74bI6OD54FyA34OfiPT/7bAS07V/9gsceY.<br/>
-Are you sure you want to continue connecting (yes/no)? <span style={{'background-color':'#fcf8e3', 'color': '#000', 'padding':'3.2px'}}>yes</span><br/>
-Warning: Permanently added ‘[203.145.219.129]:51606’ (ED25519) to the list of known hosts.<br/>
-janice2019@203.145.219.129’s password:<br/>
-Welcome to Ubuntu 16.04.5 LTS (GNU/Linux 3.10.0-862.el7.x86_64 x86_64)<br/>
-
-Documentation: https://help.ubuntu.com
-
-Management: https://landscape.canonical.com
-
-Support: https://ubuntu.com/advantage
-
-Note: Read and write permission with superuser access in '/home/'<br/>
-and ‘/work’ directories has been disabled in this environment.<br/>
-Please avoid running such commands using ‘sudo’ under those directories directly.<br/>
-If possible, use ‘sudo -s -H [command]’ instead of ‘sudo’ to avoid them.<br/>
-init: Setting environment variables<br/>
-twcctest1234@t36g6ptest03-ndg8f:~$
-
-</div>
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_178bd3a081c3e9af4de944d2130d1b7f.png)
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
