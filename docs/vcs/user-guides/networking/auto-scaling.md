@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 title: 'Auto Scaling'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-auto-sacling-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-auto-sacling-zh'
 ---
 
 import Tabs from '@theme/Tabs';

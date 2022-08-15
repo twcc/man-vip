@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: '資訊安全服務概觀'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/security-overview-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/security-overview-zh'
 ---
 
 import Tabs from '@theme/Tabs';

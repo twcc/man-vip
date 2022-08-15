@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: '基礎虛擬防火牆'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vnf-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vnf-zh'
 ---
 
 import Tabs from '@theme/Tabs';

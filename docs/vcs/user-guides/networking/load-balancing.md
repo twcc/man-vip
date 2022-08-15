@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: '負載平衡'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-lbs-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-lbs-zh'
 ---
 
 import Tabs from '@theme/Tabs';

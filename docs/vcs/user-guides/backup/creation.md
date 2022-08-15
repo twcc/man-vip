@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: '建立映像檔'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-vds-instance-image-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-vds-instance-image-zh'
 ---
 
 import Tabs from '@theme/Tabs';

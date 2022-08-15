@@ -1,5 +1,7 @@
 ---
 sidebar_position: 6
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-keypair-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-keypair-zh'
 ---
 
 import Tabs from '@theme/Tabs';
