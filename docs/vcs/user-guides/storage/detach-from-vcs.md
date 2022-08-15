@@ -23,9 +23,9 @@ import TabItem from '@theme/TabItem';
 Linux、Windows 卸載磁碟方式不同，請依據 OS 選擇操作步驟。
 
 
-<Tabs>
+<details>
 
-<TabItem value="Linux 個體" label="Linux 個體">
+<summary><b>Linux 個體</b></summary>
 
 - [連結進入 Linux 虛擬運算個體](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh)，並使用以下指令來卸載 `/dev/vdb` 磁碟裝置。
 
@@ -33,9 +33,13 @@ Linux、Windows 卸載磁碟方式不同，請依據 OS 選擇操作步驟。
 sudo umount -d /dev/vdb
 ```
 
-</TabItem>
+</details>
 
-<TabItem value="Windows 個體" label="Windows 個體">
+<div style={{'height':'8px'}}></div>
+
+<details>
+
+<summary><b>Windows 個體</b></summary>
 
 - [連線進入 Windows 虛擬運算個體](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-windows-zh)，並在 <i class="fa fa-search" aria-hidden="true"></i> 搜尋「**電腦管理**」，開啟應用程式。
 
@@ -45,9 +49,7 @@ sudo umount -d /dev/vdb
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_663e1d9437c5e7622d644b46a4824761.png)
 
-</TabItem>
-
-</Tabs>
+</details>
 
 <br/>
 
