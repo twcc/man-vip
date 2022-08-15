@@ -16,16 +16,10 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-node-
 
 可直接使用「sinfo」指令，查看以分區(partition)為主的瀏覽方式，查看每個分區的節點狀況，如下：
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
-
-[yiching709@un-ln01 ~]$ sinfo <br/>
-PARTITION     AVAIL TIMELIMIT  NODES  STATE NODELIST <br/>
-SlurmDefault*    up  1-00:00:00      2  drain* gn0109.twcc.ai,gn1101.twcc.ai <br/>
-SlurmDefault*    up  1-00:00:00    240  drain gn0101.twcc.ai,gn0102.twcc.ai,gn0103.twcc.ai,gn0104.twcc.ai,gn0105.twcc.ai,……,gn1221.twcc.ai,gn1222.twcc.ai,gn1223.twcc.ai,gn1224.twcc.ai,gn1225.twcc.ai,gn1226.twcc.ai,gn1227.twcc.ai,gn1228.twcc.ai <br/>
-SlurmDefault*    up  1-00:00:00      7  idle gn0312.twcc.ai,gn0512.twcc.ai,gn0712.twcc.ai,gn1004.twcc.ai,gn1017.twcc.ai,gn1229.twcc.ai,gn1230.twcc.ai <br/>
-SlurmDefault*    up  1-00:00:00      3  down gn0705.twcc.ai,gn1012.twcc.ai,gn1111.twcc.ai
-
-</div>
+```
+sinfo
+```
+![image](https://user-images.githubusercontent.com/109254397/184672688-46759299-563d-4a28-aceb-badd3689d5b0.png)
 
 
 
