@@ -16,9 +16,13 @@ Virtual Network service is primarily to provide custom virtual network function 
 For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, see [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務) for more information.
 :::
 
+<br/>
+
 ## Create a default virtual network
 
 If you are first-time user of TWCC VCS, you must create a a **default network** in the Virtual Network service before you can get started. Refer to [<ins>HowTo: Create a default virtual network</ins>](https://man.twcc.ai/@twccdocs/howto-vnw-create-default-network-en) for the creation steps. If you need other VNW segments, refer to [<ins>Create custom VNWs</ins>](#建立自訂虛擬網路) in this user guide.
+
+<br/>
 
 ## Create custom VNWs
 
@@ -69,11 +73,12 @@ twccli mk vnet -cidr 172.16.0.0/24 -gw 172.16.0.254
 
 </Tabs>
 
+<br/>
 
 
 ## Manage VNWs
 
-- ### View VNW
+### View VNW
 
 :::caution
 1. In order to fully protect the security of VCS instances, the Virtual Network is limited to the following three default domain name servers (DNS). If you need to use other DNS servers, please contact Technical Support(isupport@twcc.ai):
@@ -116,9 +121,10 @@ twccli ls vnet -id 261894
 
 </Tabs>
 
+<br/>
 
 
-- ### Delete VNWs
+### Delete VNWs
 
 <Tabs>
 

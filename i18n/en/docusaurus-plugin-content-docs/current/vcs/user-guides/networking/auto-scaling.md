@@ -24,6 +24,8 @@ When the workload reaches the demand value, increase the number of instances; Wh
 
 :::
 
+<br/>
+
 ## Create Auto Scaling templates
 
 You can create an Auto Scaling template and connect it to multiple VCS instances.
@@ -58,6 +60,9 @@ You can create an Auto Scaling template and connect it to multiple VCS instances
 
 </Tabs>
 
+<br/>
+
+
 ## Manage Auto Scaling
 
 View Auto Scaling information and delete the Auto Scaling.
@@ -84,6 +89,7 @@ View Auto Scaling information and delete the Auto Scaling.
 
 </Tabs>
 
+<br/>
 
 
 ## Connect/mount Auto Scaling to VCS VCS instances

@@ -20,6 +20,8 @@ VCS instance images can preserve the state of an instance and the system disk wi
 
 :::
 
+<br/>
+
 ## Create an image
 
 :::caution
@@ -27,7 +29,9 @@ VCS instance images can preserve the state of an instance and the system disk wi
 2. If the image state stucks in **`QUEUED`** and has not changed to **`ACTIVE`** for a long time, please contact the Technical Support: <a href="mailto:isupport@twcc.ai">isupport@twcc. ai</a> for help.
 :::
 
-- ### Create an image manually
+<br/>
+
+### Create an image manually
 
 You can manually create an image for a VCS instance using TWCC portal or TWCC CLI.
 
@@ -54,7 +58,7 @@ You can manually create an image for a VCS instance using TWCC portal or TWCC CL
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### Commands
+**Commands**
 
 ```bash
 twccli mk vcs -s        # Instance ID  
@@ -65,7 +69,9 @@ twccli mk vcs -s        # Instance ID
 1. The square brackets **[ ]** indicate optional parameters, and the rest are required parameters.
 :::
 
-### Examples
+<br/>
+
+**Examples**
 
 - Create an image for the VCS instance with ID **`918628`** 
 ```bash
@@ -78,7 +84,7 @@ twccli mk vcs -s 918628 -snap
 
 <br/>
 
-- ### Create scheduled images
+### Create scheduled images
 
 Use `crontab` to create an scheduled image automatically and regularly.
 
