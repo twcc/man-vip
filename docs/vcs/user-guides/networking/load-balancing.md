@@ -18,6 +18,8 @@ TWCC 所提供的負載平衡服務支援**應用程式負載平衡器 (HTTP 與
 - TWCC CLI 目前不支援此服務。
 :::
 
+<br/>
+
 
 ## 建立負載平衡器
 
@@ -71,6 +73,8 @@ TWCC 所提供的負載平衡服務支援**應用程式負載平衡器 (HTTP 與
 負載平衡器建立好後，需將[<ins>虛擬運算個體連結至負載平衡器</ins>](#連結虛擬運算個體)，才能為您的服務發揮平衡流量的作用。
 :::
 
+<br/>
+
 
 ## 負載平衡器管理
 * 在負載平衡器管理頁面，點選負載平衡器列表，進入負載平衡器詳細資料頁面。
@@ -82,8 +86,7 @@ TWCC 所提供的負載平衡服務支援**應用程式負載平衡器 (HTTP 與
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d503587a25478670a711187aac6734fb.png)
 
-
-
+<br/>
 
 
 ### 更新負載平衡器憑證
@@ -105,6 +108,7 @@ SSL 憑證有固定效期，您可以在憑證到期時，建立新憑證以更�
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fbf16e97e47eacd0436f3b61977efc74.png)
 
+<br/>
 
 
 ## 連結虛擬運算個體
@@ -150,6 +154,8 @@ SSL 憑證有固定效期，您可以在憑證到期時，建立新憑證以更�
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bda331274fdaf5296290f21f2ac5cf0b.png)
 
+<br/>
+
 
 ## SSL 憑證
 
@@ -158,6 +164,8 @@ SSL 憑證有固定效期，您可以在憑證到期時，建立新憑證以更�
 :::info
 為符合資安要求，僅提供 TLS 1.2 傳輸層安全性協定。
 :::
+
+<br/>
 
 ### 建立 SSL 憑證
 
@@ -184,6 +192,8 @@ SSL 憑證有固定效期，您可以在憑證到期時，建立新憑證以更�
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3f77e7e47a585410d2df100933954846.png)
 
+<br/>
+
 
 ### 管理 SSL 憑證
 
@@ -193,6 +203,8 @@ SSL 憑證有固定效期，您可以在憑證到期時，建立新憑證以更�
 目前 TWCC 僅支援建立 PKCS#12 格式的 SSL 憑證，請參考[<ins>HowTo：轉換 SSL 憑證格式</ins>](https://man.twcc.ai/@twccdocs/howo-lb-convert-cert-zh)。
 :::
 
+<br/>
+
 
 ### 删除 SSL 憑證
 
@@ -200,7 +212,7 @@ SSL 憑證有固定效期，您可以在憑證到期時，建立新憑證以更�
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2fbf0b28ee7acdc4ac63c10fffe58438.png)
 
-
+<br/>
 
 :::info
 為確保 SSL 憑證的安全性，僅建立者本人可以檢視與使用自己建立的 SSL 憑證。

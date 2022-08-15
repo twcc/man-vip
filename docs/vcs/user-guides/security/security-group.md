@@ -17,6 +17,8 @@ TWCC 提供安全性群組功能，使用者可透過設定安全規則進行虛
 - 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh#%E5%AE%89%E5%85%A8%E6%80%A7%E7%BE%A4%E7%B5%84)。
 :::
 
+<br/>
+
 ## 檢視虛擬運算個體安全性群組規則
 
 <Tabs>
@@ -78,6 +80,8 @@ twccli ls vcs -secg -s 937648   # 列出 ID 為 937648 個體的安全性群組
 
 若需連線 TWCC Windows 個體，請您與客服聯絡。
 :::
+
+<br/>
 
 ## 建立安全性群組規則
 
@@ -148,6 +152,7 @@ twccli ls vcs -secg -s 892486
 - 連接埠範圍請審慎設定，並請小心衡量開放範圍。為避免入侵風險，不建議您設定 ingress 連接埠範圍為 0 ~ 65535。
 :::
 
+<br/>
 
 
 ## 删除安全性群組規則

@@ -17,6 +17,8 @@ import TabItem from '@theme/TabItem';
 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh#%E5%9F%BA%E7%A4%8E%E8%99%9B%E6%93%AC%E9%98%B2%E7%81%AB%E7%89%86)。
 :::
 
+<br/>
+
 ## 建立基礎虛擬防火牆
 
  * 進入「**基礎虛擬防火牆**」服務，在「**基礎虛擬防火牆管理**」頁面，點擊「**＋建立**」。
@@ -126,22 +128,18 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f1da708e1126b12047b400b659bf733e.png)
 
+<br/>
 
 
-    
-## 編輯防火牆規則       
+## 編輯防火牆規則
 
 * 在「**基礎虛擬防火牆詳細資料**」頁面，點擊「**編輯規則**」，可改變規則的優先順序或是删除規則。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1b2352610c7c8c90a5201169da971d29.png)
 
-
-
-   
 * 即可在「**編輯規則**」視窗中調整規則的順序或是新增、删除規則，編輯好後點擊「**確認**」。  
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0a32c8b3217f41650022c5092fb565c8.png)
-
 
 * 完成編輯後，防火牆的狀態會變成 **`PENDING_UPDATE`**。數分鐘後等狀態變成 **`ACITVE`**，即代表此防火牆設定已生效。
 
