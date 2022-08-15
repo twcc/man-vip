@@ -51,7 +51,6 @@ twccli ls vcs -secg -s 937648   # List the security group of the instance with I
 
 <summary>Default Security Group rules of VCS instances</summary>
 
-:::info
 - The default ingress/egress rules of TWCC Linux instances:
 
 | Direction | Internet protocol | Port (minimum) | Port (maximum)| Protocol|CIDR |
@@ -72,7 +71,6 @@ twccli ls vcs -secg -s 937648   # List the security group of the instance with I
 | egress     | IPv4     |      | |ANY |0.0.0.0/0 |
 | ingress     | IPv4     |      | |icmp | 0.0.0.0/0|
 | egress     | IPv6     |      | |ANY |::/0 |
-:::
 
 </details>
 

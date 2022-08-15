@@ -48,7 +48,6 @@ twccli ls vcs -secg -s 937648   # 列出 ID 為 937648 個體的安全性群組
 
 <summary>虛擬運算個體預設之安全性群組規則</summary>
 
-:::info
 - TWCC Linux 個體預設開放的輸入/輸出規則：
 
 | 方向 | 網路類型 | 連接埠 (最小) | 連接埠 (最大)| 協定|CIDR |
@@ -69,7 +68,6 @@ twccli ls vcs -secg -s 937648   # 列出 ID 為 937648 個體的安全性群組
 | egress     | IPv4     |      | |ANY |0.0.0.0/0 |
 | ingress     | IPv4     |      | |icmp | 0.0.0.0/0|
 | egress     | IPv6     |      | |ANY |::/0 |
-:::
 
 </details>
 
