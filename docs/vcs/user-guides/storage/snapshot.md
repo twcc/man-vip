@@ -17,6 +17,8 @@ import TabItem from '@theme/TabItem';
 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-zh#%E8%99%9B%E6%93%AC%E7%A3%81%E7%A2%9F%E6%9C%8D%E5%8B%99)。
 :::
 
+<br/>
+
 ## 建立磁碟快照
 
 為您的資料磁碟建立快照，備份資料。
@@ -39,6 +41,7 @@ import TabItem from '@theme/TabItem';
 
 </Tabs>
 
+<br/>
 
 
 ## 檢視磁碟快照
@@ -65,6 +68,9 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 
 </Tabs>
+
+<br/>
+
 
 ## 刪除磁碟快照
 

@@ -18,6 +18,8 @@ TWCC 虛擬磁碟加密可保護用戶資料安全，以符合組織所需的安
 3. 以磁碟建立的備份快照
 4. 以該快照建立的磁碟
 
+<br/>
+
 ## 如何使用？
 
 ### 建立加密磁碟
@@ -37,13 +39,19 @@ TWCC 虛擬磁碟加密可保護用戶資料安全，以符合組織所需的安
 - [<ins>HowTo：初始化磁碟- Windows</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-zh)
 :::
 
+<br/>
+
 ### 將舊磁碟資料搬移至加密磁碟
 
 若您想將無加密磁碟升級為安全性較高的加密磁碟，請參考 [變更資料磁碟](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-bss-replace-data-vol-zh) ，在建立並連結加密磁碟後，將您的資料搬移至新磁碟，再刪除舊磁碟即可完成更換。
 
+<br/>
+
 ### 磁碟快照
 
 很抱歉，加密磁碟[快照](https://man.twcc.ai/@twccdocs/guide-vcs-vds-disk-snapshot-zh)功能目前不開放使用，待用戶體驗完整優化後將再行開放。
+
+<br/>
 
 
 :::info

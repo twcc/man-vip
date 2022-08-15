@@ -21,6 +21,8 @@ import TabItem from '@theme/TabItem';
 更多虛擬運算個體狀態轉換、**計費與否**、服務操作影響之資訊，請參考[<ins>虛擬運算個體生命週期</ins>](https://man.twcc.ai/@twccdocs/concept-vcs-lifecycle-zh)。
 :::
 
+<br/>
+
 
 ## 停止個體
 
@@ -66,6 +68,8 @@ import TabItem from '@theme/TabItem';
 虛擬運算個體停止中 (**`Stopping`**)，請勿刪除個體，否則將影響系統處理工作，導致個體錯誤 (**`Error`**)。
 :::
 
+<br/>
+
 
 ## 啟動個體 (與個體開機)
 
@@ -98,6 +102,9 @@ import TabItem from '@theme/TabItem';
 :::info
 停止再啟動之個體，多數將建立於新的實體主機上。
 :::
+
+<br/>
+
 
 ## 個體重開機
 
@@ -132,6 +139,8 @@ import TabItem from '@theme/TabItem';
 與[<ins>停止個體</ins>](#停止個體)不同，重開機後除了會清除記憶體資料，**資源皆不釋放回資源池 (含浮動 IP)**，且儲存資料皆保留，重新開機後仍可使用。
 :::
 
+<br/>
+
 
 ## 個體關機
 
@@ -153,6 +162,8 @@ import TabItem from '@theme/TabItem';
 :::info
 與[<ins>停止個體</ins>](#停止個體)不同，關機後除了會清除記憶體資料，**資源皆不釋放回資源池**，且儲存資料皆保留，開機後仍可使用。
 :::
+
+<br/>
 
 
 ## 刪除個體
@@ -177,14 +188,16 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### 指令
+**指令**
 
 ```bash
 twccli rm vcs -s   # 個體 ID
 twccli ls vcs      # 檢視結果
 ```
 
-### 範例
+<br/>
+
+**範例**
 
 - 刪除 ID 為 **`937651`** 的虛擬運算個體，確認已刪除。
 

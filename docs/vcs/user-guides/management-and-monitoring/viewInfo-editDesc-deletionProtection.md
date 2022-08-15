@@ -16,6 +16,8 @@ import TabItem from '@theme/TabItem';
 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-zh#虛擬運算服務)。
 :::
 
+<br/>
+
 ## 檢視個體資訊
 
 檢視個體 ID、名稱、公用/私有 IP、狀態、建立時間、建立者、映像檔版本、資源比例、鑰匙對、網路連線、儲存、…等資訊。
@@ -59,6 +61,8 @@ twccli ls vcs -all
 
 </Tabs>
 
+<br/>
+
 ## 編輯描述
 
 <Tabs>
@@ -83,6 +87,8 @@ twccli ls vcs -all
 </TabItem>
 
 </Tabs>
+
+<br/>
 
 
 ## 開啟/關閉 刪除保護機制

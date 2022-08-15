@@ -18,6 +18,8 @@ import TabItem from '@theme/TabItem';
 完整型號、規格與價格之比較，請參考[<ins>價目表</ins>](https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#虛擬運算服務-Virtual-Compute-Service-VCS)。
 :::
 
+<br/>
+
 
 ### Step 1. 建立虛擬運算個體映像檔
 
@@ -47,7 +49,7 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e1a78aa185d26f10ab476109712e155a.png)
 
-
+<br/>
 
 
 ### Step 2. 利用映像檔建立新規格的虛擬運算個體
@@ -70,6 +72,8 @@ import TabItem from '@theme/TabItem';
 - 規格調整完成！成功以映像檔建立虛擬運算個體 (型號：**v.super**，規格：`vCPU 02 cores; Memory 16 GB; system disk 100 GB`)，將原個體資料轉移至新規格個體。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_56fef6bb965ea6c5be0a82f4a9f0c3eb.png)
+
+<br/>
 
 
 :::info 

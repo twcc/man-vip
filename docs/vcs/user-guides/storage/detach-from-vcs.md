@@ -15,6 +15,8 @@ import TabItem from '@theme/TabItem';
 分離後，資料磁碟將會持續計費，刪除後才會停止計費。
 :::
 
+<br/>
+
 
 ## Step 1. 卸載磁碟
 
@@ -46,6 +48,8 @@ sudo umount -d /dev/vdb
 </TabItem>
 
 </Tabs>
+
+<br/>
 
 
 ## Step 2. 分離磁碟
