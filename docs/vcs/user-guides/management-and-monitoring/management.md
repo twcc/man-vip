@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: '停止/啟動/重開機/關機/刪除'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-manage-instance-zh' 
 ---
 
 import Tabs from '@theme/Tabs';

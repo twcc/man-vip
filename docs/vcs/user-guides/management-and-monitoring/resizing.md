@@ -1,6 +1,8 @@
 ---
 sidebar_position: 6
 title: '調整規格'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-resize-instance-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-resize-instance-zh' 
 ---
 
 import Tabs from '@theme/Tabs';

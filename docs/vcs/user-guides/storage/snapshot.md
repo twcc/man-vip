@@ -1,6 +1,8 @@
 ---
 sidebar_position: 5
 title: '備份資料磁碟'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-disk-snapshot-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-disk-snapshot-zh' 
 ---
 
 import Tabs from '@theme/Tabs';

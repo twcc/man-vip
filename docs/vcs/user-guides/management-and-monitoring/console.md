@@ -1,6 +1,8 @@
 ---
 sidebar_position: 5
 title: 'Console-除錯與維護工具'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-debug-tool-console-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-debug-tool-console-zh' 
 ---
 
 import Tabs from '@theme/Tabs';

@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 title: '監控'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-monitor-instance-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-monitor-instance-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
