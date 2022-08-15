@@ -140,10 +140,11 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 
 * 登入成功之後，可直接使用 Slurm 的基本指令 `sinfo -V`，應會返回此服務的版本資訊，以確認此帳號可以正常使用 Slurm 的功能。
 
-```
-sinfo -V
-```
-![image](https://user-images.githubusercontent.com/46370453/184616633-9ed85f25-b638-40c4-9102-a16c0c52db8f.png)
+<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
+    
+[janice2019@ln01-twnia2 ~]$ sinfo -V
+slurm 18.08.8
+[janice2019@ln01-twnia2 ~]$
 
 </div>
 
