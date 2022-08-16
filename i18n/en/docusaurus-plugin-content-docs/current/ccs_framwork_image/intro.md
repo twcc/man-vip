@@ -2,6 +2,8 @@
 sidebar_label: '容器映像檔'
 sidebar_position: 1
 title: 映像檔概觀
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-overview-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-overview-en' 
 ---
 
 
@@ -11,6 +13,7 @@ TWCC provides a variety of [NGC](https://www.nvidia.com/zh-tw/gpu-cloud/containe
 
 The description of the container image type and name is as follows. You can choose the image type on the left to learn about the AI training framework and package version information of each TWCC image.
 
+<br/>
 
 ## Image type
 
@@ -24,10 +27,13 @@ The description of the container image type and name is as follows. You can choo
 
     After creating a container with the above TWCC image, you can deploy the required package and create a [duplicate](https://www.twcc.ai/doc?page=container) to package the environment into a Custom Image, then you are able to create the same environment repeatedly.
 
+<br/>
+
 ## Image name description
 
 - Example：`tensorflow-20.11-tf2-py3:latest`
 - Description：**`AI Training framework`**-**`NGC release date (yy.mm)`**-**`Minor version defined by NGC`**-**`Python version`**:**`The latest adapted version of TWCC`**。
+
 
 :::info
 - Most of the images correspond with the above name description, but a few images are additionally marked with the applicable package name, like `digits-19.08-tensorflow:latest`; or use the original version name of the image, like `matlab-r2019b:latest`.

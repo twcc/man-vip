@@ -1,6 +1,9 @@
 ---
 sidebar_label: 'PyTorch'
 sidebar_position: 3
+title: PyTorch
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-pytorch-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-pytorch-en' 
 ---
 
 
@@ -8,6 +11,8 @@ sidebar_position: 3
 
 
 TWCC provides 10 ready-to-use developing environments of NGC optimized PyTorch. PyTorch is a GPU accelerated tensor computational framework with a Python front end. Functionality can be easily extended with common Python libraries such as NumPy, SciPy and Cython. Automatic differentiation is done with a tape-based system at both a functional and neural network layer level. This functionality brings a high level of flexibility and speed as a deep learning framework and provides accelerated NumPy-like functionality. PyTorch also includes standard defined neural network layers, deep learning optimizers, data loading utilities, and multi-gpu and multi-node support. Functions are executed immediately instead of enqueued in a static graph, improving ease of use and a sophisticated debugging experience.
+
+<br/>
 
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">Image version information</span> 
@@ -18,6 +23,8 @@ TWCC provides 10 ready-to-use developing environments of NGC optimized PyTorch. 
 :::info
 `py3` and `py2` are different Python versions.
 :::
+
+<br/>
 
 <details class="docspoiler">
 
