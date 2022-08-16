@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-create-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-create-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -11,12 +13,16 @@ import TabItem from '@theme/TabItem';
 
 完整容器型號 (含 GPU 數量與其他資源大小)，請參考[價目表](TBD)。
 
+<br/>
+
+
 ## 開始之前
 
 - 若尚未註冊使用帳號，請先[註冊 TWCC](https://www.twcc.ai/)。
 - 若選擇使用 TWCC 入口網站操作，請先登入 [TWCC 入口網站](https://www.twcc.ai/)。
 - 若選擇使用 TWCC CLI 操作，請先[安裝 TWCC CLI](TBD) 、並[登入](TBD)。
 
+<br/>
 
 
 ## 建立開發型容器
@@ -39,7 +45,7 @@ import TabItem from '@theme/TabItem';
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a4c9a9e6996f373cc6be68c474257c50.png)
 
 :::tip
-1. TWCC 提供的 NGC 容器映像檔類型、版本、套件，請參考：[<ins>容器映像檔</ins>](TBD)
+1. TWCC 提供的 NGC 容器映像檔類型、版本、套件，請參考：[<ins>容器映像檔</ins>](https://man.twcc.ai/@twccdocs/ccs-concept-image-main-zh)[target=_blank]
 2. 首次選用後，映像檔會記錄儲存於「**最近使用**」區塊，加快您下次選用的速度。(清除瀏覽器歷史紀錄將會重新記錄)
 :::
 
@@ -67,7 +73,7 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### 指令
+**指令**
 
 ```bash
 twccli mk ccs [-n]      #容器名稱
@@ -88,7 +94,9 @@ twccli mk ccs [-n]      #容器名稱
 - 環境變數詳細說明與設定範例請參考 [<ins>HowTo：設定環境變數</ins>](TBD)。
 :::
 
-### 範例
+<br/>
+
+**範例**
 
 - 建立名稱為 **`cusccs`**、映像檔類型 **`Caffe2`**，映像檔規格為 **`caffe2-18.08-py3-v1:latest`**、GPU 數量 **`2`** 的容器。
 
@@ -118,8 +126,6 @@ twccli mk ccs -itype "Caffe2" -img "caffe2-18.08-py3-v1:latest" -gpu 2 -n cusccs
 2. **容器建立後，在您刪除之前將會持續計費**。
 :::
 
-:::info
-**相關文件：**
-- <a href="TBD">雲端物件儲存服務</a>
-- <a href="TBD">高速檔案系統</a>
+:::info **相關文件：**
+- <a href="TBD">雲端物件儲存服務</a>、<a href="TBD">高速檔案系統</a>
 :::
