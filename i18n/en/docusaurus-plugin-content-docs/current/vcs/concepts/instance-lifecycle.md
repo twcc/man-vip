@@ -10,17 +10,12 @@ import TabItem from '@theme/TabItem';
 
 # VCS instance lifecycle
 
+
 Actions performed on the VCS instances via portal or in the instance, such as create, stop, start, shut down, restart and delete, are closly related to instance states, instance resources, data, and billing. Actions also affects connection, image, load balancing, Auto Scaling, disk and other related services. In this document, we will explain the relationship between the instance lifecycle, meaning and billing of a VCS instance from the moment you create it through its deletion.
-
-
 
 - Actions and the transitions between VCS instance states:
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0ddbf0fb265fdc81e6d0ba2e28bb4f75.png)
-
-
-
-
 
 - The relationship between instance state, state description and usage billing is shown in the following table:
 
@@ -33,6 +28,9 @@ Actions performed on the VCS instances via portal or in the instance, such as cr
 | `Shutdown`    |After executing the shutdown command in the instance, the instance enters in the `Shutdown` state, and it can be restarted by selecting START on the portal. | Billed| 
 | `Queueing`     | The system is allocating resources . After obtaining the resources, the instance will enter in`Starting` state.|Not billed    | 
 | `Deleting`     | The instance is in the process of being deleted and will be permanently deleted.|Billed until the instance is successfully deleted     | 
+
+<br/>
+
 
 ## Create VCS instances
 When you create a VCS instance, resources are allocated for the instance initialization.The instance enters in the `Starting` state, which is not ready for use.
@@ -49,6 +47,9 @@ When it enters `Ready` state, you can perform the following actions:
 :::info
 For creation steps, see [<ins> Create VCS instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-en).
 :::
+
+<br/>
+
 
 ## Stop VCS instances
 If you plan to not use the instance for a period of time and want to keep the resources, you can select STOP to shut down the instance and release resources. The instance is in the `Stopping` state and ready to enters in the `Stopped` state which the resources have been released. Under **`Stopped`** state, <ins>**instance will no longer be billed**</ins>. The operating restrictions are as follows:
@@ -67,6 +68,9 @@ If you plan to not use the instance for a period of time and want to keep the re
 4. For stopping the instance, see [<ins>Stop VCS instance</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-en#%E5%81%9C%E6%AD%A2%E5%80%8B%E9%AB%94).
 :::
 
+<br/>
+
+
 ## Restart VCS instances
 
 Click start to restore and use the stopped instance, then the instance will enter in **`Starting`** state. The system is re-allocating the resources, then the instance is ready to enter **`Ready`** state again.
@@ -74,6 +78,8 @@ Click start to restore and use the stopped instance, then the instance will ente
 1. Most of the instances that stop and restart will be created on the new physical host.
 2. For starting the instance, see [<ins>Restart VCS instance</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-en#%E9%87%8D%E5%95%9F%E5%80%8B%E9%AB%94).
 :::
+
+<br/>
 
 
 ## Shut down VCS instances
@@ -93,14 +99,19 @@ The operating restrictions are as follows:
 - For shutdown steps, see [<ins>Shut down VCS instance</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-en#%E5%88%AA%E9%99%A4%E5%80%8B%E9%AB%94).
 :::
 
+<br/>
+
+
 ## Start VCS instances
 
 If you want to start instance that has been shut down, select START then the instance will enter **`Starting`** state, which means that it is booting, and preparing enter **`Ready`** state again.
 
-
 :::info
 For starting the instance, see [<ins>Restart VCS instance</ins>](https://man.twcc.ai/@twccdocs/concept-vcs-lifecycle-en#%E5%80%8B%E9%AB%94%E9%87%8D%E9%96%8B%E6%A9%9F).
 :::
+
+<br/>
+
 
 ## Delete VCS instances
 

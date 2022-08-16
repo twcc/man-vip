@@ -14,8 +14,10 @@ This article will take the conversion of the data disk type (SSD to HDD) as an e
 
 <TOCInline toc={toc} />
 
-## Linux instances
+<br/>
 
+
+## Linux instances
 
 ### Step 1. Confirm the disk type of the instance
 
@@ -27,6 +29,8 @@ This article will take the conversion of the data disk type (SSD to HDD) as an e
 * Enter command `df -h` in the VCS instance to view the information of the data disk (file system (Filesystem), capacity (Size), mount path (Mounted on))
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3d9e1124e63cdcc6c839bdee8fc62b5c.png)
+
+<br/>
 
 
 ### Step 2. Create a new HDD data disk with the same capacity
@@ -44,9 +48,10 @@ This article will take the conversion of the data disk type (SSD to HDD) as an e
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_38d639e2727ad7c85445130035dbd04b.png)
 
-
-
 * Connect to the VCS instance, mount the HDD data disk to the instance, and initialize it. Please refer to the steps in [HowTo: Initialize Data Disk-Linux Instance](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-en).
+
+<br/>
+
 
 ### Step 3. Sync data from SSD data disk to HDD data disk
 
@@ -72,6 +77,9 @@ rsync -avh <Disk_A> <Disk_B>
 - `<Disk_B>` : Enter the mounted path of the HDD data disk.
 :::
 
+<br/>
+
+
 ### Step 4. Detach and delete the SSD data disk
 
 * Detach the SSD data disk from the VCS instance.
@@ -83,14 +91,20 @@ rsync -avh <Disk_A> <Disk_B>
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b66699de0e7f1e26989d01450c2d813b.png)
 
+<br/>
+
 
 ## Windows instances
 
 The disk replacing method of Windows instances is the same as Linux instances in `Step 1.`, but the method of initializing data disk in `Step 2.` and synchronizing data in `Step 3.` are slightly different:
 
+<br/>
+
 ### Step 2. Create a new HDD data disk with the same capacity
 
 After creating a new HDD data disk and attached to the VCS instance, please follow [HowTo: Initialize Data Disk-Windows Instance](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-en) to initialize the disk.
+
+<br/>
 
 ### Step 3. Synchronize SSD data disk data to HDD data disk
 

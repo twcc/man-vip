@@ -10,6 +10,9 @@ To increase the storage space for the existing VCS instances, create and attach 
 
 In the following tutorial we will show you how to initialize your new data disks.
 
+<br/>
+
+
 ### Step 1. Check if the disk is attached to the VCS instance
 
 After [Attaching the data disk to your VCS instance](https://man.twcc.ai/@twccdocs/guide-vcs-vds-manage-disk-en#%E9%80%A3%E7%B5%90%E8%87%B3%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94), make sure that it is correctly attached and assigned a mount path (for example: `/dev/vdb`) on the TWCC Portal.
@@ -24,6 +27,8 @@ sudo fdisk -l
 ```
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b06740e0fcd40ed80dc82fd3fdbdbb71.png)
+
+<br/>
 
 
 ### Step 2. Format the disk
@@ -42,6 +47,9 @@ sudo mkfs -t ext4 <DISK_DEVICE>
 - `<DISK_DEVICE>`: Disk device such as `/dev/vdb`
 :::
 
+<br/>
+
+
 ### Step 3. Mount the disk
 
 Create a directory where you'll mount the disk.
@@ -59,6 +67,9 @@ Mount the disk to the directory.
 ```
 sudo mount <DISK_DEVICE> <DIRECTORY>
 ```
+
+<br/>
+
 
 ### Step 4. Check if the disk is mounted successfully
 

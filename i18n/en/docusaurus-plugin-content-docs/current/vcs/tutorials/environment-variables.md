@@ -30,6 +30,8 @@ The default value for the environmental variable (Key=Value): TF_DISABLE_CUDNN_R
 ```
 If you need to disable this function, you can assign `1` to the variable when creating the container:
 
+<br/>
+
 
 ### Step 1. Create a container/VCS instance and set environment variables
 
@@ -40,9 +42,6 @@ If you need to disable this function, you can assign `1` to the variable when cr
 :::info
 The following example uses a container for instruction. You can also use the same method to set the environmental variables when [<ins>creating a VCS instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-en).
 :::
-
-
-
 
 
 When [<ins>creating a container</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-create-en), set the environment variables in the **ENVIRONMENT VARIABLES** tab and then complete the creation and deployment task..
@@ -76,6 +75,8 @@ twccli mk ccs -envk TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH -envv 1
 
 </Tabs>
 
+<br/>
+
 
 ### Step 2. Confirm the environment variables are set
 
@@ -87,11 +88,8 @@ echo $BUFFER
 
 :::info
 [<ins>Connect to the VCS instance</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-en) and execute the following command to confirm that the environment variables have been set into the instance.
-
-
 ```bash
 echo $Key
 # Enter your key, e.g., $TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH
 ```
-
 :::
