@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vnw-create-default-network-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vnw-create-default-network-zh' 
 ---
 
 # 建立預設虛擬網路

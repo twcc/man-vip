@@ -1,5 +1,7 @@
 ---
 sidebar_position: 13
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-configure-ntp-server-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-configure-ntp-server-zh' 
 ---
 
 # 設定 NTP 自動校時

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 8
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howo-lb-convert-cert-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howo-lb-convert-cert-zh' 
 ---
 
 # 轉換 SSL 憑證格式

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-setup-oepnvpn-client-to-site-vpn-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-setup-oepnvpn-client-to-site-vpn-zh' 
 ---
 
 # 架設 OpenVPN 個體建立 Client-to-Site VPN 連線

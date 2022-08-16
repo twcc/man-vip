@@ -1,5 +1,7 @@
 ---
 sidebar_position: 7
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-bss-replace-data-vol-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-replace-data-vol-zh' 
 ---
 
 # 變更資料磁碟
