@@ -1,5 +1,7 @@
 ---
 sidebar_position: 11
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-gpu-burn-testing-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-gpu-burn-testing-en' 
 ---
 
 # Monitor your resource－GPU Burn Testing
@@ -9,15 +11,21 @@ This tutorial demonstrates how to use GPU stress test tools to check whether the
 
 If the final result is `OK`, it means that the GPU is performing normally; `FAULTY` means that there is a problem with the GPU.
 
+<br/>
+
 ## Step 1. Sign in TWCC
 
 - If you don’t have an account yet, please refer to [Sign up for an TWCC account](https://www.twcc.ai/doc?page=register_account)
+
+<br/>
 
 ## Step 2. Create an Interactive Container
 
 - Please refer to [Interactive Container](https://www.twcc.ai/doc?page=container#建立開發型容器)  to create an Interactive Container.
 
 - Please select TensorFlow for the image type, select the version that supports Python 3 for the image, and select 1 GPU for the hardware.
+
+<br/>
 
 ## Step 3. Connect to the container, download the training program
 
@@ -33,6 +41,8 @@ If the final result is `OK`, it means that the GPU is performing normally; `FAUL
 git clone https://github.com/TW-NCHC/AI-Services.git
 ```
 
+<br/>
+
  
 ## Step 4. Perform GPU Burn Testing
 
@@ -47,6 +57,8 @@ cd AI-Services/Tutorial_Two
 ```bash
 bash gpu_testing.sh
 ```
+
+<br/>
 
 
 ## Step 5. Computing capability
@@ -70,9 +82,9 @@ b. In the Terminal of Jupyter Notebook in the container, you can run the followi
 ```bash
 nvidia-smi
 ```
-`GPU quantity` Displayed in increments of number 0, the example in the figure below is 1 GPU
-`GPU temperature` Displayed in Celsius, the example in the figure below is 31 degrees C
-`GPU power usage` Displayed in wattage, the example in the figure below is 43W
+`GPU quantity` Displayed in increments of number 0, the example in the figure below is 1 GPU<br/>
+`GPU temperature` Displayed in Celsius, the example in the figure below is 31 degrees C<br/>
+`GPU power usage` Displayed in wattage, the example in the figure below is 43W<br/>
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_412e74892656a239328ed35fea78c191.png)

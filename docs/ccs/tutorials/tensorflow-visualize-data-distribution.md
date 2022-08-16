@@ -1,5 +1,7 @@
 ---
 sidebar_position: 8
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-activate-tensorflow-amp-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-activate-tensorflow-amp-zh' 
 ---
 
 # 開啟 TensorFlow 自動混合精度運算與執行效能分析
@@ -15,6 +17,7 @@ sidebar_position: 8
     - MNIST 手寫辨識程式撰寫範例
 - Benchmark 效能分析：ResNet-50 v1.5
 
+<br/>
 
 ## AMP 簡介
 
@@ -39,6 +42,7 @@ sidebar_position: 8
 
 以下教學如何開啟 TWCC 開發型容器的 AMP 功能。
 
+<br/>
 
 ## 建立 TWCC 開發型容器
 登入 TWCC 後，請參考 [建立開發型容器](https://www.twcc.ai/doc?page=container#%E5%BB%BA%E7%AB%8B%E9%96%8B%E7%99%BC%E5%9E%8B%E5%AE%B9%E5%99%A8)，建立一個如以下設定的容器：
@@ -50,6 +54,7 @@ sidebar_position: 8
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2a764baf381ab0a6874bb1901c29826a.png)
 
+<br/>
 
 ## SSH 連線進入容器
 
@@ -57,9 +62,13 @@ sidebar_position: 8
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db7b7a3d38d8f9eb0094674ea225f20b.png)
 
+<br/>
+
 ## 開啟 AMP 功能
 
 開啟 AMP 功能包含兩步驟：設定環境變數與改寫運算程式，示範如下：
+
+<br/>
 
 ### 環境變數設定方式
 
@@ -76,6 +85,7 @@ export TF_ENABLE_AUTO_MIXED_PRECISION_GRAPH_REWRITE=1
 回應 = 0 表示**已停止**自動混合精度運算
 :::
 
+<br/>
 
 ### 程式撰寫範例
 
@@ -95,6 +105,8 @@ opt = tf.train.experimental.enable_mixed_precision_graph_rewrite(opt)
 model.compile(loss=loss, optimizer=opt)
 model.fit(...)
 ```
+
+<br/>
 
 ### MNIST 手寫辨識程式撰寫範例
 
@@ -116,6 +128,7 @@ print('Time for model.compile:', elapsed_time)
 :bulb: `KerasMNIST.py` (未開 AMP) & `kerasMNIST-AMP.py` (開啟AMP) 程式檔案可於[此處](https://github.com/TW-NCHC/AI-Services/tree/master/Tutorial_One)下載參考
 :::
 
+<br/>
 
 ## Benchmark 效能分析：ResNet-50 v1.5
 
@@ -141,6 +154,7 @@ cd /workspace/nvidia-examples/resnet50v1.5
 mkdir results
 ```
 
+<br/>
 
 ###  Group 1. 對照組 Baseline
 
@@ -168,6 +182,7 @@ nvidia-smi --loop=10
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9a1072b7574cc7dc6abcee91ef520147.png)
 
+<br/>
 
 
 ###  Group 2. Batch Size 256
@@ -191,6 +206,7 @@ GPU 記憶體的使用量 31.31 GB：
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2cf72e347cfc8a17634c2ed9c1f4fa0a.png)
 
+<br/>
 
 
 
@@ -219,6 +235,7 @@ GPU 記憶體的使用量大幅降低至 19.28 GB：
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b4251f877ae84fc3c466ac5330d8b041.png)
 
 
+<br/>
 
 
 ###  Group 4. 開啟 XLA
@@ -241,6 +258,7 @@ GPU 記憶體的使用量 19.29 GB：
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_926a8e53f6578ecae4cf7d19fbb6e81f.png)
 
+<br/>
 
 
 
@@ -258,6 +276,8 @@ GPU 記憶體的使用量 19.29 GB：
 </div>
 </details>
 
+<br/>
+
 因為 AMP 大大地降低 GPU 記憶體的使用量，所以我們再加倍 Batch Size 企圖增加執行效能，直接於命令列輸入指令如下：
 
 ```bash
@@ -274,6 +294,7 @@ GPU 記憶體的使用量 31.31 GB：
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7da55c796423eb1359f95ecf7ab4db35.png)
 
+<br/>
 
 
 ### 效能比較
