@@ -1,13 +1,11 @@
 ---
 sidebar_position: 13
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-cli-ccs-deploy-auto-aiml-pipeline-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-cli-ccs-deploy-auto-aiml-pipeline-en' 
 ---
 
 # Deploy automated AI/ML pipeline using TWCC CLI
 
-
-:::tip **Case scenario:Is there a set of workflows that can automatically create containers, perform model training, and delete containers?**
-*Do you have the same problem? Let us take you hand in hand to assemble the TWCC cloud service architecture to easily solve your problems!*
-:::
 
 This article will help users understand how to use the TWCC CLI and a Virtual Compute Service (VCS) to concatenate the following tasks into an automated process (pipeline), improve work efficiency, and save the cost of continuous running containers.
 
@@ -19,6 +17,8 @@ This article will help users understand how to use the TWCC CLI and a Virtual Co
 
 By deploying a pipeline to connect TWCC resources, you can hand over manual tasks to script to automate until completion. The arrangement of time and manpower will be more flexible, **and the resources will be automatically deleted after the computing completes, so the computing cost will be lower.**
 
+<br/>
+
 
 ## Deploy the environmen
 
@@ -28,6 +28,8 @@ The example in this article uses the TWCC Virtual Compute Service as the local w
 For TWCC-CLI installation steps and resource operation instructions, please refer to [<ins>TWCC-CLI α</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05).
 :::
 
+<br/>
+
 ### Step 1. Create a VCS instance
 Following [Create VCS instance](https://www.twcc.ai/doc?page=vm#%E5%BB%BA%E7%AB%8B%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94), create a virtual computing instance on the portal with the following settings:
 
@@ -36,9 +38,13 @@ Image: Ubuntu 20.04
 Basic configuration: v.super
 ```
 
+<br/>
+
 ### Step 2. Enable TWCC CLI
 
 Please refer [1-3. Enter TWCC_CLI environment and start using service](https://man.twcc.ai/@twccdocs/twcc-cli-v05#1-3-%E9%80%B2%E5%85%A5-TWCC_CLI-%E7%92%B0%E5%A2%83%E4%B8%A6%E9%96%8B%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8B%99) to enable TWCC CLI.
+
+<br/>
 
 ### Step 3. Install jq
 jq is a tool for parsing JSON. TWCC CLI data can be converted to JSON, and some data can be intercepted with jq for application. Related documents can be referred to [jq manual](https://stedolan.github.io/jq/manual/).
@@ -48,12 +54,16 @@ jq is a tool for parsing JSON. TWCC CLI data can be converted to JSON, and some 
 sudo apt install jq
 ```
 
+<br/>
+
 
 ## SSH Without Password
 
 Generally, SSH connection needs to insert the key or enter the password to log in, so the automated process will stop and cannot continue.
 
 Use the following method to create a container and send the SSH key of the VCS instance to the container. After that, you can skip the action of inserting the key or entering the password and log in to the container directly.
+
+<br/>
 
 ### Step 1. Create a SSH key
 - Enter the following command to create a SSH key
@@ -77,11 +87,14 @@ Enter same passphrase again:
 twccli mk ccs -gpu 1
 ```
 
+<br/>
+
 ### Step 2. Copy SSH key to the Interactive Container
 - Enter the following command to copy SSH key to the Interactive Container
 
 ```bash
 ssh-copy-id <USERNAME>@<CCS_IP> -p <PORT>
+
 # <USERNAME>    supercomputer account
 # <CCS_IP>      container public IP
 # <PORT>        container SSH port 
@@ -95,6 +108,8 @@ ssh-copy-id <USERNAME>@<CCS_IP> -p <PORT>
 [<ins>Forgot supercomputer password?</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC)
 :::
 
+<br/>
+
 
 ### Step 3. Download the sample program: GPU Burn 
 
@@ -103,6 +118,7 @@ In this article, we use GPU burn testing as an example. You can refer to the fol
 - Enter the following command to enter the container environment
 ```bash
 ssh <USERNAME>@<CCS_IP> -p <PORT>
+
 # <USERNAME>    supercomputer account
 # <CCS_IP>      container public IP
 # <PORT>        container SSH port 
@@ -139,10 +155,13 @@ twccli ls ccs
 - Delete the container for deploying the environment
 ```bash
 twccli rm ccs -f -s <SITE_ID>
+
 # <SITE_ID>     Container ID
 ```
 
 We finish deploying the environment and loading the execution program! Then you can start to make and execute scripts that automatically create containers, perform computing, and delete containers.
+
+<br/>
 
 ## AI/ML pipeline script
 The  automated AI/ML pipeline script can be divided into 5 steps:
@@ -155,6 +174,8 @@ The  automated AI/ML pipeline script can be divided into 5 steps:
 
 Please refer to the steps below to create and execute a pipeline script.
 
+<br/>
+
 ### Step 1. Create pipeline script
 - Enter the following command to edit pipeline script:
 ```bash
@@ -165,17 +186,23 @@ vi AI_ML.sh
 
 ```bash
 TWCC_CLI_CMD=/usr/local/bin/twccli
+
 echo "1. Creating CCS"              # Create Interactive Container
 $TWCC_CLI_CMD mk ccs -gpu 1 -wait -json > ccs_res.log
 CCS_ID=$(cat ccs_res.log | jq '.id')
+
 echo "2. CCS ID:" $CCS_ID           # Interactive Container's ID
+
 echo "3. Checking GPU"              # Viewing GPU status
 ssh -t -o "StrictHostKeyChecking=no" `$TWCC_CLI_CMD ls ccs -gssh -s $CCS_ID` "/bin/bash --login -c nvidia-smi"
+
 echo "4. RUN GPU"                   # Executing computing program
 ssh -t -o "StrictHostKeyChecking=no" `$TWCC_CLI_CMD ls ccs -gssh -s $CCS_ID` "cd gpu-burn;/bin/bash --login -c './gpu_burn 150'"
 # You may modified "cd gpu-burn;/bin/bash --login -c './gpu_burn 150'" according to your program.
+
 echo "5. GC GPU"                    # Delete Interactive Container
 $TWCC_CLI_CMD rm ccs -f -s $CCS_ID
+
 echo "6. Checking CCS"              # View container status
 $TWCC_CLI_CMD ls ccs
 ```
@@ -184,6 +211,8 @@ $TWCC_CLI_CMD ls ccs
 :::info
 * Step **echo "4. RUN GPU"** You may modifired this part of script `"cd gpu-burn;/bin/bash --login -c './gpu_burn 150'"` according to your program.
 :::
+
+<br/>
 
 
 ### Step 2. Execute the pipeline script
