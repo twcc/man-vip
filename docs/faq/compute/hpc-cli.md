@@ -1,8 +1,8 @@
 ---
 sidebar_position: 3
 title: '台灣杉二號 (命令列介面) (TWNIA2)'
-sync_original_production: 'url' 
-sync_original_preview: '@preview-twccdocs'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-twnia2-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-zh'
 ---
 
 # TWCC FAQs | 台灣杉二號 (命令列介面) (TWNIA2)
@@ -34,7 +34,6 @@ sync_original_preview: '@preview-twccdocs'
 <div style={{height:10+'px'}}></div>
 
 ## 資源配置與監控
-
 
 <details>
 
