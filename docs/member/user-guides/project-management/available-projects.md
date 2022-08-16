@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-project-availability-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-project-availability-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -11,12 +13,15 @@ import TabItem from '@theme/TabItem';
 
 - 使用帳號與 TWCC 相同之帳密登入 [TWS 會員中心](https://member.twcc.ai/)，若尚未註冊，請參考 [註冊 TWCC 帳號](https://www.twcc.ai/doc?page=register_account)。
 
+<br/>
+
 ### Step 2. 確認可用計畫
 
 - 點選 <span>&#10102;</span> 會員中心 :arrow_right: <span>&#10103;</span>計畫管理 :arrow_right: <span>&#10104;</span> 我的計畫 :arrow_right: <span>&#10105;</span> 若計畫申請成功或已被加入某計畫成員，下方便會顯示該計畫相關資訊
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4b8e484bd02bfb0b6ef77114ebde14c3.png)
 
+<br/>
 
 
 :::info
