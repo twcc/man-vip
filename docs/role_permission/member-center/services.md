@@ -1,6 +1,8 @@
 ---
 sidebar_label: '各項服務'
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twsdocs/role-tws-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-tws-zh' 
 ---
 
 
