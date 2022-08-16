@@ -9,6 +9,9 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-configur
 
 以下說明如何設定虛擬運算個體的特定時區，讓個體能自動校時：CentOS 的個體以原生命令設定時區； Ubuntu 的個體則以外部校時伺服器設定。
 
+<br/>
+
+
 ### CentOS 虛擬運算個體
 
 - Step 1. 連線進入虛擬運算個體
@@ -24,6 +27,8 @@ sudo timedatectl set-timezone Asia/Taipei
 date
 ``` 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2bf337c33ce4d5cbb947a978ff1c7888.png)
+
+<br/>
 
 
 ### Ubuntu 虛擬運算個體 (18.04 版本)
@@ -60,6 +65,8 @@ sudo vim /etc/ntp.conf
 ```bash
 sudo systemctl restart ntp
 ```
+
+<br/>
 
 
 ### Ubuntu 虛擬運算個體 (16.04版本)

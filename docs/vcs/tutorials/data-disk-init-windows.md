@@ -11,6 +11,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 
 以下說明如何將您的新資料磁碟初始化。
 
+<br/>
+
 
 ### Step 1. 確認磁碟已連結至個體
 
@@ -18,6 +20,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fa75bdb78bc52059698a1e40d540a0da.png)
 
+<br/>
 
 
 ### Step 2. 開啟電腦管理
@@ -26,12 +29,16 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4dcce52be28b3142c19ab11b731c8f37.png)
 
+<br/>
+
 
 ### Step 3. 檢視磁碟
 
 點選左側選單「**磁碟管理**」，即可檢視您已連結至個體的且狀態為`未初始化`、`未配置`的資料磁碟。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8ca94838884b9fd6fbcc2f0d316878fd.png)
+
+<br/>
 
 
 ### Step 4. 初始化磁碟
@@ -42,6 +49,9 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 - 初始化後，磁碟的狀態將由`未初始化`轉為`連線`。
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c4028ec99ca7fd5531ab5c0e8b679395.png)
 
+<br/>
+
+
 ### Step 5. 新增簡單磁碟區 
 
 - 於磁碟處點右鍵，再點選「**新增簡單磁碟區**」，以開啟「新增簡單磁碟區精靈」。
@@ -51,7 +61,10 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 - 點選「**下一步**」。
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_eb34f2da96a9bca61623dec7ea803dce.png)
 
-### Step 5. 指定磁碟大小
+<br/>
+
+
+### Step 6. 指定磁碟大小
 
 - 預設使用整顆磁碟的空間，直接點選「**下一步**」，將整顆磁碟建立為 1 個分割區。
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6d23e832d8bbd0a177e428d7a862faae.png)
@@ -61,12 +74,18 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 您可以按照需求，將磁碟分割為多個分割區。
 :::
 
-### Step 6. 指派磁碟機代號或路徑 
+<br/>
+
+
+### Step 7. 指派磁碟機代號或路徑 
 
 - 指派磁碟機代號或路徑，點選「**下一步**」。
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7ca71932277a6e1a6849d63e0308dd15.png)
 
-### Step 7. 磁碟分割格式化
+<br/>
+
+
+### Step 8. 磁碟分割格式化
 
 - 輸入磁碟區標籤，其餘資訊使用預設值即可，點選「**下一步**」開始格式化。
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d3cf924fdc91a359497bd8982ad9cc41.png)

@@ -18,11 +18,6 @@ import TabItem from '@theme/TabItem';
 
 ![](https://i.imgur.com/WhovPH4.png)
 
-
-
-
-
-
 - 個體狀態與描述、用量計費的關係如下表所示：
 
 | 個體狀態 | 狀態描述 |個體用量計費 | 
@@ -36,6 +31,9 @@ import TabItem from '@theme/TabItem';
 | **`Rebooting`**     |個體重開機中，準備進入 **`Ready`** 狀態 |計費     | 
 | **`Deleting`**     | 刪除個體中，個體將被永久刪除|計費，刪除成功後便立即不再計費    | 
 
+<br/>
+
+
 ## 建立個體
 
 建立個體後，系統將分配資源並初始化執行個體中，個體狀態將呈現 **`Starting`**，此時尚未能連線使用，但不久後即進入 **`Ready`** 狀態。在 **`Ready`** 狀態下，可操作內容如下：
@@ -45,6 +43,8 @@ import TabItem from '@theme/TabItem';
 - <i class="fa fa-check" aria-hidden="true"></i> 建立個體映像檔
 - <i class="fa fa-check" aria-hidden="true"></i> 建立/移除公用 IP
 - <i class="fa fa-check" aria-hidden="true"></i> 掛載/移除 Auto Scaling 與負載平衡服務
+
+<br/>
 
 
 ## 停止個體
@@ -93,6 +93,8 @@ import TabItem from '@theme/TabItem';
 虛擬運算個體停止中 (**`Stopping`**)，請勿刪除個體，否則將影響系統處理工作，導致個體錯誤 (**`Error`**)。
 :::
 
+<br/>
+
 
 ## 啟動個體 (與個體開機)
 
@@ -125,6 +127,9 @@ import TabItem from '@theme/TabItem';
 :::info
 停止再啟動之個體，多數將建立於新的實體主機上。
 :::
+
+<br/>
+
 
 ## 個體重開機
 
@@ -159,6 +164,8 @@ import TabItem from '@theme/TabItem';
 與[<ins>停止個體</ins>](#停止個體)不同，重開機後除了會清除記憶體資料，**資源皆不釋放回資源池 (含浮動 IP)**，且儲存資料皆保留，重新開機後仍可使用。
 :::
 
+<br/>
+
 
 ## 個體關機
 
@@ -180,6 +187,8 @@ import TabItem from '@theme/TabItem';
 :::info
 與[<ins>停止個體</ins>](#停止個體)不同，關機後除了會清除記憶體資料，**資源皆不釋放回資源池**，且儲存資料皆保留，開機後仍可使用。
 :::
+
+<br/>
 
 
 ## 刪除個體
@@ -204,14 +213,16 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### 指令
+**指令**
 
 ```bash
 twccli rm vcs -s    # 個體 ID
 twccli ls vcs       # 檢視結果
 ```
 
-### 範例
+<br/>
+
+**範例**
 
 - 刪除 ID 為 **`937651`** 的虛擬運算個體，確認已刪除。
 

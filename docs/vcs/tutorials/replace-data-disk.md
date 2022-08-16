@@ -15,8 +15,10 @@ import TOCInline from '@theme/TOCInline';
 
 <TOCInline toc={toc} />
 
-## Linux 個體
+<br/>
 
+
+## Linux 個體
 
 ### Step 1. 確認個體資料磁碟類型
 
@@ -27,6 +29,8 @@ import TOCInline from '@theme/TOCInline';
 * 虛擬運算個體內輸入`df -h` 指令查看資料磁碟的資訊（檔案系統(Filesystem)、容量(Size)、掛載路徑(Mounted on)）
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3d9e1124e63cdcc6c839bdee8fc62b5c.png)
+
+<br/>
 
 
 ### Step 2. 新建相同容量的 HDD 資料磁碟
@@ -47,6 +51,9 @@ import TOCInline from '@theme/TOCInline';
 
 
 * 連線進入虛擬運算個體，將 HDD 資料磁碟掛載到 VM 上，並進行初始化，步驟可參考 [HowTo：初始化磁碟- Linux 個體](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-zh)。
+
+<br/>
+
 
 ### Step 3. SSD資料磁碟資料同步至 HDD 資料磁碟
 
@@ -72,6 +79,9 @@ rsync -avh <Disk_A> <Disk_B>
 - `<Disk_B>`：輸入 HDD 資料磁碟掛載路徑
 :::
 
+<br/>
+
+
 ### Step 4. 分離並刪除 SSD 資料磁碟
 
 * 將 SSD 資料磁碟自虛擬運算個體分離。
@@ -83,14 +93,22 @@ rsync -avh <Disk_A> <Disk_B>
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0257c20ca1519e080030dd201eb337af.png)
 
+<br/>
+
 
 ## Windows 個體
 
 Windows 個體與 以上 Linux 個體的操作方式雷同，僅 `Step 2.` 初始化資料磁碟的方式與 `Step 3.` 同步資料的方式有些許差異：
 
+<br/>
+
+
 ### Step 2. 新建相同容量的 HDD 資料磁碟
 
 新建一 HDD 資料磁碟並將磁碟連結至虛擬運算個體後，初始化步驟請改參考 [HowTo：初始化磁碟- Windows 個體](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-zh)。
+
+<br/>
+
 
 ### Step 3. SSD 資料磁碟資料同步至 HDD 資料磁碟
 

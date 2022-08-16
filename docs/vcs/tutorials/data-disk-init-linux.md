@@ -11,6 +11,9 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 
 以下說明如何將您的新資料磁碟初始化。
 
+<br/>
+
+
 ### Step 1. 確認磁碟已連結至個體
 
 [將資料磁碟連結至虛擬運算個體](https://man.twcc.ai/@twccdocs/guide-vcs-vds-manage-disk-zh#%E9%80%A3%E7%B5%90%E8%87%B3%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)後，請確認在使用者介面已正確連結，並取得掛載路徑 (例：`/dev/vdb`)。
@@ -24,6 +27,8 @@ sudo fdisk -l
 ```
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b06740e0fcd40ed80dc82fd3fdbdbb71.png)
+
+<br/>
 
 
 ### Step 2. 將磁碟格式化
@@ -41,6 +46,9 @@ sudo mkfs -t ext4 <DISK_DEVICE>
 - `<DISK_DEVICE>`：磁碟裝置 (例：`/dev/vdb`)
 :::
 
+<br/>
+
+
 ### Step 3. 掛載磁碟
 
 創建磁碟所需掛載的資料夾。
@@ -57,6 +65,9 @@ sudo mkdir <DIRECTORY>
 ```
 sudo mount <DISK_DEVICE> <DIRECTORY>
 ```
+
+<br/>
+
 
 ### Step 4. 確認掛載狀況
 

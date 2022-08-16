@@ -12,6 +12,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-setup-oepnvp
 以下虛擬運算個體以 Linux (Ubuntu) 為範例，本地端電腦則以 Windows 為操作範例。
 :::
 
+<br/>
+
 ## Step 1. 建立虛擬運算個體 (Linux)
 
 :::info
@@ -23,12 +25,15 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-setup-oepnvp
 
 ![](https://i.imgur.com/UZzRVMC.png)
 
- 
+<br/>
+
 
 ## Step 2. 設定跳板機安全性群組
 因 OpenVPN 預設採用 UDP 1194 埠做為通訊，請參考[安全性群組](https://man.twcc.ai/@twccdocs/guide-vcs-sg-zh)，將跳板機加入 Ingress UPD 1194 的安全性群組規則。
 
 ![](https://i.imgur.com/56o4Til.png)
+
+<br/>
 
 
 ## Step 3. 連線並安裝 OpenVPN
@@ -73,10 +78,14 @@ sudo mv /root/client.ovpn /home/ubuntu
 
 ![](https://i.imgur.com/8OqGSOr.png)
 
+<br/>
+
 
 ## Step 4. 本地端安裝 OpenVPN Client
 
 請在您的本地端電腦，下載並安裝完成 [OpenVPN Client](https://openvpn.net/vpn-client/)，以進行 VPN 連線。
+
+<br/>
 
 
 ## Step 5. 啟動 VPN 連線
@@ -93,6 +102,8 @@ sudo mv /root/client.ovpn /home/ubuntu
 - 連線成功！
 
 ![](https://i.imgur.com/eec3eJT.png)
+
+<br/>
 
 
 ## Step 6. 確認 VPN 加密連線已啟用
