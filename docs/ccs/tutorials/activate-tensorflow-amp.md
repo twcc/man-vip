@@ -1,5 +1,7 @@
 ---
 sidebar_position: 7
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-tensorflow-mnist-trainign-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorflow-mnist-trainign-zh' 
 ---
 
 # 使用 TensorFlow 訓練 MNIST 手寫數字辨識模型

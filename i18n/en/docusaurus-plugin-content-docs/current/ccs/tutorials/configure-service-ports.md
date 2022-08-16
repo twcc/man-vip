@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-config-service-port-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-config-service-port-en'
 ---
 
 # Configure the service port of Interactive Containers
