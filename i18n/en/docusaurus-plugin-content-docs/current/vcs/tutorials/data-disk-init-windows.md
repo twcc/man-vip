@@ -1,5 +1,7 @@
 ---
 sidebar_position: 6
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol-windows-en' 
 ---
 
 # Initialize Windows disks

@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
-title: '個體生命週期'
+title: 'Instance lifecycle'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/concept-vcs-lifecycle-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/concept-vcs-lifecycle-en' 
 ---
 
 import Tabs from '@theme/Tabs';
