@@ -1,5 +1,7 @@
 ---
 sidebar_position: 7
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-quota-mngmnt-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-quota-mngmnt-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -17,6 +19,7 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_54d3bce515396613658e73c0fabd8875.png)
 
+<br/>
 
 
 ## 容器服務配額管理
@@ -29,6 +32,7 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_64452fe6c77644827a300d7c7fc49576.png)
 
+<br/>
 
 
 ## 虛擬運算服務配額管理

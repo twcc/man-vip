@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-view-project-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-view-project-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -9,6 +11,7 @@ import TabItem from '@theme/TabItem';
 
 您可以透過以下步驟於 TWCC 連結至 TWS 會員中心檢視您的專案資訊。
 
+<br/>
 
 
 ### Step 1. 登入 TWCC
@@ -24,6 +27,7 @@ import TabItem from '@theme/TabItem';
 3. TWCC 使用者網站更版，請清除瀏覽器快取後即可正常登入。
 :::
 
+<br/>
 
 
 ### Step 2. 檢視專案資訊
@@ -36,15 +40,23 @@ import TabItem from '@theme/TabItem';
 
 <span>&#10102;</span> 使用者身份：身分可能為「租戶管理員」或是「租戶使用者」，除名稱不同外，圖示亦有分別
 
+<br/><br/>
+
 :::info
 租戶管理員與租戶使用者使用 TWCC 之功能權限差異，請參考[<ins>使用者權限比較</ins>](https://man.twcc.ai/@twccdocs/role-main-zh)。
 :::
 
+<br/>
+
 <span>&#10103;</span> 專案名稱、代碼
-<div></div>
+
+<br/><br/>
+
 <span>&#10104;</span> 點擊「會員中心」可檢視專案成員列表，並可編輯成員 (新增/刪除/設為管理員、一般成員)
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f293d8c1fac70ac4162b3f6756155c7b.png)
+
+<br/>
 
 <span>&#10105;</span> 點擊「資源列表」可檢視以下使用的資源
 
@@ -61,10 +73,13 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5720fe9874de02fe3ab2b069dcc15a76.png)
 
+<br/>
+
 <span>&#10107;</span> 點擊「額度資訊」，選擇服務後，可檢視各服務資源用量紀錄
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_50a039fc2e7721f8938ab575831ac944.png)
 
+<br/>
 
 
 :::info

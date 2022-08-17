@@ -1,6 +1,9 @@
 ---
 sidebar_label: 'CNTK'
 sidebar_position: 7
+title: CNTK
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-cntk-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-cntk-en' 
 ---
 
 
@@ -10,6 +13,8 @@ sidebar_position: 7
 
 TWCC provides ready-to-use working environment of NGC optimized Cognitive Toolkit™. The NVIDIA Deep Learning SDK accelerates widely-used deep learning frameworks such as the Microsoft® Cognitive Toolkit™ , formerly referred to as CNTK. The Microsoft Cognitive Toolkit empowers you to harness the intelligence within massive datasets through deep learning by providing uncompromised scaling, speed and accuracy with commercial-grade quality and compatibility with the programming languages and algorithms you already use.
 
+<br/>
+
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">Information of Image file version</span> 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_631b4734c2721a20dfbe97c6cc5cf43a.png)
@@ -18,6 +23,8 @@ TWCC provides ready-to-use working environment of NGC optimized Cognitive Toolki
 :::info
 `py3` and `py2` are different Python versions.
 :::
+
+<br/>
 
 <details class="docspoiler">
 

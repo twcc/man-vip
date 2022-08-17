@@ -2,6 +2,8 @@
 displayed_sidebar: role_permission
 sidebar_label: '使用者角色與權限'
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twsdocs/role-overview-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-overview-en' 
 ---
 :::caution
 ==**Need to update:exclamation:**==
