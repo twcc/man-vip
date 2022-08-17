@@ -1,13 +1,15 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-nvidia-hpc-sdk-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-nvidia-hpc-sdk-en' 
 ---
 
 
 # NVIDIA HPC SDK
 
-- Package official website:
+- Package official website
   - [NVHPC SDK](https://developer.nvidia.com/hpc-sdk)
-- Release note:
+- Release note
   - [nvhpc 21.7](https://docs.nvidia.com/hpc-sdk/archive/21.7/hpc-sdk-release-notes/index.html) 
   - [nvhpc 21.2](https://docs.nvidia.com/hpc-sdk/archive/21.2/hpc-sdk-release-notes/index.html)
   - [nvhpc 20.9](https://docs.nvidia.com/hpc-sdk/archive/20.9/hpc-sdk-release-notes/index.html)
@@ -18,6 +20,9 @@ sidebar_position: 3
 - nvhpc has built-in qd , and the setting of environment variables is completed.
 - The built-in gcc 4.8.5 of the operating system is installed by default.
 
+<br/>
+
+
 ## NVHPC module matrix
 
 | module name | usage         |
@@ -26,6 +31,9 @@ sidebar_position: 3
 | nvhpc/21.2  | ml nvhpc/21.2 |
 | nvhpc/20.9  | ml nvhpc/20.9 |
 | nvhpc/20.7  | ml nvhpc/20.7 |
+
+<br/>
+
 
 ## NVHPC with CUDA/NCCL/OpenMPI matrix
 

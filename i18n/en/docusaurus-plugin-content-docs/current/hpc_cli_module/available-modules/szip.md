@@ -1,5 +1,7 @@
 ---
 sidebar_position: 8
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-szip-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-szip-en' 
 ---
 
 
@@ -11,7 +13,10 @@ sidebar_position: 8
 - Mainly used for libraries that is depend when compiling HDF5.
 - If you need to re-compile HDF5, you can select the compiled SZIP to proceed.
 
-## SZIP module matrix 
+<br/>
+
+
+## SZIP module matrix
 
 | module name | usage   |
 | ----------- | ------- |

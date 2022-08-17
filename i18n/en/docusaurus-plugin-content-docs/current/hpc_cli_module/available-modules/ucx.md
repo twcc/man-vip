@@ -1,17 +1,22 @@
 ---
 sidebar_position: 5
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-ucx-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-ucx-en' 
 ---
 
 
 # UCX (Unified Communication X)
 
-- Package official website:
+- Package official website
   - [UCX](https://www.openucx.org)
   - [UCX github](https://github.com/openucx/ucx)
-- Release note:
+- Release note
   - [UCX 1.10.1 github](https://github.com/openucx/ucx/blob/v1.10.1/NEWS)
 - Package source: Github. Tar file compiles by the system administrator
 - If you need to re-compile Open MPI, you can select the compiled UCX to proceed.
+
+<br/>
+
 
 ## UCX 1.10.1 
 ### UCX module matrix 

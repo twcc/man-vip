@@ -1,19 +1,24 @@
 ---
 sidebar_position: 6
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-open-mpi-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-open-mpi-en'
 ---
 
 
 # Open MPI
 
-- Package official website:
+- Package official website
   - [Open MPI](https://www.open-mpi.org/)
   - [Open MPI github](https://github.com/open-mpi/ompi)
-- Release note: 
+- Release note
   - [Open MPI 4.1.x NEWS](https://raw.githubusercontent.com/open-mpi/ompi/v4.1.x/NEWS)
 - Package source: Official Tar file compiles by the system administrator
 - If you need to re-compile Open MPI, you can select the compiled UCX to proceed.
 
-## Open MPI 4.1.1 module matrix 
+<br/>
+
+
+## Open MPI 4.1.1 module matrix
 
 | CUDA | module name    | usage                       |
 | ---- | -------------- | --------------------------- |
