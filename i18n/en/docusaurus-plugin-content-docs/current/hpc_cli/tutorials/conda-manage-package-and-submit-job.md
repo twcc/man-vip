@@ -6,11 +6,11 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-twnia2-conda
 
 # Use Conda to manage packages and submit jobs
 
-:::tip **Scenario: How to install packages in TAIWANIA 2 (HPC CLI)? How to switch the Python environment?**
-*Do you have the same problem? Let us show you how to integrate TWCC services to solve the problems you are facing with!*
-:::
 
 In this document, we will introduce the package management tool in TWCC TAIWANIA 2 (HPC CLI) - [Miniconda](https://docs.conda.io/en/latest/miniconda.html), and demonstrate how to use Conda to create a virtual environment, install packages, and submit jobs.
+
+<br/>
+
 
 ## Introduction to Miniconda
 
@@ -18,6 +18,7 @@ Miniconda is a Python environment management system that includes a variety of P
 
 Miniconda is a solution to package compatibility issues that you can run simple Conda commands to install packages and switch to an environment with a specific version of Python.
 
+<br/>
 
 
 ## The update plan
@@ -29,6 +30,9 @@ To boost the releases with new features for TWCC users, we have removed Anaconda
 :::info
 You may install Anaconda under your own `/home/$USER`  or `/work/$USER` directory.
 :::
+
+<br/>
+
 
 ## Redesign the modulefile
 
@@ -45,6 +49,7 @@ For those who are new to Linux or Conda, it is not a friendly design. When Conda
 
 Therefore, TWCC rewrite the modulefile. When using `module load miniconda2` or `module load miniconda3`, the above parameters will be automatically activated; when `module purge`, these environment variables will be automatically removed. In this way, the mechanism can prevent Conda from changing the `~/.bashrc`, and provide users a simple environment to run Conda properly.
 
+<br/>
 
 
 ## How to use Miniconda ? 
@@ -61,6 +66,9 @@ Therefore, TWCC rewrite the modulefile. When using `module load miniconda2` or `
 
 Please refer to the following for more operation examples.
 
+<br/>
+
+
 ## Conda operation examples
 
 Here is an example of using Conda to create a virtual environment, install TensorFlow that supports GPU computing, and then use Slurm, a workload manager, to write job scripts to request resources, schedule jobs with queues, and submit jobs.
@@ -69,6 +77,8 @@ Here is an example of using Conda to create a virtual environment, install Tenso
 - [<ins>Anaconda: TensorFlow</ins>](https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/)
 - [<ins>Conda: Managing environments</ins>](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 :::
+
+<br/>
 
 
 ### Step 1. Load Conda and create a virtual environment
@@ -98,7 +108,11 @@ tensorflow-gpu version 2.2 is currently installed by default
  - For other versions, refer to [<ins>the version list</ins>](https://anaconda.org/anaconda/tensorflow-gpu/files).
 :::
 
+<br/>
+
+
 #### Deactivate and delete the virtual environment
+
 ```bash
 # deactivate the virtual environment named mytf_gpu
 conda deactivate
@@ -106,6 +120,9 @@ conda deactivate
 # delete the virtual environment named mytf_gpu 
 conda remove --name mytf_gpu --all
 ```
+
+<br/>
+
 
 #### Unload Conda
 ```bash
@@ -118,7 +135,11 @@ module purge
 module unload miniconda3
 ```
 
+<br/>
+
+
 #### Delete remaining Conda files
+
 ```bash
 # When Conda is no longer used, you can delete the remaining Conda installation files/configuration files (Be careful! Make sure the files in the directory are no longer in need before you run this command.)
 # Check the contents of this path file first (usually only ~/.conda)
@@ -127,6 +148,9 @@ ls ~/.condarc ~/.conda ~/.continuum
 # Then, delete the files
 rm -rf ~/.condarc ~/.conda ~/.continuum
 ```
+
+<br/>
+
 
 ### Step 2. Slurm job script with Conda
 
@@ -187,6 +211,9 @@ python $(your command)
 3. For more information about queue, please refer to [<ins>Usage instructions of queue and computing resources</ins>](https://www.twcc.ai/doc?page=hpc_cli#4-Queue-%E8%88%87%E8%A8%88%E7%AE%97%E8%B3%87%E6%BA%90%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E).
 :::
 
+<br/>
+
+
 #### Submit jobs
 
 ```bash
@@ -196,6 +223,9 @@ sbatch <FILE_NAME>.sh
 :::info
 After submitting, you will see the assigned Job ID.
 :::
+
+<br/>
+
 
 #### View and cancel jobs
 

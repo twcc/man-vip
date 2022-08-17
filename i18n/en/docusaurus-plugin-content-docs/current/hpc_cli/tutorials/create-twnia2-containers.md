@@ -6,10 +6,6 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-twnia2-creat
 
 # Create TAIWANIA2 containers
 
-:::tip **Scenario: How to create TAIWANIA 2 containers? How to customize containers?**
-*Do you have the same problem? Let us show you how to integrate TWCC services to solve the problems you are facing with!*
-:::
-
 Use **Singularity** to package up pieces of software and **create a container environment that can execute jobs in TAIWANIA2 (HPC CLI)** in a way that is portable and reproducible.
 
 
@@ -22,9 +18,15 @@ Use **Singularity** to package up pieces of software and **create a container en
 [<ins>Singularity</ins>](https://sylabs.io/) is similar to Docker. It can create rootless containers.
 :::
 
+<br/>
+
+
 ## Prerequisites: Container images
 
 Download container images or customize your container environment.
+
+<br/>
+
 
 ### 1. Download container images
 
@@ -45,6 +47,9 @@ This article will operate the image provided by NGC Container Registry.
 Will use the image provided by [<ins>NGC Container Registry</ins>](https://ngc.nvidia.com/catalog/containers) in this document.
 :::
 
+<br/>
+
+
 ### 2. Customize Singularity containers
 
 For those who are familiar with container technology and want to add other applications and packages to the image, use [TWCC VCS instance](https://www.twcc.ai/doc?page=vm) to customize your image first, then upload the image to TAIWANIA2 (HPC CLI) for use.
@@ -57,9 +62,11 @@ Since customizing the Singularity container images requires sudo privileges, TAI
 
 :::
 :::tip
-
 Ubuntu is mostly used for the container images, so it is recommended to use CentOS for the VCS instance environment. This makes it easier to distinguish the environment is inside or outside of the container.
 :::
+
+<br/>
+
 
 #### Step 1. Install Singularity in the VCS instance
 The installation steps are from Singularity official website. For detailed steps or other versions of Linux, please refer to [Singularity latest file](https://sylabs.io).
@@ -82,6 +89,9 @@ sudo yum update -y && \
     sudo yum update -y && \
     sudo yum install -y singularity
 ```
+
+<br/>
+
 
 #### Step 2. Customize a Singularity container
 
@@ -152,14 +162,21 @@ Using [<ins>HPC Container Maker</ins>](https://github.com/NVIDIA/hpc-container-m
 
 :::
 
+<br/>
+
 
 #### Step 3. Download the image
 
 Download your container image to your local machine.
 
+<br/>
+
+
 #### Step 4. Upload the image to Hyper File System (HFS)
 
 Refer to [Hyper File System (HFS)](https://www.twcc.ai/doc?page=hfs), upload the container image to the storage space of TAIWANIA2 (HPC CLI) through the data transferring node `xdata1.twcc.ai`, and store it in the `/home/$USER` directory or `/work/$USER` directory for use.
+
+<br/>
 
 
 ## Run the container
@@ -189,6 +206,8 @@ singularity exec --nv <CONTAINER_NAME>.sif cat /etc/os-release
 :::info
 - To run GPU resources, all commands must be added with `--nv`.
 :::
+
+<br/>
 
 
 ## Advanced operations
@@ -227,6 +246,8 @@ Since the sandbox does not write the packages into the definition file, you cann
 ```bash
 sudo singularity build <CONTAINER_NAME>.sif <FOLDER_NAME>/
 ```
+
+<br/>
 
 
 ### 2. Create lightweight containers

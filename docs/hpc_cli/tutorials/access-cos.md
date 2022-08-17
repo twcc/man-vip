@@ -32,14 +32,14 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-twnia2-acces
 ## 1. S3 用戶端工具
 
 S3 用戶端工具種類繁多，以下介紹的工具以 CLI 操作形式為主，您可依需求選擇使用，範例將採用 `TWCC CLI`、`S3cmd` 存取 COS 資料：
-- **[S3cmd](https://github.com/s3tools/s3cmd)** 
+- **[S3cmd](https://github.com/s3tools/s3cmd)**<br/>
   以 Python 撰寫，開發早且功能完整穩定，為最知名 S3 CLI 工具之一。
-- **[TWCC CLI](https://github.com/TW-NCHC/TWCC-CLI)** 
+- **[TWCC CLI](https://github.com/TW-NCHC/TWCC-CLI)**<br/>
   若已經熟悉 TWCC CLI，可以優先考慮使用，並可操作多項 TWCC 服務。
 - 其他工具
-    - **[Rclone](https://github.com/rclone/rclone)** : 
+    - **[Rclone](https://github.com/rclone/rclone)**<br/>
   可串接多種雲端儲存空間，在 TWCC 台灣杉二號與雲端物件儲存之間，適合小檔案的傳輸。
-    - **[S5cmd](https://github.com/peak/s5cmd)** : 
+    - **[S5cmd](https://github.com/peak/s5cmd)**<br/>
   以 GO 語言撰寫，傳輸速度較 Python 撰寫之工具快，但功能無 S3cmd 完整。
 
 <br/>

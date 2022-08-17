@@ -28,12 +28,12 @@ TWCC 容器運算服務 (開發型容器與任務型容器)、HPC 高速運算�
 ## Step 1. 使用已預載容器或下載 NGC 容器
 
 TWCC 已為使用者預載以下 3 個常用的 NGC 容器，並放置於路徑 `/work/TWCC_cntr` 之下：
-- **NGC 21.11 TensorFlow 1** | [Release Note](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_21-11.html#rel_20-11) | [Tags](https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow/tags)
+- **NGC 21.11 TensorFlow 1** | [Release Note](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_21-11.html#rel_20-11) | [Tags](https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow/tags)<br/>
  路徑：`/work/TWCC_cntr/tensorflow_21.11-tf1-py3.sif` 
-- **NGC 21.11 TensorFlow 2** | [Release Note](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_21-11.html#rel_20-11) | [Tags](https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow/tags)
+- **NGC 21.11 TensorFlow 2** | [Release Note](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_21-11.html#rel_20-11) | [Tags](https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow/tags)<br/>
  路徑：`/work/TWCC_cntr/tensorflow_21.11-tf2-py3.sif`
-- **NGC 21.11 PyTorch** | [Release Note](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_21-11.html#rel_21-11) | [Tags](https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow/tags)
- 路徑1：`/work/TWCC_cntr/pytorch_21.11-py3.sif`
+- **NGC 21.11 PyTorch** | [Release Note](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_21-11.html#rel_21-11) | [Tags](https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow/tags)<br/>
+ 路徑1：`/work/TWCC_cntr/pytorch_21.11-py3.sif`<br/>
  路徑2：`/work/TWCC_cntr/pytorch_21.11-py3_horovod.sif` (額外安裝 horovod)
 
 若想使用其他版本或其他容器，TWCC 台灣杉二號已安裝 Singularity，您可以使用 `singularity pull` 指令，下載 Singularity 容器<sup>[4]</sup>。

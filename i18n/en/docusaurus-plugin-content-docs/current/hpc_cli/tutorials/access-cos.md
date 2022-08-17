@@ -6,9 +6,6 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-twnia2-acces
 
 # Access Cloud Object Storage (COS)
 
-:::tip **Case senario: How to access files in COS through Taiwania 2 (HPC CLI)?**
-*Do you have the same problem? Let us take you hand in hand to assemble the TWCC cloud service architecture to easily solve your problems!*
-:::
 
 Except for using [Hyper File System (HFS)](https://www.twcc.ai/doc?page=hfs) as the compute storage, [TWCC TWNIA2 (HPC CLI)](https://www.twcc.ai/doc?page=hpc_cli) can use [TWCC Cloud Object Storage (COS)](https://www.twcc.ai/doc?page=object) as a storage option for data accessed less frequently.
 
@@ -29,18 +26,23 @@ It is recommended to use **S3 client tools**:
 
 Below we demonstrate accessing COS with the two methods. You can choose either of them according to your needs.
 
+<br/>
+
+
 ## 1. S3 client tools
 
 There are many types of S3 client tools. The tools introduced below are mainly CLI tools. Choose a tool you preferred. In the following examples we use `TWCC CLI` and `S3cmd` to access COS data:
-- **[S3cmd](https://github.com/s3tools/s3cmd)** 
+- **[S3cmd](https://github.com/s3tools/s3cmd)**<br/>
   S3cmd is written in Python language, being developed early with complete and stable functions.
-- **[TWCC CLI](https://github.com/TW-NCHC/TWCC-CLI)** 
+- **[TWCC CLI](https://github.com/TW-NCHC/TWCC-CLI)**<br/>
   Consider using TWCC CLI if you are already familiar with it. You can use it to operate various TWCC services.
 - Other tools
-    - **[Rclone](https://github.com/rclone/rclone)**: 
+    - **[Rclone](https://github.com/rclone/rclone)**<br/>
   Rclone is able to access to various cloud storage. It is well-suited for transferring small files between TWCC TWNIA2 (HPC CLI) and COS.
-    - **[S5cmd](https://github.com/peak/s5cmd)**: 
+    - **[S5cmd](https://github.com/peak/s5cmd)**<br/>
     S5cmd is written in Go language, and its transmission speed is faster than the tool written in Python and with fewer functions.
+
+<br/>
 
 
 ### Installtion and Settings
@@ -50,9 +52,11 @@ There are many types of S3 client tools. The tools introduced below are mainly C
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_716af2cfd86e8e784e3bce0f1268254e.png)
 
+<br/>
 
 
 #### S3cmd
+
 - **Install**
 ```bash
 # Using pip to install
@@ -78,7 +82,11 @@ secret_key = <COS Secret Key>
 -----------------------
 ```
 
+<br/>
+
+
 #### TWCC CLI
+
 - **Install**
 ```bash
 # Using pip to install
@@ -98,6 +106,9 @@ $ module load mcli
 ```bash
 $ mcli config host add twcc https://cos.twcc.ai <COS Access Key> <COS Secret Key>
 ``` -->
+
+<br/>
+
 
 ### Examples
 
@@ -169,6 +180,9 @@ Check by entering the `$ s3cmd --help` command or learn more on [<ins>s3cmd GitH
 Check by entering the `$ twccli --help` command or learn more on [<ins>TWCC CLI document</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage).
 :::
 
+<br/>
+
+
 ## 2. Mount COS as a network hard drive
 
 The following will introduce two mounting tools: [Goofys](https://github.com/kahing/goofys) and [S3fs](https://github.com/s3fs-fuse/s3fs-fuse), you may choose according to your needs.
@@ -176,6 +190,8 @@ The following will introduce two mounting tools: [Goofys](https://github.com/kah
 :::info
 The mounting method only able to used on ln01.twcc.ai login node.
 :::
+
+<br/>
 
 
 ### Create a COS bucket
@@ -186,6 +202,8 @@ The mounting method only able to used on ln01.twcc.ai login node.
 ```bash
 mkdir -p ~/mount_cos
 ```
+
+<br/>
 
 
 ### Enter keys
@@ -208,6 +226,8 @@ aws_access_key_id = COS Access Key
 aws_secret_access_key = COS Secret Key
 ```
 
+<br/>
+
 
 ### [Goofys](https://github.com/kahing/goofys) 
 - Written in Go language, good performance, should have a high priority.
@@ -218,6 +238,9 @@ Mount command:
 goofys --endpoint https://cos.twcc.ai mytwccbucket ~/mount_cos
 ```
 
+<br/>
+
+
 ### [S3fs](https://github.com/s3fs-fuse/s3fs-fuse)
 - S3fs is a well-known s3 mounting tool.
 
@@ -226,6 +249,9 @@ Mount command:
 ```bash
 s3fs mytwccbucket ~/mount_s3 -o url=https://cos.twcc.ai/ -o use_path_request_style
 ```
+
+<br/>
+
 
 ### Access files
 
@@ -238,6 +264,8 @@ Examples
 touch ~/mount_cos/myfile
 ```
 Now you can click on `mytwccbucket` on the **Cloud Object Storage Management** page on the TWCC portal to view the content of the file `myfile`.
+
+<br/>
 
 
 ### Unmount
