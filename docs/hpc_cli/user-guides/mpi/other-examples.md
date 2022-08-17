@@ -18,41 +18,35 @@ submit jobs with srun
     
 step by step example
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
-
-#compile<br/>
-$ module purge<br/>
-$ module load compiler/intel/2018<br/>
-$ mpicc -o hello /opt/ohpc/pub/examples/mpi/hello.c<br/>
-
-</div>
+```bash
+# compile
+module purge
+module load compiler/intel/2018
+mpicc -o hello /opt/ohpc/pub/examples/mpi/hello.c
+```
 
 
 file name : srun_job.sh
-    
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
 
+```bash
 #!/bin/bash
 
-#SBATCH -A ENT107046        # Project Account<br/>
-#SBATCH -J test             # Job name<br/>
-#SBATCH -o job.%j.out       # Name of stdout output file (%j expands to jobId)<br/>
-#SBATCH -N 4                # Total number of nodes requested<br/>
-#SBATCH -n 16               # Total number of mpi tasks requested<br/>
-#SBATCH -t 00:30:00         # Run time (hh:mm:ss) - 0.5 hours<br/>
-#SBATCH -p gp2d             # partition<br/>
+#SBATCH -A ENT107046        # Project Account
+#SBATCH -J test             # Job name
+#SBATCH -o job.%j.out       # Name of stdout output file (%j expands to jobId)
+#SBATCH -N 4                # Total number of nodes requested
+#SBATCH -n 16               # Total number of mpi tasks requested
+#SBATCH -t 00:30:00         # Run time (hh:mm:ss) - 0.5 hours
+#SBATCH -p gp2d             # partition
 
-module purge<br/>
-module load compiler/intel/2018<br/>
+module purge
+module load compiler/intel/2018
 
-srun  ./hello<br/>
-
-</div>
+srun  ./hello
+```
 
 and submit it
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
-
-$ sbatch srun_job.sh
-
-</div>
+```bash
+sbatch srun_job.sh
+```
