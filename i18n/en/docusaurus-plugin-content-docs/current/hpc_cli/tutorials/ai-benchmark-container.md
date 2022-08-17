@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-twnia2-run-parallel-job-container-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-twnia2-run-parallel-job-container-en' 
 ---
 
 # Run parallel computing with multi-nodes on containers －AI Benchmark
