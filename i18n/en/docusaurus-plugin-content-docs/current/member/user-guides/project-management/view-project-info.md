@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-view-project-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-view-project-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -21,6 +23,8 @@ If the page is blank or abnormal after login, it may be caused by the following 
 2. Did not join any project that has enabled TWCC service. Please [<ins>apply for projects</ins>](https://man.twcc.ai/@twccdocs/apply-project-and-credit-en), or notify the Tenant Admin to add you to the project.
 3. TWCC portal update. Please clear the browser cache to sign in normally.
 :::
+
+<br/>
 
 ### Step 2. View project information
 
@@ -58,6 +62,7 @@ There are difference betwen Tenant admins and Tenant Users to use TWCC functions
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f21ac33b7c4c15afc871d00dfc34b910.png)
 
+<br/>
 
 :::info
 For more project information (project members, wallet information, resource usage). Please click the "Account & Project" and link to [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) to view more project information (project members, wallet information, resource usage).

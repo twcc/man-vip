@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-duplicate-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-duplicate-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -20,6 +22,7 @@ TWCC 開發型容器複本提供您保存自行部署完成的容器映像檔，
 如有任何問題請與我們的技術支援團隊或客服人員連絡，謝謝！
 :::
 
+<br/>
 
 
 ## 建立開發型容器複本
@@ -67,6 +70,7 @@ twccli ls ccs -dup
 容器複本建立後不可刪除。
 :::
 
+<br/>
 
 
 ## 以複本建立客製化容器

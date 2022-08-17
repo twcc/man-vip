@@ -1,6 +1,8 @@
 ---
 sidebar_label: '儲存服務'
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/role-storage-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-storage-en' 
 ---
 
 # Comparison of role permissions of TWCC：Storage Services

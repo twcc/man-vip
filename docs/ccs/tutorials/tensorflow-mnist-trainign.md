@@ -1,16 +1,10 @@
 ---
 sidebar_position: 6
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-tensorflow-inception-v3-port-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorflow-inception-v3-port-zh'
 ---
 
 # 使用 TensorFlow Inception V3 訓練影像辨識模型、生成推論引擎
-
-:::success
-<i class="fa fa-star" aria-hidden="true"></i>
-
-**適用情境：適合用什麼 TWCC 服務來執行深度學習的運算？**
-
-*您是否也有相同的困擾？讓我們手把手帶您組合 TWCC 雲端服務架構，輕鬆解決您的問題！*
-:::
 
 深度學習分為兩階段：**訓練**與**推論**，前者需對大量的資料數據進行無數次的計算，訓練並產生模型；而後者則是將模型對外提供辨識服務。
 

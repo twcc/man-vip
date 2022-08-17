@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-monitor-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-monitor-zh' 
 ---
 
 # 監控容器
@@ -8,6 +10,8 @@ TWCC 入口網站共有兩處可檢視容器監控的資訊，可監控 CPU、GP
 
 - 「**開發型容器詳細資料**」頁：可觀察一指定容器。
 - 「**開發型容器監控**」頁：可快速切換多個容器的監控資訊，並可檢視個人 GPU 資源總數、已使用的時間長度。
+
+<br/>
 
 ## 「開發型容器詳細資料」頁
 
@@ -29,6 +33,7 @@ TWCC 入口網站共有兩處可檢視容器監控的資訊，可監控 CPU、GP
 特定時長可選擇1小時、6小時、12小時、1天、7天、30天。
 :::
 
+<br/>
 
 ## 「開發型容器監控」頁
 
@@ -44,6 +49,7 @@ TWCC 入口網站共有兩處可檢視容器監控的資訊，可監控 CPU、GP
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fd2fc35427dc9a5918e0f501e4d3f2ae.png)
 
+<br/>
 
 
 :::info

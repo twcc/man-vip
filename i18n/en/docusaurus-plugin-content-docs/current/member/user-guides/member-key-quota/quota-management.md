@@ -1,5 +1,7 @@
 ---
 sidebar_position: 7
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-quota-mngmnt-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-quota-mngmnt-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -19,6 +21,7 @@ This function can only be used by the Tenant Admin.
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5ecba43a124f09b5d085472d93ec5c7a.png)
 
 
+<br/>
 
 
 
@@ -32,6 +35,8 @@ This function can only be used by the Tenant Admin.
 * Click the member list item, the "Edit Quota" window  will appear, and you can set the member's quota.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_370b1d3ec8b40f136406d76288d116b1.png)
+
+<br/>
 
 
 ### Quota management of Virtual Compute Service
