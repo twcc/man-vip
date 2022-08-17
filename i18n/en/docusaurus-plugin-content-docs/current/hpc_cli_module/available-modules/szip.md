@@ -7,7 +7,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-modul
 
 # SZIP
 
-- Package official website:
+- Package official website
   - [SZIP](https://support.hdfgroup.org/doc_resource/SZIP)
 - Package source: Official Tar file compiled by the system administrator
 - Mainly used for libraries that is depend when compiling HDF5.
