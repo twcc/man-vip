@@ -1,6 +1,8 @@
 ---
 sidebar_label: 'Module 概觀'
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-overview-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-overview-zh' 
 ---
 
 

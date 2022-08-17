@@ -2,6 +2,8 @@
 displayed_sidebar: hpc_cli_module
 sidebar_label: 'Module 與可用軟體套件'
 sidebar_position: 8
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-overview-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-overview-zh' 
 ---
 
 # Module 概觀
