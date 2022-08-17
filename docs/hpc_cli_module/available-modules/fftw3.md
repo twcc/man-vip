@@ -8,12 +8,15 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-modul
 # FFTW3
 
 
-- 套件官網 : 
+- 套件官網
   - [FFTW](https://www.fftw.org/)
   - [FFTW3 github](https://github.com/FFTW/fftw3)
-- release note : 
+- release note
   - [FFTW release notes](https://www.fftw.org/release-notes.html)
-- 套件來源 : 官網下載 tar 檔，系統管理員自行編譯
+- 套件來源：官網下載 tar 檔，系統管理員自行編譯
+
+<br/>
+
 
 ## FFTW module with Open MPI 4.1.1 matrix 
 

@@ -8,11 +8,14 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-modul
 # SZIP
 
 
-- 套件官網 : 
+- 套件官網
   - [SZIP](https://support.hdfgroup.org/doc_resource/SZIP)
-- 套件來源 : 官網下載 tar 檔，系統管理員自行編譯
+- 套件來源：官網下載 tar 檔，系統管理員自行編譯
 - 主要用於編譯 HDF5 時相依的 library
 - 如果需要重編 HDF5 可選擇已編譯好的 SZIP 進行
+
+<br/>
+
 
 ## SZIP module matrix 
 

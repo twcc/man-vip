@@ -8,13 +8,17 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-modul
 # GNU Compiler Collection
 
 
-- 套件官網 : 
+- 套件官網
   - [GCC](https://gcc.gnu.org)
-- release note : 
+- release note
   - [gcc9](https://gcc.gnu.org/gcc-9)
   - [gcc8](https://gcc.gnu.org/gcc-8)
   - [gcc7](https://gcc.gnu.org/gcc-7)
-- 套件來源 : 下載 [SCL Repository](https://wiki.centos.org/AdditionalResources/Repositories/SCL) 提供的 `devtoolset-{7,8,9}-toolchain` 和 `devtoolset-{7,8,9}-libatomic-devel`
+- 套件來源：下載 [SCL Repository](https://wiki.centos.org/AdditionalResources/Repositories/SCL) 提供的 `devtoolset-{7,8,9}-toolchain` 和 `devtoolset-{7,8,9}-libatomic-devel`
+
+<br/>
+
+
 ## GCC module matrix
 
 | module name | usage   |

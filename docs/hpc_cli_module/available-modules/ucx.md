@@ -8,13 +8,16 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-modul
 # UCX (Unified Communication X)
 
 
-- 套件官網 : 
+- 套件官網
   - [UCX](https://www.openucx.org)
   - [UCX github](https://github.com/openucx/ucx)
-- release note : 
+- release note
   - [UCX 1.10.1 github](https://github.com/openucx/ucx/blob/v1.10.1/NEWS)
-- 套件來源 : github 下載 tar 檔後，系統管理員自行編譯
+- 套件來源：github 下載 tar 檔後，系統管理員自行編譯
 - 如果需要重編 Open MPI 可選擇已編譯好的 UCX 進行
+
+<br/>
+
 
 ## UCX 1.10.1 
 ### UCX module matrix 
