@@ -75,7 +75,7 @@ twccli mk cos -bkt bk_cli
 * 删除不必要的儲存體，只要點擊該儲存體列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>  選單按鈕，再按一下「**刪除**」。
 * 為避免誤删，請輸入欲删除的儲存體名稱再次確認。
 
-![image](https://user-images.githubusercontent.com/109254397/185296985-2e96b7b3-af46-41c5-ab4c-f84713561924.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9f60bd15b87259934324a255feafe617.png)
 
   </TabItem>
   <TabItem value="TWCC CLI" label="TWCC CLI">

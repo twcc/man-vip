@@ -23,12 +23,12 @@ import TabItem from '@theme/TabItem';
 *  選定儲存體，並進入儲存體的內容頁面，請點選欲查看的檔案。
 
     
-![image](https://user-images.githubusercontent.com/109254397/185298541-97aedc7b-8697-477b-b95f-e712780eadfa.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2d03ebaa945a63b253ca9951c9fcc0d6.png)
 
 
 * 進入檔案內容頁面後，即可檢視檔案的基本資訊。
 
-![image](https://user-images.githubusercontent.com/109254397/185298596-da0760a1-87e5-446c-bcd0-07f4c5df2d2a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_960b8fa7606ca437bfc3402bb9e71e42.png)
 
   </TabItem>
   <TabItem value="TWCC CLI" label="TWCC CLI">
@@ -53,7 +53,7 @@ twccli ls cos -bkt bk_cli
 
 在「**搜尋**」列輸入欲查找的關鍵字可以自動篩選所有列表欄位內容符合該條件的結果。 
 
-![image](https://user-images.githubusercontent.com/109254397/185299670-3635ac7e-4b2f-455d-82e2-45b663508a47.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4ab0e6cd8294c97ff4ecd6b5948b5052.png)
 
   </TabItem>
 </Tabs>
@@ -68,15 +68,9 @@ twccli ls cos -bkt bk_cli
   <TabItem value="TWCC 入口網站" label="TWCC 入口網站" default>
 
 
-* 進入儲存體內容後，點擊該檔案列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>  選單按鈕，再按一下「刪除」即可。亦可點擊勾選欄選擇多個檔案，再點擊上方的「删除」。
+* 進入儲存體內容後，點擊該檔案列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>  選單按鈕，再按一下「刪除」即可。亦可點擊勾選欄選擇多個檔案，再點擊上方的「删除」，一旦檔案被删除後將無法恢復。
 
-![image](https://user-images.githubusercontent.com/109254397/185299909-2500f613-167b-4abd-850a-b6a9cc228687.png)
-
-
-* 再次確定欲删除的檔案是否正確，一旦檔案被删除後將無法恢復。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_da479342e8c759b6e3d386487432d602.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bd5db233f2e2cf1982fd80f3237208ba.png)
 
   </TabItem>
   <TabItem value="TWCC CLI" label="TWCC CLI">
