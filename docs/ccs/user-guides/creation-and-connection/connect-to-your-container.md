@@ -45,6 +45,10 @@ import TabItem from '@theme/TabItem';
 
 - **Step 1.** 取得容器 ID 為 `1249374` 的容器 Jupyter Notebook 網址。
 
+```bash
+twccli ls ccs -s 1249374 -gjpnb
+```
+
 - **Step 2.** 點選 「**網址**」 (CLI)，即可開啟 Jupyter Notebook。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_619c5fad19ccb469b5368895935ae48b.png)

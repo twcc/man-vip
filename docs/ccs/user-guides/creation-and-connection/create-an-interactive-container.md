@@ -60,7 +60,7 @@ import TabItem from '@theme/TabItem';
 
 * 容器建立後系統會自動掛載高速檔案系統 (HFS) 的兩個目錄 (/home 與 /work) 至容器，以利使用者在運行人工智慧運算時擁有更好的性能，亦可使用 TWCC 雲端物件儲存服務。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3c419a7088937f941bf041614348ba94.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d801834abe5f168c9fc1d77253e106f4.png)
 
 * 接著點擊「**下一步：環境變數>**」，可設定符合您需求的環境變數，詳細說明與設定範例請參考 [<ins>HowTo：設定環境變數</ins>](TBD)。
 
@@ -68,8 +68,8 @@ import TabItem from '@theme/TabItem';
 
 * 點擊「**下一步：檢閱+建立>**」，檢視整個容器的規格和價格，確定後點選「**建立**」即完成。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_96e0ab9488185724f675170fa5e9f6ee.png)
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0fbbb5be455bf2558566d5e71c82b9ac.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0eab8ab1660cace6b843aea7cbb1e808.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cb943abf574920c1a1a46b62e4695590.png)
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
