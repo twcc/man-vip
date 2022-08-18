@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-hfs-connect-to-data-transfer-node-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-hfs-connect-to-data-transfer-node-zh'
 ---
 
 # 連線檔案傳輸節點
@@ -24,7 +26,7 @@ TWCC 也提供用戶以 `rsync` 指令傳輸檔案，傳輸大量檔案使用體
 
 以下以 Windows 作業系統 + [<ins>FileZilla</ins>](https://filezilla-project.org) 為例 (macOS 也是類似的操作步驟)
 
-### Step 1. 連線運算服務 
+<b>Step 1. 連線運算服務</b> 
 
 - TWCC 開發型容器服務的使用者，可透過 Jupyter Notebook 或 SSH 連線容器
 - TWCC 任務型容器、高速運算任務、台灣杉二號 (命令列介面)的使用者，可透過 台灣杉二號 (命令列介面) 登入節點
@@ -35,7 +37,7 @@ TWCC 也提供用戶以 `rsync` 指令傳輸檔案，傳輸大量檔案使用體
 - [<ins>台灣杉二號 (命令列介面)</ins>](https://man.twcc.ai/s/B15nJXe-B#2-%E7%99%BB%E5%85%A5%E3%80%8C%E7%99%BB%E5%85%A5%E7%AF%80%E9%BB%9E%E3%80%8D) - 連線「登入節點」
 :::
 
-### Step 2. 儲存 SSH 私密金鑰至本機
+<b>Step 2. 儲存 SSH 私密金鑰至本機</b>
 
 - 登入後，輸入以下指令讀取 SSH 私密金鑰
 
@@ -69,7 +71,7 @@ macOS：可使用「文字編輯」軟體
 
 
 
-### Step 3. 以 FileZilla + 金鑰登入「資料傳輸節點」
+<b>Step 3. 以 FileZilla + 金鑰登入「資料傳輸節點」</b>
 
 - 點選左上角站台管理員、左下方新增站台，跳出如下圖的選單
 - 輸入及選擇，參考下圖
@@ -104,11 +106,11 @@ macOS：可使用「文字編輯」軟體
 
 除上述使用金鑰的登入方式，HFS 也可使用 **密碼 + [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC)** 之方式登入，請參考下方說明：
 
-### Step 1. 下載支援 SFTP 連線並可兩段式驗證的軟體
+<b>Step 1. 下載支援 SFTP 連線並可兩段式驗證的軟體</b>
 
 請下載安裝支援 SFTP 連線並可兩段式驗證的軟體 (例：[Filezilla](https://filezilla-project.org/)、[Cyberduck](https://cyberduck.io/download/)、[WinSCP](https://winscp.net/eng/download.php)...等)。
 
-### Step 2. 連線檔案傳輸節點
+<b>Step 2. 連線檔案傳輸節點</b>
 
 以下以 [<ins>Filezilla</ins>](https://filezilla-project.org/) 為操作示範，開啟軟體後：
 
@@ -134,7 +136,11 @@ macOS：可使用「文字編輯」軟體
 
 8. 點選「**連線**」
 
-### Step 3. 輸入主機密碼及 [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC) 
+<b>
+
+Step 3. 輸入主機密碼及 [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC)
+
+</b>
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_92b59625eba5f2dbaff85d5c2c030e19.png)
 
