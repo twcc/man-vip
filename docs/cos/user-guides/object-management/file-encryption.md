@@ -68,7 +68,11 @@ twccli ls cos -bkt bk_cli
   <TabItem value="TWCC 入口網站" label="TWCC 入口網站" default>
 
 
-* 進入儲存體內容後，點擊該檔案列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>  選單按鈕，再按一下「刪除」即可。亦可點擊勾選欄選擇多個檔案，再點擊上方的「删除」，一旦檔案被删除後將無法恢復。
+* 進入儲存體內容後，點擊該檔案列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>  選單按鈕，再按一下「刪除」即可。亦可點擊勾選欄選擇多個檔案，再點擊上方的「删除」。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_041f05525f9b4f4e3df6967afb03c3f6.png)
+
+* 再次確定欲删除的檔案是否正確，一旦檔案被删除後將無法恢復。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bd5db233f2e2cf1982fd80f3237208ba.png)
 
