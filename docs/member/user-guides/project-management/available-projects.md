@@ -15,19 +15,19 @@ import TabItem from '@theme/TabItem';
 
 <br/>
 
-### Step 2. 確認可用計畫
+### Step 2. 確認可用專案
 
-- 點選 <span>&#10102;</span> 會員中心 :arrow_right: <span>&#10103;</span>計畫管理 :arrow_right: <span>&#10104;</span> 我的計畫 :arrow_right: <span>&#10105;</span> 若計畫申請成功或已被加入某計畫成員，下方便會顯示該計畫相關資訊
+- 點選 <span>&#10102;</span> 會員中心 :arrow_right: <span>&#10103;</span>專案管理 :arrow_right: <span>&#10104;</span> 我的專案 :arrow_right: <span>&#10105;</span> 若專案申請成功或已被加入某專案成員，下方便會顯示該專案相關資訊
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_642d37fc2c751c6a8a983c26baddaeff.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_16bca2548cf85d48b7b216907a897037.png)
 
 <br/>
 
 
 :::info
-若無適用於 TWCC 的計畫，您可以：
-  - 請計畫主持人 (建立者) 或租戶管理員，將您加入計畫，參考 [<ins>管理計畫成員</ins>](https://man.twcc.ai/@twsdocs/guide-service-manage-project-team-zh)
-  - 或請您聯繫 TWS 業務，我們將深入了解您的使用需求，並協助您新增使用計畫與額度。
+若無適用於 TWCC 的專案，您可以：
+  - 請專案主持人 (建立者) 或租戶管理員，將您加入專案，參考 [<ins>管理專案成員</ins>](https://man.twcc.ai/@twsdocs/guide-service-manage-project-team-zh)
+  - 或請您聯繫 TWS 業務，我們將深入了解您的使用需求，並協助您新增使用專案與額度。
 :::
 
 

@@ -20,7 +20,7 @@ import TabItem from '@theme/TabItem';
 
 登入 [TWS 【會員中心】](https://member.twcc.ai/)後，請進入「**會員中心**」 > 「**會員資訊**」 > 「**主機帳號資訊**」頁面。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_21fc6e471e7af4594777d71f0e59912a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c03feefeff29f646e16ca59240906392.png)
 
 
 即可查詢您的主機帳號。
