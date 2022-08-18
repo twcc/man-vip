@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # 檢視、搜尋、刪除檔案
 
-:::caution
+:::tip
 以下操作方式僅限計畫之 [「<ins>**公共空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/%2F%40TWSC%2Fcos-overview-zh) 適用， [「<ins>**私有空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/%2F%40TWSC%2Fcos-overview-zh) 之檔案管理請透過 [<ins>**第三方軟體**</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40TWSC%2Fguide-cos-connect-info-zh) 操作。
 :::
 
@@ -20,12 +20,12 @@ sidebar_position: 2
 *  選定儲存體，並進入儲存體的內容頁面，請點選欲查看的檔案。
 
     
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8801894159cb1985bdaf52bd46def01f.png)
+![image](https://user-images.githubusercontent.com/109254397/185298541-97aedc7b-8697-477b-b95f-e712780eadfa.png)
 
 
 * 進入檔案內容頁面後，即可檢視檔案的基本資訊。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_097867267692f28f7e31cf3888069c2a.png)
+![image](https://user-images.githubusercontent.com/109254397/185298596-da0760a1-87e5-446c-bcd0-07f4c5df2d2a.png)
 
 </details>
 
@@ -58,7 +58,7 @@ twccli ls cos -bkt bk_cli
 
 在「**搜尋**」列輸入欲查找的關鍵字可以自動篩選所有列表欄位內容符合該條件的結果。 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7c4095d640f3250a053c0b32344db03f.png)
+![image](https://user-images.githubusercontent.com/109254397/185299670-3635ac7e-4b2f-455d-82e2-45b663508a47.png)
 
 </details>
 
@@ -75,7 +75,7 @@ twccli ls cos -bkt bk_cli
 
 * 進入儲存體內容後，點擊該檔案列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>  選單按鈕，再按一下「刪除」即可。亦可點擊勾選欄選擇多個檔案，再點擊上方的「删除」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2d1f8ec1a61e715db33512ff5da9b793.png)
+![image](https://user-images.githubusercontent.com/109254397/185299909-2500f613-167b-4abd-850a-b6a9cc228687.png)
 
 
 * 再次確定欲删除的檔案是否正確，一旦檔案被删除後將無法恢復。
