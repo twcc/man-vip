@@ -20,7 +20,8 @@ import TabItem from '@theme/TabItem';
 
 登入 [TWS 【會員中心】](https://member.twcc.ai/)後，請進入「**會員中心**」 > 「**會員資訊**」 > 「**主機帳號資訊**」頁面。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_58a128895fcc3a1b101da8cb0d2d8b75.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_21fc6e471e7af4594777d71f0e59912a.png)
+
 
 即可查詢您的主機帳號。
 
@@ -31,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 ## 重置主機密碼
 
-若忘記主機密碼，因系統無紀錄用戶之主機密碼，所以不提供查詢的功能，請您直接修改主機密碼，並將密碼妥善保存：
+若忘記主機密碼，因系統無紀錄用戶之主機密碼，所以不提供查詢的功能，請您直接修改主機密碼，並將密碼妥善保存：<br/>
 同[查詢主機帳號](#查詢主機帳號)之頁面，請至「**主機帳號資訊**」頁面，並點選「**修改主機密碼**」並按提示完成密碼修改。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2252ad16c81cc49a6c3c393802b70a66.png)
@@ -74,7 +75,7 @@ TWCC 會員與主機密碼最長有效期限為 180 天。
 <br/>
 
 
-### 2. 由電腦其他方式取得 
+### 2. 由電腦其他方式取得
 
 <details>
 
@@ -110,6 +111,7 @@ TWCC 會員與主機密碼最長有效期限為 180 天。
 
 </details>
 
+<div style={{'height':'8px'}}></div>
 
 <details>
 
@@ -139,6 +141,7 @@ TWCC 會員與主機密碼最長有效期限為 180 天。
 
 </details>
 
+<div style={{'height':'8px'}}></div>
 
 :::info
 其他作業系統請參考[<ins>此網頁</ins>](https://alternativeto.net/software/winauth/)下載其他軟體。

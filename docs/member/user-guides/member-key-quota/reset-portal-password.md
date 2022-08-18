@@ -29,30 +29,21 @@ import TabItem from '@theme/TabItem';
 <br/>
 
 
-### Step 3. 選擇服務提供者
-
-請您選擇「TWS 用戶」
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_02552b94893353e73d26423412062906.png)
-
-<br/>
-
-
-### Step 4. 輸入註冊會員的 e-mail
+### Step 3. 輸入註冊會員的 e-mail
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3cff6c7564b60f6d11ca8eadb89e7996.png)
 
 <br/>
 
 
-### Step 5. 檢視並點選【確定】
+### Step 4. 檢視並點選【確定】
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_81d998c60b62cfa261bc6039b44ba369.png)
 
 <br/>
 
 
-### Step 6. 【會員忘記密碼驗證信】 通知信
+### Step 5. 【會員忘記密碼驗證信】 通知信
 
 請至信箱收取【會員忘記密碼驗證信】 通知信，並點選密碼重設連結。
 
@@ -61,7 +52,7 @@ import TabItem from '@theme/TabItem';
 <br/>
 
 
-### Step 7. 重設使用者網站密碼
+### Step 6. 重設使用者網站密碼
   
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_34ef1664b84a8182be9f3eda39a58ef5.png)
 
@@ -79,7 +70,7 @@ import TabItem from '@theme/TabItem';
 <br/>
 
 
-### Step 8. 完成密碼重設
+### Step 7. 完成密碼重設
 
 完成重設後，將跳出【密碼變更成功】視窗。
 

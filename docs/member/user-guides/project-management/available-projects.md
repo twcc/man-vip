@@ -19,7 +19,7 @@ import TabItem from '@theme/TabItem';
 
 - 點選 <span>&#10102;</span> 會員中心 :arrow_right: <span>&#10103;</span>計畫管理 :arrow_right: <span>&#10104;</span> 我的計畫 :arrow_right: <span>&#10105;</span> 若計畫申請成功或已被加入某計畫成員，下方便會顯示該計畫相關資訊
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4b8e484bd02bfb0b6ef77114ebde14c3.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_642d37fc2c751c6a8a983c26baddaeff.png)
 
 <br/>
 
