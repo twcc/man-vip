@@ -62,7 +62,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-netndsec-zh'
 |使用個人 Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
 |使用專案所有 Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 |分離個人 Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|分離計畫所有 Auto Scaling|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|分離專案所有 Auto Scaling|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 |刪除個人 Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
 |刪除專案所有 Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 
