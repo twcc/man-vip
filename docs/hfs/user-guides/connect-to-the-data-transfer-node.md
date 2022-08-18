@@ -21,7 +21,8 @@ TWCC 也提供用戶以 `rsync` 指令傳輸檔案，傳輸大量檔案使用體
 
 <details class="docspoiler">
 
-<summary><b>1. 使用金鑰連線</b></summary>
+<summary><b>1. 使用金鑰連線
+</b></summary>
 
 
 以下以 Windows 作業系統 + [<ins>FileZilla</ins>](https://filezilla-project.org) 為例 (macOS 也是類似的操作步驟)
