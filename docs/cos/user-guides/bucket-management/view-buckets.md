@@ -1,6 +1,11 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-view-bucket-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-view-bucket-zh'
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # 檢視儲存體
 
@@ -12,9 +17,8 @@ sidebar_position: 2
 
 <!-- 1 start -->
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
+<Tabs>
+  <TabItem value="TWCC 入口網站" label="TWCC 入口網站" default>
 
 
 - 於登入後首頁，選擇 「**雲端物件儲存**」
@@ -31,17 +35,8 @@ sidebar_position: 2
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5b0987e1364f8101444d8f6ff375212d.png)
 
 
-</details>
-
-<!-- Space -->
-
-<div style={{height:8+'px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
+  </TabItem>
+  <TabItem value="TWCC CLI" label="TWCC CLI">
 
 
 - 檢視計畫內所有的儲存體
@@ -52,4 +47,5 @@ twccli ls cos
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b1497483a1367bb6cae188b80298199b.png)
 
 
-</details>
+  </TabItem>
+</Tabs>
