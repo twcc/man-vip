@@ -12,7 +12,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-activate
 - AMP 簡介
 - 建立 TWCC 開發型容器
 - SSH 連線進入容器
-- 開啟 AMP 功能 
+- 開啟 AMP 功能
     - 環境變數設定方式
     - MNIST 手寫辨識程式撰寫範例
 - Benchmark 效能分析：ResNet-50 v1.5
