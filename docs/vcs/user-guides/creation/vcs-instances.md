@@ -67,14 +67,14 @@ import TabItem from '@theme/TabItem';
 
 * 進入「**虛擬運算**」服務，在「**虛擬運算個體管理**」頁面，點擊「**＋建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
 
 
 :::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d01d3f3ce8149085f0247b35f5775c71.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2a2a9e6eb83b42ab497c13e97412d38e.png)
 
 
 * 選擇映像檔類型，TWCC 提供常用的 Linux、Windows 作業系統映像檔，方便個體建立後可以立即使用。您可瀏覽再選擇，或直接於左上方搜尋欲使用的映像檔名稱 (例：Ubuntu, Windows 10...等)。
@@ -159,7 +159,8 @@ TWCC 不負責紀錄及管理您的鑰匙對，請務必下載並妥善保存此
 
 * 接著點擊「**下一步：檢閱 + 建立>**」，檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態變成 **`Ready`** 後即可開始[<ins>連線</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh)使用。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f062b7368287f59d3a7ffc77cb4140c2.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9b35befff1c8ee37bdf68d147362453a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0627e4962946edeb20fa029eb2b7c4e7.png)
 
 </TabItem>
 
@@ -223,14 +224,14 @@ twccli ls vcs -ptype    # 檢視所有產品型號與規格
 
 * 進入「**虛擬運算**」服務，在「**虛擬運算個體管理**」頁面，點擊「**＋建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
 
 
 :::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d01d3f3ce8149085f0247b35f5775c71.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2a2a9e6eb83b42ab497c13e97412d38e.png)
 
 
 * 選擇映像檔類型，TWCC 提供常用的 Linux、Windows 作業系統映像檔，方便個體建立後可以立即使用。您可瀏覽再選擇，或直接於左上方搜尋欲使用的映像檔名稱 (例：Ubuntu, Windows 10...等)。
@@ -246,7 +247,7 @@ twccli ls vcs -ptype    # 檢視所有產品型號與規格
 
 * 在基本資訊頁面填寫虛擬運算個體的名稱及描述，選擇映像檔的版本及所需的硬體規格，包含 CPU 數量、記憶體容量、儲存容量及額度的不同組合，並選擇「**開啟**」或「**關閉**」刪除保護機制。完成後，接著點擊 **「下一步：網路>」**。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f8340eb76381f2ca2c9a66c199f22fc8.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_216c514eea0c60727feeaf582124d7b4.png)
 
 
 :::info
@@ -257,7 +258,7 @@ twccli ls vcs -ptype    # 檢視所有產品型號與規格
 * 在網路設定頁面，可使用系統預設的 default_network 或自訂的虛擬網路。
 * **預設為不配置公用 IP**。若需從虛擬網路外部連線個體，請您點選「**自動配置浮動 IP**」或 「**配置靜態 IP**」，並建議使用[<ins>安全性群組</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-sg-zh)保護個體安全與降低資安風險。使用細節請參考[<ins>彈性 IP</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-sg-zh)。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a578c6a3945fc9b14c72cc33dc30d387.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_08a7761f2c23a738ba28b5169ea7d781.png)
 
 
 :::info
@@ -267,7 +268,7 @@ twccli ls vcs -ptype    # 檢視所有產品型號與規格
 
 * 在儲存資訊頁面，設定外掛資料磁碟 大小（GB）及類型（提供 4 種磁碟類型：HDD、SSD、HDD 加密、SSD 加密）。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d9dafe55ac87c92b4b0c06678699c836.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_184b6aaa90135456196d14a9d016539f.png)
 
 :::caution
 - [<ins>Auto Scaling</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-auto-sacling-zh) 會依據所連結虛擬運算個體建立時的設定而新增個體，因此：
@@ -283,7 +284,7 @@ twccli ls vcs -ptype    # 檢視所有產品型號與規格
 - 建立 Windows 登入密碼。接著點擊「**下一步：檢閱 + 建立>**」
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5f16ac8f01c7141e7f5fd22120e120c2.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_008b4f0c17e1c516c26bbee22ed9224a.png)
 
 
 :::caution
@@ -294,7 +295,8 @@ twccli ls vcs -ptype    # 檢視所有產品型號與規格
 
 * 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後，等個體狀態變成 **`Ready`** 後，再等候一些時間即可開始[<ins>連線</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-windows-zh)使用。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f062b7368287f59d3a7ffc77cb4140c2.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a18e03678c8f5b6aab82049ae19cb021.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_16b71ba4b7fafa65b9a4d60f56bf975c.png)
 
 </TabItem>
 
@@ -304,9 +306,7 @@ twccli ls vcs -ptype    # 檢視所有產品型號與規格
 
 :::info
 - 虛擬運算個體建立後，外掛**資料磁碟**需經初始化才能使用，步驟請參考：
-
     - [<ins>HowTo：初始化磁碟- Linux 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-zh)
     - [<ins>HowTo：初始化磁碟- Windows 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-zh)
-
 - 同一用戶一分鐘內僅能執行各 10 次建立、刪除虛擬運算個體。
 :::
