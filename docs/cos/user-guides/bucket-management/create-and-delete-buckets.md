@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 * 從服務列表選擇「**雲端物件儲存**」，進入雲端物件儲存管理頁面後，點擊「**建立**」。
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9856f51aa6c23408a3ef29837b2c4eac.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_06609da5863d45a3b4ba6f9b52ed639e.png)
 
 
 
@@ -75,7 +75,7 @@ twccli mk cos -bkt bk_cli
 * 删除不必要的儲存體，只要點擊該儲存體列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>  選單按鈕，再按一下「**刪除**」。
 * 為避免誤删，請輸入欲删除的儲存體名稱再次確認。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9f60bd15b87259934324a255feafe617.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ef9ebf4f2386059c7c237664c33573d6.png)
 
   </TabItem>
   <TabItem value="TWCC CLI" label="TWCC CLI">

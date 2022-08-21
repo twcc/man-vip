@@ -23,7 +23,7 @@ import TabItem from '@theme/TabItem';
 
 - 於登入後首頁，選擇 「**雲端物件儲存**」
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_757364a59378a0dc8cf901334662df78.png)
 
 :::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 - 進入「**雲端物件儲存管理**」頁面後，即可檢視計畫內所有的儲存體
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5b0987e1364f8101444d8f6ff375212d.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8472a638afd0fdea3bfdad683e82e712.png)
 
 
   </TabItem>
