@@ -13,7 +13,7 @@ import TOCInline from '@theme/TOCInline';
 
 - 進入虛擬運算管理頁，建立一台名為 `virtualhost` 的虛擬運算個體。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_49af40e14447056a7f51c2af26ffd7c0.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_369a8ec110cd38b24c419dd927001a32.png)
 
 :::info
 - 詳細虛擬運算個體建立步驟，請參考[<ins>虛擬運算服務</ins>](https://www.twcc.ai/doc?page=vm&euqinu=true#%E5%BB%BA%E7%AB%8B%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)。
@@ -123,7 +123,7 @@ systemctl restart nginx
 
 - 複製虛擬運算個體的公有 IP
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7a177b11c31e1b184dc9434378f194da.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cdc1219353901168b0324a81ba76799d.png)
 
 - 將公用 IP，輸入瀏覽器網址列，確認有成功開通 80 連接埠
 
