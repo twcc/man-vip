@@ -1,8 +1,11 @@
-# 任務型容器
+---
+title: 任務型容器
+GA: UA-155999456-1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/doc-ccs-scheduled-main-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-ccs-scheduled-main-zh'
+---
 
-:::caution
-**為提供更好的使用者體驗，本服務即將暫時關閉以進行服務調整。容器排程任務之替代操作方式，請參考 [TWCC CLI](https://www.twcc.ai/doc?page=deploy_env_cli) 與 [程式範例](https://gist.github.com/NCHC-InfraServ/db541ba0ea87c6ac59dbb24b62680703)，若有問題請於 [GitHub](https://github.com/TW-NCHC/TWCC-CLI/issues/new) 提問，我們將盡快回覆您！**
-:::
+# 任務型容器
 
 任務型容器服務可依照需求，指定運算的開始執行時間，規劃批次任務使用的資源量，提升工作效率。使用完即回收運算資源，有效節省開發成本。
 
@@ -10,10 +13,10 @@
 
 * 由服務列表點選「任務型容器」，在「任務型容器管理」頁面，點擊「＋建立」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d397f10978041c2b6a160e0692719136.png)
 
 
-:::caution
+:::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
