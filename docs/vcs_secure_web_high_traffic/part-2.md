@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-2-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-2-zh'
 ---
 import TOCInline from '@theme/TOCInline';
 
@@ -53,32 +55,12 @@ sudo apt install certbot python3-certbot-nginx
 sudo certbot --nginx -d <Domain_Name>
 ```
 :::info
-1. 以下輸入 e-mail 接收緊急或安全性通知
-```
-Enter email address (used for urgent renewal and security notices) (Enter 'c' to
-cancel): 
-```
-```
-Please read the Terms of Service at
-https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf. You must
-agree in order to register with the ACME server at
-https://acme-v02.api.letsencrypt.org/directory
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-(A)gree/(C)ancel: A
-```
+1. 以下輸入 e-mail 接收緊急或安全性通知<div style={{height:5+'px'}}></div>
+![image](https://user-images.githubusercontent.com/109254397/184550225-cea21a14-989e-4716-9734-c90be29d3a67.png)
+![image](https://user-images.githubusercontent.com/109254397/184550263-c9fb6e98-9c63-4150-9f6d-6accf94e3313.png)
 
-2. 以下內容請選 `1`，無需將 HTTP 連線導向 HTTPS 並刪除 HTTP 連線：
-
-```
-Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-1: No redirect - Make no further changes to the webserver configuration.
-2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
-new sites, or if you're confident your site works on HTTPS. You can undo this
-change by editing your web server's configuration.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 1
-```
+2. 以下內容請選 `1`，無需將 HTTP 連線導向 HTTPS 並刪除 HTTP 連線：<div style={{height:5+'px'}}></div>
+![image](https://user-images.githubusercontent.com/109254397/184550314-80aed63f-ca93-49ea-a0a0-daefd906b1ee.png)
 :::
 
 ### Step 3. 將憑證轉檔為 Base64 格式
@@ -94,11 +76,8 @@ base64 server.p12 | tr -d \\n  > twcc_ssl_base64.txt
 cat  twcc_ssl_base64.txt
 ```
 :::info
-以下內容可按 <kbd>Enter</kbd> 略過：
-```
-Enter Export Password:
-Verifying - Enter Export Password:
-```
+以下內容可按 <kbd>Enter</kbd> 略過：<div style={{height:5+'px'}}></div>
+![image](https://user-images.githubusercontent.com/109254397/184550361-a7d8d07e-c099-4748-9fe8-5de9670a5fcd.png)
 :::
 
 - 請「**複製**」畫面顯示的 `twcc_ssl_base64.txt` 所有內容
