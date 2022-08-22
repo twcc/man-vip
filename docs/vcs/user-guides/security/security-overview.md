@@ -102,7 +102,7 @@ TWCC 因全力推動台灣整體 AI 產業發展，並以培植 AI 成為下一�
 
 ### <i class="fa fa-lock" aria-hidden="true"></i> 新世代防火牆
 
-TWCC 部署『新世代防火牆 Next-Generation Firewall)』網路安全設備，對於進出的網路流量進行資安政策管控，降低服務主機遭到外部攻擊的資安風險。
+TWCC 部署「新世代防火牆 (Next-Generation Firewall)」網路安全設備，對於進出的網路流量進行資安政策管控，降低服務主機遭到外部攻擊的資安風險。
 
 <img style={{'border-radius':'8px', 'display':'block', 'margin-left': 'auto', 'margin-right': 'auto'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_10e8d443d8922a53d5259089f5d90c05.png" width="550" />
 
@@ -122,7 +122,7 @@ TWCC 部署『新世代防火牆 Next-Generation Firewall)』網路安全設備�
 
 ### <i class="fa fa-lock" aria-hidden="true"></i> 網路型入侵偵測防禦系統
 
-TWCC 為有效降低網路攻擊所帶來的威脅，配置**網路型入侵偵測防禦系統(Network Intrusion Prevention System)**，監控網路流量，偵測異常行為並即時阻絕網路攻擊，以確保網路服務主機安全。
+TWCC 為有效降低網路攻擊所帶來的威脅，配置**網路型入侵偵測防禦系統 (Network Intrusion Prevention System)**，監控網路流量，偵測異常行為並即時阻絕網路攻擊，以確保網路服務主機安全。
 
 <img style={{'border-radius':'8px', 'display':'block', 'margin-left': 'auto', 'margin-right': 'auto'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d44381e746255e8c7fc4173245d8e19b.png" width="550"/>
 <br/>
