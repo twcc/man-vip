@@ -111,8 +111,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-zh'
 兩者儲存環境相同，但計算環境不同：
 
 - 開發型容器的計算環境是由 TWCC 容器映像檔所建置。
-- 而台灣杉二號則需使用者自行部署計算環境。
-    <i class="fa fa-lightbulb-o fa-20" aria-hidden="true"></i> <b>提示：</b> 台灣杉二號可使用 `module` 載入所需之套件，詳細使用方法請參考[此文件](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-module-intro-zh)。
+- 而台灣杉二號則需使用者自行部署計算環境。 <i class="fa fa-lightbulb-o fa-20" aria-hidden="true"></i> <b>提示：</b> 台灣杉二號可使用 `module` 載入所需之套件，詳細使用方法請參考[此文件](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-module-intro-zh)。
 
 </details>
 <div style={{height:10+'px'}}></div>
