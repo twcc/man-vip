@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: '建立映像檔'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-vds-instance-image-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-vds-instance-image-zh'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -15,6 +17,8 @@ import TabItem from '@theme/TabItem';
 2. 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-zh#虛擬運算服務)。
 :::
 
+<br/>
+
 ## 建立映像檔
 
 :::caution
@@ -22,7 +26,9 @@ import TabItem from '@theme/TabItem';
 2. 若映像檔狀態停止於 **`QUEUED`** 且久未轉為 **`ACTIVE`**，請洽詢技術支援團隊：<a href="mailto:isupport@twcc.ai">isupport@twcc.ai</a>，我們將協助您解決。
 :::
 
-- ### 建立一般映像檔
+<br/>
+
+### 建立一般映像檔
 
 手動操作建立映像檔。
 
@@ -48,7 +54,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### 指令
+**指令**
 
 ```bash
 twccli mk vcs -s            # 個體 ID  
@@ -59,7 +65,9 @@ twccli mk vcs -s            # 個體 ID
 1. **[ ]** 中括號內為選擇性參數，其餘為必要參數。
 :::
 
-### 範例
+<br/>
+
+**範例**
 
 - 為 ID 為 **`918628`** 的虛擬運算個體建立映像檔
 ```bash
@@ -72,7 +80,7 @@ twccli mk vcs -s 918628 -cus-img
 
 <br/>
 
-- ### 建立定時映像檔
+### 建立定時映像檔
 
 可利用 `crontab` 設定自動定時建立映像檔。
 
