@@ -16,7 +16,7 @@ import TabItem from '@theme/TabItem';
 
 ## 檢視映像檔資訊
 
-檢視映像檔 ID、名稱、狀態、建立時間、建立者等資訊。
+檢視映像檔 ID、名稱、描述、狀態、建立時間、建立者等資訊。
 
 :::info
 
@@ -30,7 +30,7 @@ import TabItem from '@theme/TabItem';
 
 * 進入「**虛擬運算個體映像檔管理**」頁面，可看到所有映像檔的列表資訊，最近建立的映像檔會列在最上面。建立後待狀態從 **`QUEUED`** 變成 **`ACTIVE`** 後，即可使用映像檔建立個體。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0d9ecb3bedb6ef58181d2679c9aac6c2.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_186918c503fa42eae342f88955c2bea3.png)
 
 
 </TabItem>
@@ -89,7 +89,7 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 
 * 進入映像檔管理頁後，選擇一映像檔，點選右側 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，再選擇「**分享**」。
 
-![](https://i.imgur.com/kXVJVCS.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9cba50a5788cf4a04152d259a29c296f.png)
 
 * 選擇分享的專案 (接收此分享的目標計畫)、建立映像檔名稱後，點選「**確定**」即跳轉至「**映像檔分享管理**」頁，進行分享的程序。
     
@@ -149,7 +149,7 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 
 * 不需使用的映像檔，可以點選該映像檔列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，再選擇「**刪除**」即可。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5a0e622ee77a6f942ec70dbd03915a55.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ed43bef95d227e1a331beb45a266f4c1.png)
 
 
 </TabItem>
