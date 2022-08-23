@@ -40,7 +40,7 @@ TWCC 開發型容器複本提供您保存自行部署完成的容器映像檔，
 
 * 容器複本建立後，會出現在開發型容器複本管理的列表中，建立容器複本需要幾分鐘的時間，此時複本狀態顯示為 **`Requested`**。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c7610e5a815484451e2b5301fcbee47c.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f36cf3e5cf63128e325e43ae57b0c9a2.png)
 
 * 數分鐘後，當複本狀態變成 **`Resolved`** 即可開始使用。
 
