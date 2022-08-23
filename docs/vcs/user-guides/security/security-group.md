@@ -110,11 +110,11 @@ CIDR：指要套用此虛擬運算個體安全規則的 CIDR 網段。
 
 * 檢視網路安全規則的設定資訊及計畫的額度資訊，確定後點選「**建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cff3247e6d017ef3dcbbd1bf51751c04.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_56db622663f2cee9836ad6a8a08ab2f8.png)
 
 * 建立完成後，即可於安全性群組規則列表新增一項新的安全規則。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c5d589961bf300f37721dd0c994e59c3.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8044bfe912c085595ba16daa890b998f.png)
 
 </TabItem>
 
