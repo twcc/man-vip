@@ -25,7 +25,7 @@ TWCC 所提供的負載平衡服務支援**應用程式負載平衡器 (HTTP 與
 
 * 由服務列表點選「**負載平衡**」進入「負載平衡器管理」頁面，點擊「**＋建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
 
 :::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
@@ -60,10 +60,7 @@ TWCC 所提供的負載平衡服務支援**應用程式負載平衡器 (HTTP 與
 
 * 檢視負載平衡器的設定資訊，確定後點選「**建立**」。
 
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b50acc4f5716aba63ad978a1ac9ec1f0.png)
-
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d84d97c603859f4f9ca3d11d3065e33d.png)
 
 * 建立完成後，會回到負載平衡器列表，最新建立負載平衡器會出現在最上方，按一下該列表進入負載平衡器內容頁面，等到狀態變成 「**ACTIVE**」 後，才可繼續編輯。
 
@@ -171,7 +168,7 @@ SSL 憑證有固定效期，您可以在憑證到期時，建立新憑證以更�
 
 * 點選左側「**SSL 憑證**」，在「**SSL 憑證管理**」頁面，點擊「**＋建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2bd2a82515b5a04f9a4b0781aa31598c.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2b06046e5e360cf9c6b7aae828874e7c.png)
 
 
 * 輸入 SSL 憑證的名稱、描述及 Base64 編碼資訊 (PKCS#12 格式)，完成後點擊「**下一步：檢閱 + 建立>**」

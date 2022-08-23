@@ -40,7 +40,7 @@ TWCC 彈性 IP 支援提供 IPv4 公用 IP。在 TWCC 中，您可以將虛擬�
 :::info
 - 僅「**租戶管理員**」可執行訂閱靜態 IP、停止訂閱；所有成員皆可使用已訂閱之靜態 IP。
 - 計畫若在 2022/1/14 功能調整前已使用超過 10 個浮動 IP，系統不會追溯並移除已建立的虛擬算個體或負載平衡器所關聯的浮動 IP。
-- 若有特殊需求，請您洽詢客服人員：++<a href = "mailto: isupport@twcc.ai">isupport@twcc.ai</a>++
+- 若有特殊需求，請您洽詢客服人員：<ins><a href = "mailto: isupport@twcc.ai">isupport@twcc.ai</a></ins>
 :::
 
 <br/>
@@ -101,7 +101,7 @@ TWCC 彈性 IP 支援提供 IPv4 公用 IP。在 TWCC 中，您可以將虛擬�
 
 :::caution
 **停止** 虛擬運算個體後，浮動 IP 將會釋放回資源池，個體啟動後，將取得新的浮動 IP。
-更多虛擬運算個體動作對彈性 IP之影響，請參考 ++[管理個體：停止/啟動 (與開機)/重開機/關機/刪除](https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-zh)++。
+更多虛擬運算個體動作對彈性 IP之影響，請參考 <ins>[管理個體：停止/啟動 (與開機)/重開機/關機/刪除](https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-zh)</ins>。
 :::
 
 <br/>
