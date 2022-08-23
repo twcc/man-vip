@@ -15,7 +15,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vnw-create-d
 
 * 登入 TWCC 頁面後，於服務列表選取「**虛擬網路**」
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
 
 :::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
