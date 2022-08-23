@@ -44,9 +44,11 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 ### Step 4. 初始化磁碟
 
 - Windows 將自動開啟初始化的作業視窗，選取欲初始化之磁碟 > 選取分割樣式 (可直接使用預設 `MBR (主開機紀錄)`) > 點選「確認」。
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3fb63a300d4d111eeacb793d3cad6ae2.png)
 
 - 初始化後，磁碟的狀態將由`未初始化`轉為`連線`。
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c4028ec99ca7fd5531ab5c0e8b679395.png)
 
 <br/>
@@ -55,10 +57,12 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 ### Step 5. 新增簡單磁碟區 
 
 - 於磁碟處點右鍵，再點選「**新增簡單磁碟區**」，以開啟「新增簡單磁碟區精靈」。
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4f0fa9a6a1017281a4f5af9a68e4f673.png)
 
 
 - 點選「**下一步**」。
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_eb34f2da96a9bca61623dec7ea803dce.png)
 
 <br/>
@@ -67,6 +71,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 ### Step 6. 指定磁碟大小
 
 - 預設使用整顆磁碟的空間，直接點選「**下一步**」，將整顆磁碟建立為 1 個分割區。
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6d23e832d8bbd0a177e428d7a862faae.png)
 
 
@@ -80,6 +85,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 ### Step 7. 指派磁碟機代號或路徑 
 
 - 指派磁碟機代號或路徑，點選「**下一步**」。
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7ca71932277a6e1a6849d63e0308dd15.png)
 
 <br/>
@@ -88,14 +94,18 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 ### Step 8. 磁碟分割格式化
 
 - 輸入磁碟區標籤，其餘資訊使用預設值即可，點選「**下一步**」開始格式化。
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d3cf924fdc91a359497bd8982ad9cc41.png)
 
 
 - 最後點選「**完成**」。
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a8e94d2caf3ded3281d4400c2c2234b2.png)
 
 - 格式化完成後，磁碟狀況將由`未配置` 轉為 `良好 (主要分割區)`。
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_052091f8124b4ce9a0f41825ef923e52.png)
 
 - 在「**裝置和磁碟區**」可看見新磁碟，並可以開始將資料儲存至新的磁碟。
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_22c06d162d32e999ebc53697e8769277.png)
