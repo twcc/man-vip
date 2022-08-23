@@ -46,7 +46,7 @@ import TabItem from '@theme/TabItem';
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ecb79a409b55ab29b5a644cc123cc6cd.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2e1ee3a1fc92a7d9cfb1e71e2f67ff41.png)
 
 
 * 輸入虛擬網路設定的資訊，完成後點擊「**下一步：檢閱+建立>**」。
