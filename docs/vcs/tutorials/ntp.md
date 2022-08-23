@@ -50,7 +50,7 @@ sudo apt-get install -y ntp
 ```bash
 sudo vim /etc/ntp.conf
 ```
- :arrow_right: 將以下紅框空內容，在最前方輸入「#」隱藏一筆預設資料
+ :arrow_right: 將以下紅框中的內容，在最前方輸入「#」隱藏一筆預設資料
  
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bbd7b65b56cc9fdc0bca4e3a283f9bb2.png)
 
