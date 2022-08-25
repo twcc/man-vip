@@ -96,7 +96,7 @@ twccli mk vcs -s 918628 -cus-img
 
 - 使用 `crontab -e` 進行設定，相關使用功能請參照 [<ins>CronHowTo</ins>](https://help.ubuntu.com/community/CronHowto)。<br/>
 ![](https://i.imgur.com/1zRke01.png)
-- 指定任意時間進行快照工作，在此為範例為==午夜 01:01==。<br/>
+- 指定任意時間進行快照工作，在此為範例為午夜 01:01。<br/>
 ![](https://i.imgur.com/mQp1kUr.png)
 
 </TabItem>
