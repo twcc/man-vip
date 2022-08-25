@@ -45,5 +45,5 @@ Notice of deletion:
 - /home, /work data (Hyper File System storage space) will be retained and will not be removed as the container is deleted.
 
 :::info
-For deletion steps, see [<ins>Delete a container</ins>](/@twccdocs/guide-ccs-manage-en) for more information.
+For deletion steps, see [<ins>Create a container</ins>](/@twccdocs/guide-ccs-manage-en) for more information.
 :::
