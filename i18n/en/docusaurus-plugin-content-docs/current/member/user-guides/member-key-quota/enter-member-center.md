@@ -17,7 +17,7 @@ The access method is determined by which type of user you are, please refer to t
 
 ### Method 1. Access by TWCC
 
-- Step 1. [Login to TWCC](https://www.twcc.ai/)
+- Step 1. [Sign in to TWCC](https://www.twcc.ai/)
 - Step 2. Enter Member Center
 
 <details class="docspoiler">
@@ -56,7 +56,7 @@ Click on "**Member Center**", "**Rescource Usage**", or "**Credits Information**
 
 <summary><b>NCHC users in academic and research circles</b></summary>
 
-Login to [iService](https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=) to access the Member Center.
+Sign in to [iService](https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=) to access the Member Center.
 
 </details>
 
