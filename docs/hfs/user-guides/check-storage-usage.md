@@ -8,12 +8,12 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-hfs-check-st
 
 - 登入 TWCC 後，點入「查看服務概況」，即可查看 HFS 儲存容量
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7ecfc2af35309f3f7c47dcc76a9a8b86.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5fdd7e5c2da81de6f3807a83208c580d.png)
 
 
 - 可分別檢視 Home、Work 目錄總儲存容量、已使用與可使用的容量，並可點選「**調整容量**」擴充容量。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_563738708b7afc37804f8fad1fb2d1c4.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_91746d12d0fbb0669e71f71ff9b18526.png)
 
 
 
