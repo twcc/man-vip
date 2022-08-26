@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-cuda-w-nccl-cudnn-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-cuda-w-nccl-cudnn-zh' 
 ---
 
 
@@ -13,11 +15,14 @@ sidebar_position: 1
   - [CUDA](https://developer.nvidia.com/cuda-toolkit-archive)
   - [NCCL](https://docs.nvidia.com/deeplearning/nccl/archives/index.html)
   - [cuDNN](https://docs.nvidia.com/deeplearning/cudnn/release-notes/index.html)
-- 套件來源 : 由於 NVIDIA NGC CUDA 容器已同時安裝 NCCL/cuDNN，故已此為參考，統一複製容器內搭配的檔案
+- 套件來源：由於 NVIDIA NGC CUDA 容器已同時安裝 NCCL/cuDNN，故已此為參考，統一複製容器內搭配的檔案
 - 除此之外，NVIDIA HPC SDK 也已包含 CUDA 和 NCCL/OpenMPI，但缺少 cuDNN
 - 提醒 CUDA 11 以後，部分 library 有可能無法搭配和 CentOS 7 預設提供的 gcc 4.8.5，可參考 release note 支援表，搭配 gcc 7 以上的 module 使用
-![](https://i.imgur.com/G4pwXr4.png =500x)
-ref : https://docs.nvidia.com/hpc-sdk/hpc-sdk-release-notes/index.html
+![](https://i.imgur.com/G4pwXr4.png)
+ref: https://docs.nvidia.com/hpc-sdk/hpc-sdk-release-notes/index.html
+
+<br/>
+
 
 ## CUDA with NCCL/cuDNN module matrix
 
@@ -32,6 +37,9 @@ ref : https://docs.nvidia.com/hpc-sdk/hpc-sdk-release-notes/index.html
 | cuda/10.0   | ml cuda/10.0 |
 | cuda/9.2    | ml cuda/9.2  |
 | cuda/9.0    | ml cuda/9.0  |
+
+<br/>
+
 
 ## CUDA with NCCL/cuDNN matrix
 
