@@ -1,5 +1,7 @@
 ---
 sidebar_position: 6
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-api-key-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-api-key-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -17,6 +19,8 @@ TWCC 系統提供每位租戶一把主金鑰（API 金鑰），金鑰會依計�
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d5fa093e330094d93643f96fa628838a.png)
 
+<br/>
+
 
 ## 延長金鑰期限
 
@@ -32,6 +36,7 @@ TWCC 系統提供每位租戶一把主金鑰（API 金鑰），金鑰會依計�
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_34644d903d88237dab22250e3ce02e29.png)
 
+<br/>
 
 
 ## 新增金鑰
@@ -40,6 +45,7 @@ TWCC 系統提供每位租戶一把主金鑰（API 金鑰），金鑰會依計�
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3df137ddd5c24ab718f89ba9e247a3b0.png)
 
+<br/>
 
 
 ## 删除金鑰

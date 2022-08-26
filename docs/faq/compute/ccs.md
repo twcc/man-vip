@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: '容器運算服務 (CCS)'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-ccs-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-ccs-zh'
 ---
 
 # TWCC FAQs | 容器運算服務 (CCS)
@@ -41,7 +43,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 - 而若需要 8 顆 以上的 GPU 資源，並希望能部署跨節點的分散式高速平行運算環境，請使用台灣杉二號 (命令列介面) 高速運算服務。
 
 </details>
-
+<div style={{height:10+'px'}}></div>
 
 ## 連線登入
 
@@ -123,7 +125,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 而 HFS 空間的生命週期是隨著用戶的主機帳號，因此只要是同一用戶建立的容器，環境都是相同的 HFS 空間。
 
 </details>
-
+<div style={{height:10+'px'}}></div>
 
 ## 資源配置與監控
 
@@ -202,6 +204,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 - **GPU 記憶體用量**：容器配置的 GPU 顯示核心上的記憶體之使用量，TWCC 的 GPU 為 NVIDIA V100，關於 GPU 記憶體容量與詳細資訊，可參考 [NVIDIA 官網說明](https://www.nvidia.com/content/dam/en-zz/zh_tw/Solutions/design-visualization/grid-vpc-vapps/volta-v100-datasheet-update-a4-636418-r4-tw.pdf)。
 
 </details>
+<div style={{height:10+'px'}}></div>
 
 ## 套件軟體
 
@@ -303,7 +306,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 TWCC 容器不提供 OS 層權限，因此無法安裝與使用 docker 服務。
 
 </details>
-
+<div style={{height:10+'px'}}></div>
 
 ## 儲存與資料傳輸
 
@@ -406,6 +409,7 @@ TWCC 容器所使用的儲存系統為高速檔案系統 (HFS)，目前不支援
 若僅需與雲端物件儲存進行檔案傳輸，請您參考 Q10 的操作步驟。
 
 </details>
+<div style={{height:10+'px'}}></div>
 
 ## 網路安全
 
@@ -424,7 +428,7 @@ TWCC 容器所使用的儲存系統為高速檔案系統 (HFS)，目前不支援
 目前 TWCC 容器不支援部署 VPN 服務 (例如：OpenVPN)。VPN 服務預設開啟的對外埠與 TWCC 容器所支援的對外埠不同，且 TWCC 容器採用 Port-Forwarding 的技術，對外埠為隨機配發，無法指定對應的埠號。
 
 </details>
-
+<div style={{height:10+'px'}}></div>
 
 ## 容器複本
 
@@ -435,7 +439,7 @@ TWCC 容器所使用的儲存系統為高速檔案系統 (HFS)，目前不支援
 目前系統尚未支援此功能。
 
 </details>
-
+<div style={{height:10+'px'}}></div>
 
 
 ## 執行效能
@@ -477,6 +481,7 @@ TWCC 容器所使用的儲存系統為高速檔案系統 (HFS)，目前不支援
 3. 製作容器複本，再以複本開一個新的容器，若系統整體負載仍有餘裕，可以將容器安排建立在較不繁忙的節點。
 
 </details>
+<div style={{height:10+'px'}}></div>
 
 ## 執行錯誤
 
@@ -548,6 +553,7 @@ TWCC 容器所使用的儲存系統為高速檔案系統 (HFS)，目前不支援
 **Step 4.** 重新建立一個新的容器，選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到每個映像檔的環境設定，選擇適合的映像檔。
 
 </details>
+<div style={{height:10+'px'}}></div>
 
 ## 其他疑問
 

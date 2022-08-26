@@ -1,6 +1,8 @@
 ---
 sidebar_position: 5
 title: 'Console-除錯與維護工具'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-debug-tool-console-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-debug-tool-console-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -9,6 +11,8 @@ import TabItem from '@theme/TabItem';
 # 快速除錯與維護工具：TWCC VCS Console
 
 TWCC 虛擬運算服務 (VCS) 提供 Console，讓您無需在本地端安裝 Client 軟體、預先建立公用 IP，即可快速透過瀏覽器連線您的虛擬運算個體，進行除錯、設定與維護工作。連線過程皆以 TLS 1.2 加密，確保連線安全，保護您的機敏資訊。
+
+<br/>
 
 ## 開啟 Console 連線虛擬運算個體
 
@@ -38,6 +42,8 @@ sudo passwd ubuntu  # 以 Ububtu 為範例設定登入密碼
 為保護您的虛擬運算個體安全，Ubuntu、CentOS 的登入密碼請設定至少包含 12 個字元，並混合英文大小寫字母、數字及特殊符號。
 :::
 
+<br/>
+
 
 ### Step 2. 開啟 Console
 
@@ -55,6 +61,9 @@ sudo passwd ubuntu  # 以 Ububtu 為範例設定登入密碼
 - 請務必於工作階段結束後、關閉 Console 之前，登出作業系統，以確保個體安全。
 - 為避免資安疑慮，連線有效性設定為 10 分鐘 (已開啟之 Console 不受此限)，連線過期後請點選「**更新連結**」，取得新連線。
 :::
+
+<br/>
+
 
 ### Step 3. 輸入連線資訊，完成連線
 
@@ -76,6 +85,8 @@ sudo passwd ubuntu  # 以 Ububtu 為範例設定登入密碼
 
 
 完成 Step 1 ~ Step 3，即可讓您在短時間內連線進入進虛擬運算個體，快速進行問題解決，加速系統維運的工作流程！
+
+<br/>
 
 
 :::caution

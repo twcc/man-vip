@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/oneai-aimaker-release-zhurl' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/oneai-aimaker-release-zh'
 ---
 
 import Tabs from '@theme/Tabs';

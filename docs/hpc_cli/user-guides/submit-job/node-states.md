@@ -16,6 +16,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-node-
 
 可直接使用「sinfo」指令，查看以分區(partition)為主的瀏覽方式，查看每個分區的節點狀況，如下：
 
+
 ```
 sinfo
 ```
@@ -23,7 +24,9 @@ sinfo
 
 
 
+
 上面的範例中，由於節點太多，故在 240 drain 的部分直接使用「……」省略部分節點名稱，實際上在使用時會顯示所有的節點名稱。除了使用「sinfo」查看以分區為主的資訊外，也可透過「sinfo -N」的方式查看每個節點所在的分區以及節點狀態。同樣也因為節點過多，文件範例以「…..」省略部分結果，但實際上透過指令打出來的結果，會顯示所有節點的資訊。
+
 
 ```
 sinfo -N
@@ -31,13 +34,16 @@ sinfo -N
 ![image](https://user-images.githubusercontent.com/109254397/184576231-89c2ca22-4d22-4506-8e4f-5c323b2abb76.png)
 
 
+
 #### scontrol
 如果像要查看更為詳細的節點資訊，則可以使用 scontrol 指令，使用該指令會輸出更詳細的資訊，包含該節點的資源使用狀態以及負載狀態、節點的系統資訊、軟體資訊等，如果想要透過 slurm 了解具體的資訊，建議使用此指令。使用方式為「scontrol show node <node_name>」，如下使用gn0101.twcc.ai 作為查看的節點範例：
+
 
 ```
 scontrol show node gn0101.twcc.ai
 ```
 ![image](https://user-images.githubusercontent.com/109254397/184576254-8a60467e-489c-4404-8bc8-b24b10eacf2d.png)
+
 
 
 

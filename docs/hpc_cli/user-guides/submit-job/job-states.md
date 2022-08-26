@@ -14,10 +14,12 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-job-s
 
 透過 scontrol show job可查看任務狀態狀態，若使用 scontrol show job [job_id] 可查看特定任務的詳細狀態。如下：
 
+
 ```
 scontrol show job 2977
 ```
 ![image](https://user-images.githubusercontent.com/109254397/184576022-71197a68-cef4-4d78-b6bb-1826358e0751.png)
+
 
 
 
@@ -35,6 +37,7 @@ squeue
 
 
 
+
 可從 squeue 裡面看到正在運行以及正在排隊的任務，可從「ST」的欄位看到「R」，表示正在運行中，看到「PT」表示正在排隊中。若任務已結束，透過 squeue 則無法看到資訊，必須使用下面介紹的 sacct 來瀏覽。
 
 
@@ -42,10 +45,12 @@ squeue
 
 sacct 可顯示相關任務的狀態，包含已經結束的歷史資訊，
 
+
 ```
 sacct
 ```
 ![image](https://user-images.githubusercontent.com/109254397/184576062-34f10665-f60f-4a72-98c9-16c80c9e2b84.png)
+
 
 可直接從狀態看到此任務是 COMPLETE、PENDING或是FAILED，以及此任務所使用的 CPU 核心數。若ExitCode的開頭不為「0」，則表示此任務是錯誤狀態。
 

@@ -9,6 +9,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-inter
 
 前面介紹了如何使用「sbatch」進行任務提交，這是最常使用的方式，讓用戶將任務編寫為腳本進行提交。但實際上 Slurm 提供任務提交的方式也很多種，而使用「sbatch」最常見的問題，即是腳本中的某一行出現問題，就必須要反覆修改腳本才能夠順利跑完，這對於測試非常不方便，又或者所執行的內容需要與standout 進行互動才能夠跑的通，這時候使用「srun」與「salloc」是更好的方式，下面將分別介紹。
 
+
 ### salloc
 
 salloc 從字面上就看得出來，就是指「slurm allocate」的縮寫，在解釋salloc之前，我們先回顧一下之前對於任務以及任務步驟的定義：
@@ -134,5 +135,6 @@ exit
 srun -N 2 -n 2 date
 ```
 ![image](https://user-images.githubusercontent.com/109254397/184575626-dd2e797b-c9c9-4ad7-ae16-a749c62995b3.png)
+
 
 上述範例同salloc，不同的是，salloc執行完畢之後，資源還是沒有被釋放，而srun則是執行完畢之後，資源就釋出給其他任務使用。

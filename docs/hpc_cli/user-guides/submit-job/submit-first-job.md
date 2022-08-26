@@ -30,17 +30,22 @@ Slurm 中有多種任務提交方式，分別是sbatch、srun與salloc，其中s
 
 以sbatch為例提交任務前，使用者需要將要運行的內容編輯為腳本，然後再透過sbatch指令指定參數和腳本，以下先以最簡單的 bash校本為例，名為 test.sh。
 
+
 ```   
+
 #! /bin/bash
 echo “Hello World”
 date
 hostname
 sleep 60
 echo “Bye”
+
 ```
 
 
+
 該腳本會依次輸出「Hello World」、目前時間、節點名稱，並在休眠60秒之後輸出「Bye」，可用以下指令來指定特定分區，並提交此任務腳本。下面範例中，使用「-p」為指定分區（partition），再直接指定 test.sh，SlurmDefault 為分區的名稱，由於SlurmDefault 為預設分區，因此不指定也會在此分區運行。
+
 
 ```
 sbatch –p SlurmDefault test.sh
@@ -48,6 +53,9 @@ Submitted batch job 2910
 ```
 
 
+
 任務提交之後，將會得到一個 Job ID，以上述範例得到的 Job ID 為2910，可在提交Job所在的目錄看到slurm-2910.out的檔案，裡面即有相關的Log資訊，如下：
 
+
 ![image](https://user-images.githubusercontent.com/109254397/184576611-f6e30d50-fea3-4e79-ba46-2ec90ecbcdac.png)
+

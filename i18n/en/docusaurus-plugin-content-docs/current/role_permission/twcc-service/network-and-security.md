@@ -1,6 +1,8 @@
 ---
 sidebar_label: '聯網與資安服務'
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twccdocs/role-netndsec-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-netndsec-en' 
 ---
 
 # Comparison of role permissions of TWCC： Network & Security Service

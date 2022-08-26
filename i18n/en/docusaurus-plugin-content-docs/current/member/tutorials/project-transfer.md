@@ -2,14 +2,11 @@
 displayed_sidebar: role_permission
 sidebar_label: '新舊專案轉移'
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-project-data-transfer-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-project-data-transfer-en' 
 ---
 
 # HowTo：Transfer data from old project to new project
-
-:::success **You might ask: How to transfer data from old project to new project?**
-
-*Do you have the same problem? Let us show you how to integrate TWCC services to solve the problems you are facing with!*
-:::
 
 If you already applied for a new project and hope that the data in old project can be continuously used, please refer to this documentation to transfer your data via **Cloud Object Storage (COS)**.
 

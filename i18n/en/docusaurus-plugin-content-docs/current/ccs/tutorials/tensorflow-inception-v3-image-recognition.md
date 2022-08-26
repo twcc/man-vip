@@ -1,5 +1,7 @@
 ---
 sidebar_position: 5
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-keep-your-processes-running-continuously-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-keep-your-processes-running-continuously-en' 
 ---
 
 # Keep your processes running continuously

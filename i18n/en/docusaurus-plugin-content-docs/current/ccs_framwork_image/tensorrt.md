@@ -1,6 +1,9 @@
 ---
 sidebar_label: 'TensorRT'
 sidebar_position: 10
+title: TensorRT
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-tensorrt-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-tensorrt-en' 
 ---
 
 
@@ -10,6 +13,8 @@ sidebar_position: 10
 
 TWCC provides ready-to-use working environment of NGC’s TensorRT. NVIDIA TensorRT is a C++ library that facilitates high performance inference on NVIDIA GPUs. It is designed to work in connection with deep learning frameworks that are commonly used for training. TensorRT focuses specifically on running an already trained network quickly and efficiently on a GPU for the purpose of generating a result; also known as inferencing.
 
+<br/>
+
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">Information of Image file version</span> 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1a5476938720e686dfc41d59b630d713.png)
@@ -17,6 +22,8 @@ TWCC provides ready-to-use working environment of NGC’s TensorRT. NVIDIA Tenso
 :::info
 `py3` and `py2` are different Python versions.
 :::
+
+<br/>
 
 
 <details class="docspoiler">

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twsdocs/apply-project-and-credit-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/apply-project-and-credit-en' 
 ---
 
 
@@ -8,7 +10,7 @@ sidebar_position: 2
 
 ## Apply for projects
 
-:::warning
+:::caution
 ==Need to update:exclamation:==<br/>
 If your [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) not applicable for the footage or process below, please refer to this <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>link</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-signup-zh) for manual instructions.
 :::
@@ -20,12 +22,15 @@ If your [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-f
 - The project host (creator) can add members, assign project administrators, purchase credit, manage project membership, allocate wallet quotas, add or remove members, and limit member resource quota
 :::
 
+<br/>
+
 ### Step 1. Add project
 
 - After completing the TWCC account registration, sign in [Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) ==Need to update:exclamation:== with the same account, click "Apply Now"
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_37e46561477016982025f44e7b78c4b0.png)
 
+<br/>
 
 ### Step 2. Select project category
 
@@ -50,6 +55,7 @@ If your [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-f
 - After reading the NCHC iService Member Registration and Service Terms, computational facility service service level agreement, scroll down the page and click "I agree"
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_12289b6d0cdfd4be7aaa1574e0836489.png)
 
+<br/>
 
 ### Step 3. Other application steps
 
@@ -57,8 +63,7 @@ If your [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-f
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9a4ed552b9534b6f90bc2073d3c66c7f.png)
 
-
-
+<br/>
 
 ### Step 4. View project status
 
@@ -67,13 +72,12 @@ If your [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-f
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0837ea11a53dc3bcbc65f685bca92137.png)
 
-
-
+<br/>
 
 
 ## Purchase project credits
 
-:::warning
+:::caution
 ==Need to update:exclamation:==<br/>
 If your <ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins> not applicable for the footage or process below, please refer to this <i class="fa fa-sign-out" aria-hidden="true"></i> <ins>link</ins> for manual instructions.
 :::
@@ -81,6 +85,8 @@ If your <ins>Member Center <i class="fa fa-question-circle fa-question-circle-fo
 :::info
 :bulb: Only " Project Creator" and "Project Administrator" have the authority to purchase credits
 :::
+
+<br/>
 
 ### Step 1. Start to purchase
 
@@ -95,6 +101,7 @@ If your <ins>Member Center <i class="fa fa-question-circle fa-question-circle-fo
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_696cf25774e1e57ef3d4318f634d3a67.png)
 
 
+<br/>
 
 
 ### Step 2. Submit your application
@@ -102,6 +109,7 @@ If your <ins>Member Center <i class="fa fa-question-circle fa-question-circle-fo
 - The NCHC will confirm the content of the order and notify the user after the completion.
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_366af929f869cca8ea44513647048000.png)
 
+<br/>
 
 :::info
 :bulb: For detailed order process description, please refer to [this page](https://iservice.nchc.org.tw/nchc_service/nchc_service_qa.php?target=13)

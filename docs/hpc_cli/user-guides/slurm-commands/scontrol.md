@@ -10,6 +10,7 @@ scontrol是用於查看和/或修改Slurm狀態的管理工具。請注意，許
 
 如果沒有在命令列上定義執行的指令，將會進入互動模式等待輸入直到退出，所有的指令都不區分大小寫，但節點名稱、分區名稱、以及保留名稱有區分大小寫。修改後的Slurm設定檔可以使用「scontrol write config」指令來寫入檔案，檔名將會是與slurm.conf同目錄下的「slurm.conf.(datetime)」，當中datetime 表示寫入時間，且該目錄必須要事先設定為可寫入的權限。通常一般使用者會使用「show (ENTITY) (ID)」的方式來查看特定項目的狀態，例如下面範例，使用scontrol顯示特定任務的狀態：
 
+
 ```
 sbatch test.sh
 ``` 
@@ -18,3 +19,4 @@ sbatch test.sh
 scontrol show job 3144
 ```
 ![image](https://user-images.githubusercontent.com/109254397/184575064-b7fca8df-b50b-4508-86d0-fd78c3142ab7.png)
+

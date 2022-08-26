@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twccdocs/concept-ccs-lifecycle-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/concept-ccs-lifecycle-zh'
 ---
 
 # 容器生命週期

@@ -11,6 +11,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-sbatc
 sbatch會在腳本成功傳給Slurm控制器後，被指定一個Slurm 任務ID，並馬上退出。此時批次腳本並不會馬上獲得資源，通常會在任務佇列中等待所需資源。使用sbatch執行的批次腳本，預設的standard output跟standard error預設皆會導入格式為「slurm-<job_id>.out」的檔名中，當中<job_id>為該任務的ID數字，該檔案會在與此任務相關的第一個節點產生，以本服務來說，會直接產生在登入節點上執行指令的路徑中。範例如下：
 
 
+
 ```   
 sbatch test.sh 
 ```
@@ -19,3 +20,4 @@ sbatch test.sh
 ls
 ```
 ![image](https://user-images.githubusercontent.com/109254397/184574704-722af072-3e56-4719-a335-f3b3a45de0fc.png)
+

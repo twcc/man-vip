@@ -1,5 +1,7 @@
 ---
 sidebar_position: 9
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-tensorflow-visualize-data-distribution-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorflow-visualize-data-distribution-zh' 
 ---
 
 # 視覺化呈現資料分佈－用 TensorFlow 實作 Linear-Regression
@@ -10,9 +12,13 @@ sidebar_position: 9
 
 - 若尚無帳號，請參考 [註冊 TWCC 帳號](https://www.twcc.ai/doc?page=register_account)
 
+<br/>
+
 ### Step 2. 建立開發型容器
 
 - 請參考 [開發型容器](https://www.twcc.ai/doc?page=container#建立開發型容器) 建立開發型容器，映像檔類型請選擇 TensorFlow (映像檔請選擇 19.08 以前 (`含 19.08`)，且 Python 2 的版本)
+
+<br/>
 
 
 ### Step 3. 連線進入 Container
@@ -22,6 +28,8 @@ sidebar_position: 9
 :::info 
 :book: 參見[連線使用方式](https://www.twcc.ai/doc?page=container#連線使用方式)
 :::
+
+<br/>
 
 
 ### Step 4. 執行 Linear-Regression 程式
@@ -75,31 +83,40 @@ for step in range(201):
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_50e380fb051e664273ddc4a0def4346f.png)
 
+<br/>
+
 
 ### Step 5. 資料分佈視覺化呈現
 
 - TensorFlow 會慢慢地找出 fitting 的權重值並繪製線性迴歸線
 
 :::info 0 [-0.7029411] [0.33094117]
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fb0b79090def125ce1173c78dad6362a.png)
+<img style={{'background-color':'white'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fb0b79090def125ce1173c78dad6362a.png"/>
 :::
 :::info 100 [0.03479815] [0.33622062]
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_257640a2d6ddf46bc0c7eea9ea26efc8.png)
+<img style={{'background-color':'white'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_257640a2d6ddf46bc0c7eea9ea26efc8.png"/>
 :::
 :::info 200 [0.09321669] [0.30376825]
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0d2ff561591c061432b01fc7728eca4c.png)
+<img style={{'background-color':'white'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0d2ff561591c061432b01fc7728eca4c.png"/>
 :::
+
+<br/>
 
 ## 2. 使用 SSH 或 Jupyter Notebook (Terminal)
 
 :::info
 :bulb: 以下範例參考自 TensorFlow 官方教學
 :::
+
+<br/>
+
 ### Step 1. 利用 SSH 登入方式或開啟 Jupyter Notebook (Terminal)
 
 :::info
 :book: 參見[使用 Jupyter Notebook](https://www.twcc.ai/doc?page=container#使用-Jupyter-Notebook)
 :::
+
+<br/>
 
 ### Step 2. 從 GitHub 下載 TensorFlow 程式
 
@@ -109,6 +126,8 @@ git clone https://github.com/tensorflow/tensorflow.git
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_94baa375f655c1c8a10cecd3ca0c0d4b.png)
 
+<br/>
+
 
 ### Step 3. 切換 Tensorflow 分支至 1.10
 
@@ -117,6 +136,7 @@ cd tensorflow && git checkout r1.10
 ```
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b54848bfd66229b4d336c2a804a4584.png)
 
+<br/>
 
 
 ### Step 4. 切換至 example/regression 目錄
@@ -126,6 +146,8 @@ cd tensorflow/examples/get_started/regression
 ```
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5a7ccd02f252fa2873aa6b5ad6c7f3f3.png)
+
+<br/>
 
 
 ### Step 5. 使用 Python 指令運行範例程式
