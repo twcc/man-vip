@@ -70,7 +70,7 @@ bash V3_training.sh --path ./cifar-10-python.tar.gz
  
 - 在訓練過程中，可在「**開發型容器詳細資料**」頁面可檢視 CPU/GPU、記憶體與網路的資源使用狀況
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fc4dc69630e59250e8bd51652512feb3.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_478e0058ec490e285909748ed46c5781.png)
 
 
  
@@ -111,7 +111,7 @@ bash V3_inference.sh
 
 - 請先至開發型容器詳細資料頁 :arrow_right: 點選「**關聯**」服務埠 :arrow_right: 勾選「**5001**」 :arrow_right: 再按下確定便可開啟 HTTP 網頁服務端點
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f0835a1eea94c9ddcac051ff9c4a318c.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e7c40c0c9fce17a0187f1f12be330b80.png)
 
 
 - 開啟瀏覽器 :arrow_right: 在網址列輸入 **`容器公用IP:對外埠`** (如下，可於容器詳細資料頁查詢) 便可開始使用 AI Inference 的服務
