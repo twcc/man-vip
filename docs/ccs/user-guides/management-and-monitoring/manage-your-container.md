@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-manage-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-manage-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -13,6 +15,7 @@ import TabItem from '@theme/TabItem';
 租戶管理員、租戶使用者對於開發型容器使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-zh#%E9%96%8B%E7%99%BC%E5%9E%8B%E5%AE%B9%E5%99%A8)。
 :::
 
+<br/>
 
 ## 檢視資訊
 
@@ -32,7 +35,7 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cf118734826fcdd287da97a30865c0d5.png)
 
-:::danger
+:::caution
 - 「容器日誌」功能無法確保您的所有紀錄在容器結束運行後，仍可保存及取得，建議您將日誌轉存至 [TWCC HFS](https://man.twcc.ai/@preview-twccdocs/doc-hfs-main-zh) 或 上傳到 [TWCC COS](https://man.twcc.ai/@preview-twccdocs/doc-cos-main-zh) 中，以確保紀錄可用性。
 - 若希望由 TWCC 維運人員協助您取得完整紀錄，請您來信授權處理 (isupport@twcc.io)，並請勿存放機敏資料。
 :::
@@ -62,6 +65,7 @@ twccli ls ccs -all
 </TabItem>
 </Tabs>
 
+<br/>
 
 ## 刪除容器
 
@@ -92,6 +96,7 @@ twccli rm ccs -s 934369
 </TabItem>
 </Tabs>
 
+<br/>
 
 :::info
 若已開啟「[刪除保護機制](https://man.twcc.ai/@twccdocs/guide-ccs-manage-zh#%E6%AA%A2%E8%A6%96%E8%B3%87%E8%A8%8A)」，將無法直接刪除資源，請您先關閉後再執行刪除。

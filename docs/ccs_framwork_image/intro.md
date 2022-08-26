@@ -2,6 +2,8 @@
 sidebar_label: '容器映像檔'
 sidebar_position: 1
 title: 映像檔概觀
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-overview-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-overview-zh' 
 ---
 
 
@@ -11,6 +13,8 @@ title: 映像檔概觀
 TWCC 提供多種 [NGC](https://www.nvidia.com/zh-tw/gpu-cloud/containers/) AI 運算適用的最佳化容器映像檔，提供多樣化的 AI 訓練框架，搭配 TWCC 底層 GPU 資源，容器可展現極佳運算效能。
 
 容器映像檔類型、映像檔名稱說明如下，您可選擇左側映像檔類型，了解各項 TWCC 映像檔之 AI 訓練框架與套件版本資訊。
+
+<br/>
 
 ## 映像檔類型
 
@@ -24,6 +28,7 @@ TWCC 提供多種 [NGC](https://www.nvidia.com/zh-tw/gpu-cloud/containers/) AI �
 
     使用上述 TWCC 映像檔建立容器後，您可以部署所需套件，並建立[容器複本](https://www.twcc.ai/doc?page=container)將環境打包成自訂映像檔 (Custom Image)，即可重複建立相同環境。
 
+<br/>
 
 
 ## 映像檔名稱說明

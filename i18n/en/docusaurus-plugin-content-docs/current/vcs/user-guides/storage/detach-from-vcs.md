@@ -18,7 +18,9 @@ After detaching, the data disk will continue to be billed until deletion.
 
 :::
 
+
 <br/>
+
 
 
 ## Step 1. Unmount a data disk
@@ -26,15 +28,18 @@ After detaching, the data disk will continue to be billed until deletion.
 There are different ways to unmount a disk between Linux and Windows, please follow the steps according to the operating system (OS) of your instance.
 
 
+
 <details>
 
 <summary><b>Linux Instance</b></summary>
+
 
 - [Connect to your Linux instance](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-en), and use the following command to unmount the `/dev/vdb` disk.
 
 ``` 
 sudo umount -d /dev/vdb
 ```
+
 
 </details>
 
@@ -43,6 +48,7 @@ sudo umount -d /dev/vdb
 <details>
 
 <summary><b>Windows Instance</b></summary>
+
 
 - [Connect to your Windows instance](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-windows-en), and search for <i class="fa fa-search" aria-hidden="true"></i> **Computer Management** then open the applicaiton.
 
@@ -53,9 +59,11 @@ sudo umount -d /dev/vdb
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bb6045da618be032710b19861a221dc4.png)
 
+
 </details>
 
 <br/>
+
 
 
 ## Step 2. Detach a data disk

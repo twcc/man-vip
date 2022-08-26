@@ -1,6 +1,9 @@
 ---
 sidebar_label: 'Matlab (BYOL)'
 sidebar_position: 5
+title: Matlab (BYOL)
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-matlab-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-matlab-en' 
 ---
 
 
@@ -9,6 +12,8 @@ sidebar_position: 5
 
 
 TWCC provides Matlab in preview now. To run Matlab on the cloud, you need to enter your license - MathWorks account and password.
+
+<br/>
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">Image version information</span>
 

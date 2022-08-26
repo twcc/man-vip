@@ -1,5 +1,7 @@
 ---
 sidebar_position: 8
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-activate-tensorflow-amp-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-activate-tensorflow-amp-en' 
 ---
 
 import TOCInline from '@theme/TOCInline';
@@ -10,6 +12,7 @@ This article will teach users how to use the TWCC Interactive Container step by 
 
 <TOCInline toc={toc} />
 
+<br/>
 
 ## Introduction to AMP
 
@@ -34,6 +37,8 @@ Some numerical computing (e.g., deep learning) does not need to rely entirely on
 
 The following tutorial demonstrates how to enable AMP in TWCC Interactive Container.
 
+<br/>
+
 
 ## Create a TWCC Interactive Container
 After sign in, please refer to  [Create a Interactive Container](https://www.twcc.ai/doc?page=container#%E5%BB%BA%E7%AB%8B%E9%96%8B%E7%99%BC%E5%9E%8B%E5%AE%B9%E5%99%A8) and create a container with following settings:
@@ -45,6 +50,8 @@ Basic configuration: c.super
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b4c4ac78449cf13227bce31eb8b5961a.png)
 
+<br/>
+
 
 ## SSH into the container
 
@@ -52,9 +59,13 @@ On the **Interactive Container Management** page, click the container to enter t
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_eeda2b242d7f24d74272c6cdfad8ec17.png)
 
+<br/>
+
 ## Enable AMP
 
 Enabling AMP involves two steps: setting environment variables and rewriting the computing program. The demonstration is as follows:
+
+<br/>
 
 ### Environment variable setting method
 
@@ -72,6 +83,8 @@ Response = 1 means **enabled** AMP<br/>
 Response = 0 means **stopped** AMP
 
 :::
+
+<br/>
 
 
 ### Code examples
@@ -93,6 +106,8 @@ model.compile(loss=loss, optimizer=opt)
 model.fit(...)
 ```
 
+<br/>
+
 ### A code example of handwritten digit recognition on MNIST dataset
 
 In Python, AMP can be enabled in Keras with the collocation of TensorFlow to train a handwritten digit recognition on MNIST dataset as follows:
@@ -112,6 +127,8 @@ print('Time for model.compile:', elapsed_time)
 :::info
 :bulb: The `KerasMNIST.py` (AMP disabled) and `kerasMNIST-AMP.py` (AMP enabled)  program files can be downloaded and reference [here](https://github.com/TW-NCHC/AI-Services/tree/master/Tutorial_One).
 :::
+
+<br/>
 
 
 ## Benchmark performance analysis: ResNet-50 v1.5
@@ -137,6 +154,8 @@ When you create a TWCC Interactive Container (TensorFlow 19.08-p3:latest), the s
 cd /workspace/nvidia-examples/resnet50v1.5
 mkdir results
 ```
+
+<br/>
 
 
 ###  Group 1. Control group: Baseline
@@ -167,6 +186,8 @@ The model training completed, and It could process about 393.49 images per secon
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9a1072b7574cc7dc6abcee91ef520147.png)
 
+<br/>
+
 
 
 ###  Group 2. Batch Size 256
@@ -192,7 +213,7 @@ Processing about 405.73 images per second, showing 1.03 times better performance
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2cf72e347cfc8a17634c2ed9c1f4fa0a.png)
 
-
+<br/>
 
 
 ###  Group 3. AMP enabled
@@ -221,6 +242,7 @@ Processing about 1308.37 images per second, showing 3.33 times better performanc
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b4251f877ae84fc3c466ac5330d8b041.png)
 
+<br/>
 
 
 ###  Group 4. XLA enabled
@@ -245,7 +267,7 @@ Processing about 1309.21 images per second, showing 3.33 times better performanc
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_926a8e53f6578ecae4cf7d19fbb6e81f.png)
 
-
+<br/>
 
 
 ###  Group 5. Double the batch size
@@ -261,6 +283,8 @@ You can directly analyze the performance of ResNet-50 through the following comm
 
 </div>
 </details>
+
+<br/>
 
 AMP reduces the usage of GPU memory, so we doubled the  batch size in an attempt to increase the execution performance. Enter the command directly in the command line as follows:
 
@@ -280,7 +304,7 @@ Processing about 1361.00 images per second, showing 3.46 times better performanc
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7da55c796423eb1359f95ecf7ab4db35.png)
 
-
+<br/>
 
 ### Performance comparison
 

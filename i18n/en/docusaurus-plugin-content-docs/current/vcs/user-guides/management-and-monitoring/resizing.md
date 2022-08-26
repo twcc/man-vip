@@ -18,7 +18,9 @@ The following example resizes a Linux instance created from instance type **v.8x
 The comparison of all instance types, configurations and prices, see [<ins>Pricing</ins>](https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#虛擬運算服務-Virtual-Compute-Service-VCS) for more information.
 :::
 
+
 <br/>
+
 
 
 ### Step 1. Create a VCS instance image
@@ -47,7 +49,9 @@ Save the instance data by creating an image for the VCS instance.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d4238750ab580fb05a318f61526d23a7.png)
 
+
 <br/>
+
 
 
 ### Step 2. Create an instance with a new type from the image
@@ -68,7 +72,9 @@ Save the instance data by creating an image for the VCS instance.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_571610d88b23578ba8b95881d8179059.png)
 
+
 <br/>
+
 
 
 :::info

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twccdocs/concept-ccs-lifecycle-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/concept-ccs-lifecycle-en'
 ---
 
 # Interactive container life cycle

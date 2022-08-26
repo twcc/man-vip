@@ -1,13 +1,10 @@
 ---
 sidebar_position: 6
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-tensorflow-inception-v3-port-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorflow-inception-v3-port-en'
 ---
 
 # Use TensorFlow Inception V3 to train image recognition model and generate inference engine
-
-:::success **Case scenario: What TWCC service is suitable for performing deep learning computing?**
-
-*Do you have the same problem? Let us take you hand in hand to assemble the TWCC cloud service architecture to easily solve your problems!*
-:::
 
 Deep learning is divided into two stages: **Training** and **Inference**. The former requires countless computing on a large amount of data to train and generate models, while the latter provides identification services by using model. the model.
 

@@ -2,6 +2,8 @@
 displayed_sidebar: role_permission
 sidebar_label: '解決手機收不到簡訊驗證碼'
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howo-service-receive-verif-phone-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howo-service-receive-verif-phone-zh' 
 ---
 
 

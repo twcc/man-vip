@@ -1,5 +1,7 @@
 ---
 sidebar_position: 7
+sync_original_production: 'https://man.twcc.ai/@twccdocs/cosbackup-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/cosbackup-en'
 ---
 
 # Use TWCC COS to back up, synchronize and restore data

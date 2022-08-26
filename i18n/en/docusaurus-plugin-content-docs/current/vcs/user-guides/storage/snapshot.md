@@ -18,7 +18,9 @@ To backup data in your data disks, please follow the steps to create and manage 
 For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, see [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-en#%E8%99%9B%E6%93%AC%E7%A3%81%E7%A2%9F%E6%9C%8D%E5%8B%99).
 :::
 
+
 <br/>
+
 
 ## Create a snapshot
 
@@ -43,7 +45,9 @@ Create a snapshot of your data disk to back up your data.
 
 </Tabs>
 
+
 <br/>
+
 
 
 ## View a snapshot
@@ -74,7 +78,9 @@ View ID, name, created time, creator and other information of the snapshot.
 
 </Tabs>
 
+
 <br/>
+
 
 
 ## Delete a snapshot
