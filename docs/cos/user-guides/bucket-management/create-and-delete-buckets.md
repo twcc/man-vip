@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-create-delete-bucket-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-create-delete-bucket-zh'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -7,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 # 建立、刪除儲存體
 
-:::caution
+:::tip
 以下操作方式僅限計畫之 [「<ins>**公共空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/%2F%40TWSC%2Fcos-overview-zh) 適用， [「<ins>**私有空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/%2F%40TWSC%2Fcos-overview-zh) 之檔案管理請透過 [<ins>**第三方軟體**</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40TWSC%2Fguide-cos-connect-info-zh) 操作。
 :::
 
@@ -22,11 +24,11 @@ import TabItem from '@theme/TabItem';
 
 儲存體建立後，即可將您的檔案上傳至儲存體，並可建立資料夾管理檔案。
 
-<details class="docspoiler">
+<Tabs>
+  <TabItem value="TWCC 入口網站" label="TWCC 入口網站" default>
 
-<summary><b> TWCC 入口網站 </b></summary>
 
-
+    
 * 從服務列表選擇「**雲端物件儲存**」，進入雲端物件儲存管理頁面後，點擊「**建立**」。
 
 
@@ -44,21 +46,9 @@ import TabItem from '@theme/TabItem';
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8d99b93fc09d2fe29f6e81f4e2f2af92.png)
 
 
-</details>
-
-
-<!-- Space -->
-
-<div style={{height:25+'px'}}></div>
-
-<!-- 2. start -->
-
-
-<!-- 1 start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
+  </TabItem>
+  <TabItem value="TWCC CLI" label="TWCC CLI">
+    
 
 
 - 建立名為 `bk_cli` 的儲存體
@@ -66,9 +56,11 @@ import TabItem from '@theme/TabItem';
 ```bash
 twccli mk cos -bkt bk_cli
 ```
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fc30b6409e2372886223660e2aefd2da.png)
 
-</details>
+  </TabItem>
+</Tabs>
 
 ## 删除儲存體
 
@@ -77,32 +69,16 @@ twccli mk cos -bkt bk_cli
 :::
 
 
-<details class="docspoiler">
-
-<summary><b> TWCC 入口網站 </b></summary>
-
+<Tabs>
+  <TabItem value="TWCC 入口網站" label="TWCC 入口網站" default>
 
 * 删除不必要的儲存體，只要點擊該儲存體列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>  選單按鈕，再按一下「**刪除**」。
 * 為避免誤删，請輸入欲删除的儲存體名稱再次確認。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_551737bbf1b9cedfbfe0bbb9948bbf05.png)
 
-</details>
-
-
-<!-- Space -->
-
-<div style={{height:25+'px'}}></div>
-
-<!-- 2. start -->
-
-
-<!-- 1 start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
-
+  </TabItem>
+  <TabItem value="TWCC CLI" label="TWCC CLI">
 
 - 刪除「**已清空**」的儲存體 `bk_cli1` 
 ```bash
@@ -124,4 +100,5 @@ twccli rm cos -bkt bk_cli2 -r
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_22bf710e843dce06cb3468f4ecc8824d.png)
 
-</details>
+  </TabItem>
+</Tabs>

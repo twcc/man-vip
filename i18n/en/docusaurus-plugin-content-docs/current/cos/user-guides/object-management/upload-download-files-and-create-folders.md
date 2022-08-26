@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-upload-download-files-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-upload-download-files-en'
 ---
 
 
@@ -9,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # Upload/download files and create folders
 
-:::caution
+:::tip
 The following operation methods are only applicable to the [<ins>**public COS**<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@preview-twccdocs/doc-cos-main-en/%2F%40TWSC%2Fcos-overview-en) of the project. For managing your [<ins>**private COS**<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@preview-twccdocs/doc-cos-main-en/%2F%40TWSC%2Fcos-overview-en), please use [<ins>**third-party software**</ins>](https://man.twcc.ai/@preview-twccdocs/doc-cos-main-en/https%3A%2F%2Fman.twcc.ai%2F%40TWSC%2Fguide-cos-connect-info-en).
 :::
 
@@ -48,7 +50,7 @@ Upload files to Cloud Object Storage (COS) bucket from your local computer:
 
 
 
-:::caution
+:::tip
 
 File limit: The maximum file size is 1GB, and the maximum number of files per upload is 1000. If you want to upload larger and more files, you can download and use the **Third-party Software** in the left-hand menu.
 
@@ -58,7 +60,7 @@ File limit: The maximum file size is 1GB, and the maximum number of files per up
   <TabItem value="TWCC CLI" label="TWCC CLI">
     
 
-:::caution
+:::tip
 Files can be retrieved by **relative path** and **absolute path** to upload to buckets.
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_66f6bc7fd0b69de7274d2a3251a5a817.png)
 :::
@@ -102,7 +104,7 @@ Download files from COS bucket to your local computer:
 * On Content page of the bucket, check the file you want to download and click **DOWNLOAD** button at the top of the page.
 
 
-:::caution
+:::tip
 Currently, you can only download one file at a time using Portal. If you want to download multiple files, you can use the **Third-party Software** in the left-hand menu.
 :::    
     
