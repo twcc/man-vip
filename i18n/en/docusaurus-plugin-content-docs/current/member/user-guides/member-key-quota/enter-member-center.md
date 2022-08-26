@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twsdocs/howto-service-access-service-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/howto-service-access-service-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -21,13 +23,10 @@ Access methods are differentiated by users, please refer to the following steps:
 ### Method 1: TWCC 
 
 - Step 1. Sign in TWCC
-
     - Go to the TWCC portal and Click to sign in.
-    
     ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cd9b6df79c2209ff5fbe7a48b14ffaa4.png)
-
     - Select "**國網學研用戶(NCHC users in academic and research circles)**" portal, enter your account and password to login.
-==**Need to update:exclamation:**==
+    ==**Need to update:exclamation:**==
     ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2f4b809434719e28fd359695264cf884.png)
 
 
@@ -36,6 +35,8 @@ Access methods are differentiated by users, please refer to the following steps:
     Click the upper right corner "**Username**, and continue by clicking "**Account & Project**" to enter Member Center.
     
     ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_935daeeeb63f6f79e5428ab924c15611.png)
+
+<br/>
 
 ### Method 2:
 

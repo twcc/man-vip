@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-duplicate-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-duplicate-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -15,14 +17,14 @@ Besides, the billing started when the container is created. When a container is 
 
 :::caution
 1. The scope of the container duplicate does not include the data in the default directories /home and /work of the container. Please note the package installation location before creating a duplicate. For the notice of installing the Python package, please refer to: [<ins>TWCC Interactive Container - Python package installation guide</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-en).
-2. When you store more than 10 GB of data in the container system directory (not /home or /work directory of [<ins>Hyper File System (HFS)</ins>](https://man.twcc.ai/@twccdocs/doc-hfs-main-en)), the container duplicate might not be created normally.
-
+2. When you store more than 10 GB of data in the container system directory (not /home or /work directory of [<ins>Hyper File System (HFS)</ins>](https://man.twcc.ai/@twccdocs/doc-hfs-main-en)), the container duplicate might not be created normally.<br/>
 If you have any problems, please contact our Technical Support or Customer Service, thank you!
 :::
 
+<br/>
 
 
-## 建立開發型容器複本
+## Create Interactive Container duplicate
 
 <Tabs>
 <TabItem value="TWCC Portal" label="TWCC Portal">
@@ -72,6 +74,7 @@ twccli ls ccs -dup
 The container duplicate cannot be deleted after creating.
 :::
 
+<br/>
 
 
 ## Create a custom container from a duplicate
@@ -107,12 +110,14 @@ Members in the same project can share and use all duplicates, and you can see al
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
+
 - Create a container with the image type `Custom Image`, image configuration and tag `tensorrt-19.08-py3:dup1`, and name the duplicate as `dupcli`.
 
 ```bash
 twccli ls ccs -img "Custom Image"
 twccli mk ccs -itype "Custom Image" -img "tensorrt-19.08-py3:dup1" -n dupcli
 ```
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3310c270ae57370c22704b470cccbe60.png)
 
 

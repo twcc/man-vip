@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-port-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-port-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -14,10 +16,16 @@ With the automatic association of container ports by default, the SSH server run
 ==**Need to update AI inference link:exclamation:**==<br/>
 The custom **target ports** are: 5000, 5001, and 5002. You can set the daemon of the service running on a container to one of the target ports, and associate it with the public port. After that, the system will configure a corresponding **public port (50000 ~ 60000)**. You can expose your service with use the public IP and the public port. (e.g., [AI inference ](https://man.twcc.ai/@twccdocs/rkOTAaoa4?type=view)or[ Website service](https://man.twcc.ai/@twccdocs/howto-ccs-config-service-port-en)).
 
+<br/>
+
+
 ## Prerequisites
 - Create [Interactive Containers](https://man.twcc.ai/@twccdocs/guide-ccs-create-en).
 - To operate using the TWCC portal: once the container is created, click on the container you want to connect to on the **Interactive Container Management** page and enter the **Interactive Container Details** page.
 - To operate using the TWCC CLI: please obtain the [Container's ID](https://man.twcc.ai/@twccdocs/guide-ccs-manage-zh#%E6%AA%A2%E8%A6%96%E8%B3%87%E8%A8%8A) first.
+
+<br/>
+
 
 ## View service port information 
 
@@ -46,6 +54,7 @@ twccli ls ccs -p -s 886330
 </TabItem>
 </Tabs>
 
+<br/>
 
 
 ## Associate the service port
@@ -77,6 +86,7 @@ twccli net ccs -p 5000 -open -s 886330
 </TabItem>
 </Tabs>
 
+<br/>
 
 
 ## Dissociate the service port

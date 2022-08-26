@@ -1,6 +1,8 @@
 ---
 sidebar_label: '其他操作'
 sidebar_position: 4
+sync_original_production: 'https://man.twcc.ai/@twccdocs/role-other-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-other-en'
 ---
 
 # Comparison of role permissions of TWCC： Other Operations
