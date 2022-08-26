@@ -1,5 +1,7 @@
 ---
 sidebar_position: 7
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-scontrol-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-scontrol-zh'
 ---
 
 # scontrol
@@ -8,37 +10,13 @@ scontrol是用於查看和/或修改Slurm狀態的管理工具。請注意，許
 
 如果沒有在命令列上定義執行的指令，將會進入互動模式等待輸入直到退出，所有的指令都不區分大小寫，但節點名稱、分區名稱、以及保留名稱有區分大小寫。修改後的Slurm設定檔可以使用「scontrol write config」指令來寫入檔案，檔名將會是與slurm.conf同目錄下的「slurm.conf.(datetime)」，當中datetime 表示寫入時間，且該目錄必須要事先設定為可寫入的權限。通常一般使用者會使用「show (ENTITY) (ID)」的方式來查看特定項目的狀態，例如下面範例，使用scontrol顯示特定任務的狀態：
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
 
-$ sbatch test.sh 
-Submitted batch job 3144
-$ scontrol show job 3144
-JobId=3144 JobName=test.sh
-   UserId=yiching709(12504) GroupId=TRI1072327(18712) MCS_label=N/A
-   Priority=4294899365 Nice=0 Account=root QOS=normal
-   JobState=RUNNING Reason=None Dependency=(null)
-   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
-   RunTime=00:00:03 TimeLimit=1-00:00:00 TimeMin=N/A
-   SubmitTime=2018-12-15T18:38:40 EligibleTime=2018-12-15T18:38:40
-   StartTime=2018-12-15T18:38:40 EndTime=2018-12-16T18:38:40 Deadline=N/A
-   PreemptTime=None SuspendTime=None SecsPreSuspend=0
-   LastSchedEval=2018-12-15T18:38:40
-   Partition=SlurmDefault AllocNode:Sid=un-ln01:25095
-   ReqNodeList=(null) ExcNodeList=(null)
-   NodeList=gn0512.twcc.ai
-   BatchHost=gn0512.twcc.ai
-   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
-   TRES=cpu=1,mem=771413M,node=1,billing=1
-   Socks/Node=* NtasksPerN:B :S:C=0:0:*:* CoreSpec=*
-   MinCPUsNode=1 MinMemoryNode=771413M MinTmpDiskNode=0
-   Features=(null) DelayBoot=00:00:00
-   Gres=(null) Reservation=(null)
-   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
-   Command=/fs02/yiching709/test.sh
-   WorkDir=/fs02/yiching709
-   StdErr=/fs02/yiching709/slurm-3144.out
-   StdIn=/dev/null
-   StdOut=/fs02/yiching709/slurm-3144.out
-   Power=
+```
+sbatch test.sh
+``` 
+![image](https://user-images.githubusercontent.com/109254397/184575046-1d00936f-2fd8-4880-8200-c2563c440185.png)
+```
+scontrol show job 3144
+```
+![image](https://user-images.githubusercontent.com/109254397/184575064-b7fca8df-b50b-4508-86d0-fd78c3142ab7.png)
 
-</div>
