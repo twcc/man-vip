@@ -1,5 +1,7 @@
 ---
 sidebar_position: 5
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol-linux-en' 
 ---
 
 # Initialize Linux disks
@@ -7,6 +9,9 @@ sidebar_position: 5
 To increase the storage space for the existing VCS instances, create and attach data disks of Virtual Disk Service to the target VCS instance. Then the data disks whether in Windows or Linux should be initialized and detected before you can access.
 
 In the following tutorial we will show you how to initialize your new data disks.
+
+<br/>
+
 
 ### Step 1. Check if the disk is attached to the VCS instance
 
@@ -22,6 +27,8 @@ sudo fdisk -l
 ```
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b06740e0fcd40ed80dc82fd3fdbdbb71.png)
+
+<br/>
 
 
 ### Step 2. Format the disk
@@ -40,6 +47,9 @@ sudo mkfs -t ext4 <DISK_DEVICE>
 - `<DISK_DEVICE>`: Disk device such as `/dev/vdb`
 :::
 
+<br/>
+
+
 ### Step 3. Mount the disk
 
 Create a directory where you'll mount the disk.
@@ -57,6 +67,9 @@ Mount the disk to the directory.
 ```
 sudo mount <DISK_DEVICE> <DIRECTORY>
 ```
+
+<br/>
+
 
 ### Step 4. Check if the disk is mounted successfully
 
