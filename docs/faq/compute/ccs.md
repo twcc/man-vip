@@ -27,9 +27,9 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 您可使用容器訓練 AI 模型並生成推論引擎，步驟參考如下：
 
-**Step 1.** 參考[高速檔案系統文件](https://www.twcc.ai/doc?page=hfs)，將 AI 模型程式上傳到高速檔案系統，儲存於 `/home/主機帳號` 或 `/work/主機帳號` 目錄之下。
-**Step 2.** 參考[開發型容器文件](https://www.twcc.ai/doc?page=container)，建立容器，並連線容器進行模型訓練。
-**Step 3.** 訓練完成，可參考[高速檔案系統文件](https://www.twcc.ai/doc?page=hfs)，下載所需要的資料。
+**Step 1.** 參考[高速檔案系統文件](https://www.twcc.ai/doc?page=hfs)，將 AI 模型程式上傳到高速檔案系統，儲存於 `/home/主機帳號` 或 `/work/主機帳號` 目錄之下。  
+**Step 2.** 參考[開發型容器文件](https://www.twcc.ai/doc?page=container)，建立容器，並連線容器進行模型訓練。  
+**Step 3.** 訓練完成，可參考[高速檔案系統文件](https://www.twcc.ai/doc?page=hfs)，下載所需要的資料。  
 **Step 4.** 若要進行推論，可參考[HowTo文件](https://www.twcc.ai/doc?page=howto_ctn2)於容器內進行，或參考[虛擬運算文件](https://www.twcc.ai/doc?page=vm)，建立虛擬運算個體進行推論。
 
 </details>
@@ -89,7 +89,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 2. 請檢查貴單位防火牆設定是否有阻擋容器使用的 port，容器 port 範圍為 50000 ~ 60000。
 
 </details>
-
+<div style={{height:10+'px'}}></div>
 
 ## 管理容器
 
