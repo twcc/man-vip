@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-cyberduck-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-cyberduck-en'
 ---
 
 # Manage files with third-party software - Cyberduck

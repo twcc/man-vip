@@ -30,6 +30,8 @@ sudo fdisk -l
 
 <br/>
 
+<br/>
+
 
 ### Step 2. 將磁碟格式化
 

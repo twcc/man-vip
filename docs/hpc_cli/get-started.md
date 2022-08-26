@@ -1,6 +1,8 @@
 ---
 sidebar_label: '從零開始'
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/getstarted-twnia2-submit-job-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/getstarted-twnia2-submit-job-zh'
 ---
 
 
@@ -60,7 +62,7 @@ sidebar_position: 2
 
 <!-- Space -->
 
-<div style={{height:8+'px'}}></div>
+<div style={{height:15+'px'}}></div>
 
 <!-- 2. start -->
 
@@ -78,7 +80,7 @@ sidebar_position: 2
 
 
 </details>
-
+<div style={{height:15+'px'}}></div>
 
 ### Step 2. 登入台灣杉二號 (命令列介面)
     
@@ -101,7 +103,7 @@ sidebar_position: 2
 
 <!-- Space -->
 
-<div style={{height:8+'px'}}></div>
+<div style={{height:15+'px'}}></div>
 
 <!-- 2. start -->
 
@@ -116,7 +118,7 @@ sidebar_position: 2
 
 
 </details>
-    
+<div style={{height:15+'px'}}></div>
 
 ### Step 3. 提交跨節點運算工作
     
@@ -127,8 +129,8 @@ sidebar_position: 2
 - 動手試試看！文章以 Horovod 撰寫的 benchmark script 為腳本範例，您可以直接複製內容建立工作腳本。
 - 不同 Queue 針對工作最長運行時間、可提交的工作數量有所不同，您可以參考 [<ins>Queue 與計算資源使用說明</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-twnia2-queue-zh)，依需求選擇，並修改腳本設定。
 - 使用 `sacct -X` 指令可查詢運算工作狀態，若運算工作已完成 (**`COMPLETED`**)、取消 (**`CANCELLED`**)、執行失敗 (**`FAILED`**)，系統將會以使用的 GPU 數量、總時長計算並扣底額度。
-- 使用 `$ scancel <JOB_ID>` 可取消運算工作，停止繼續計費。
-- 費率資訊請參考價目表：<a href="https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#%E9%AB%98%E9%80%9F%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-High-performance-Computing-HPC"><font style={{backgroundColor:'#FF0000', borderRadius: 30+'px', padding: 0.3+'em', fontSize: 16+'px'}}><font style={{color:'white'}}> <b>&nbsp;Academic&nbsp;</b></font></font></a> <a href="https://man.twcc.ai/@twsdocs/pricing-zh#%E9%AB%98%E9%80%9F%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-High-performance-Computing-HPC"><font style={{backgroundColor:'#008ad8', borderRadius: 30+'px', padding: 0.3+'em', fontSize: 16+'px'}}><font style={{color:'white'}}> <b>&nbsp;Enterprise&nbsp;</b></font></font></a>
+- 使用 `$ scancel <JOB_ID>` 可取消運算工作，停止繼續計費。<div style={{height:15+'px'}}></div>
+- 費率資訊請參考價目表：<a href="https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#%E9%AB%98%E9%80%9F%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-High-performance-Computing-HPC"><font style={{backgroundColor:'#FF0000', borderRadius: 30+'px', padding: 0.3+'em', fontSize: 16+'px'}}><font style={{color:'white'}}> <b>&nbsp;Academic&nbsp;</b></font></font></a> <a href="https://man.twcc.ai/@twsdocs/pricing-zh#%E9%AB%98%E9%80%9F%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-High-performance-Computing-HPC"><font style={{backgroundColor:'#008ad8', borderRadius: 30+'px', padding: 0.3+'em', fontSize: 16+'px'}}><font style={{color:'white'}}> <b>&nbsp;Enterprise&nbsp;</b></font></font></a><div style={{height:15+'px'}}></div>
 - 您可於會員中心檢視額度與資源用量 <a href="https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-view-billing-resource-usage-zh"><font style={{backgroundColor:'#FF0000', borderRadius: 30+'px', padding: 0.2+'em', fontSize: 16+'px'}}><font style={{color:'white'}}> <b>&nbsp;Academic&nbsp;</b></font></font></a>
 
 :::

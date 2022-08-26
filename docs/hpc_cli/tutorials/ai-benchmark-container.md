@@ -1,13 +1,12 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-twnia2-run-parallel-job-container-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-twnia2-run-parallel-job-container-zh' 
 ---
 
 # 容器跨節點高速運算－AI Benchmark
 
 
-:::tip **適用情境：如何使用超過 8 顆 GPUs 運算？如何建立台灣杉二號的容器？如何提交 Job？**
-*您是否也有相同的困擾？讓我們手把手帶您組合 TWCC 雲端服務架構，輕鬆解決您的問題！*
-:::
 本篇文章將教學如何使用 **TWCC 台灣杉二號 (命令列介面) (*TWNIA2 (HPC CLI)*)** 建立容器與執行跨節點高速運算。
 
 TWCC 容器運算服務 (開發型容器與任務型容器)、HPC 高速運算任務，皆採用 [NVIDIA NGC 優化之容器](https://ngc.nvidia.com/catalog/containers)，包含`TensorFlow`、`PyTorch` ...等等。本篇文章也將採用 NGC 容器做為操作範例<sup>[1]</sup>。
@@ -23,16 +22,18 @@ TWCC 容器運算服務 (開發型容器與任務型容器)、HPC 高速運算�
 [3] 也可下載 Docker Hub 或其他 Container Registry 的容器使用，更多資訊請參考 [<ins>HowTo：建立 TWNIA2 容器</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-zh)。
 :::
 
+<br/>
+
 
 ## Step 1. 使用已預載容器或下載 NGC 容器
 
 TWCC 已為使用者預載以下 3 個常用的 NGC 容器，並放置於路徑 `/work/TWCC_cntr` 之下：
-- **NGC 21.11 TensorFlow 1** | [Release Note](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_21-11.html#rel_20-11) | [Tags](https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow/tags)
+- **NGC 21.11 TensorFlow 1** | [Release Note](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_21-11.html#rel_20-11) | [Tags](https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow/tags)<br/>
  路徑：`/work/TWCC_cntr/tensorflow_21.11-tf1-py3.sif` 
-- **NGC 21.11 TensorFlow 2** | [Release Note](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_21-11.html#rel_20-11) | [Tags](https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow/tags)
+- **NGC 21.11 TensorFlow 2** | [Release Note](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_21-11.html#rel_20-11) | [Tags](https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow/tags)<br/>
  路徑：`/work/TWCC_cntr/tensorflow_21.11-tf2-py3.sif`
-- **NGC 21.11 PyTorch** | [Release Note](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_21-11.html#rel_21-11) | [Tags](https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow/tags)
- 路徑1：`/work/TWCC_cntr/pytorch_21.11-py3.sif`
+- **NGC 21.11 PyTorch** | [Release Note](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_21-11.html#rel_21-11) | [Tags](https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow/tags)<br/>
+ 路徑1：`/work/TWCC_cntr/pytorch_21.11-py3.sif`<br/>
  路徑2：`/work/TWCC_cntr/pytorch_21.11-py3_horovod.sif` (額外安裝 horovod)
 
 若想使用其他版本或其他容器，TWCC 台灣杉二號已安裝 Singularity，您可以使用 `singularity pull` 指令，下載 Singularity 容器<sup>[4]</sup>。
@@ -40,6 +41,8 @@ TWCC 已為使用者預載以下 3 個常用的 NGC 容器，並放置於路徑 
 :::info
 [4] 可下載 Docker Hub 或其他 Container Registry 的容器使用，更多使用方式與資訊請參考 [<ins>HowTo：建立 TWNIA2 容器</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-zh)。
 :::
+
+<br/>
 
 
 ## Step 2. 在容器裡安裝套件 (可略)
@@ -82,6 +85,9 @@ Stage: build
 [6] NGC 提供的容器，TensorFlow 有安裝 Horovod，而 PyTorch 則無，因此需額外安裝。
 :::
 
+<br/>
+
+
 ## Step 3. 啟用混合精度 (可略)
 
 NVIDIA 提供的 TensorFlow、PyTorch、MXNet，皆可啟用混合精度 (Automatic Mixed Precision)，可以提高運算速度，若有需要請參考 NVIDIA [Automatic Mixed Precision for Deep Learning](https://developer.nvidia.com/automatic-mixed-precision)。
@@ -89,6 +95,8 @@ NVIDIA 提供的 TensorFlow、PyTorch、MXNet，皆可啟用混合精度 (Automa
 :::info
 也可參考以 TWCC 容器服務[<ins>開啟 TensorFlow 自動混合精度運算與執行效能分析</ins>](https://www.twcc.ai/doc?page=howto_ctn6)。
 :::
+
+<br/>
 
 
 ## Step 4. 撰寫 Slurm Job Script
@@ -112,6 +120,8 @@ vim <FILE_NAME>.sh
 :::info
 您可使用習慣的編輯器撰寫 `.sh` 檔案，範例採用 vim 操作。
 :::
+
+<br/>
 
 ### TensorFlow 1
 ```bash
@@ -145,6 +155,8 @@ export NCCL_DEBUG=INFO
 srun $SINGULARITY $HOROVOD
 ```
 
+<br/>
+
 ### TensorFlow 2
 
 ```bash
@@ -174,6 +186,8 @@ export NCCL_DEBUG=INFO
 
 srun $SINGULARITY $HOROVOD
 ```
+
+<br/>
 
 ### PyTorch
 ```bash
@@ -216,6 +230,8 @@ srun $SINGULARITY $HOROVOD
 3. 更多 Queue 資訊，請參考 [<ins>Queue 與計算資源使用說明</ins>](https://www.twcc.ai/doc?page=hpc_cli#4-Queue-%E8%88%87%E8%A8%88%E7%AE%97%E8%B3%87%E6%BA%90%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E)。
 :::
 
+<br/>
+
 
 ## Step 5. 提交 Job
 
@@ -228,6 +244,9 @@ sbatch <FILE_NAME>.sh
 :::info
 提交完成後，將顯示系統派發的 Job ID。
 :::
+
+<br/>
+
 
 ## Step 6. 查看和取消
 
@@ -249,6 +268,3 @@ tail -f slurm_<JOB_ID>.out
 ```bash
 scancel <JOB_ID>
 ```
-
-##  <i class="fa fa-backward" aria-hidden="true"></i> 前一主題
-- 如何建立 TWNIA2 容器？:point_right: [HowTo：建立 TWNIA2 容器](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-zh)

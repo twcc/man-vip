@@ -32,6 +32,8 @@ import TOCInline from '@theme/TOCInline';
 
 <br/>
 
+<br/>
+
 
 ### Step 2. 新建相同容量的 HDD 資料磁碟
 
@@ -92,6 +94,8 @@ rsync -avh <Disk_A> <Disk_B>
 * 刪除 SSD 資料磁碟，回收儲存資源。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_717dfbe52ccb104d02c972299c0e83ab.png)
+
+<br/>
 
 <br/>
 

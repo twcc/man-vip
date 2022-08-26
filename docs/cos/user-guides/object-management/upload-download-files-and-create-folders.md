@@ -1,10 +1,15 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-upload-download-files-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-upload-download-files-zh'
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # 上傳、下載檔案、建立資料夾
 
-:::caution
+:::tip
 以下操作方式僅限計畫之 [「<ins>**公共空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/%2F%40TWSC%2Fcos-overview-zh) 適用， [「<ins>**私有空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/%2F%40TWSC%2Fcos-overview-zh) 之檔案管理請透過 [<ins>**第三方軟體**</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40TWSC%2Fguide-cos-connect-info-zh) 操作。
 :::
 
@@ -15,9 +20,8 @@ sidebar_position: 1
 
 <!-- 1 start -->
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
+<Tabs>
+  <TabItem value="TWCC 入口網站" label="TWCC 入口網站" default>
 
 
 * 進入儲存體的內容頁面，點擊「**上傳**」。
@@ -47,25 +51,16 @@ sidebar_position: 1
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9bcdf1d73e3d33fe0fcbc8ac42fcfb24.png)
 
 
-:::caution
+:::tip
 檔案上傳限制：單一檔案不得超過 1GB，總檔案數不得超過 1000，如欲上傳更大更多的檔案，可透過左側功能列之「第三方軟體下載」。
 :::
 
-</details>
-
-<!-- Space -->
-
-<div style={{height:8+'px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
+  </TabItem>
+<TabItem value="TWCC CLI" label="TWCC CLI">
 
 
-:::caution
-上傳檔案可藉『相對路徑』、『絕對路徑』擷取資料傳入儲存體
+:::tip
+上傳檔案可藉『相對路徑』、『絕對路徑』擷取資料傳入儲存體<br/>
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_66f6bc7fd0b69de7274d2a3251a5a817.png)
 :::
 
@@ -94,7 +89,8 @@ twccli cp cos -bkt bk_cli -dir testf2 -sync to-cos
 ```
 
 
-</details>
+  </TabItem>
+</Tabs>
 
 ## 下載檔案
 
@@ -102,30 +98,22 @@ twccli cp cos -bkt bk_cli -dir testf2 -sync to-cos
 
 <!-- 1 start -->
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
+<Tabs>
+  <TabItem value="TWCC 入口網站" label="TWCC 入口網站" default>
 
 
 * 在儲存體的內容頁面，勾選欲下載的檔案後點擊列表上方的「下載」按鈕。
 
-:::caution
+:::tip
 目前一次僅能下載一個檔案，如欲下載多個檔案，可透過左側功能列之「第三方軟體下載」。
 :::    
     
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c870bc168585b7f3fe610bcd24a12ceb.png)
 
-</details>
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_89160860cbe9de11aabbe75ff2a718bc.png)
 
-<!-- Space -->
 
-<div style={{height:8+'px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>TWCC CLI</b></summary>
+  </TabItem>
+  <TabItem value="TWCC CLI" label="TWCC CLI">
 
 
 - 自儲存體下載單一檔案(檔名:`testfile1`)至當前資料夾
@@ -161,22 +149,26 @@ twccli ls cos -bkt bk_cli
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a7d7d0ece77cba4025908f4c48453de6.png)
 
 
-</details>
+  </TabItem>
+</Tabs>
     
+
+
 ## 建立資料夾
 
 您可以建立資料夾管理您的檔案：
 
 <!-- 1 start -->
 
-<details class="docspoiler">
 
-<summary><b>TWCC 入口網站</b></summary>
-
+<Tabs>
+  <TabItem value="TWCC 入口網站" label="TWCC 入口網站" default>
 
 * 在儲存體的內容頁面，點擊「**建立資料夾**」，輸入資料夾名稱後按「**確定**」，即建立成功。
     
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c19115d4aa65893e358df12917a94d82.png)
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_94ccd09b44b8a0058821e9f279dcb5f8.png)
 
 
-</details>
+  </TabItem>
+</Tabs>

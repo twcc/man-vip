@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: '準備工作'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-prerequisite-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -25,7 +27,7 @@ import TabItem from '@theme/TabItem';
 
 - 進入欲連線的虛擬運算個體詳細資料頁面。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f10c84d9be1fd4db71368249ec2af969.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c065f020c08007cad3c40a0d17c32444.png)
 
 - 至「網路與連線」區域，點選「**配置**」。
 
@@ -47,10 +49,10 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### 指令
+**指令**
 
 ```bash
-twccli net vcs -s   # 虛擬運算個體 ID
+twccli net vcs -s       # 虛擬運算個體 ID
                -fip
 ```
 
@@ -58,8 +60,10 @@ twccli net vcs -s   # 虛擬運算個體 ID
 **[ ]** 中括號內為選擇性參數，其餘為必要參數。
 :::
 
+<br/>
 
-### 範例
+
+**範例**
 
 為 ID **`937648`** 的虛擬運算個體，建立公用 IP，並檢視是否建立成功
 
@@ -74,6 +78,8 @@ twccli ls vcs
 
 </Tabs>
 
+<br/>
+
 
 ## Step 2. 取得連線資訊
 
@@ -83,29 +89,31 @@ twccli ls vcs
 
 <TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-#### Linux 個體
+**Linux 個體**
 
 * 進入欲連線的虛擬運算個體詳細資料頁面
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f10c84d9be1fd4db71368249ec2af969.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c065f020c08007cad3c40a0d17c32444.png)
 
 * 點擊「**連線**」按鈕。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_217682606d5868b5df670f8305ec5d75.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8343bbc37911ad21d03d7f320e033e77.png)
 
 * Linux 個體點擊「**連線**」按鈕後，系統會出現使用 SSH 連線到您的虛擬運算個體的資訊及步驟，每台個體的資訊不同。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_10fc84856418521027fc8575ecc61e61.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6a67ed29fee947c94562327049f2ca61.png)
 
 :::info
 此範例以 Ubuntu 為例，不同作業系統的虛擬運算個體，系統提示資訊將有所不同。
 :::
 
-#### Windows 個體
+<br/>
+
+**Windows 個體**
 
 * 進入欲連線的虛擬運算個體詳細資料頁面，點擊「**連線**」按鈕後，系統將提供連線提示 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1799d2dee05b2fddda0996c666f813fb.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3a723f629d377148c6c599c6a3f51378.png)
 
 - 登入帳密：
 

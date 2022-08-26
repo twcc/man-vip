@@ -1,6 +1,8 @@
 ---
 title: '服務概觀'
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/oneai-overview-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/oneai-overview-zh'
 ---
 
 
@@ -12,7 +14,7 @@ sidebar_position: 1
 
 透過 [訂閱 TWCC OneAI](https://man.twcc.ai/@twccdocs/oneai-subscription-policy-zh)，您可以與計畫成員隨時隨地取得全套 AI 應用的各種新方法。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_17ca3bdc0b7cad474497f9ee929130ec.png)
+<img style={{'background-color':'white'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_17ca3bdc0b7cad474497f9ee929130ec.png"/>
 
 TWCC OneAI 提供：
 

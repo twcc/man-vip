@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
-title: '本機為 Windows'
+title: 'From Windows'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-to-linux-from-windows-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -20,14 +22,7 @@ Please note that the instance must be in the **`Ready`** state before you can co
 
 <details class="docspoiler">
 
-<summary>
-
-## 1. Built-in Command Prompt
-
-</summary>
-
-<br/>
-
+<summary><b>1. Built-in Command Prompt</b></summary>
 
 On your local machine, open the Command Prompt and enter `ssh -V` to check if the SSH client is available. If yes, you will see the client's version. If not, for quickly install OpenSSH Client, or refer to other connection methods, see [<ins>Microsoft official document</ins>](https://docs.microsoft.com/zh-tw/windows-server/administration/openssh/openssh_install_firstuse#installing-openssh-from-the-settings-ui-on-windows-server-2019-or-windows-10-1809) for more information.
 
@@ -84,13 +79,7 @@ Last login: Tue May 14 14:14:37 2019 from 220-141-25-168.dynamic-ip.hinet.net
 
 <details class="docspoiler">
 
-<summary>
-
-## 2. Third-party software: MobaXterm
-
-</summary>
-
-<br/>
+<summary><b>2. Third-party software: MobaXterm</b></summary>
 
 MobaXterm's graphical user interface is intuitive and easy to use. The key pair can be used directly without conversion.
 
@@ -138,14 +127,8 @@ Connection established!
 
 <details class="docspoiler">
 
-<summary>
+<summary><b>3. Third-party software: PuTTY</b></summary>
 
-## 3. Third-party software: PuTTY
-
-</summary>
-
-<br/>
-    
 PuTTY does not support the key pair format `.pem`  , so please convert the `.pem` file to `.ppk`by using PuTTYgen.
 
 <br/>
@@ -219,14 +202,7 @@ Please download the [<ins>PuTTY</ins>](https://www.putty.org/) and complete the 
 
 <details class="docspoiler">
 
-<summary>
-
-## 4. Third-party software: VScode
-
-</summary>
-
-<br/>
-
+<summary><b>4. Third-party software: VScode</b></summary>
 
 If you are already using VScode to develop your program, you may directly using this software to connect to your VCS instance. VScode supports a variety of platforms, and there are many plug-in software packages available, easy to install, and quite suitable for novices. For complete instructions, please refer to [<ins>Official documentation</ins>](https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks).
 

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-2-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-2-en'
 ---
 
 import TOCInline from '@theme/TOCInline';
@@ -60,36 +62,15 @@ sudo certbot --nginx -d <Domain_Name>
 ```
 
 :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **Note:** 
 
-1. Enter e-mail address below to receive urgent renewal or safety notices
+1. Enter e-mail address below to receive urgent renewal or safety notices<div style={{height:5+'px'}}></div>
+![image](https://user-images.githubusercontent.com/109254397/184550225-cea21a14-989e-4716-9734-c90be29d3a67.png)
+![image](https://user-images.githubusercontent.com/109254397/184550263-c9fb6e98-9c63-4150-9f6d-6accf94e3313.png)
 
-```
-Enter email address (used for urgent renewal and security notices) (Enter 'c' to
-cancel): 
-```
 
-```
-Please read the Terms of Service at
-https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf. You must
-agree in order to register with the ACME server at
-https://acme-v02.api.letsencrypt.org/directory
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-(A)gree/(C)ancel: A
-```
+2. Please select `1` for the following content, there is no need to redirect the HTTP connection to HTTPS and delete the HTTP connection:<div style={{height:5+'px'}}></div>
+![image](https://user-images.githubusercontent.com/109254397/184550314-80aed63f-ca93-49ea-a0a0-daefd906b1ee.png)
 
-2. Please select `1` for the following content, there is no need to redirect the HTTP connection to HTTPS and delete the HTTP connection:
-
-```
-Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-1: No redirect - Make no further changes to the webserver configuration.
-2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
-new sites, or if you're confident your site works on HTTPS. You can undo this
-change by editing your web server's configuration.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 1
-```
 
 :::
 

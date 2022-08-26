@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
-title: '服務概觀'
+title: 'Service Overview'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/cfs-overview-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/cfs-overview-en'
 ---
 
 # <img  style={{width:40+'px', height:40+'px'}} src="https://i.imgur.com/HmCCsr5.png" /> Service Overview 

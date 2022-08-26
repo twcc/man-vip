@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: '資訊安全服務概觀'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/security-overview-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/security-overview-zh'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -17,6 +19,8 @@ TWCC 提供以下加值的**安全服務**，用以加強資源使用的資訊�
 
 除了提供以上可靠的加值安全服務，TWCC 重視客戶的信任，平台系統每年強化資安機制與政策以獲得國際資安認證 (見下方 [<i class="fa fa-certificate" aria-hidden="true"></i>TWCC 資安國際認證](##-TWCC-資安國際認證)、[<i class="fa fa-shield" aria-hidden="true"></i> TWCC 資安系統與機制](#-TWCC-資安系統與機制))，取得政府、教育、醫療單位、科技公司用戶之合作機會，為多元的客戶管理機敏資料。
 
+<br/>
+
 
 ## <i class="fa fa-certificate" aria-hidden="true"></i> TWCC 資安國際認證
 
@@ -25,6 +29,8 @@ TWCC 提供以下加值的**安全服務**，用以加強資源使用的資訊�
 <br/>
 
 <div class="first" style={{'background-color':'#FDF2E9', 'color':'black', 'padding':'15px', 'border-radius':'5px'}}>
+
+<br/>
 
 ### <i class="fa fa-check-square-o" aria-hidden="true"></i> 變革創新管理品質典範
 
@@ -75,6 +81,8 @@ TWCC 因全力推動台灣整體 AI 產業發展，並以培植 AI 成為下一�
 雲端安全聯盟 Cloud Security Alliance, CSA<br/>
 雲端安全認證 STAR (Security, Trust and Assurance Registry)</div>
 </div>
+
+<br/>
 
 ---
 

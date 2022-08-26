@@ -40,6 +40,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 
 <br/>
 
+<br/>
+
 
 ### Step 4. 初始化磁碟
 
@@ -50,6 +52,9 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 - 初始化後，磁碟的狀態將由`未初始化`轉為`連線`。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8fe46977dd19a878a79e0b194dbab15b.png)
+
+<br/>
+
 
 <br/>
 

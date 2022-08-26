@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-host-secure-multi-web-one-instance-2-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-host-secure-multi-web-one-instance-2-en'
 ---
 
 # Part 2: Install SSL certificates for websites
@@ -55,34 +57,16 @@ certbot --nginx -d <Domain_Name>
 
 :::info
 1. Replace ```<Domain_Name>``` with the domain name you've just registered.
-2. Enter e-mail to receive emergency or safety notice.
 
-```
-Enter email address (used for urgent renewal and security notices) (Enter 'c' to
-cancel): 
-```
+2. Enter e-mail to receive emergency or safety notice.<div style={{height:5+'px'}}></div>
+![image](https://user-images.githubusercontent.com/109254397/184550510-5e320000-861b-47a2-966c-9f3f5a9d95d5.png)
+![image](https://user-images.githubusercontent.com/109254397/184550522-4dfcfbd6-9930-4b29-8f00-12578ac5de85.png)
 
-```
-Please read the Terms of Service at
-https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf. You must
-agree in order to register with the ACME server at
-https://acme-v02.api.letsencrypt.org/directory
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-(A)gree/(C)ancel: A
-```
 
-3. Please choose `2`, to redirect HTTP traffic to HTTPs, and remove HTTP access.
+3. Please choose `2`, to redirect HTTP traffic to HTTPs, and remove HTTP access.<div style={{height:5+'px'}}></div>
+![image](https://user-images.githubusercontent.com/109254397/184550531-495f390d-17a2-4e6b-92a3-9557a2c47e61.png)
 
-```
-Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-1: No redirect - Make no further changes to the webserver configuration.
-2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
-new sites, or if you're confident your site works on HTTPS. You can undo this
-change by editing your web server's configuration.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 2
-```
+
 
 :::
 

@@ -28,10 +28,13 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-setup-oepnvp
 <br/>
 
 
+
 ## Step 2. 設定跳板機安全性群組
 因 OpenVPN 預設採用 UDP 1194 埠做為通訊，請參考[安全性群組](https://man.twcc.ai/@twccdocs/guide-vcs-sg-zh)，將跳板機加入 Ingress UPD 1194 的安全性群組規則。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ed4e22e5d80b604ee707fc22eb00df90.png)
+
+<br/>
 
 <br/>
 
