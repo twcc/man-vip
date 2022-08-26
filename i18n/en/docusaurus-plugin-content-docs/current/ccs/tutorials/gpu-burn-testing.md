@@ -1,12 +1,10 @@
 ---
 sidebar_position: 10
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-launch-tensorboard-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-launch-tensorboard-en' 
 ---
 
 # Start TensorBoard in the container - ML experiment visualization tool
-
-:::tip **Case scenario**: **Are there visualization tools for machine learning available for containers?**
-*Do you have the same problem? Let us take you hand in hand to assemble the TWCC cloud service architecture to easily solve your problems!*
-:::
 
 In order to increase the identification accuracy of machine learning models, observing model training changes and removing errors are all necessary but complicated tasks. TensorBoard visualizes the changes in TensorFlow model data in the form of a web page, and have the ability to draw a variety of graphics, allowing data scientists to easily view and understand the structure of the neural network and experimental results, also quickly find solutions to optimize the model.
 
@@ -16,9 +14,13 @@ TensorBoard has been installed for users in the container environment of TWCC. T
 It is recommended to start in the TensorFlow container, which can better utilize the functions of TensorBoard, and the functions on other containers will be limited.
 :::
 
+<br/>
+
 ## Step 1. Connect to your Interactive Container
 
 Please refer to the [<ins>Connection method</ins>](https://man.twcc.ai/@twccdocs/SJlZnSOaN?type=view#%E4%BD%BF%E7%94%A8-Jupyter-Notebook) to connect to your Interactive Container.
+
+<br/>
 
 
 ## Step 2. Activate TensorBoard
@@ -40,6 +42,7 @@ $ wei1803106@cwfs6actr1611034753151-lkffh:~$ tensorboard --logdir=~/logdir --por
 TensorBoard 2.3.0+nv at http://cwfs6actr1611034753151-lkffh:5000/ (Press CTRL+C to quit)
 </div>
 
+<br/>
 
 
 ## Step 3. Associate container service ports
@@ -59,6 +62,8 @@ Please associate the port used by TensorBoard with the container port, and you c
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_99e217be234e88b2d6bfa1652d157d1b.png)
 
+<br/>
+
 
 ## Step 4. Connect to Tensorboard
 - Get the container's **Public IP** on the container information page.
@@ -68,6 +73,8 @@ Please associate the port used by TensorBoard with the container port, and you c
 - Open the web browser and enter **`Container IP: Public Port`** in the address bar, such as `203.xxx.xxx.xxx:56674` in this example, then you can connect to Tensorboard.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1981c171cbb4ecec90e38ace7b6d47a1.png)
+
+<br/>
 
 
 :::info

@@ -1,6 +1,9 @@
 ---
 sidebar_label: 'Matlab (BYOL)'
 sidebar_position: 5
+title: Matlab (BYOL)
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-matlab-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-matlab-zh' 
 ---
 
 
@@ -8,6 +11,8 @@ sidebar_position: 5
 
 
 TWCC 提供 Matlab，目前為功能預覽階段。採用 Cloud 授權模式，需要自行輸入 MathWorks 帳號密碼啟動 Matlab。
+
+<br/>
 
 ## <span class="ccsimglist">映像檔版本資訊</span> <i class="fa fa-sticky-note" aria-hidden="true"></i>
 

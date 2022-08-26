@@ -57,6 +57,7 @@ certbot --nginx -d <Domain_Name>
 
 :::info
 1. Replace ```<Domain_Name>``` with the domain name you've just registered.
+
 2. Enter e-mail to receive emergency or safety notice.<div style={{height:5+'px'}}></div>
 ![image](https://user-images.githubusercontent.com/109254397/184550510-5e320000-861b-47a2-966c-9f3f5a9d95d5.png)
 ![image](https://user-images.githubusercontent.com/109254397/184550522-4dfcfbd6-9930-4b29-8f00-12578ac5de85.png)
@@ -64,6 +65,7 @@ certbot --nginx -d <Domain_Name>
 
 3. Please choose `2`, to redirect HTTP traffic to HTTPs, and remove HTTP access.<div style={{height:5+'px'}}></div>
 ![image](https://user-images.githubusercontent.com/109254397/184550531-495f390d-17a2-4e6b-92a3-9557a2c47e61.png)
+
 
 
 :::

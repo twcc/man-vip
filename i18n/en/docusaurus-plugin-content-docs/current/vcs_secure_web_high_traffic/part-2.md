@@ -62,6 +62,7 @@ sudo certbot --nginx -d <Domain_Name>
 ```
 
 :::info
+
 1. Enter e-mail address below to receive urgent renewal or safety notices<div style={{height:5+'px'}}></div>
 ![image](https://user-images.githubusercontent.com/109254397/184550225-cea21a14-989e-4716-9734-c90be29d3a67.png)
 ![image](https://user-images.githubusercontent.com/109254397/184550263-c9fb6e98-9c63-4150-9f6d-6accf94e3313.png)
@@ -69,6 +70,7 @@ sudo certbot --nginx -d <Domain_Name>
 
 2. Please select `1` for the following content, there is no need to redirect the HTTP connection to HTTPS and delete the HTTP connection:<div style={{height:5+'px'}}></div>
 ![image](https://user-images.githubusercontent.com/109254397/184550314-80aed63f-ca93-49ea-a0a0-daefd906b1ee.png)
+
 
 :::
 

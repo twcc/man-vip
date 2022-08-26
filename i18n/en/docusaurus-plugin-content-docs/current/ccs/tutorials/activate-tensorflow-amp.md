@@ -1,5 +1,7 @@
 ---
 sidebar_position: 7
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-tensorflow-mnist-trainign-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorflow-mnist-trainign-en' 
 ---
 
 # Use TensorFlow to train handwritten digit recognition model on MNIST dataset

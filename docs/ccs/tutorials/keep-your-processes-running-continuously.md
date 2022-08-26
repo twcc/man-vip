@@ -1,16 +1,11 @@
 ---
 sidebar_position: 4
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-css-jupyter-add-python3-kernel-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-css-jupyter-add-python3-kernel-zh'
 ---
 
 # Jupyter Notebook 增加 Python 3 kernel
 
-:::success
-<i class="fa fa-star" aria-hidden="true"></i>
-
-**適用情境：我想使用 Python 3，但 Jupyter Notebook 只有 Python 2？**
-
-*您是否也有相同的困擾？讓我們手把手帶您組合 TWCC 雲端服務架構，輕鬆解決您的問題！*
-:::
 
 TWCC 開發型容器預設提供 Jupyter Notebook，為透過網頁與使用者互動的整合型開發環境，能夠撰寫程式、顯示程式輸出內容、視覺化呈現資料...等多種功能，並可依需求安裝多種語言的運算核心 (Kernel)。
 
