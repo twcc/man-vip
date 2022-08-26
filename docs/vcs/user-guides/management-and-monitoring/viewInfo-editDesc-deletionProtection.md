@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: '檢視/編輯/刪除保護'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-view-and-edit-instance-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-view-and-edit-instance-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -13,6 +15,8 @@ import TabItem from '@theme/TabItem';
 :::info
 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-zh#虛擬運算服務)。
 :::
+
+<br/>
 
 ## 檢視個體資訊
 
@@ -57,6 +61,8 @@ twccli ls vcs -all
 
 </Tabs>
 
+<br/>
+
 ## 編輯描述
 
 <Tabs>
@@ -81,6 +87,8 @@ twccli ls vcs -all
 </TabItem>
 
 </Tabs>
+
+<br/>
 
 
 ## 開啟/關閉 刪除保護機制
