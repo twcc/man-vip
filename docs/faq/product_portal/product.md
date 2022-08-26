@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: '產品概觀'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-product-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-product-zh'
 ---
 
 # TWCC FAQs | 產品概觀
@@ -24,7 +26,6 @@ title: '產品概觀'
 
 </details>
 
-
 <details>
 
 <summary> Q2. 高速檔案系統 (HFS)、虛擬磁碟服務 (VDS) 及雲端物件儲存服務 (COS) 有什麼不同？</summary>
@@ -43,8 +44,8 @@ title: '產品概觀'
 
 <summary> Q3. 容器運算 (CCS) 跟虛擬運算 (VCS) 使用上分別適用於那些情境？</summary>
 
-    容器運算 (CCS) 適用於大規模且資料密集的高負載工作，例：建立 AI 模型訓練。
-    虛擬運算 (VCS) 適用於工作負載小的應用程式，例：網站架設，AI 推論服務。
+容器運算 (CCS) 適用於大規模且資料密集的高負載工作，例：建立 AI 模型訓練。
+虛擬運算 (VCS) 適用於工作負載小的應用程式，例：網站架設，AI 推論服務。
 
 </details>
 
