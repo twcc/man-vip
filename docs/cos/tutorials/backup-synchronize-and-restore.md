@@ -1,5 +1,7 @@
 ---
 sidebar_position: 7
+sync_original_production: 'https://man.twcc.ai/@twccdocs/cosbackup-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/cosbackup-zh'
 ---
 
 # 使用 TWCC COS 備份/同步、還原運算資料

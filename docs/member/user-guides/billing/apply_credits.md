@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twsdocs/apply-project-and-credit-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/apply-project-and-credit-zh' 
 ---
 
 # 申請專案與額度

@@ -108,7 +108,9 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "Public IP"
 Enter ```Yes``` to connect and generate a new certificate.
 
 </details>
+
 <div style={{height:10+'px'}}></div>
+
 
 ## VCS instance management
 
@@ -164,7 +166,9 @@ The VCS instance will not be billed in the ```Queueing```, ```Stopped``` and ```
 Whether the VCS instance in the ```Starting``` state be billed or not depends on the usage scenario. For detailed explanation, please see Q4.
 
 </details>
+
 <div style={{height:10+'px'}}></div>
+
 
 ## Resource allocation and monitoring
 
@@ -203,7 +207,9 @@ On TWCC Portal, you can monitor the usage of CPU, disk, memory and network traff
 To efficiently allocate the frequently requested GPU resources, please email us your request at isupport@twcc.ai. We will have someone at your service.
 
 </details>
+
 <div style={{height:10+'px'}}></div>
+
 
 ## Packages
 
@@ -227,7 +233,9 @@ Q2. When installing packages or updating the VCS instance, it shows `E: Could no
 2. It is recommended to use Ubuntu 20.04 image to avoid this problem.
 
 </details>
+
 <div style={{height:10+'px'}}></div>
+
 
 ## Storage and data transfer
 
@@ -281,7 +289,9 @@ There are 2 methods you can use to upload your local data to the VCS instance:
 2. From your local machine, [<ins>Use MobaXterm to connect to the VCS instance</ins>](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94), and select "**Sftp**" icon on the left side to view, upload and download files.
 
 </details>
+
 <div style={{height:10+'px'}}></div>
+
 
 ## Network & Security
 
@@ -306,6 +316,7 @@ For Basic Virtual Firewall (BVF) configurations, refer to [<ins>this document</i
 - You may open an additional port by setting the security group, please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-sg-en).
 
 </details>
+
 <div style={{height:10+'px'}}></div>
 
 ### Auto scaling
@@ -324,7 +335,9 @@ Please follow the steps:
 Follow the steps above, the auto scaling will use the template to scale out instances that meet your needs.
 
 </details>
+
 <div style={{height:10+'px'}}></div>
+
 
 ## Image
 

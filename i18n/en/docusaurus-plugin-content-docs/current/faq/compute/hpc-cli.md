@@ -33,7 +33,9 @@ Available open-source software includes MobaXterm, PuTTY, VSCode, etc.
 The validity period of supercomputer password is 180 days. Please reset the expired password in [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) before you can re-login successfully.
 
 </details>
+
 <div style={{height:10+'px'}}></div>
+
 
 ## Resources allocation and monitoring
 
@@ -61,7 +63,9 @@ You can use Slurm command to obtain nodes, see [<ins>this document</ins>](https:
 Please make sure the ratio of the resources is based on 1 GPU : 4 CPU : 90 GB Memory. For example, the number of GPU should be 8 if you need 32 CPUs.
 
 </details>
+
 <div style={{height:10+'px'}}></div>
+
 
 
 ## Packages
@@ -123,7 +127,9 @@ The storage environment of the two is the same, but the computing environment is
     <ins><a href = "https://man.twcc.ai/@twccdocs/doc-twnia2-main-en/%2F%40twccdocs%2Fguide-twnia2-module-intro-en">this document</a></ins> for usage.
 
 </details>
+
 <div style={{height:10+'px'}}></div>
+
 
 ## Data storage and transfer
 
@@ -144,7 +150,9 @@ The storage space is bound with your personal account, so the files will not be 
 <i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> <b>Important:</b> <b>The system will regularly clean up the resources under the TWCC account that have not been used for a long time. Please be sure to back up your data regularly.</b>
 
 </details>
+
 <div style={{height:10+'px'}}></div>
+
 
 ## Networking and security
 <details>
@@ -154,7 +162,9 @@ The storage space is bound with your personal account, so the files will not be 
 203.145.219.98
 
 </details>
+
 <div style={{height:10+'px'}}></div>
+
 
 ## Execution errors
 <details>
@@ -169,4 +179,6 @@ This error message showed that you have submitted over 20 computing job (queue *
 
 When the error occurs, you are recommended to use the `squeue` command to check the job state and cancel the pending or running job using the `scancel` command to reduce the quantity of the job.
 
+
 </details>
+
