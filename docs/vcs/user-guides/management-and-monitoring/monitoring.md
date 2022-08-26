@@ -23,7 +23,7 @@ TWCC 入口網站可檢視虛擬運算個體監控的資訊，可監控 **CPU �
 
 - 進入「**虛擬運算個體詳細資料**」頁，並選擇一指定的個體。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_62143e7a1d642354319eaf9eac4e8ad5.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c065f020c08007cad3c40a0d17c32444.png)
 
 
 - 於「**虛擬運算個體詳細資料**」頁內選擇「**監控**」頁籤，即可查看個體監控資訊：

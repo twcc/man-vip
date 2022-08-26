@@ -25,7 +25,7 @@ import TabItem from '@theme/TabItem';
 
 * 由服務列表點選進入「**虛擬磁碟**」服務，在「**資料磁碟管理**」頁面，點擊「**＋建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
 
 
 :::tip

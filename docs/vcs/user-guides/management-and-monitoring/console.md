@@ -20,10 +20,9 @@ TWCC 虛擬運算服務 (VCS) 提供 Console，讓您無需在本地端安裝 Cl
 
 建立虛擬運算個體後，點選個體並進入「**虛擬運算個體詳細資料**」頁。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3031fbb3f8ee0e7d47dbcf843597bd4d.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_37df4073ab3ab26c8eaadc791e4dc73a.png)
 
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c3291b77a27470e7f7ca6467a97dbb76.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_536acdd31b059748dd7befc1f6f62dac.png)
 
 :::info
 首次使用 Console，請您先使用金鑰透過 **[<ins>SSH 連線個體</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh)** 並使用以下指令設定登入密碼，後續才可使用帳密，透過 Console 連線進入個體。

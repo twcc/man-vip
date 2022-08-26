@@ -22,7 +22,7 @@ Windows 虛擬運算個體建立完成後，需使用您已擁有的授權自行
 
 ## 使用產品金鑰啟用
 
-輸入您擁有的產品金鑰，請選取 [開始] 按鈕，然後選取 [更新與安全性] > [啟用] > [更新產品金鑰] > [變更產品金鑰]。
+輸入您擁有的產品金鑰，請選取 [開始] 按鈕，然後選取 [設定] > [更新與安全性] > [啟用] > [變更產品金鑰]。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c651b64dfdca922ea33c06665ea7ea6a.png)
 
@@ -35,4 +35,3 @@ Windows 虛擬運算個體建立完成後，需使用您已擁有的授權自行
 :::info
 更多資訊，請參考[<ins>啟用 Windows 10</ins>](https://support.microsoft.com/zh-tw/help/12440/windows-10-activate)。
 ::: 
-

@@ -29,7 +29,7 @@ import TabItem from '@theme/TabItem';
 * 進入虛擬運算個體管理頁面，可檢視所有建立個體的列表資訊：**ID**、**名稱**、**對外 IP**、**個體狀態**、**建立時間**及**建立者**。
 * 在「**搜尋**」列輸入關鍵字可篩選出列表的欄位中符合該特定條件的結果。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9b0bec73d32cdc3370baf274bf28b8f9.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_12b6e0321c1c11ed26e3db23e303afab.png)
 
 
 :::tip
@@ -38,7 +38,7 @@ import TabItem from '@theme/TabItem';
 
 - 進入詳細資料配置頁面，可檢視更詳細的個體資訊：**基本資訊**、**詳細規格**、**網路與連線**、**儲存資訊**。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4b5b513960169c831bdc6ba0d8613e8a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4a18fbcd218e90d9f21b051f2ed08122.png)
 
 </TabItem>
 
@@ -71,12 +71,12 @@ twccli ls vcs -all
 
 * 進入「**虛擬運算個體詳細資料**」頁，點選「<i class="fa fa-pencil" aria-hidden="true"></i>」即可編輯、加入虛擬運算個體的描述內容，以區辨不同的虛擬運算個體。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cd49ecf150da5f7e001fd7ed52c46a86.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_48758c4d73d45972d918eb01cc38e8de.png)
 
 
 - 進入詳細資料配置頁面，可檢視更詳細的個體資訊：**基本資訊**、**詳細規格**、**網路與連線**、**儲存資訊**。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4b5b513960169c831bdc6ba0d8613e8a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4a18fbcd218e90d9f21b051f2ed08122.png)
 
 </TabItem>
 

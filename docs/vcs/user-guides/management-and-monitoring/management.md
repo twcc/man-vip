@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
 
 - 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**停止**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fed3868fd9683c5e21bdddf2407afe84.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_65a8bd007a7145bc66057988f0f0b8c8.png)
 
 - 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**停止**」。
 - 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**停止**」。
@@ -81,7 +81,7 @@ import TabItem from '@theme/TabItem';
 
 - 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**啟動**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_33b8fbf1523c8dba1e40300a6d47a3f6.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f6b6237bb912f005648dbf8acf37c09f.png)
 
 - 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**啟動**」。
 - 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**啟動**」。
@@ -116,7 +116,7 @@ import TabItem from '@theme/TabItem';
 
 - 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**重開機**」。
 
-![](https://i.imgur.com/sTumwQc.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e9d62c218823db9373ba407a6968fe07.png)
 
 
 - 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**重開機**」。
