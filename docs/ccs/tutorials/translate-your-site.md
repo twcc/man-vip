@@ -29,7 +29,7 @@ TWCC-CLI 安裝步驟與資源操作指令，可參考 [<ins>TWCC-CLI α</ins>](
 <br/>
 
 ### Step 1. 建立虛擬運算個體
-依照[建立虛擬運算個體](https://www.twcc.ai/doc?page=vm#%E5%BB%BA%E7%AB%8B%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)，在使用者網站建立一個虛擬運算務個體，設定請參考下方：
+依照[建立虛擬運算個體](https://www.twcc.ai/doc?page=vm#%E5%BB%BA%E7%AB%8B%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)，在使用者網站建立一個虛擬運算個體，設定請參考下方：
 
 ```
 映像檔　：Ubuntu 20.04
