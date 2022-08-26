@@ -27,7 +27,7 @@ TWCC also provides users with the `rsync` command to transfer large amount files
 
 The following example demonstrates with Windows + [<ins>FileZilla</ins>](https://filezilla-project.org) (similar to macOS)
 
-### Step 1. Connect to a compute service
+<b>Step 1. Connect to a compute service</b>
 
 - Users of TWCC Interactive Container service can connect to the container through Jupyter Notebook or SSH
 - Users of TWCC Scheduled Container, HPC Job, and Taiwania 2 (HPC CLI) can connect to the login node of Taiwania 2 (HPC CLI)
@@ -38,7 +38,7 @@ See the connection method:
 - [<ins>Taiwania 2 (HPC CLI)</ins>](https://man.twcc.ai/s/B15nJXe-B#2-%E7%99%BB%E5%85%A5%E3%80%8C%E7%99%BB%E5%85%A5%E7%AF%80%E9%BB%9E%E3%80%8D)
 :::
 
-### Step 2. Save the SSH private key to the local machine
+<b>Step 2. Save the SSH private key to the local machine</b>
 
 - After logging in, enter the following command to read the SSH private key
 
@@ -73,7 +73,7 @@ macOS：TextEdit software is available
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ede7b45b32c02a5519e37ffd2240c5dc.png)
 
 
-### Step 3. Log in to the data transfer node with FileZilla + key
+<b>Step 3. Log in to the data transfer node with FileZilla + key</b>
 
 
 - Click the site manager in the upper left corner, add a new site in the lower left corner, and the menu as shown in the figure below will pop up
@@ -107,13 +107,15 @@ Key file: directory of the key file
 <br/>
 
 In addition to the above login method using the key, HFS can also login using **password + [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC)**. Please refer to the following instructions:
+<div style={{height:8+'px'}}></div>
 
-### Step 1. Download software that supports SFTP connection and 2-Step verification
+<b>Step 1. Download software that supports SFTP connection and 2-Step verification</b>
 
 
 Please download and install software that supports SFTP connection and 2-Step verification (e.g., [Filezilla](https://filezilla-project.org/), [Cyberduck](https://cyberduck.io/download/), [WinSCP](https://winscp.net/eng/download.php), etc).
+<div style={{height:8+'px'}}></div>
 
-### Step 2. Connect to the data transfer node
+<b>Step 2. Connect to the data transfer node</b>
 
 The following uses [<ins>Filezilla</ins>](https://filezilla-project.org/) as an example of operation. After opening the software:
 
@@ -139,7 +141,7 @@ After checking, when multiple files are being transferred, only one file can be 
 
 8. Click **Connect**.
 
-### Step 3. Enter your supercomputer password and [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC) 
+<b>Step 3. Enter your supercomputer password and [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC) </b>
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3f6b415f290b3987e835b219c3c0d173.png)
