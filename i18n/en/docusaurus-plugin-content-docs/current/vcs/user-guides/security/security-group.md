@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-sg-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-sg-en'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -14,6 +16,10 @@ With TWCC Security Group, users can control the network security of the VCS inst
 - Security Group is designed to set individual security rules for each VCS instance. Therefore, at least one available VCS instance must be created before setting the security group rules.
 - For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, see [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-en#%E5%AE%89%E5%85%A8%E6%80%A7%E7%BE%A4%E7%B5%84).
 :::
+
+
+<br/>
+
 
 ## View the Security Group rules of VCS instances
 
@@ -47,7 +53,7 @@ twccli ls vcs -secg -s 937648   # List the security group of the instance with I
 
 <summary>Default Security Group rules of VCS instances</summary>
 
-:::info
+
 - The default ingress/egress rules of TWCC Linux instances:
 
 | Direction | Internet protocol | Port (minimum) | Port (maximum)| Protocol|CIDR |
@@ -68,7 +74,7 @@ twccli ls vcs -secg -s 937648   # List the security group of the instance with I
 | egress     | IPv4     |      | |ANY |0.0.0.0/0 |
 | ingress     | IPv4     |      | |icmp | 0.0.0.0/0|
 | egress     | IPv6     |      | |ANY |::/0 |
-:::
+
 
 </details>
 
@@ -77,6 +83,10 @@ twccli ls vcs -secg -s 937648   # List the security group of the instance with I
 :::caution
 Due to frequent security incidents, if your connection comes from the following countries: China, Germany, France, South Korea, the Netherlands, Poland, and Russia, we will disable your remote connection to Windows instances (port: 9833). If you need to connect to TWCC Windows instances, please contact Customer Service.
 :::
+
+
+<br/>
+
 
 
 ## Create Security Group rules
@@ -153,7 +163,6 @@ twccli ls vcs -secg -s 892486
 </Tabs>
 
 <br/>
-
 
 
 
