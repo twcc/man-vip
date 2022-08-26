@@ -24,11 +24,11 @@ TWCC 開發型容器預設提供 Jupyter Notebook，為透過網頁與使用者�
 切換 root 身份，安裝 Python 3 kernel：
 
 ```bash
-$ sudo su 
-$ apt-get update     
-$ apt-get install python3-pip
-$ python3 -m pip install ipykernel  
-$ python3 -m ipykernel install
+sudo su 
+apt-get update     
+apt-get install python3-pip
+python3 -m pip install ipykernel  
+python3 -m ipykernel install
 ```
 
 ## Step 3. 確認安裝完成

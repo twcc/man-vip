@@ -1,20 +1,25 @@
 ---
 sidebar_position: 6
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-open-mpi-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-open-mpi-zh' 
 ---
 
 
 # Open MPI
 
 
-- 套件官網 : 
+- 套件官網
   - [Open MPI](https://www.open-mpi.org/)
   - [Open MPI github](https://github.com/open-mpi/ompi)
-- release note : 
+- release note
   - [Open MPI 4.1.x NEWS](https://raw.githubusercontent.com/open-mpi/ompi/v4.1.x/NEWS)
-- 套件來源 : 官網下載 tar 檔，系統管理員自行編譯
+- 套件來源：官網下載 tar 檔，系統管理員自行編譯
 - 如果需要重編 Open MPI 可選擇已編譯好的 UCX 進行
 
-## Open MPI 4.1.1 module matrix 
+<br/>
+
+
+## Open MPI 4.1.1 module matrix
 
 | CUDA | module name    | usage                       |
 | ---- | -------------- | --------------------------- |

@@ -58,7 +58,7 @@ import TabItem from '@theme/TabItem';
 
 <!-- Space -->
 
-<div style={{'height':'8px'}}></div>
+<div style={{'height':'15px'}}></div>
 
 <!-- 2. start -->
 
@@ -79,7 +79,7 @@ import TabItem from '@theme/TabItem';
 
 ### Step 2. 登入 TWCC 使用者網站
     
-Step 1. 準備工作完成後，您就可以輸入帳號、密碼輕鬆[登入 TWCC](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-signin-twcc-zh)！ 
+1. 準備工作完成後，您就可以輸入帳號、密碼輕鬆[登入 TWCC](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-signin-twcc-zh)！ 
 
 <br/>
 

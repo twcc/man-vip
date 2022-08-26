@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
-title: '本機為 Linux / macOS'
+title: 'From Linux / macOS'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-linux-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-to-linux-from-linux-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -19,25 +21,11 @@ Please note that you can connect to the instance only if its state is **`Ready`*
 
 <details class="docspoiler">
 
-<summary>
-
-## 1. Built-in command line (Terminal)
-
-</summary>
+<summary><b>1. Built-in command line (Terminal)</b></summary>
 
 Open terminal on your local computer, enter the commands sequentially according to the [<ins>obtained connection information</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-en) to change the permission of the key pair and connect to the VCS instance.
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
- jc@jc-VirtualBox:~$ <span style={{'background-color':'#fcf8e3', 'color': '#000', 'padding':'3.2px'}}>chmod 400 janicekey01.pem</span><br/><br/>
- 
- jc@jc-VirtualBox:~$ <span style={{'background-color':'#fcf8e3', 'color': '#000', 'padding':'3.2px'}}>ssh -i janicekey01.pem centos@203.145.220.231 </span><br/>
-The authenticity of host '203.145.220.231 (203.145.220.231)' can't be established.
-ECDSA key fingerprint is SHA256:vZ5EWM1ZbnYWkF52T6fxQROphd2PqiaGYvpBAuSahFQ.
-Are you sure you want to continue connecting (yes/no)? <span style={{'background-color':'#fcf8e3', 'color': '#000', 'padding':'3.2px'}}>yes</span><br/>
-Warning: Permanently added '203.145.220.231' (ECDSA) to the list of known hosts.
-Last login: Wed May 15 01:02:37 2019 from 59-124-220-27.hinet-ip.hinet.net <br/>
-[centos@vm01-252546-iaas ~]$
-</div>
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ab7f8e76a452f95ea2f1e004e10f4e89.png)
 
 </details>
 
@@ -49,11 +37,7 @@ Last login: Wed May 15 01:02:37 2019 from 59-124-220-27.hinet-ip.hinet.net <br/>
 
 <details class="docspoiler">
 
-<summary>
-
-## 2. Third-party software: VScode
-
-</summary>
+<summary><b>2. Third-party software: VScode</b></summary>
 
 If you already use VScode for application development, you can also directly use this software to connect to your VCS instance. VScode supports a variety of platforms, and provides many extensions that are easy to install and use. The following steps are performed in Windows, and the steps are similar in Linux or macOS. For more detailed instructions, see [<ins>VScode instructions</ins>](https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks).
 

@@ -44,7 +44,7 @@ import TabItem from '@theme/TabItem';
 
 - 設定帳號密碼、填寫基本資料
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e924909a5d7ca02387233ca224ff92e7.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ca9981e883155938b5365647ca0ef59c.png)
 
 - 設定主機帳號密碼
 

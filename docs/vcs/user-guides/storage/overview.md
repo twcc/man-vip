@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: '虛擬磁碟服務概觀'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-overview-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-overview-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -10,9 +12,13 @@ import TabItem from '@theme/TabItem';
 
 虛擬磁碟服務可為虛擬運算個體擴充儲存空間，隨用隨付，可自行設定容量大小，彈性方便，為專為 TWCC 虛擬運算服務設計之儲存空間，提供高可用性、一致性、低延遲的服務。
 
+<br/>
+
 ## 相關服務
 
 虛擬磁碟服務應用於多項虛擬運算服務相關的功能：
+
+<br/>
 
 ### 虛擬運算個體儲存空間
 
@@ -26,10 +32,14 @@ import TabItem from '@theme/TabItem';
         - 提供傳輸效能每 TB 250 MB/秒，適用於不頻繁存取與不易受延遲時間影響的大型資料。
         - 提供每個虛擬運算個體最大傳輸量為 2,375 MB/秒。
         - 最多可支援 16 TB 的儲存空間。
-   
+
+<br/>
+
 ### 個體、磁碟備份服務
 
 提供儲存備份虛擬運算個體的映像檔、資料磁碟之快照。
+
+<br/>
 
 
 ## 使用介面

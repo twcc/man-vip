@@ -1,6 +1,8 @@
 ---
-sidebar_label: 'Module 概觀'
+sidebar_label: 'Module Overview'
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-overview-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-overview-en' 
 ---
 
 
@@ -12,11 +14,14 @@ sidebar_position: 1
 Module is an HPC environment variable manager which can easily switch between different tools, solving the complex dependency problem when compiling or running applications.
 
 With modules, you can switch environment variables to use specific packages, tools, or libraries without using the `export` command. Moreover, unlike the `unset` command, with just one `module purge` command you can remove all the environment variables.
- 
+
 :::info
 The most common tool for HPC to manage environment variables is `modules`. [<ins>Environment Modules</ins>](http://modules.sourceforge.net) is used traditionally, as Taiwania 1. Taiwania 2 (HPC CLI) adopts [<ins>Lmod</ins>](https://lmod.readthedocs.io) instead. The usage of the tools is similar, only the programming language is different.
-::: 
- 
+:::
+
+<br/>
+
+
 ## Basic module commands
 
 - List available modules
@@ -44,6 +49,9 @@ You can use **`ml`** to replace the above `module` command. Here are some exampl
   `ml -package1 -package2 ...`
 
 :::
+
+<br/>
+
 
 ## Basic module concepts
 

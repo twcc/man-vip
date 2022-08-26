@@ -1,21 +1,24 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-twnia2-conda-manage-packages-submit-job-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-twnia2-conda-manage-packages-submit-job-zh' 
 ---
 
 # 使用 Conda 管理套件與執行 Job
 
 
-:::tip **適用情境：如何在台灣杉二號 (命令列介面) 安裝套件？如何切換 Python 環境？**
-*您是否也有相同的困擾？讓我們手把手帶您組合 TWCC 雲端服務架構，輕鬆解決您的問題！*
-:::
-
 本文是關於 TWCC 台灣杉二號 (命令列介面) 安裝的套件管理工具 [Miniconda](https://docs.conda.io/en/latest/miniconda.html) 說明，以及教學如何使用 Conda 創立虛擬環境，安裝套件，並提交 Job。
+
+<br/>
+
 
 ## Minoconda 簡介
 
 Miniconda 為 Python 環境管理平台，囊括多種 Python 套件，並使用 Conda 作為軟體套件管理器。
 
 使用 Miniconda 可省去一一下載 Python 套件的麻煩，使用簡單的 Conda 指令即可將套件安裝完成，並能切換至指定的虛擬環境，使用不同版本的 Python，解決多版本的相容問題。
+
+<br/>
 
 
 ## 更新規劃說明
@@ -27,6 +30,9 @@ Miniconda 為 Python 環境管理平台，囊括多種 Python 套件，並使用
 :::info
 用戶仍可自行安裝 Anaconda 在自己的 `/home/$USER` 或`/work/$USER` 目錄之下)。
 :::
+
+<br/>
+
 
 ## 重新設計 modulefile
 
@@ -43,6 +49,8 @@ Miniconda 為 Python 環境管理平台，囊括多種 Python 套件，並使用
 
 因此，TWCC 將透過重新撰寫新版 modulefile 的方式，使用 `module load miniconda2` 或 `module load miniconda3` 時，將會自動啟動上述參數；當 `module purge` 時，則將會自動移除這些環境變數。如此一來，可避免讓 Conda 更動用戶的`~/.bashrc`，也能正確使用 Conda，還給使用者單純的環境。
 
+<br/>
+
 
 ## 如何使用 Miniconda ? 
 
@@ -57,6 +65,9 @@ Miniconda 為 Python 環境管理平台，囊括多種 Python 套件，並使用
 
 請參考以下操作範例。
 
+<br/>
+
+
 ## Conda 操作範例
 
 以下範例將在使用 Conda 創立一個虛擬環境，並安裝支援 GPU 運算的 TensorFlow，再透過 Slurm 資源調度管理系統，撰寫 job script 依需求索取資源、Queue 排程，並提交計算工作。
@@ -65,6 +76,8 @@ Miniconda 為 Python 環境管理平台，囊括多種 Python 套件，並使用
 - [<ins>Anaconda：TensorFlow</ins>](https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/)
 - [<ins>Conda：Managing environments</ins>](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 :::
+
+<br/>
 
 
 ### Step 1. 載入 Conda 並建立虛擬環境
@@ -94,6 +107,9 @@ tensorflow-gpu，目前預設安裝 2.2 版。
  - 其他版本可以參考 [<ins>版本列表</ins>](https://anaconda.org/anaconda/tensorflow-gpu/files)。
 :::
 
+<br/>
+
+
 #### 離開以及刪除虛擬環境
 ```bash
 # 離開 mytf_gpu 虛擬環境
@@ -102,6 +118,9 @@ conda deactivate
 # 刪除 mytf_gpu 虛擬環境檔案
 conda remove --name mytf_gpu --all
 ```
+
+<br/>
+
 
 #### 離開 Conda
 ```bash
@@ -114,6 +133,9 @@ module purge
 module unload miniconda3
 ```
 
+<br/>
+
+
 #### 刪除 Conda 殘留檔案
 ```bash
 # 當不再使用 Conda，刪除殘留 Conda 安裝檔/設定檔 (請小心使用，請確定此路徑無需要檔案再使用)
@@ -123,6 +145,9 @@ ls ~/.condarc ~/.conda ~/.continuum
 # 再刪除檔案
 rm -rf ~/.condarc ~/.conda ~/.continuum
 ```
+
+<br/>
+
 
 ### Step 2. Slurm job script with Conda
 
@@ -184,6 +209,9 @@ python $(your command)
 3. 更多 Queue 資訊，請參考 [<ins>Queue 與計算資源使用說明</ins>](https://www.twcc.ai/doc?page=hpc_cli#4-Queue-%E8%88%87%E8%A8%88%E7%AE%97%E8%B3%87%E6%BA%90%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E)。
 :::
 
+<br/>
+
+
 #### 提交 Job
 
 ```bash
@@ -193,6 +221,9 @@ sbatch <FILE_NAME>.sh
 :::info
 提交完成後，將顯示系統派發的 Job ID。
 :::
+
+<br/>
+
 
 #### 查看和取消
 

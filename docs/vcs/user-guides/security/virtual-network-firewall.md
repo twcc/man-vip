@@ -134,7 +134,9 @@ import TabItem from '@theme/TabItem';
 
 * 即可在「**編輯規則**」視窗中調整規則的順序或是新增、删除規則，編輯好後點擊「**確認**」。  
 
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0a32c8b3217f41650022c5092fb565c8.png)
+
 
 * 完成編輯後，防火牆的狀態會變成 **`PENDING_UPDATE`**。數分鐘後等狀態變成 **`ACITVE`**，即代表此防火牆設定已生效。
 

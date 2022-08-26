@@ -1,11 +1,14 @@
 ---
 sidebar_position: 6
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-interactive-job-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-interactive-job-zh'
 ---
 
 # 互動型任務
 
 
 前面介紹了如何使用「sbatch」進行任務提交，這是最常使用的方式，讓用戶將任務編寫為腳本進行提交。但實際上 Slurm 提供任務提交的方式也很多種，而使用「sbatch」最常見的問題，即是腳本中的某一行出現問題，就必須要反覆修改腳本才能夠順利跑完，這對於測試非常不方便，又或者所執行的內容需要與standout 進行互動才能夠跑的通，這時候使用「srun」與「salloc」是更好的方式，下面將分別介紹。
+
 
 ### salloc
 
@@ -17,12 +20,11 @@ salloc 從字面上就看得出來，就是指「slurm allocate」的縮寫，�
 
 無論是sbatch、srun或是salloc，本質上都是向Slurm 控制器申請資源，來運行特定處理程序的一種行為，三者在提交時，對資源的指定參數都是一樣的，例如：
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
+```
+salloc -N 2 -n 2 -p SlurmDefault
+```
+![image](https://user-images.githubusercontent.com/109254397/184575576-2449bd1b-4316-487c-b912-76199c2316b6.png)
 
-$ salloc -N 2 -n 2 -p SlurmDefault
-salloc: Granted job allocation 3002
-
-</div>
 
 
 如果當下的資源充足的話，會顯示該資源已被分配(如上：salloc: Granted job allocation 3002)，使用者當下所在的環境是已被分配資源環境的shell 模式，這個新環境已經依據分配資源的參數設定了相關環境，詳細資訊可以透過「env」來查看，可以得到類似下的輸出。
@@ -110,36 +112,29 @@ _=/usr/bin/env
 
 如上，由於我們輸入的內容是「salloc -N 2 -n 2 -p SlurmDefault」，表示我們要兩台實體機器以及2個處理程序，可從「SLURM_NTASKS=2」，以及「SLURM_JOB_NUM_NODES=2」上看到對應的資訊。但使用salloc所使用的shell環境無法手動更改環境變數，因此在使用之前要決定好使用的資源。在shell內，可以直接使用下一小節的「srun」進行任務提交，根據此設置會有2個處理程序，所以會自動執行兩次：
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
-    
-$ srun date
-Mon Dec 10 01:10:17 CST 2018
-Mon Dec 10 01:10:17 CST 2018
+```
+srun date
+```
+![image](https://user-images.githubusercontent.com/109254397/184575596-4646d76d-faad-44d7-b712-ca9eebc1fcf0.png)
 
-</div>
 
 
 若要退出當前環境資源，只要輸入「exit」 之後，就會退出並釋放資源，這就是salloc的使用方式，如下：
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
-    
-$ exit
+```
 exit
-salloc: Relinquishing job allocation 3002
-
-</div>
+```
+![image](https://user-images.githubusercontent.com/109254397/184575615-533f6971-ab6b-4907-b584-f3645d923aa7.png)
 
 
 ### srun
 
 在上面介紹salloc的過程中，我們使用了 srun的指令，並看到一次輸出兩個date資訊，證明該指令同時執行了兩次。事實上在任務中直接透過srun執行指令才是slurm中使用多點資源的方式。srun不僅可以透過salloc使用，也可以直接在sbatch的腳本中使用srun。運行一個srun即是執行一個程序，完成之後就退出並釋放資源。範例如下：
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
-    
-$ srun -N 2 -n 2 date
-Mon Dec 10 01:32:00 CST 2018
-Mon Dec 10 01:32:00 CST 2018
+```
+srun -N 2 -n 2 date
+```
+![image](https://user-images.githubusercontent.com/109254397/184575626-dd2e797b-c9c9-4ad7-ae16-a749c62995b3.png)
 
-</div>
 
 上述範例同salloc，不同的是，salloc執行完畢之後，資源還是沒有被釋放，而srun則是執行完畢之後，資源就釋出給其他任務使用。

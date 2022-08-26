@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-manage-disk-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-manage-disk-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -12,6 +14,8 @@ import TabItem from '@theme/TabItem';
 :::info
 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-zh#%E8%99%9B%E6%93%AC%E7%A3%81%E7%A2%9F%E6%9C%8D%E5%8B%99)。
 :::
+
+<br/>
 
 ## 檢視磁碟
 
@@ -44,6 +48,8 @@ twccli ls vds
 </TabItem>
 
 </Tabs>
+
+<br/>
 
 
 ## 連結至虛擬運算個體
@@ -98,12 +104,15 @@ twccli ls vds
 - [<ins>HowTo：初始化磁碟- Windows 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-zh)
 :::
 
+<br/>
+
 ## 自虛擬運算個體分離
 
 若需刪除資料磁碟，或需與其他虛擬運算個體連結，請先將磁碟自原虛擬運算個體分離，再執行其他動作。
 
 卸載、分離資料磁碟詳細步驟，請參考 [分離資料磁碟](https://man.twcc.ai/@twccdocs/vcs-vds-guide-detach-data-disk-zh)。
 
+<br/>
 
 
 ## 刪除資料磁碟
@@ -132,7 +141,7 @@ twccli ls vds
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### 指令
+**指令**
 
 ```bash
 twccli rm vds -id   # 資料磁碟 ID 
@@ -143,7 +152,9 @@ twccli rm vds -id   # 資料磁碟 ID
 1. **[ ]** 中括號內為選擇性參數，其餘為必要參數。
 :::
 
-### 範例
+<br/>
+
+**範例**
 
 - 刪除 ID 為 `376749` 的資料磁碟
 ```bash

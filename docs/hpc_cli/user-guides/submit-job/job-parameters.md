@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-job-parameter-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-job-parameter-zh'
 ---
 
 # 指定任務參數
@@ -10,20 +12,20 @@ sidebar_position: 3
 
 假設某個任務需要三個節點同時運算，且每個節點的記憶體不低於8G，可以用以下方式。當中「--node」可指定要運行的節點數量，「--mem」可指定運行的記憶體大小，「--partition」跟「-p」是一樣的意思，也就是指定運行分區的名稱，最後指定要運行的腳本即可。
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
 
-$ sbatch --nodes=3 --mem=8192 --partition=SlurmDefault test.sh
+```
+sbatch --nodes=3 --mem=8192 --partition=SlurmDefault test.sh
+```
 
-</div>
 
 
 以下可以看一個更複雜的例子，指定透過「--node」運行三台機器，「--mem」指定使用8GB記憶體，「--nodelist」指定使用 gn1201.twcc.ai、gn1204.twcc.ai、gn1205.twcc.ai這三台機器，且透過「--cpus-per-task」可指定每個處理程序使用兩核CPU。
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
 
-$ sbatch --nodes=3 --mem=8192 --nodelist=gn1201.twcc.ai,gn1204.twcc.ai,gn1205.twcc.ai --cpus-per-task=2 test.sh
+```
+sbatch --nodes=3 --mem=8192 --nodelist=gn1201.twcc.ai,gn1204.twcc.ai,gn1205.twcc.ai --cpus-per-task=2 test.sh
+```
 
-</div>
 
 除了上面的範例，sbatch也可指定更多不同的參數，可直接透過以下指令「sbatch --help」來進行了解。
 
@@ -32,7 +34,9 @@ $ sbatch --nodes=3 --mem=8192 --nodelist=gn1201.twcc.ai,gn1204.twcc.ai,gn1205.tw
 
 透過指令指定參數的方式很簡單，但不方便重複使用，因此Slurm提供了另一種方式，即是透過腳本註釋的方式來指定參數，Slurm 會自動解析這些參數。我們可用上述的 test.sh進行更改，將上述範例的內容直接填寫到腳本內。
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
+
+```
+=======
 
 #! /bin/bash
 
@@ -49,7 +53,8 @@ hostname
 sleep 60
 echo “Bye”
 
-</div>
+```
+
 
 
 在腳本內，可直接透過上面範例的「#SBATCH」來設定參數，最後直接透過「sbatch test.sh」即可直接派送腳本，並帶有這些參數。
