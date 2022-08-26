@@ -26,7 +26,9 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 sudo fdisk -l
 ```
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b06740e0fcd40ed80dc82fd3fdbdbb71.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7b5f531fee70ec8c47ecedb5d9891798.png)
+
+<br/>
 
 <br/>
 
@@ -39,7 +41,7 @@ sudo fdisk -l
 sudo mkfs -t ext4 <DISK_DEVICE>
 ```
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_33548e5fdec75ace065b50e9f5589536.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1a9c1acc4676602937a5e9860d24f8e9.png)
 
 
 :::info

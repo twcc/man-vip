@@ -25,7 +25,9 @@ sudo adduser <USER_ID>
 為保護您的虛擬運算個體安全，Ubuntu、CentOS 的登入密碼請設定至少包含 12 個字元，並混合英文大小寫字母、數字及特殊符號。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5c07b26965922b473cc5ea6d8adda121.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3feb85f4dd3cb0590d2f974aea9279bc.png)
+
+<br/>
 
 <br/>
 

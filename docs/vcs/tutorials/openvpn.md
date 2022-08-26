@@ -23,15 +23,18 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-setup-oepnvp
 
 請參考[建立虛擬運算個體](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh)建立一台 Linux 虛擬運算個體，並設置公用 IP，作為架設 OpenVPN、連入其他無對外 IP 個體的跳板機。
 
-![](https://i.imgur.com/UZzRVMC.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_033ddd3ab83dd2de73d4667e9ab0eacd.png)
 
 <br/>
+
 
 
 ## Step 2. 設定跳板機安全性群組
 因 OpenVPN 預設採用 UDP 1194 埠做為通訊，請參考[安全性群組](https://man.twcc.ai/@twccdocs/guide-vcs-sg-zh)，將跳板機加入 Ingress UPD 1194 的安全性群組規則。
 
-![](https://i.imgur.com/56o4Til.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ed4e22e5d80b604ee707fc22eb00df90.png)
+
+<br/>
 
 <br/>
 
@@ -59,12 +62,12 @@ sudo ./openvpn-ubuntu-install.sh
 
 - 安裝過程中詢問對話皆可按 `Enter` 繼續
 
-![](https://i.imgur.com/SUdRHXv.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bcc0348c5c83b00ae5a67cb3b46c2bd9.png)
 
 
 - 安裝完成後會產生 `clinet.ovpn` 檔，儲存在 /root 底下
 
-![](https://i.imgur.com/yZaye2D.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_35093692a150b6b37b2b59ddf9082503.png)
 
 
 - 更改 `clinet.ovpn` 檔案路徑

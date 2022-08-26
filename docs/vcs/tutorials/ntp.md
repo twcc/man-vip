@@ -46,11 +46,11 @@ sudo apt-get update
 sudo apt-get install -y ntp
 ```
 
-- Step 3. 輸入以下指令，修改設定檔 :arrow_right: 再鍵入「i」進入編輯模式，將會看到以下畫面
+- Step 4. 輸入以下指令，修改設定檔 :arrow_right: 再鍵入「i」進入編輯模式，將會看到以下畫面
 ```bash
 sudo vim /etc/ntp.conf
 ```
- :arrow_right: 將以下紅框空內容，在最前方輸入「#」隱藏一筆預設資料
+ :arrow_right: 將以下紅框中的內容，在最前方輸入「#」隱藏一筆預設資料
  
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bbd7b65b56cc9fdc0bca4e3a283f9bb2.png)
 
@@ -60,7 +60,7 @@ sudo vim /etc/ntp.conf
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f6b3ee2a0904f453523459aca376aede.png)
 
 
-- Step 4. 輸入以下指令重啟 NTP，以更新設定
+- Step 5. 輸入以下指令重啟 NTP，以更新設定
 
 ```bash
 sudo systemctl restart ntp
