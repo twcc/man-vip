@@ -5,11 +5,8 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/doc-hpc-job-main-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-hpc-job-main-zh'
 ---
 
-# HPC 高速運算任務
 
-:::caution
-**本服務即將暫停 WEB 介面功能。HPC 高速運算服務之 CLI 操作方式，請參考[台灣杉二號(命令列介面)](https://www.twcc.ai/doc?page=hpc_cli)。**
-:::
+# HPC 高速運算任務
 
 TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源調度軟體，Slurm 是一個容錯度高、高度可擴展的叢集管理系統，適用於大型和小型的 Linux 群集，至今已成為許多超級計算機所使用的資源管理器。Slurm 本身並不需要針對系統內核（Kernel）做調整，並且相對獨立。作為一個群集管理系統，Slurm 有三個關鍵功能：
 * 可在一段時間內替用戶分配計算資源的獨佔或非獨占使用
@@ -28,14 +25,14 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 
 * 進入「HPC 高速運算任務」服務，在「HPC 高速運算任務管理」頁面，點擊「＋建立」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d397f10978041c2b6a160e0692719136.png)
 
 
 :::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d249b9cbd921f8522c0ffbd023b009f6.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f46d811575230f74a9c96c0b3edb0d52.png)
 
 
 
@@ -46,12 +43,12 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 :bulb: 提示：請先使用 [「HFS 儲存服務」](https://www.twcc.ai/doc?page=hfs)上傳欲執行的程式內容。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8f159bcef22ff317eff92ea4e71a984b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e7968b03779782ea62894123f90a592c.png)
 
 
 * 展開儲存資訊，可以看到本系統預設掛載的兩個 HFS 高速檔案儲存路徑。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_29ba615875c53a221c1338c54176accc.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_de333da60735a359b28ab85255d31291.png)
 
 
 
@@ -69,7 +66,7 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 
 * 接著重覆任務 1 的操作，選擇映像檔版本/快照、硬體規格、輸入指令及儲存資訊設定多項運算任務。任務設定完成後接著點擊「下一步：排程>」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dce57d39d8c8c2a4bb17b2aeda6fb09f.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0ea8ef0842f5f3602baaead2bd02b2c8.png)
 
 
 * 排程設定提供「啟動後立即執行」及「啟動後在指定任務時間開始執行」兩種選擇，選擇任務的執行排程後接著點擊「下一步：檢閱+建立>」。
@@ -78,14 +75,14 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 :bulb: 提示：指定時間的任務最快可從設定時的下一個整點開始執行，此任務需手動啟動，才會開始執行任務（包括已排程任務）。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_46ce321e03bd9d29c89c9cc16475fbc5.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2673b4fab8dc081225d8d6b64983d1df.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_652ff93f86f1233e9cf19f6608b19b80.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_07c8012659af88030c30c044e51fb6ad.png)
 
 
 * 檢視 HPC 高速運算任務的配置、命令、排程及預計使用額度等資訊，確認後按下「建立」即完成。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e3f9ba57bfe815a7fc4d94f1d2a2bda9.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_64556c6ec8631e8d1248ca5aa060b9e0.png)
 
 
 
@@ -93,26 +90,26 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 
 * 任務建立後，會出現在 HPC 高速運算任務管理列表的最上方，請務必「啟動」任務，待狀態從 Inactive 變為 Ready 時，任務將立即執行，或在指定時間執行運算
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c1cad7c2009904e813c97c6a46049157.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_99d308c271599172e402f292797b32a1.png)
 
 * 點選該列表，可進入詳細資料頁面。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_64a836d0dd952fde33de20f51ed84f09.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_433de813c78b4174d620b873754955bb.png)
 
 
 * 進入HPC 高速運算任務詳細資料「配置」頁面，可以檢視任務的基本資訊、 連線資訊及任務詳細規格，或執行「啟動」、「停止」、「刪除」和「重新整理」等功能。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2e12624b48a3cd22faa271439c9635bb.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8af1bf00e626d2040e4e68104c9e184b.png)
 
 
 * 點擊「任務列表」可查看任務的運算開始時間、結束時間及狀態。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db3ed5bf4d72eb91f9814049b96afe3a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_40da7f4c2b4cb5ee07370c5d314926af.png)
 
 
 * 點擊「查看 LOG」可查看任務執行的詳細 LOG 資訊。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_33fb08bdbb0091f8cb38d56680a61812.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7a9928ea5db2d6d8d3c82b71f38b0fa4.png)
 
 
 ## HPC 高速運算任務監控
@@ -122,7 +119,7 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 :bulb: 提示：計畫使用者僅能看到自己資源使用資訊，計畫管理者可以看到計畫內所有使用者資源使用情形，以便控管整個專案的資源使用額度。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b469a9d6d0db7cddfe73498875de07dc.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c1fe85aae907eb8ca655a93d4e8a2cf0.png)
 
 
 ## 連線使用方式
