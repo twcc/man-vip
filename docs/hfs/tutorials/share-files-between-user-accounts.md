@@ -1,5 +1,7 @@
 ---
 sidebar_position: 7
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-hfs-share-files-between-user-accounts-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-hfs-share-files-between-user-accounts-zh'
 ---
 
 # 跨帳號分享 HFS 檔案
@@ -15,7 +17,7 @@ sidebar_position: 7
  
 ## 1. 上傳並透過 TWCC COS 分享檔案
 
-### Step 1. 將檔案上傳至 TWCC COS (分享者)
+<b>Step 1. 將檔案上傳至 TWCC COS (分享者)</b>
 
 分享者可透過 [S3 用戶端工具或掛載 COS 的方式](https://man.twcc.ai/@twccdocs/howto-twnia2-access-cos-zh)，將 HFS 檔案上傳至 COS；或 [將 HFS 檔案備份/同步至 COS](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fcosbackup-zh#s3cmd%EF%BC%9A%E9%81%A9%E7%94%A8-VCS-%E5%80%8B%E9%AB%94-Linux%E3%80%81CCS-%E5%AE%B9%E5%99%A8)。
 
@@ -26,7 +28,7 @@ sidebar_position: 7
 
 <summary><b>其他用戶空間藉由檔案 URL 下載至其空間</b></summary>
 
-### Step 2. 取得檔案 URL (分享者)
+<b>Step 2. 取得檔案 URL (分享者)</b>
 
 透過第三方軟體取得檔案 URL，並將 URL 分享給其他使用者
     
@@ -38,7 +40,7 @@ sidebar_position: 7
 > ![](https://i.imgur.com/Pklqlw4.png)
 
 
-### Step 3. 將檔案下載自其空間 (其他用戶)
+<b>Step 3. 將檔案下載自其空間 (其他用戶)</b>
 
 自分享者取得檔案 URL後，輸入以下 `wgwt` 指令即可將檔案下載至其空間 (台灣杉二號 (命令列介面)、虛擬運算個體或容器)
     
@@ -57,7 +59,7 @@ sidebar_position: 7
 
 <summary><b> 其他用戶可將 COS 掛載方式存取 (共享資料夾、網路硬碟) </b></summary>
 
-### Step 2. 將 COS 掛載至 TWNIA2  (其他用戶)
+<b>Step 2. 將 COS 掛載至 TWNIA2  (其他用戶)</b>
 
 其他用戶請參考 [<ins>此篇文章</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-access-cos-zh) 將分享者的 COS 儲存體視為網路硬碟或共享資料夾，掛載至您的 TWNIA2 （登入節點）或虛擬運算個體後，即可存取使用。
     

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-s3browser-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-s3browser-zh'
 ---
 
 # S3 Browser

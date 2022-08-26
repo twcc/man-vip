@@ -1,5 +1,7 @@
 ---
 sidebar_position: 4
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-nvidia-hpc-sdk-w-gcc-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-nvidia-hpc-sdk-w-gcc-zh' 
 ---
 
 
@@ -10,7 +12,10 @@ sidebar_position: 4
   由於作業系統內建 gcc 是 4.8.5，對於 `C++11` 支援較不完整，若程式需要支援到`C++11` 及其以上，建議可指向較新版本的 gcc 通常編譯問題會較小。
 - 詳細 support matrix 可檢視 NVIDIA HPC SDK 表格的 release note
 
-## GCC10 with NVHPC 
+<br/>
+
+
+## GCC10 with NVHPC
 
 | module name | usage              |
 | ----------- | ------------------ |
@@ -32,7 +37,10 @@ export NVLOCALRC=/work/HPC_SYS/nvidia/hpc_sdk/localrc_files/gcc10_localrc_21.7
 export NVLOCALRC=/work/HPC_SYS/nvidia/hpc_sdk/localrc_files/gcc10_localrc_20.7
 ```
 
-## GCC9 with NVHPC 
+<br/>
+
+
+## GCC9 with NVHPC
 
 | module name | usage              |
 | ----------- | ------------------ |
@@ -53,6 +61,8 @@ export NVLOCALRC=/work/HPC_SYS/nvidia/hpc_sdk/localrc_files/gcc9_localrc_21.7
 # 載入以上指定 module 後，需搭配以下指令才能生效
 export NVLOCALRC=/work/HPC_SYS/nvidia/hpc_sdk/localrc_files/gcc9_localrc_20.7
 ```
+
+<br/>
 
 
 ## GCC8 with NVHPC
@@ -76,6 +86,9 @@ export NVLOCALRC=/work/HPC_SYS/nvidia/hpc_sdk/localrc_files/gcc8_localrc_21.7
 # 載入以上指定 module 後，需搭配以下指令才能生效
 export NVLOCALRC=/work/HPC_SYS/nvidia/hpc_sdk/localrc_files/gcc8_localrc_20.7
 ```
+
+<br/>
+
 
 ## GCC7 with NVHPC
 

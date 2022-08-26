@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
-title: '監控'
+title: 'Monitoring instances'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-monitor-instance-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-monitor-instance-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -14,6 +16,10 @@ The TWCC portal can view the monitoring information of Virtual Compute Service (
 - For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, see [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務) for more information.
 - TWCC CLI currently does not support this feature.
 :::
+
+
+<br/>
+
 
 ## Basic View
 
@@ -33,6 +39,10 @@ The TWCC portal can view the monitoring information of Virtual Compute Service (
 :::info
 The network traffic of the TWCC portal includes the sum on the east-west traffic and the north-south traffic, while the quota usage and resource usage records of the  [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-en) only show the north-south traffic.
 :::
+
+
+<br/>
+
 
 ## Advanced operation
 

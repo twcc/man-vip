@@ -54,7 +54,7 @@ import TabItem from '@theme/TabItem';
 
 <span>&#10104;</span> 點擊「會員中心」可檢視專案成員列表，並可編輯成員 (新增/刪除/設為管理員、一般成員)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f293d8c1fac70ac4162b3f6756155c7b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b13ffd5eb4b7b263563759366c28ff93.png)
 
 <br/>
 
@@ -71,13 +71,13 @@ import TabItem from '@theme/TabItem';
 
 <span>&#10106;</span> 點擊「用量資訊」，選擇服務後，可檢視各服務資源用量紀錄
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5720fe9874de02fe3ab2b069dcc15a76.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3c4f837a348f5de9bc7f53cba6410e47.png)
 
 <br/>
 
 <span>&#10107;</span> 點擊「額度資訊」，選擇服務後，可檢視各服務資源用量紀錄
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_50a039fc2e7721f8938ab575831ac944.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fb4425bb4ca7701803c9c7f1e9ae4828.png)
 
 <br/>
 
@@ -86,6 +86,6 @@ import TabItem from '@theme/TabItem';
 
 透過以上連結進入會員中心後，您可以檢視更多其他專案相關資訊：訂單、發票、服務啟用狀態、用量統計...等。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1d42d4eb2fd3397c85bba854e53721d5.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3c0c532f46d4430c814e1e7b62cb1672.png)
 
 :::

@@ -47,7 +47,9 @@ import TabItem from '@theme/TabItem';
 
 - 完成建立虛擬運算個體映像檔
 
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e0e853a829b12733cfb22ab94b103d59.png)
+
 
 <br/>
 
@@ -72,6 +74,8 @@ import TabItem from '@theme/TabItem';
 - 規格調整完成！成功以映像檔建立虛擬運算個體（型號：**v.super**），將原個體資料轉移至新規格個體。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f46af88d8bfd2548bc41737f634c7727.png)
+
+<br/>
 
 <br/>
 
