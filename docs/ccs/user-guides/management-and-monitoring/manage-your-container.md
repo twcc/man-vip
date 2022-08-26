@@ -40,6 +40,8 @@ import TabItem from '@theme/TabItem';
 - 若希望由 TWCC 維運人員協助您取得完整紀錄，請您來信授權處理 (isupport@twcc.io)，並請勿存放機敏資料。
 :::
 
+<br/>
+
 :::info
 啟用「刪除保護機制」，在您刪除資源之前，需先關閉保護機制後才能繼續進行刪除步驟，可防止資源誤刪，導致中斷。
 ![](https://i.imgur.com/vfuSZhT.gif)
