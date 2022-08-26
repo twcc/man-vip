@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 title: '監控'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-monitor-instance-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-monitor-instance-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -14,6 +16,8 @@ TWCC 入口網站可檢視虛擬運算個體監控的資訊，可監控 **CPU �
 - 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-zh#虛擬運算服務)。
 - TWCC CLI 目前不支援此功能。
 :::
+
+<br/>
 
 ## 基本檢視
 
@@ -34,6 +38,8 @@ TWCC 入口網站可檢視虛擬運算個體監控的資訊，可監控 **CPU �
 :::info
 TWCC 入口網站之網路流量包含東西流量與南北流量的總和，而 [<ins>會員中心<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 之額度用量、資源用量紀錄則僅顯示南北流量。
 :::
+
+<br/>
 
 ## 進階操作
 

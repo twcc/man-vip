@@ -5,6 +5,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/doc-ccs-scheduled-main-
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-ccs-scheduled-main-zh'
 ---
 
+
 # 任務型容器
 
 任務型容器服務可依照需求，指定運算的開始執行時間，規劃批次任務使用的資源量，提升工作效率。使用完即回收運算資源，有效節省開發成本。

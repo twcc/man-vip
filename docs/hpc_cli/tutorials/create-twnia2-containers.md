@@ -1,13 +1,11 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-twnia2-create-sglrt-container-zh' 
 ---
 
 # 建立 TWNIA2 容器
 
-
-:::tip **適用情境：如何建立台灣杉二號的容器？如何客製化容器？**
-*您是否也有相同的困擾？讓我們手把手帶您組合 TWCC 雲端服務架構，輕鬆解決您的問題！*
-:::
 
 您可透過 「**Singularity**」 包裝您所需的套件與程式，**建立可在 TWCC 台灣杉二號 (命令列介面) (TWNIA2 (HPC CLI)) 服務執行運算工作的容器環境**，並可以快速部署套件、搬移、以及分享。
 
@@ -20,9 +18,15 @@ sidebar_position: 1
 [<ins>Singularity</ins>](https://sylabs.io/) 工具相當於 Docker，可建立 Rootless 形式的容器。
 :::
 
+<br/>
+
+
 ## 準備工作：容器映像檔
 
 容器來源有多種選擇，您可以使用 TWCC 已預載的容器映像檔、下載容器映像檔，或客製化您的容器環境。
+
+<br/>
+
 
 ### 1. TWCC 預載的容器映像檔
 
@@ -46,9 +50,10 @@ TWCC 已為使用者預載常用的 NGC 容器，並放置於路徑 `/work/TWCC_
 singularity exec --nv oras://registry.twcc.ai/singularity/<套件名>:<版本號> <在容器內執行的指令>
 ```
 
+<br/>
 
 
-### 2 下載容器映像檔
+### 2. 下載容器映像檔
 
 熟悉容器技術的進階用戶，若希望映像檔加入其他應用程式、套件，可先使用 [TWCC 虛擬運算個體](https://www.twcc.ai/doc?page=vm)客製化您的容器映像檔，再將映像檔上傳至台灣杉二號 (命令列介面) 使用。
 
@@ -61,7 +66,10 @@ singularity exec --nv oras://registry.twcc.ai/singularity/<套件名>:<版本號
 因為容器映像檔系統多使用 Ubuntu，建議虛擬運算個體環境選用 CentOS，較好判斷環境是容器之內或是之外。
 :::
 
-#### Step 1. 在虛擬運算個體安裝 Singularity 
+<br/>
+
+
+#### Step 1. 在虛擬運算個體安裝 Singularity
 
 安裝步驟截錄自官網文件，詳細步驟或其他版本之 Linux 用戶請查閱 Singularity 官網[最新文件](https://sylabs.io)。
 
@@ -83,6 +91,9 @@ sudo yum update -y && \
     sudo yum install -y singularity
 ```
 
+<br/>
+
+
 #### Step 2. 客製化 Singularity 容器
 
 您可以利用撰寫 **Singularity Definition File** 選擇基礎的映像檔 (base image) 來源，並安裝所需的應用程式，建立您專屬的客製化容器。
@@ -95,7 +106,6 @@ sudo yum update -y && \
     - `%post`：建立容器後將執行的內容。
     - `%environment`：容器建立好後，會將程式的環境變數會放到 /environment 內。
 :::
-
 
 
 以下示範建立 1 個 CUDA 10.1 映像檔，並編譯 [CUDA Samples](https://github.com/NVIDIA/cuda-samples) deviceQuery 的容器：
@@ -151,14 +161,21 @@ sudo singularity build <CONTAINER_NAME>.sif <DEF_FILE_NAME>.def
 推薦您使用 [<ins>HPC Container Maker</ins>](https://github.com/NVIDIA/hpc-container-maker) 撰寫 Singularity definition file ，如寫程式一樣維護方便。
 :::
 
+<br/>
+
 
 #### Step 3. 下載容器映像檔
 
 請將您的容器映像檔下載至本機。
 
+<br/>
+
+
 #### Step 4. 將容器映像檔上傳至高速檔案系統 (HFS)
 
 參考[高速檔案系統](https://www.twcc.ai/doc?page=hfs)，將容器映像檔透過資料傳輸節點 `xdata1.twcc.ai` 上傳至台灣杉二號 (命令列介面)的儲存空間，放在 `/home/$USER` 或 `/work/$USER` 目錄下使用。
+
+<br/>
 
 
 ## 運行容器
@@ -188,6 +205,8 @@ singularity exec --nv <CONTAINER_NAME>.sif cat /etc/os-release
 :::info
 - 運行 GPU 資源，指令皆需加上 `--nv`。
 :::
+
+<br/>
 
 
 ## 進階操作
@@ -225,6 +244,8 @@ apt-get install wget
 ```bash
 sudo singularity build <CONTAINER_NAME>.sif <FOLDER_NAME>/
 ```
+
+<br/>
 
 
 ### 2. 建立輕量化容器

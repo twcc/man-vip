@@ -1,15 +1,14 @@
 ---
 sidebar_position: 4
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-create-usr-linux-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-create-usr-linux-en' 
 ---
 
 # Connect to Linux instances using SSH with password
 
-:::tip **Scenario: Lose your key pair frequently? Can multiple users share a VCS instance?**
-*Do you have the same problem? Let us show you how to integrate TWCC services to solve the problems you are facing with!*
-:::
-
 In addition to using the **key pair** as a credential for connecting to Linux instances using SSH, this document will show you how to **use the account password to connect to the VCS Linux instance using SSH**. *This method help preventing cannot connect to instances when loss of the key pair or the damage of the key pair, and is suitable for multiple users sharing instances.*
 
+<br/>
 
 
 ### Step 1. Add a user with password
@@ -21,8 +20,9 @@ In addition to using the **key pair** as a credential for connecting to Linux in
 sudo adduser <USER_ID>
 ```
 
-
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5c07b26965922b473cc5ea6d8adda121.png)
+
+<br/>
 
 
 ### Step 2. Enable password authentication
@@ -33,6 +33,8 @@ sudo adduser <USER_ID>
 sudo sed -i 's/PasswordAuthentication\ no/PasswordAuthentication\ yes/g' /etc/ssh/sshd_config
 ```
 
+<br/>
+
 
 ### Step 3. Restart the sshd service
 
@@ -41,6 +43,9 @@ sudo sed -i 's/PasswordAuthentication\ no/PasswordAuthentication\ yes/g' /etc/ss
 ```bash
 sudo systemctl restart sshd
 ```
+
+<br/>
+
 
 ### Step 4. Check if you can connect to the instance with the account and password
 

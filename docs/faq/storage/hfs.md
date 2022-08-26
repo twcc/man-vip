@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: '高速檔案系統 (HFS)'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-hfs-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-hfs-zh'
 ---
 
 # TWCC FAQs | 高速檔案系統 (HFS)

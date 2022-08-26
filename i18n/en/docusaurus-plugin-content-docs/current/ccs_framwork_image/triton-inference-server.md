@@ -1,9 +1,12 @@
 ---
 sidebar_label: 'Triton Inference Server'
 sidebar_position: 11
+title: 'Triton Inference Server'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-tensorrtserver-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-tensorrtserver-en'
 ---
 
-# <img class="ccsimgicon" src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f55059e9d0a6ac45c44bcc0ec1bebff5.png' /> Triton Inference Server
+#  <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f55059e9d0a6ac45c44bcc0ec1bebff5.png' /> Triton Inference Server
 
 
 TWCC provides ready-to-use working environment of NGC’s TensorRT Inference Server. The TensorRT inference server provides an inference service via an HTTP endpoint, allowing remote clients to request inferencing for any model that is being managed by the server. The TensorRT inference server itself is included in the TensorRT inference server container. External to the container, there are additional C++ and Python client libraries, and additional documentation at GitHub: Inference Server.

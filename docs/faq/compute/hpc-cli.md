@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: '台灣杉二號 (命令列介面) (TWNIA2)'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-twnia2-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-zh'
 ---
 
 # TWCC FAQs | 台灣杉二號 (命令列介面) (TWNIA2)
@@ -29,10 +31,9 @@ title: '台灣杉二號 (命令列介面) (TWNIA2)'
 
 因為個人主機密碼時效是 180 天，如超過時效，需至 [Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 更改個人主機密碼，修改完成後再進行登入。
 </details>
-
+<div style={{height:10+'px'}}></div>
 
 ## 資源配置與監控
-
 
 <details>
 
@@ -56,7 +57,7 @@ title: '台灣杉二號 (命令列介面) (TWNIA2)'
 請確認使用的資源比例，因台灣杉二號的資源比例必須為 1 GPU : 4 CPU : 90 GB Memory，例：GPU 數量須設定為 8 個才能取得 32 個 CPU。
 
 </details>
-
+<div style={{height:10+'px'}}></div>
 
 
 ## 套件軟體
@@ -110,10 +111,10 @@ title: '台灣杉二號 (命令列介面) (TWNIA2)'
 兩者儲存環境相同，但計算環境不同：
 
 - 開發型容器的計算環境是由 TWCC 容器映像檔所建置。
-- 而台灣杉二號則需使用者自行部署計算環境。
-    <i class="fa fa-lightbulb-o fa-20" aria-hidden="true"></i> <b>提示：</b> 台灣杉二號可使用 `module` 載入所需之套件，詳細使用方法請參考[此文件](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-module-intro-zh)。
+- 而台灣杉二號則需使用者自行部署計算環境。 <i class="fa fa-lightbulb-o fa-20" aria-hidden="true"></i> <b>提示：</b> 台灣杉二號可使用 `module` 載入所需之套件，詳細使用方法請參考[此文件](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-module-intro-zh)。
 
 </details>
+<div style={{height:10+'px'}}></div>
 
 ## 儲存與資料傳輸
 <details>
@@ -135,6 +136,7 @@ title: '台灣杉二號 (命令列介面) (TWNIA2)'
 <i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> <b>重要：</b> <b>系統會定期清理 TWCC 帳號下久未使用之資源，請務必定期備份您的資料。</b>
 
 </details>
+<div style={{height:10+'px'}}></div>
 
 ## 網路安全
 <details>
@@ -146,7 +148,7 @@ title: '台灣杉二號 (命令列介面) (TWNIA2)'
 203.145.219.98
 
 </details>
-
+<div style={{height:10+'px'}}></div>
 
 ## 執行錯誤
 

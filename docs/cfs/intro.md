@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: '服務概觀'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/cfs-overview-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/cfs-overview-zh'
 ---
 
 

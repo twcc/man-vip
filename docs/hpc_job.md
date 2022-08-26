@@ -5,6 +5,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/doc-hpc-job-main-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-hpc-job-main-zh'
 ---
 
+
 # HPC 高速運算任務
 
 TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源調度軟體，Slurm 是一個容錯度高、高度可擴展的叢集管理系統，適用於大型和小型的 Linux 群集，至今已成為許多超級計算機所使用的資源管理器。Slurm 本身並不需要針對系統內核（Kernel）做調整，並且相對獨立。作為一個群集管理系統，Slurm 有三個關鍵功能：

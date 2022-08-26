@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
-title: '管理映像檔'
+title: 'Manage images'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-vds-manage-instance-image-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-vds-manage-instance-image-en'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -23,7 +25,9 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### Commands
+
+**Commands**
+
 
 ```bash
 twccli ls vcs -snap [-all]      # View all images([-all]Tenant Admins only) 
@@ -34,7 +38,11 @@ twccli ls vcs -snap [-all]      # View all images([-all]Tenant Admins only)
 1. The square brackets **[ ]** indicate optional parameters, and the rest are required parameters.
 :::
 
-### Examples
+
+<br/>
+
+**Examples**
+
 
 - View the image state created from the VCS image with ID **`918628`**
 ```bash
@@ -46,6 +54,10 @@ twccli ls vcs -snap -s 918628
 </TabItem>
 
 </Tabs>
+
+
+<br/>
+
 
 
 ## Delete images

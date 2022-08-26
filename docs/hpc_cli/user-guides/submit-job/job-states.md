@@ -1,5 +1,7 @@
 ---
 sidebar_position: 4
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-job-state-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-job-state-zh'
 ---
 
 # 確認任務狀態
@@ -12,38 +14,13 @@ sidebar_position: 4
 
 透過 scontrol show job可查看任務狀態狀態，若使用 scontrol show job [job_id] 可查看特定任務的詳細狀態。如下：
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
-    
-$ scontrol show job 2977
-JobId=2977 JobName=test.sh
-   UserId=u9833157(11899) GroupId=TRI1071744(16528) MCS_label=N/A
-   Priority=4294899531 Nice=0 Account=root QOS=normal
-   JobState=RUNNING Reason=None Dependency=(null)
-   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
-   RunTime=00:00:45 TimeLimit=1-00:00:00 TimeMin=N/A
-   SubmitTime=2018-12-06T11:39:35 EligibleTime=2018-12-06T11:39:35
-   StartTime=2018-12-06T11:39:36 EndTime=2018-12-07T11:39:36 Deadline=N/A
-   PreemptTime=None SuspendTime=None SecsPreSuspend=0
-   LastSchedEval=2018-12-06T11:39:36
-   Partition=SlurmDefault AllocNode:Sid=un-ln01:167797
-   ReqNodeList=(null) ExcNodeList=(null)
-   NodeList=gn0312.twcc.ai,gn1229.twcc.ai,gn1230.twcc.ai
-   BatchHost=gn0312.twcc.ai
-   NumNodes=3 NumCPUs=6 NumTasks=3 CPUs/Task=2 ReqB:S:C:T=0:0:*:*
-   TRES=cpu=6,mem=24G,node=3,billing=6
-   Socks/Node=* NtasksPerN:B :S:C=0:0:*:* CoreSpec=*
-   MinCPUsNode=2 MinMemoryNode=8G MinTmpDiskNode=0
-   Features=(null) DelayBoot=00:00:00
-   Gres=(null) Reservation=(null)
-   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
-   Command=/fs02/u9833157/test.sh
-   WorkDir=/fs02/u9833157
-   StdErr=/fs02/u9833157/slurm-2977.out
-   StdIn=/dev/null
-   StdOut=/fs02/u9833157/slurm-2977.out
-   Power=
 
-</div>
+```
+scontrol show job 2977
+```
+![image](https://user-images.githubusercontent.com/109254397/184576022-71197a68-cef4-4d78-b6bb-1826358e0751.png)
+
+
 
 
 這邊可以看到輸出很多訊息，包含運行此任務的使用者資訊、此任務的相關時間資訊、運行節點資訊、運行的資源大小、執行的指令、運行指令的位置、輸出指令的位置等。
@@ -53,14 +30,12 @@ JobId=2977 JobName=test.sh
 
 雖然scontrol 輸出的訊息非常完整，但如果系統中存在大量的任務時，回應的速度會變慢，使用效率較低，且不一定都需要這麼詳盡的訊息，此時 squeue 會是更好的選擇。使用 squeue 的方式如下：
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
-    
-$ squeue
-JOBID  PARTITION  NAME   USER      ST  TIME     NODES   NODELIST(REASON)
-    2979   SlurmDefa  test.sh   u9833157  R   0:14     3        gn0312.twcc.ai, gn1229.twcc.ai, gn1230.twcc.ai
+```
+squeue
+```
+![image](https://user-images.githubusercontent.com/109254397/184576050-95d3cca4-19bc-4966-9019-eaa11b6da7d9.png)
 
 
-</div>
 
 
 可從 squeue 裡面看到正在運行以及正在排隊的任務，可從「ST」的欄位看到「R」，表示正在運行中，看到「PT」表示正在排隊中。若任務已結束，透過 squeue 則無法看到資訊，必須使用下面介紹的 sacct 來瀏覽。
@@ -69,24 +44,13 @@ JOBID  PARTITION  NAME   USER      ST  TIME     NODES   NODELIST(REASON)
 #### sacct
 
 sacct 可顯示相關任務的狀態，包含已經結束的歷史資訊，
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
-    
-$ sacct
-JobID       JobName     Partition    Account     AllocCPUS  State     ExitCode 
-------------    ----------      ----------      ----------     ----------   ----------    -------- 
-2961_1       ba6fcf7e-+  SlurmDefa+    root         10     FAILED      1:0 
-2961_1.batch  batch                    root         10     FAILED      1:0 
-2963_1       ba6fcf7e-+  SlurmDefa+    root         10     FAILED        1:0 
-2963_1.batch  batch                    root         10    FAILED        1:0 
-2976         test.sh     SlurmDefa+    root          6     CANCELLED+   0:0 
-2977         test.sh     SlurmDefa+    root          6     COMPLETED    0:0 
-2977.batch    batch                   root          2     COMPLETED    0:0 
-2979         test.sh     SlurmDefa+    root          6     COMPLETED    0:0 
-2979.batch    batch                   root          2     COMPLETED    0:0 
-2980         test.sh     SlurmDefa+    root          6     PENDING      0:0
 
 
-</div>
+```
+sacct
+```
+![image](https://user-images.githubusercontent.com/109254397/184576062-34f10665-f60f-4a72-98c9-16c80c9e2b84.png)
+
 
 可直接從狀態看到此任務是 COMPLETE、PENDING或是FAILED，以及此任務所使用的 CPU 核心數。若ExitCode的開頭不為「0」，則表示此任務是錯誤狀態。
 

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-host-secure-multi-web-one-instance-2-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-host-secure-multi-web-one-instance-2-zh'
 ---
 import TOCInline from '@theme/TOCInline';
 
@@ -48,32 +50,14 @@ certbot --nginx -d <Domain_Name>
 ```
 :::info
 1. ```<Domain_Name>```的部分請填入剛剛所申請的網域名稱
-2. 以下輸入 e-mail 接收緊急或安全性通知
-```
-Enter email address (used for urgent renewal and security notices) (Enter 'c' to
-cancel): 
-```
-```
-Please read the Terms of Service at
-https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf. You must
-agree in order to register with the ACME server at
-https://acme-v02.api.letsencrypt.org/directory
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-(A)gree/(C)ancel: A
-```
 
-3. 以下內容請選 `2`，直接將 HTTP 連線導向 HTTPS 並刪除 HTTP 連線：
+2. 以下輸入 e-mail 接收緊急或安全性通知<div style={{height:5+'px'}}></div>
+![image](https://user-images.githubusercontent.com/109254397/184550510-5e320000-861b-47a2-966c-9f3f5a9d95d5.png)
+![image](https://user-images.githubusercontent.com/109254397/184550522-4dfcfbd6-9930-4b29-8f00-12578ac5de85.png)
 
-```
-Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-1: No redirect - Make no further changes to the webserver configuration.
-2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
-new sites, or if you're confident your site works on HTTPS. You can undo this
-change by editing your web server's configuration.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 2
-```
+3. 以下內容請選 `2`，直接將 HTTP 連線導向 HTTPS 並刪除 HTTP 連線：<div style={{height:5+'px'}}></div>
+![image](https://user-images.githubusercontent.com/109254397/184550531-495f390d-17a2-4e6b-92a3-9557a2c47e61.png)
+
 :::
 - 進入 Nginx 設定檔，編輯 service2 網站對應的根目錄位置
 ```

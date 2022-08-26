@@ -1,5 +1,7 @@
 ---
 sidebar_position: 7
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-gpu-allocation-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-gpu-allocation-zh'
 ---
 
 # GPU 資源調度
@@ -8,27 +10,28 @@ sidebar_position: 7
 
 Slurm中通用資源被稱之為GRES（Generic Resource），預設情況下Slurm沒有開啟該功能，但本服務為了管理GPU資源，將此功能開啟，並且將管理GPU資源的相關設定套用到每一台Slurm的管理節點以及運算節點上，以實現GPU的資源控管。使用者可以透過「--gres」參數來申請資源，這邊透過一個腳本範例來看如何使用GPU資源。
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
-    
+
+```
+
 #!/bin/bash
 date
 nvidia-smi
 hostname
 echo "done"
 
-</div>
+```
+
 
 
 當中「date」為顯示當下時間，而「nvidia-smi」顯示GPU的資訊，如果所被分配的資源中有GPU，透過該指令即可看到該GPU的相關資訊以及使用狀況。腳本最後顯示運行的機器名稱，以及列印出「done」字樣。
 
 我們可以透過以下指令來派送任務，並指定所使用的GPU資源數，當中「--gres」為申請通用資源的參數，「gpu」則是本系統所設定的特定通用資源名稱，由於我們開放申請GPU資源，因此參數直接設定為gpu。最後可在gpu後加上冒號，指定資源的使用量，指令範例以及輸出範例如下。
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
-    
-$ srun --gres=gpu:2 test.sh
-    
 
-</div>
+```
+srun --gres=gpu:2 test.sh
+```
+
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f65a134af15646063f3be2a01d9bda08.png)
