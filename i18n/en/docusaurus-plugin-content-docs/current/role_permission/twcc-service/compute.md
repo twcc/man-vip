@@ -1,6 +1,8 @@
 ---
 sidebar_label: '運算服務'
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/role-compute-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-compute-en' 
 ---
 
 # Comparison of role permissions of TWCC: Computing service

@@ -2,15 +2,12 @@
 displayed_sidebar: role_permission
 sidebar_label: '新舊專案轉移'
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-project-data-transfer-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-project-data-transfer-zh' 
 ---
 
 
 # 新舊專案轉移
-
-:::success **適用情境：如何將舊計畫資料搬移至新計畫？**
-
-*您是否也有相同的困擾？讓我們手把手帶您組合 TWCC 雲端服務架構，輕鬆解決您的問題！*
-:::
 
 若您申請了新計畫並希望可沿用舊計畫之資料，可參考本文的說明，透過**雲端物件儲存服務 (Cloud Object Storage, COS)** 轉移您的資料。
 

@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: '基礎虛擬防火牆 (BVF)'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-bvf-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-bvf-zh'
 ---
 
 # TWCC FAQs | 基礎虛擬防火牆 (BVF)

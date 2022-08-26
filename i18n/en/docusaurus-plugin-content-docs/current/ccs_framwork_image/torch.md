@@ -1,9 +1,12 @@
 ---
 sidebar_label: 'Torch'
 sidebar_position: 13
+title: 'Torch'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-torch-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-torch-en'
 ---
 
-# <img class="ccsimgicon" src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f55059e9d0a6ac45c44bcc0ec1bebff5.png' />   Torch
+# <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f55059e9d0a6ac45c44bcc0ec1bebff5.png' /> Torch
 
 
 TWCC provides ready-to-use working environment of NGC optmized Torch. Torch is a scientific computing framework with wide support for deep learning algorithms. Thanks to an easy and fast scripting language, Lua, and an underlying C/CUDA® implementation, Torch is easy to use and is efficient. Torch offers popular neural network and optimization libraries that are easy to use yet provide maximum flexibility to build complex neural network topologies.

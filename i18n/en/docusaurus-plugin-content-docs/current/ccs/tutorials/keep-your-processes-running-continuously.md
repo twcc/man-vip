@@ -1,12 +1,11 @@
 ---
 sidebar_position: 4
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-css-jupyter-add-python3-kernel-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-css-jupyter-add-python3-kernel-en'
 ---
 
 # Add Python 3 kernel to Jupyter Notebook 
 
-:::success **Scenario：I'm used to program with Python 2, but the Jupyter Notebook only supports Python 2...**
-*Do you have the same problem? Let us show you how to integrate TWCC services to solve the problems you are facing with!*
-:::
 
 TWCC Interactive Container provides Jupyter Notebook by default. It is a web-based integrated development environment to write scripts, display output, visualize data... and many other functions. In addition, it can install multiple computing kernels of programming languages according to needs. 
 

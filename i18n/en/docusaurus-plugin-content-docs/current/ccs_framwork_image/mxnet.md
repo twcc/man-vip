@@ -1,6 +1,9 @@
 ---
 sidebar_label: 'MXNet'
 sidebar_position: 8
+title: MXNet
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-mxnet-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-mxnet-en' 
 ---
 
 
@@ -10,6 +13,8 @@ sidebar_position: 8
 
 TWCC provides ready-to-use working environment of NGC optimized MXNet. MXNet is a deep learning framework designed for both efficiency and flexibility. It allows you to mix the flavors of symbolic programming and imperative programming to maximize efficiency and productivity. In its core is a dynamic dependency scheduler that automatically parallelizes both symbolic and imperative operations on the fly. A graph optimization layer on top of that makes symbolic execution fast and memory efficient. The library is portable and lightweight, and it scales to multiple GPUs and multiple machines.
 
+<br/>
+
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">Information of Image file version</span>
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c6ca9e3df6a80fc104f1a7c1258ccca1.png)
@@ -17,6 +22,8 @@ TWCC provides ready-to-use working environment of NGC optimized MXNet. MXNet is 
 :::info
 `py3` and `py2` are different Python versions.
 :::
+
+<br/>
 
 <details class="docspoiler">
 

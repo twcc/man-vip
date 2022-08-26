@@ -15,7 +15,9 @@ You can create [TWCC VCS instance image](https://man.twcc.ai/@twccdocs/vcs-vds-i
 - **Create an instance image after [shutting down your instance](#How-to-shut-down-instances?)**. It will take some time to create images for instances in the **`Ready`** state and have I/O. Therefore, create an image after shutting down your instance to ensure a short creation time.
 - **If you have configured auto mount data disks to your instance, it is suggested to [add "nofail"](#How-to-add-the-nofail-option?) after the configuration command before creating an image** to ensure that the instance can be started and connected normally.
 
+
 <br/>
+
 
 
 ## How to shut down instances?
@@ -34,14 +36,18 @@ sudo shutdown
 For the relationship between instance state and billing, see [<ins>VCS instance lifecycle</ins>](https://www.twcc.ai/doc?page=concept-vcs-lifecycle).
 :::
 
+
 <br/>
 
 
+
 ## How to add the nofail option?
+
 
 - If you have configured auto mount data disks to your instance in the file /etc/fstab (e.g., `/dev/vdb /mnt ext4 defaults`)<br/>
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_09ddb7ad46cfae66dcb3fa7cb75244c0.png)
 
 - Please add `nofail` after the original settings to avoid errors in mounting the data disk, causing the instance you created with the image to fail to start and connect normally.
 (e.g., `,nofail,x-systemd.device-timeout=1m`)<br/>
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d82af67186cc021e21a4f4d59630cc4d.png)

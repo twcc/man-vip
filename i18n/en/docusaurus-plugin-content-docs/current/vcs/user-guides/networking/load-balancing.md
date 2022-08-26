@@ -18,7 +18,9 @@ TWCC Load Balancing Service offers Application Load Balancer (HTTP and HTTPs wit
 - TWCC CLI currently does not support this feature.
 :::
 
+
 <br/>
+
 
 
 ## Create load balancers
@@ -61,7 +63,9 @@ Before you create **HTTPS with SSL** listener, [<ins>create SSL certificates</in
 After creating, [<ins>attaching VCS instances to the load balancer</ins>](#連結虛擬運算個體) to enable the traffic balancing mechanism for your applications.
 :::
 
+
 <br/>
+
 
 
 ## Manage load balancers
@@ -96,7 +100,9 @@ SSL certificates have a validity period. You can create a new certificate to rep
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d6437988b429ae87a60da18ef33641c9.png)
 
+
 <br/>
+
 
 
 ## Attach load balancers to VCS instances
@@ -135,7 +141,9 @@ You can use the search bar with keywords to find your load balancer if too many 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3ebbfbd379f6bec7ff4b04fdbfe65228.png)
 
+
 <br/>
+
 
 
 ## SSL Certificates
@@ -147,7 +155,9 @@ Deploy SSL certificates on your load balancers can help you build trust with cus
 In order to comply with the information security requirements, only the TLS 1.2 transport layer security protocol is provided.
 :::
 
+
 <br/>
+
 
 ### Create SSL certificates
 
@@ -174,7 +184,9 @@ TWCC currently supports only PKCS#12 format, see [<ins>HowTo：Convert SSL certi
 ==**Need to update:exclamation:**==
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3f77e7e47a585410d2df100933954846.png)
 
+
 <br/>
+
 
 
 ### Manage SSL certificates
@@ -185,7 +197,9 @@ Follow [Create SSL certificates](#Create-a-SSL-Certificate) and after the certif
 TWCC currently supports only PKCS#12 format, see [<ins>HowTo：Convert SSL certificates</ins>](https://man.twcc.ai/@twccdocs/howo-lb-convert-cert-en) for more information.
 :::
 
+
 <br/>
+
 
 
 ### Delete SSL certificates
@@ -196,7 +210,9 @@ TWCC currently supports only PKCS#12 format, see [<ins>HowTo：Convert SSL certi
 ==**Need to update:exclamation:**==
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2fbf0b28ee7acdc4ac63c10fffe58438.png)
 
+
 <br/>
+
 
 
 :::info

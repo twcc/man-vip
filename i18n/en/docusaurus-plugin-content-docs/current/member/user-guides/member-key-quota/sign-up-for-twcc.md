@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-signup-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-signup-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,11 +10,12 @@ import TabItem from '@theme/TabItem';
 # Sign up for an TWCC account
 
 
-:::warning
+:::caution
 ==Need to update:exclamation:==<br/>
 If your [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) not applicable for the footage or process below, please refer to this <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>link</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-signup-zh) for manual instructions.
 :::
 
+<br/>
 
 
 ## Step 1. Let's begin!
@@ -21,13 +24,15 @@ If your [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-fo
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0b219094ff551c0cf1e79125911265e9.png)
 
+<br/>
+
 ## Step 2. Read the statement of personal information and rights and obligations
 
 - The page will be directed to the Member Center, please read the personal information and rights and obligations statement, scroll down the page, and click "I agree"
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_815bf21fe842ebce38cf083b32d1ad44.jpg)
 
-
+<br/>
 
 ## Step 3. Fill in basic information
 
@@ -39,11 +44,13 @@ If your [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-fo
 - Setup supercomputer account and password
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fda6ca26de2c9f689475b011f9c204e9.png)
 
-
+<br/>
 
 ## Step 4. E-mail, mobile phone number verification
 
 - Receive the verification email and SMS to complete the registration!
+
+<br/>
 
 :::info
 :bulb: Related documents：[<ins>Update member info</ins>](https://man.twcc.ai/@twccdocs/guide-service-update-your-info-zh), [<ins>Reset portal password</ins>](https://man.twcc.ai/@twccdocs/guide-service-reset-portal-pwd-zh).

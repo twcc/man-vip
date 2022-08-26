@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-intactv-howto-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-intactv-howto-en'
 ---
 # Python package installation guide of TWCC Interactive Container
 

@@ -1,6 +1,11 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-encryption-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-encryption-zh'
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # 檔案加密
 
@@ -30,9 +35,8 @@ TWCC 會在上傳檔案至雲端物件儲存空間時，為您的檔案進行加
 
 <!-- 1 start -->
 
-<details class="docspoiler">
-
-<summary><b>TWCC 入口網站</b></summary>
+<Tabs>
+  <TabItem value="TWCC 入口網站" label="TWCC 入口網站" default>
 
 
 
@@ -53,17 +57,8 @@ TWCC 會在上傳檔案至雲端物件儲存空間時，為您的檔案進行加
 
 
 
-</details>
-
-<!-- Space -->
-
-<div style={{height:8+'px'}}></div>
-
-<!-- 2. start -->
-
-<details class="docspoiler">
-
-<summary><b>第三方軟體：S3 browser</b></summary>
+ </TabItem>
+  <TabItem value="第三方軟體：S3 browser" label="第三方軟體：S3 browser">
 
 
 ### 準備工作
@@ -113,4 +108,5 @@ TWCC 會在上傳檔案至雲端物件儲存空間時，為您的檔案進行加
 - 更多 S3 browser 使用雲端物件儲存的教學，可參考 [<ins>使用 S3 browser 管理檔案</ins>](https://man.twcc.ai/@twccdocs/guide-cos-s3browser-zh)
 :::
 
-</details>
+  </TabItem>
+</Tabs>

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-config-service-port-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-config-service-port-zh'
 ---
 
 # 設定開發型容器的服務埠

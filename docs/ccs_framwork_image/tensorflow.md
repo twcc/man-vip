@@ -1,6 +1,9 @@
 ---
 sidebar_label: 'TensorFlow'
 sidebar_position: 2
+title: TensorFlow
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-overview-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-overview-zh' 
 ---
 
 
@@ -9,6 +12,7 @@ sidebar_position: 2
 
 TWCC 提供 NGC optimized TensorFlow 共 20 種立即可用的工作環境。TensorFlow 是利用資料流程圖來表達抽象數值運算過程的開放式原始碼函式庫。流程圖中的節點 (nodes) 表示數學運算，而邊 (edges) 則表示聯繫節點的多維數據陣列，亦稱為張量 (tensors)。靈活的架構設計能輕鬆地在不同裝置上運算，例如 PC 一個或多個的 CPU/GPU、智慧行動裝置等等。
 
+<br/>
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">映像檔版本資訊</span> 
 
@@ -21,9 +25,13 @@ TWCC 提供 NGC optimized TensorFlow 共 20 種立即可用的工作環境。Ten
 
 </details>
 
+<br/>
+
 :::info
 同版號但區分 `tf2`、`tf1` 者，為 TensorFlow 版本差異；區分 `py3` 與 `py2` 則為 Python 之版本差異。
 :::
+
+<br/>
 
 <details class="docspoiler">
 

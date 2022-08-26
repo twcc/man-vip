@@ -25,7 +25,9 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
+
 **Commands**
+
 
 ```bash
 twccli ls vcs -snap [-all]      # View all images([-all]Tenant Admins only) 
@@ -36,9 +38,11 @@ twccli ls vcs -snap [-all]      # View all images([-all]Tenant Admins only)
 1. The square brackets **[ ]** indicate optional parameters, and the rest are required parameters.
 :::
 
+
 <br/>
 
 **Examples**
+
 
 - View the image state created from the VCS image with ID **`918628`**
 ```bash
@@ -51,7 +55,9 @@ twccli ls vcs -snap -s 918628
 
 </Tabs>
 
+
 <br/>
+
 
 
 ## Delete images
@@ -81,6 +87,7 @@ To ensure an instance can be created from an image completely, **please do not d
 </Tabs>
 
 <br/>
+
 
 
 ## Create instances from images
