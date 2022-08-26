@@ -108,7 +108,9 @@ twccli cp cos -bkt bk_cli -dir testf2 -sync to-cos
 目前一次僅能下載一個檔案，如欲下載多個檔案，可透過左側功能列之「第三方軟體下載」。
 :::    
     
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c870bc168585b7f3fe610bcd24a12ceb.png)
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_89160860cbe9de11aabbe75ff2a718bc.png)
+
 
   </TabItem>
   <TabItem value="TWCC CLI" label="TWCC CLI">
@@ -164,7 +166,9 @@ twccli ls cos -bkt bk_cli
 
 * 在儲存體的內容頁面，點擊「**建立資料夾**」，輸入資料夾名稱後按「**確定**」，即建立成功。
     
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c19115d4aa65893e358df12917a94d82.png)
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_94ccd09b44b8a0058821e9f279dcb5f8.png)
+
 
   </TabItem>
 </Tabs>
