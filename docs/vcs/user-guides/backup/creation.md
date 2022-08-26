@@ -38,7 +38,7 @@ import TabItem from '@theme/TabItem';
 
 * 進入虛擬運算個體管理頁面，點選欲建立映像檔的個體列表，進入該個體的詳細資料頁面，並點擊「**映像檔**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3c70e745f4052b117875a81aa2909ea4.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1eae8d8ba6e77b6985c766895be51052.png)
 
 
 * 確認視窗提示的資訊，並輸入映像檔的名稱、描述後按「**確定**」。
@@ -48,7 +48,7 @@ import TabItem from '@theme/TabItem';
 
 * 頁面跳轉至虛擬運算個體映像檔管理頁，並等映像檔狀態由 **`QUEUED`** > **`SAVING`**  > 最後變為 **`ACTIVE`** 後即可使用。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e1a78aa185d26f10ab476109712e155a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b56086ae6e9bd6eb94bf72f918e8d80.png)
 
 </TabItem>
 
@@ -94,10 +94,8 @@ twccli mk vcs -s 918628 -cus-img
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-- 使用 `crontab -e` 進行設定，相關使用功能請參照 [<ins>CronHowTo</ins>](https://help.ubuntu.com/community/CronHowto)。
-![](https://i.imgur.com/1zRke01.png)
-
-- 指定任意時間進行快照工作，在此為範例為==午夜 01:01==。
+- 使用 `crontab -e` 進行設定，相關使用功能請參照 [<ins>CronHowTo</ins>](https://help.ubuntu.com/community/CronHowto)。<br/>
+- 指定任意時間進行快照工作，在此為範例為午夜 01:01。<br/>
 ![](https://i.imgur.com/mQp1kUr.png)
 
 </TabItem>

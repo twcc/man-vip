@@ -110,11 +110,11 @@ CIDR：指要套用此虛擬運算個體安全規則的 CIDR 網段。
 
 * 檢視網路安全規則的設定資訊及計畫的額度資訊，確定後點選「**建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cff3247e6d017ef3dcbbd1bf51751c04.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_56db622663f2cee9836ad6a8a08ab2f8.png)
 
 * 建立完成後，即可於安全性群組規則列表新增一項新的安全規則。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c5d589961bf300f37721dd0c994e59c3.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8044bfe912c085595ba16daa890b998f.png)
 
 </TabItem>
 
@@ -124,7 +124,7 @@ CIDR：指要套用此虛擬運算個體安全規則的 CIDR 網段。
 若要進行設定網路安全性群組，請使用 `twccli net vcs --help` 進行查詢各細項功能
 :::
 
-- 若要設定對安全網路段：==10.10.10.0/24==，開放 ==TCP:81== 埠的連入(ingress)，使用指令如下
+- 若要設定對安全網路段：10.10.10.0/24，開放 TCP:81 埠的連入(ingress)，使用指令如下
 
 ```
 twccli net vcs -secg -s 892486 -cidr 10.10.10.0/24 -in -proto tcp -p 81
@@ -174,7 +174,7 @@ twccli ls vcs -secg -s 892486
 
 :::info
 刪除安全性群組的時候，請使用安全性群組的 UUID 進行刪除。
-UUID 最短僅需提供==前8碼==，即可進行刪除。 
+UUID 最短僅需提供前8碼，即可進行刪除。
 :::
 
 參考範例:point_down:：

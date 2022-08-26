@@ -37,7 +37,7 @@ Auto Scaling 是一種自動彈性調整的監控機制，本服務能夠在指�
 
 * 由服務列表點選「**Auto Scaling**」進入「**Auto Scaling 管理**」頁面，點擊「**＋建立**」
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
 
 :::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
@@ -51,12 +51,12 @@ Auto Scaling 是一種自動彈性調整的監控機制，本服務能夠在指�
     * **閥值下限**：設定 Meter 的最低閥值，低於此閥值時則會縮減虛擬運算個體數量。
     * **虛擬運算個體最大上限**：設定虛擬運算個體數量的最大上限，預設值為 2 （Auto Scaling 至少需 2 台虛擬運算個體）。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_335f09978e2bf9dc66fb3d888f0b6c44.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d868aef30fe5e7d4fad60706a7b206d1.png)
 
 
 * 檢視 Auto Scaling 的設定及計畫的額度資訊，確定後點選「**建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4d6ead43c71053ed1ed4ea23c555af56.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0d5547a82935d854983faaaff1441aa9.png)
 
 </TabItem>
 
@@ -80,10 +80,9 @@ Auto Scaling 是一種自動彈性調整的監控機制，本服務能夠在指�
 
 * Auto Scaling 管理頁面，剛建立好的 Auto Scaling 項目會列在最上方。點選 Auto Scaling 列表，可檢視 Auto Scaling 的設定資訊，或執行「**删除**」、「**重新整理**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_afe3fa57f6fbc7cc3d42ddde6c3f099a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_eee7f8c6944a35087428960db9d26dce.png)
 
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d45d79ec30149116d764da4f957937c7.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_846fd28c8f9c42456c22ae6f5b1575b0.png)
 
 </TabItem>
 
@@ -108,7 +107,7 @@ Auto Scaling 是一種自動彈性調整的監控機制，本服務能夠在指�
 
 *  進入「**虛擬運算個體**」服務，在「**虛擬運算個體管理**」頁面點選欲掛載的個體，進入虛擬運算個體詳細資料頁面，按一下 Auto Scaling 後的「**掛載**」按鈕。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d76858fb9325d29f23939ae4d3aded70.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db56a399662fec868f71cc242f585682.png)
 
 :::info
 虛擬運算個體的狀態必須為 <b>`Ready`</b> ，才可以掛載/移除 Auto Scaling。

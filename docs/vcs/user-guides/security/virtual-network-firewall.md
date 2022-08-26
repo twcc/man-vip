@@ -23,13 +23,13 @@ import TabItem from '@theme/TabItem';
 
  * 進入「**基礎虛擬防火牆**」服務，在「**基礎虛擬防火牆管理**」頁面，點擊「**＋建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
 
 :::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b31af2d0b12871b50d71bdfbf52646b3.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1c47cc938a6750f99e2e4dd3696ebc1d.png)
 
 
 * 輸入名稱及描述，接著點擊「下一步：規則」。
@@ -52,8 +52,8 @@ import TabItem from '@theme/TabItem';
     * 終端 IP：輸入終端主機的 IP 位址 (受保護個體的私有 IP)
     * 終端埠：輸入終端埠
     * 來源 IP：輸入來源的 IP 位址
-    * 來源埠：輸入來源埠   
-    
+    * 來源埠：輸入來源埠
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dc5e1fc63669854539bcc942eae82caf.png)
 
 :::info
@@ -62,18 +62,16 @@ import TabItem from '@theme/TabItem';
 
 
 * 回到「**基礎虛擬防火牆管理**」頁面，即可看到剛建立的規則，接著點擊「**加入排序**」。
-    
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7b397f60dd7f204b8eeefa073ae5f3de.png)
 
-    
 * 加入排序後，防火牆規則會被加入到下方列表中。
-    
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3dce3f76176808f6f02972be6c72ae24.png)
 
 
 
 * 重複以上的步驟建立更多防火牆規則，亦可點擊防火牆規則列表，選擇加入相同計畫中已建立的防火牆規則。
-    
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_47050a73ea93e08575f9ddc4c0c9c65c.png)
 
@@ -96,7 +94,7 @@ import TabItem from '@theme/TabItem';
 
 
 * 選擇網路後，接著點擊「**下一步：進階規則**」，此步驟可將虛擬運算個體的安全性群組規則同步至防火牆，在防火牆也自動創建相對應的規則 (SyncRule)。
-    
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_faaeb1b8ab3bf7de05ae747e9d6f33d3.png)
 
 :::info
@@ -105,21 +103,18 @@ import TabItem from '@theme/TabItem';
 
 
 * 在進階規則頁面內，會列出虛擬網路下所有的虛擬運算個體的私有 IP 列表。
-    
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e31cd502b22e931ab490d4c334637372.png)
 
 
-* 點擊列表中的虛擬運算個體可查看此個體建立的安全性群組規則，勾選欲使用之規則的虛擬運算個體私有 IP，接著點擊「**下一步：檢閱+建立**」。      
-    
+* 點擊列表中的虛擬運算個體可查看此個體建立的安全性群組規則，勾選欲使用之規則的虛擬運算個體私有 IP，接著點擊「**下一步：檢閱+建立**」。
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4e2cf4c55560f38e5cbab61881ac2939.png)
 
-
-    
 * 檢視欲建立的防火牆資訊，按下「**建立**」即完成。
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5f6595ea73799e805dc34beb3244f434.png)
 
-    
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_524cb4b9604ce59711ee8ae0dd5e8051.png)
+
 * 建立完成的防火牆會出現在虛擬運算防火牆管理列表的最上方，點擊該列表，可查看防火牆詳細資料或編輯規則。
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_00cda3e43d970a8d3553cb7cc6a92bc1.png)
@@ -138,8 +133,10 @@ import TabItem from '@theme/TabItem';
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1b2352610c7c8c90a5201169da971d29.png)
 
 * 即可在「**編輯規則**」視窗中調整規則的順序或是新增、删除規則，編輯好後點擊「**確認**」。  
-    
+
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0a32c8b3217f41650022c5092fb565c8.png)
+
 
 * 完成編輯後，防火牆的狀態會變成 **`PENDING_UPDATE`**。數分鐘後等狀態變成 **`ACITVE`**，即代表此防火牆設定已生效。
 

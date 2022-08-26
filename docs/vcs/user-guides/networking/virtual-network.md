@@ -40,13 +40,13 @@ import TabItem from '@theme/TabItem';
 
 * 由服務列表點選進入「**虛擬網路**」服務，在「**虛擬網路管理**」頁面，點擊「**＋建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
 
 :::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f2bdcd4f74eb97be693e89979651c399.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2e1ee3a1fc92a7d9cfb1e71e2f67ff41.png)
 
 
 * 輸入虛擬網路設定的資訊，完成後點擊「**下一步：檢閱+建立>**」。
@@ -59,7 +59,7 @@ import TabItem from '@theme/TabItem';
 
 * 檢視虛擬網路的設定及計畫額度資訊，確定後點選「**建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c7ffcca6dd6ebe84f2576b5b8ce0c8f9.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_184b047fb3b48e0ce97fbd448e168ab1.png)
 
 </TabItem>
 
