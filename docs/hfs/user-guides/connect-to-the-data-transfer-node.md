@@ -138,11 +138,7 @@ macOS：可使用「文字編輯」軟體
 
 8. 點選「**連線**」
 
-<b>
-
-Step 3. 輸入主機密碼及 [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC)
-
-</b>
+<b>Step 3. 輸入主機密碼及 <a href="https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC">OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></a></b>
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_92b59625eba5f2dbaff85d5c2c030e19.png)
 
