@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-sg-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-sg-zh'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -14,6 +16,8 @@ TWCC 提供安全性群組功能，使用者可透過設定安全規則進行虛
 - 安全性群組功能是為各個虛擬運算個體設定個別的安全規則而設計，所以必須先建立至少一個可用的虛擬運算個體，才可以設定其安全群組規則。
 - 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh#%E5%AE%89%E5%85%A8%E6%80%A7%E7%BE%A4%E7%B5%84)。
 :::
+
+<br/>
 
 ## 檢視虛擬運算個體安全性群組規則
 
@@ -44,7 +48,6 @@ twccli ls vcs -secg -s 937648   # 列出 ID 為 937648 個體的安全性群組
 
 <summary>虛擬運算個體預設之安全性群組規則</summary>
 
-:::info
 - TWCC Linux 個體預設開放的輸入/輸出規則：
 
 | 方向 | 網路類型 | 連接埠 (最小) | 連接埠 (最大)| 協定|CIDR |
@@ -65,7 +68,6 @@ twccli ls vcs -secg -s 937648   # 列出 ID 為 937648 個體的安全性群組
 | egress     | IPv4     |      | |ANY |0.0.0.0/0 |
 | ingress     | IPv4     |      | |icmp | 0.0.0.0/0|
 | egress     | IPv6     |      | |ANY |::/0 |
-:::
 
 </details>
 
@@ -76,6 +78,8 @@ twccli ls vcs -secg -s 937648   # 列出 ID 為 937648 個體的安全性群組
 
 若需連線 TWCC Windows 個體，請您與客服聯絡。
 :::
+
+<br/>
 
 ## 建立安全性群組規則
 
@@ -146,6 +150,7 @@ twccli ls vcs -secg -s 892486
 - 連接埠範圍請審慎設定，並請小心衡量開放範圍。為避免入侵風險，不建議您設定 ingress 連接埠範圍為 0 ~ 65535。
 :::
 
+<br/>
 
 
 ## 删除安全性群組規則

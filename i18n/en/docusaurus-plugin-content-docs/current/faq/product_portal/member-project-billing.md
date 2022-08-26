@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
-title: '會員、計畫與帳務'
+title: 'TWCC FAQs | Membership, Project and Billing'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-membership-project-billing-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-membership-project-billing-en'
 ---
 
 # TWCC FAQs | Membership, Project and Billing
@@ -45,6 +47,8 @@ Please visit the service website, click "Login" then click "忘記密碼(Forget 
 
 </details>
 
+<div style={{height:10+'px'}}></div>
+
 
 ## About Project
 
@@ -56,6 +60,8 @@ Please visit the service website, click "Login" then click "忘記密碼(Forget 
 - For data stored in the Cloud Object Storage (COS), Virtual Disk Service (VDS) and other compute resources, **please contact the customer service as soon as possible for the process after the project expires.**
 
 </details>
+
+<div style={{height:10+'px'}}></div>
 
 
 ## About Billing

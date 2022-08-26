@@ -43,7 +43,9 @@ import TabItem from '@theme/TabItem';
 
 * 儲存體建立完成後會出現在列表的最上方，點擊該列表進入儲存體內容頁面即可開始使用。
 
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_da6458b4e784d6c758fda967e3a4ffb7.png)
+
 
 
   </TabItem>
@@ -75,7 +77,9 @@ twccli mk cos -bkt bk_cli
 * 删除不必要的儲存體，只要點擊該儲存體列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>  選單按鈕，再按一下「**刪除**」。
 * 為避免誤删，請輸入欲删除的儲存體名稱再次確認。
 
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ef9ebf4f2386059c7c237664c33573d6.png)
+
 
   </TabItem>
   <TabItem value="TWCC CLI" label="TWCC CLI">

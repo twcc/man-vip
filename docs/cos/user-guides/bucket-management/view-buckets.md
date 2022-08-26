@@ -32,7 +32,9 @@ import TabItem from '@theme/TabItem';
 
 - 進入「**雲端物件儲存管理**」頁面後，即可檢視計畫內所有的儲存體
 
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8472a638afd0fdea3bfdad683e82e712.png)
+
 
 
   </TabItem>

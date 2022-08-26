@@ -21,8 +21,9 @@ TWCC 也提供用戶以 `rsync` 指令傳輸檔案，傳輸大量檔案使用體
 
 <details class="docspoiler">
 
+
 <summary><b>1. 使用金鑰連線
-</b></summary>
+
 
 
 以下以 Windows 作業系統 + [<ins>FileZilla</ins>](https://filezilla-project.org) 為例 (macOS 也是類似的操作步驟)
@@ -102,7 +103,11 @@ macOS：可使用「文字編輯」軟體
 
 <details class="docspoiler">
 
-<summary><b>2. 使用主機密碼 + OTP 連線</b></summary>
+<summary><b>
+
+## 2. 使用主機密碼 + OTP 連線
+
+</b></summary>
 
 
 除上述使用金鑰的登入方式，HFS 也可使用 **密碼 + [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC)** 之方式登入，請參考下方說明：

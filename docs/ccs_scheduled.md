@@ -1,3 +1,10 @@
+---
+title: 任務型容器
+GA: UA-155999456-1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/doc-ccs-scheduled-main-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-ccs-scheduled-main-zh'
+---
+
 # 任務型容器
 
 :::caution
@@ -13,7 +20,7 @@
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
 
 
-:::caution
+:::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 

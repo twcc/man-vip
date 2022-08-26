@@ -28,7 +28,9 @@ import TabItem from '@theme/TabItem';
 
 * 進入檔案內容頁面後，即可檢視檔案的基本資訊。
 
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e1ecd57f58ba34c49be88e324efa6f13.png)
+
 
   </TabItem>
   <TabItem value="TWCC CLI" label="TWCC CLI">
@@ -74,7 +76,9 @@ twccli ls cos -bkt bk_cli
 
 * 再次確定欲删除的檔案是否正確，一旦檔案被删除後將無法恢復。
 
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_df3640ed5ec0decdf6bbe28b3cc45148.png)
+
 
   </TabItem>
   <TabItem value="TWCC CLI" label="TWCC CLI">
