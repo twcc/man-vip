@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 # Check available projects
 
 :::caution
-If your <ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins> not applicable for the footage or process below, please refer to this <i class="fa fa-sign-out" aria-hidden="true"></i> <ins>link</ins> for manual instructions.
+If your <ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins> is not applicable for the footage or process below, please refer to this <i class="fa fa-sign-out" aria-hidden="true"></i> <ins>link</ins> for manual instructions.
 :::
 
 <br/>
