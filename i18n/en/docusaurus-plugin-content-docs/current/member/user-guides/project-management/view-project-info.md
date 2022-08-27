@@ -10,48 +10,48 @@ import TabItem from '@theme/TabItem';
 
 # View project information
 
+You can follow the steps below to go to TWS Member Center from [TWCC](https://www.twcc.ai/) and view your project information.
 
-### Step 1. Sign in TWCC
+### Step 1. Sign in to TWCC
 
 - Click "Sign in" on the homepage and enter your account and password.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fcf72884bd23c1de1fb70e2d8676b53d.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d0d7bf97de108e6016ce036f25342aeb.png)
 
 :::info
 If the page is blank or abnormal after login, it may be caused by the following reasons:
-1. Did not apply for an account. Please [<ins>sign up for an account</ins>](https://iservice.nchc.org.tw/nchc_service/nchc_member_apply_1.php).
+1. Did not apply for an account. Please [<ins>sign up for an account</ins>](https://iservice.nchc.org.tw/nchc_service/nchc_member_apply_1.php) first.
 2. Did not join any project that has enabled TWCC service. Please [<ins>apply for projects</ins>](https://man.twcc.ai/@twccdocs/apply-project-and-credit-en), or notify the Tenant Admin to add you to the project.
-3. TWCC portal update. Please clear the browser cache to sign in normally.
+3. TWCC portal updated. Please clear your browser cache to sign in normally.
 :::
 
 <br/>
 
 ### Step 2. View project information
 
-After sign in, you can view the project information on the overview page. The information includes:
+After signing in, you can view the project information on the overview page, which contains:
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a483ca66912a976c4758b729b7a43cd7.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3cb077b311554301aa499ec317cc2150.png)
 
-<span>&#10102;</span> User roles: Tenant Admin or Tenant User. In addition to the title, the icons are also different
+<span>&#10102;</span> User roles: "Tenant Admin" or "Tenant User", both of which have different titles and different icons.
+
+<br/><br/>
 
 :::info
-There are difference betwen Tenant admins and Tenant Users to use TWCC functions, please refer to [<ins>User permissions comparison</ins>](https://man.twcc.ai/@twccdocs/role-main-en).
+For the difference in functional privileges between the Tenant admins and Tenant Users using TWCC, please refer to [<ins>User permissions comparison</ins>](https://man.twcc.ai/@twccdocs/role-main-en).
 :::
 
-<span>&#10103;</span> Wallet and credit information, duration, system code
-    
+<span>&#10103;</span> Project name, code
 
-- **Tenant Admin** In addition to the personal credits, you may also view the remaining credit of the project and the total credit of the project.
-- Definition:
-    - Duration: The effective period of the project.
-    - System code: The project code in the system. If you encounter a problem, you can provide this information to the customer service staff.
-    - Wallet: When you use the service, the type of wallet for which the credits are deducted: main wallet or sub-wallet.
-        - Main wallet: the total credits of the project deducts the creidt of the sub wallets
-        - Sub-wallet: the usage credits allocated to members from the main wallet
-    - Credits Remaining: The remaining available credits.
-    - Total Credits: the accumulated credits obtained.
+<br/><br/>
 
-<span>&#10104;</span> Service overview. Click "View Details>" to view three types of storage and resource usage:
+<span>&#10104;</span> Click "Member Center" to view the list of project members and edit members (add/delete/set as administrator or general member)
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b13ffd5eb4b7b263563759366c28ff93.png)
+
+<br/>
+
+<span>&#10105;</span> Click on "Resource list" to view the following used resources
 
 - Storage usage: Capacity of Hyper File System (HFS) /home and /work directories
     - Used
@@ -60,12 +60,25 @@ There are difference betwen Tenant admins and Tenant Users to use TWCC functions
 - Compute, Analytics & Database: the number of resource services that have been created
 - Network & security: the number of resource services that have been created
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f21ac33b7c4c15afc871d00dfc34b910.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_126c7a5c11c3f36d9f470826c17dfffe.png)
+
+<span>&#10106;</span> Click "Resource Usage" and select a service to view the usage records of each service resource
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3c4f837a348f5de9bc7f53cba6410e47.png)
 
 <br/>
 
+<span>&#10107;</span> Click on "Credit Information" and select a service to view the resource usage record of each service
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fb4425bb4ca7701803c9c7f1e9ae4828.png)
+
+<br/>
+
+
 :::info
-For more project information (project members, wallet information, resource usage). Please click the "Account & Project" and link to [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) to view more project information (project members, wallet information, resource usage).
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9453eb6f82d42c6594b1269727700232.png)
+
+Once you have accessed the Member Center through the link above, you can view more information about other projects: orders, invoices, service activation status, usage statistics, etc.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3c0c532f46d4430c814e1e7b62cb1672.png)
 
 :::
