@@ -57,8 +57,8 @@ Please check your mailbox to receive the 會員忘記密碼驗證信 (Member for
 1. If you have successfully linked your Facebook/Google/EduRoam account to log in, you do not need to enter the member password, but you still need to change the password of the account you choose to bind regularly to ensure the security of your account.
 2. The length of the password must be at least 12 characters, and not too simple.
 3. The  password can be the combination of the 4 types mentioned below, such as numbers, English letters (upper and lower case are counted as 2 types), and special characters. Password must contain at least 3 types.
-4. The maximum password (of member or supercomputer account) validity period is 180 days.
-5. When the password is about to expire (seven days before the expiration date, three days before the expiration date, and the same day), a password reminder notification will be sent, please take the time to sign in [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) in order to change your password.
+4. The maximum validity period of member and supercomputer password is 180 days.
+5. When the password is about to expire (seven days before the expiration date, three days before the expiration date, and the same day), a password reminder notification will be sent, please take the time to sign in [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) and modify it.
 :::
 
 <br/>

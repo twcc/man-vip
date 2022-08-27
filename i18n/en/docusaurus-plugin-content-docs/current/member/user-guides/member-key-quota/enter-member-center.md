@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 # Enter Member Center
 
-The Member Center is a unified system for managing your projects, members, quotas, resource usage, and billing in TWCC.
+Member Center is a unified system for managing your projects, members, quotas, resource usage, and billing in TWCC.
 
 The access method is determined by which type of user you are, please refer to the following steps.
 
@@ -38,7 +38,7 @@ Click "**Username**" in the upper right corner, then click "**Account & Project*
 
 <summary><b>TWS users</b></summary>
 
-Click on "**Member Center**", "**Rescource Usage**", or "**Credits Information**" to enter the Member Center to view project information.
+Click on "**Member Center**", "**Rescource Usage**", or "**Credits Information**" to enter Member Center to view project information.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_95178518fe62f0fe9dbdb918e5e6b14d.png)
 
@@ -47,7 +47,7 @@ Click on "**Member Center**", "**Rescource Usage**", or "**Credits Information**
 <br/>
 
 
-### Method 2. Direct access to the Member Center
+### Method 2. Direct access to Member Center
 
 
 <!-- 1 start -->
@@ -56,7 +56,7 @@ Click on "**Member Center**", "**Rescource Usage**", or "**Credits Information**
 
 <summary><b>NCHC users in academic and research circles</b></summary>
 
-Sign in to [iService](https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=) to access the Member Center.
+Sign in to [iService](https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=) to access Member Center.
 
 </details>
 
@@ -68,7 +68,7 @@ Sign in to [iService](https://iservice.nchc.org.tw/nchc_service/index.php?lang_t
 
 <summary><b>TWS users</b></summary>
 
-From the [TWS official website](https://tws.twcc.ai/), select "會員中心"(Member Center) and enter your password to access the Member Center.
+From the [TWS official website](https://tws.twcc.ai/), select "**會員中心 (Member Center)**" and enter your password to access Member Center.
 
 ![](https://i.imgur.com/mNk06Ct.png)
 

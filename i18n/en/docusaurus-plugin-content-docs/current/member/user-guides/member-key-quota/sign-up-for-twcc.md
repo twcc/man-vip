@@ -21,7 +21,7 @@ Please sign up for TWS and TWCC account from [TWS official website](https://tws.
 
 ## Step 1. Let's begin!
 
-Go to [TWS official website](https://tws.twcc.ai/) and click the yellow button **登入/註冊**(Sign in/Sign up) in the upper right corner
+Go to [TWS official website](https://tws.twcc.ai/) and click the yellow button "**登入/註冊 (Sign in/Sign up)**" in the upper right corner
 
 ![](https://i.imgur.com/LiFZRnD.png)
 
@@ -38,7 +38,7 @@ Enter a valid email address as account name and click the blue button to submit
 
 ## Step 3. Read the statement of personal information and rights and obligations
 
-Read the personal information and rights and obligations statement, scroll down the page , check the box and click **我同意** (I agree)
+Read the personal information and rights and obligations statement, scroll down the page , check the box and click "**我同意 (I agree)**"
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_359a4e9fe18246b695980c71bc009deb.png)
 
