@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 
 :::caution
-If your [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) not applicable for the footage or process below, please refer to this <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>link</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-signup-zh) for manual instructions.
+If your [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) is not applicable for the footage or process below, please refer to this <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>link</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-signup-zh) for manual instructions.
 :::
 
 Please sign up for TWS and TWCC account from [TWS official website](https://tws.twcc.ai/).

@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 # Reset portal password
 
 :::caution
-If your [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) not applicable for the footage or process below, please refer to this <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>link</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-signup-zh) for manual instructions.
+If your [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) is not applicable for the footage or process below, please refer to this <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>link</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-signup-zh) for manual instructions.
 :::
 
 The system does not record your portal password, so if you forget your login password, please follow the procedure below to reset the password and save it properly.
