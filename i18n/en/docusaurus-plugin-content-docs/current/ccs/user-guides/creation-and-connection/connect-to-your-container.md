@@ -31,13 +31,13 @@ You can connect to your container using Jupyter Notebook or SSH.
 <Tabs>
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-- **Step 1.** Click **LAUNCH** on the right of Jupyter to open the built-in Jupyter Notebook operation webpage.
+- **Step 1.** Click **LAUNCH** on the right side of Jupyter to open the built-in Jupyter Notebook operation webpage.
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a61c058a0a3db394855196861227bf63.png)
 
 
-- **Step 2.** Then click **New** > **Terminal**  to access the container environment. Then you can start AI computing in the container.
+- **Step 2.** Then click "**New**" > "**Terminal**"  to access the container environment. Then you can start AI computing in the container.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4d710c1fb912cf901ebfae96d73c06d2.png)
 
@@ -46,18 +46,16 @@ You can connect to your container using Jupyter Notebook or SSH.
 
 - **Step 1.** Get the Jupyter Notebook URL of the container whose container ID is `1249374`.
 
-
 ```bash
 twccli ls ccs -s 1249374 -gjpnb
 ```
 
-
-- **Step 2.** Click **URL** (CLI) to open Jupyter Notebook..
+- **Step 2.** Click **URL** (CLI) to open Jupyter Notebook.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_619c5fad19ccb469b5368895935ae48b.png)
 
 
-- **Step 3.** Click **New** > **Terminal** to access the container environment.
+- **Step 3.** Click "**New**" > "**Terminal**" to access the container environment.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4d710c1fb912cf901ebfae96d73c06d2.png)
 
@@ -71,7 +69,7 @@ twccli ls ccs -s 1249374 -gjpnb
 <Tabs>
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-- **Step 1.** Click the **Copy icon** on the right of SSH to copy the SSH command with supercomputer account and IP address included.
+- **Step 1.** Click the **Copy icon** on the right side of SSH to copy the SSH command with supercomputer account and IP address.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a64c20b74d97d7a2fdc4c2d2d2f05e2e.png)
 
@@ -94,10 +92,10 @@ twccli ls ccs -s 1249374 -gssh
 </Tabs>
 
 - Exit the container
-    - You can end your container connection by entering **`exit`** command to exit the SSH session.
+    - Enter **`exit`** to end your container connection and leave SSH session.
 
 ---
 
 :::info
-[<ins>Forget your supercomputer password?</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC)
+[<ins>Forget your supercomputer password?</ins>](https://man.twcc.vip/en/docs/member/user-guides/member-key-quota/hpc-account-password-otp#reset-supercomputer-password)
 :::
