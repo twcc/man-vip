@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: '建立映像檔'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-vds-instance-image-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-vds-instance-image-zh'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -15,6 +17,8 @@ import TabItem from '@theme/TabItem';
 2. 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-zh#虛擬運算服務)。
 :::
 
+<br/>
+
 ## 建立映像檔
 
 :::caution
@@ -22,7 +26,9 @@ import TabItem from '@theme/TabItem';
 2. 若映像檔狀態停止於 **`QUEUED`** 且久未轉為 **`ACTIVE`**，請洽詢技術支援團隊：<a href="mailto:isupport@twcc.ai">isupport@twcc.ai</a>，我們將協助您解決。
 :::
 
-- ### 建立一般映像檔
+<br/>
+
+### 建立一般映像檔
 
 手動操作建立映像檔。
 
@@ -32,7 +38,7 @@ import TabItem from '@theme/TabItem';
 
 * 進入虛擬運算個體管理頁面，點選欲建立映像檔的個體列表，進入該個體的詳細資料頁面，並點擊「**映像檔**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3c70e745f4052b117875a81aa2909ea4.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1eae8d8ba6e77b6985c766895be51052.png)
 
 
 * 確認視窗提示的資訊，並輸入映像檔的名稱、描述後按「**確定**」。
@@ -42,13 +48,13 @@ import TabItem from '@theme/TabItem';
 
 * 頁面跳轉至虛擬運算個體映像檔管理頁，並等映像檔狀態由 **`QUEUED`** > **`SAVING`**  > 最後變為 **`ACTIVE`** 後即可使用。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e1a78aa185d26f10ab476109712e155a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b56086ae6e9bd6eb94bf72f918e8d80.png)
 
 </TabItem>
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### 指令
+**指令**
 
 ```bash
 twccli mk vcs -s            # 個體 ID  
@@ -59,7 +65,9 @@ twccli mk vcs -s            # 個體 ID
 1. **[ ]** 中括號內為選擇性參數，其餘為必要參數。
 :::
 
-### 範例
+<br/>
+
+**範例**
 
 - 為 ID 為 **`918628`** 的虛擬運算個體建立映像檔
 ```bash
@@ -72,7 +80,7 @@ twccli mk vcs -s 918628 -cus-img
 
 <br/>
 
-- ### 建立定時映像檔
+### 建立定時映像檔
 
 可利用 `crontab` 設定自動定時建立映像檔。
 
@@ -86,10 +94,8 @@ twccli mk vcs -s 918628 -cus-img
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-- 使用 `crontab -e` 進行設定，相關使用功能請參照 [<ins>CronHowTo</ins>](https://help.ubuntu.com/community/CronHowto)。
-![](https://i.imgur.com/1zRke01.png)
-
-- 指定任意時間進行快照工作，在此為範例為==午夜 01:01==。
+- 使用 `crontab -e` 進行設定，相關使用功能請參照 [<ins>CronHowTo</ins>](https://help.ubuntu.com/community/CronHowto)。<br/>
+- 指定任意時間進行快照工作，在此為範例為午夜 01:01。<br/>
 ![](https://i.imgur.com/mQp1kUr.png)
 
 </TabItem>

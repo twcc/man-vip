@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: '停止/啟動/重開機/關機/刪除'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-manage-instance-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -19,6 +21,8 @@ import TabItem from '@theme/TabItem';
 更多虛擬運算個體狀態轉換、**計費與否**、服務操作影響之資訊，請參考[<ins>虛擬運算個體生命週期</ins>](https://man.twcc.ai/@twccdocs/concept-vcs-lifecycle-zh)。
 :::
 
+<br/>
+
 
 ## 停止個體
 
@@ -30,7 +34,7 @@ import TabItem from '@theme/TabItem';
 
 - 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**停止**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fed3868fd9683c5e21bdddf2407afe84.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_65a8bd007a7145bc66057988f0f0b8c8.png)
 
 - 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**停止**」。
 - 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**停止**」。
@@ -64,6 +68,8 @@ import TabItem from '@theme/TabItem';
 虛擬運算個體停止中 (**`Stopping`**)，請勿刪除個體，否則將影響系統處理工作，導致個體錯誤 (**`Error`**)。
 :::
 
+<br/>
+
 
 ## 啟動個體 (與個體開機)
 
@@ -75,7 +81,7 @@ import TabItem from '@theme/TabItem';
 
 - 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**啟動**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_33b8fbf1523c8dba1e40300a6d47a3f6.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f6b6237bb912f005648dbf8acf37c09f.png)
 
 - 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**啟動**」。
 - 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**啟動**」。
@@ -97,6 +103,9 @@ import TabItem from '@theme/TabItem';
 停止再啟動之個體，多數將建立於新的實體主機上。
 :::
 
+<br/>
+
+
 ## 個體重開機
 
 若要將 **`Ready`** 狀態的個體執行重開機 (關機並開機)，請點選「**重開機**」，個體狀態將呈現 **`Rebooting`**，正在重開機中，並準備再次進入 **`Ready`** 狀態。
@@ -107,7 +116,7 @@ import TabItem from '@theme/TabItem';
 
 - 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**重開機**」。
 
-![](https://i.imgur.com/sTumwQc.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e9d62c218823db9373ba407a6968fe07.png)
 
 
 - 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**重開機**」。
@@ -130,6 +139,8 @@ import TabItem from '@theme/TabItem';
 與[<ins>停止個體</ins>](#停止個體)不同，重開機後除了會清除記憶體資料，**資源皆不釋放回資源池 (含浮動 IP)**，且儲存資料皆保留，重新開機後仍可使用。
 :::
 
+<br/>
+
 
 ## 個體關機
 
@@ -151,6 +162,8 @@ import TabItem from '@theme/TabItem';
 :::info
 與[<ins>停止個體</ins>](#停止個體)不同，關機後除了會清除記憶體資料，**資源皆不釋放回資源池**，且儲存資料皆保留，開機後仍可使用。
 :::
+
+<br/>
 
 
 ## 刪除個體
@@ -175,14 +188,16 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### 指令
+**指令**
 
 ```bash
 twccli rm vcs -s   # 個體 ID
 twccli ls vcs      # 檢視結果
 ```
 
-### 範例
+<br/>
+
+**範例**
 
 - 刪除 ID 為 **`937651`** 的虛擬運算個體，確認已刪除。
 

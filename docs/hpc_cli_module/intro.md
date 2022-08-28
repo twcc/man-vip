@@ -1,6 +1,8 @@
 ---
 sidebar_label: 'Module 概觀'
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-overview-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-overview-zh' 
 ---
 
 
@@ -15,9 +17,12 @@ sidebar_position: 1
  
 :::info
 HPC 管理環境變數的工具，最常見是使用 `modules` 的方式管理，傳統如台灣杉一號使用的 [<ins>Environment Modules</ins>](http://modules.sourceforge.net)。而在台灣杉二號使用 [<ins>Lmod</ins>](https://lmod.readthedocs.io)。兩者的使用方法雷同，僅背後實踐的程式語言有差異。
-::: 
- 
-## Module 基本指令 
+:::
+
+<br/>
+
+
+## Module 基本指令
 
 - 列出可使用的 modules
  `module avail`
@@ -44,6 +49,9 @@ HPC 管理環境變數的工具，最常見是使用 `modules` 的方式管理�
   `ml -package1 -package2 ...`
 
 :::
+
+<br/>
+
 
 ## Module 基本觀念
 

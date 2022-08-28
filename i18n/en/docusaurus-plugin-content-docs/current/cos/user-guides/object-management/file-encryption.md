@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-view-search-delete-files-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-view-search-delete-files-en'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -7,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 # View, search, and delete files
 
-:::caution
+:::tip
 The following operation methods are only applicable to the [<ins>**public space**<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@preview-twccdocs/doc-cos-main-en/%2F%40TWSC%2Fcos-overview-en) of the project. For managing your [<ins>**private space**<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@preview-twccdocs/doc-cos-main-en/%2F%40TWSC%2Fcos-overview-en), please use [<ins>**third-party software**</ins>](https://man.twcc.ai/@preview-twccdocs/doc-cos-main-en/https%3A%2F%2Fman.twcc.ai%2F%40TWSC%2Fguide-cos-connect-info-en).
 :::
 

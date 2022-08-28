@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: '負載平衡'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-lbs-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-lbs-zh'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,12 +18,14 @@ TWCC 所提供的負載平衡服務支援**應用程式負載平衡器 (HTTP 與
 - TWCC CLI 目前不支援此服務。
 :::
 
+<br/>
+
 
 ## 建立負載平衡器
 
 * 由服務列表點選「**負載平衡**」進入「負載平衡器管理」頁面，點擊「**＋建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
 
 :::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
@@ -56,10 +60,7 @@ TWCC 所提供的負載平衡服務支援**應用程式負載平衡器 (HTTP 與
 
 * 檢視負載平衡器的設定資訊，確定後點選「**建立**」。
 
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b50acc4f5716aba63ad978a1ac9ec1f0.png)
-
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d84d97c603859f4f9ca3d11d3065e33d.png)
 
 * 建立完成後，會回到負載平衡器列表，最新建立負載平衡器會出現在最上方，按一下該列表進入負載平衡器內容頁面，等到狀態變成 「**ACTIVE**」 後，才可繼續編輯。
 
@@ -68,6 +69,8 @@ TWCC 所提供的負載平衡服務支援**應用程式負載平衡器 (HTTP 與
 :::info
 負載平衡器建立好後，需將[<ins>虛擬運算個體連結至負載平衡器</ins>](#連結虛擬運算個體)，才能為您的服務發揮平衡流量的作用。
 :::
+
+<br/>
 
 
 ## 負載平衡器管理
@@ -80,8 +83,7 @@ TWCC 所提供的負載平衡服務支援**應用程式負載平衡器 (HTTP 與
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d503587a25478670a711187aac6734fb.png)
 
-
-
+<br/>
 
 
 ### 更新負載平衡器憑證
@@ -103,6 +105,7 @@ SSL 憑證有固定效期，您可以在憑證到期時，建立新憑證以更�
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fbf16e97e47eacd0436f3b61977efc74.png)
 
+<br/>
 
 
 ## 連結虛擬運算個體
@@ -148,6 +151,8 @@ SSL 憑證有固定效期，您可以在憑證到期時，建立新憑證以更�
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bda331274fdaf5296290f21f2ac5cf0b.png)
 
+<br/>
+
 
 ## SSL 憑證
 
@@ -157,11 +162,13 @@ SSL 憑證有固定效期，您可以在憑證到期時，建立新憑證以更�
 為符合資安要求，僅提供 TLS 1.2 傳輸層安全性協定。
 :::
 
+<br/>
+
 ### 建立 SSL 憑證
 
 * 點選左側「**SSL 憑證**」，在「**SSL 憑證管理**」頁面，點擊「**＋建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2bd2a82515b5a04f9a4b0781aa31598c.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2b06046e5e360cf9c6b7aae828874e7c.png)
 
 
 * 輸入 SSL 憑證的名稱、描述及 Base64 編碼資訊 (PKCS#12 格式)，完成後點擊「**下一步：檢閱 + 建立>**」
@@ -182,6 +189,8 @@ SSL 憑證有固定效期，您可以在憑證到期時，建立新憑證以更�
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3f77e7e47a585410d2df100933954846.png)
 
+<br/>
+
 
 ### 管理 SSL 憑證
 
@@ -191,6 +200,8 @@ SSL 憑證有固定效期，您可以在憑證到期時，建立新憑證以更�
 目前 TWCC 僅支援建立 PKCS#12 格式的 SSL 憑證，請參考[<ins>HowTo：轉換 SSL 憑證格式</ins>](https://man.twcc.ai/@twccdocs/howo-lb-convert-cert-zh)。
 :::
 
+<br/>
+
 
 ### 删除 SSL 憑證
 
@@ -198,7 +209,7 @@ SSL 憑證有固定效期，您可以在憑證到期時，建立新憑證以更�
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2fbf0b28ee7acdc4ac63c10fffe58438.png)
 
-
+<br/>
 
 :::info
 為確保 SSL 憑證的安全性，僅建立者本人可以檢視與使用自己建立的 SSL 憑證。

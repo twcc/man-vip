@@ -1,5 +1,7 @@
 ---
 id: release-notes
+sync_original_production: 'https://man.twcc.ai/@twccdocs/UserPortalHistory_EN'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/UserPortalHistory_EN'
 ---
 
 # TWCC Release Notes
@@ -135,7 +137,8 @@ id: release-notes
 - **VCS**
     - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}> <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Floating IPs will be released when you stop your VCS instances.
     - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}> <b>&nbsp;Change&nbsp;</b></font></font> &ensp; The project quota of Floating IPs: 10. 
-    ## Year 2021
+
+## Year 2021
 ### Dec 17, 2021 (版本: fe8c7c13)
 - **UI**
     - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}> <b>&nbsp;Change&nbsp;</b></font></font> &ensp; UI/UX optimization.

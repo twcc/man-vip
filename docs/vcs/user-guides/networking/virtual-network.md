@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: '虛擬網路'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vnw-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vnw-zh'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -14,9 +16,13 @@ import TabItem from '@theme/TabItem';
 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-zh#虛擬運算服務)。
 :::
 
+<br/>
+
 ## 建立預設虛擬網路
 
 首次使用 TWCC 所提供的虛擬運算服務，必須先在虛擬網路服務先建立**預設虛擬網路 (Default network)**，才可以開始使用虛擬運算服務。建立步驟請參考：[<ins>HowTo：建立預設虛擬網路</ins>](https://man.twcc.ai/@twccdocs/howto-vnw-create-default-network-zh)。後續若有使用其它網段的需求，可參考下方[<ins>建立自訂虛擬網路</ins>](#建立自訂虛擬網路)。
+
+<br/>
 
 ## 建立自訂虛擬網路
 
@@ -34,13 +40,13 @@ import TabItem from '@theme/TabItem';
 
 * 由服務列表點選進入「**虛擬網路**」服務，在「**虛擬網路管理**」頁面，點擊「**＋建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
 
 :::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f2bdcd4f74eb97be693e89979651c399.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2e1ee3a1fc92a7d9cfb1e71e2f67ff41.png)
 
 
 * 輸入虛擬網路設定的資訊，完成後點擊「**下一步：檢閱+建立>**」。
@@ -53,7 +59,7 @@ import TabItem from '@theme/TabItem';
 
 * 檢視虛擬網路的設定及計畫額度資訊，確定後點選「**建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c7ffcca6dd6ebe84f2576b5b8ce0c8f9.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_184b047fb3b48e0ce97fbd448e168ab1.png)
 
 </TabItem>
 
@@ -68,11 +74,11 @@ twccli mk vnet -cidr 172.16.0.0/24 -gw 172.16.0.254
 
 </Tabs>
 
-
+<br/>
 
 ## 管理虛擬網路
 
-- ### 檢視虛擬網路
+### 檢視虛擬網路
 
 :::caution
 1. 為周全保護虛擬運算個體安全，虛擬網路僅限使用下列預設的三個域名伺服器 (DNS)，如有使用其它 DNS 伺服器的需求，請洽技術諮詢服務(isupport@twcc.ai)：
@@ -116,9 +122,10 @@ twccli ls vnet -id 261894
 
 </Tabs>
 
+<br/>
 
 
-- ### 刪除虛擬網路
+### 刪除虛擬網路
 
 <Tabs>
 

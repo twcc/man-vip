@@ -1,5 +1,7 @@
 ---
 sidebar_position: 5
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-node-state-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-node-state-zh'
 ---
 
 # 確認節點狀態
@@ -14,64 +16,36 @@ sidebar_position: 5
 
 可直接使用「sinfo」指令，查看以分區(partition)為主的瀏覽方式，查看每個分區的節點狀況，如下：
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
 
-[yiching709@un-ln01 ~]$ sinfo
-PARTITION     AVAIL TIMELIMIT  NODES  STATE NODELIST
-SlurmDefault*    up  1-00:00:00      2  drain* gn0109.twcc.ai,gn1101.twcc.ai
-SlurmDefault*    up  1-00:00:00    240  drain gn0101.twcc.ai,gn0102.twcc.ai,gn0103.twcc.ai,gn0104.twcc.ai,gn0105.twcc.ai,……,gn1221.twcc.ai,gn1222.twcc.ai,gn1223.twcc.ai,gn1224.twcc.ai,gn1225.twcc.ai,gn1226.twcc.ai,gn1227.twcc.ai,gn1228.twcc.ai
-SlurmDefault*    up  1-00:00:00      7  idle gn0312.twcc.ai,gn0512.twcc.ai,gn0712.twcc.ai,gn1004.twcc.ai,gn1017.twcc.ai,gn1229.twcc.ai,gn1230.twcc.ai
-SlurmDefault*    up  1-00:00:00      3  down gn0705.twcc.ai,gn1012.twcc.ai,gn1111.twcc.ai
+```
+sinfo
+```
+![image](https://user-images.githubusercontent.com/109254397/184672688-46759299-563d-4a28-aceb-badd3689d5b0.png)
 
-</div>
 
 
 
 上面的範例中，由於節點太多，故在 240 drain 的部分直接使用「……」省略部分節點名稱，實際上在使用時會顯示所有的節點名稱。除了使用「sinfo」查看以分區為主的資訊外，也可透過「sinfo -N」的方式查看每個節點所在的分區以及節點狀態。同樣也因為節點過多，文件範例以「…..」省略部分結果，但實際上透過指令打出來的結果，會顯示所有節點的資訊。
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
 
-$ sinfo -N
-NODELIST          NODES   PARTITION     STATE 
-gn0101.twcc.ai      1       SlurmDefault*   drain 
-gn0102.twcc.ai      1       SlurmDefault*   drain 
-gn0103.twcc.ai      1       SlurmDefault*   drain 
-gn0104.twcc.ai      1       SlurmDefault*   drain 
-gn0105.twcc.ai      1       SlurmDefault*   drain 
-……
-gn1227.twcc.ai      1       SlurmDefault*   drain 
-gn1228.twcc.ai      1       SlurmDefault*   drain 
-gn1229.twcc.ai      1       SlurmDefault*   idle  
-gn1230.twcc.ai      1       SlurmDefault*   idle
+```
+sinfo -N
+```
+![image](https://user-images.githubusercontent.com/109254397/184576231-89c2ca22-4d22-4506-8e4f-5c323b2abb76.png)
 
-</div>
+
 
 #### scontrol
 如果像要查看更為詳細的節點資訊，則可以使用 scontrol 指令，使用該指令會輸出更詳細的資訊，包含該節點的資源使用狀態以及負載狀態、節點的系統資訊、軟體資訊等，如果想要透過 slurm 了解具體的資訊，建議使用此指令。使用方式為「scontrol show node <node_name>」，如下使用gn0101.twcc.ai 作為查看的節點範例：
 
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
 
-$ scontrol show node gn0101.twcc.ai
-NodeName=gn0101.twcc.ai Arch=x86_64 CoresPerSocket=18
-   CPUAlloc=0 CPUErr=0 CPUTot=36 CPULoad=0.43
-   AvailableFeatures=(null)
-   ActiveFeatures=(null)
-   Gres=gpu:8
-   NodeAddr=gn0101.twcc.ai NodeHostName=gn0101.twcc.ai Version=17.11
-   OS=Linux 3.10.0-862.el7.x86_64 #1 SMP Fri Apr 20 16:44:24 UTC 2018 
-   RealMemory=772437 AllocMem=0 FreeMem=534061 Sockets=2 Boards=1
-   CoreSpecCount=2 CPUSpecList=0-1 MemSpecLimit=1024
-   State=IDLE+DRAIN ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
-   Partitions=SlurmDefault 
-   BootTime=2018-10-16T20:45:48 SlurmdStartTime=2018-11-08T21:14:33
-   CfgTRES=cpu=36,mem=772437M,billing=36,gres/gpu=8
-   AllocTRES=
-   CapWatts=n/a
-   CurrentWatts=0 LowestJoules=0 ConsumedJoules=0
-   ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s
-   Reason=node-switch [root@2018-11-23T12:49:03]
+```
+scontrol show node gn0101.twcc.ai
+```
+![image](https://user-images.githubusercontent.com/109254397/184576254-8a60467e-489c-4404-8bc8-b24b10eacf2d.png)
 
-</div>
+
+
 
 
 ### 節點狀態說明
