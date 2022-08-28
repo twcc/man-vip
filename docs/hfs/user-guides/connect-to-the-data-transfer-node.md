@@ -103,7 +103,7 @@ macOS：可使用「文字編輯」軟體
 
 <details class="docspoiler">
 
-<summary><b> 2. 使用主機密碼 + OTP 連線</b></summary>
+<summary><b>2. 使用主機密碼 + OTP 連線</b></summary>
 
 
 除上述使用金鑰的登入方式，HFS 也可使用 **密碼 + [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC)** 之方式登入，請參考下方說明：
@@ -138,11 +138,7 @@ macOS：可使用「文字編輯」軟體
 
 8. 點選「**連線**」
 
-<b>
-
-Step 3. 輸入主機密碼及 [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC)
-
-</b>
+<b>Step 3. 輸入主機密碼及 <a href="https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC">OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></a></b>
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_92b59625eba5f2dbaff85d5c2c030e19.png)
 
@@ -172,4 +168,3 @@ Step 3. 輸入主機密碼及 [OTP <i class="fa fa-question-circle fa-question-c
 - 預設目錄即為使用者的 /home 目錄，下方為 /home 目錄底下的資料。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e69ea54b6ed112035eeee732fdda0016.png)
-
