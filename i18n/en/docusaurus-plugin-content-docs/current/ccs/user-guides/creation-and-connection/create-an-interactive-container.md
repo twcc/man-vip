@@ -60,7 +60,7 @@ If "Deletion Protection" is enabled, before deleting a resource, you need to dis
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_71287b579154f911fb08860a9746be0e.png)
 
-* Then click "**NEXT : ENVIRONMENT VARIABLES>**" to set the environment variables that meet your needs. Please refer to [<ins>Setting Environment Variables</ins>](https://man.twcc.vip/en/docs/ccs/tutorials/add-python3-kernel-to-jupyter-notebook) for detailed explanation and setting examples.
+* Then click "**NEXT : ENVIRONMENT VARIABLES>**" to set the environment variables that meet your needs. For detailed explanation and setting examples, please refer to [<ins>Setting Environment Variables</ins>](https://man.twcc.vip/en/docs/ccs/tutorials/add-python3-kernel-to-jupyter-notebook).
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_78faad93eaa1e43c081cfd1200daf530.png)
 
@@ -75,10 +75,12 @@ If "Deletion Protection" is enabled, before deleting a resource, you need to dis
 **Command**
 
 ```bash
-twccli mk ccs [-n]      # Name of container
+twccli mk ccs [-n]      # Name of the container
               [-itype]  # Image type
               [-img]    # Image version
               [-gpu]    # Number of GPUs(Pcs)
+              [-envk]   # Environment variables key
+              [-envv]   # Environment variables value
 ```
 :::info
 If you do not input any parameters, the container will be created with the default settings:
@@ -86,21 +88,23 @@ If you do not input any parameters, the container will be created with the defau
 | Image type, Image | Name of container |Container type|
 | -------- | -------- | -------- |
 | TensorFlow (latest environment)    | twcc-cli     | c.super (1 GPU + 04 cores + 90 GB memory) |
+
+For detailed explanation and setting examples, please refer to [<ins>Setting Environment Variables</ins>](https://man.twcc.vip/en/docs/ccs/tutorials/add-python3-kernel-to-jupyter-notebook).
 :::
 
 <br/>
 
 **Example**
 
-- Create a container named **`cusccs`**, with the image type **`Caffe2`**, and image version **`caffe2-18.08-py3-v1:latest`**, and the number of GPUs is **`2`**.
+- Create a container with the name **`cusccs`**, image type **`Caffe2`**, image version **`caffe2-18.08-py3-v1:latest`**, and GPU quantity **`2`**.
 
 ```bash
 twccli mk ccs -itype "Caffe2" -img "caffe2-18.08-py3-v1:latest" -gpu 2 -n cusccs
 ```
 
 :::caution
-- Container name requirements: It must be **6-16 characters in length** and must contains **lowercase letters or numbers**, and **the first character must be a lowercase letter.**.
--  If the settings do not meet the above requirements, the following error message will appear:
+- Container name requirements: It must be **consist of lowercase letters or numbers, the first character must be a lowercase letter, and be 6-16 characters long.**
+- If the setting does not meet the above requirements, the following error message will appear:
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_095834bd7ee5d99d3a70596a7c462629.png)
 :::
 
