@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: '檢視/編輯/刪除保護'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-view-and-edit-instance-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-view-and-edit-instance-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -14,6 +16,8 @@ import TabItem from '@theme/TabItem';
 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-zh#虛擬運算服務)。
 :::
 
+<br/>
+
 ## 檢視個體資訊
 
 檢視個體 ID、名稱、公用/私有 IP、狀態、建立時間、建立者、映像檔版本、資源比例、鑰匙對、網路連線、儲存、…等資訊。
@@ -25,7 +29,7 @@ import TabItem from '@theme/TabItem';
 * 進入虛擬運算個體管理頁面，可檢視所有建立個體的列表資訊：**ID**、**名稱**、**對外 IP**、**個體狀態**、**建立時間**及**建立者**。
 * 在「**搜尋**」列輸入關鍵字可篩選出列表的欄位中符合該特定條件的結果。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9b0bec73d32cdc3370baf274bf28b8f9.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_12b6e0321c1c11ed26e3db23e303afab.png)
 
 
 :::tip
@@ -34,7 +38,7 @@ import TabItem from '@theme/TabItem';
 
 - 進入詳細資料配置頁面，可檢視更詳細的個體資訊：**基本資訊**、**詳細規格**、**網路與連線**、**儲存資訊**。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4b5b513960169c831bdc6ba0d8613e8a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4a18fbcd218e90d9f21b051f2ed08122.png)
 
 </TabItem>
 
@@ -57,6 +61,8 @@ twccli ls vcs -all
 
 </Tabs>
 
+<br/>
+
 ## 編輯描述
 
 <Tabs>
@@ -65,12 +71,12 @@ twccli ls vcs -all
 
 * 進入「**虛擬運算個體詳細資料**」頁，點選「<i class="fa fa-pencil" aria-hidden="true"></i>」即可編輯、加入虛擬運算個體的描述內容，以區辨不同的虛擬運算個體。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cd49ecf150da5f7e001fd7ed52c46a86.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_48758c4d73d45972d918eb01cc38e8de.png)
 
 
 - 進入詳細資料配置頁面，可檢視更詳細的個體資訊：**基本資訊**、**詳細規格**、**網路與連線**、**儲存資訊**。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4b5b513960169c831bdc6ba0d8613e8a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4a18fbcd218e90d9f21b051f2ed08122.png)
 
 </TabItem>
 
@@ -81,6 +87,8 @@ twccli ls vcs -all
 </TabItem>
 
 </Tabs>
+
+<br/>
 
 
 ## 開啟/關閉 刪除保護機制

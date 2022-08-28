@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
-title: '停止/啟動/重開機/關機/刪除'
+title: 'Instance Management'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-manage-instance-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -17,6 +19,11 @@ For the difference of permissions in VCS instance between Tenant Admin and Tenan
 :::tip
 For more information of VCS instances between state transition, billing, and impact, see [<ins>VCS Instance Life Cycle</ins>](https://man.twcc.ai/@twccdocs/concept-vcs-lifecycle-en).
 :::
+
+
+<br/>
+
+
 
 ## Stop instances
 
@@ -49,6 +56,9 @@ Please do not delete the instance during the **`Stopping`** state. Otherwise, th
 </Tabs>
 
 
+<br/>
+
+
 
 ## Start instances
 
@@ -77,12 +87,21 @@ To start and use the stopped instance, click **START**.
 </Tabs>
 
 
+<br/>
+
+
+
 ## Shutdown instances
 
 **The TWCC portal and TWCC CLI do not support the shutdown function, please operate it in the instance:**
 
 - Linux instance: You can execute `sudo shutdown`, `sudo poweroff -f` in the instance to shut down the instance
 - Windows instance: You can use `shutdown -s`, click the shutdown button at the bottom left of the desktop to shut down.
+
+
+<br/>
+
+
 
 ## Restart instances
 
@@ -111,6 +130,10 @@ If you want to restart the shutdown instance, please click **START**, and the in
 </Tabs>
 
 
+<br/>
+
+
+
 ## Delete Instance
 
 If you want to delete the instance permanently and no longer use it, delete the instance.
@@ -133,14 +156,20 @@ Other considerations for deletion:
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### Command
+
+**Command**
+
 
 ```bash
 twccli mk vcs -s    # Instance's ID
 twccli ls vcs       # View result
 ```
 
-### Example
+
+<br/>
+
+**Example**
+
 
 - Delete the instance's ID is **`937651`**, and check if it is deleted.
 

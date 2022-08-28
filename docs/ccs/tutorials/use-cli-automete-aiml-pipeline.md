@@ -30,8 +30,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-cli-ccs-auto
 - 參考 [<ins>安裝 TWCC CLI</ins>](https://man.twcc.ai/@twccdocs/guide-cli-install-linux-zh)，在開發型容器內部署 TWCC CLI。
 
 :::info
-- 2021 版本++以後++之容器已為用戶預安裝 TWCC CLI，建立後可直接登入使用
-- 2021 版本++以前++的容器映像檔版本需自行安裝
+- 2021 版本<ins>以後</ins>之容器已為用戶預安裝 TWCC CLI，建立後可直接登入使用
+- 2021 版本<ins>以前</ins>的容器映像檔版本需自行安裝
 :::
 
 - 安裝完成後請[登入](https://man.twcc.ai/@twccdocs/guide-cli-signin-zh)。

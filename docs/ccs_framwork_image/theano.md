@@ -1,10 +1,13 @@
 ---
 sidebar_label: 'Theano'
 sidebar_position: 12
+title: 'Theano'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-theano-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-theano-zh'
 ---
 
 
-# Theano
+# <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f55059e9d0a6ac45c44bcc0ec1bebff5.png' /> Theano
 
 TWCC 提供 NGC optmized Theano 立即可用的工作環境。Theano 為 Python 函式庫，使用者能有效率地去定義、最佳化和評估含多維陣列的數學式。
 

@@ -1,5 +1,7 @@
 ---
 sidebar_position: 4
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-nvidia-hpc-sdk-w-gcc-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-nvidia-hpc-sdk-w-gcc-en' 
 ---
 
 
@@ -9,7 +11,10 @@ sidebar_position: 4
 The built-in gcc of the operating system is 4.8.5, the supports for `C++11` is relatively incomplete.  If your program needs `C++11` or newer versions, it is recommended to use a newer version of gcc to reduce compilation problems.
 - The detailed support matrix can be viewed in the release note of the NVIDIA HPC SDK.
 
-## GCC10 with NVHPC 
+<br/>
+
+
+## GCC10 with NVHPC
 
 | module name | usage              |
 | ----------- | ------------------ |
@@ -31,7 +36,10 @@ export NVLOCALRC=/work/HPC_SYS/nvidia/hpc_sdk/localrc_files/gcc10_localrc_21.7
 export NVLOCALRC=/work/HPC_SYS/nvidia/hpc_sdk/localrc_files/gcc10_localrc_20.7
 ```
 
-## GCC9 with NVHPC 
+<br/>
+
+
+## GCC9 with NVHPC
 
 | module name | usage              |
 | ----------- | ------------------ |
@@ -52,6 +60,8 @@ export NVLOCALRC=/work/HPC_SYS/nvidia/hpc_sdk/localrc_files/gcc9_localrc_21.7
 # It's available only when you load the specific module above and run the command below.
 export NVLOCALRC=/work/HPC_SYS/nvidia/hpc_sdk/localrc_files/gcc9_localrc_20.7
 ```
+
+<br/>
 
 
 ## GCC8 with NVHPC
@@ -75,6 +85,9 @@ export NVLOCALRC=/work/HPC_SYS/nvidia/hpc_sdk/localrc_files/gcc8_localrc_21.7
 # It's available only when you load the specific module above and run the command below.
 export NVLOCALRC=/work/HPC_SYS/nvidia/hpc_sdk/localrc_files/gcc8_localrc_20.7
 ```
+
+<br/>
+
 
 ## GCC7 with NVHPC
 

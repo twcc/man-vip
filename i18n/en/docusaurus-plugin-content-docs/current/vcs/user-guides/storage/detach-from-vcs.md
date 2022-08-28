@@ -1,5 +1,7 @@
 ---
 sidebar_position: 4
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-vds-guide-detach-data-disk-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-vds-guide-detach-data-disk-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -17,14 +19,20 @@ After detaching, the data disk will continue to be billed until deletion.
 :::
 
 
+<br/>
+
+
+
 ## Step 1. Unmount a data disk
 
 There are different ways to unmount a disk between Linux and Windows, please follow the steps according to the operating system (OS) of your instance.
 
 
-<Tabs>
 
-<TabItem value="Linux Instance" label="Linux Instance">
+<details>
+
+<summary><b>Linux Instance</b></summary>
+
 
 - [Connect to your Linux instance](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-en), and use the following command to unmount the `/dev/vdb` disk.
 
@@ -32,9 +40,15 @@ There are different ways to unmount a disk between Linux and Windows, please fol
 sudo umount -d /dev/vdb
 ```
 
-</TabItem>
 
-<TabItem value="Windows Instance" label="Windows Instance">
+</details>
+
+<div style={{'height':'8px'}}></div>
+
+<details>
+
+<summary><b>Windows Instance</b></summary>
+
 
 - [Connect to your Windows instance](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-windows-en), and search for <i class="fa fa-search" aria-hidden="true"></i> **Computer Management** then open the applicaiton.
 
@@ -46,9 +60,10 @@ sudo umount -d /dev/vdb
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bb6045da618be032710b19861a221dc4.png)
 
 
-</TabItem>
+</details>
 
-</Tabs>
+<br/>
+
 
 
 ## Step 2. Detach a data disk

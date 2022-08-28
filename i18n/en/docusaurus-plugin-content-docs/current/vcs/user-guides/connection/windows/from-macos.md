@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
-title: '本機為 macOS'
+title: 'From macOS'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-macos-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-to-windows-from-macos-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -20,6 +22,8 @@ The created instance will enter the **`Ready`** state, and it will take some tim
 2. You cannot connect to VCS instance once the settings of the network interface card are modified. Therefore, we strongly recommend that you do not change the network interface card settings. Please beware when operating and deploying.
 :::
 
+<br/>
+
 ## Connetion method
 
 - **Step 1.** Download **Microsoft Remote Desktop** from Mac App Store, then open it. Click **Add Desktop**, enter the public IP and port of the instance, then click **Add**.
@@ -34,6 +38,8 @@ The port number `:9833` must be added after the public IP, e.g., 203.145.123.1`:
 - **Step 2.** Double-click the added connection and enter the username and password to connect to the instance.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_efdbd4140922207a512b84da8e697024.png)
+
+<br/>
 
 :::info
 username: administrator<br/>
