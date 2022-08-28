@@ -1,18 +1,23 @@
 ---
 sidebar_position: 7
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-fftw3-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-fftw3-en' 
 ---
 
 
 # FFTW3
 
-- Package official website:
+- Package official website
   - [FFTW](https://www.fftw.org/)
   - [FFTW3 github](https://github.com/FFTW/fftw3)
-- Release note: 
+- Release note
   - [FFTW release notes](https://www.fftw.org/release-notes.html)
 - Package source: Official Tar file compiled by the system administrator
 
-## FFTW module with Open MPI 4.1.1 matrix 
+<br/>
+
+
+## FFTW module with Open MPI 4.1.1 matrix
 
 | CUDA | Open MPI | module name | usage                                   |
 | ---- | -------- | ----------- | --------------------------------------- |

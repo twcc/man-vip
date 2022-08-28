@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: '本機為 Linux / macOS'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-linux-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-to-linux-from-linux-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -23,18 +25,7 @@ import TabItem from '@theme/TabItem';
 
 開啟本機終端機視窗，依照[<ins>取得的連線資訊</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-zh)，依序輸入指令，變更鑰匙對權限、連線至虛擬運算個體。
 
- <div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
- jc@jc-VirtualBox:~$ <span style={{'background-color':'#fcf8e3', 'color': '#000', 'padding':'3.2px'}}>chmod 400 janicekey01.pem</span><br/><br/>
- 
- jc@jc-VirtualBox:~$ <span style={{'background-color':'#fcf8e3', 'color': '#000', 'padding':'3.2px'}}>ssh -i janicekey01.pem centos@203.145.220.231 </span><br/>
-The authenticity of host '203.145.220.231 (203.145.220.231)' can't be established.
-ECDSA key fingerprint is SHA256:vZ5EWM1ZbnYWkF52T6fxQROphd2PqiaGYvpBAuSahFQ.
-Are you sure you want to continue connecting (yes/no)? <span style={{'background-color':'#fcf8e3', 'color': '#000', 'padding':'3.2px'}}>yes</span><br/>
-Warning: Permanently added '203.145.220.231' (ECDSA) to the list of known hosts.
-Last login: Wed May 15 01:02:37 2019 from 59-124-220-27.hinet-ip.hinet.net <br/>
-[centos@vm01-252546-iaas ~]$
-</div>
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ab7f8e76a452f95ea2f1e004e10f4e89.png)
 
 </details>
 
@@ -51,19 +42,25 @@ Last login: Wed May 15 01:02:37 2019 from 59-124-220-27.hinet-ip.hinet.net <br/>
 
 若已有在使用 VScode 開發您的程式，也可以直接使用此軟體連線您的虛擬運算個體。VScode 支援多種平台，並有許多外掛軟體套件可使用，安裝方便，也相當適合新手。以下為 Windows 操作畫面，Linux 或 macOS 步驟雷同。完整操作說明請參考[<ins>官方說明文件</ins>](https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks)。
 
-### Step 1. 下載安裝 VScode
+<br/>
+
+**Step 1. 下載安裝 VScode**
 
 請至 [VScode](https://code.visualstudio.com/Download) 下載，完成後開啟程式。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_010a76dabe0d66c94562e776fe3b3a6a.png)
 
-### Step 2. 安裝 SSH 套件
+<br/>
+
+**Step 2. 安裝 SSH 套件**
 
 點選 「**Extensions**」 > 搜尋 *remote ssh* > 選擇 「**Remote- SSH**」 並點選 「**Install**」
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_38c0c0011b900d9a5547a5f4487f4fce.png)
 
-### Step 3. 建立 Config 檔
+<br/>
+
+**Step 3. 建立 Config 檔**
 
 - 安裝完成後，點選視窗左下角圖示，開啟遠端連線指令列表
 
@@ -93,9 +90,9 @@ Host <INSTANCE_NAME>            # 輸入虛擬運算個體的名稱
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_871749523146661c11306b59bea27ce0.png)
 
+<br/>
 
-
-### Step 4. 連線虛擬運算個體
+**Step 4. 連線虛擬運算個體**
 
 - 再次開啟 VScode 左下角圖示 > 選擇 「**Remote-SSH: Connect to Host...**」
 

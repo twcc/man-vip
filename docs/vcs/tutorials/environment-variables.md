@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-vcs-setup-env-variable-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-vcs-setup-env-variable-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -26,6 +28,8 @@ TensorFlow 映像檔預設開啟 Tensor Core math：
 ```
 
 若需設定為關閉，您可在建立容器時指定 value 為 `1`：
+
+<br/>
 
 ### Step 1. 建立容器 / 虛擬運算個體、指定環境變數
 
@@ -66,6 +70,8 @@ twccli mk ccs -envk TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH -envv 1
 </TabItem>
 
 </Tabs>
+
+<br/>
 
 
 ### Step 2. 確認環境變數

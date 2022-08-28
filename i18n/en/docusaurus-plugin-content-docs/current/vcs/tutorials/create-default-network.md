@@ -1,10 +1,15 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vnw-create-default-network-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vnw-create-default-network-en'
 ---
 
 # Create a default network
 
 When using TWCC Virtual Compute Service (VCS) for the first time, you must create a **default network** in Virtual Network service before starting to use VCS. If you need other network segments, check [this document](https://man.twcc.ai/@twccdocs/guide-vcs-vnw-en) to create a new one.
+
+<br/>
+
 
 ### Step 1. Enter Virtual Network service
 
@@ -17,6 +22,7 @@ When using TWCC Virtual Compute Service (VCS) for the first time, you must creat
 EN PIC
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_af9a7dee572b42aa41038508efca2427.png) -->
 
+<br/>
 
 
 ### Step 2. Create the default network
@@ -52,6 +58,7 @@ EN PIC
 EN PIC
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4eb711285439bcd8393c8304f1141ba8.png) -->
 
+<br/>
 
 
 :::info

@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 - 由服務列表點選「**開發型容器**」，在「**開發型容器管理**」頁面，點擊「**＋建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
 
 :::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
@@ -42,14 +42,14 @@ import TabItem from '@theme/TabItem';
 
 * 選擇映像檔類型：您可瀏覽並選擇 NGC 優化之深度學習框架，或直接於左上方搜尋欲使用的框架名稱 (例：PyTorch, TensorFlow...等)。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a4c9a9e6996f373cc6be68c474257c50.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f3c003776fbf81f0ebae37ae3dba97e3.png)
 
 :::tip
 1. TWCC 提供的 NGC 容器映像檔類型、版本、套件，請參考：[<ins>容器映像檔</ins>](https://man.twcc.ai/@twccdocs/ccs-concept-image-main-zh)[target=_blank]
 2. 首次選用後，映像檔會記錄儲存於「**最近使用**」區塊，加快您下次選用的速度。(清除瀏覽器歷史紀錄將會重新記錄)
 :::
 
-* 填寫容器基本資訊與硬體規格配置，並選擇「**開啟**」或「**關閉**」刪除保護機制。
+* 填寫容器基本資訊與硬體規格配置，並選擇「**開啟**」或「**關閉**」刪除保護機制。<br/>
 完成後，接著點擊 **「下一步：儲存資訊>」** 。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ba201ac8e196f736b6d0616938766c16.png)
@@ -60,15 +60,16 @@ import TabItem from '@theme/TabItem';
 
 * 容器建立後系統會自動掛載高速檔案系統 (HFS) 的兩個目錄 (/home 與 /work) 至容器，以利使用者在運行人工智慧運算時擁有更好的性能，亦可使用 TWCC 雲端物件儲存服務。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f5b935f93932bb7d4cfd8982701943e5.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d801834abe5f168c9fc1d77253e106f4.png)
 
 * 接著點擊「**下一步：環境變數>**」，可設定符合您需求的環境變數，詳細說明與設定範例請參考 [<ins>HowTo：設定環境變數</ins>](TBD)。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d10aff1357d25a13881c2f17a19f895b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ebcf6338e3bba3e49f69c4eb3dcefd00.png)
 
 * 點擊「**下一步：檢閱+建立>**」，檢視整個容器的規格和價格，確定後點選「**建立**」即完成。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7092404d57c8deee086d43b8894fae4f.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0eab8ab1660cace6b843aea7cbb1e808.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cb943abf574920c1a1a46b62e4695590.png)
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
@@ -126,6 +127,6 @@ twccli mk ccs -itype "Caffe2" -img "caffe2-18.08-py3-v1:latest" -gpu 2 -n cusccs
 2. **容器建立後，在您刪除之前將會持續計費**。
 :::
 
-:::info **相關文件：**
+:::info **相關文件**
 - <a href="TBD">雲端物件儲存服務</a>、<a href="TBD">高速檔案系統</a>
 :::

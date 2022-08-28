@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
-title: '本機為 Windows'
+title: 'From Windows'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-windows-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-to-windows-from-windows-en'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -18,6 +20,8 @@ The created instance will enter the **`Ready`** state, and it will take some tim
 1. Due to frequent information security incidents, if your connection comes from the following countries, we will disable your remote connection to Windows instances (port: 9833): China, Germany, France, South Korea, Netherlands, Poland, Russia. If you need to connect to TWCC Windows instance, please contact Customer Service.
 2. You cannot connect to VCS instance once the settings of the network interface card are modified. Therefore, we strongly recommend that you do not change the network interface card settings. Please beware when operating and deploying.
 :::
+
+<br/>
 
 ## Connection method
 
@@ -37,6 +41,8 @@ Remember to add the port number `9833` after the public IP. E.g., 203.145.222.23
 - **Step 3.** Enter the password, and your connection is successful!
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_85a08f020c91828bcd92f5d2800af23a.png)
+
+<br/>
 
 :::info
 Account: administrator<br/>

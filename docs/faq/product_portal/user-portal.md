@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: '使用者網站'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-portal-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-portal-zh'
 ---
 
 # TWCC FAQs | 使用者網站
@@ -20,6 +22,7 @@ title: '使用者網站'
 | IE9/IE10     | <i class="fa fa-times" aria-hidden="true"></i>     | <i class="fa fa-times" aria-hidden="true"></i>     |  -    |  -      |
 
 </details>
+
 <details>
 
 <summary> Q2. 為何登入後畫面空白？</summary>
@@ -42,7 +45,6 @@ title: '使用者網站'
 
 </details>
 
-
 <details>
 
 <summary> Q5. 如何查詢計畫的 GPU 使用上限？ </summary>
@@ -53,7 +55,11 @@ title: '使用者網站'
 
 <details>
 
-<summary> Q6. 為什麼創建資源時出現錯誤訊息:`[i-service] no quota to request resource.user`？</summary>
+<summary> 
+
+Q6. 為什麼創建資源時出現錯誤訊息:`[i-service] no quota to request resource.user`？
+
+</summary>
 
 當您在使用網站操作資源時 (例：創建或啟動虛擬運算個體、卸載磁碟或是使用容器服務...等)，出現以下錯誤訊息：
 

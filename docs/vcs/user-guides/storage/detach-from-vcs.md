@@ -1,5 +1,7 @@
 ---
 sidebar_position: 4
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-vds-guide-detach-data-disk-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-vds-guide-detach-data-disk-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -13,15 +15,17 @@ import TabItem from '@theme/TabItem';
 分離後，資料磁碟將會持續計費，刪除後才會停止計費。
 :::
 
+<br/>
+
 
 ## Step 1. 卸載磁碟
 
 Linux、Windows 卸載磁碟方式不同，請依據 OS 選擇操作步驟。
 
 
-<Tabs>
+<details>
 
-<TabItem value="Linux 個體" label="Linux 個體">
+<summary><b>Linux 個體</b></summary>
 
 - [連結進入 Linux 虛擬運算個體](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh)，並使用以下指令來卸載 `/dev/vdb` 磁碟裝置。
 
@@ -29,9 +33,13 @@ Linux、Windows 卸載磁碟方式不同，請依據 OS 選擇操作步驟。
 sudo umount -d /dev/vdb
 ```
 
-</TabItem>
+</details>
 
-<TabItem value="Windows 個體" label="Windows 個體">
+<div style={{'height':'8px'}}></div>
+
+<details>
+
+<summary><b>Windows 個體</b></summary>
 
 - [連線進入 Windows 虛擬運算個體](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-windows-zh)，並在 <i class="fa fa-search" aria-hidden="true"></i> 搜尋「**電腦管理**」，開啟應用程式。
 
@@ -41,9 +49,9 @@ sudo umount -d /dev/vdb
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_663e1d9437c5e7622d644b46a4824761.png)
 
-</TabItem>
+</details>
 
-</Tabs>
+<br/>
 
 
 ## Step 2. 分離磁碟

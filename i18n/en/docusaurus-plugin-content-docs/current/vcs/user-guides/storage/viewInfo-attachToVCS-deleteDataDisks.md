@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-manage-disk-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-manage-disk-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -12,6 +14,10 @@ After your **data disk** is created, you can view the disk information, attach t
 :::info
 For the differences between Tenant Admins and Tenant Users using VCS instance, see [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-en#%E8%99%9B%E6%93%AC%E7%A3%81%E7%A2%9F%E6%9C%8D%E5%8B%99) for more information.
 :::
+
+
+<br/>
+
 
 ## View data disks
 
@@ -46,6 +52,10 @@ twccli ls vds
 </TabItem>
 
 </Tabs>
+
+
+<br/>
+
 
 ## Attach to VCS instances
 
@@ -104,12 +114,19 @@ The drop-down list only displays VCS instances that can be attached with data di
 - [<ins>HowTo: Initialize data disk- Windows instance</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-en)
 :::
 
+
+<br/>
+
+
 ## Detach from VCS instances
 
 To delete a data disk or attach it to another VCS instance, please detach it from the original VCS instance before performing other operations.
 
 
 For detailed steps of unmounting and detaching data disks, see [Detach data disks](https://man.twcc.ai/@twccdocs/vcs-vds-guide-detach-data-disk-en).
+
+
+<br/>
 
 
 
@@ -141,7 +158,9 @@ You can delete disks that you no longer use. Once deleted, <ins>**it is not bill
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### Commands
+
+**Commands**
+
 
 ```bash
 twccli rm vds -id       # Data disk ID 
@@ -152,7 +171,11 @@ twccli rm vds -id       # Data disk ID
 1. The square brackets **[ ]** indicate optional parameters, and the rest are required parameters.
 :::
 
-### Examples
+
+<br/>
+
+**Examples**
+
 
 - Delete the data disk with ID `376749`
 ```bash

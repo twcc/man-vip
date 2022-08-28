@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 title: '管理映像檔'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-vds-manage-instance-image-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-vds-manage-instance-image-zh'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -10,9 +12,11 @@ import TabItem from '@theme/TabItem';
 
 您可於「**映像檔管理**」頁面，管理計畫建立的映像檔與自其他計畫分享的映像檔。
 
+<br/>
+
 ## 檢視映像檔資訊
 
-檢視映像檔 ID、名稱、狀態、建立時間、建立者等資訊。
+檢視映像檔 ID、名稱、描述、狀態、建立時間、建立者等資訊。
 
 :::info
 
@@ -26,14 +30,14 @@ import TabItem from '@theme/TabItem';
 
 * 進入「**虛擬運算個體映像檔管理**」頁面，可看到所有映像檔的列表資訊，最近建立的映像檔會列在最上面。建立後待狀態從 **`QUEUED`** 變成 **`ACTIVE`** 後，即可使用映像檔建立個體。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0d9ecb3bedb6ef58181d2679c9aac6c2.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_186918c503fa42eae342f88955c2bea3.png)
 
 
 </TabItem>
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-### 指令
+**指令**
 
 ```bash
 twccli ls vcs -cus-img [-all]   # 檢視所有映像檔 ([-all]限租戶管理員使用) 
@@ -44,7 +48,9 @@ twccli ls vcs -cus-img [-all]   # 檢視所有映像檔 ([-all]限租戶管理�
 **[ ]** 中括號內為選擇性參數，其餘為必要參數。
 :::
 
-### 範例
+<br/>
+
+**範例**
 
 - 檢視為 ID 為 **`2580765`** 的虛擬運算個體建立的快照狀態
 ```bash
@@ -79,11 +85,11 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 
 <TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-### 分享映像檔
+**分享映像檔**
 
 * 進入映像檔管理頁後，選擇一映像檔，點選右側 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，再選擇「**分享**」。
 
-![](https://i.imgur.com/kXVJVCS.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9cba50a5788cf4a04152d259a29c296f.png)
 
 * 選擇分享的專案 (接收此分享的目標計畫)、建立映像檔名稱後，點選「**確定**」即跳轉至「**映像檔分享管理**」頁，進行分享的程序。
     
@@ -96,7 +102,7 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 
 :::
 
-### 分享管理
+**分享管理**
     
 進入「**映像檔分享管理**」頁面可檢視已分享的映像檔名稱、分享的專案、分享狀態、分享建立時間。
     
@@ -107,8 +113,6 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 :::info
 僅租戶管理員能檢視本人 (非全計畫) 的映像檔分享資訊。
 :::
-
-<br/>
 
 :::tip
 <details>
@@ -133,8 +137,6 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 <br/>
 
 
-
-
 ## 刪除映像檔
 
 :::caution
@@ -147,7 +149,7 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 
 * 不需使用的映像檔，可以點選該映像檔列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，再選擇「**刪除**」即可。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5a0e622ee77a6f942ec70dbd03915a55.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ed43bef95d227e1a331beb45a266f4c1.png)
 
 
 </TabItem>
@@ -160,6 +162,7 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 
 </Tabs>
 
+<br/>
 
 
 ## 以映像檔建立個體

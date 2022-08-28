@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
-title: '檢視/編輯/刪除保護'
+title: 'View info, edit description'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-view-and-edit-instance-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-view-and-edit-instance-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -14,6 +16,11 @@ Once VCS instances are created, you can view the instance information or edit th
 :::info
 For the differences of permissions in VCS instance between Tenant Admins and Tenant Users, see [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務) for more information.
 :::
+
+
+<br/>
+
+
 
 ## View instance information
 
@@ -59,6 +66,11 @@ twccli ls vcs -all
 </TabItem>
 
 </Tabs>
+
+
+<br/>
+
+
 
 ## Edit description
 

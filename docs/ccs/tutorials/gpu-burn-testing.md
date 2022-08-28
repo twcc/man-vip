@@ -31,18 +31,14 @@ TWCC 的容器環境中已為用戶安裝 TensorBoard，本篇文章將教學如
 tensorboard --logdir=~/logdir --port 5000
 ```
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_33abbf06c6561af711929eee558586c5.png)
+
 :::info
 1. 您需要指定一個作為 TensorBoard 提供網頁服務使用的連接埠 (port)。<div></div>
 在 TWCC 的容器環境中，有三個 port 可供用戶使用，分別是`5000`、`5001`、`5002`，在此以 port `5000` 做為範例。<div></div>
 更多資訊可參考 [<ins>HowTo：設定開發型容器的服務埠</ins>](https://www.twcc.ai/doc?page=howto-ccs-config-service-port)。
 3. 上述指令中的 `--logdir` 為 log 檔存放位置，您可自行設定，本文以 `~/logdir` 做為範例。
 :::
-
-<div style={{'background-color':'black', 'color':'white', 'padding':'20px'}}>
-$ wei1803106@cwfs6actr1611034753151-lkffh:~$ tensorboard --logdir=~/logdir --port 5000<div></div>
-2021-01-19 13:39:58.453097: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic librarylibcudart.so.11.0<div></div>
-TensorBoard 2.3.0+nv at http://cwfs6actr1611034753151-lkffh:5000/ (Press CTRL+C to quit)
-</div>
 
 <br/>
 
@@ -58,7 +54,7 @@ TensorBoard 2.3.0+nv at http://cwfs6actr1611034753151-lkffh:5000/ (Press CTRL+C 
 
 - 在關聯服務埠選視窗中，勾選 「**5000**」，並按下確認。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a27d0036301d96b66135fb60e033ba04.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_585d1f37008afc49c0cec84df9c98155.png)
 
 - 確認後，容器資訊頁面中的 「**連接埠**」 會多一筆目標埠為 5000 及對外埠的資訊。以下圖為例，目標埠 5000 的對外埠為 53081。
 

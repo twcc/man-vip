@@ -1,11 +1,16 @@
 ---
 sidebar_position: 13
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-configure-ntp-server-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-configure-ntp-server-zh' 
 ---
 
 # 設定 NTP 自動校時
 
 
 以下說明如何設定虛擬運算個體的特定時區，讓個體能自動校時：CentOS 的個體以原生命令設定時區； Ubuntu 的個體則以外部校時伺服器設定。
+
+<br/>
+
 
 ### CentOS 虛擬運算個體
 
@@ -23,6 +28,8 @@ date
 ``` 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2bf337c33ce4d5cbb947a978ff1c7888.png)
 
+<br/>
+
 
 ### Ubuntu 虛擬運算個體 (18.04 版本)
 
@@ -39,11 +46,11 @@ sudo apt-get update
 sudo apt-get install -y ntp
 ```
 
-- Step 3. 輸入以下指令，修改設定檔 :arrow_right: 再鍵入「i」進入編輯模式，將會看到以下畫面
+- Step 4. 輸入以下指令，修改設定檔 :arrow_right: 再鍵入「i」進入編輯模式，將會看到以下畫面
 ```bash
 sudo vim /etc/ntp.conf
 ```
- :arrow_right: 將以下紅框空內容，在最前方輸入「#」隱藏一筆預設資料
+ :arrow_right: 將以下紅框中的內容，在最前方輸入「#」隱藏一筆預設資料
  
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bbd7b65b56cc9fdc0bca4e3a283f9bb2.png)
 
@@ -53,11 +60,13 @@ sudo vim /etc/ntp.conf
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f6b3ee2a0904f453523459aca376aede.png)
 
 
-- Step 4. 輸入以下指令重啟 NTP，以更新設定
+- Step 5. 輸入以下指令重啟 NTP，以更新設定
 
 ```bash
 sudo systemctl restart ntp
 ```
+
+<br/>
 
 
 ### Ubuntu 虛擬運算個體 (16.04版本)

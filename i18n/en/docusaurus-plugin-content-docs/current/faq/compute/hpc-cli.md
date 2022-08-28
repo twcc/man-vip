@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
-title: '台灣杉二號 (命令列介面) (TWNIA2)'
+title: 'TWCC FAQs | Taiwania 2 (HPC CLI)'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-twnia2-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-en'
 ---
 
 # TWCC FAQs | Taiwania 2 (HPC CLI)
@@ -32,6 +34,8 @@ The validity period of supercomputer password is 180 days. Please reset the expi
 
 </details>
 
+<div style={{height:10+'px'}}></div>
+
 
 ## Resources allocation and monitoring
 
@@ -59,6 +63,8 @@ You can use Slurm command to obtain nodes, see [<ins>this document</ins>](https:
 Please make sure the ratio of the resources is based on 1 GPU : 4 CPU : 90 GB Memory. For example, the number of GPU should be 8 if you need 32 CPUs.
 
 </details>
+
+<div style={{height:10+'px'}}></div>
 
 
 
@@ -122,6 +128,9 @@ The storage environment of the two is the same, but the computing environment is
 
 </details>
 
+<div style={{height:10+'px'}}></div>
+
+
 ## Data storage and transfer
 
 <details>
@@ -142,6 +151,9 @@ The storage space is bound with your personal account, so the files will not be 
 
 </details>
 
+<div style={{height:10+'px'}}></div>
+
+
 ## Networking and security
 <details>
 
@@ -150,6 +162,8 @@ The storage space is bound with your personal account, so the files will not be 
 203.145.219.98
 
 </details>
+
+<div style={{height:10+'px'}}></div>
 
 
 ## Execution errors
@@ -165,4 +179,6 @@ This error message showed that you have submitted over 20 computing job (queue *
 
 When the error occurs, you are recommended to use the `squeue` command to check the job state and cancel the pending or running job using the `scancel` command to reduce the quantity of the job.
 
+
 </details>
+

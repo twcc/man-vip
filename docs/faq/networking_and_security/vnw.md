@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 title: '虛擬網路'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-vnw-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-vnw-zh'
 ---
 
 # TWCC FAQs | 虛擬網路
