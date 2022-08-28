@@ -70,7 +70,7 @@ bash V3_training.sh --path ./cifar-10-python.tar.gz
  
 - 在訓練過程中，可在「**開發型容器詳細資料**」頁面可檢視 CPU/GPU、記憶體與網路的資源使用狀況
 
-![image](https://user-images.githubusercontent.com/109254397/185284354-16074529-5ba7-4d61-98ba-e4a064c07a83.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c4ddbdd70258089333cdb8ec95613052.png)
 
 
  

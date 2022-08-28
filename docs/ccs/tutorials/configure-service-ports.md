@@ -16,7 +16,7 @@ TWCC 容器採用 Port-Forwarding 技術，可將外部連線轉發至相同網�
 
 - 容器建立後，開啟 Jupyter Notebook :arrow_right: Terminal
 
-![image](https://user-images.githubusercontent.com/109254397/185284318-6be7af10-7179-4e65-b4a2-661d8e411b34.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_953e1d1fa8deec9725cf4c244f21abfd.png)
 
 ## 架設網頁服務、設定服務 port
 
