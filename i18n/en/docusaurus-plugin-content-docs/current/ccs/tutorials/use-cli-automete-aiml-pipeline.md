@@ -14,21 +14,21 @@ This article will help users understand how to use  [TWCC CLI](https://man.twcc.
 2. Delete container
 ```
 
-After creating [interactive Container](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/create-an-interactive-container) on portal or using TWCC CLI, you can assign manual tasks to script to complete computing automatically, delete containers, and reduce the cost of keeping the containers running. Since the computing program and data will be kept in the default storage space of the container, [Hyper File System (HFS)](https://man.twcc.vip/en/docs/hfs/intro), there is no need to worry about losing data when the container is deleted.
+After creating [Interactive Container](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/create-an-interactive-container) on portal or using TWCC CLI, you can assign manual tasks to script to complete computing automatically, delete containers, and reduce the cost of keeping the containers running. Since the computing program and data will be kept in the default storage space of the container, [Hyper File System (HFS)](https://man.twcc.vip/en/docs/hfs/intro), there is no need to worry about losing data when the container is deleted.
 
 <br/>
 
 
 ### Step 1. Upload the computing program to the container
 
-Refer to [<ins>using SFTP + Filezilla to transfer file</ins>](https://man.twcc.ai/@twccdocs/rypYCr_TN?type=view#%E4%BD%BF%E7%94%A8-SFTP--Filezilla-%E5%82%B3%E8%BC%B8%E6%AA%94%E6%A1%88) to upload the training script to the container's default storage space, namely the Hyper File System (HFS) storage space.
+Refer to [<ins>Using SFTP + Filezilla to transfer file</ins>](https://man.twcc.ai/@twccdocs/rypYCr_TN?type=view#%E4%BD%BF%E7%94%A8-SFTP--Filezilla-%E5%82%B3%E8%BC%B8%E6%AA%94%E6%A1%88) to upload the training script to the container's default storage space, namely the Hyper File System (HFS) storage space.
 
 <br/>
 
 
 ### Step 2. Install TWCC CLI
 
-- Please refer to [<ins>install TWCC CLI</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#1-%E9%83%A8%E7%BD%B2%E6%93%8D%E4%BD%9C%E7%92%B0%E5%A2%83) to install TWCC CLI in the Interactive Container.
+- Please refer to [<ins>Install TWCC CLI</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#1-%E9%83%A8%E7%BD%B2%E6%93%8D%E4%BD%9C%E7%92%B0%E5%A2%83) to install TWCC CLI in the Interactive Container.
 
 :::info
 - The container versions <ins>after</ins> 2021 already have TWCC CLI pre-installed for users, so you can log in directly after the creation.
