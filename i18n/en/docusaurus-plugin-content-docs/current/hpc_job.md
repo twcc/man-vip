@@ -28,7 +28,7 @@ This HPC Job runs containers with Singularity, and users can use the Docker imag
 
 
 :::tip
-You can click on the asterisk <i class="fa fa-star-o" aria-hidden="true"></i> on the left side of **All Services** to pin your favorite services to **My Favorite Services** to speed up the process.
+You can click on the star <i class="fa fa-star-o" aria-hidden="true"></i> on the left side of **All Services** to pin your favorite services to **My Favorite Services** to speed up the process.
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3eb3fe1718abcddb3ff35a0c89b69349.png)
