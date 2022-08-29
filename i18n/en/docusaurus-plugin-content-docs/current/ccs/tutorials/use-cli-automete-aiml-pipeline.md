@@ -13,7 +13,7 @@ This article will help users understand how to use  [TWCC CLI](https://man.twcc.
 1. Execute computing program
 2. Delete container
 ```
-After creating [Interactive Container](https://www.twcc.ai/doc?page=container) on portal or using TWCC CLI, you can assign manual tasks to script to complete computing automatically, delete containers, to stop accruing charges and reduce the cost for containers. The computing program and data will be kept in the default storage space of the container - [Hyper File System (HFS)](https://www.twcc.ai/doc?page=hfs), and no need to worry that the data will disappear when the container is deleted.
+After creating [Interactive Container](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/create-an-interactive-container) on portal or using TWCC CLI, you can assign manual tasks to script to complete computing automatically, delete containers, to stop accruing charges and reduce the cost for containers. The computing program and data will be kept in the default storage space of the container - [Hyper File System (HFS)](https://www.twcc.ai/doc?page=hfs), and no need to worry that the data will disappear when the container is deleted.
 
 <br/>
 

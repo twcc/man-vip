@@ -17,7 +17,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorfl
 
 ### Step 2.  Create an Interactive Container
 
-- Please refer to [Interactive Container](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/create-an-interactive-container) to create a Interactive Container, and select TensorFlow for the image type (For image, please select a version with Python 2 before 19.08 (`not including 19.08`)).
+- Please refer to [Interactive Container](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/create-an-interactive-container) to create an Interactive Container, and select TensorFlow for the image type (For image, please select a version with Python 2 before 19.08 (`not including 19.08`)).
 
 <br/>
 
