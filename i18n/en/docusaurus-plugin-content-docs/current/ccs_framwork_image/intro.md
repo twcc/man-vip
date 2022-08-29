@@ -1,5 +1,5 @@
 ---
-sidebar_label: 'Container Image'
+sidebar_label: 'Container Image overview'
 sidebar_position: 1
 title: Image overview
 sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-overview-en' 
