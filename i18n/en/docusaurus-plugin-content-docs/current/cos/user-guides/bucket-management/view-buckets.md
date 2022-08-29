@@ -31,7 +31,7 @@ You can click on the star <i class="fa fa-star-o" aria-hidden="true"></i> on the
 
 - After entering <b>Cloud Object Storage Management</b> page, you can view all the buckets in the project.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0ed5a1dd57edd31b8a1d55d1741c45f1.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f74c2852f3828639d7ba6f7381fd053a.png)
 
 
 
