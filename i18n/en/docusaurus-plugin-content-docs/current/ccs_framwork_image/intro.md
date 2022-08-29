@@ -1,7 +1,7 @@
 ---
-sidebar_label: '容器映像檔'
+sidebar_label: 'Container Image'
 sidebar_position: 1
-title: 映像檔概觀
+title: Image overview
 sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-overview-en' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-overview-en' 
 ---
