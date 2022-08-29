@@ -16,14 +16,14 @@ Cloud Object Storage is divided into two types of storage spaces to meet user ne
 - **Public COS**: The data is shared by all members in the project.
 - **Private COS<sup>[2]</sup>**: The data is exclusively for individual users.
 
-In addition to being independently used as a stable and secure data storage space, you can also use COS as a data backup system for TWCC Virtual Compute Service (VCS) and Container Compute Service (CCS). For the data backup methods, see [data backup](https://man.twcc.ai/@twccdocs/cosbackup-en).
+In addition to being independently used as a stable and secure data storage space, you can also use COS as a data backup system for TWCC Virtual Compute Service (VCS) and Container Compute Service (CCS). For the data backup methods, refer to [data backup](https://man.twcc.ai/@twccdocs/cosbackup-en).
 
 
 
 
 
 :::info
-[1] You need to use TWCC CLI to access the data in Cloud Object Storage from TWCC Interactive Container.
+[1] You need to use TWCC CLI to access the data in Cloud Object Storage from TWCC Interactive Container.<br/>
 [2] Private COS is currently not available through TWCC portal, and files can only be accessed using third-party software.
 
 
