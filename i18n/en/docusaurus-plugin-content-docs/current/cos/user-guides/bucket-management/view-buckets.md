@@ -26,7 +26,7 @@ View all buckets in your project:
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_44509030fbb4885dfa5539fe745386ad.png)
 
 :::tip
-您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
+You can click on the star <i class="fa fa-star-o" aria-hidden="true"></i> on the left side of **All Services** to pin your favorite services to **My Favorite Services** to speed up the process.
 :::
 
 - After entering <b>Cloud Object Storage Management</b> page, you can view all the buckets in the project.
