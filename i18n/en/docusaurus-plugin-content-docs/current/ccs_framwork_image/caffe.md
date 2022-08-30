@@ -12,7 +12,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-
 
 
 
-TWCC provides ready-to-use working environment of NGC’s NVCaffe. The NVIDIA Deep Learning SDK accelerates widely-used deep learning frameworks such as NVCaffe™. Caffe™ was originally developed by the Berkeley Vision and Learning Center (BVLC) and by community contributors. It is a deep learning framework made with expression, speed, and modularity in mind.
+TWCC provides ready-to-use working environment of NGC’s NVCaffe. The NVIDIA Deep Learning SDK accelerates widely-used deep learning frameworks, such as NVCaffe™. Caffe™ was originally developed by the Berkeley Vision and Learning Center (BVLC) and other community contributors. It is a deep learning framework made with expression, speed, and modularity in mind.
 
 <br/>
 
