@@ -62,7 +62,7 @@ bash gpu_testing.sh
 ## Step 5. 取得基礎運算資訊
 
 - **檢視計算能力**<br/>
-GPU 容器服務所使用之 GPU 皆為 NVIDIA V100 32GB，具有強大之計算能力。使用 gpu-burn 所測試之結果是具有 13198 Gflop/s 能力
+GPU 容器服務所使用之 GPU 皆為 NVIDIA V100 32GB，具有強大之計算能力。使用 gpu-burn 所測試之結果為 13198 Gflop/s
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cefd6041539673437d78918f9f444ed6.png)
 
