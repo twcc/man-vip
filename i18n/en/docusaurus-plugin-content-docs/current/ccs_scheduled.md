@@ -56,7 +56,7 @@ You can click on the asterisk <i class="fa fa-star-o" aria-hidden="true"></i> on
 
 Then, review the specifications and price of the entire container and click "Create" to finish.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3e30968b110aeb1dc877590720445260.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_92a3ccac69a3464f578bd5d6e39f502d.png)
 
 
 
