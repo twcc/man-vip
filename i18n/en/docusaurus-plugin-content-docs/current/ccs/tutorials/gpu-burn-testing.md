@@ -74,5 +74,5 @@ Please associate the port used by TensorBoard with the container port, and then 
 
 
 :::info
-For more Tensorboard introduction and usage, please refer to [<ins>TensorFlow official website</ins>](https://www.tensorflow.org/tensorboard).
+For more Tensorboard introduction and usages, please refer to [<ins>TensorFlow official website</ins>](https://www.tensorflow.org/tensorboard).
 :::

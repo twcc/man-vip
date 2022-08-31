@@ -214,7 +214,7 @@ $TWCC_CLI_CMD ls ccs
 - Press <kbd>Esc</kbd> key and enter `:wq!` to save.
 
 :::info
-* Step **echo "4. RUN GPU"** depends on your program. You may modified this part of the script. `"cd gpu-burn;/bin/bash --login -c './gpu_burn 150'"`
+* Step **echo "4. RUN GPU"** depends on your program. You may modify this part of the script. `"cd gpu-burn;/bin/bash --login -c './gpu_burn 150'"`
 :::
 
 <br/>
