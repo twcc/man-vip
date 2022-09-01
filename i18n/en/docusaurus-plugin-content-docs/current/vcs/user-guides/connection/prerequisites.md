@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 
 ## Step 1. Create a public IP address
 
-Please create a public IP to your VCS instance before you connect to it from the Internet. Once a public IP is assigned to the instance, it is recommended to configure the [Security Group](https://man.twcc.ai/@twccdocs/guide-vcs-sg-en) to protect your instance and reduce the information security risk.
+Please create a public IP to your VCS instance before connecting to it from the Internet. Once a public IP is assigned to the instance, it is recommended to configure the [Security Group](https://man.twcc.ai/@twccdocs/guide-vcs-sg-en) to protect your instance and reduce the information security risk.
 
 <!-- Portal start -->
 
