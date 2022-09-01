@@ -16,7 +16,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorfl
 
 ### Step 2. 建立開發型容器
 
-- 請參考 [開發型容器](https://www.twcc.ai/doc?page=container#建立開發型容器) 建立開發型容器，映像檔類型請選擇 TensorFlow (映像檔請選擇 19.08 以前 (`不含 19.08`)，且 Python 2 的版本)
+- 請參考 [開發型容器](https://www.twcc.ai/doc?page=container#建立開發型容器) 建立開發型容器，映像檔類型請選擇 TensorFlow (映像檔請選擇 19.08 以前 (`含 19.08`)，且 Python 2 的版本)
 
 <br/>
 
