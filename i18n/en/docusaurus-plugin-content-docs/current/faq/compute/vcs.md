@@ -100,12 +100,29 @@ The reason for this error is that the certificate stored on the local computer i
 ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "Public IP"
 ```
 
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> <b>Note：</b>
 
 `Your_Path` is the path of your local computer, and the following message will appear when you connect again:
 
 
 ```Are you sure you want to continue connecting (yes/no)? ```
 Enter ```Yes``` to connect and generate a new certificate.
+
+</details>
+
+<details>
+
+<summary> Q8. How to deal with macOS computers that can't connect to Linux devices?</summary>
+
+Please go to the **VCS Instance Details** page , click the "**Connect**" button, and follow the instructions provided in the window to set the key pair access rights and SSH connection instance.
+
+</details>
+
+<details>
+
+<summary> Q9. Is there a default password when I use Console to connect to a virtual computing individual?</summary>
+
+There is no default password, you need to create a separate password before using Console to connect to the Linux instance, for Windows instances just enter the password you set when you created the instance, refer to [Quick debugging and maintenance tools:TWCC VCS console](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-debug-tool-console-zh#Step-3-%E8%BC%B8%E5%85%A5%E9%80%A3%E7%B7%9A%E8%B3%87%E8%A8%8A%EF%BC%8C%E5%AE%8C%E6%88%90%E9%80%A3%E7%B7%9A)。
 
 </details>
 
@@ -165,6 +182,21 @@ The instance will be billed in the ```Starting``` state if it is started from th
 The VCS instance will not be billed in the ```Queueing```, ```Stopped``` and ```Error``` states, and it will be billed in other states.
 Whether the VCS instance in the ```Starting``` state be billed or not depends on the usage scenario. For detailed explanation, please see Q4.
 
+</details>
+
+<details>
+
+<summary>
+
+Q6. How to solve the error message ```440301: The request exceeded the quotas of ['floating_ip']``` when creating a virtual computing individual?
+
+</summary>
+
+The reason for this error message is that the number of floating ip's has reached the limit of the project, you can refer to the following practices.
+1. 移除虛擬運算個體暫不需使用的浮動 IP (個體狀態為 `Ready` 才可移除) 後，再次選取建立。
+2. 浮動 IP 在您停止或刪除個體後即釋放回資源池，無法循環使用。若您的使用情境適用固定 IP，建議您訂閱並使用靜態 IP (static IP)。
+3. 若有特殊需求，請洽客服人員。
+     
 </details>
 
 <div style={{height:10+'px'}}></div>
