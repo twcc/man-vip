@@ -90,7 +90,7 @@ cat  twcc_ssl_base64.txt
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5eee9d1a0ac7f56dd9697cf908b749bb.png)
    
-- 貼上 [Step 7](#Step-7-將憑證轉檔為-Base64-格式) 複製的 base64 檔內容
+- 貼上 [Step 3](#Step-3-將憑證轉檔為-Base64-格式) 複製的 base64 檔內容
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7521063385f95debc7b6b62da2b87f0e.png)
 
