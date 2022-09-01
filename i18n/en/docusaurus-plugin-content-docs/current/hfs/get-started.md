@@ -9,13 +9,13 @@ import TabItem from '@theme/TabItem';
 
 # 【Getting Started with TWCC】
 
-The 【TWCC from Scratch】 series of tutorials will provide novice users with an in-depth explanation of how to use TWCC in a thematic manner, and will be organized here so that you can easily refer to the information you need to take the first step in using TWCC computing resources.
+The "Getting Started with TWCC" series of tutorials will provide novice users with an easily understandable explanation of how to use TWCC. We organize related documents here so that you can easily refer to the information you need to take the first step in using TWCC computing resources! <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
 
-## Topic and Operating procedure
+## Guide of the topic and steps
 
-**【Getting Started with TWCC】Adjusting HFS capacity and connecting transport nodes**
+**【Getting Started with TWCC】 Create and connect Interactive Containers**
 
-In this page, you will learn how to register an account, adjust the HFS capacity, and connect the transport nodes from.
+In this article, you will learn how to sign up for an account, sign in to TWCC, create a interactive container, and use Jupyter Notebook to quickly connect to the container.
 
 
 :::info
@@ -32,7 +32,7 @@ HFS is one of the TWCC services, it is a scalable, allows simultaneous access to
 
 
 :::info
-TWCC services that will be used in this article: Member Center, [<ins>Hyper File System</ins>](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh).
+TWCC services to be used in this article: Member Center, [<ins>Hyper File System</ins>](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh).
 :::
 
 
@@ -55,10 +55,10 @@ TWCC services that will be used in this article: Member Center, [<ins>Hyper File
 </summary> 
 
 
-1. [Account Registration](https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=)
-2. After that, you can [Apply for A New Project](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fapply-project-and-credit-zh), or ask the [Tenant Admin<i class="fa fa-question-circle" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-overview-zh) to add you to an [Existing Project](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-manage-project-team-zh).
-3. If you are Tenant Admin, please [Purchase Project Credits](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2FS17dwAja4%3Ftype%3Dview) for your project, Projects need credits to create and use TWCC resources.
-4. If you are Tenant Admin, Once the credit application is completed, the parent wallet of the project can be divided into multiple sub-wallets to allocate a fixed amount of credit to members, if there is no split, the same credit is used for the parent wallet of the project. Please refer to [Project Wallet Management](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-manage-project-wallet-zh) to learn more.
+1. [Sign up for an account](https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=#firstPage)
+2. Once finished, you can [apply for a new project](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fapply-project-and-credit-zh), or ask [Tenant Admin<i class="fa fa-question-circle" aria-hidden="true"></i>](https://man.twcc.vip/en/docs/role_permission/intro) to [add you to an available project](https://man.twcc.vip/en/docs/member/user-guides/project-management/project-member-management).
+3. If you are a Tenant Admin, please [purchase credits](https://man.twcc.vip/en/docs/member/user-guides/billing/apply_credits) for your project, TWCC resources can only be created and used when there are credits in the project.
+4. If you are a Tenant Admin, after the credit application is completed, you can split the project's parent wallet into multiple sub-wallets to allocate a fixed amount to your members. If there is no split, the project's parent wallet credit will be used directly. Please refer to [Project Wallet Management](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-manage-project-wallet-zh) for more information.
 
 
 </details>
@@ -86,11 +86,11 @@ TWCC services that will be used in this article: Member Center, [<ins>Hyper File
 </summary>
 
 
-1. [Account Registration](https://tws.twcc.ai/)
-2. After that, you can
-    - Apply for [Free Experience Program](https://member.twcc.ai/module_page.php?module=nchc_service#nchc_service/nchc_service.php?action=trial_prj_apply_step0), or
-    - Contact us (sales@twsc.io) to learn more about your needs and to help you add new programs and credits, or
-    - Ask the [Tenant Admin<i class="fa fa-question-circle" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-overview-zh)  to add you to an [Existing Project](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-manage-project-team-zh)。
+1. [Sign up for an account](https://tws.twcc.ai/)
+2. Once finished, you can
+    - Apply for a [Free Experience Program](https://member.twcc.ai/module_page.php?module=nchc_service#nchc_service/nchc_service.php?action=trial_prj_apply_step0), or
+    - Contact TWS Sales (sales@twsc.io) for an in-depth understanding of your needs and we will assist you in adding new projects and credits, or
+    - Ask [Tenant Admin<i class="fa fa-question-circle" aria-hidden="true"></i>](https://man.twcc.vip/en/docs/role_permission/intro) to [add you to an available project](https://man.twcc.vip/en/docs/member/user-guides/project-management/project-member-management).
 
 
 </details>
@@ -168,15 +168,8 @@ TWCC provides a minimum of 100GB of free space for your /home and /work. To incr
 
 
 :::info
-- Please refer to the price list for price information：<a href="https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS">
-<font style={{backgroundColor:'#FF0000', borderRadius:30+'px', padding:0.3+'em', fontZize:16+'px'}}>
-<font style={{color:'white'}}> 
-<b>&nbsp;Academic&nbsp;</b></font></font></a> <a href="https://man.twcc.ai/@twsdocs/pricing-zh#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS">
-<font style={{backgroundColor:'#008ad8', borderRadius:30+'px', padding:0.3+'em', fontZize:16+'px'}}>
-<font style={{color:'white'}}> 
-<b>&nbsp;Enterprise&nbsp;</b></font></font></a>
-- You can review your quota and resource usage in the Member Center <a href="https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-view-billing-resource-usage-zh"><font style={{backgroundColor:'#FF0000', borderRadius:30+'px', padding:0.3+'em', fontZize:16+'px'}}>
-<font style={{color:'white'}}>  <b>&nbsp;Academic&nbsp;</b></font></font></a>
+- Please refer to the price list for rate information: <a href="https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS"><font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}><b>&nbsp;Academic&nbsp;</b></font></a>, <a href="https://man.twcc.ai/@twsdocs/pricing-zh#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS"><font style={{'background-color':'#008ad8', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}><b>&nbsp;Enterprise&nbsp;</b></font></a>
+- You may view your credits and resource usage in the Member Center. <a href="https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-view-billing-resource-usage-zh"><font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}><b>&nbsp;Academic&nbsp;</b></font></a>
 :::
 
 ### Step 3. Connected transmission node
@@ -186,5 +179,5 @@ TWCC provides a minimum of 100GB of free space for your /home and /work. To incr
 
 
 ## Related FAQ 
-- [Membership, Programs and Billing](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-membership-project-billing-zh)
+- [Membership, Project and Billing](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-membership-project-billing-zh)
 - [Hyper File System (HFS)](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh)
