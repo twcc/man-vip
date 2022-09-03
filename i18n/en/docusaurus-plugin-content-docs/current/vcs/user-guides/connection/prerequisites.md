@@ -15,24 +15,31 @@ import TabItem from '@theme/TabItem';
 
 Please create a public IP to your VCS instance before connecting to it from the Internet. Once a public IP is assigned to the instance, it is recommended to configure the [Security Group](https://man.twcc.ai/@twccdocs/guide-vcs-sg-en) to protect your instance and reduce the information security risk.
 
+:::info
+For more information about using public IP, please refer to [<ins>Elastic IP</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/networking/elastic-ip).
+:::
+
 <!-- Portal start -->
 
 <Tabs>
 
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-- Go to the detailed information page of the VCS instance to be connected.
+- Go to the detailed information page of the VCS instance you want to connect to.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4a00551e5a4da9b9ac74f42025abfe01.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c1d6366ecc19ce1a7ff4c4dd058f50fb.png)
 
-- Scroll down to the "Network & Connection" section and click **Create** to create a public IP.
+- Scroll down to the "Network & Connection" section and click **Assign**.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db0855da2f03889e497ea83ae4836f68.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_97fc3962237d8319edcd1b1c6f36f91b.png)
+- Select "Auto-assign Floating IP" or "Assign Static IP".
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b9bca425dbd1f4468d0bcd6c73bf11d9.png)
 
 - After the creation is complete, the virtual network name and the public IP address will be displayed.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_332db3cd75fba44465151638e9bfcbf6.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e2b629cbf5696134f71712677c3aa138.png)
 
 
 </TabItem>
@@ -47,14 +54,14 @@ twccli net vcs -s   # VCS instance ID
 ```
 
 :::info
-1. The square brackets **[ ]** indicate optional parameters, and the rest are required parameters.
+1. The parameters in the square brackets **[ ]** are optional and the rest are required.
 :::
 
 <br/>
 
-**Examples**
+**Example**
 
-Create a public IP address for a VCS instance with ID **`937648`**, and check if the creation is successful.
+Create a public IP address for the VCS instance with ID **`937648`**, and check if it is successfully created.
 
 ```bash
 twccli net vcs -s 937648 -fip
@@ -78,13 +85,13 @@ twccli ls vcs
 
 **Linux instances**
 
-* Go to the detailed information page of the VCS instance to be connected.
+* Go to the detailed information page of the VCS instance you want to connect to.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4a00551e5a4da9b9ac74f42025abfe01.png)
-* Click **Connect** button.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c1d6366ecc19ce1a7ff4c4dd058f50fb.png)
 
+* Click the **Connect** button.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bc3c006641d1db188650475eadb3764b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c09e3f7969882c7733e4163a5ee30182.png)
 
 * Once you click the **Connect** button, the instance connection steps using SSH will be displayed. The information varies for different instances.
 
@@ -92,7 +99,7 @@ twccli ls vcs
 
 
 :::info
-In this instruction, we use Ubuntu as an example. The system prompts will be different for VCS instances of different operating systems.
+This example is based on Ubuntu. The system prompts will be different for VCS instances of different operating systems.
 :::
 
 <br/>
