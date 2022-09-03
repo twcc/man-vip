@@ -13,11 +13,11 @@ import TabItem from '@theme/TabItem';
 You may stop, start, shutdown, restart, and delete Virtual Compute Service(VCS) instance according to your needs and scenarios.
 
 :::info
-For the difference of permissions in VCS instance between Tenant Admin and Tenant User, see [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務) for more information.
+For the permission differences in VCS instance between Tenant Admins and Tenant Users, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務).
 :::
 
 :::tip
-For more information of VCS instances between state transition, billing, and impact, see [<ins>VCS Instance Life Cycle</ins>](https://man.twcc.ai/@twccdocs/concept-vcs-lifecycle-en).
+For more information regarding state transitions, **billing**, and the impact of service operations on VCS instances, please refer to [<ins>VCS Instance Life Cycle</ins>](https://man.twcc.ai/@twccdocs/concept-vcs-lifecycle-en).
 :::
 
 
