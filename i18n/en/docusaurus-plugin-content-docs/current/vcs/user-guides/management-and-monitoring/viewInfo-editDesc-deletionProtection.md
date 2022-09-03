@@ -14,7 +14,7 @@ Once VCS instances are created, you can view the instance information or edit th
 
 
 :::info
-For the differences of permissions in VCS instance between Tenant Admins and Tenant Users, see [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務) for more information.
+For the differences of permissions in VCS instance between Tenant Admins and Tenant Users, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務).
 :::
 
 
@@ -24,7 +24,7 @@ For the differences of permissions in VCS instance between Tenant Admins and Ten
 
 ## View instance information
 
-View instance's ID, name, public/private IP address, state, creation time, creator, image version, resource ratio, key pair, network connection, storage,... and other information.
+View instance information, such as ID, name, public/private IP address, state, creation time, creator, image version, resource ratio, key pair, network connection, storage, etc.
 
 
 <Tabs>
@@ -32,18 +32,18 @@ View instance's ID, name, public/private IP address, state, creation time, creat
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
 * Go to the **VCS Instance Management** page, you can view the list information of all created instances: **ID**, **Name**, **Public IP**, **State**, **Created at** and **Created by**.
-* Enter keywords in the **Search** column to filter out the results that meet the specific criteria in the column of the list.
+* Enter keywords in the **Search** bar to filter out the results that meet the specific criteria in the column of the list.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2e0c048d62bfeb71574d268dd42ddb03.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0bdf6736998dd9ff224af6446b701b6f.png)
 
 :::tip
 The last created instance is listed at the top. Click the column name at the top to change the order.
 :::
 
-- Select an instance and access the **VCS Instance Details** page to view more detailed information: **Basics**, **Details**, **Networks & Connection**, **Storage (Data Disk)**.
+- Select the instance to access the **VCS Instance Details** page and view more detailed information: **Basics**, **Details**, **Networks & Connection**, **Storage (Data Disk)**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cfcab413d832e81aa8729be0de6083f7.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6512eb2ff1407821e0441d1a8b18ff33.png)
+
 
 </TabItem>
 
@@ -80,14 +80,12 @@ twccli ls vcs -all
 
 * Go to the **VCS Instance Details** page, click "<i class="fa fa-pencil" aria-hidden="true"></i>" to edit or add a description for the VCS instance so that you can distinguish it from other instances.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_45e2bcecf48c8eb635f475cbc2689a4c.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6cf5ae0cbe3310d2062955f27f01b489.png)
 
+- Enter the **VCS Instance Details** page to view more detailed information: **Basics**, **Details**, **Networks & Connection**, **Storage (Data Disk)**.
 
-- Select an instance and access the **VCS Instance Details** page to view more detailed information: **Basics**, **Details**, **Networks & Connection**, **Storage (Data Disk)**.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6512eb2ff1407821e0441d1a8b18ff33.png)
 
-
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cfcab413d832e81aa8729be0de6083f7.png)
 
 </TabItem>
 
@@ -98,3 +96,43 @@ twccli ls vcs -all
 </TabItem>
 
 </Tabs>
+
+<br/>
+
+
+## Enable/disable Deletion Protection
+
+
+<Tabs>
+
+<TabItem value="TWCC Portal" label="TWCC Portal">
+
+* Enter the **VCS Instance Details** page and click to **Enable** or **Disable** Deletion Protection mechanism.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7ddb0c0c2fc3498fc2d88ee4ddd751a7.png)
+
+:::info
+If "Deletion Protection" is enabled, before deleting a resource, you need to disable the protection mechanism before continuing the deletion process, which can prevent the resource from being deleted by mistake and causing service interruption.
+:::
+
+:::tip
+<details>
+
+<summary>Quick Animation Tutorial<i class="fa fa-file-video-o" aria-hidden="true"></i></summary>
+
+![](https://i.imgur.com/8v36pAf.gif)
+
+</details>
+:::
+
+</TabItem>
+
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
+
+<br/>
+
+</TabItem>
+
+</Tabs>
+
+<br/>
