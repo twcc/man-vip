@@ -129,5 +129,5 @@ For urgent debugging/system maintenance, it is recommended to [<ins>connect via 
 :::caution
 After connecting to the Linux instance:
 - If you have attached the data disk in the file `/etc/fstab` (e.g., `/dev/vdb /mnt ext4 defaults`), we suggest you add `nofail` after the configuration (for example: ` /dev/vdb /mnt ext4 defaults,nofail,x-systemd.device-timeout=1m`) to make sure that your instances can start and connect normally.
-- You cannot connect to VCS instance once the settings of the network interface card are modified. discourage you from changing the NIC settings. Please beware when operating and deploying.
+- You will not be able to connect to VCS instance once the settings of the network interface card are modified. Therefore, we strongly discourage you from changing the NIC settings. Please beware when operating and deploying.
 :::
