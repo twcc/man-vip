@@ -9,18 +9,18 @@ import TabItem from '@theme/TabItem';
 
 # Elastic IP
 
-TWCC Elastic IP supports IPv4 public IP, which allows you to attach public IP for VCS instances or load balancing, and allow resources to communicate with the Internet.
+TWCC Elastic IP supports IPv4 public IP, which allows you to assign public IP to VCS instances or load balancing, and allow resources to communicate with the Internet.
 
 <br/>
 
 ## Elastic IP Specifications
 
-You can attach static IP or floating IP to the resources:
-- **Static IP**: Once subscribed, the resource becomes exclusive to the project until you stop subscribing, and can be freely attached to different resources of the project.
+You can assign static IP or floating IP to the resources:
+- **Static IP**: Once subscribed, the resource becomes exclusive to the project until you stop subscribing, and can be freely assigned to different resources of the project.
 - **Floating IP**: Once the floating IP is detached from the resource, it is released back to the TWCC resource pool.
 
 :::info
-There is no guarantee that you will get the same IP when the resource is attached to a floating IP again.
+There is no guarantee that you will get the same IP when the resource is assigned with a floating IP again.
 :::
 
 <br/>
@@ -29,8 +29,8 @@ There is no guarantee that you will get the same IP when the resource is attache
 
 | Specifications | Subscription | Per Plan Quota Cap | Billing and Pricing |
 | -------- | -------- | -------- | -------- |
-| Static IP | Subscription required before attaching it to the resource | Up to 5 subscriptions | [TWS User](https://man.twcc.ai/@twsdocs/pricing-zh#%E5%BD%88%E6%80%A7-IP-Elastic-IP-EIP) |
-| Floating IP | No subscription required, can be attached directly to the resource | Adjusted to a maximum of 10 from 2022/1/14 | N/A |
+| Static IP | Subscription required before assigning it to the resource | Up to 5 subscriptions | [TWS User](https://man.twcc.ai/@twsdocs/pricing-zh#%E5%BD%88%E6%80%A7-IP-Elastic-IP-EIP) |
+| Floating IP | No subscription required, can be assigned directly to the resource | Adjusted to a maximum of 10 from 2022/1/14 | N/A |
 
 :::info
 - Only **Tenant Admins** can subscribe to static IPs and stop subscriptions; all members can use the subscribed static IPs.
