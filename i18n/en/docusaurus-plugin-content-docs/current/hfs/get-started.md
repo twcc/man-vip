@@ -15,7 +15,7 @@ The "Getting Started with TWCC" series of tutorials will provide novice users wi
 
 **【Getting Started with TWCC】 Create and connect Interactive Containers**
 
-In this article, you will learn how to sign up for an account, sign in to TWCC, create a interactive container, and use Jupyter Notebook to quickly connect to the container.
+In this article, you will learn how to register an account, adjust the HFS capacity, and connect to a transport node.
 
 
 :::info
@@ -32,7 +32,7 @@ HFS is one of the TWCC services, it is a scalable, allows simultaneous access to
 
 
 :::info
-TWCC services to be used in this article: Member Center, [<ins>Hyper File System</ins>](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh).
+TWCC services to be used in this article: Member Center and [<ins>Hyper File System</ins>](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh).
 :::
 
 
@@ -154,7 +154,7 @@ TWCC provides a minimum of 100GB of free space for your /home and /work. To incr
  </summary>
 
     
-1. Login [Member Center](https://iservice.nchc.org.tw/nchc_service/index.php) > 選擇「會員中心」> 選擇「申購管理」> 選擇「申購高速檔案系統 (HFS)」
+1. Login [Member Center](https://iservice.nchc.org.tw/nchc_service/index.php) > Select **Member Center**> select **Purchases**> select **Hyper File System (HFS)**
 
 ![](https://i.imgur.com/IzCTOiD.png)
 
