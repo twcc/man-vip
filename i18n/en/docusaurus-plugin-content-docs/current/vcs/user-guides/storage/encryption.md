@@ -34,8 +34,8 @@ Using TWCC virtual disk encryption secures the following data:
 
 :::info
 Once created, refer to the following documents to initialize the disk and then use it.
-- [Initialize Linux disks](https://man.twcc.vip/en/docs/vcs/tutorials/data-disk-init-linux)
-- [Initialize Windows disks](https://man.twcc.vip/en/docs/vcs/tutorials/data-disk-init-windows)
+- [<ins>Initialize Linux disks</ins>](https://man.twcc.vip/en/docs/vcs/tutorials/data-disk-init-linux)
+- [<ins>Initialize Windows disks</ins>](https://man.twcc.vip/en/docs/vcs/tutorials/data-disk-init-windows)
 :::
 
 ### Moving data from an old disk to an encrypted disk
@@ -51,5 +51,5 @@ Sorry, the encrypted [disk snapshots](https://man.twcc.vip/en/docs/vcs/user-guid
 <br/>
 
 :::info
-If you need to prevent disk data from being affected by an attack to your VCS instance, please refer to [Disk Encryption (CentOS as an example)](https://drive.google.com/file/d/1A6gdyL0lUMauygwM9cLtgU8GwbRpK36s/view) to set disk encryption from the OS level to double protect your data.
+If you need to prevent disk data from being affected by an attack to your VCS instance, please refer to [<ins>Disk Encryption (CentOS as an example)</ins>](https://drive.google.com/file/d/1A6gdyL0lUMauygwM9cLtgU8GwbRpK36s/view) to set disk encryption from the OS level to double protect your data.
 :::
