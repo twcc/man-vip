@@ -247,7 +247,11 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 <details>
 
-<summary> Q2. 對虛擬運算個體安裝套件或進行更新，出現`E: Could not get lock /var/lib/apt/lists/lock`該如何解決？</summary>
+<summary> 
+
+Q2. 對虛擬運算個體安裝套件或進行更新，出現`E: Could not get lock /var/lib/apt/lists/lock`該如何解決？
+
+</summary>
 
 1. 安裝套件或進行更新時，可能產生許多類似與 lock 檔案相關的錯誤訊息。請您將 lock 檔案刪除後，再次執行您的任務。
 2. 建議改為使用映像檔 Ubuntu 20.04，可避免產生此問題。
