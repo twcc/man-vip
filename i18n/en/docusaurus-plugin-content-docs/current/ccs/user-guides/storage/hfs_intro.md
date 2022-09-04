@@ -7,7 +7,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/hfs-overview-en'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/hfs-overview-en'
 ---
 
-# Hyper File System <img style={{width:30+'px', heigh:30+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a2514dcee06093bda60777e51fd25438.png' />
+# Service overview <img style={{width:30+'px', heigh:30+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a2514dcee06093bda60777e51fd25438.png' />
 
 Hyper File System (Hereinafter referred to as HFS) is a scalable, high-performance parallel file system that allows simultaneous access to the same file or different files on different nodes and provides high-speed and secure data storage, providing efficient, safe and flexible data transfer for Container Compute Service, HPC Job, and Taiwania 2 (HPC CLI)
 
@@ -29,12 +29,13 @@ The HFS data transfer node, mount path and free quota information are as follows
 
 |Mount path|Free quota|
  | -------- |-------- |
-|/home/(Supercomputer username)|100 GB|
-|/work/(Supercomputer username)|100 GB|
+|/home/(Supercomputer username)|100 GB <sup> [2] </sup>|
+|/work/(Supercomputer username)|100 GB <sup> [1][2] </sup>|
 
 
 :::info
-If the storage space is insufficient, you can go to [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i ></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) to purchase for expansion. Please refer to [<ins>Price List</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS) for the pricing and adjustment method.
+- [1] From September 1, 2021, temporary working directory area for each account of Ministry of Science and Technology Projects(/work)free quotas, from 100 GB to 1500 GB.
+- [2] If the storage space is insufficient, you can go to [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i ></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) to purchase for expansion. Please refer to [<ins>Price List</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS) for the pricing and adjustment method.
 :::
 
 ## Compatible computing services
