@@ -16,7 +16,7 @@ VCS instance images can preserve the state of an instance and the system disk wi
 :::info
 
 1. **After deleting a VCS instance, the data in the 100 GB system disk will disappear. To back up the system disk, please refer to the following steps to create an image for the instance before deleting it.**
-2. For the difference between Tenant Admin and Tenant User for using VCS instance, see [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務).
+2. For the difference between Tenant Admin and Tenant User for using VCS instance, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務).
 
 :::
 
@@ -27,17 +27,17 @@ VCS instance images can preserve the state of an instance and the system disk wi
 ## Create an image
 
 :::caution
-1. **<ins>Before creating an image, it is strongly recommended that you refer to [Best practices to create a VCS instance image](https://man.twcc.ai/@twccdocs/guide-vcs-snapshot-best-practice-en) to ensure effective acquisition of the image.</ins>**
-2. If the image state stucks in **`QUEUED`** and has not changed to **`ACTIVE`** for a long time, please contact the Technical Support: <a href="mailto:isupport@twcc.ai">isupport@twcc. ai</a> for help.
+1. **<ins>Before creating an image, it is strongly recommended that you refer to [Best practices to create a VCS instance images](https://man.twcc.vip/en/docs/vcs/user-guides/backup/best-practice-to-create-images/) to ensure effective acquisition of the image.</ins>**
+2. If the image state is stuck in **`QUEUED`** and does not change to **`ACTIVE`** for a long time, please contact the Technical Support: <a href="mailto:isupport@twcc.ai">isupport@twcc. ai</a> for help.
 :::
 
 
 <br/>
 
-### Create an image manually
 
+### Create a general image
 
-You can manually create an image for a VCS instance using TWCC portal or TWCC CLI.
+Create the image manually.
 
 <Tabs>
 
@@ -45,25 +45,23 @@ You can manually create an image for a VCS instance using TWCC portal or TWCC CL
 
 * Enter **VCS Instance Management** page, click on the instance you want to create an image, then enter **VCS Instance Details** page of the instance, and click **IMAGE**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_aa7e469fc5ca28b153ae22a313bac609.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_449c7b52b1ba61d36cc11e49566bf442.png)
 
 * Read the instructions in the window, and enter a name and description for the image, then click **OK**.
 * It takes several minutes to create the image. After the **Processing...** prompt disappears, you can continue with other tasks.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c0f4f30a623a73a6d79aab23b48b8e8f.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_42f2babff73c99d87f6f87c2e2b3ace7.png)
 
+* You will be directed to **VCS Instance Image Management** page. Wait for the image state to change from **`QUEUED`** > **`SAVING`** > finally to **`ACTIVE`** before using it.
 
-* You will be directed to **VCS Instance Image Management** page. Wait for the image state to enter from **`QUEUED`**> **`SAVING`**> to **`ACTIVE`** before you can use it.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_51de05652cece2cc339d62644cdffa64.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c4a06905f071589d1866542c3a7e6985.png)
 
 </TabItem>
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
 
-**Commands**
+**Command**
 
 
 ```bash
@@ -72,13 +70,13 @@ twccli mk vcs -s        # Instance ID
 ```
 
 :::info
-1. The square brackets **[ ]** indicate optional parameters, and the rest are required parameters.
+1. The parameters in the square brackets **[ ]** are optional and the rest are required.
 :::
 
 
 <br/>
 
-**Examples**
+**Example**
 
 
 - Create an image for the VCS instance with ID **`918628`** 
@@ -109,11 +107,9 @@ Use `crontab` to create an scheduled image automatically and regularly.
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-- Use `crontab -e` to set the schedule of creating images. For more related functions, see [<ins>CronHowTo</ins>](https://help.ubuntu.com/community/CronHowto).<br/>
-![](https://i.imgur.com/1zRke01.png)
-
-- Indicate the specific time for creating an image. Here is an example: == midnight 01:01==.
-![](https://i.imgur.com/WWwg1ZJ.png)
+- Use `crontab -e` to set the schedule of creating images. For more related functions, please refer to [<ins>CronHowTo</ins>](https://help.ubuntu.com/community/CronHowto).
+- Specify a time for creating the image. The example here is 01:01 midnight.
+![](https://i.imgur.com/mQp1kUr.png)
 
 
 </TabItem>
