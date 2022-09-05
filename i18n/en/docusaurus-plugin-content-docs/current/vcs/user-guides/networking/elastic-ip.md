@@ -51,89 +51,82 @@ Before starting to use Static IP, please subscribe to the Static IP.
 - Floating IPs are managed centrally by TWCC and you can only view their status and associated resources on the management page.
 :::
 
+Click **Virtual Compute Services (VCS)** on the home page > click **Elastic IP** on the left > On the **Elastic IP Management** page, click **+Subscribe static IP** on the top.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c4371cc64d77ed6e04596ec4f3d7b279.png)
 
-於首頁點選「**虛擬運算服務**」> 左側點選「**彈性 IP**」>「**彈性 IP 管理**」頁面點選上方「**+ 訂閱靜態 IP**」。
+After selecting the number of subscriptions, click **OK** to complete the subscription.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b0aeca1d6e025821fb42d7532c3e5de0.png)
 
-![](https://i.imgur.com/5y5Nidn.png)
+If the static IP is no longer needed, move the cursor to &nbsp;<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>&nbsp; and click **Unsubscribe**. No further charges will be made after completion.
 
-選擇訂閱的數量後，按下「**確定**」即可完成訂閱。
-
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6823622c85310fbafc123c12841b5177.png)
-
-
-若靜態 IP 無需再使用，游標移至「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」，點選「**停止訂閱**」，完成後便不再計費。
-
-
-![](https://i.imgur.com/XsPPQKO.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7971acdf72700f178236775c2836358c.png)
 
 :::info
-一日之內僅能訂閱 10 次。
+You can only subscribe 10 times a day.
 :::
 
 <br/>
 
 
-### 為資源配置彈性 IP
+### Assign elastic IP to resources
 
-您可以透過以下方式將彈性 IP 配置至虛擬運算個體或負載平衡器：
+You can assign elastic IP to a VCS instance or Load Balancer in the following ways.
 
 <br/>
 
-#### 虛擬運算個體
+#### VCS instances
 
-1. [建立虛擬運算個體時](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh)：
+1. [While creating VCS instances](https://man.twcc.vip/en/docs/vcs/user-guides/creation/vcs-instances):
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a9d407b8548c8f2e810d8f8f7a6ef3ea.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8c896c79f9bea20564576502d637833a.png)
 
+2. After creating the VCS instance, enter the VCS instance details page and assign public IP.
 
-
-2. 虛擬運算個體建立後，進入個體詳細資料頁，配置公用 IP：
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8d0974fbe8afa4c91e2bb17b531928e5.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_677478ed507a27f03a9ab277b6d391dd.png)
 
 :::caution
-**停止** 虛擬運算個體後，浮動 IP 將會釋放回資源池，個體啟動後，將取得新的浮動 IP。
-更多虛擬運算個體動作對彈性 IP之影響，請參考 <ins>[管理個體：停止/啟動 (與開機)/重開機/關機/刪除](https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-zh)</ins>。
+After a VCS instance is **stopped**, the floating IP will be released back to the resource pool and a new floating IP will be acquired after the instance is started again.<br/>
+For more information about the impact of VCS instance actions on floating IP, please refer to [<ins>Instance Management: stop/start/shutdown/restart/delete</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/management-and-monitoring/management).
 :::
 
 <br/>
 
-#### 負載平衡器
 
-1. [建立負載平衡器時](https://man.twcc.ai/@twccdocs/guide-vcs-lbs-zh#建立負載平衡器)：
+#### Load Balancer
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8ca4c2cc4f7fdb6ab0586489b97b3c62.png)
+1. [While creating Load Balancers](https://man.twcc.vip/en/docs/vcs/user-guides/networking/load-balancing#create-load-balancers):
 
-2. 負載平衡建立後，點選「**移除**」，再點選「**配置**」可更換 IP：
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ecc993fd71e9657b662501aefdc8958b.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_43c0ac03a6f857fe742165fe78b073ba.png)
+2. After the Load Balancer is created, you can change the IP by clicking **DETACH** and then **ASSIGN** again.
 
-<br/>
-
-### 移除資源的彈性 IP
-
-- 靜態 IP：您可以隨時於「**虛擬運算個體詳細資料**」頁、「**負載平衡詳細資料**」頁，將已配置至的 IP 移除。
-
-  移除後，靜態 IP 將呈現 **`AVAILABLE`** 狀態，並可再配置至其他資源。
-
-![](https://i.imgur.com/5Y78Qme.png)
-
-
-- 浮動 IP：移除後，浮動 IP 將釋放回 TWCC 資源池。將無法保證您下次可取得相同的浮動 IP。
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bca0889a72fcd8ce2b19986108610cd7.png)
 
 <br/>
 
-### 關聯之資源、IP 狀態
 
-管理頁面將顯示 IP 已關聯的虛擬運算個體或是負載平衡器，點選資源即可進入詳細資料頁，進行 IP 的移除或更換 IP。
+### Detach elastic IP from resources
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e70c949cfb824e12e969257d8d8189f5.png)
+- Static IP: You can detach the assigned IPs from the **VCS Instance Details** page or **Load Balancer Details** page.
+
+  After detaching, the static IP will become **`AVAILABLE`** and can be reassigned to other resources.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d94d938b6b287c0daa046050a73a453c.png)
+
+- Flaoting IP: After detaching, the floating IP will be released back to TWCC resource pool. There is no guarantee that you will get the same floating IP next time.
+
+<br/>
 
 
-彈性 IP 狀態說明：
+### Associated resources and IP state
 
-- **`AVAILABLE`**：尚未被使用，可自由配置至資源。
-- **`IN-USE`**：已配置至資源使用中，需先自資源移除才可配置至其他資源。
+The management page will show the VCS instances or load balancers that the IPs are associated with. Click the resource to go to the details page to detach or replace IPs.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b17154f8e9486b50f3218e4724930808.png)
+
+Explanation of Elastic IP state:
+
+- **`AVAILABLE`**: Not used yet and can be freely assigned to resources.
+- **`IN-USE`**: Already attached to a resource in use, it must be detached from the resource before it can be atached to another resource.
