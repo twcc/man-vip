@@ -50,3 +50,37 @@ Please create a [dataset](https://man.twcc.ai/@twccdocs/guide-cfs-dataset-mngmnt
 - File upload limit: A single file cannot exceed 1GB, and the total number of files cannot exceed 1000.
 - Please refer to [<ins>the version record</ins>](https://man.twcc.ai/@twccdocs/guide-cfs-metadata-search-versioning-zh#%E7%89%88%E6%9C%AC%E7%B4%80%E9%8C%84) for the file record description.
 :::
+
+## View file
+
+* On dataset page, click a file to view file information.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2b9986b928318c965d19e9fb39fd62b9.png)
+
+* You can view basic information of the file at file content page.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_50b14ee8e9f1934e33793aa9d7dbe2f0.png)
+
+
+## Download file
+
+* On dataset page, select files and click the **DOWNLOAD** button.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b99c2b9a8424bc0e82af837bcc20c75f.png)
+
+:::info
+- Currently, only one file can be downloaded at a time through the TWCC portal. You can download multiple files through third-party software <ins>[Access Interface Management](https://man.twcc.ai/@twccdocs/guide-cfs-access-interface-mngmnt-en)</ins> on the service list.
+- Please refer to [<ins>the version record</ins>](https://man.twcc.ai/@twccdocs/guide-cfs-metadata-search-versioning-zh#%E7%89%88%E6%9C%AC%E7%B4%80%E9%8C%84) for the file record description.
+:::
+
+
+
+## Delete file
+
+* Select files and click the **DELETE** button, you can also select multiple files to delete together.
+
+:::info
+Files on <ins>[moving](https://man.twcc.ai/@twccdocs/guide-cfs-move-retrieve-data-en)</ins> cannot be deleted.
+:::
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1f8e1c3d720b031132331f075956d8f3.png)
