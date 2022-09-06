@@ -9,63 +9,64 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-bss-en'
 
 <details>
 
-<summary> Q1. 為何保留的 HDD 無法成功掛載到新的VCS Instance上？</summary>
+<summary> Q1. Why the reserved HDD cannot be successfully attached to the new VCS Instance?</summary>
 
-1. 掛載 HDD 至VCS Instance前，請先確認其狀態為 **`AVAILABLE`**，才可以掛載至新的instance。
-2. 如非此狀態請先將 HDD 與原本的instance分離，或是將原先的instance刪除，確認狀態為 **`AVAILABLE`** 後，再進行掛載。
+1. Before you attach a HDD to a VCS Instance, make sure its status is **`AVAILABLE`** before you can attach to a new instance.
+2. If this is not the case, separate the HDD from the original instance or delete the original instance to ensure that the status is **`AVAILABLE`** before attaching.
 
-若上述情況確認後，仍無法掛載，請洽技術支援服務：isupport@twcc.ai。
-
-</details>
-
-<details>
-
-<summary> Q2. 無法讀取新掛載的磁碟？</summary>
-
-新掛載的磁碟，需完成初始化才能存取資料，初始化步驟請參考：
-[HowTo：初始化磁碟- Linux instance](https://www.twcc.ai/doc?page=howto-bss-init-vol-linux) 或 [HowTo：初始化磁碟- Windows](https://www.twcc.ai/doc?page=howto-bss-init-vol-windows)。
+If you are still unable to attach after confirming the above, please contact the Technical Support:isupport@twcc.ai.
 
 </details>
 
 <details>
 
-<summary> Q3. 如何上傳及下載檔案？</summary>
+<summary> Q2. Why can't I read the newly attached disk?</summary>
 
-將磁碟掛載至VCS Instance後，[使用 MobaXterm 連線instance](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-zh)，並完成磁碟初始化，於 MobaXterm 頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
-
-</details>
-
-<details>
-
-<summary> Q4. 我想要將舊有的資料碟換成新的資料碟，請問要如何操作？</summary>
-
-詳細操作方式請參考[此文件](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-bss-replace-data-vol-zh)，可變更磁碟類型、容量，並透過同步方式將舊磁碟資料保存至新磁碟。
+The newly attached disk needs to be initialized to access the data, for initialization steps, please refer to:
+[Initialize Linux disks](https://www.twcc.ai/doc?page=howto-bss-init-vol-linux) or [Initialize Windows disks](https://www.twcc.ai/doc?page=howto-bss-init-vol-windows).
 
 </details>
 
 <details>
 
-<summary> Q5. 為何我的資料碟刪不掉？</summary>
+<summary> Q3. How to upload and download files?</summary>
 
-1. 刪除前請先檢查該資料碟是否已經與虛擬運算個體分離，並確認狀態為 **`AVAILABLE`**，再進行刪除。
-2. 若有對資料碟製作快照，您必須先將資料碟的快照刪除，再對該資料碟進行刪除。
 
-若上述情況確認後，仍無法刪除，請洽技術支援服務： isupport@twcc.ai。
+After attaching the disk to the VCS Instance, [use MobaXterm to connect to the Instance](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-zh) and complete the disk initialization, and select the **"Sftp"** icon on the left side of the MobaXterm page to view, upload, and download files.
 
 </details>
 
 <details>
 
-<summary> Q6. 為什麼已經將計畫中虛擬磁碟全部刪除卻還是持續出現用量計費？</summary>
+<summary> Q4. How do I replace my old data disk with a new one?</summary>
 
-虛擬磁碟計費項目除了資料磁碟，亦包含虛擬運算個體映像檔。請檢查您是否有建立虛擬運算個體映像檔，若無需使用建議刪除以停止計費。
+Please refer to [this document](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-bss-replace-data-vol-zh) for detailed operations, you can change the disk type, capacity and save data from the old disk to the new one by synchronization.
 
 </details>
 
 <details>
 
-<summary> Q7. 虛擬磁碟為什麼無法掛載至虛擬運算個體？</summary>
+<summary> Q5. Why can't I delete my data disk?</summary>
 
-請留意您所要掛載的虛擬運算個體狀態是否是在```Stopped```的情況，虛擬磁碟無法與```Stopped```狀態的虛擬運算個體進行連結。
+1. Before deleting, check that the disk has been detached from the VCS Instance and make sure the status is **`AVAILABLE'**.
+2. If you have made a snapshot of the data disk, you must delete the snapshot of the data disk first.
+
+If you are still unable to delete after confirming the above, please contact the Technical Support:isupport@twcc.ai.
+
+</details>
+
+<details>
+
+<summary> Q6. Why does the usage billing continue even though I have deleted all virtual disks from the project?</summary>
+
+In addition to the data disk, the virtual disk billing program also contains a VCS Instance image. Please check if you have created a VCS Instance image, if not, it is recommended to delete it to stop billing.
+
+</details>
+
+<details>
+
+<summary> Q7. Why can't I attach a virtual disk to the VCS Instance?</summary>
+
+Please note that the VCS Instance you want to attach to is in a ```Stopped``` state. Virtual disks cannot be attached to a VCS instance that is in a ```Stopped``` state.
 
 </details>
