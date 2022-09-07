@@ -113,7 +113,7 @@ twccli ls vcs -secg -s 937648   # 列出 ID 為 937648 個體的安全性群組
 
 * 建立完成後，即可於安全性群組規則列表新增一項新的安全規則。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0d3e8881bcfa3c0cf90fd7a5774a52b8.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f644003a278a6603269b5ba1a4fd09da.png)
 
 </TabItem>
 
