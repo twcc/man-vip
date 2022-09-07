@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 # VCS instance lifecycle
 
 
-Actions performed on the VCS instances via portal or in the instance, such as create, stop, start, shut down, restart and delete, are closly related to instance states, instance resources, data, and billing. Actions also affects connection, image, load balancing, Auto Scaling, disk and other related services. In this document, we will explain the relationship between the instance lifecycle, meaning and billing of a VCS instance from the moment you create it through its deletion.
+Actions performed on the VCS instances via portal or in the instance, such as create, stop, start, shut down, restart and delete, are closely related to instance states as well as instance resources, data, and billing. Actions also affects connection, image, load balancing, Auto Scaling, disk and other related services. In this document, we explain in detail the relationship between instance lifecycle, meanings, and billing of a VCS instance from its creation to its deletion.
 
 - Actions and the transitions between VCS instance states:
 
@@ -19,15 +19,16 @@ Actions performed on the VCS instances via portal or in the instance, such as cr
 
 - The relationship between instance state, state description and usage billing is shown in the following table:
 
-| State description | Instance description |Usage billing | 
+| Instance state | State description |Usage billing | 
 | -------- | -------- | -------- |
-| `Starting`     |The instacne is preparing to enter the `Ready` state.<br/> (1) When creating an instance: resources are allocated for instance initialization<br/> (2) When starting the instance in the `Stopped` state: the stopped instance is starting. <br/> (3) When starting the instance in the `Shutdown` state: the shutdown instance is starting.| Except (3) will be billed, (1), (2) are not billed     | 
-| `Ready`     | The initialization has been completed, and the instance can be connected and ready for use.|Billed     | 
-| `Stopping`   |Instance resources are being released, preparing to enter in the  `Stopped` state | Billed    | 
-| `Stopped`    |Select STOP on the portal, and the instance enters in the `Stopped` state (instance shutdown and computing resources have been released), and you can click start on portal again to re-allocate resources. | Not billed|
-| `Shutdown`    |After executing the shutdown command in the instance, the instance enters in the `Shutdown` state, and it can be restarted by selecting START on the portal. | Billed| 
-| `Queueing`     | The system is allocating resources . After obtaining the resources, the instance will enter in`Starting` state.|Not billed    | 
-| `Deleting`     | The instance is in the process of being deleted and will be permanently deleted.|Billed until the instance is successfully deleted     | 
+| **`Starting`**     | Prepare to enter the **`Ready`** state.<br/> (1) When creating an instance: resources are allocated for instance initialization<br/> (2) When starting the instance in the **`Stopped`** state: the stopped instance is starting. <br/> (3) When starting the instance in the **`Shutdown`** state: the shutdown instance is starting.| Except (3) will be billed, (1) and (2) are not billed     | 
+| **`Ready`**     | The initialization has been completed, and the instance can be connected and ready for use.|Billed     | 
+| **`Stopping`**   |Instance resources are being released, preparing to enter in the **`Stopped`** state | Billed    | 
+| **`Stopped`**    |Select STOP on the portal, and the instance enters the **`Stopped`** state (instance shutdown and computing resources have been released), and you can click start on portal again to re-allocate resources. | Not billed|
+| **`Shutdown`**    |After executing the shutdown command in the instance, the instance enters the **`Shutdown`** state, and it can be restarted by selecting START on the portal. | Billed |
+| **`Queueing`**     | The system is allocating resources . After obtaining the resources, the instance will enter **`Starting`** state.| Not billed |
+| **`Rebooting`**    | The instance is in the process of rebooting and preparing to enter the **`Ready`** state. | Billed |
+| **`Deleting`**     | The instance is in the process of being deleted and will be permanently deleted.|Billed until the instance is successfully deleted     | 
 
 <br/>
 
