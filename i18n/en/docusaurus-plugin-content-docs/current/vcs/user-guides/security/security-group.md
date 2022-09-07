@@ -112,15 +112,13 @@ If you need to connect to TWCC Windows instances, please contact Customer Servic
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7c4886b50ddc06e6e7739580c751f48d.png)
 
-* Review your Security Group rule settings and the project credit, and then click **CREATE**. 
+* Review your Security Group rule settings and the project credit, and then click **CREATE**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cbec7a87f3fe5735a7f53a3877de0396.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8c6bf81bc1a6cadde4f29b637638a044.png)
 
 * Once created, the new Security Group rule will be displayed in the list.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_49f6c96bf930c673cb231c6cca9d2c07.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c7b9e3833e023f503418413c1484e832.png)
 
 </TabItem>
 
@@ -149,6 +147,12 @@ twccli ls vcs -secg -s 892486
 
 </Tabs>
 
+
+:::caution
+- Considering information security risk, please do not set the CIDR to the insecure network segment of `x.x.x.x/0` except for `0.0.0.0/0`.
+- Please set the port range carefully and measure the open range carefully. To avoid the risk of intrusions, it is not recommended to set the ingress port range from 0 to 65535.
+:::
+
 <br/>
 
 
@@ -163,7 +167,7 @@ Go to the **Security Group Rules Management** page> Select rules> click **DELETE
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b9ae7ca9d9f718eb07b29583dc844cb9.png)
 
-- Or click the <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> menu button on the right side of the rule, and click **DELETE**.
+- Or click the &nbsp;<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>&nbsp; menu button on the right side of the rule, and click **DELETE**.
 
 </TabItem>
 
@@ -173,7 +177,7 @@ Enter the command :point_right: `twccli rm vcs -secg $SecurityGroupId` to delete
 
 :::info
 Please use the UUID to identify the Security Group rule you want to delete.
-You only need to provide at least ==the first 8 codes== of UUID to delete it.
+You only need to provide at least the first 8 codes of UUID to delete it.
 :::
 Example:point_down::
 ```bash
