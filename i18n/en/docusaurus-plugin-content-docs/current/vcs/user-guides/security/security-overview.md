@@ -34,12 +34,13 @@ In addition to providing the above reliable value-added security services, TWCC 
 <div style={{'height':'8px'}}></div>
 
 
-### <i class="fa fa-check-square-o" aria-hidden="true"></i> 變革創新管理品質典範
+### <i class="fa fa-check-square-o" aria-hidden="true"></i> QMS Transformation and Innovation Management Benchmark
 
-2019: ISO 9001 Plus Award 變革創新管理品質典範獎
+2019: ISO 9001 Plus Award for QMS Transformation and Innovation Management Benchmark
 
 <div class="desc" style={{'font-size':'10px', 'color':'#2C3E50'}}>
-TWCC 因全力推動台灣整體 AI 產業發展，並以培植 AI 成為下一個兆元產業為目標，積極建構產業鏈，發展商業模式，並以務實的精神建立縝密的管理制度，因而於 2019 年 11 月獲得「ISO 9001 Plus Award 變革創新管理品質典範獎」。以標準的流程、專業的態度、務實的精神，步步落實與執行，提供各政府服務部門最完善的服務。</div>
+TWCC is committed to promoting the development of the overall AI industry in Taiwan and aims to cultivate AI as the next trillion dollar industry, actively constructing the industry chain, developing business models, and establishing a meticulous management system with a pragmatic spirit. As a result, we received "ISO 9001 Plus Award for QMS Transformation and Innovation Management Benchmark" in November 2019. With the standard process, professional attitude and pragmatic spirit, we implement and execute step by step to provide the most perfect service to all government service departments.
+</div>
 
 <div style={{'height':'8px'}}></div>
 
@@ -51,11 +52,11 @@ TWCC 因全力推動台灣整體 AI 產業發展，並以培植 AI 成為下一�
 
 <div style={{'height':'8px'}}></div>
 
-### <i class="fa fa-check-square-o" aria-hidden="true"></i> 資訊安全管理系統國際認證
+### <i class="fa fa-check-square-o" aria-hidden="true"></i> Information Security Management Systems International Certifications
 
-2019: ISO 20000 資訊服務管理驗證
+2019: ISO 20000 IT Service Management System Certification
 
-2020: ISO 27001:2013 資訊安全管理系統 (ISMS)
+2020: ISO 27001:2013 Information Security Management Systems (ISMS)
 
 </div>
 
@@ -65,13 +66,13 @@ TWCC 因全力推動台灣整體 AI 產業發展，並以培植 AI 成為下一�
 
 <div style={{'height':'8px'}}></div>
 
-### <i class="fa fa-check-square-o" aria-hidden="true"></i> 個資管理系統國際認證
+### <i class="fa fa-check-square-o" aria-hidden="true"></i> Personal Information Management Systems International Certifications
 
-2020: BS 10012:2017 個人資料保護
+2020: BS 10012:2017 Personal Information Management Systems
 
-2020: ISO/IEC 27017:2015 資訊安全管理
+2020: ISO/IEC 27017:2015 Code of practice for information security controls
 
-2020: ISO/IEC 27018:2014 個人隱私資料保護
+2020: ISO/IEC 27018:2014 Code of practice for protection of personally identifiable information
 
 </div>
 
@@ -81,15 +82,15 @@ TWCC 因全力推動台灣整體 AI 產業發展，並以培植 AI 成為下一�
 
 <div style={{'height':'8px'}}></div>
 
-### <i class="fa fa-check-square-o" aria-hidden="true"></i> 雲端安全國際認證
+### <i class="fa fa-check-square-o" aria-hidden="true"></i> Cloud Security International Certifications
 
-2019: ISO 27017 雲端服務資訊安全
+2019: ISO 27017 Information security controls for cloud services
 
-2015: CSA STAR Level 2 金牌
+2015: CSA STAR Level 2 Gold Medal
 
 <div class="desc" style={{'font-size':'10px', 'color':'#2C3E50'}}>
-雲端安全聯盟 Cloud Security Alliance, CSA<br/>
-雲端安全認證 STAR (Security, Trust and Assurance Registry)</div>
+Cloud Security Alliance, CSA<br/>
+CSA STAR (Security, Trust and Assurance Registry)</div>
 </div>
 
 <br/>
@@ -102,7 +103,7 @@ TWCC 因全力推動台灣整體 AI 產業發展，並以培植 AI 成為下一�
 
 <div style={{'height':'8px'}}></div>
 
-### <i class="fa fa-lock" aria-hidden="true"></i> 新世代防火牆
+### <i class="fa fa-lock" aria-hidden="true"></i> Next-Generation Firewall
 
 TWCC 部署「新世代防火牆 (Next-Generation Firewall)」網路安全設備，對於進出的網路流量進行資安政策管控，降低服務主機遭到外部攻擊的資安風險。
 
@@ -122,7 +123,7 @@ TWCC 部署「新世代防火牆 (Next-Generation Firewall)」網路安全設備
 
 <div style={{'height':'8px'}}></div>
 
-### <i class="fa fa-lock" aria-hidden="true"></i> 網路型入侵偵測防禦系統
+### <i class="fa fa-lock" aria-hidden="true"></i> Network Intrusion Prevention System
 
 TWCC 為有效降低網路攻擊所帶來的威脅，配置**網路型入侵偵測防禦系統 (Network Intrusion Prevention System)**，監控網路流量，偵測異常行為並即時阻絕網路攻擊，以確保網路服務主機安全。
 
