@@ -105,15 +105,15 @@ CSA STAR (Security, Trust and Assurance Registry)</div>
 
 ### <i class="fa fa-lock" aria-hidden="true"></i> Next-Generation Firewall
 
-TWCC 部署「新世代防火牆 (Next-Generation Firewall)」網路安全設備，對於進出的網路流量進行資安政策管控，降低服務主機遭到外部攻擊的資安風險。
+TWCC deploys **Next-Generation Firewall (NGFW)** network security equipment to control incoming and outgoing network traffic and reduce the risk of external attacks on service hosts.
 
 <img style={{'border-radius':'8px', 'display':'block', 'margin-left': 'auto', 'margin-right': 'auto'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_10e8d443d8922a53d5259089f5d90c05.png" width="550" />
 
 <br/>
 
-- **實施存取控制 (Access Control)**：依據資安政策進行流量管控。
-- **降低暴險範圍 (Exposed Surface)**：關閉不需要對外開啟的通訊埠。
-- **應用服務識別與管理 (Application Identification and Management)**：依據資安政策管理應用服務。
+- **Implement Access Control**: Traffic control according to information security policy.
+- **Reduce Exposed Surface**: Disable ports that do not need to be exposed to the public.
+- **Application Identification and Management**: Manage application services according to information security policy.
 
 </div>
 
@@ -125,14 +125,14 @@ TWCC 部署「新世代防火牆 (Next-Generation Firewall)」網路安全設備
 
 ### <i class="fa fa-lock" aria-hidden="true"></i> Network Intrusion Prevention System
 
-TWCC 為有效降低網路攻擊所帶來的威脅，配置**網路型入侵偵測防禦系統 (Network Intrusion Prevention System)**，監控網路流量，偵測異常行為並即時阻絕網路攻擊，以確保網路服務主機安全。
+To effectively reduce the threat of network attacks, TWCC configures **Network Intrusion Prevention System** to monitor network traffic, detect abnormal behavior and block network attacks immediately to ensure the security of network service hosts.
 
 <img style={{'border-radius':'8px', 'display':'block', 'margin-left': 'auto', 'margin-right': 'auto'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d44381e746255e8c7fc4173245d8e19b.png" width="550"/>
 <br/>
 
-- **入侵偵測 (Intrusion Detection)**：觀察網路流量並偵測可能的網路入侵行為。
-- **威脅防禦 (Threat Prevention)**：辨識網路攻擊特徵並即時阻絕。
-- **網路威脅情資 (Cyber Threat Intelligence)**：定期接收並更新最新的網路威脅情資，已識別最新的網路攻擊手法與特徵。
+- **Intrusion Detection**: Observe network traffic and detect possible network intrusions.
+- **Threat Prevention**: Identify the characteristics of network attacks and block them immediately.
+- **Cyber Threat Intelligence**: Regularly receive and update the latest cyber threat information to identify the latest cyber attack techniques and features.
 
 
 </div>
@@ -143,15 +143,15 @@ TWCC 為有效降低網路攻擊所帶來的威脅，配置**網路型入侵偵�
 
 <div style={{'height':'8px'}}></div>
 
-### <i class="fa fa-lock" aria-hidden="true"></i> DDoS 攻擊偵測與緩解系統
+### <i class="fa fa-lock" aria-hidden="true"></i> DDoS Attack Detection and Mitigation System
 
-面對與日俱增的 DDoS 攻擊，於骨幹網路建立 **DDoS 攻擊偵測與緩解系統**，保護 TWCC 重要對外網路服務，確保網路連線品質與服務可用性。
+In the face of increasing DDoS attacks, **DDoS Attack Detection and Mitigation System** is established in the backbone network to protect TWCC's critical external network services and ensure network connection quality and service availability.
 
 <img style={{'border-radius':'8px', 'display':'block', 'margin-left': 'auto', 'margin-right': 'auto'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_98c5afb656e853b89e9cc2551c44c2e2.png" />
 <br/>
 
-- DDoS 攻擊偵測：收集 Netflow 資訊並即時偵測網路攻擊行為。
-- DDoS 攻擊緩解：使用 Clean–Pipe 技術，將 DDoS 攻擊流量導引至清洗機進行過濾，再將清洗後的乾淨流量放回原本的路由。
+- **DDoS Attack Detection**: Collects Netflow information and detects network attacks in real time.
+- **DDoS Attack Mitigation**: Use Clean-Pipe technology to direct DDoS attack traffic to the cleaner for filtering, and then put the clean traffic back to the original route after cleaning.
 
 </div>
 
@@ -161,9 +161,9 @@ TWCC 為有效降低網路攻擊所帶來的威脅，配置**網路型入侵偵�
 
 <div style={{'height':'8px'}}></div>
 
-### <i class="fa fa-lock" aria-hidden="true"></i> SIEM 資安事件管理平台
+### <i class="fa fa-lock" aria-hidden="true"></i> Security Information and Event Management Platform
 
-建置 SIEM (Security Information and Event Management) 資安事件管理平台，進行異質性設備日誌收集與關聯性分析。
+Set up SIEM (Security Information and Event Management) platform for heterogeneous equipment log collection and correlation analysis.
 
 </div>
 
@@ -173,9 +173,9 @@ TWCC 為有效降低網路攻擊所帶來的威脅，配置**網路型入侵偵�
 
 <div style={{'height':'8px'}}></div>
 
-### <i class="fa fa-lock" aria-hidden="true"></i> SOC 網路流量監控系統
+### <i class="fa fa-lock" aria-hidden="true"></i> SOC Network Traffic Monitoring System
 
-針對威脅行為進行告警與資安事件通報應變處置，並對於 APT 攻擊發送預警通報。
+Alerting and information security incident notification for threat behavior, and sending early warning notifications for APT attacks.
 
 </div>
 
@@ -185,10 +185,10 @@ TWCC 為有效降低網路攻擊所帶來的威脅，配置**網路型入侵偵�
 
 <div style={{'height':'8px'}}></div>
 
-### <i class="fa fa-lock" aria-hidden="true"></i> 資料安全措施
+### <i class="fa fa-lock" aria-hidden="true"></i> Data Security Measures
 
-   - 分散式儲存架構：確保資料完整與高可用性。
-   - Micro Segmentation : 落實虛擬主機網路區隔，避免未經授權之資料存取。
-   - 資料加密：強化資料安全，密碼保護機敏資料。
+   - **Decentralized Storage Architecture**: Ensure data integrity and high availability.
+   - **Micro Segmentation**: Implement web hosting network segmentation to avoid unauthorized data access.
+   - **Data Encryption**: Strengthen data security and protect sensitive data with passwords.
 
 </div>
