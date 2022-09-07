@@ -119,7 +119,7 @@ You can use the search bar with keywords to find your load balancer if too many 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_70349eaee84ff70c3ef37a8637c9aa03.png)
 
-* Click **Add Server** in the editing window to attach VCS intances to the load balancer.
+* Click **Add Server** in the Edit Load Balancer window to attach VCS intances to the load balancer.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2f080c14faa757a34c4dbc625f94b59b.png)
 
@@ -127,11 +127,11 @@ You can use the search bar with keywords to find your load balancer if too many 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_734b582facb7df0e8e810f2da2b6cc9f.png)
 
-* Select **OK** when all VCS instances are added.
+* Click **OK** when all servers are added.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4974a6c96906d3a185251f5a3e054f67.png)
 
-* Back to the **Load Balancer Details** page, the IPs of attached instances is shown in the **Networks & Connection** block. The load balancer starts running when it turns to the **ACTIVE** state.
+* Back to the **Load Balancer Details** page, the IPs of attached instances are shown in the **Networks & Connection** block. The load balancer starts running when it turns to the **ACTIVE** state.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d509246e60c1c6291859fa13713c213c.png)
 
@@ -154,53 +154,46 @@ In order to comply with the information security requirements, only the TLS 1.2 
 
 ### Create SSL certificates
 
-* Click **SSL Certificate** on the left-side navigation > Click **+CREATE** in the **SSL Certificate Management** page.
+* Click **SSL Certificate** on the left side > Click **+CREATE** in the **SSL Certificate Management** page.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cead669e176864f360ca52ee8b8b009c.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5041efccfb937b2749cb1d15fe32ad4a.png)
 
 * Enter the name, description, and Base64 Encode (PKCS#12 format) of your SSL certificate, and then click **NEXT: REVIEW & CREATE** >
 
-
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_efe577b9eebbb33d3fb36fde5dd1890e.png)
 
-
 :::info
-TWCC currently supports only PKCS#12 format, see [<ins>HowTo：Convert SSL certificates</ins>](https://man.twcc.ai/@twccdocs/howo-lb-convert-cert-en) for more information.
+TWCC currently supports only PKCS#12 format, please refer to [<ins>Convert SSL certificate format</ins>](https://man.twcc.vip/en/docs/vcs/tutorials/convert-ssl-certificate) for more information.
 :::
 
 * Review SSL certificate configuration, and then click **CREATE**.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_26803d2b57bb256c6946827e9f129c21.png)
 
-* The certificate will appear in the list. You can deploy the certificate on a HTTPs with SSL listener when it turns to the **ACTIVE** state.
+* The certificate will appear in the list after creation. You can deploy the certificate on a HTTPs with SSL listener when it turns to the **ACTIVE** state.
 
-==**Need to update:exclamation:**==
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3f77e7e47a585410d2df100933954846.png)
 
 
 <br/>
 
 
-
 ### Manage SSL certificates
 
-Follow [Create SSL certificates](#Create-a-SSL-Certificate) and after the certificate is created. You can select it when creating an Application Load Balancer, or you can add/update it to an exsting load balancer.
+After creating the SSL certificate with [reference](#create-ssl-certificates), you can select it when creating an Application Load Balancer, or you can add/update it to an existing load balancer.
 
 :::info
-TWCC currently supports only PKCS#12 format, see [<ins>HowTo：Convert SSL certificates</ins>](https://man.twcc.ai/@twccdocs/howo-lb-convert-cert-en) for more information.
+TWCC currently supports only PKCS#12 format, please refer to [<ins>Convert SSL certificate format</ins>](https://man.twcc.vip/en/docs/vcs/tutorials/convert-ssl-certificate) for more information.
 :::
-
 
 <br/>
 
 
-
 ### Delete SSL certificates
 
-* Go to the **SSL Certificate Management** page, select the SSL certificate you want to delete, and then click **DELTE** button.
+* Go to the **SSL Certificate Management** page, select the SSL certificate you want to delete, and then click the **DELTE** button.
 
 
-==**Need to update:exclamation:**==
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2fbf0b28ee7acdc4ac63c10fffe58438.png)
 
 
