@@ -52,18 +52,17 @@ When it enters **`Ready`** state, you can perform the following actions:
 
 If you plan not to use the instance for a period of time and want to keep the resources, you can click **STOP** to shut down the instance and release resources. The instance will be in the **`Stopping`** state and ready to  change to the **`Stopped`** state which the resources have been released. Under the **`Stopped`** state, <ins>**instance will no longer be billed**</ins>.
 
-
 <Tabs>
 
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-- 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**停止**」。
-- Enter ****
+- Go to the **VCS Instance Management** page > select the instance > click **STOP** at the top.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_65a8bd007a7145bc66057988f0f0b8c8.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a1dcd53620eb41a4c44f5f1d30e2c306.png)
 
-- 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**停止**」。
-- 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**停止**」。
+- Or click &nbsp;<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>&nbsp; next to the instance > click **STOP**.
+- Or enter the **VCS Instance Details** page > click **STOP** at the top.
+
 
 </TabItem>
 
@@ -75,22 +74,55 @@ If you plan not to use the instance for a period of time and want to keep the re
 
 </Tabs>
 
-<br/>
+The operating restrictions after stopping are as follows.
 
-The operating restrictions are as follows:
-
-
-- <i class="fa fa-times" aria-hidden="true"></i> Connect to the instance
-- <i class="fa fa-times" aria-hidden="true"></i> Create/remove public IP
-- <i class="fa fa-times" aria-hidden="true"></i> Attach/detach the VDS data disks
-- <i class="fa fa-times" aria-hidden="true"></i> Create the instance image
-- <i class="fa fa-times" aria-hidden="true"></i> Attach/detach the auto scaling and the load balancing
+- <i class="fa fa-times" aria-hidden="true"></i> Connect and login
+- <i class="fa fa-times" aria-hidden="true"></i> Assign/detach public IP
+- <i class="fa fa-times" aria-hidden="true"></i> Attach/detach VDS Data Disk
+- <i class="fa fa-times" aria-hidden="true"></i> Create instance images
+- <i class="fa fa-times" aria-hidden="true"></i> Attach/detach Auto Scaling and Load Balancing Service
 
 :::info
-1. Once being stopped, the resources of the instance are released, including GPU, CPU, vCPU, memory and system disk.
-2. Once being stopped, the following resources of the instance will be **preserved** and will be configured for the instance when restarting: public IP, data disk, Auto Scaling, and Load Balancing.
-3. All data stored in the instance will be retained except for the data in the memory.
-4. For stopping the instance, see [<ins>Stop VCS instance</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-en#%E5%81%9C%E6%AD%A2%E5%80%8B%E9%AB%94).
+1. Resources that will be **released** after the instance is stopped: GPU, CPU, vCPU, memory, OS disk, Floating IP (New Floating IP will be acquired after the instance is started again).
+2. Resources that will be **kept** after the instance is stopped: Data Disk, Auto Scaling, Load Balancing, Static IP. The above resources will be automatically attached back to the instance after the instance is started again.
+3. Except for the data in memory, which will be erased, all data stored in the instance will be reserved.
+:::
+
+:::caution
+Please do not delete a VCS instance when it is in the **`Stopping`** state, otherwise it will affect the system processing and cause and instance **`Error`**.
+:::
+
+<br/>
+
+
+
+## Start instances (and boot)
+
+To resume and use a stopped instance, or to start an instance that has been shutdown, please click **Start**. The state of the instance will be **`Starting`** in the process of reallocating resources, and prepare for entering the **`Ready`** state again.
+
+<Tabs>
+
+<TabItem value="TWCC Portal" label="TWCC Portal">
+
+- Go to the **VCS Instance Management** page > select the instance > click **START** at the top.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d0090dad4cbc6cc5f441cb63277fefb8.png)
+
+- Or click &nbsp;<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>&nbsp; next to the instance > click **START**.
+- Or enter the **VCS Instance Details** page > click **START** at the top.
+
+</TabItem>
+
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
+
+<br/>
+
+</TabItem>
+
+</Tabs>
+
+:::info
+Most stopped instances will be created on a new physical host when they are started again.
 :::
 
 <br/>
@@ -98,10 +130,31 @@ The operating restrictions are as follows:
 
 ## Restart VCS instances
 
-Click start to restore and use the stopped instance, then the instance will enter in **`Starting`** state. The system is re-allocating the resources, then the instance is ready to enter **`Ready`** state again.
+To reboot (turn off and then turn on) an instance in the **`Ready`** state, please click **Reboot**. The state of the instance will be **`Rebooting`** in the process of rebooting, and prepare for entering the **`Ready`** state again.
+
+<Tabs>
+
+<TabItem value="TWCC Portal" label="TWCC Portal">
+
+- Go to the **VCS Instace Management** page > select the instance > click **REBOOT** at the top.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2fd1b395f3326ae2835a31ec7709f954.png)
+
+- Or click <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> next to the instance > click **REBOOT**.
+- Or enter the **VCS Instance Details** page > click **REBOOT** at the top.
+
+</TabItem>
+
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
+
+<br/>
+
+</TabItem>
+
+</Tabs>
+
 :::info
-1. Most of the instances that stop and restart will be created on the new physical host.
-2. For starting the instance, see [<ins>Restart VCS instance</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-en#%E9%87%8D%E5%95%9F%E5%80%8B%E9%AB%94).
+Unlike [<ins>stopping instances</ins>](#stop-instances), after rebooting the instances, except for erasing the memory data, **resources are not released back to the resource pool (including floating IP)**, and the stored data are retained and can still be used after rebooting.
 :::
 
 <br/>
@@ -109,30 +162,23 @@ Click start to restore and use the stopped instance, then the instance will ente
 
 ## Shut down VCS instances
 
-After the shutdown command is executed, the instance will enter in **`Shutdown`** state. In the **`Shutdown`** state, <ins>**the instance will continue to be billed**</ins>.
+After performing a shutdown, the instance will be in the **`Shutdown`** state. In the **`Shutdown`** state, <ins>**the instance will continue to be billed**</ins>.
 
-The operating restrictions are as follows:
+**TWCC portal and TWCC CLI do not support the shutdown function, please operate it in the instance:**
 
-- <i class="fa fa-times" aria-hidden="true"></i> Connect to the instance
-- <i class="fa fa-times" aria-hidden="true"></i> Create/remove public IP
-- <i class="fa fa-check" aria-hidden="true"></i> Attach/detach the VDS data disks
-- <i class="fa fa-check" aria-hidden="true"></i> Create the instance image
-- <i class="fa fa-times" aria-hidden="true"></i> Attach/detach the auto scaling and the load balancing
+- Linux instance: You can execute `sudo shutdown` or `sudo poweroff -f` in the instance to shut it down
+- Windows instance: You can use `shutdown -s`, or click the shutdown button at the bottom left of the desktop to shut it down.
 
-:::info
-- Unlike [<ins>Stop VCS instance</ins>](#Stop-VCS-instance), after shutting down, the memory data of the instance will be cleared, and **the resources are not released back to the resource pool**. All stored data are retained and can be used after restarting.
-- For shutdown steps, see [<ins>Shut down VCS instance</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-en#%E5%88%AA%E9%99%A4%E5%80%8B%E9%AB%94).
-:::
+The operating restrictions after shutdown are as follows.
 
-<br/>
-
-
-## Start VCS instances
-
-If you want to start instance that has been shut down, select START then the instance will enter **`Starting`** state, which means that it is booting, and preparing enter **`Ready`** state again.
+- <i class="fa fa-times" aria-hidden="true"></i> Connect and login
+- <i class="fa fa-times" aria-hidden="true"></i> Assign/detach public IP
+- <i class="fa fa-check" aria-hidden="true"></i> Attach/detach VDS Data Disk
+- <i class="fa fa-check" aria-hidden="true"></i> Create instance images
+- <i class="fa fa-times" aria-hidden="true"></i> Attach/detach Auto Scaling and Load Balancing Service
 
 :::info
-For starting the instance, see [<ins>Restart VCS instance</ins>](https://man.twcc.ai/@twccdocs/concept-vcs-lifecycle-en#%E5%80%8B%E9%AB%94%E9%87%8D%E9%96%8B%E6%A9%9F).
+Unlike [<ins>stopping instances</ins>](#stop-instances), after shutting down the instances, except for erasing the memory data, **resources are not released back to the resource pool**. The stored data are retained and can still be used after starting again.
 :::
 
 <br/>
@@ -140,11 +186,58 @@ For starting the instance, see [<ins>Restart VCS instance</ins>](https://man.twc
 
 ## Delete VCS instances
 
-If you want to delete the instance permanently and no longer use it, select DELETE then the instance will enter **`Deleting`** state. <ins>**After the instance is successfully deleted, it will no longer be billed**</ins>, and disappeared from the instance list. Other notices for deletion:
+To permanantly delete an instance and no longer use it again, please delete the instance.
 
-- The data in the operating system disk (system disk) will also be deleted permanently. You can create an image to keep the data.
-- The data disk will be automatically detached and kept.
+Other considerations for deletion:
+- The data in the operating system (boot) disk will also be permanently deleted. If you need to keep it, you can [create an instance image](https://man.twcc.vip/en/docs/vcs/user-guides/backup/creation).
+- The data disk will be automatically unmounted and kept.
+
+<Tabs>
+
+<TabItem value="TWCC Portal" label="TWCC Portal">
+
+- Go to the **VCS Instance Management** page > click &nbsp;<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>&nbsp; next to the instance > Click **DELETE**.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6efa074941cc3858a671898566da0f05.png)
+
+- Or go to the **VCS Instance Details** page > click **DELETE** at the top.
+
+</TabItem>
+
+<TabItem value="TWCC CLI" label="TWCC CLI">
+
+
+**Command**
+
+
+```bash
+twccli mk vcs -s    # Instance's ID
+twccli ls vcs       # View result
+```
+
+
+<br/>
+
+**Example**
+
+
+- Delete the VCS instance with ID **`937651`**, and check if it is deleted.
+
+```
+twccli rm vcs -s 937651
+twccli ls vcs
+```
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_024803eddc7136ec4fa25af5fe2ddc84.png)
+
+</TabItem>
+
+</Tabs>
+
+<br/>
+
 
 :::info
-For deleting the instance, see [<ins>Delete VCS instance</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-en#%E5%88%AA%E9%99%A4%E5%80%8B%E9%AB%94).
+- A user can only create and delete virtual computing entities 10 times in a minute.
+- If [Delete Protection](https://man.twcc.vip/en/docs/vcs/user-guides/management-and-monitoring/viewInfo-editDesc-deletionProtection#enabledisable-deletion-protection) is enabled, you cannot delete the resource directly, please disable it first and then delete it again.
 :::
