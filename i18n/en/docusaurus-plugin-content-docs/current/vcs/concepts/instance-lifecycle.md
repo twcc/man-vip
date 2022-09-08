@@ -34,26 +34,50 @@ Actions performed on the VCS instances via portal or in the instance, such as cr
 
 
 ## Create VCS instances
-When you create a VCS instance, resources are allocated for the instance initialization.The instance enters in the `Starting` state, which is not ready for use.
+When you create a VCS instance, resources are allocated for the instance initialization. The instance enters the **`Starting`** state, which is not ready for use.
 
-When it enters `Ready` state, you can perform the following actions:
+When it enters **`Ready`** state, you can perform the following actions:
 
 
 - <i class="fa fa-check" aria-hidden="true"></i> Connect to the instance
 - <i class="fa fa-check" aria-hidden="true"></i> Attach/detach the VDS data disks
 - <i class="fa fa-check" aria-hidden="true"></i> Create the instance image
-- <i class="fa fa-check" aria-hidden="true"></i> Create/remove public IP
+- <i class="fa fa-check" aria-hidden="true"></i> Assign/detach public IP
 - <i class="fa fa-check" aria-hidden="true"></i> Attach/detach the auto scaling and the load balancing
-
-:::info
-For creation steps, see [<ins> Create VCS instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-en).
-:::
 
 <br/>
 
 
 ## Stop VCS instances
-If you plan to not use the instance for a period of time and want to keep the resources, you can select STOP to shut down the instance and release resources. The instance is in the `Stopping` state and ready to enters in the `Stopped` state which the resources have been released. Under **`Stopped`** state, <ins>**instance will no longer be billed**</ins>. The operating restrictions are as follows:
+
+If you plan not to use the instance for a period of time and want to keep the resources, you can click **STOP** to shut down the instance and release resources. The instance will be in the **`Stopping`** state and ready to  change to the **`Stopped`** state which the resources have been released. Under the **`Stopped`** state, <ins>**instance will no longer be billed**</ins>.
+
+
+<Tabs>
+
+<TabItem value="TWCC Portal" label="TWCC Portal">
+
+- 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**停止**」。
+- Enter ****
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_65a8bd007a7145bc66057988f0f0b8c8.png)
+
+- 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**停止**」。
+- 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**停止**」。
+
+</TabItem>
+
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
+
+<br/>
+
+</TabItem>
+
+</Tabs>
+
+<br/>
+
+The operating restrictions are as follows:
 
 
 - <i class="fa fa-times" aria-hidden="true"></i> Connect to the instance
