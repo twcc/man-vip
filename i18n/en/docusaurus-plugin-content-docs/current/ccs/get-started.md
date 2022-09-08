@@ -85,7 +85,7 @@ TWCC services to be used in this article: Member Center, [<ins>Interactive Conta
 <br/>
 
 
-### Step 3. Create and connect Interactive Containers
+### Step 3. Create and connect to Interactive Containers
     
 1. Follow the step-by-step instructions in the tutorial [Create an Interactive Container](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/create-an-interactive-container) and you will learn how to build containers in TWCC Portal.
 2. After creation, please follow the [Connect to your container - Jupyter Notebook](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/connect-to-your-container#jupyter-notebook) to quickly connect to your container.
