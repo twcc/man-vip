@@ -23,7 +23,7 @@ The following steps are only applicable to instances with Ubuntu 18.04 or above.
 
 Please refer to [Create VCS instances](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh) to create a Linux VCS instance with a public IP as a jump server to set up OpenVPN and connect to other unattached IP appliances.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_033ddd3ab83dd2de73d4667e9ab0eacd.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a5beadf106baf7e64ce997391c27ab2a.png)
 
 <br/>
 
@@ -33,7 +33,7 @@ Please refer to [Create VCS instances](https://man.twcc.ai/@twccdocs/guide-vcs-c
 
 Since OpenVPN uses UDP 1194 port for communication by default, please refer to [Security Group](https://man.twcc.ai/@twccdocs/guide-vcs-sg-zh) to add Ingress UPD 1194 security group rule to the jump server.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ed4e22e5d80b604ee707fc22eb00df90.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e4bfa535e2f1419f3644785ff8301fa8.png)
 
 <br/>
 
@@ -63,18 +63,18 @@ sudo ./openvpn-ubuntu-install.sh
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bcc0348c5c83b00ae5a67cb3b46c2bd9.png)
 
 
-- After installation, the `clinet.ovpn` file will be created and stored under /root .
+- After installation, the `client.ovpn` file will be created and stored under /root .
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_35093692a150b6b37b2b59ddf9082503.png)
 
 
-- Change the directory of the `clinet.ovpn` file.
+- Change the directory of the `client.ovpn` file.
 
 ```
 sudo mv /root/client.ovpn /home/ubuntu
 ```
 
-- Download `clinet.ovpn` to the local computer.
+- Download `client.ovpn` to the local computer.
 
 ![](https://i.imgur.com/8OqGSOr.png)
 
@@ -90,7 +90,7 @@ Please download and install [OpenVPN Client](https://openvpn.net/vpn-client/) on
 
 ## Step 5. Activate VPN connection
 
-- Open the OpenVPN program, drag and import the `clinet.ovpn` file downloaded in Step 3. directly into FILE.
+- Open the OpenVPN program, drag and import the `client.ovpn` file downloaded in Step 3. directly into FILE.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0052af78144363408630ea8ee7dd96f8.png)
 
