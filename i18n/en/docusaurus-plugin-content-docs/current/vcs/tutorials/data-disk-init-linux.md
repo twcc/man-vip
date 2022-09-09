@@ -8,7 +8,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 
 To increase the storage space for the existing VCS instances, create and attach data disks of Virtual Disk Service to the target VCS instance. Then, for both Windows and Linux operating systems, the initialization of the disk is required so that the VCS instance can detect your mounted storage space and store the data.
 
-In the following tutorial we will show you how to initialize your new data disks.
+In the following tutorial, we will show you how to initialize your new data disks.
 
 <br/>
 
@@ -17,7 +17,7 @@ In the following tutorial we will show you how to initialize your new data disks
 
 After [attaching the data disk to your VCS instance](https://man.twcc.ai/@twccdocs/guide-vcs-vds-manage-disk-en#%E9%80%A3%E7%B5%90%E8%87%B3%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94), make sure that it is correctly attached and assigned a mount path (for example: `/dev/vdb`) on TWCC Portal.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fa713ed5baa62318cd7ae84f06de285f.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e5bd8f5651808cd65f9c281223941f1a.png)
 
 [Connect to the VCS instance](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-en), enter the following command to make sure that the disk is attached to the instance, and check the disk details to make sure that the path and size are correct.
 
