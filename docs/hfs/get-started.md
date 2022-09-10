@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 :::info
 **HFS？**
 
-高速檔案系統 (Hyper File System, HFS)為 TWCC 服務之一，為可擴展、高效能的平行檔案系統，允許在不同節點上同時存取同份文件或不同份文件並可提供高速安全的資料儲存，為容器服務及 HPC 高速運算任務、台灣杉二號提供高效、安全及彈性之資料存取與串接，請參考[<ins>服務概觀</ins>](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh/%2F%40twccdocs%2Fhfs-overview-zh)了解更多。
+高速檔案系統 (Hyper File System, HFS)為 TWCC 服務之一，為可擴展、高效能的平行檔案系統，允許在不同節點上同時存取同份文件或不同份文件並可提供高速安全的資料儲存，為容器服務及 HPC 高速運算任務、台灣杉二號提供高效、安全及彈性之資料存取與串接，請參考[<ins>服務概觀</ins>](../hfs/overview.md)了解更多。
 
 ::: 
 
@@ -33,7 +33,7 @@ import TabItem from '@theme/TabItem';
 
 
 :::info
-本篇文章將使用到的 TWCC 服務：會員中心、[<ins>高速檔案系統</ins>](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh)。
+本篇文章將使用到的 TWCC 服務：會員中心、[<ins>高速檔案系統</ins>](../hfs/overview.md)。
 :::
 
 
@@ -60,7 +60,7 @@ import TabItem from '@theme/TabItem';
 
 
 1. [註冊帳號](https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=)
-2. 完成後，您可以[新申請計畫](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fapply-project-and-credit-zh)，或請 [租戶管理員<i class="fa fa-question-circle" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-overview-zh) 將您[加入已存在之計畫](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-manage-project-team-zh)。
+2. 完成後，您可以[新申請計畫](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fapply-project-and-credit-zh)，或請 [租戶管理員<i class="fa fa-question-circle" aria-hidden="true"></i>](../member/concepts/overview.md) 將您[加入已存在之計畫](../member/user-guides/manage-projects/manage-project-members.md)。
 3. 若您為租戶管理員，請為您的計畫[購買計畫額度](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2FS17dwAja4%3Ftype%3Dview)，計畫需有額度才能建立並使用 TWCC 資源。
 4. 若您為租戶管理員，額度申請完成後，可將計畫母錢包拆分成多個子錢包分配固定額度給成員使用，若無拆分則統一使用計畫母錢包扣抵額度。請參考 [計畫錢包管理](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-manage-project-wallet-zh) 了解更多。
 
@@ -94,7 +94,7 @@ import TabItem from '@theme/TabItem';
 2. 完成後，您可以
     - 申請[免費體驗專案](https://member.twcc.ai/module_page.php?module=nchc_service#nchc_service/nchc_service.php?action=trial_prj_apply_step0)，或
     - 聯絡業務 (sales@twsc.io) 我們將深入了解您的使用需求，並協助您新增使用專案與額度，或
-    - 請 [租戶管理員<i class="fa fa-question-circle" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-overview-zh) 將您[加入已存在之專案](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-manage-project-team-zh)。
+    - 請 [租戶管理員<i class="fa fa-question-circle" aria-hidden="true"></i>](../member/concepts/overview.md) 將您[加入已存在之專案](../member/user-guides/manage-projects/manage-project-members.md)。
 
 
 </details>
@@ -172,7 +172,7 @@ TWCC 提供您至少 /home、/work 各 100 GB 的免費容量空間，若需調�
 <div style={{height:15+'px'}}></div>
 
 :::info
-- 費率資訊請參考價目表：<a href="https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS">
+- 費率資訊請參考價目表：<a href="../pricing#高速檔案系統-hyper-file-system-hfs.md">
 <font style={{backgroundColor:'#FF0000', borderRadius:30+'px', padding:0.3+'em', fontZize:16+'px'}}>
 <font style={{color:'white'}}> 
 <b>&nbsp;Academic&nbsp;</b></font></font></a> <a href="https://man.twcc.ai/@twsdocs/pricing-zh#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS">
@@ -185,10 +185,10 @@ TWCC 提供您至少 /home、/work 各 100 GB 的免費容量空間，若需調�
 
 ### Step 3. 連線傳輸節點
     
-1. 請按照 [連線傳輸節點](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh/%2F%40twccdocs%2Fguide-hfs-connect-to-data-transfer-node-zh) 教學步驟一步步完成，您將了解透過「金鑰」或是「主機密碼 + OTP」的方式連線傳輸節點。後續連線擇一使用即可！
-2. 連線後，您即可按照 [檔案管理](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh/%2F%40twccdocs%2Fguide-hfs-manage-files-zh) 說明，管理您空間的檔案，上傳、下載或刪除。
+1. 請按照 [連線傳輸節點](user-guides/connect-data-transfer-node.md) 教學步驟一步步完成，您將了解透過「金鑰」或是「主機密碼 + OTP」的方式連線傳輸節點。後續連線擇一使用即可！
+2. 連線後，您即可按照 [檔案管理](user-guides/manage-files.md) 說明，管理您空間的檔案，上傳、下載或刪除。
 
 
 ## 相關 FAQ 
-- [會員、計畫與帳務](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-membership-project-billing-zh)
-- [高速檔案系統 (HFS)](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh)
+- [會員、計畫與帳務](../faq/member-product-portal/member-project-billing.md)
+- [高速檔案系統 (HFS)](../faq/storage/hfs.md)
