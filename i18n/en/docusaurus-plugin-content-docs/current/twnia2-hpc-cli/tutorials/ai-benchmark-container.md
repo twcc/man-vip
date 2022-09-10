@@ -20,7 +20,7 @@ We will use the Singularity container to wrap the packages needed for computing 
 :::info
 [1] NVIDIA provides many [<ins>deep learning examples</ins>](https://github.com/NVIDIA/DeepLearningExamples) to improve the accessibility.<br/>
 [2] NGC version numbers consist of **year, month**: `NGC 20.09` is the version released in September 2020. Refer to [<ins>NGC Support Matrix</ins>](https://docs.nvidia.com/deeplearning/frameworks/support-matrix/index.html) to know more about differences between NGC's AI frameworks and packages version numbers.<br/>
-[3] You may also download containers from Docker Hub or other container registry, for more information, see [<ins>HowTo: Create TAIWANIA2 containers</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-en).
+[3] You may also download containers from Docker Hub or other container registry, for more information, see [<ins>HowTo: Create TWNIA2 containers</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-en).
 :::
 
 <br/>
@@ -40,7 +40,7 @@ TWCC has pre-loaded the following 3 commonly used NGC containers for users and s
 If you want to use other versions or other containers, TAIWANIA 2 has already installed Singularity, you may run the `singularity pull` command to download Singularity containers <sup>[4]</sup>.
 
 :::info
-[4] You may also download containers from Docker Hub or other container registry, for more information, see [<ins>HowTo: Create TAIWANIA2 containers</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-en).
+[4] You may also download containers from Docker Hub or other container registry, for more information, see [<ins>HowTo: Create TWNIA2 containers</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-en).
 :::
 
 <br/>
@@ -48,7 +48,7 @@ If you want to use other versions or other containers, TAIWANIA 2 has already in
 
 ## Step 2. Install packages in the container (Optional)
 
-It requires sudo privileges to install packages in Singularity container, so you may create custom container on your own server (virtual machines are recommended, such as TWCC VCS), then upload to TAIWANIA2 for use<sup>[5]</sup>.
+It requires sudo privileges to install packages in Singularity container, so you may create custom container on your own server (virtual machines are recommended, such as TWCC VCS), then upload to TWNIA2 for use<sup>[5]</sup>.
 
 
 For example: Using PyTorch container as the base image to install [Horovod distributed training framework](https://horovod.ai/)<sup>[6]</sup>:
