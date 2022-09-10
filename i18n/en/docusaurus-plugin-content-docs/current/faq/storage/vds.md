@@ -67,6 +67,6 @@ In addition to the data disk, the virtual disk billing program also contains a V
 
 <summary> Q7. Why can't I attach a virtual disk to the VCS Instance?</summary>
 
-Please note that the VCS Instance you want to attach to is in a ```Stopped``` state. Virtual disks cannot be attached to a VCS instance that is in a ```Stopped``` state.
+Please note that if the VCS Instance you want to attach to is in a ```Stopped``` state. Virtual disks cannot be attached to a VCS instance that is in a ```Stopped``` state.
 
 </details>
