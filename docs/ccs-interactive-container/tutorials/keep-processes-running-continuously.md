@@ -58,7 +58,7 @@ sudo apt-get install screen
 ```
 
 :::info
-:book: 參見 [<ins>使用 SSH 登入連線</ins>](https://www.twcc.ai/doc?page=container#使用-SSH-登入連線)
+:book: 參見 [<ins>使用 SSH 登入連線</ins>](../user-guides/create-connect/connect-container.md#ssh)
 :::
 :::info
 :warning:注意：若安裝出現 ` E: Unable to locate package screen`，請先執行以下更新指令，再安裝 screen
@@ -120,7 +120,7 @@ screen -r [A chunk of screen shell ID]
 nohup [/code_path] &
 ```
 :::info
-:book: 參見 [<ins>使用 SSH 登入連線</ins>](https://man.twcc.ai/s/SJlZnSOaN#%E4%BD%BF%E7%94%A8-SSH-%E7%99%BB%E5%85%A5%E9%80%A3%E7%B7%9A)
+:book: 參見 [<ins>使用 SSH 登入連線</ins>](../user-guides/create-connect/connect-container.md#ssh)
 :::
 - 範例如下，同時會顯示 job ID (紅框內容：job ID = 1)，並說明程式的輸出檔將會呈現在「nohup.out」檔案裡 
 
