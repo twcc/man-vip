@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 
 ## 查詢主機帳號
 
-登入 [TWS 【會員中心】](https://member.twcc.ai/)後，請進入「**會員中心**」 > 「**會員資訊**」 > 「**主機帳號資訊**」頁面。
+登入 [TWS【會員中心】](https://tws.twcc.ai/)後，請進入「**會員中心**」 > 「**會員資訊**」 > 「**主機帳號資訊**」頁面。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c03feefeff29f646e16ca59240906392.png)
 
@@ -51,7 +51,7 @@ import TabItem from '@theme/TabItem';
 
 :::caution
 TWCC 會員與主機密碼最長有效期限為 180 天。
-當密碼即將到期前（期前七天、前三天，當天）會寄發密碼提醒通知，請用戶撥冗登入 [<ins>TWS 會員中心</ins>](https://member.twcc.ai/)進行變更。
+當密碼即將到期前（期前七天、前三天，當天）會寄發密碼提醒通知，請用戶撥冗登入 [<ins>TWS 會員中心</ins>](https://tws.twcc.ai/) 進行變更。
 :::
 
 <br/>
@@ -59,12 +59,12 @@ TWCC 會員與主機密碼最長有效期限為 180 天。
 
 ## 取得 OTP 認證碼
 
-有多種方式可取得 OTP 認證碼，以下提供 **[TWS 會員中心](https://member.twcc.ai/)**、**電腦其他方式**、**手機和平板電腦**的取得方式。
+有多種方式可取得 OTP 認證碼，以下提供 **[TWS 會員中心](https://tws.twcc.ai/)**、**電腦其他方式**、**手機和平板電腦**的取得方式。
 
 <br/>
 
 
-### 1. 由 [<ins>TWS 會員中心</ins>](https://member.twcc.ai/) 取得
+### 1. 由 [TWS 會員中心](https://tws.twcc.ai/) 取得
 
 **Step 1.** 同[查詢主機帳號](#查詢主機帳號)之頁面，請至「**主機帳號資訊**」頁面。
 
