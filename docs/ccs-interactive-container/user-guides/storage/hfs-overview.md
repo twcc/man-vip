@@ -7,7 +7,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/hfs-overview-zh'
 ---
 
 
-# 高速檔案系統 (HFS)<img style={{width:30+'px', height:30+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a2514dcee06093bda60777e51fd25438.png' />
+# 服務概觀 <img style={{width:30+'px', height:30+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a2514dcee06093bda60777e51fd25438.png' />
 
 高速檔案系統（Hyper File System，以下簡稱 HFS） 為可擴展、高效能的平行檔案系統，允許在不同節點上同時存取同份文件或不同份文件並可提供高速安全的資料儲存，為容器服務及 HPC 高速運算任務、台灣杉二號提供高效、安全及彈性之資料存取與串接。
 
@@ -33,7 +33,7 @@ HFS 檔案傳輸節點、掛載路徑與免費配額等資訊如下：
 
 :::info
 - [1] 自2021年9月1日起，國科會(原科技部)計畫每個帳號之的暫存工作目錄區域(/work)免費額度，由原本的 100 GB，提高到 1500 GB。
-- [2] 如空間不敷使用時，您可以到[<ins>會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](../../../member/user-guides/member-key-quota/go-to-member-center.md) 購買擴充。購買價格與調整方式請參考[<ins>價目表</ins>](../../../pricing.mdx)。
+- [2] 如空間不敷使用時，您可以到[<ins>會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](../member/user-guides/member-key-quota/go-to-member-center.md) 購買擴充。購買價格與調整方式請參考[<ins>價目表</ins>](../pricing.mdx)。
 :::
 
 ## 可搭配使用的運算服務
@@ -42,5 +42,5 @@ HFS 檔案傳輸節點、掛載路徑與免費配額等資訊如下：
 
 
 :::info
-此四項服務的預設儲存系統為 HFS，因此連線後即可直接使用 HFS 之資料，**無需先**[<ins>連線檔案傳輸節點</ins>](../../../hfs/user-guides/connect-data-transfer-node.md)。
+此四項服務的預設儲存系統為 HFS，因此連線後即可直接使用 HFS 之資料，**無需先**[<ins>連線檔案傳輸節點</ins>](user-guides/connect-data-transfer-node.md)。
 :::
