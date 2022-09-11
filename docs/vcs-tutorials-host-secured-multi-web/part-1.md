@@ -16,7 +16,7 @@ import TOCInline from '@theme/TOCInline';
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_369a8ec110cd38b24c419dd927001a32.png)
 
 :::info
-- 詳細虛擬運算個體建立步驟，請參考[<ins>虛擬運算服務</ins>](https://www.twcc.ai/doc?page=vm&euqinu=true#%E5%BB%BA%E7%AB%8B%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)。
+- 詳細虛擬運算個體建立步驟，請參考[<ins>虛擬運算服務</ins>](overview.md)。
 - 範例選用 **Ubuntu 20.04** 映像檔建立 **(此文件不支援 Ubuntu 16.04)**，請**開啟公用 IP** 供後續網站管理員維護使用，其他設定皆以預設資訊建立。
 :::
 
@@ -25,7 +25,7 @@ import TOCInline from '@theme/TOCInline';
 使用公用 IP 連線進入個體後，分別使用以下 3 個指令，安裝 Nginx 架設網頁服務：
 
 :::info
-- 詳細虛擬運算個體連線步驟，請參考[<ins>連線虛擬運算個體</ins>](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)。
+- 詳細虛擬運算個體連線步驟，請參考[<ins>連線虛擬運算個體</ins>](../vcs/user-guides/connecting/prerequisites.md)。
 - 範例以 Nginx 做為架設網站的工具，您可以依需求安裝不同工具。
 :::
 
