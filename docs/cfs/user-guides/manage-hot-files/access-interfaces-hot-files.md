@@ -52,6 +52,12 @@ import TabItem from '@theme/TabItem';
    
 * 連線成功後即可看到 TWCC 雲端檔案服務上的所建立的儲存體。
 
+:::info
+若您使用其他第三方軟體，請設定以下資訊確保可連線成功：
+- 地區 (region)：us-east-1
+- 簽章版本 (Signature Version)：V4
+:::
+
 ### 删除 S3 存取資料集
 
 * 若不需使用 S3 存取資料集，請在 S3 存取設定下方的儲存體列表，勾選欲删除的儲存體名稱後點擊列表上方的「**删除**」按鈕。
@@ -75,7 +81,7 @@ import TabItem from '@theme/TabItem';
     - 連接埠：22  
 
 :::info
-若忘記**主機帳號**或**主機密碼**，請參考：[<ins>查詢主機帳密與 OTP 認證碼</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh)。
+若忘記**主機帳號**或**主機密碼**，請參考：[<ins>查詢主機帳密與 OTP 認證碼</ins>](../../../member/user-guides/member-key-quota/hpc-account-password-otp.md)。
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1f63040fedd3e99613ad7da2f3667230.png)
