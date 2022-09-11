@@ -6,10 +6,10 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/apply-project-and-c
 
 # 申請專案與額度
 
-[TWS 會員中心]((https://tws.twcc.ai/)) 不支援專案與額度申請服務，
+[TWS 會員中心](https://tws.twcc.ai/)不支援專案與額度申請服務，<br/>
 請您聯繫 TWS 業務，我們將深入了解您的使用需求，並協助您新增使用專案與額度：
 
-E-mail：<a href = "mailto: sales@twsc.io">sales@twsc.io</a>
+E-mail：<ins><a href = "mailto: sales@twsc.io">sales@twsc.io</a></ins>
 
 
 :::info

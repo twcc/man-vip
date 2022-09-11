@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
 
 [1] **`租戶使用者`** 僅能查詢自己的使用紀錄；**`租戶管理員`** 則可以檢視所有成員的紀錄。
 
-[2] TWCC API 對服務操作的動作分為以下 5 類 ([<ins>深入了解 RESTful API </ins>](https://zh.wikipedia.org/wiki/%E8%A1%A8%E7%8E%B0%E5%B1%82%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2))：
+[2] TWCC API 對服務操作的動作分為以下 5 類（[<ins>深入了解 RESTful API</ins>](https://zh.wikipedia.org/wiki/%E8%A1%A8%E7%8E%B0%E5%B1%82%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2)）：
 - `GET`：取得服務資訊
 - `PUT`：更新服務整體資訊
 - `PATCH`：更新服務部份資訊

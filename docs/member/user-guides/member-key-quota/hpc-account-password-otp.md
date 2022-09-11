@@ -117,7 +117,7 @@ TWCC 會員與主機密碼最長有效期限為 180 天。
 
 <summary><b>WinAuth (Windows 用戶)</b></summary>
 
-**Step 1.** 下載 [WinAuth]( https://github.com/winauth/winauth )
+**Step 1.** 下載 [WinAuth](https://github.com/winauth/winauth)
  
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_aa4631f70d2ae7f7bc000eed41477c15.png)
 
@@ -158,7 +158,7 @@ TWCC 會員與主機密碼最長有效期限為 180 天。
 
 <br/>
 
-**Step 2.** 安裝完打開應用程式，掃描 [TWS 會員中心](https://member.twcc.ai/) 「**點我複製 OTP 金鑰**」上的 QR code，應用程式即能查詢 OTP 認證碼。
+**Step 2.** 安裝完打開應用程式，掃描 [TWS 會員中心](https://tws.twcc.ai/) 「**點我複製 OTP 金鑰**」上的 QR code，應用程式即能查詢 OTP 認證碼。
   
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_41e14e47dda849f93df3d4af53766d94.png)
 
