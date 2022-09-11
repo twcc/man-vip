@@ -118,7 +118,7 @@ twccli mk ccs -itype "Caffe2" -img "caffe2-18.08-py3-v1:latest" -gpu 2 -n cusccs
 
 :::info
 1. 詳細映像檔介紹與說明請參考 [<ins>TWCC 容器映像檔</ins>](/docs/ccs-interactive-container-concepts-images/overview.md)。
-2. 容器型號、資源比例與費率，請參考[<ins>價目表</ins>](/docs/pricing#容器運算服務-container-compute-service-ccs)。
+2. 容器型號、資源比例與費率，請參考[<ins>價目表</ins>](/docs/pricing.mdx#容器運算服務-container-compute-service-ccs)。
 3. **可用記憶體容量**若以 GiB (1 GiB = 2<sup>30</sup> bytes) 為計算單位，以 c.super 為例，則可用記憶體容量為 84 GiB，請參考[<ins>記憶體容量換算</ins>](../../concepts/container-memory-capacity-conversion.md)了解更多。
 :::
 

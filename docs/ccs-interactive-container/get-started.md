@@ -87,7 +87,7 @@ import TabItem from '@theme/TabItem';
 ### Step 3. 建立並連線開發型容器
     
 1. 請按照 [建立開發型容器](./user-guides/create-connect/create-container.md) 教學步驟一步步完成，您將了解如何在 TWCC 使用者網站中建立容器。
-2. 建立完成後，請按照 [連線容器 - Jupyter Notebook](./user-guides/create-connect/connect-container#jupyter-notebook) 步驟，即可快速連線進入您的容器。
+2. 建立完成後，請按照 [連線容器 - Jupyter Notebook](./user-guides/create-connect/connect-container.md#jupyter-notebook) 步驟，即可快速連線進入您的容器。
 
 <br/>
 
@@ -106,5 +106,5 @@ import TabItem from '@theme/TabItem';
 
 
 ## 相關 FAQ 
-- [會員、計畫與帳務](/docs/faq/member-product-portal/member-project-billing)
-- [容器運算服務 (CCS)](/docs/faq/compute/ccs)
+- [會員、計畫與帳務](/docs/faq/member-product-portal/member-project-billing.md)
+- [容器運算服務 (CCS)](/docs/faq/compute/ccs.md)
