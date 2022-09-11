@@ -1,13 +1,13 @@
 ---
 displayed_sidebar: hfs
-sidebar_label: '高速檔案系統'
+sidebar_label: '服務概觀'
 sidebar_position: 3
 sync_original_production: 'https://man.twcc.ai/@twccdocs/hfs-overview-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/hfs-overview-zh'
 ---
 
 
-# 高速檔案系統(HFS) <img style={{width:30+'px', height:30+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a2514dcee06093bda60777e51fd25438.png' />
+# 服務概觀 <img style={{width:30+'px', height:30+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a2514dcee06093bda60777e51fd25438.png' />
 
 高速檔案系統（Hyper File System，以下簡稱 HFS） 為可擴展、高效能的平行檔案系統，允許在不同節點上同時存取同份文件或不同份文件並可提供高速安全的資料儲存，為容器服務及 HPC 高速運算任務、台灣杉二號提供高效、安全及彈性之資料存取與串接。
 
