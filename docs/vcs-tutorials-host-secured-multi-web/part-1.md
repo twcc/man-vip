@@ -16,7 +16,7 @@ import TOCInline from '@theme/TOCInline';
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_369a8ec110cd38b24c419dd927001a32.png)
 
 :::info
-- 詳細虛擬運算個體建立步驟，請參考[<ins>虛擬運算服務</ins>](overview.md)。
+- 詳細虛擬運算個體建立步驟，請參考[<ins>虛擬運算服務</ins>](../vcs/overview.md)。
 - 範例選用 **Ubuntu 20.04** 映像檔建立 **(此文件不支援 Ubuntu 16.04)**，請**開啟公用 IP** 供後續網站管理員維護使用，其他設定皆以預設資訊建立。
 :::
 
