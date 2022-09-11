@@ -14,13 +14,13 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-gpu-burn
 
 ## Step 1. 登入 TWCC
 
-- 若尚無帳號，請參考 [註冊 TWCC 帳號](https://www.twcc.ai/doc?page=register_account)
+- 若尚無帳號，請參考 [註冊 TWS / TWCC 帳號](/docs/member/user-guides/member-key-quota/sign-up-for-twcc.md)
 
 <br/>
 
 ## Step 2. 建立開發型容器
 
-- 請參考 [開發型容器](https://www.twcc.ai/doc?page=container#建立開發型容器) 建立開發型容器
+- 請參考 [開發型容器](../user-guides/create-connect/create-container.md) 建立開發型容器
 - 映像檔類型請選擇 TensorFlow、映像檔選擇支援 Python 3 的版本、硬體選擇支援 1 顆 GPU 的設定即可
 
 <br/>
@@ -30,7 +30,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-gpu-burn
 - 使用 Jupyter Notebook 連線容器，開啟 Terminal
 
 :::info
-:book: [使用 Jupyter Notebook](https://www.twcc.ai/doc?page=container#使用-Jupyter-Notebook)
+:book: [<ins>連線容器 - Jupyter Notebook</ins>](../user-guides/create-connect/connect-container.md#jupyter-notebook)
 :::
 
 - 輸入以下指令，將 [NCHC_GitHub](https://github.com/TW-NCHC/AI-Services/tree/V3Training) training 程式下載到容器
