@@ -7,7 +7,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-port-zh'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 容器連接埠 (服務埠)
+# 容器連接埠（服務埠）
 
 TWCC 開發型容器開放 22、8888、5000、5001、5002，5 個**目標埠**供容器對外服務使用。
 
