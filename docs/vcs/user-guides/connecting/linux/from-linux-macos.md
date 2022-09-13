@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 # 連線 Linux 個體：本機為 Linux / macOS
 
-完成[準備工作、取得連線資訊](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-zh)後，以下提供 2 種連線 Linux 個體 (本機為 Linux/macOS) 的方法，您可選擇任一工具操作。
+完成[準備工作、取得連線資訊](../prerequisites.md)後，以下提供 2 種連線 Linux 個體 (本機為 Linux/macOS) 的方法，您可選擇任一工具操作。
 
 :::info
 請注意個體的狀態需為 **`Ready`** 才可連線使用。
@@ -23,7 +23,7 @@ import TabItem from '@theme/TabItem';
 
 <summary><b>1. 內建命令提示字元</b></summary>
 
-開啟本機終端機視窗，依照[<ins>取得的連線資訊</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-zh)，依序輸入指令，變更鑰匙對權限、連線至虛擬運算個體。
+開啟本機終端機視窗，依照[<ins>取得的連線資訊</ins>](../prerequisites.md#step-2-取得連線資訊)，依序輸入指令，變更鑰匙對權限、連線至虛擬運算個體。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ab7f8e76a452f95ea2f1e004e10f4e89.png)
 
@@ -46,7 +46,7 @@ import TabItem from '@theme/TabItem';
 
 **Step 1. 下載安裝 VScode**
 
-請至 [VScode](https://code.visualstudio.com/Download) 下載，完成後開啟程式。
+請至 [<ins>VScode</ins>](https://code.visualstudio.com/Download) 下載，完成後開啟程式。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_010a76dabe0d66c94562e776fe3b3a6a.png)
 
@@ -122,7 +122,7 @@ Host <INSTANCE_NAME>            # 輸入虛擬運算個體的名稱
 <br/>
 
 :::info
-若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-debug-tool-console-zh)，可加速工作流程。
+若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](../../manage-monitor/console.md)，可加速工作流程。
 :::
 
 :::caution
