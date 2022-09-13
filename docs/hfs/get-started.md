@@ -60,7 +60,7 @@ import TabItem from '@theme/TabItem';
 
 
 1. [註冊帳號](https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=)
-2. 完成後，您可以[新申請計畫](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fapply-project-and-credit-zh)，或請 [租戶管理員<i class="fa fa-question-circle" aria-hidden="true"></i>](../member/concepts/overview.md) 將您[加入已存在之計畫](../member/user-guides/manage-projects/manage-project-members.md)。
+2. 完成後，您可以[新申請計畫](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fapply-project-and-credit-zh)，或請 [租戶管理員<i class="fa fa-question-circle" aria-hidden="true"></i>](../member/concepts/overview.md) 將您[加入已存在之計畫](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-manage-project-team-zh)。
 3. 若您為租戶管理員，請為您的計畫[購買計畫額度](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2FS17dwAja4%3Ftype%3Dview)，計畫需有額度才能建立並使用 TWCC 資源。
 4. 若您為租戶管理員，額度申請完成後，可將計畫母錢包拆分成多個子錢包分配固定額度給成員使用，若無拆分則統一使用計畫母錢包扣抵額度。請參考 [計畫錢包管理](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-manage-project-wallet-zh) 了解更多。
 
@@ -172,15 +172,8 @@ TWCC 提供您至少 /home、/work 各 100 GB 的免費容量空間，若需調�
 <div style={{height:15+'px'}}></div>
 
 :::info
-- 費率資訊請參考價目表：<a href="../pricing#高速檔案系統-hyper-file-system-hfs.md">
-<font style={{backgroundColor:'#FF0000', borderRadius:30+'px', padding:0.3+'em', fontZize:16+'px'}}>
-<font style={{color:'white'}}> 
-<b>&nbsp;Academic&nbsp;</b></font></font></a> <a href="https://man.twcc.ai/@twsdocs/pricing-zh#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS">
-<font style={{backgroundColor:'#008ad8', borderRadius:30+'px', padding:0.3+'em', fontZize:16+'px'}}>
-<font style={{color:'white'}}> 
-<b>&nbsp;Enterprise&nbsp;</b></font></font></a><div style={{height:15+'px'}}></div>
-- 您可於會員中心檢視額度與資源用量 <a href="https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-view-billing-resource-usage-zh"><font style={{backgroundColor:'#FF0000', borderRadius:30+'px', padding:0.3+'em', fontZize:16+'px'}}>
-<font style={{color:'white'}}>  <b>&nbsp;Academic&nbsp;</b></font></font></a>
+- 費率資訊請參考價目表：<a href="https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#%E9%AB%98%E9%80%9F%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-High-performance-Computing-HPC"><font style={{backgroundColor:'#FF0000', borderRadius: 30+'px', padding: 0.3+'em', fontSize: 16+'px'}}><font style={{color:'white'}}> <b>&nbsp;Academic&nbsp;</b></font></font></a> <a href="../pricing"><font style={{backgroundColor:'#008ad8', borderRadius: 30+'px', padding: 0.3+'em', fontSize: 16+'px'}}><font style={{color:'white'}}> <b>&nbsp;Enterprise&nbsp;</b></font></font></a><div style={{height:15+'px'}}></div>
+- 您可於會員中心檢視額度與資源用量 <a href="https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-view-billing-resource-usage-zh"><font style={{backgroundColor:'#FF0000', borderRadius: 30+'px', padding: 0.2+'em', fontSize: 16+'px'}}><font style={{color:'white'}}> <b>&nbsp;Academic&nbsp;</b></font></font></a>
 :::
 
 ### Step 3. 連線傳輸節點
