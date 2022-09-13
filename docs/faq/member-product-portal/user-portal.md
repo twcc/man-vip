@@ -41,7 +41,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-portal-zh'
 
 <summary> Q4. 租戶管理員與一般租戶使用者身分，在使用 TWCC 各服務上有什麼區別？</summary>
 
-兩種身分有功能使用權限的差別，各功能權限差異請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-overview-zh)。
+兩種身分有功能使用權限的差別，各功能權限差異請參考[<ins>此文件</ins>](/docs/member/concepts/overview.md)。
 
 </details>
 
@@ -49,7 +49,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-portal-zh'
 
 <summary> Q5. 如何查詢計畫的 GPU 使用上限？ </summary>
 
-請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2FHJYrLYukr%3Ftype%3Dview%23%25E8%25B3%2587%25E6%25BA%2590%25E9%2585%258D%25E9%25A1%258D%25E7%25AE%25A1%25E7%2590%2586)中的「資源配額管理」。  
+請參考[<ins>此文件</ins>](/docs/member/user-guides/member-key-quota/manage-quota.md)中的「資源配額管理」。  
 
 </details>
 

@@ -16,8 +16,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-ccs-zh'
 
 TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用：
 
-1. 開發型容器：您可參考[此文件](https://www.twcc.ai/doc?page=container)，建立快速部署的容器環境。
-2. 高速運算服務：您可參考[此文件](https://www.twcc.ai/doc?page=hpc_cli)，連線進入高速運算節點，以 Command Line 的方式使用超級電腦資源，進行跨節點的高速運算。
+1. 開發型容器：您可參考[此文件](/docs/ccs-interactive-container/overview.md)，建立快速部署的容器環境。
+2. 高速運算服務：您可參考[此文件](/docs/faq/compute/vcs.md)，連線進入高速運算節點，以 Command Line 的方式使用超級電腦資源，進行跨節點的高速運算。
 
 </details>
 
@@ -27,10 +27,10 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 您可使用容器訓練 AI 模型並生成推論引擎，步驟參考如下：
 
-**Step 1.** 參考[高速檔案系統文件](https://www.twcc.ai/doc?page=hfs)，將 AI 模型程式上傳到高速檔案系統，儲存於 `/home/主機帳號` 或 `/work/主機帳號` 目錄之下。  
-**Step 2.** 參考[開發型容器文件](https://www.twcc.ai/doc?page=container)，建立容器，並連線容器進行模型訓練。  
-**Step 3.** 訓練完成，可參考[高速檔案系統文件](https://www.twcc.ai/doc?page=hfs)，下載所需要的資料。  
-**Step 4.** 若要進行推論，可參考[HowTo文件](https://www.twcc.ai/doc?page=howto_ctn2)於容器內進行，或參考[虛擬運算文件](https://www.twcc.ai/doc?page=vm)，建立虛擬運算個體進行推論。
+**Step 1.** 參考[高速檔案系統文件](/docs/hfs/user-guides/manage-files.md)，將 AI 模型程式上傳到高速檔案系統，儲存於 `/home/主機帳號` 或 `/work/主機帳號` 目錄之下。  
+**Step 2.** 參考[開發型容器文件](/docs/ccs-interactive-container/user-guides/create-connect/create-container.md)，建立容器，並連線容器進行模型訓練。  
+**Step 3.** 訓練完成，可參考[高速檔案系統文件](/docs/hfs/user-guides/manage-files.md)，下載所需要的資料。  
+**Step 4.** 若要進行推論，可參考[HowTo文件](/docs/ccs-interactive-container/tutorials/tensorflow-inception-v3-image-recognition.md)於容器內進行，或參考[虛擬運算文件](/docs/vcs/user-guides/create/create-instances.md)，建立虛擬運算個體進行推論。
 
 </details>
 
@@ -51,7 +51,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 <summary> Q1. 如何登入容器？ </summary>
 
-可以透過 SSH 或 Jupyter Notebook 連線容器，請參考[連線容器](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/%2F%40twccdocs%2Fguide-ccs-connect-zh)。
+可以透過 SSH 或 Jupyter Notebook 連線容器，請參考[連線容器](/docs/ccs-interactive-container/user-guides/create-connect/connect-container.md)。
 
 </details>
 
@@ -71,7 +71,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
  
  </summary>
 
-可能是主機密碼輸入錯誤，請重新輸入或參考[此文件](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-hostname-pwd-otp-zh)至 Service 會員服務系統重設主機密碼。
+可能是主機密碼輸入錯誤，請重新輸入或參考[此文件](/docs/member/user-guides/member-key-quota/hpc-account-password-otp.md)至 Service 會員服務系統重設主機密碼。
 
 </details>
 
@@ -82,7 +82,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 請參考以下 2 種處理方式：
 
 1. 進行以下操作將容器還原至初始狀態：
-   - **Step 1.** 參考[程式執行異常的建議排除方式](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fccs-intactv-howto-zh#%E7%A8%8B%E5%BC%8F%E5%9F%B7%E8%A1%8C%E7%95%B0%E5%B8%B8%E7%9A%84%E5%BB%BA%E8%AD%B0%E6%8E%92%E9%99%A4%E6%96%B9%E5%BC%8F) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。  
+   - **Step 1.** 參考[程式執行異常的建議排除方式](/docs/ccs-interactive-container/tutorials/python-package-installation.md#程式執行異常的建議排除方式) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。  
    - **Step 2.** 進入 `/home/主機帳號/.cache/` 目錄，清除計算過程產生的暫存檔。  
    - **Step 3.** 若有安裝 Anaconda 或 Miniconda，也請移除或重新命名。  
    - **Step 4.** 重新建立一個新的容器，選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到每個映像檔的環境設定，選擇適合的映像檔，再連線 Jupyter Notebook。
@@ -99,7 +99,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 目前系統不支援容器暫停的功能，您可依需求選擇任一節省計算成本的方案：
 1. 您可製作容器複本保留工作環境，並刪除容器，待需要使用容器時再以複本建立新容器。
-2. 您可參考[此文件](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-cli-ccs-automate-compute-delete-with-twccli-zh)，編寫腳本自動執行運算、刪除容器。
+2. 您可參考[此文件](/docs/ccs-interactive-container/tutorials/use-cli-automate-compute-delete.md)，編寫腳本自動執行運算、刪除容器。
 
 </details>
 
@@ -109,7 +109,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 進行以下操作即可將容器還原至初始狀態：
 
-**Step 1.** 參考[程式執行異常的建議排除方式](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fccs-intactv-howto-zh#%E7%A8%8B%E5%BC%8F%E5%9F%B7%E8%A1%8C%E7%95%B0%E5%B8%B8%E7%9A%84%E5%BB%BA%E8%AD%B0%E6%8E%92%E9%99%A4%E6%96%B9%E5%BC%8F) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。  
+**Step 1.** 參考[程式執行異常的建議排除方式](/docs/ccs-interactive-container/tutorials/python-package-installation.md#程式執行異常的建議排除方式) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。  
 **Step 2.** 進入 `/home/主機帳號/.cache/` 目錄，清除計算過程產生的暫存檔。  
 **Step 3.** 若有安裝 Anaconda 或 Miniconda，也請移除或重新命名。  
 **Step 4.** 重新建立一個新的容器，選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到每個映像檔的環境設定，選擇適合的映像檔。
@@ -120,7 +120,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 <summary> Q3. 不同容器中的環境是否也不同？</summary>
 
-容器的儲存環境是[高速檔案系統 (HFS) ](https://www.twcc.ai/doc?page=hfs)，用戶建立不同的容器，系統皆會自動將用戶的 HFS 掛載作為容器環境。
+容器的儲存環境是[高速檔案系統 (HFS) ](/docs/hfs/overview.md)，用戶建立不同的容器，系統皆會自動將用戶的 HFS 掛載作為容器環境。
 
 而 HFS 空間的生命週期是隨著用戶的主機帳號，因此只要是同一用戶建立的容器，環境都是相同的 HFS 空間。
 
@@ -133,7 +133,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 <summary> Q1. 如何使用 8 張 GPU 以上的資源？ </summary>
 
-請改為使用 台灣杉二號 (命令列介面)，使用方法可參考網路上 Horovod 和 Singularity 的使用說明文件，或參考以下的 tutorial 進行： [HowTo：容器跨節點高速運算－AI Benchmark](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-twnia2-run-parallel-job-container-zh)。
+請改為使用 台灣杉二號 (命令列介面)，使用方法可參考網路上 Horovod 和 Singularity 的使用說明文件，或參考以下的 tutorial 進行： [HowTo：容器跨節點高速運算－AI Benchmark](/docs/twnia2-hpc-cli/tutorials/ai-benchmark-container.md)。
 
 </details>
 
@@ -171,7 +171,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 1. 您的程式使用的 GPU 數量與建立數量不符，請確認兩處 GPU 數量是否相符。
 2. 套件版本有相容性問題，請按照以下步驟：
-   - **Step 1.** 參考[程式執行異常的建議排除方式](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fccs-intactv-howto-zh#%E7%A8%8B%E5%BC%8F%E5%9F%B7%E8%A1%8C%E7%95%B0%E5%B8%B8%E7%9A%84%E5%BB%BA%E8%AD%B0%E6%8E%92%E9%99%A4%E6%96%B9%E5%BC%8F) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。  
+   - **Step 1.** 參考[程式執行異常的建議排除方式](/docs/ccs-interactive-container/tutorials/python-package-installation.md#程式執行異常的建議排除方式) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。  
    - **Step 2.** 進入 `/home/主機帳號/.cache/` 目錄，清除計算過程產生的暫存檔。  
    - **Step 3.** 若有安裝 Anaconda 或 Miniconda，也請移除或重新命名。  
    - **Step 4.** 重新建立一個新的容器，選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到每個映像檔的環境設定，選擇適合的映像檔。
@@ -191,7 +191,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 <summary> Q6. 如何知道程式運行時的記憶體用量？ </summary>
 
 在使用者網站或是容器內部皆可查詢記憶體用量：
-1. 在使用者網站**開發型容器監控**頁面，可查看記憶體用量圖，詳情可參考[開發型容器監控頁面](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/%2F%40twccdocs%2Fguide-ccs-monitor-zh)文件。
+1. 在使用者網站**開發型容器監控**頁面，可查看記憶體用量圖，詳情可參考[開發型容器監控頁面](/docs/ccs-interactive-container/user-guides/manage-monitor/monitor-container.md)文件。
 2. 在容器中下指令 ` top` 或 ` free` 查看記憶體用量。
 
 </details>
@@ -314,7 +314,7 @@ TWCC 容器不提供 OS 層權限，因此無法安裝與使用 docker 服務。
 
 <summary> Q1. 如何將檔案上傳至容器，或從容器下載？ </summary>
 
-請參考此[文件](https://www.twcc.ai/doc?page=hfs#%E4%BD%BF%E7%94%A8-SFTP--Filezilla-%E5%82%B3%E8%BC%B8%E6%AA%94%E6%A1%88)，將檔案上傳到容器的 /home 或 /work 中，或將檔案下載到 local 端。 
+請參考此[文件](/docs/hfs/user-guides/manage-files.md#上傳與下載檔案)，將檔案上傳到容器的 /home 或 /work 中，或將檔案下載到 local 端。 
 
 </details>
 
@@ -330,7 +330,7 @@ TWCC 容器不提供 OS 層權限，因此無法安裝與使用 docker 服務。
 
 <summary> Q3. 要如何分享 /home 與 /work 的資料給其他同計畫使用者？ </summary>
 
-可以透過 TWCC CLI 操作 TWCC 雲端物件儲存 (COS)，將容器資料分享給其他使用者，操作方式請參考[此文件](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/%2F%40twccdocs%2Fcos-overview-zh)。
+可以透過 TWCC CLI 操作 TWCC 雲端物件儲存 (COS)，將容器資料分享給其他使用者，操作方式請參考[此文件](/docs/cos/overview.md)。
 
 </details>
 
@@ -371,7 +371,7 @@ su [主機帳號]
 
 <summary> Q7. 為何 Jupyter Notebook 無法寫入檔案？ </summary>
 
-高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[高速檔案系統 FAQ Q6](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考增購更多儲存空間，增購方式請參考[高速檔案系統](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh/%2F%40twccdocs%2Fhfs-overview-zh)中的「查看使用容量」及「空間管理政策」兩個段落，即可得知價格以及增購空間的方法。
+高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[高速檔案系統 FAQ Q6](/docs/faq/storage/hfs.md)，檢查並清理您的儲存空間，或參考增購更多儲存空間，增購方式請參考[高速檔案系統](/docs/hfs/overview.md)中的「查看使用容量」及「空間管理政策」兩個段落，即可得知價格以及增購空間的方法。
 
 </details>
 
@@ -379,7 +379,7 @@ su [主機帳號]
 
 <summary> Q8. 為何 Jupyter Notebook 儲存檔案失敗？ </summary>
 
-高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[高速檔案系統 FAQ Q6](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考增購更多儲存空間，增購方式請參考[高速檔案系統](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh/%2F%40twccdocs%2Fhfs-overview-zh)中的「查看使用容量」及「空間管理政策」兩個段落，即可得知價格以及增購空間的方法。
+高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[高速檔案系統 FAQ Q6](/docs/faq/storage/hfs.md)，檢查並清理您的儲存空間，或參考增購更多儲存空間，增購方式請參考[高速檔案系統](/docs/hfs/overview.md)中的「查看使用容量」及「空間管理政策」兩個段落，即可得知價格以及增購空間的方法。
 
 </details>
 
@@ -387,7 +387,7 @@ su [主機帳號]
 
 <summary> Q9. 如何上傳檔案到 Jupyter Notebook？ </summary>
 
-Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透過[此文件](https://www.twcc.ai/doc?page=hfs#%E4%BD%BF%E7%94%A8-SFTP--Filezilla-%E5%82%B3%E8%BC%B8%E6%AA%94%E6%A1%88)，上傳您的檔案。
+Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透過[此文件](/docs/hfs/user-guides/manage-files.md#上傳與下載檔案)，上傳您的檔案。
 
 </details>
 
@@ -396,7 +396,7 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 <summary> Q10. 如何於容器內與雲端物件儲存間傳輸檔案？ </summary>
 
 1. 請在容器內[安裝 TWCC CLI](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-install-linux-zh)。
-2. 再參考[此文件](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-cos-zh)，使用 TWCC CLI 進行容器與雲端物件儲存的檔案傳輸。
+2. 再參考[此文件](/docs/twnia2-hpc-cli/tutorials/access-cos.md)，使用 TWCC CLI 進行容器與雲端物件儲存的檔案傳輸。
 
 </details>
 
@@ -459,7 +459,7 @@ TWCC 容器所使用的儲存系統為高速檔案系統 (HFS)，目前不支援
 <summary> Q2. 程式執行時效能不如預期？ </summary>
 
 按照下列步驟排除套件相容性問題：  
-**Step 1.** 參考[程式執行異常的建議排除方式](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fccs-intactv-howto-zh#%E7%A8%8B%E5%BC%8F%E5%9F%B7%E8%A1%8C%E7%95%B0%E5%B8%B8%E7%9A%84%E5%BB%BA%E8%AD%B0%E6%8E%92%E9%99%A4%E6%96%B9%E5%BC%8F) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。  
+**Step 1.** 參考[程式執行異常的建議排除方式](/docs/ccs-interactive-container/tutorials/python-package-installation.md#程式執行異常的建議排除方式) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。  
 **Step 2.** 進入 `/home/主機帳號/.cache/` 目錄，清除計算過程產生的暫存檔。  
 **Step 3.** 若有安裝 Anaconda 或 Miniconda，也請移除或重新命名。  
 **Step 4.** 重新建立一個新的容器，選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到每個映像檔的環境設定，選擇適合的映像檔。
@@ -473,7 +473,7 @@ TWCC 容器所使用的儲存系統為高速檔案系統 (HFS)，目前不支援
 改善效能的方式請參考如下：
 
 1. 排除套件相容性問題
-   - **Step 1.** 參考[程式執行異常的建議排除方式](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fccs-intactv-howto-zh#%E7%A8%8B%E5%BC%8F%E5%9F%B7%E8%A1%8C%E7%95%B0%E5%B8%B8%E7%9A%84%E5%BB%BA%E8%AD%B0%E6%8E%92%E9%99%A4%E6%96%B9%E5%BC%8F) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。  
+   - **Step 1.** 參考[程式執行異常的建議排除方式](/docs/ccs-interactive-container/tutorials/python-package-installation.md#程式執行異常的建議排除方式) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。  
    - **Step 2.** 進入 `/home/主機帳號/.cache/` 目錄，清除計算過程產生的暫存檔。  
    - **Step 3.** 若有安裝 Anaconda 或 Miniconda，也請移除或重新命名。  
    - **Step 4.** 重新建立一個新的容器，選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到每個映像檔的環境設定，選擇適合的映像檔。
@@ -507,7 +507,7 @@ TWCC 容器所使用的儲存系統為高速檔案系統 (HFS)，目前不支援
  </summary>
 
 按照以下步驟排除套件相容性問題：  
-**Step 1.** 參考[程式執行異常的建議排除方式](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fccs-intactv-howto-zh#%E7%A8%8B%E5%BC%8F%E5%9F%B7%E8%A1%8C%E7%95%B0%E5%B8%B8%E7%9A%84%E5%BB%BA%E8%AD%B0%E6%8E%92%E9%99%A4%E6%96%B9%E5%BC%8F) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。  
+**Step 1.** 參考[程式執行異常的建議排除方式](/docs/ccs-interactive-container/tutorials/python-package-installation.md#程式執行異常的建議排除方式) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。  
 **Step 2.** 進入 `/home/主機帳號/.cache/` 目錄，清除計算過程產生的暫存檔。  
 **Step 3.** 若有安裝 Anaconda 或 Miniconda，也請移除或重新命名。  
 **Step 4.** 重新建立一個新的容器，選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到每個映像檔的環境設定，選擇適合的映像檔。
@@ -547,7 +547,7 @@ TWCC 容器所使用的儲存系統為高速檔案系統 (HFS)，目前不支援
  </summary>
 
 請按照以下程序解決套件相容性問題：  
-**Step 1.** 參考[程式執行異常的建議排除方式](https://man.twcc.ai/@twccdocs/doc-ccs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fccs-intactv-howto-zh#%E7%A8%8B%E5%BC%8F%E5%9F%B7%E8%A1%8C%E7%95%B0%E5%B8%B8%E7%9A%84%E5%BB%BA%E8%AD%B0%E6%8E%92%E9%99%A4%E6%96%B9%E5%BC%8F) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。  
+**Step 1.** 參考[程式執行異常的建議排除方式](/docs/ccs-interactive-container/tutorials/python-package-installation.md#程式執行異常的建議排除方式) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。  
 **Step 2.** 進入 `/home/主機帳號/.cache/` 目錄，清除計算過程產生的暫存檔。  
 **Step 3.** 若有安裝 Anaconda 或 Miniconda，也請移除或重新命名。  
 **Step 4.** 重新建立一個新的容器，選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到每個映像檔的環境設定，選擇適合的映像檔。
@@ -566,8 +566,8 @@ TWCC 容器所使用的儲存系統為高速檔案系統 (HFS)，目前不支援
  </summary>
 
 可參考網路上 Conda 和 Singularity 的使用說明文件，或參考以下的 tutorial 進行：  
-- [HowTo：建立 TWNIA2 容器](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-twnia2-create-sglrt-container-zh)
-- [HowTo：使用 Conda 管理套件與執行 Job](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-twnia2-conda-manage-packages-submit-job-zh)
+- [HowTo：建立 TWNIA2 容器](/docs/twnia2-hpc-cli/tutorials/create-twnia2-containers.md)
+- [HowTo：使用 Conda 管理套件與執行 Job](/docs/twnia2-hpc-cli/tutorials/conda-manage-package-submit-job.md)
 
 </details>
 
@@ -581,7 +581,7 @@ TWCC 容器所使用的儲存系統為高速檔案系統 (HFS)，目前不支援
 * /home 與/work 為您的個人 HFS 儲存空間，他人在使用上可能造成這兩個檔案夾中的資料毀損、遺失...等可能，即使您再開新容器也無法復原這些變動。
 * 分享計算資源會有資料安全的風險，請審慎考慮。
 
-因此，除為他人建立容器之外，您亦可以透過 [Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fhowto-service-access-service-zh)，將他人加入計畫中，該使用者即可自行運用容器資源。
+因此，除為他人建立容器之外，您亦可以透過 [Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](/docs/member/user-guides/member-key-quota/go-to-member-center.md)，將他人加入計畫中，該使用者即可自行運用容器資源。
 
 </details>
 

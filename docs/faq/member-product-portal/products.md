@@ -21,7 +21,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-product-zh'
 
 
 - <sup>[1]</sup> 註冊帳號及獲得 200 GB (/home 與 /work 各 100 GB)，可依需求增購空間。
-- <sup>[2]</sup> 自2021年9月1日起，國科會(原科技部)計畫下每個帳號之暫存工作目錄區域(/work) 1500 GB 內免費使用。系統僅提供預設配額 100 GB，若需調高配額請至<ins><a href = "https://man.twcc.ai/@twsdocs/howto-service-access-service-zh"> 會員中心 </a></ins> 調整。
+- <sup>[2]</sup> 自2021年9月1日起，國科會(原科技部)計畫下每個帳號之暫存工作目錄區域(/work) 1500 GB 內免費使用。系統僅提供預設配額 100 GB，若需調高配額請至<ins><a href = "../../member/user-guides/member-key-quota/go-to-member-center"> 會員中心 </a></ins> 調整。
 
 
 </details>
@@ -52,5 +52,5 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-product-zh'
 <details>
 
 <summary> Q4. TWCC 資訊安全相關認證與機制？</summary>
-關於 TWCC 的資安認證與機制請參考<ins><a href = "(https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fsecurity-overview-zh">此文件</a></ins>之說明。
+關於 TWCC 的資安認證與機制請參考<ins><a href = "/docs/vcs/user-guides/security/security-overview">此文件</a></ins>之說明。
 </details>
