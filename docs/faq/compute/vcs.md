@@ -22,8 +22,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-vcs-zh'
 
 請檢查個體的安全性群組或防火牆規則是否阻擋連線，相關文件請參考：
 
-- [安全性群組](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-sg-zh)
-- [基礎虛擬防火牆](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-vnf-zh)
+- [安全性群組](/docs/vcs/user-guides/security/security-group.md)
+- [基礎虛擬防火牆](/docs/vcs/user-guides/security/virtual-network-firewall.md)
 
 </details>
 
@@ -75,13 +75,17 @@ Use DNS no
 
 <summary> Q6. 如何使用帳號密碼連線 Linux 個體？</summary>
 
-請參考[此文件](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-vcs-create-usr-linux-zh)操作，即可使用帳號密碼連線 Linux 個體，可預防鑰匙對遺失或檔案毀損。
+請參考[此文件](/docs/vcs/tutorials/create-users.md)操作，即可使用帳號密碼連線 Linux 個體，可預防鑰匙對遺失或檔案毀損。
 
 </details>
 
 <details>
 
-<summary> Q7. SSH 連線虛擬運算個體時，出現錯誤訊息```WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!```該如何排除？</summary>
+<summary> 
+
+Q7. SSH 連線虛擬運算個體時，出現錯誤訊息```WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!```該如何排除？
+
+</summary>
 
 此訊息出現的原因為儲存在 local 端電腦的認證與虛擬運算個體不同，因此只要刪除 local 端電腦的認證資訊，並在連線時重新產生，即可避免發生此問題，您可以參考以下的指令
 
@@ -90,6 +94,7 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 ```
 
 <i class="fa fa-paperclip fa-20" aria-hidden="true"></i> <b>附註：</b>
+
 `Your_Path` 是您 local 端電腦的個人路徑，再次連線會出現以下訊息：
 
 ```Are you sure you want to continue connecting (yes/no)? ```
@@ -111,7 +116,7 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 <summary> Q9. 使用 Console 連線虛擬運算個體，是否有預設的密碼？</summary>
 
-無預設密碼，使用 Console 連線 Linux 個體前需先另外建立密碼，Windows 個體則輸入您建立個體時設定的密碼即可，請參考[快速除錯與維護工具：TWCC VCS Console](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-debug-tool-console-zh#Step-3-%E8%BC%B8%E5%85%A5%E9%80%A3%E7%B7%9A%E8%B3%87%E8%A8%8A%EF%BC%8C%E5%AE%8C%E6%88%90%E9%80%A3%E7%B7%9A)。
+無預設密碼，使用 Console 連線 Linux 個體前需先另外建立密碼，Windows 個體則輸入您建立個體時設定的密碼即可，請參考[快速除錯與維護工具：TWCC VCS Console](/docs/vcs/user-guides/manage-monitor/console)。
 
 </details>
 <div style={{height:10+'px'}}></div>
@@ -197,7 +202,7 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 <summary> Q1. 如何調整已建立好的虛擬運算個體規格？</summary>
 
-如選用的規格在建立後不符使用需求，需調整至較小規格或更大規格的個體，請參考文件：[HowTo：調整虛擬運算個體規格](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-vcs-resize-instance-zh)。
+如選用的規格在建立後不符使用需求，需調整至較小規格或更大規格的個體，請參考文件：[HowTo：調整虛擬運算個體規格](/docs/vcs/user-guides/manage-monitor/resize-instances.md)。
 
 </details>
 
@@ -242,7 +247,11 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 <details>
 
-<summary> Q2. 對虛擬運算個體安裝套件或進行更新，出現`E: Could not get lock /var/lib/apt/lists/lock`該如何解決？</summary>
+<summary> 
+
+Q2. 對虛擬運算個體安裝套件或進行更新，出現`E: Could not get lock /var/lib/apt/lists/lock`該如何解決？
+
+</summary>
 
 1. 安裝套件或進行更新時，可能產生許多類似與 lock 檔案相關的錯誤訊息。請您將 lock 檔案刪除後，再次執行您的任務。
 2. 建議改為使用映像檔 Ubuntu 20.04，可避免產生此問題。
@@ -265,7 +274,7 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 <summary> Q2. 如何將虛擬運算中資料定期備份至雲端物件儲存 (COS)？ </summary>
 
 您可透過 TWCC-CLI 與 `crontab -e` 進行定時建立映像檔設定。
-- TWCC-CLI 使用詳情請參考 [4-3. 上傳檔案至儲存體](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-3-%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88%E8%87%B3%E5%84%B2%E5%AD%98%E9%AB%94)。
+- TWCC-CLI 使用詳情請參考 [4-3. 上傳檔案至儲存體](https://github.com/twcc/TWCC-CLI)。
 - `crontab -e` 請參考 [crontab guru](https://crontab.guru/) 或 [crontab(5) - Linux man page](https://linux.die.net/man/5/crontab)。
 
 </details>
@@ -286,10 +295,10 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 請參考以下兩種下載方式：
 
 1. 透過雲端物件儲存服務 (COS)傳入本機，此方法不僅能達到資料傳輸的目的，更可以將個體資料備份至 COS：
-    - **Step 1.** [將資料備份到 COS](https://www.twcc.ai/doc?page=backup)。
-    - **Step 2.** 至 TWCC 使用者網站 COS 管理介面[下載檔案](https://www.twcc.ai/doc?page=object#%E4%B8%8B%E8%BC%89%E6%AA%94%E6%A1%88)，如需要一次下載多個檔案，可搭配[第三方軟體](https://www.twcc.ai/doc?page=object#%E4%BD%BF%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BB%9F%E9%AB%94%E7%AE%A1%E7%90%86%E6%AA%94%E6%A1%88)使用。
+    - **Step 1.** [將資料備份到 COS](/docs/cos/tutorials/backup-synchronize-restore.md)。
+    - **Step 2.** 至 TWCC 使用者網站 COS 管理介面[下載檔案](/docs/cos/user-guides/manage-objects/upload-download-files-create-folders.md)，如需要一次下載多個檔案，可搭配[第三方軟體](/docs/category/使用第三方軟體管理檔案)使用。
 
-2. [使用 MobaXterm 連線虛擬運算個體](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)，於頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
+2. [使用 MobaXterm 連線虛擬運算個體](/docs/vcs/user-guides/connecting/linux/from-windows.md)，於頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
 
 </details>
 
@@ -299,10 +308,10 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 請參考以下兩種上傳方式：
 1. 透過雲端物件儲存服務 (COS)
-    - **Step 1.** 將本機檔案[上傳至雲端物件儲存服務 (COS)](https://www.twcc.ai/doc?page=object#%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88)
-    - **Step 2.** [連線進入虛擬運算個體](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)
-    - **Step 3.** 透過內建之 TWCC-CLI 工具[將 COS 檔案下載到指定位置](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage)。
-3. [使用 MobaXterm 連線虛擬運算個體](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)，於頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
+    - **Step 1.** 將本機檔案[上傳至雲端物件儲存服務 (COS)](/docs/cos/user-guides/manage-objects/upload-download-files-create-folders.md)
+    - **Step 2.** [連線進入虛擬運算個體](/docs/vcs/user-guides/connecting/prerequisites.md)
+    - **Step 3.** 透過內建之 TWCC-CLI 工具[將 COS 檔案下載到指定位置](https://github.com/twcc/TWCC-CLI)。
+3. [使用 MobaXterm 連線虛擬運算個體](/docs/vcs/user-guides/connecting/linux/from-windows.md)，於頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
 
 </details>
 <div style={{height:10+'px'}}></div>
@@ -321,7 +330,7 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 停止虛擬運算個體後，浮動 IP (floating IP) 將會釋放回資源池，個體啟動後，將取得新的浮動 IP。
 
-若您的使用情境適用固定 IP，建議您訂閱並使用靜態 IP (static IP)。請參考 [彈性 IP ](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-eip-zh) 了解更多。
+若您的使用情境適用固定 IP，建議您訂閱並使用靜態 IP (static IP)。請參考 [彈性 IP ](/docs/vcs/user-guides/networking/elastic-ip.md) 了解更多。
 
 </details>
 
@@ -331,7 +340,7 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 浮動 IP 額度使用完後，您可以持續建立虛擬運算個體，但無法配置浮動 IP。若需要額外的 IP，請您訂閱靜態 IP (static IP) 使用。若有特殊需求，請洽客服人員。
 
-請參考 [彈性 IP 訂閱政策](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-eip-zh#%E5%BD%88%E6%80%A7-IP-%E8%A8%82%E9%96%B1%E6%94%BF%E7%AD%96) 了解更多。
+請參考 [彈性 IP 訂閱政策](/docs/vcs/user-guides/networking/elastic-ip.md#彈性-ip-訂閱政策) 了解更多。
 
 </details>
 
@@ -363,7 +372,7 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 若有啟用基礎虛擬網路防火牆，但不清楚規則是否設定正確，我們建議您先把防火牆關閉，並再次嘗試連線。
 
-有關基礎虛擬網路防火牆的設定，請參考[此文件](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-vnf-zh)，或洽詢技術支援：[isupport@twcc.ai](isupport@twcc.ai)。
+有關基礎虛擬網路防火牆的設定，請參考[此文件](/docs/vcs/user-guides/security/virtual-network-firewall.md)，或洽詢技術支援：[isupport@twcc.ai](isupport@twcc.ai)。
 
 </details>
 
@@ -373,7 +382,7 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 - Linux 個體預設開啟的埠為： 22、443
 - Windows 個體預設開啟的埠為： 22、443、9833
-  如需開啟額外的埠，請在安全性群組處進行設定，設定方法與步驟請參考[此文件](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-sg-zh)。
+  如需開啟額外的埠，請在安全性群組處進行設定，設定方法與步驟請參考[此文件](/docs/vcs/user-guides/security/security-group.md)。
 
 </details>
 
@@ -448,7 +457,7 @@ TWCC 沒有對虛擬運算個體內的網速進行限制，如果您發現傳輸
 <summary> Q3. 如何使虛擬運算個體進行自動建立映像檔？ </summary>
 
 您可透過 TWCC-CLI 與 `crontab -e` 進行定時建立映像檔設定。
-- TWCC-CLI 使用詳情請參考 [3-6. 虛擬運算個體映像檔](https://man.twcc.ai/@twccdocs/twcc-cli-v05#3-6-%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94%E5%BF%AB%E7%85%A7-TBD%E2%80%A6)。
+- TWCC-CLI 使用詳情請參考 [3-6. 虛擬運算個體映像檔](https://github.com/twcc/TWCC-CLI)。
 - `crontab -e` 請參考 [crontab guru](https://crontab.guru/) 或 [crontab(5) - Linux man page](https://linux.die.net/man/5/crontab)。
 
 </details>

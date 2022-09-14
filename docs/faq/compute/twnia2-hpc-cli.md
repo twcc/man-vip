@@ -13,7 +13,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-zh'
 
 <summary> Q1. 請問如何登入台灣杉二號(命令列介面)？</summary>
 
-使用 SSH 方式登入，登入節點為 ln01.twcc.ai，先輸入主機密碼再輸入OTP，即完成登入，詳細登入步驟請參考[此文件](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-twnia2-login-and-logout-zh)。
+使用 SSH 方式登入，登入節點為 ln01.twcc.ai，先輸入主機密碼再輸入OTP，即完成登入，詳細登入步驟請參考[此文件](/docs/twnia2-hpc-cli/user-guides/connect/login-logout.md)。
 
 </details>
 
@@ -29,7 +29,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-zh'
 
 <summary> Q3. 半年前登入過台灣杉二號 (命令列介面)，而最近想使用時卻無法成功登入?</summary>
 
-因為個人主機密碼時效是 180 天，如超過時效，需至 [Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 更改個人主機密碼，修改完成後再進行登入。
+因為個人主機密碼時效是 180 天，如超過時效，需至 [Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](/docs/member/user-guides/member-key-quota/go-to-member-center.md) 更改個人主機密碼，修改完成後再進行登入。
 </details>
 <div style={{height:10+'px'}}></div>
 
@@ -39,7 +39,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-zh'
 
 <summary> Q1. 台灣杉二號 (命令列介面) 是否可使用跨節點的運算？</summary>
 
-台灣杉二號 (命令列介面) 可透過 [Slurm](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-slurm-intro-zh) 指令索取計算資源，執行[跨節點高速運算](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-twnia2-run-parallel-job-container-zh)，將高負載的工作量平均分派，提升處理效率。
+台灣杉二號 (命令列介面) 可透過 [Slurm](/docs/category/slurm-指令) 指令索取計算資源，執行[跨節點高速運算](/docs/twnia2-hpc-cli/tutorials/ai-benchmark-container.md)，將高負載的工作量平均分派，提升處理效率。
 
 </details>
 
@@ -47,7 +47,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-zh'
 
 <summary> Q2. 使用跨節點運算，節點是系統自動選取或需手動選取？</summary>
 
-您可以使用 Slurm 指令選取節點，相關指令請參考[此文件](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-job-parameter-zh)。
+您可以使用 Slurm 指令選取節點，相關指令請參考[此文件](/docs/category/slurm-指令)。
 </details>
 
 <details>
@@ -65,8 +65,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-zh'
 
 <summary> Q1. 請問在台灣杉二號 (命令列介面) 如何部屬環境執行我的程式？</summary>
 
-1. Conda：使用簡單的 Conda 指令即可將套件安裝完成，並能切換至指定的虛擬環境，使用不同版本的 Python，解決多版本的相容問題，請參考[此文件](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-twnia2-conda-manage-packages-submit-job-zh)了解更多。
-2. Singularity：透過 Singularity 包裝您所需的套件與程式，建立可在台灣杉二號 (命令列介面)  服務執行運算工作的容器環境，並可以快速部署套件、搬移、以及分享，請參考[此文件](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-twnia2-create-sglrt-container-zh)了解更多。
+1. Conda：使用簡單的 Conda 指令即可將套件安裝完成，並能切換至指定的虛擬環境，使用不同版本的 Python，解決多版本的相容問題，請參考[此文件](/docs/twnia2-hpc-cli/tutorials/conda-manage-package-submit-job.md)了解更多。
+2. Singularity：透過 Singularity 包裝您所需的套件與程式，建立可在台灣杉二號 (命令列介面)  服務執行運算工作的容器環境，並可以快速部署套件、搬移、以及分享，請參考[此文件](/docs/twnia2-hpc-cli/tutorials/create-twnia2-containers.md)了解更多。
 
 
 </details>
@@ -84,7 +84,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-zh'
 
 <summary> Q3. 排程系統 Slurm 是什麼？</summary>
 
-請參考[此文件](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-slurm-intro-zh)有 Slurm 系統架構的詳細說明。
+請參考[此文件](/docs/twnia2-hpc-cli/user-guides/submit-job/slurm-intro.md)有 Slurm 系統架構的詳細說明。
 
 </details>
 
@@ -111,7 +111,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-zh'
 兩者儲存環境相同，但計算環境不同：
 
 - 開發型容器的計算環境是由 TWCC 容器映像檔所建置。
-- 而台灣杉二號則需使用者自行部署計算環境。 <i class="fa fa-lightbulb-o fa-20" aria-hidden="true"></i> <b>提示：</b> 台灣杉二號可使用 `module` 載入所需之套件，詳細使用方法請參考[此文件](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-module-intro-zh)。
+- 而台灣杉二號則需使用者自行部署計算環境。 <i class="fa fa-lightbulb-o fa-20" aria-hidden="true"></i> <b>提示：</b> 台灣杉二號可使用 `module` 載入所需之套件，詳細使用方法請參考[此文件](/docs/twnia2-hpc-cli/user-guides/modules/overview.md)。
 
 </details>
 <div style={{height:10+'px'}}></div>
@@ -154,12 +154,15 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-zh'
 
 <details>
 
-<summary> Q1. 使用台灣杉二號時出現錯誤訊息`QOSMaxSubmitJobPerUserLimit Error`？
+<summary> 
+
+Q1. 使用台灣杉二號時出現錯誤訊息`QOSMaxSubmitJobPerUserLimit Error`？
+
 </summary>
 
 此錯誤訊息顯示您提交超過 20 個計算工作上限 (**gtest** 為測試用 Queue，僅能提交 5 個工作)。
 
-若遇此情況，建議您先使用 `squeue` 指令查看任務狀態，再使用 `scancel` 取消狀態為等待中或運行中的任務，減少提交的任務數量。Queue 與計算資源使用說明可參考[此文件](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-queue-zh)。
+若遇此情況，建議您先使用 `squeue` 指令查看任務狀態，再使用 `scancel` 取消狀態為等待中或運行中的任務，減少提交的任務數量。Queue 與計算資源使用說明可參考[此文件](/docs/twnia2-hpc-cli/user-guides/slurm-commands/squeue.md)。
 
 </details>
 
@@ -173,6 +176,6 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-zh'
 
 此錯誤訊息顯示您在台灣杉二號的計算工作加總 GPUs 已達上限 (系統基本設定為 40 張 GPUs)。
 
-Queue 與計算資源使用說明可參考[此文件](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-twnia2-queue-zh)，如達到上限將不能提交工作，請減少索取 GPU 資源。
+Queue 與計算資源使用說明可參考[此文件](/docs/twnia2-hpc-cli/user-guides/slurm-commands/squeue.md)，如達到上限將不能提交工作，請減少索取 GPU 資源。
     
 </details>

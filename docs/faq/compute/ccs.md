@@ -395,7 +395,7 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 
 <summary> Q10. 如何於容器內與雲端物件儲存間傳輸檔案？ </summary>
 
-1. 請在容器內[安裝 TWCC CLI](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-install-linux-zh)。
+1. 請在容器內[安裝 TWCC CLI](https://github.com/twcc/TWCC-CLI)。
 2. 再參考[此文件](/docs/twnia2-hpc-cli/tutorials/access-cos.md)，使用 TWCC CLI 進行容器與雲端物件儲存的檔案傳輸。
 
 </details>
