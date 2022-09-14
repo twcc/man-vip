@@ -14,7 +14,7 @@ TWCC 提供安全性群組功能，使用者可透過設定安全規則進行虛
 
 :::info
 - 安全性群組功能是為各個虛擬運算個體設定個別的安全規則而設計，所以必須先建立至少一個可用的虛擬運算個體，才可以設定其安全群組規則。
-- 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh#%E5%AE%89%E5%85%A8%E6%80%A7%E7%BE%A4%E7%B5%84)。
+- 租戶管理員、租戶使用者對於安全性群組使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/networking-security#安全性群組)。
 :::
 
 <br/>
@@ -142,8 +142,6 @@ twccli ls vcs -secg -s 892486
 </TabItem>
 
 </Tabs>
-
-<br/>
 
 :::caution
 - 考量資安風險，CIDR 請勿設定 x.x.x.x"/0" (即與 0.0.0.0/0 等效) 之危險網段。
