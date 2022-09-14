@@ -92,10 +92,9 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9cba50a5788cf4a04152d259a29c296f.png)
 
 * 選擇分享的專案 (接收此分享的目標計畫)、建立映像檔名稱後，點選「**確定**」即跳轉至「**映像檔分享管理**」頁，進行分享的程序。
-    
-    
+
 ![](https://i.imgur.com/g2HnQk6.png)
-    
+
 :::info
 
 映像檔名稱前方預設帶有您所屬的計畫 (來源計畫) 編號，後方為原映像檔的名稱 (可編輯)，方便目標計畫了解映像檔分享來源。
@@ -103,11 +102,11 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 :::
 
 **分享管理**
-    
+
 進入「**映像檔分享管理**」頁面可檢視已分享的映像檔名稱、分享的專案、分享狀態、分享建立時間。
-    
-分享後，映像檔即進入 **`approved`** (分享中) 狀態，分享完成後呈現 **`finished`** (分享完成) 狀態，目標計畫即可選用此分享的映像檔[建立客製化個體](https://man.twcc.ai/@twccdocs/guide-vcs-create-custom-instance-zh)。
-    
+
+分享後，映像檔即進入 **`approved`** (分享中) 狀態，分享完成後呈現 **`finished`** (分享完成) 狀態，目標計畫即可選用此分享的映像檔[建立客製化個體](../create/create-custom-instances.md)。
+
 ![](https://i.imgur.com/vhE9VAy.png)
 
 :::info
@@ -167,4 +166,4 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 
 ## 以映像檔建立個體
 
-請參考[建立客製化個體](https://man.twcc.ai/@twccdocs/guide-vcs-create-custom-instance-zh)，以計畫內所建立的映像檔，或以其他計畫分享的映像檔，建立客製化個體。
+請參考[建立客製化個體](../create/create-custom-instances.md)，以計畫內所建立的映像檔，或以其他計畫分享的映像檔，建立客製化個體。
