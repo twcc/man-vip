@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 以下內容以 **v.8xsuper** 型號建立之個體，調整至 **v.super** 型號為操作範例，映像檔選用 Ubuntu。
 
 :::info
-完整型號、規格與價格之比較，請參考[<ins>價目表</ins>](https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#虛擬運算服務-Virtual-Compute-Service-VCS)。
+完整型號、規格與價格之比較，請參考[<ins>價目表</ins>](/docs/pricing.mdx#虛擬運算服務-virtual-compute-service-vcs)。
 :::
 
 <br/>
@@ -26,8 +26,8 @@ import TabItem from '@theme/TabItem';
 透過對虛擬運算個體建立映像檔，保存個體資料。
 
 :::tip
-1. 請問映像檔建立的時間需要多久？請參考[<ins>TWCC FAQ 虛擬運算服務 > 個體映像檔 > Q1</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-vcs-zh#%E5%80%8B%E9%AB%94%E5%BF%AB%E7%85%A7)。
-2. 如何縮減映像檔建立的時間？ 請參考[<ins>TWCC FAQ 虛擬運算服務 > 個體映像檔 > Q2</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-vcs-zh#%E5%80%8B%E9%AB%94%E5%BF%AB%E7%85%A7)。
+1. 請問映像檔建立的時間需要多久？請參考[<ins>TWCC FAQ 虛擬運算服務 > 個體映像檔 > Q1</ins>](/docs/faq/compute/vcs.md#個體映像檔)。
+2. 如何縮減映像檔建立的時間？ 請參考[<ins>TWCC FAQ 虛擬運算服務 > 個體映像檔 > Q2</ins>](/docs/faq/compute/vcs.md#個體映像檔)。
 :::
 
 - 進入「**虛擬個體詳細資料頁**」，確認需調整的個體規格（型號：**v.8xsuper**）
