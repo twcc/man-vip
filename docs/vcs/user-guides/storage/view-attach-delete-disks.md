@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 **資料磁碟** 建立後，您可以檢視磁碟資料、將磁碟連結至虛擬運算個體 (或與個體分離)、刪除磁碟。<br/>(*※ 系統磁碟目前不支援以下管理功能*)
 
 :::info
-租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-zh#%E8%99%9B%E6%93%AC%E7%A3%81%E7%A2%9F%E6%9C%8D%E5%8B%99)。
+租戶管理員、租戶使用者對於虛擬磁碟使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/storage.md#虛擬磁碟服務)。
 :::
 
 <br/>
@@ -88,7 +88,7 @@ twccli ls vds
 
 </TabItem>
 
-<TabItem value="TWCC CLI" label="TWCC CLI (尚未支援)">
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
 
 <br/>
 
@@ -98,10 +98,10 @@ twccli ls vds
 
 
 :::info
-1. 若需改為使用其他類型的磁碟，或需變更磁碟容量，請參考：[<ins>HowTo : 變更資料磁碟</ins>](https://man.twcc.ai/@twccdocs/howto-bss-replace-data-vol-zh)。
+1. 若需改為使用其他類型的磁碟，或需變更磁碟容量，請參考：[<ins>變更資料磁碟</ins>](../../tutorials/replace-data-disk.md)。
 2. 資料磁碟連結至虛擬運算個體後，需經初始化才能使用，步驟請參考：
-- [<ins>HowTo：初始化磁碟- Linux 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-zh)
-- [<ins>HowTo：初始化磁碟- Windows 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-zh)
+- [<ins>初始化磁碟- Linux 個體</ins>](../../tutorials/data-disk-init-linux.md)
+- [<ins>初始化磁碟- Windows 個體</ins>](../../tutorials/data-disk-init-windows.md)
 :::
 
 <br/>
@@ -110,7 +110,7 @@ twccli ls vds
 
 若需刪除資料磁碟，或需與其他虛擬運算個體連結，請先將磁碟自原虛擬運算個體分離，再執行其他動作。
 
-卸載、分離資料磁碟詳細步驟，請參考 [分離資料磁碟](https://man.twcc.ai/@twccdocs/vcs-vds-guide-detach-data-disk-zh)。
+卸載、分離資料磁碟詳細步驟，請參考[分離資料磁碟](./detach-data-disks.md)。
 
 <br/>
 
@@ -134,7 +134,7 @@ twccli ls vds
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_910467bce5c2fd908efdf45c606cdbed.png)
 
-- 或點選磁碟旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**刪除**」。
+- 或點選磁碟旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 > 點選「**刪除**」。
 - 或進入「**資料磁碟詳細資料**」頁 > 點選上方「**刪除**」。
 
 </TabItem>
