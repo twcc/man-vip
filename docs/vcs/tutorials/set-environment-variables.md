@@ -9,16 +9,16 @@ import TabItem from '@theme/TabItem';
 
 # 設定環境變數
 
-本文說明如何透過 TWCC 使用者網站、TWCC CLI，在建立[<ins>開發型容器</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-create-zh) / [<ins>虛擬運算個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh)時，指定您所需的環境變數，動態調整應用程式的設定，以符合您對環境的需求。
+本文說明如何透過 TWCC 使用者網站、TWCC CLI，在建立 [開發型容器](/docs/ccs-interactive-container/user-guides/create-connect/create-container) / [虛擬運算個體](../user-guides/create/create-instances.md) 時，指定您所需的環境變數，動態調整應用程式的設定，以符合您對環境的需求。
 
 :::info
 此功能僅適用特定映像檔：
-- 開發型容器：多數皆可使用 (Matlab (公開預覽版)、Custom Image 若需使用此功能，請洽<ins> <a href = "mailto:isupport@twcc.ai">技術支援服務</a> </ins>)。
+- 開發型容器：多數皆可使用 (Matlab (公開預覽版)、Custom Image 若需使用此功能，請洽<a href = "mailto:isupport@twcc.ai"><ins>技術支援服務</ins></a>)。
 - 虛擬運算個體：Linux 映像檔
 :::
 
 
-例如：若選用 [TensorFlow 映像檔](https://man.twcc.ai/@twccdocs/ccs-concept-image-main-zh/%2F%40twccdocs%2Fccs-concept-image-tensorflow-zh)建立容器，您在建立容器時，即可設定 [`TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH`](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-user-guide/index.html#tf_disable_cudnn_rnn_tensor_op_math)環境變數來開啟/關閉 Tensor Core math。
+例如：若選用 [TensorFlow 映像檔](/docs/ccs-interactive-container-concepts-images/tensorflow)建立容器，您在建立容器時，即可設定 [`TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH`](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-user-guide/index.html#tf_disable_cudnn_rnn_tensor_op_math)環境變數來開啟/關閉 Tensor Core math。
 
 
 TensorFlow 映像檔預設開啟 Tensor Core math：
@@ -38,11 +38,11 @@ TensorFlow 映像檔預設開啟 Tensor Core math：
 <TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 :::info
-以下以開發型容器為範例，虛擬運算個體也是相同的設定方式，在[<ins>建立個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh)時指定環境變數。
+以下以開發型容器為範例，虛擬運算個體也是相同的設定方式，在[<ins>建立個體</ins>](../user-guides/create/create-instances.md)時指定環境變數。
 :::
 
 
-在 [<ins>建立容器</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-create-zh) 時，在「**環境變數**」頁指定環境變數，並建立容器，即部署完成。
+[建立容器](/docs/ccs-interactive-container/user-guides/create-connect/create-container)時，在「**環境變數**」頁指定環境變數，並建立容器，即部署完成。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c1248dbb9deb8a4b57a4f8c8eddb5c36.png)
 
@@ -76,14 +76,14 @@ twccli mk ccs -envk TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH -envv 1
 
 ### Step 2. 確認環境變數
 
-[連線容器](https://man.twcc.ai/@twccdocs/guide-ccs-connect-zh)，並使用以下指令，可確認環境變數已寫入容器。
+[連線容器](/docs/ccs-interactive-container/user-guides/create-connect/connect-container)，並使用以下指令，可確認環境變數已寫入容器。
 
 ```bash
 echo $BUFFER
 ```
 
 :::info
-[<ins>連線虛擬運算個體</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-zh)，並使用以下指令確認環境變數已寫入個體。
+[<ins>連線虛擬運算個體</ins>](../user-guides/connecting/linux/from-windows.md)，並使用以下指令確認環境變數已寫入個體。
 
 ```bash
 echo $Key
