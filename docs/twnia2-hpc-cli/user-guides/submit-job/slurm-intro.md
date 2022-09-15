@@ -31,7 +31,7 @@ Slurmd 提供可容錯的分層通信機制，相關命令包含：sacct、sallo
 
 :::info
 - [1] 自2021年9月1日起，國科會(原科技部)計畫每個帳號之的暫存工作目錄區域(/work)免費額度，由原本的 100 GB，提高到 1500 GB。
-- [2] 如空間不敷使用時，您可以到[<ins>會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](/docs/member/user-guides/member-key-quota/go-to-member-center.md) 購買擴充。購買價格與調整方式請參考[<ins>價目表</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS)。
+- [2] 如空間不敷使用時，您可以到[<ins>會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](/docs/member/user-guides/member-key-quota/go-to-member-center.md) 購買擴充。購買價格與調整方式請參考[<ins>價目表</ins>](../../../pricing.mdx)。
 :::
 
 ### 系統運算節點
