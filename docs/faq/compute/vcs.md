@@ -274,7 +274,7 @@ Q2. 對虛擬運算個體安裝套件或進行更新，出現`E: Could not get l
 <summary> Q2. 如何將虛擬運算中資料定期備份至雲端物件儲存 (COS)？ </summary>
 
 您可透過 TWCC-CLI 與 `crontab -e` 進行定時建立映像檔設定。
-- TWCC-CLI 使用詳情請參考 [4-3. 上傳檔案至儲存體](https://github.com/twcc/TWCC-CLI)。
+- TWCC-CLI 使用詳情請參考 [4-3. 上傳檔案至儲存體](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fcli-overview-zh)。
 - `crontab -e` 請參考 [crontab guru](https://crontab.guru/) 或 [crontab(5) - Linux man page](https://linux.die.net/man/5/crontab)。
 
 </details>
@@ -310,7 +310,7 @@ Q2. 對虛擬運算個體安裝套件或進行更新，出現`E: Could not get l
 1. 透過雲端物件儲存服務 (COS)
     - **Step 1.** 將本機檔案[上傳至雲端物件儲存服務 (COS)](/docs/cos/user-guides/manage-objects/upload-download-files-create-folders.md)
     - **Step 2.** [連線進入虛擬運算個體](/docs/vcs/user-guides/connecting/prerequisites.md)
-    - **Step 3.** 透過內建之 TWCC-CLI 工具[將 COS 檔案下載到指定位置](https://github.com/twcc/TWCC-CLI)。
+    - **Step 3.** 透過內建之 TWCC-CLI 工具[將 COS 檔案下載到指定位置](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fcli-overview-zh)。
 3. [使用 MobaXterm 連線虛擬運算個體](/docs/vcs/user-guides/connecting/linux/from-windows.md)，於頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
 
 </details>
@@ -457,7 +457,7 @@ TWCC 沒有對虛擬運算個體內的網速進行限制，如果您發現傳輸
 <summary> Q3. 如何使虛擬運算個體進行自動建立映像檔？ </summary>
 
 您可透過 TWCC-CLI 與 `crontab -e` 進行定時建立映像檔設定。
-- TWCC-CLI 使用詳情請參考 [3-6. 虛擬運算個體映像檔](https://github.com/twcc/TWCC-CLI)。
+- TWCC-CLI 使用詳情請參考 [3-6. 虛擬運算個體映像檔](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fcli-overview-zh)。
 - `crontab -e` 請參考 [crontab guru](https://crontab.guru/) 或 [crontab(5) - Linux man page](https://linux.die.net/man/5/crontab)。
 
 </details>
