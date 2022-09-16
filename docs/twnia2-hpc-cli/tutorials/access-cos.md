@@ -7,9 +7,9 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-twnia2-acces
 # 存取雲端物件儲存 (COS)
 
 
-[ TWCC 台灣杉二號 (命令列介面) (TWNIA2 (HPC CLI))](https://www.twcc.ai/doc?page=hpc_cli) 除了可使用[高速檔案系統 (Hyper File System, HFS)](https://www.twcc.ai/doc?page=hfs) 作為運算的儲存空間外，也可將較少存取的靜態資料存放於 [TWCC 雲端物件儲存 (Cloud Object Storage, COS)](https://www.twcc.ai/doc?page=object)。
+[TWCC 台灣杉二號 (命令列介面) (TWNIA2 (HPC CLI))](../overview.md) 除了可使用[高速檔案系統 (Hyper File System, HFS)](../../hfs/overview.md) 作為運算的儲存空間外，也可將較少存取的靜態資料存放於 [TWCC 雲端物件儲存 (Cloud Object Storage, COS)](../../cos/overview.md)。
 
-本文將介紹 2 種方式，教學 TWNIA2 (HPC CLI) 如何存取 [TWCC 雲端物件儲存 (Cloud Object Storage, COS)](https://www.twcc.ai/doc?page=object) 空間的資料：
+本文將介紹 2 種方式，教學 TWNIA2 (HPC CLI) 如何存取 [TWCC 雲端物件儲存 (Cloud Object Storage, COS)](../../cos/overview.md) 空間的資料：
 
 1. **S3 用戶端工具**
     透過 HTTPS (超級文字傳輸安全協定) 上傳及下載檔案，使用者可以在**登入節點**，以及**提交 job 到計算節點時**使用。
@@ -48,7 +48,7 @@ S3 用戶端工具種類繁多，以下介紹的工具以 CLI 操作形式為主
 ### 安裝及設定
 
 - 存取 TWCC 雲端物件儲存服務需輸入 **Access Key** 與 **Secret Key**。請登入至 [TWCC 使用者網站](https://www.twcc.ai/) > 雲端物件儲存服務頁面查看。
-- 至`雲端物件儲存 (計畫成員共享空間)` 或 `私有雲端物件儲存 (個人空間)` 之**第三方軟體下載**頁面，即可找到 Key 資訊。
+- 至 `雲端物件儲存 (計畫成員共享空間)` 或 `私有雲端物件儲存 (個人空間)` 之**第三方軟體下載**頁面，即可找到 Key 資訊。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5db9d1f9718fc6c8ed4dee7a4995bee4.png)
 
@@ -92,7 +92,7 @@ secret_key = <COS Secret Key>
 # 使用 pip3 安裝
 pip3 install TWCC-CLI --user
 ```
-- **如何加入金鑰、選擇計畫，進入 TWCC CLI 環境，詳情可參考 [TWCC CLI 文件](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-signin-zh)**。
+- **如何加入金鑰、選擇計畫，進入 TWCC CLI 環境，詳情可參考 [TWCC CLI 文件](https://github.com/twcc/TWCC-CLI)**。
 
 
 <!-- #### MCLI
@@ -182,7 +182,7 @@ twccli rm cos -bkt mytwccbucket
 - S3cmd
 可以下 `$ s3cmd --help` 參考，或是查閱 [<ins>s3cmd GitHub</ins>](https://github.com/s3tools/s3cmd#simple-s3cmd-howto)
 - TWCC CLI
-可以下 `$ twccli --help` 參考，或是查閱 [<ins>TWCC CLI 文件</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage)
+可以下 `$ twccli --help` 參考，或是查閱 [<ins>TWCC CLI 文件</ins>](https://github.com/twcc/TWCC-CLI)
 :::
 
 <br/>
@@ -201,7 +201,7 @@ twccli rm cos -bkt mytwccbucket
 
 ### 建立 COS bucket
 
-- 請參考 TWCC [雲端物件儲存](https://www.twcc.ai/doc?page=object)手冊，並在使用者網站先建立 1 個 COS bucket。(Bucket 的管理無法透過 TWNIA2 操作)
+- 請參考 TWCC [雲端物件儲存](../../cos/overview.md)手冊，並在使用者網站先建立 1 個 COS bucket。(Bucket 的管理無法透過 TWNIA2 操作)
 - 登入 ln01.twcc.ai 後，在自己帳號下創立 `~/mount_cos` 資料夾：
 
 ```bash
@@ -267,6 +267,7 @@ s3fs mytwccbucket ~/mount_cos -o url=https://cos.twcc.ai/ -o use_path_request_st
 # 寫入一個空檔案，檔名為 myfile
 touch ~/mount_cos/myfile
 ```
+
 此時在 TWCC 網頁的雲端物件儲存管理，點選`mytwccbucket`，可以查看到內容新增了`myfile`檔案。
 
 <br/>
@@ -279,7 +280,6 @@ touch ~/mount_cos/myfile
 ```bash
 cd ~/
 ```
-
 
 再執行卸載指令。
 
