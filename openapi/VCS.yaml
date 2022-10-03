@@ -1,13 +1,13 @@
 openapi: 3.0.3
 servers:
-  - url: http://{apigateway}/api/v3/{ApiHost}/
+  - url: https://{apigateway}/api/v3/{ApiHost}/
     variables:
       apigateway:
         default: apigateway.twcc.ai
       ApiHost:
         default: openstack-taichung-default-2
 info:
-  version: 1.3.2
+  version: 1.5.0
   title: VCS API
   description: |
     This is VCS API.
@@ -149,6 +149,21 @@ paths:
       description: Get assets reports for the projects.
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
+        - name: begin_time
+          in: query
+          description: Default is two hours before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the util before the end time. Default is now.
+          schema:
+            type: string
+        - name: user
+          in: query
+          description: user UUID
+          schema:
+            type: string
         - $ref: '#/components/parameters/ApiHostParam'
       responses:
         200:
@@ -156,13 +171,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  id:
-                    type: integer
-                    format: int64
-                  site_extra_prop:
-                    $ref: '#/components/schemas/GroupAssetsSerializer'
+                $ref: '#/components/schemas/GroupAssetsSerializer'
   /project_quotas/:
     get:
       tags:
@@ -1181,7 +1190,7 @@ paths:
     put:
       tags: 
       - volume
-      summary: 連結或段開VM
+      summary: Update status or extend size of a volume
       parameters: 
         - $ref: '#/components/parameters/VolumeIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -1196,7 +1205,28 @@ paths:
                   type: integer
                 status:
                   type: string
-                  example: extend
+                  enum:
+                  - attach
+                  - detach
+                  - extend
+                size:
+                  type: integer
+            examples:
+              attachServer example:
+                summary: Example with attach Server
+                value:
+                  server: 0
+                  status: attach
+              detachServer example:
+                summary: Example with detach Server
+                value:
+                  server: 0
+                  status: detach
+              extendSize example:
+                summary: Example with extend Size
+                value:
+                  size: 0
+                  status: extend
       responses:
         200:
           description: OK
@@ -1688,7 +1718,12 @@ paths:
             type: string
         - name: x-extra-property-keypair
           in: header
-          description: The extra property of keypair (Just for example)
+          description: Required when use linux os，choose at least one with x-extra-property-password
+          schema:
+            type: string
+        - name: x-extra-property-password
+          in: header
+          description: Required when use windows os，choose at least one with x-extra-property-keypair
           schema:
             type: string
         - name: x-extra-property-private-network
@@ -1702,24 +1737,29 @@ paths:
           schema:
             type: string
             enum:
-              - hdd
-              - ssd
-              - LUKS-hdd
-              - LUKS-ssd
-            default: hdd
+              - floating
+              - nofloating
         - name: x-extra-property-volume-size
           in: header
           description: Volume Size
           schema:
-            type: string
+            type: integer
         - name: x-extra-property-volume-type
           in: header
           description: Volume Type
           schema:
             type: string
             enum:
-              - floating
-              - nofloating
+              - hdd
+              - ssd
+              - LUKS-hdd
+              - LUKS-ssd
+            default: hdd
+        - name: x-extra-property-system-volume-size
+          in: header
+          description: System Volume Size
+          schema:
+            type: integer
         - name: x-extra-property-system-volume-type
           in: header
           description: System Volume Type
@@ -1727,7 +1767,7 @@ paths:
             type: string
             enum:
               - local_disk
-              - block_storage-ssd-thick
+              # - block_storage-ssd-thick
               - block_storage-hdd
             default: block_storage-hdd
         - name: x-extra-property-availability-zone
@@ -1963,6 +2003,47 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/FirewallSerializer'
+    post:
+      tags:
+      - firewall
+      summary: create a firewall
+      description: Create a firewall, 'rules' is an optional parameter to define filrewall
+        rules list for this firewall. And 'associate_networks' is another optional
+        parameter to define which private networks list associate to this firewall.
+      parameters:
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: Post
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                project:
+                  type: integer
+                  format: int32
+                rules:
+                  type: array
+                  items:
+                    type: integer
+                    format: int32
+                associate_networks:
+                  type: array
+                  items:
+                    type: integer
+                    format: int32
+                desc:
+                  type: string
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FirewallSerializer'
   /firewalls/{firewall_id}/:
     get:
       tags:
@@ -1979,6 +2060,53 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/FirewallDetailSerializer'
+    patch:
+      tags:
+      - firewall
+      summary: update a firewall
+      description: update a firewall
+      parameters:
+        - $ref: '#/components/parameters/FirewallIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: Patch
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rules:
+                  type: array
+                  items:
+                    type: integer
+                    format: int32
+                associate_networks:
+                  type: array
+                  items:
+                    type: integer
+                    format: int32
+                desc:
+                  type: string
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FirewallDetailSerializer'
+    delete:
+      tags:
+      - firewall
+      summary: delete a firewall
+      description: delete a firewall
+      parameters:
+        - $ref: '#/components/parameters/FirewallIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
   /firewall_rules/:
     get:
       tags:
@@ -1997,6 +2125,63 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/FirewallRuleSerializer'
+    post:
+      tags:
+      - firewall
+      summary: create a firewall rule
+      description: create a firewall rule
+      parameters:
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: Post
+        content:
+          application/json:
+            schema:
+              required:
+              - name
+              - project
+              properties:
+                name:
+                  type: string
+                  description: Firewall rule name
+                project:
+                  type: integer
+                  description: Project ID
+                  format: int32
+                protocol:
+                  type: string
+                  description: Firewall rule IP protocol
+                  enum:
+                  - icmp
+                  - tcp
+                  - udp
+                action:
+                  type: string
+                  description: The action that the API performs on traffic
+                  enum:
+                  - allow
+                  - deny
+                  - reject
+                destination_ip_address:
+                  type: string
+                  description: The destination IPv4 or IPv6 address or CIDR
+                destination_port:
+                  type: string
+                  description: 'The destination port or port range ex: (80:90)'
+                source_ip_address:
+                  type: string
+                  description: The source IPv4 or IPv6 address or CIDR
+                source_port:
+                  type: string
+                  description: 'The source port or port range ex: (80:90)'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FirewallRuleSerializer'
   /firewall_rules/{firewall_rule_id}/:
     get:
       tags:
@@ -2015,7 +2200,67 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/FirewallRuleDetailSerializer'
-  /secret/:
+    delete:
+      tags:
+      - firewall
+      summary: delete a firewall rule
+      description: delete a firewall rule
+      parameters:
+        - $ref: '#/components/parameters/FirewallRuleIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
+    patch:
+      tags:
+      - firewall
+      summary: update a firewall rule
+      description: update a firewall rule
+      parameters:
+        - $ref: '#/components/parameters/FirewallRuleIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: Patch
+        content:
+          application/json:
+            schema:
+              properties:
+                protocol:
+                  type: string
+                  description: Firewall rule IP protocol
+                  enum:
+                  - icmp
+                  - tcp
+                  - udp
+                action:
+                  type: string
+                  description: The action that the API performs on traffic
+                  enum:
+                  - allow
+                  - deny
+                  - reject
+                destination_ip_address:
+                  type: string
+                  description: The destination IPv4 or IPv6 address or CIDR
+                destination_port:
+                  type: string
+                  description: 'The destination port or port range ex: (80:90)'
+                source_ip_address:
+                  type: string
+                  description: The source IPv4 or IPv6 address or CIDR
+                source_port:
+                  type: string
+                  description: 'The source port or port range ex: (80:90)'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FirewallRuleDetailSerializer'
+  /secrets/:
     get:
       tags:
         - secret
@@ -2842,6 +3087,8 @@ components:
           type: string
         flavor:
           type: string
+        desc:
+          type: string
         hostname:
           type: string
         id:
@@ -2868,9 +3115,29 @@ components:
         site:
           type: integer
           format: int64
+        status_reason:
+          type: string
         status:
           type: string
-          enum: [start, stop, reboot, shelve, unshelve]
+          enum:
+            - MIGRATING
+            - ASSOCIATING
+            - DISASSOCIATING
+            - SUSPENDED
+            - REBOOT
+            - STOPPING
+            - SHUTOFF
+            - SHUTOFF
+            - STARTING
+            - RESIZE
+            - VERIFY_RESIZE
+            - REVERT_RESIZE
+            - ERROR
+            - DELETED
+            - SHELVING
+            - SHELVED_OFFLOADED
+            - QUEUEING
+            - SPAWNING
         fqdn:
           type: string
     ServerNetObject:
@@ -2989,7 +3256,23 @@ components:
           format: int64
         status:
           type: string
-          enum: [start, stop, reboot, suspend, resume, shelve, unshelve]
+          description: may be null
+          enum: 
+            - Unshelving
+            - Shelving
+            - Starting
+            - Ready
+            - Error
+            - Suspending
+            - Stopping
+            - Deleting
+            - NotReady
+            - Updating
+            - Resuming
+            - Deleted
+            - Initializing
+            - Queueing
+            - null
         is_preemptive:
           type: boolean
         user:
@@ -3743,7 +4026,12 @@ components:
         detail:
           $ref: '#/components/schemas/AssetsDetailObject'
         summary:
-          $ref: '#/components/schemas/AssetsSummaryObject'
+          type: object
+          properties:
+            VM:
+              type: array
+              items:
+                $ref: '#/components/schemas/AssetsSummaryObject'
     AssetsDetailObject:
       type: object
       properties:
@@ -4196,35 +4484,35 @@ components:
     ProjectInPathParam:
       name: project_id
       in: path
-      description: 專案ID
+      description: Project ID
       required: true
       schema:
         type: integer
     ProjectInQueryParam:
       name: project
       in: query
-      description: 需要project ID才能請求
+      description: Project ID is required to request
       required: true
       schema:
         type: integer
     ServerInQueryParam:
       name: server
       in: query
-      description: server ID，需與loadbalancer ID至少選一個
+      description: server ID，choose at least one with loadbalancer ID
       required: false
       schema:
         type: integer
     LoadBalancerInQueryParam:
       name: loadbalancer
       in: query
-      description: loadbalancer ID，需與server ID至少選一個
+      description: loadbalancer ID，choose at least one with server ID
       required: false
       schema:
         type: integer
     SolutionsIDParam:
       name: solutions_id
       in: path
-      description: 方案ID
+      description: Solution ID
       required: true
       schema:
         type: integer
@@ -4238,7 +4526,7 @@ components:
     SecurityGroupIDParam:
       name: security_group_id
       in: path
-      description: 安全性群組ID
+      description: Security Group ID
       required: true
       schema:
         type: string
@@ -4344,7 +4632,7 @@ components:
     ApiHostParam:
       name: x-api-host
       in: header
-      description: 認證必要參數
+      description: Authentication Required Parameters
       required: true
       schema:
         type: string

@@ -1,0 +1,635 @@
+openapi: 3.0.0
+servers:
+  - url: https://{apigateway}/api/v3/{ApiHost}/
+    variables:
+      apigateway:
+        default: apigateway.twcc.ai
+      ApiHost:
+        default: slurm-D-twcc
+info:
+  version: 1.0.0
+  title: Slurm API
+  description: |
+    This is Slurm API.
+security:
+  - ApiKeyAuth: []
+tags:
+  - name: project
+  - name: job
+  - name: global
+paths:
+  /projects/:
+    get:
+      tags:
+        - project
+      summary: List projects
+      description: List projects
+      parameters:
+        - in: query
+          name: name
+          description: The name of the project
+          required: false
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GroupSerializer'
+  /projects/{project_id}/:
+    get:
+      tags:
+        - project
+      summary: Get details of a project
+      description: Get details of a project
+      parameters:
+        - $ref: '#/components/parameters/ProjectInPathParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupDetailSerializer'
+  /jobs/:
+    get:
+      tags:
+      - job
+      summary: List jobs
+      description: List jobs
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  required:
+                  - create_time
+                  - id
+                  - name
+                  - project
+                  - status
+                  - user
+                  type: object
+                  properties:
+                    create_time:
+                      type: string
+                      format: date-time
+                    id:
+                      type: integer
+                      format: int64
+                    name:
+                      type: string
+                    project:
+                      type: integer
+                      format: int64
+                    status:
+                      type: string
+                      enum:
+                      - submitted
+                      - running
+                      - completed
+                      - Error
+                    user:
+                      $ref: '#/components/schemas/UserSerializer'
+    post:
+      tags:
+      - job
+      summary: Create job
+      description: Create job
+      parameters:
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: Request body
+        content:
+          application/json:
+            schema:
+              required:
+              - name
+              - project
+              - scripts
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Job name
+                project:
+                  type: integer
+                  format: int64
+                  description: Project ID
+                desc:
+                    type: string
+                scripts:
+                  type: string
+                  description: The scripts need to be executed in the image
+        required: true
+      responses:
+        201:
+          description: Created
+          content:
+            application/json:
+              schema:
+                properties:
+                  create_time:
+                    type: string
+                    format: date-time
+                  id:
+                    type: integer
+                    format: int64
+                  desc:
+                    type: string
+                  name:
+                    type: string
+                    description: Job name
+                  project:
+                    type: integer
+                    format: int64
+                    description: Project ID
+                  scripts:
+                    type: string
+                    description: The scripts need to be executed in the image
+                  status:
+                    type: string
+                  user:
+                    $ref: '#/components/schemas/UserSerializer'
+  /jobs/{job_id}/:
+    get:
+      tags:
+      - job
+      summary: Get details of a job
+      description: Get details of a job
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  create_time:
+                    type: string
+                    format: date-time
+                  id:
+                    type: integer
+                    format: int64
+                  desc:
+                    type: string
+                  name:
+                    type: string
+                    description: Job name
+                  project:
+                    type: integer
+                    format: int64
+                    description: Project ID
+                  scripts:
+                    type: string
+                    description: The scripts need to be executed in the image
+                  status:
+                    type: string
+                  partition:
+                    type: string
+                  now_slurm_job_id:
+                    type: integer
+                  user:
+                    $ref: '#/components/schemas/UserSerializer'
+    delete:
+      tags:
+      - job
+      summary: Delete a job
+      description: Delete a job
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
+    patch:
+      tags:
+      - job
+      summary: Update a Job
+      description: Update a Job
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: Request body
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                desc:
+                  type: string
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  create_time:
+                    type: string
+                    format: date-time
+                  id:
+                    type: integer
+                    format: int64
+                  desc:
+                    type: string
+                  name:
+                    type: string
+                    description: Job name
+                  project:
+                    type: integer
+                    format: int64
+                    description: Project ID
+                  scripts:
+                    type: string
+                    description: The scripts need to be executed in the image
+                  status:
+                    type: string
+                  user:
+                    $ref: '#/components/schemas/UserSerializer'
+  /jobs/{job_id}/{action}/:
+    post:
+      tags:
+      - job
+      summary: start or stop a job
+      description: start or stop a job
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - name: action
+          in: path
+          required: true
+          schema:
+            type: string
+            enum:
+            - submit
+            - stop
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  create_time:
+                    type: string
+                    format: date-time
+                  action:
+                    type: string
+                  result:
+                    type: string
+  /jobs/{job_id}/runs/:
+    get:
+      tags:
+      - job
+      summary: List job record
+      description: List job record
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - name: begin_time
+          in: query
+          description: by submit_time,Default is one month before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: by submit_time,Default is now.
+          schema:
+            type: string
+        - name: status
+          in: query
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    slurm_job_id:
+                      type: integer
+                    submit_time:
+                      type: string
+                      format: date-time
+                    start_time:
+                      type: string
+                      format: date-time
+                    end_time:
+                      type: string
+                      format: date-time
+                    status:
+                      type: string
+                      enum:
+                      - submitted
+                      - running
+                      - completed
+                      - Error
+  /jobs/{job_id}/runs/{slurm_job_id}/logs/:
+    get:
+      tags:
+      - job
+      summary: Get slurm job logs
+      description: Get slurm job logs
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - name: slurm_job_id
+          in: path
+          description: slurm job ID
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /jobs/{job_id}/queue/:
+    get:
+      tags:
+      - job
+      summary: get queue by job
+      description: get queue by job
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    NODES:
+                      type: string
+                    NODELIST:
+                      type: string
+                      description: ST ON ONPD is Reason
+                    USER:
+                      type: string
+                    NAME:
+                      type: string
+  /jobs/queue/:
+    get:
+      tags:
+      - job
+      summary: get queue by partition
+      description: get queue by partition
+      parameters:
+        - name: partition
+          in: query
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    PARTITION:
+                      type: string
+                    TIME:
+                        type: string
+                        format: date-time
+                    NODES:
+                      type: string
+                    NODELIST:
+                      type: string
+                      description: ST ON ONPD is Reason
+                    USER:
+                      type: string
+                    NAME:
+                      type: string
+                    ST:
+                      type: string
+                    JOBID:
+                      type: integer
+  /modules/:
+    get:
+      tags:
+      - global
+      summary: List job modules
+      description: List job modules
+      parameters:
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      description: modules name
+                      type: string
+                    command:
+                      type: string
+                    desc:
+                      type: string
+  /partition/:
+    get:
+      tags:
+      - global
+      summary: List partition
+      description: List partition
+      parameters:
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      description: Partition name
+                      type: string
+                    state:
+                      description: Partition state
+                      type: string
+                    total_cpus:
+                      description: Total cpus in partition
+                      type: string
+                    total_nodes:
+                      description: Total number of nodes in partition
+                      type: string
+                    priority_job_factor:
+                      description: job priority weight factor
+                      type: string
+                    max_time_limit:
+                      description: Max time limit per job
+                      type: string
+                    maximum_memory_per_node:
+                      description: maximum memory per allocated CPU (MiB)
+                      type: string
+                    maximum_cpus_per_node:
+                      description: maximum allocated CPUs per node
+                      type: integer
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-api-key
+  schemas:
+    GroupSerializer:
+      type: object
+      properties:
+        matchLabels:
+          type: array
+          items:
+            type: string
+        id:
+          format: int64
+          type: integer
+        name:
+          type: string
+        platform:
+          type: string
+        transparent_mode:
+          type: boolean
+      required:
+        - matchLabels
+        - id
+        - name
+        - platform
+        - transparent_mode
+    GroupDetailSerializer:
+      type: object
+      properties:
+        desc:
+          type: string
+        id:
+          format: int64
+          type: integer
+        matchLabels:
+          type: array
+          items:
+            type: string
+            example: twsc
+        name:
+          type: string
+          example: ENT123456
+        status:
+          type: string
+          example: Ready
+        status_reason:
+          type: string
+        tm_uuid:
+          type: string
+        transparent_mode:
+          type: boolean
+          example: false
+        uuid:
+          type: string
+          format: uuid
+      required:
+        - desc
+        - id
+        - matchLabels
+        - name
+        - status
+        - status_reason
+        - tm_uuid
+        - transparent_mode
+        - uuid
+    UserSerializer:
+      required:
+      - display_name
+      - email
+      - id
+      - username
+      type: object
+      properties:
+        id:
+          type: string
+        display_name:
+          type: string
+        username:
+          type: string
+        email:
+          type: string
+  parameters:
+    ProjectInQueryParam:
+      name: project
+      in: query
+      description: Project ID is required to request
+      required: true
+      schema:
+        type: integer
+    ProjectInPathParam:
+      name: project_id
+      in: path
+      description: Project ID
+      required: true
+      schema:
+        type: integer
+    JobIDParam:
+      name: job_id
+      in: path
+      description: Job ID
+      required: true
+      schema:
+        type: integer
+        format: int32
+    RunIDParam:
+      name: run_id
+      in: path
+      description: Run ID
+      required: true
+      schema:
+        type: integer
+        format: int32
+    ApiHostParam:
+      name: x-api-host
+      in: header
+      description: Authentication Required Parameters
+      required: true
+      schema:
+        type: string
+        default: slurm-D-twcc
