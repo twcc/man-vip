@@ -7,7 +7,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-crea
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Create data disk
+# Create data disks
 
 If the storage space of your VCS instance is insufficient, you can create data disks. Then, attach the disks to the instance, and initialize the disks for use.
 
@@ -19,7 +19,7 @@ If the storage space of your VCS instance is insufficient, you can create data d
 
 **1. Create a data disk when creating a VCS instance**
 
-- You can create a data disk when creating your [<ins>VCS instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-en) on **STORAGE** tab (can only create 1 disk and specify only the disk type and size).
+- You can create a data disk when creating your [<ins>VCS instance</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/creation/vcs-instances) on the **STORAGE** tab. (Only 1 disk can be created and only type and size can be specified, but no name can be assigned.)
 
 **2. Create a data disk on Data Disk Management page**
 
@@ -28,8 +28,13 @@ If you need to create more disks, please follow the instructions below:
 
 * Click **Virtual Disk Service (VDS)** from the service list. On the **Data Disk Management** page, click **＋CREATE**.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6668cf5d5b790061f3efb1764915cd95.png)
 
-* Fill in the data disk name, description, whether the data disk newly created or restored from a snapshot, size (GB), and disk type (HDD or SSD), and then click **NEXT: REVIEW & CREATE>**.
+:::tip
+You can click on the asterisk to the left of the service in "**All Services**" <i class="fa fa-star-o" aria-hidden="true"></i> and pin your frequently used services to "**My Favorite Services**" to speed up the process.
+:::
+
+* Fill in the data disk name, description, whether the data disk is newly created or restored from a snapshot, size (GB), and disk type (HDD or SSD), and then click **NEXT: REVIEW & CREATE>**.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_30e5b2632e35e15bda8378a625e74a07.png)
 
@@ -43,7 +48,7 @@ If you need to create more disks, please follow the instructions below:
 
 * Review the configurations of the data disk and then click **CREATE**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3f58724e9c6d407f059cfcedb52165d3.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a7948cfc0763146b7b0e7d170a06a35f.png)
 
 
 </TabItem>
@@ -52,7 +57,7 @@ If you need to create more disks, please follow the instructions below:
 
 
 
-**Commands**
+**Command**
 
 
 ```bash
@@ -60,7 +65,8 @@ twccli mk vcs [-n]      # Data disk name
               [-sz]     # Data disk size (GB)
 ```
 :::info
-2. If you do not specify the optional parameters, the disk will be created with default settings:
+1. The parameters in the square brackets **[ ]** are optional and the rest are required.
+2. Without optional parameters, the data disk will be created with the default settings.:
 
 | Disk type | Name |Disk size|
 | -------- | -------- | -------- | 
@@ -70,7 +76,7 @@ twccli mk vcs [-n]      # Data disk name
 
 <br/>
 
-**Examples**
+**Example**
 
 
 - Create a data disk named **`clitest`**, and disk size is **`10 GB`**.
