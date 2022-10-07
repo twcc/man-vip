@@ -9,25 +9,24 @@ import TabItem from '@theme/TabItem';
 
 # Container ports (service ports)
 
-TWCC interactive containers open port 22, 8888, 5000, 5001, 5002. A total of 5 **target ports** are provided for external services running on containers.
+TWCC interactive containers provide 5 **target ports**, port 22, 8888, 5000, 5001, 5002, for external services running on the containers.
 
-With the automatic association of container ports by default, the SSH server runs on port 22, and Jupyter Notebook runs on port 8888. Also, automatically complete the association. Therefore, you are able to use these two methods to connect and operate containers immediately after the container creation.
+By default, the container has SSH server run on port 22 and Jupyter Notebook run on port 8888 with association done automatically, so you can use both ways to connect and operate the container immediately after the container is created.
 
-==**Need to update AI inference link:exclamation:**==<br/>
-The custom **target ports** are: 5000, 5001, and 5002. You can set the daemon of the service running on a container to one of the target ports, and associate it with the public port. After that, the system will configure a corresponding **public port (50000 ~ 60000)**. You can expose your service with use the public IP and the public port. (e.g., [AI inference ](https://man.twcc.ai/@twccdocs/rkOTAaoa4?type=view)or[ Website service](https://man.twcc.ai/@twccdocs/howto-ccs-config-service-port-en)).
+The custom **target ports** are: 5000, 5001, and 5002. You can set the daemon of the service running on a container to one of the target ports, and associate it with the public port. After that, the system will configure a corresponding **public port (50000 ~ 60000)**. You can expose your service with using the public IP and the public port. (e.g., [AI inference](https://man.twcc.vip/en/docs/ccs/tutorials/tensorflow-mnist-trainign) or [Website service](https://man.twcc.vip/en/docs/ccs/tutorials/configure-service-ports))
 
 <br/>
 
 
 ## Prerequisites
-- Create [Interactive Containers](https://man.twcc.ai/@twccdocs/guide-ccs-create-en).
-- To operate using the TWCC portal: once the container is created, click on the container you want to connect to on the **Interactive Container Management** page and enter the **Interactive Container Details** page.
-- To operate using the TWCC CLI: please obtain the [Container's ID](https://man.twcc.ai/@twccdocs/guide-ccs-manage-zh#%E6%AA%A2%E8%A6%96%E8%B3%87%E8%A8%8A) first.
+- Create [Interactive Containers](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/create-an-interactive-container).
+- If you choose to use TWCC portal, after the container is created, please click the container you want to connect to on the **Interactive Container Management** page and enter the **Interactive Container Details** page.
+- If you choose to use TWCC CLI operation, please obtain the [Container's ID](https://man.twcc.vip/en/docs/ccs/user-guides/management-and-monitoring/manage-your-container/#view-the-information) first.
 
 <br/>
 
 
-## View service port information 
+## View service port information
 
 By default, SSH runs on target port 22; Jupyter Notebook runs on target port 8888. (Public ports are all allocated by the system).
 
@@ -36,11 +35,9 @@ The following methods indicates how to view the external service port informatio
 <Tabs>
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-Scroll down the page to the **Networks & Connection** section> **Port**. The associated service port information is displayed at the bottom left.
+Scroll down the page to the **Networks & Connection** section > **Port**. The associated service port information is displayed at the bottom left.
 
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_756ba71d03c136e12baaabdc0a517855.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9f214fd51f5749ee8b9ee6dee23345e8.png)
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
@@ -59,19 +56,18 @@ twccli ls ccs -p -s 886330
 
 ## Associate the service port
 
-==**Need to update AI inference link:exclamation:**==<br/>
-You can associate the container with **target port** 5000, 5001, 5002, and the system will configure a corresponding **public port (50000 ~ 60000)**. You can provide the external services through this mechanism.  (e.g., [AI inference](https://man.twcc.ai/@twccdocs/rkOTAaoa4?type=view) or [Website service](https://man.twcc.ai/@twccdocs/howto-ccs-config-service-port-en)).
+You can associate the container with **target ports** 5000, 5001, 5002, and the system will configure a corresponding **public port (50000 ~ 60000)**. You can provide the external services through this mechanism. (e.g., [AI inference](https://man.twcc.vip/en/docs/ccs/tutorials/tensorflow-mnist-trainign) or [Website service](https://man.twcc.vip/en/docs/ccs/tutorials/configure-service-ports)).
 
 <Tabs>
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
 - Click "**ASSOCIATE**" service port :arrow_right: Select the target port of the service daemon `5002` :arrow_right: Click  "**OK**"
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a5ae43d8cae3b31066fb4364ef9409bd.png)
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3d1e8b0a33edbe2ee0bdc3b0dd9171b3.png)
         
-- After that, the system will configure a **Public Port** (`54708`) corresponding to the target port  (`5002`).
-        
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3e1c6887b4f75f4d0de4b9270856b723.png)
+- After that, the system will configure a **public port** (`54708`) corresponding to the target port  (`5002`).
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_714db4fec691344f598c4c8c9fce7a8f.png)
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
@@ -81,7 +77,7 @@ You can associate the container with **target port** 5000, 5001, 5002, and the s
 twccli net ccs -p 5000 -open -s 886330
 ```
 
-- After association, enter the [view command](#View-service-port-information) to view the public port allocated by the system.
+- After association, enter the [view command](#view-service-port-information) to view the public port allocated by the system.
 
 </TabItem>
 </Tabs>
@@ -98,7 +94,7 @@ If the container no longer provides external services, you can dissociate the se
 
 In the Interactive Container Details page, click "<b>DISSOCIATE</b>".
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_102119b28dadb948ba5c9a9096169b73.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6423c9d5a5250258bf5d723d6c89c7b6.png)
 
 Then check the port number to be dissociated, and click **OK** to successfully dissociate.
 
