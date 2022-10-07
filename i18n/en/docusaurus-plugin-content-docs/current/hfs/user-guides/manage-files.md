@@ -9,13 +9,13 @@ The following file management operation method using FileZilla as an example. If
 
 ## Change directory
 
-- Change the path from home to work in the remote site to change the directory to the /work directory.
+- Change the path from "home" to "work" in the "remote site" to change the directory to the /work directory.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_870c737fa578fcfde778422f895c087a.png)
 
 ## Upload and download files
 
-- Use dragging to upload local files to HFS, or download files from HFS to local.
+- Use "dragging" to upload local files to HFS, or download files from HFS to local.
 - Data transmission status are displayed at the bottom left.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2cc7ce70068f12aa0bfb9f0a53dd561c.png)
