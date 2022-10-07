@@ -12,7 +12,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-en'
 
 <summary> Q1. How to login to Taiwania 2 (HPC CLI)?</summary>
 
-Login using SSH connection with the login node of ln01.twcc.ai. Enter your supercomputer account and supercomputer password to complete the login. For detailed steps, see <ins><a href = "https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-prerequisite-for-connection-zh">this document</a></ins> for more information.
+Login using SSH connection with the login node of ln01.twcc.ai. Enter your supercomputer account and supercomputer password to complete the login. For detailed steps, refer to <ins><a href = "https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-prerequisite-for-connection-zh">this document</a></ins> for more information.
 
 
 
@@ -52,7 +52,7 @@ You can request resources using [<ins>Slurm</ins>](https://man.twcc.ai/@twccdocs
 
 <summary> Q2. The node will be given by the system automatically or need to obtain manually when using cross nodes computing?</summary>
 
-You can use Slurm command to obtain nodes, see [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-en/%2F%40twccdocs%2Fguide-twnia2-job-parameter-en) for more information.
+You can use Slurm command to obtain nodes, refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-en/%2F%40twccdocs%2Fguide-twnia2-job-parameter-en) for more information.
 
 </details>
 
@@ -121,10 +121,8 @@ Yes, you can use the `module avail` command on Taiwania 2 (HPC CLI) to list avai
 The storage environment of the two is the same, but the computing environment is different:
 
 - The computing environment of the Interactive container is built using the TWCC container image file.
-- Taiwania 2 (HPC CLI) requires users to deploy their own computing environment.
-    <i class="fa fa-lightbulb-o fa-20" aria-hidden="true"></i> <b>Tip:</b> 
-    Taiwania 2 (HPC CLI) may use the `module` command to load the required packages. See 
-    <ins><a href = "https://man.twcc.ai/@twccdocs/doc-twnia2-main-en/%2F%40twccdocs%2Fguide-twnia2-module-intro-en">this document</a></ins> for usage.
+- Taiwania 2 (HPC CLI) requires users to deploy their own computing environment. <br/><i class="fa fa-lightbulb-o fa-20" aria-hidden="true"></i> <b>Tip:</b> Taiwania 2 (HPC CLI) may use the `module` command to load the required packages. Refer to 
+<ins><a href = "https://man.twcc.ai/@twccdocs/doc-twnia2-main-en/%2F%40twccdocs%2Fguide-twnia2-module-intro-en">this document</a></ins> for usage.
 
 </details>
 
@@ -177,8 +175,23 @@ Q1. Occurs this error `QOSMaxSubmitJobPerUserLimit Error` when using Taiwania 2 
 
 This error message showed that you have submitted over 20 computing job (queue **gtest** is for experimental use, only able to submit 5 jobs).
 
-When the error occurs, you are recommended to use the `squeue` command to check the job state and cancel the pending or running job using the `scancel` command to reduce the quantity of the job.
+When the error occurs, you are recommended to use the `squeue` command to check the job state and cancel the pending or running job using the `scancel` command to reduce the quantity of the job. 
+
+For instructions on using Queues and computing resources, please refer to <a href = "https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-queue-zh">this document</a>.
 
 
 </details>
 
+<details>
+
+<summary>
+
+ Q2. Occurs this error `QOSMaxGRESPerUser` in `NODELIST(REASON)` after job submission? 
+
+</summary> 
+
+This error message showed that you have reached the maximum number of GPUs calculated by Taiwania 2 (HPC CLI) (the base system is set to 40 GPUs).
+
+For instructions on using Queues and computing resources, please refer to <a href = "https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-twnia2-queue-zh">this document</a>. If you reach the limit, you will not be able to submit your work, so please ask for less GPU resources.
+    
+</details>
