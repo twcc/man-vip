@@ -9,21 +9,13 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-tws-en'
 <i class="fa fa-bullhorn" aria-hidden="true"></i>If your <ins><i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i><a href = "https://man.twcc.ai/@twsdocs/howto-service-access-service-en">Service member center</a></ins> does not correspond to the follwing screeshots or process, please <i class="fa fa-sign-out" aria-hidden="true"></i><ins><a href = "https://man.twcc.ai/@twsdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Frole-tws-zh">click this link</a></ins> for reference.
 :::
 
-# Comparison of role permissions of iService
-
-
-## Apply for project
-
-| Function | Creator | Administrator |General member |
-| -------- | -------- | -------- |-------- |
-|Apply for project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+# Member Service System of role permissions of TWS
 
 ## About member
 
 | Function | Creator/ Administrator |General member |
 | -------- | -------- | -------- |
 |View project information|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
-|  Purchase computing credit    |<i class="fa fa-check" aria-hidden="true"></i>| <i class="fa fa-times" aria-hidden="true"></i>  | 
 |Change personal Hyper File System (HFS) storage space|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
 |Change project member's Hyper File System (HFS) storage space|<i class="fa fa-times" aria-hidden="true"></i> | <i class="fa fa-times" aria-hidden="true"></i>| 
 |View order information<br/>(include quotation download)|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
@@ -53,3 +45,9 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-tws-en'
 | -------- | -------- | -------- |
 |  Question ask online    |<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
 |  View all Question ask online record in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
+
+:::info
+**Contact Us：**
+- Business Contacts | <ins><a href = "mailto: sales@twsc.io">sales@twsc.io</a></ins>
+- Customer Service and Support| <ins><a href = "mailto: sales@twsc.io">service@twsc.io</a></ins>
+:::
