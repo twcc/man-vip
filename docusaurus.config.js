@@ -6,27 +6,15 @@ const env_list = {
   i18nDirPath = {
     docs: "docusaurus-plugin-content-docs/current",
     community: "docusaurus-plugin-content-docs-community/current",
-  };
-const set_edit_url = (locale, versionDocsDirPath, docPath) => {
+  },
+  set_edit_url = (locale, versionDocsDirPath, docPath) => {
   const baseUrl = `https://github.dev/twcc/man-vip/blob/tws-sync`,
         zhUrl = `${baseUrl}/${versionDocsDirPath}/${docPath}`;
   if (docPath === 'releaseNotes.md') return zhUrl;
   const rdir = i18nDirPath[versionDocsDirPath];
   if (locale !== "zh-Hant" && rdir) return `${baseUrl}/i18n/${locale}/${versionDocsDirPath.replace(versionDocsDirPath,rdir)}/${docPath}`;
   return zhUrl
-}
-
-// check this block
-//   staging: 'Staging',
-//   preview: 'Preview',
-//   production: 'TWCC'
-// }, i18nDirPath = {
-//   docs: 'docusaurus-plugin-content-docs/current',
-//   community: 'docusaurus-plugin-content-docs-community/current'
-// }
-// const replaceDir = (versionDocsDirPath) => {
-//   return rdir = i18nDirPath[versionDocsDirPath], rdir ? versionDocsDirPath.replace(versionDocsDirPath,rdir) : versionDocsDirPath
-// }
+};
 
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
@@ -43,8 +31,6 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
   organizationName: "TWS Co. Ltd.", // Usually your GitHub org/user name.
   projectName: "Manual", // Usually your repo name.
 
@@ -62,16 +48,6 @@ const config = {
         path: "community",
         routeBasePath: "community",
         editUrl: ({ locale, versionDocsDirPath, docPath }) => set_edit_url(locale, versionDocsDirPath, docPath),
-        // check this!!!
-        // id: 'community',
-        // path: 'community',
-        // routeBasePath: 'community',
-        // editUrl: ({locale, versionDocsDirPath, docPath}) => {
-        //   if (locale !== 'en') {
-        //     return `https://github.com/twcc/man-vip/edit/tree/tws-sync/i18n/${locale}/${replaceDir(versionDocsDirPath)}/${docPath}`;
-        //   }
-        //   return `https://github.com/twcc/man-vip/edit/tree/tws-sync/${versionDocsDirPath}/${docPath}`;
-        // },
         editCurrentVersion: true,
         sidebarPath: require.resolve("./sidebarsCommunity.js"),
         showLastUpdateAuthor: true,
@@ -148,15 +124,6 @@ const config = {
           editUrl: ({ locale, versionDocsDirPath, docPath }) => set_edit_url(locale, versionDocsDirPath, docPath),
           docLayoutComponent: "@theme/DocPage",
           docItemComponent: "@theme/ApiItem" // Derived from docusaurus-theme-openapi
-          // check this
-          // sidebarPath: require.resolve('./sidebars.js'),
-          // remarkPlugins: [require('mdx-mermaid')],
-          // editUrl: ({locale, versionDocsDirPath, docPath}) => {
-          //   if (locale !== 'en') {
-          //     return `https://github.com/twcc/man-vip/edit/tree/tws-sync/i18n/${locale}/${replaceDir(versionDocsDirPath)}/${docPath}`;
-          //   }
-          //   return `https://github.com/twcc/man-vip/edit/tree/tws-sync/${versionDocsDirPath}/${docPath}`;
-          // }
         },
         pages: {},
         blog: false,
@@ -186,10 +153,14 @@ const config = {
         },
         items: [
           {
-            type: "doc",
+            type: "docSidebar",
+            sidebarId: "tutorialSidebar",
+            label: "Docs",
+            position: "left",
+            /**type: "doc",
             label: "Docs",
             docId: "introduction",
-            position: "left",
+            position: "left",*/
           },
           {
             label: "API",
@@ -232,8 +203,8 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Introduction",
-                to: "/docs/introduction",
+                label: "Overview",
+                to: "/docs/overview",
               },
             ],
           },

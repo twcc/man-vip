@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
-title: '虛擬磁碟服務概觀'
+title: 'VDS overview'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-overview-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-overview-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -12,9 +14,17 @@ import TabItem from '@theme/TabItem';
 You can expand your Virtual Compute Service (VCS) instance storage with Virtual Disk Service (VDS). It is a pay-as-you-go, flexible and convenient service. It is designed storage space for TWCC VCS service to provide high-availability, consistent, and low-latency services.
 
 
+<br/>
+
+
+
 ## Related services
 
 Virtual Disk Service (VDS) plays a significant role in Virtual Compute Service (VCS):
+
+
+<br/>
+
 
 
 ### VCS instance storage
@@ -29,10 +39,18 @@ Virtual Disk Service (VDS) plays a significant role in Virtual Compute Service (
         - Provides transfer capability of 250 MB/sec per TB. HDD is well suited for mass data that is not frequently accessed and is unaffected by delays.
         - Provides a maximum transfer capability of 2,375 MB/sec for each VCS instance.
         - Supports up to 16 TB of storage space.
-   
+
+
+<br/>
+
+
+
 ### Back up the instances and disks
 
 TWCC provides storage for the backup of images and data disks of VCS instances.
+
+
+<br/>
 
 
 

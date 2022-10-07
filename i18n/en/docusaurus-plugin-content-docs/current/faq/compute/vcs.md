@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
-title: '虛擬運算服務 (VCS)'
+title: 'TWCC FAQs | Virtual Compute Service (VCS)'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-vcs-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-vcs-en'
 ---
 
 # TWCC FAQs | Virtual Compute Service (VCS)
@@ -107,6 +109,9 @@ Enter ```Yes``` to connect and generate a new certificate.
 
 </details>
 
+<div style={{height:10+'px'}}></div>
+
+
 ## VCS instance management
 
 <details>
@@ -162,6 +167,9 @@ Whether the VCS instance in the ```Starting``` state be billed or not depends on
 
 </details>
 
+<div style={{height:10+'px'}}></div>
+
+
 ## Resource allocation and monitoring
 
 <details>
@@ -200,6 +208,9 @@ To efficiently allocate the frequently requested GPU resources, please email us 
 
 </details>
 
+<div style={{height:10+'px'}}></div>
+
+
 ## Packages
 
 <details>
@@ -222,6 +233,9 @@ Q2. When installing packages or updating the VCS instance, it shows `E: Could no
 2. It is recommended to use Ubuntu 20.04 image to avoid this problem.
 
 </details>
+
+<div style={{height:10+'px'}}></div>
+
 
 ## Storage and data transfer
 
@@ -276,6 +290,9 @@ There are 2 methods you can use to upload your local data to the VCS instance:
 
 </details>
 
+<div style={{height:10+'px'}}></div>
+
+
 ## Network & Security
 
 ### Virtual network
@@ -300,6 +317,8 @@ For Basic Virtual Firewall (BVF) configurations, refer to [<ins>this document</i
 
 </details>
 
+<div style={{height:10+'px'}}></div>
+
 ### Auto scaling
 
 <details>
@@ -316,6 +335,9 @@ Please follow the steps:
 Follow the steps above, the auto scaling will use the template to scale out instances that meet your needs.
 
 </details>
+
+<div style={{height:10+'px'}}></div>
+
 
 ## Image
 

@@ -1,18 +1,17 @@
 ---
-displayed_sidebar: role_permission
 sidebar_label: '解決手機收不到簡訊驗證碼'
 sidebar_position: 1
 sync_original_production: 'https://man.twcc.ai/@twccdocs/howo-service-receive-verif-phone-en' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howo-service-receive-verif-phone-en' 
 ---
 
-# HowTo：Resolve cannot receive SMS verification code
+# Resolve cannot receive SMS verification code
 
 In order to verify your identity and phone number, you need to enter the verification code received via SMS message to complete the sign-up process.
 
 However, if the following situations occur, the mobile phone may not receive the verification code, please follow the instructions according to your circumstance to resolve with:
 
-### Circumstance 1. Weak cell phone signal
+### Circumstance 1. Weak cell phone signal or blocked signal
  
 - Please make sure that the signal is normal, or resend it later.
 
@@ -35,12 +34,6 @@ Telecommunications companies provide "Reject Enterprise SMS" services, that auto
 
 Because of the different settings of mobile phone brands, there may be multiple apps that receive text messages (such as Google Messages, Facebook Messenger, or other text messaging apps) in the mobile phone at the same time. However, there can be only one app that receive messages, so the setting might be changed during the system update or an exception occurs. 
 
-- Make sure the app has been updated to the latest version, and clear memory cache. 
-- Take the Android 7.0 mobile phone as an example,   "**Clear Data**" and "**Clear Cache**" of the app you receive the text messages, and make sure to use only one single app to receive the SMS to avoid multiple receiving at the same time.
+- Make sure the app has been updated to the latest version, and clear memory cache. Take the Android 10.0 mobile phone as an example, please "**Clear Data**" and "**Clear Cache**" of the app you receive the text messages, and make sure to use only one single app to receive the SMS, to avoid multiple receiving at the same time.
 
-==**Need to update:exclamation:**==
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_02eacf67c3cd61404323a63f03a30cdd.png)
-
-### Circumstance 5. Exceed the sending quota of the day
-
-- There is a limit of three times per day (calculated in days, not in 24-hour ) in the Green Point App. Please try again the next day.
+    ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ea39c990a002be71e6b3de578b78c3cc.png)

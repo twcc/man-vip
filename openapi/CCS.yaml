@@ -1,12 +1,16 @@
 openapi: 3.0.0
 servers:
-  - description: production url
-    url: https://apigateway.twcc.ai/api/v3/k8s-taichung-default/
-  - description: staging url
-    url: https://apigateway.twcc.tw/api/v3/k8s-taichung-default/
+  - url: https://{apigateway}/api/v3/{ApiHost}/
+    variables:
+      apigateway:
+        default: apigateway.twcc.ai
+      ApiHost:
+        default: k8s-taichung-default
 info:
-  version: 1.3.0
+  version: 1.3.1
   title: CCS API
+  description: |
+    This is CCS API.
 security:
   - ApiKeyAuth: []
 tags:
@@ -19,19 +23,19 @@ paths:
     get:
       tags:
         - project
-      summary: 取得專案列表
-      description: 查詢所有擁有的專案
+      summary: List projects
+      description: List projects
       parameters:
         - in: query
           name: name
-          description: 利用專案名查詢
+          description: The name of the project
           required: false
           schema:
             type: string
         - $ref: '#/components/parameters/ApiHostParam'
       responses:
         200:
-          description: 取得專案詳細資訊
+          description:  OK
           content:
             application/json:
               schema:
@@ -42,15 +46,14 @@ paths:
     get:
       tags:
         - project
-      summary: 取得單一專案訊息
-      description: |
-        查詢所有擁有的專案
+      summary: Get details of a project
+      description: Get details of a project
       parameters:
         - $ref: '#/components/parameters/ProjectInPathParam'
         - $ref: '#/components/parameters/ApiHostParam'
       responses:
         200:
-          description: 取得專案詳細資訊
+          description:  OK
           content:
             application/json:
               schema:
@@ -77,15 +80,14 @@ paths:
     get:
       tags:
         - project
-      summary: 取得專案的解決方案list
-      description: |
-        查詢該專案的解決放案(Res: 解決方案ID)
+      summary: Get solutions of a project
+      description: Get solutions of a project
       parameters:
         - $ref: '#/components/parameters/ProjectInPathParam'
         - $ref: '#/components/parameters/ApiHostParam'
       responses:
         200:
-          description:  解決方案
+          description:  OK
           content:
             application/json:
               schema:
@@ -106,7 +108,7 @@ paths:
         - $ref: '#/components/parameters/ApiHostParam'
       responses:
         200:
-          description:  解決方案
+          description:  OK
           content:
             application/json:
               schema:
@@ -256,7 +258,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SiteSerializer'
+                $ref: '#/components/schemas/SiteSerializer' 
   /sites/{site_id}/:
     get:
       tags:
@@ -688,6 +690,7 @@ paths:
           description: Tag for exclude filter
           schema:
             type: string
+            default: aimaker
         - $ref: '#/components/parameters/ApiHostParam'
       responses:
         200:
@@ -1172,7 +1175,7 @@ components:
           format: int64
         metadata:
           type: object
-          properties:
+          properties: 
             gpu_type:
               type: string
         name:
@@ -2152,10 +2155,10 @@ components:
       schema:
         type: string
         default: k8s-taichung-default
-      examples:
-        production:
-          summary: production
-          value: k8s-taichung-default
-        staging:
-          summary: staging
-          value: k8s-taichung-default
+      # examples:
+      #   production:
+      #     summary: production
+      #     value: k8s-taichung-default
+      #   staging:
+      #     summary: staging
+      #     value: k8s-taichung-default
