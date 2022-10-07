@@ -14,7 +14,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-ccs-scheduled-
 
 * 由服務列表點選「任務型容器」，在「任務型容器管理」頁面，點擊「＋建立」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d397f10978041c2b6a160e0692719136.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7f595947850ed201ee76b916360e797a.png)
 
 
 :::tip
