@@ -7,7 +7,7 @@ servers:
       ApiHost:
         default: tcr
 info:
-  version: 1.0.0-alpha
+  version: 1.0.0-beta
   title: Harbor API
   description: |
     This is Harbor API.
@@ -59,8 +59,7 @@ paths:
     get:
       tags:
         - project
-      summary: List Harbor images of a project repository
-      description: https://git.twcc.ai/twcc/ma-team/-/issues/6062#note_205369
+      summary: List Harbor Images
       parameters:
         - $ref: '#/components/parameters/ProjectInPathParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -71,13 +70,15 @@ paths:
             application/json:
               schema:
                 type: array
+                items:
+                  $ref: '#/components/schemas/HarborImageSerializer'
                 example: |-
                   [
                       {
                           "artifact_count": 2,
                               "artifacts": [
                                   {
-                                      "digest": "sha256:2468d48e476b6a079eb646e87620f96ce1",
+                                      "digest": "sha256:2468d48e476b6eb646e87620f96ce1",
                                       "pull_time": "0001-01-01T00:00:00.000Z",
                                       "push_time": "2022-03-04T07:31:00.282Z",
                                       "scan_overview": null,
@@ -100,7 +101,7 @@ paths:
                                       ]
                                   },
                                   {
-                                      "digest": "sha256:ad2d74f1fd54f85a91f763c91862ed13539e80d005882adcee9602d254fc5280",
+                                      "digest": "sha256:ad2d74f1fd54f763c91862ed13539e80d005882adcee9602d254fc5280",
                                       "pull_time": "2022-04-25T06:53:41.514Z",
                                       "push_time": "2022-04-25T01:46:51.515Z",
                                       "scan_overview": {
@@ -132,8 +133,7 @@ paths:
     post:
       tags:
         - project
-      summary: Retag a Harbor image
-      description: Retag a Harbor image
+      summary: Create a new tag base on source tag
       parameters:
         - $ref: '#/components/parameters/ProjectInPathParam'
         - $ref: '#/components/parameters/ImageNameParam'
@@ -143,13 +143,16 @@ paths:
         content:
           application/json:
             schema:
+              required:
+              - name
+              - source
               properties:
                 name:
                   type: string
-                  description: New tag name
+                  description: New tag name.
                 source:
                   type: string
-                  description: Source tag name
+                  description: Source tag name.
       responses:
         201:
           description: Created
@@ -158,8 +161,7 @@ paths:
     delete:
       tags:
         - project
-      summary: Remove a tag of a Harbor image
-      description: Remove a tag of a Harbor image
+      summary: Remove a tag of harbor image
       parameters:
         - $ref: '#/components/parameters/ProjectInPathParam'
         - $ref: '#/components/parameters/ImageNameParam'
@@ -173,8 +175,8 @@ paths:
     get:
       tags:
         - project
-      summary: Get Harbor storage quota and usage of a project repository
-      description: Get Harbor storage quota and usage of a project repository
+      summary: Get quota of the specified harbor project ID
+      description: Get quota of the specified harbor project ID
       parameters:
         - $ref: '#/components/parameters/ProjectInPathParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -184,7 +186,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
+                $ref: '#/components/schemas/ProjectHarborQuotaSerializer'
                 example: |-
                   {
                       "quota": -1,
@@ -193,27 +195,29 @@ paths:
     patch:
       tags:
         - project
-      summary: Update Harbor storage quota of a project repository
-      description: Update Harbor storage quota of a project repository
+      summary: Update quotas of the specified S3 private key
+      description: Update quotas of the specified S3 private key
       parameters:
         - $ref: '#/components/parameters/ProjectInPathParam'
-        - $ref: '#/components/parameters/ImageNameParam'
         - $ref: '#/components/parameters/ApiHostParam'
       requestBody:
         required: true
         content:
           application/json:
             schema:
+              required:
+              - quota
               properties:
                 quota:
                   type: integer
-                  description: New storage quota of project
+                  description: The harbor storage quota, number of bytes
+                  format: int32
       responses:
         201:
           content:
             application/json:
               schema:
-                type: object
+                $ref: '#/components/schemas/ProjectHarborQuotaSerializer'
                 example: |-
                         {
                             "quota": 10737418240,
@@ -248,6 +252,77 @@ components:
         - name
         - platform
         - transparent_mode
+    GroupDetailSerializer:
+      type: object
+      properties:
+        desc:
+          type: string
+        id:
+          format: int64
+          type: integer
+        matchLabels:
+          type: array
+          items:
+            type: string
+            example: twsc
+        name:
+          type: string
+          example: ENT123456
+        status:
+          type: string
+          example: Ready
+        status_reason:
+          type: string
+        tm_uuid:
+          type: string
+        transparent_mode:
+          type: boolean
+          example: false
+        uuid:
+          type: string
+          format: uuid
+      required:
+        - desc
+        - id
+        - matchLabels
+        - name
+        - status
+        - status_reason
+        - tm_uuid
+        - transparent_mode
+        - uuid
+    ProjectHarborQuotaSerializer:
+      required:
+      - quota
+      type: object
+      properties:
+        quota:
+          type: integer
+          format: int64
+        usage:
+          type: integer
+          format: int64
+    HarborImageSerializer:
+      type: object
+      properties:
+        artifact_count:
+          type: integer
+          format: int64
+        artifacts:
+          type: array
+          items:
+            $ref: '#/components/schemas/HarborArtifactSerializer'
+        creation_time:
+          type: string
+          format: date-time
+        name:
+          type: string
+        pull_count:
+          type: integer
+          format: int64
+        update_time:
+          type: string
+          format: date-time
   parameters:
     ProjectInQueryParam:
       name: project
@@ -259,14 +334,14 @@ components:
     ProjectInPathParam:
       name: project_id
       in: path
-      description: 專案ID
+      description: Project ID
       required: true
       schema:
         type: integer
     ImageNameParam:
       name: image_name
       in: path
-      description: Image name. You can find it in Image List API
+      description: The harbor image name
       required: true
       schema:
         type: string
@@ -280,7 +355,7 @@ components:
     ApiHostParam:
       name: x-api-host
       in: header
-      description: 認證必要參數
+      description: Authentication Required Parameters
       required: true
       schema:
         type: string
