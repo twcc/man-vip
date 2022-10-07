@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-create-data-disk-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-create-data-disk-en' 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -14,11 +16,13 @@ If the storage space of your VCS instance is insufficient, you can create data d
 
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-### 1. Create a data disk when creating a VCS instance
+
+**1. Create a data disk when creating a VCS instance**
 
 - You can create a data disk when creating your [<ins>VCS instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-en) on **STORAGE** tab (can only create 1 disk and specify only the disk type and size).
 
-### 2. Create a data disk on Data Disk Management page
+**2. Create a data disk on Data Disk Management page**
+
 
 If you need to create more disks, please follow the instructions below:
 
@@ -47,7 +51,9 @@ If you need to create more disks, please follow the instructions below:
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
 
-### Commands
+
+**Commands**
+
 
 ```bash
 twccli mk vcs [-n]      # Data disk name
@@ -61,7 +67,11 @@ twccli mk vcs [-n]      # Data disk name
 | HDD  | twccli  | 100 GB  | 
 :::
 
-### Examples
+
+<br/>
+
+**Examples**
+
 
 - Create a data disk named **`clitest`**, and disk size is **`10 GB`**.
 
