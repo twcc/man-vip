@@ -1,5 +1,5 @@
 ---
-displayed_sidebar: vcs_host_secured_multi_web
+displayed_sidebar: vcs_tutorials_host_secured_multi_web
 sidebar_position: 10
 sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-host-secure-multi-web-one-instance-intro-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-host-secure-multi-web-one-instance-intro-zh'

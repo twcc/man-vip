@@ -1,5 +1,4 @@
 ---
-sidebar_label: '從零開始'
 sidebar_position: 2
 sync_original_production: 'https://man.twcc.ai/@twccdocs/getstarted-hfs-adjust-connec-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/getstarted-hfs-adjust-connec-zh'
@@ -9,7 +8,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-# 【從零開始 TWCC】
+# 【從零開始 TWCC】調整 HFS 容量並連線傳輸節點
 
 【從零開始 TWCC】系列教學文件將以主題式方式為新手用戶深入淺出說明 TWCC 使用方式，將相關文件統整於此，讓您方便參考所需的資訊，順利邁開使用 TWCC 運算資源的第一步！<i class="fa fa-hand-peace-o" aria-hidden="true"></i>
 
@@ -166,7 +165,7 @@ TWCC 提供您至少 /home、/work 各 100 GB 的免費容量空間，若需調�
 2. 左半部個人空間使用現況；
    右半部 (上) 提供調整說明、並可選擇變更付費綁定計畫，右半部 (下) 則可以拖曳數字的方式，調整 /work 或 /home 欲購買的額度 > 點選「提交」以調整容量。
     
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fde1d46ea4fc6c3efc5947f4d79cd353.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_df824be235ea4480028561152af5c57d.png)
 
 
 </details>
