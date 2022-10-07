@@ -1,16 +1,15 @@
 ---
 sidebar_position: 4
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-create-usr-linux-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-create-usr-linux-zh' 
 ---
 
 # 使用帳密 SSH 連線 Linux 個體
 
-:::tip **適用情境：鑰匙對常忘記存在何處？是否可以多人共用一台虛擬運算個體？**
-
-*您是否也有相同的困擾？讓我們手把手帶您組合 TWCC 雲端服務架構，輕鬆解決您的問題！*
-:::
-
 
 除了透過「**鑰匙對**」做為 SSH 連線 Linux 個體之憑證外，本篇文章教學如何**使用「帳號密碼」 SSH 連線虛擬運算服務 Linux 個體**，*可預防遺失鑰匙對、鑰匙對檔案毀損，或是適用多人一起共用虛擬運算個體之情境*。
+
+<br/>
 
 
 ### Step 1. 新增使用者帳號密碼
@@ -26,7 +25,11 @@ sudo adduser <USER_ID>
 為保護您的虛擬運算個體安全，Ubuntu、CentOS 的登入密碼請設定至少包含 12 個字元，並混合英文大小寫字母、數字及特殊符號。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5c07b26965922b473cc5ea6d8adda121.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3feb85f4dd3cb0590d2f974aea9279bc.png)
+
+<br/>
+
+<br/>
 
 
 ### Step 2. 開啟帳密連線功能
@@ -37,6 +40,8 @@ sudo adduser <USER_ID>
 sudo sed -i 's/PasswordAuthentication\ no/PasswordAuthentication\ yes/g' /etc/ssh/sshd_config
 ```
 
+<br/>
+
 
 ### Step 3. 重啟 sshd 服務
 
@@ -45,6 +50,9 @@ sudo sed -i 's/PasswordAuthentication\ no/PasswordAuthentication\ yes/g' /etc/ss
 ```bash
 sudo systemctl restart sshd
 ```
+
+<br/>
+
 
 ### Step 4. 確認可用帳號密碼登入
 

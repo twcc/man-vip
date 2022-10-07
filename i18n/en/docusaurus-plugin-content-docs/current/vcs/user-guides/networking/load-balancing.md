@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
-title: '負載平衡'
+title: 'Load Balancing'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-lbs-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-lbs-en'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -15,6 +17,10 @@ TWCC Load Balancing Service offers Application Load Balancer (HTTP and HTTPs wit
 - For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, see [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務) for more information.
 - TWCC CLI currently does not support this feature.
 :::
+
+
+<br/>
+
 
 
 ## Create load balancers
@@ -58,6 +64,10 @@ After creating, [<ins>attaching VCS instances to the load balancer</ins>](#連�
 :::
 
 
+<br/>
+
+
+
 ## Manage load balancers
 
 * On the **Load Balancer Management** page, click the list of load balancers to enter the load balancer details page.
@@ -89,6 +99,9 @@ SSL certificates have a validity period. You can create a new certificate to rep
 * After the update, you will be directed to the **Load Balancer Details** page. You can see the name of the new SSL certificate, and its state turns to the **Active** when it is successfully renewed.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d6437988b429ae87a60da18ef33641c9.png)
+
+
+<br/>
 
 
 
@@ -129,6 +142,9 @@ You can use the search bar with keywords to find your load balancer if too many 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3ebbfbd379f6bec7ff4b04fdbfe65228.png)
 
 
+<br/>
+
+
 
 ## SSL Certificates
 
@@ -138,6 +154,10 @@ Deploy SSL certificates on your load balancers can help you build trust with cus
 :::info
 In order to comply with the information security requirements, only the TLS 1.2 transport layer security protocol is provided.
 :::
+
+
+<br/>
+
 
 ### Create SSL certificates
 
@@ -165,6 +185,8 @@ TWCC currently supports only PKCS#12 format, see [<ins>HowTo：Convert SSL certi
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3f77e7e47a585410d2df100933954846.png)
 
 
+<br/>
+
 
 
 ### Manage SSL certificates
@@ -176,6 +198,10 @@ TWCC currently supports only PKCS#12 format, see [<ins>HowTo：Convert SSL certi
 :::
 
 
+<br/>
+
+
+
 ### Delete SSL certificates
 
 * Go to the **SSL Certificate Management** page, select the SSL certificate you want to delete, and then click **DELTE** button.
@@ -183,6 +209,9 @@ TWCC currently supports only PKCS#12 format, see [<ins>HowTo：Convert SSL certi
 
 ==**Need to update:exclamation:**==
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2fbf0b28ee7acdc4ac63c10fffe58438.png)
+
+
+<br/>
 
 
 

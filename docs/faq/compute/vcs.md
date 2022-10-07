@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 title: '虛擬運算服務 (VCS)'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-vcs-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-vcs-zh'
 ---
 
 # TWCC FAQs | 虛擬運算服務 (VCS)
@@ -112,7 +114,7 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 無預設密碼，使用 Console 連線 Linux 個體前需先另外建立密碼，Windows 個體則輸入您建立個體時設定的密碼即可，請參考[快速除錯與維護工具：TWCC VCS Console](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-debug-tool-console-zh#Step-3-%E8%BC%B8%E5%85%A5%E9%80%A3%E7%B7%9A%E8%B3%87%E8%A8%8A%EF%BC%8C%E5%AE%8C%E6%88%90%E9%80%A3%E7%B7%9A)。
 
 </details>
-
+<div style={{height:10+'px'}}></div>
 
 
 
@@ -187,6 +189,7 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 3. 若有特殊需求，請洽客服人員。
      
 </details>
+<div style={{height:10+'px'}}></div>
 
 ## 資源配置與監控
 
@@ -225,6 +228,7 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 由於虛擬運算個體之 GPU 資源詢問度踴躍，為了讓資源更能妥善利用與調度，如有 GPU 的需求請來信致 isupport@twcc.ai，將由專人與您進行聯繫。
 
 </details>
+<div style={{height:10+'px'}}></div>
 
 ## 套件軟體
 
@@ -244,6 +248,7 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 2. 建議改為使用映像檔 Ubuntu 20.04，可避免產生此問題。
 
 </details>
+<div style={{height:10+'px'}}></div>
 
 ## 儲存與資料傳輸
 
@@ -300,7 +305,7 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 3. [使用 MobaXterm 連線虛擬運算個體](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)，於頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
 
 </details>
-
+<div style={{height:10+'px'}}></div>
 
 ## 網路安全
 
@@ -346,7 +351,7 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 若伺服器 (虛擬運算個體) 僅架設單一對外服務，您可以將預定使用的靜態 IP (static IP) 先掛載至負載平衡器，並將流量從負載平衡器轉發至後端服務伺服器。待 DNS IP 轉換完畢後，再將靜態 IP 掛載至伺服器上。
 
 </details>
-
+<div style={{height:10+'px'}}></div>
 
 ### 虛擬網路
 
@@ -395,7 +400,7 @@ TWCC 沒有對虛擬運算個體內的網速進行限制，如果您發現傳輸
 2. 確認來源端的網速是否受到限制。
 
 </details>
-
+<div style={{height:10+'px'}}></div>
 
 ### Auto Scaling
 
@@ -418,6 +423,7 @@ TWCC 沒有對虛擬運算個體內的網速進行限制，如果您發現傳輸
 經以上步驟設定，Auto Scaling 擴展出的個體，即會符合您所需的環境。
 
 </details>
+<div style={{height:10+'px'}}></div>
 
 ## 個體映像檔
 

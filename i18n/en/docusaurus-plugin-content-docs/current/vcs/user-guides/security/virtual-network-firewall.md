@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
-title: '基礎虛擬防火牆'
+title: 'Basic Virtual Firewall (BVF)'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vnf-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vnf-en'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -14,6 +16,11 @@ Basic Virtual Firewall (BVF) provides a simple and flexible architecture that bu
 :::info
 For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, see [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-en#%E5%9F%BA%E7%A4%8E%E8%99%9B%E6%93%AC%E9%98%B2%E7%81%AB%E7%89%86).
 :::
+
+
+<br/>
+
+
 
 ## Create BVFs
 
@@ -129,9 +136,10 @@ The firewall only applies to the instances in the selected Virtual Network. In o
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b07975c5d37b3436fc220158f4075db7.png)
 
 
+<br/>
 
 
-    
+
 ## Edit firewall rules
 
 * In **Basic Virtual Firewall Details** page, click **EDIT RULES** to change the priority of the rules or delete the rules.
@@ -139,17 +147,13 @@ The firewall only applies to the instances in the selected Virtual Network. In o
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_02a39d79543f1feacc7b9c1eb082501b.png)
 
 
-
-
-   
 * In **Edit Rules** window, you can adjust the order of rules, add or delete rules. Click **OK** when you are ready.  
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_13ba77ac86e1869ef8326ccd4f6f8c5b.png)
 
 
 
+* When done, the firewall will enter in the **`PENDING_UPDATE`** state. The new settings take effect when it enters in the **`ACITVE`** state after a few minutes.
 
-    
-* When done, the firewall will enter in the **`PENDING_UPDATE`** state. The new settings take effect when it enters in the **`ACITVE`** state after a few minutes.    
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e51c582e4b77a56e74f2f35b80176bf9.png)

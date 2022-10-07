@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 title: 'Auto Scaling'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-auto-sacling-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-auto-sacling-en'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -21,6 +23,10 @@ When the workload reaches the demand value, increase the number of instances; Wh
     - On the contrary, if the scaled out instance <ins>**doesn't need**</ins> to be automatically attached with a new data disk, please separately **[<ins>Create a instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-en)** and [<ins>a data disk</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-vds-create-data-disk-en), and then [<ins>attach the disk to the instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-vds-manage-disk-en#%E9%80%A3%E7%B5%90%E8%87%B3%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94).
 
 :::
+
+
+<br/>
+
 
 ## Create Auto Scaling templates
 
@@ -56,6 +62,11 @@ You can create an Auto Scaling template and connect it to multiple VCS instances
 
 </Tabs>
 
+
+<br/>
+
+
+
 ## Manage Auto Scaling
 
 View Auto Scaling information and delete the Auto Scaling.
@@ -81,6 +92,9 @@ View Auto Scaling information and delete the Auto Scaling.
 </TabItem>
 
 </Tabs>
+
+
+<br/>
 
 
 

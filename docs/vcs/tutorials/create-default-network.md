@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vnw-create-default-network-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vnw-create-default-network-zh' 
 ---
 
 # 建立預設虛擬網路
@@ -7,11 +9,13 @@ sidebar_position: 1
 
 首次使用 TWCC 所提供的虛擬運算服務，必須先在虛擬網路服務先建立**預設虛擬網路 (Default network)**，才可以開始使用虛擬運算服務，後續若有使用其它網段的需求，可再參考[此文件](https://man.twcc.ai/@twccdocs/guide-vcs-vnw-zh)自行建立其它虛擬網路。
 
+<br/>
+
 ### Step 1. 進入虛擬網路服務
 
 * 登入 TWCC 頁面後，於服務列表選取「**虛擬網路**」
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e953e190a41610e858a396e2f8431f7b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
 
 :::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
@@ -21,6 +25,7 @@ sidebar_position: 1
 EN PIC
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_af9a7dee572b42aa41038508efca2427.png) -->
 
+<br/>
 
 
 ### Step 2. 建立預設虛擬網路
@@ -52,6 +57,7 @@ EN PIC
 EN PIC
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4eb711285439bcd8393c8304f1141ba8.png) -->
 
+<br/>
 
 
 :::info
