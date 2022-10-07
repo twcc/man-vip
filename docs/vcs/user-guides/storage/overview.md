@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: '虛擬磁碟服務概觀'
+sidebar_label: '虛擬磁碟服務'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-overview-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-overview-zh' 
 ---
@@ -9,7 +10,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a62be3bdf4bc257526e95e16b063a777.png) 虛擬磁碟服務概觀
-
 虛擬磁碟服務可為虛擬運算個體擴充儲存空間，隨用隨付，可自行設定容量大小，彈性方便，為專為 TWCC 虛擬運算服務設計之儲存空間，提供高可用性、一致性、低延遲的服務。
 
 <br/>
