@@ -30,5 +30,5 @@ import TOCInline from '@theme/TOCInline';
    ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_71a27bbe14fd33fcb544704f3b7d0307.png)
 
 :::caution
-<i class="fa fa-envelope" aria-hidden="true"></i> 教學結束！若有任何疑問或建議，歡迎您來信 isupport@twcc.ai，謝謝！
+<i class="fa fa-envelope" aria-hidden="true"></i> 教學結束！若有任何疑問或建議，歡迎您來信 <ins><a href = "isupport@twcc.ai">isupport@twcc.ai</a></ins>，謝謝！
 :::
