@@ -1,17 +1,60 @@
 openapi: 3.0.0
 servers:
-  - description: production url
-    url: https://apigateway.twcc.ai/api/v3/default_harbor/
-  - description: staging url
-    url: https://apigateway.twcc.tw/api/v3/default_harbor/
+  - url: https://{apigateway}/api/v3/{ApiHost}/
+    variables:
+      apigateway:
+        default: apigateway.twcc.ai
+      ApiHost:
+        default: tcr
 info:
   version: 1.0.0-alpha
   title: Harbor API
+  description: |
+    This is Harbor API.
 security:
   - ApiKeyAuth: []
 tags:
   - name: project
 paths:
+  /projects/:
+    get:
+      tags:
+        - project
+      summary: List projects
+      description: List projects
+      parameters:
+        - in: query
+          name: name
+          description: The name of the project
+          required: false
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GroupSerializer'
+  /projects/{project_id}/:
+    get:
+      tags:
+        - project
+      summary: Get details of a project
+      description: Get details of a project
+      parameters:
+        - $ref: '#/components/parameters/ProjectInPathParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupDetailSerializer'
   /projects/{project_id}/images/:
     get:
       tags:
@@ -183,6 +226,28 @@ components:
       in: header
       name: x-api-key
   schemas:
+    GroupSerializer:
+      type: object
+      properties:
+        matchLabels:
+          type: array
+          items:
+            type: string
+        id:
+          format: int64
+          type: integer
+        name:
+          type: string
+        platform:
+          type: string
+        transparent_mode:
+          type: boolean
+      required:
+        - matchLabels
+        - id
+        - name
+        - platform
+        - transparent_mode
   parameters:
     ProjectInQueryParam:
       name: project
@@ -219,11 +284,11 @@ components:
       required: true
       schema:
         type: string
-        default: default_harbor
-      examples:
-        production:
-          summary: production
-          value: default_harbor
-        staging:
-          summary: staging
-          value: default_harbor
+        default: tcr
+      # examples:
+      #   production:
+      #     summary: production
+      #     value: default_harbor
+      #   staging:
+      #     summary: staging
+      #     value: default_harbor

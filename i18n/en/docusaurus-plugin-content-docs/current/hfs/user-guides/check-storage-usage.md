@@ -8,11 +8,11 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-hfs-check-st
 
 - After signing into TWCC, click **View Details** to view the HFS storage usage.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fb4bacd6a53c552c4e558cb7a2410e27.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_da9e8e4956f958fc1ad77c0fd1d86e5e.png)
 
 - You can view the total storage, used and available capacity of the Home and Work directory, and distinguish between free and purchased capacity.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_884ad6e569f3c44bf0442a2520c862c3.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_039830c8fab11b73cd5f1db21a35bf8b.png)
 
 
 :::info
