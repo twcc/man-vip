@@ -6,7 +6,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/concept-ccs-lifecy
 
 # Interactive container life cycle
 
-You perform actions on interactive containers- from creation to deletion, the state of the containers is closely related to resources, data, and billing. This article will explain in detail all the relationships between life cycle states, meanings, and billing of the container from creation to deletion
+You perform actions on interactive containers- from creation to deletion, the state of the containers is closely related to resources, data, and billing. This article will explain in detail all the relationships between life cycle states, meanings, and billing of the container from creation to deletion.
 
 The transition between the action and the container state:
 
@@ -45,5 +45,5 @@ Notice of deletion:
 - /home, /work data (Hyper File System storage space) will be retained and will not be removed as the container is deleted.
 
 :::info
-For deletion steps, see [<ins>Delete a container</ins>](/@twccdocs/guide-ccs-manage-en) for more information.
+For deletion steps, see [<ins>Create a container</ins>](/@twccdocs/guide-ccs-manage-en) for more information.
 :::
