@@ -153,10 +153,14 @@ const config = {
         },
         items: [
           {
-            type: "doc",
+            type: "docSidebar",
+            sidebarId: "tutorialSidebar",
+            label: "Docs",
+            position: "left",
+            /**type: "doc",
             label: "Docs",
             docId: "introduction",
-            position: "left",
+            position: "left",*/
           },
           {
             label: "API",
@@ -199,8 +203,8 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Introduction",
-                to: "/docs/introduction",
+                label: "Overview",
+                to: "/docs/overview",
               },
             ],
           },
