@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-eip-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-eip-zh'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,6 +10,8 @@ import TabItem from '@theme/TabItem';
 # 彈性 IP
 
 TWCC 彈性 IP 支援提供 IPv4 公用 IP。在 TWCC 中，您可以將虛擬運算個體、負載平衡配置公用 IP，讓資源可與網際網路進行通訊。
+
+<br/>
 
 ## 彈性 IP 規格
 
@@ -20,6 +24,7 @@ TWCC 彈性 IP 支援提供 IPv4 公用 IP。在 TWCC 中，您可以將虛擬�
 資源再次配置浮動 IP 時，無法保證您可以取得相同 IP。
 :::
 
+<br/>
 
 
 ## 彈性 IP 訂閱政策
@@ -35,9 +40,10 @@ TWCC 彈性 IP 支援提供 IPv4 公用 IP。在 TWCC 中，您可以將虛擬�
 :::info
 - 僅「**租戶管理員**」可執行訂閱靜態 IP、停止訂閱；所有成員皆可使用已訂閱之靜態 IP。
 - 計畫若在 2022/1/14 功能調整前已使用超過 10 個浮動 IP，系統不會追溯並移除已建立的虛擬算個體或負載平衡器所關聯的浮動 IP。
-- 若有特殊需求，請您洽詢客服人員：++<a href = "mailto: isupport@twcc.ai">isupport@twcc.ai</a>++
+- 若有特殊需求，請您洽詢客服人員：<ins><a href = "mailto: isupport@twcc.ai">isupport@twcc.ai</a></ins>
 :::
 
+<br/>
 
 
 ## 管理彈性 IP
@@ -63,8 +69,6 @@ TWCC 彈性 IP 支援提供 IPv4 公用 IP。在 TWCC 中，您可以將虛擬�
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6823622c85310fbafc123c12841b5177.png)
 
 
-
-
 若靜態 IP 無需再使用，游標移至「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」，點選「**停止訂閱**」，完成後便不再計費。
 
 
@@ -74,10 +78,14 @@ TWCC 彈性 IP 支援提供 IPv4 公用 IP。在 TWCC 中，您可以將虛擬�
 一日之內僅能訂閱 10 次。
 :::
 
+<br/>
+
 
 ### 為資源配置彈性 IP
 
 您可以透過以下方式將彈性 IP 配置至虛擬運算個體或負載平衡器：
+
+<br/>
 
 #### 虛擬運算個體
 
@@ -93,27 +101,22 @@ TWCC 彈性 IP 支援提供 IPv4 公用 IP。在 TWCC 中，您可以將虛擬�
 
 :::caution
 **停止** 虛擬運算個體後，浮動 IP 將會釋放回資源池，個體啟動後，將取得新的浮動 IP。
-更多虛擬運算個體動作對彈性 IP之影響，請參考 ++[管理個體：停止/啟動 (與開機)/重開機/關機/刪除](https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-zh)++。
+更多虛擬運算個體動作對彈性 IP之影響，請參考 <ins>[管理個體：停止/啟動 (與開機)/重開機/關機/刪除](https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-zh)</ins>。
 :::
 
-
+<br/>
 
 #### 負載平衡器
-
 
 1. [建立負載平衡器時](https://man.twcc.ai/@twccdocs/guide-vcs-lbs-zh#建立負載平衡器)：
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8ca4c2cc4f7fdb6ab0586489b97b3c62.png)
 
-
-
-
 2. 負載平衡建立後，點選「**移除**」，再點選「**配置**」可更換 IP：
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_43c0ac03a6f857fe742165fe78b073ba.png)
 
-
-
+<br/>
 
 ### 移除資源的彈性 IP
 
@@ -126,6 +129,7 @@ TWCC 彈性 IP 支援提供 IPv4 公用 IP。在 TWCC 中，您可以將虛擬�
 
 - 浮動 IP：移除後，浮動 IP 將釋放回 TWCC 資源池。將無法保證您下次可取得相同的浮動 IP。
 
+<br/>
 
 ### 關聯之資源、IP 狀態
 

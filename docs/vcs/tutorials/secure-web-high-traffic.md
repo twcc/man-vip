@@ -1,13 +1,12 @@
 ---
-displayed_sidebar: vcs_secure_web_high_traffic
+displayed_sidebar: vcs_tutorials_secure_web_high_traffic
 sidebar_position: 9
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-intro-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-intro-zh'
 ---
 
 # 架設安全、可負載高流量的網站
 
-:::success **適用情境：我的網頁伺服器同時間太多人存取會導致當機，該如何解決？**
-*您是否也有相同的困擾？讓我們手把手帶您組合 TWCC 雲端服務架構，輕鬆解決您的問題！*
-:::
 
 本篇將示範教學如何運用 TWCC [**虛擬運算服務**](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh)建立 2 台相同的 [**NGINX**](https://www.nginx.com/) 網頁伺服器，並設定[**安全性群組**](https://man.twcc.ai/@twccdocs/guide-vcs-sg-zh)，搭配[**負載平衡服務**](https://man.twcc.ai/@twccdocs/guide-vcs-lbs-zh)、**SSL 憑證**，將使用流量請求分散至不同伺服器，使用單一對外 URL，**確保您的網頁伺服器資料安全傳輸，且不會因同時使用人數過多、連線流量過載而中斷您的網頁服務**。
 

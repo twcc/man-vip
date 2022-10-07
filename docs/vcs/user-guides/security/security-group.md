@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-sg-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-sg-zh'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -14,6 +16,8 @@ TWCC 提供安全性群組功能，使用者可透過設定安全規則進行虛
 - 安全性群組功能是為各個虛擬運算個體設定個別的安全規則而設計，所以必須先建立至少一個可用的虛擬運算個體，才可以設定其安全群組規則。
 - 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh#%E5%AE%89%E5%85%A8%E6%80%A7%E7%BE%A4%E7%B5%84)。
 :::
+
+<br/>
 
 ## 檢視虛擬運算個體安全性群組規則
 
@@ -44,7 +48,6 @@ twccli ls vcs -secg -s 937648   # 列出 ID 為 937648 個體的安全性群組
 
 <summary>虛擬運算個體預設之安全性群組規則</summary>
 
-:::info
 - TWCC Linux 個體預設開放的輸入/輸出規則：
 
 | 方向 | 網路類型 | 連接埠 (最小) | 連接埠 (最大)| 協定|CIDR |
@@ -65,7 +68,6 @@ twccli ls vcs -secg -s 937648   # 列出 ID 為 937648 個體的安全性群組
 | egress     | IPv4     |      | |ANY |0.0.0.0/0 |
 | ingress     | IPv4     |      | |icmp | 0.0.0.0/0|
 | egress     | IPv6     |      | |ANY |::/0 |
-:::
 
 </details>
 
@@ -76,6 +78,8 @@ twccli ls vcs -secg -s 937648   # 列出 ID 為 937648 個體的安全性群組
 
 若需連線 TWCC Windows 個體，請您與客服聯絡。
 :::
+
+<br/>
 
 ## 建立安全性群組規則
 
@@ -106,11 +110,11 @@ CIDR：指要套用此虛擬運算個體安全規則的 CIDR 網段。
 
 * 檢視網路安全規則的設定資訊及計畫的額度資訊，確定後點選「**建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cff3247e6d017ef3dcbbd1bf51751c04.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_56db622663f2cee9836ad6a8a08ab2f8.png)
 
 * 建立完成後，即可於安全性群組規則列表新增一項新的安全規則。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c5d589961bf300f37721dd0c994e59c3.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8044bfe912c085595ba16daa890b998f.png)
 
 </TabItem>
 
@@ -120,7 +124,7 @@ CIDR：指要套用此虛擬運算個體安全規則的 CIDR 網段。
 若要進行設定網路安全性群組，請使用 `twccli net vcs --help` 進行查詢各細項功能
 :::
 
-- 若要設定對安全網路段：==10.10.10.0/24==，開放 ==TCP:81== 埠的連入(ingress)，使用指令如下
+- 若要設定對安全網路段：10.10.10.0/24，開放 TCP:81 埠的連入(ingress)，使用指令如下
 
 ```
 twccli net vcs -secg -s 892486 -cidr 10.10.10.0/24 -in -proto tcp -p 81
@@ -146,6 +150,7 @@ twccli ls vcs -secg -s 892486
 - 連接埠範圍請審慎設定，並請小心衡量開放範圍。為避免入侵風險，不建議您設定 ingress 連接埠範圍為 0 ~ 65535。
 :::
 
+<br/>
 
 
 ## 删除安全性群組規則
@@ -169,7 +174,7 @@ twccli ls vcs -secg -s 892486
 
 :::info
 刪除安全性群組的時候，請使用安全性群組的 UUID 進行刪除。
-UUID 最短僅需提供==前8碼==，即可進行刪除。 
+UUID 最短僅需提供前8碼，即可進行刪除。
 :::
 
 參考範例:point_down:：
