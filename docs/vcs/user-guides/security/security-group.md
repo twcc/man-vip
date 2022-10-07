@@ -99,22 +99,21 @@ twccli ls vcs -secg -s 937648   # 列出 ID 為 937648 個體的安全性群組
 
 
 * 進入「建立網路安全規則」頁面，填寫網路安全規則的設定資訊，完成後點擊「**下一步：檢閱+建立>**」。
-方向：選擇「ingress」輸入或「egress」輸出。
-連接埠範圍(最小)：設定套用此規則開始的連接埠。
-連接埠範圍(最大)：設定套用此規則結束的連接埠。
-協定：選擇欲管控的協定如 tcp、udp、icmp... 等。
-CIDR：指要套用此虛擬運算個體安全規則的 CIDR 網段。
+    * 方向：選擇「ingress」輸入或「egress」輸出。
+    * 連接埠範圍(最小)：設定套用此規則開始的連接埠。
+    * 連接埠範圍(最大)：設定套用此規則結束的連接埠。
+    * 協定：選擇欲管控的協定如 tcp、udp、icmp... 等。
+    * CIDR：指要套用此虛擬運算個體安全規則的 CIDR 網段。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6ffff41d19ad58a60940448bcd76ca91.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_65f5a4642010788eaade8690416c0fd4.png)
 
 * 檢視網路安全規則的設定資訊及計畫的額度資訊，確定後點選「**建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_56db622663f2cee9836ad6a8a08ab2f8.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8694bfd1e5382dc5e95b6955c19a9c0e.png)
 
 * 建立完成後，即可於安全性群組規則列表新增一項新的安全規則。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8044bfe912c085595ba16daa890b998f.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f644003a278a6603269b5ba1a4fd09da.png)
 
 </TabItem>
 
