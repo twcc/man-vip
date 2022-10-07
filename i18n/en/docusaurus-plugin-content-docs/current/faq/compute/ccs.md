@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
-title: '容器運算服務 (CCS)'
+title: 'TWCC FAQs | Container Compute Service (CCS)'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-ccs-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-ccs-en'
 ---
 
 # TWCC FAQs | Container Compute Service (CCS)
@@ -41,6 +43,8 @@ Both services can run on GPU containerized environments:
 - If you want to deploy a multi-node, distributed high-performance parallel computing environment with more than 8 GPUs, we recommend you choose Taiwania 2 (HPC CLI).
 
 </details>
+
+<div style={{height:10+'px'}}></div>
 
 
 ## Connection
@@ -84,6 +88,8 @@ Please refer to the following 2 methods:
 
 </details>
 
+<div style={{height:10+'px'}}></div>
+
 
 ## Container Management
 
@@ -120,6 +126,8 @@ All containers you create are mounted with the same storage space, [<ins>Hyoer F
 The life cycle of the HFS storage space follows the user's supercomputer account. Therefore, all containers created by one user are mounted with the same HFS storage space.
 
 </details>
+
+<div style={{height:10+'px'}}></div>
 
 
 ## Resource allocation and monitoring
@@ -205,6 +213,9 @@ Q7. What is the difference between "Memory Utilization" and "GPU Memory Utilizat
 
 </details>
 
+<div style={{height:10+'px'}}></div>
+
+
 ## Packages
 
 <details>
@@ -283,6 +294,8 @@ You can use the built-in tools to manage your packages: `apt`, `apt-get`, and `p
 To ensure data security, the root user of the container cannot access your /home and /work directories. Please install with your supercomputer account and do not switch to the root user.
 
 </details>
+
+<div style={{height:10+'px'}}></div>
 
 
 
@@ -384,6 +397,9 @@ The storage space you access from Jupyter Notebook is the Hyper File System (HFS
 
 </details>
 
+<div style={{height:10+'px'}}></div>
+
+
 ## Networking & Security
 
 <details>
@@ -393,6 +409,8 @@ The storage space you access from Jupyter Notebook is the Hyper File System (HFS
 The port numbers of containers range from 50000 to 60000.
 
 </details>
+
+<div style={{height:10+'px'}}></div>
 
 
 ## Container duplicates
@@ -404,6 +422,8 @@ The port numbers of containers range from 50000 to 60000.
 Currently the system does not support this feature.
 
 </details>
+
+<div style={{height:10+'px'}}></div>
 
 
 
@@ -446,6 +466,9 @@ For ways to improve performance, please refer to the following:
 3. Make a duplicate of the container, and then use the duplicate to create a new container. If there is still room for the overall system load, the container can be arranged on a less busy node.
 
 </details>
+
+<div style={{height:10+'px'}}></div>
+
 
 ## Execution error
 
@@ -516,6 +539,9 @@ Please follow the procedure below to resolve package compatibility issues:
 **Step 3.** If you have installed Anaconda or Miniconda, please also remove or rename it.<br/>
 **Step 4.** Re-create a new container. When selecting the image type, move the cursor to <i class="fa fa-info-circle" aria-hidden="true"></i>, and go to the NGC website to check image information. Select a suitable image to create a new container and launch the Jupyter Notebook.
 </details>
+
+<div style={{height:10+'px'}}></div>
+
 
 ## Other questions
 
