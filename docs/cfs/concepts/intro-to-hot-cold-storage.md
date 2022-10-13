@@ -27,4 +27,4 @@ import TabItem from '@theme/TabItem';
 
 ## 檔案搬移
 
-您可以透過[手動搬移](https://man.twcc.ai/@twccdocs/guide-cfs-move-retrieve-data-zh)，或設定[生命週期](https://man.twcc.ai/@twccdocs/guide-cfs-lifecycle-mngmnt-zh)自動將檔案遷移至冷儲存區進行資料長期儲存，並可隨時在不同儲存間進行檔案遷移。
+您可以透過[手動搬移](../user-guides/move-files/move-retrieve-files.md)，或設定[生命週期](../user-guides/move-files/manage-file-lifecycle.md)自動將檔案遷移至冷儲存區進行資料長期儲存，並可隨時在不同儲存間進行檔案遷移。

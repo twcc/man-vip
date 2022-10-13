@@ -10,13 +10,14 @@ import TabItem from '@theme/TabItem';
 # 資料集管理
 
 雲端檔案服務儲存的階層可分為三大類：(1) 資料集 (2) 第一層資料夾 (3)子資料夾。
-首次使用請先建立[熱儲存區](https://man.twcc.ai/@twccdocs/concept-cfs-hot-and-cold-zh)資料集，以將您的檔案上傳至雲端檔案服務。
+首次使用請先建立[熱儲存區](../../concepts/intro-to-hot-cold-storage.md)資料集，以將您的檔案上傳至雲端檔案服務。
 
 ## 開始之前
 
 - 若尚未註冊使用帳號，請先[註冊 TWCC](https://www.twcc.ai/)。
 - 若選擇使用 TWCC 入口網站操作，請先登入 [TWCC 入口網站](https://www.twcc.ai/)。
-- 若選擇使用 TWCC CLI 操作，請先<ins><a target="_blank" href = "https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-install-linux-zh">安裝 TWCC CLI</a></ins>，並<ins><a target="_blank" href = "https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-signin-zh">登入</a></ins>。
+- 若選擇使用 TWCC CLI 操作，請先<a href="https://github.com/twcc/TWCC-CLI" target="_blank"><ins>安裝 TWCC CLI</ins></a>、並<a href="https://github.com/twcc/TWCC-CLI" target="_blank"><ins>登入</ins></a>
+
 
 ## 建立資料集
 
