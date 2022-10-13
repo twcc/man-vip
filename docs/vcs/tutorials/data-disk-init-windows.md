@@ -16,7 +16,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 
 ### Step 1. 確認磁碟已連結至個體
 
-[將資料磁碟連結至虛擬運算個體](https://man.twcc.ai/@twccdocs/guide-vcs-vds-manage-disk-zh#%E9%80%A3%E7%B5%90%E8%87%B3%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)後，請確認在使用者介面已正確連結。
+[將資料磁碟連結至虛擬運算個體](../user-guides/storage/view-attach-delete-disks.md#連結至虛擬運算個體)後，請確認在使用者介面已正確連結。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fa75bdb78bc52059698a1e40d540a0da.png)
 
@@ -25,7 +25,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 
 ### Step 2. 開啟電腦管理
 
-請[連線](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-windows-zh)進您的虛擬運算個體，並在 <i class="fa fa-search" aria-hidden="true"></i> 搜尋「**電腦管理**」，開啟應用程式。
+請[連線](../user-guides/connecting/windows/from-windows.md)進您的虛擬運算個體，並在 <i class="fa fa-search" aria-hidden="true"></i> 搜尋「**電腦管理**」，開啟應用程式。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4dcce52be28b3142c19ab11b731c8f37.png)
 
