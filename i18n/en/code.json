@@ -230,6 +230,14 @@
     "message": "Expand sidebar",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "homepage.title": {
+    "message": "TWS",
+    "description": "首頁標題"
+  },
+  "homepage.tagline": {
+    "message": "Create Your Services with TWCC",
+    "description": "首頁說明"
+  },
   "homepage.services.GPU.title": {
     "message": "Rapid & Lightweight Deployment",
     "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."

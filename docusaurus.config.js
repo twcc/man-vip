@@ -1,7 +1,7 @@
 const env_list = {
     staging: "Staging",
     preview: "Preview",
-    production: "TWCC",
+    production: "TWS",
   },
   i18nDirPath = {
     docs: "docusaurus-plugin-content-docs/current",
@@ -24,7 +24,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: env_list[process.env.Target || "production"],
-  tagline: "TWCC Manual",
+  tagline: "Create your services with TWCC.",
   url: "https://man.twcc.vip",
   baseUrl: "/",
   onBrokenLinks: "warn",
@@ -148,8 +148,8 @@ const config = {
       navbar: {
         title: undefined,
         logo: {
-          alt: "TWCC Logo",
-          src: "img/LOGO.svg",
+          alt: "TWS Logo",
+          src: "img/TWS-Logo.svg",
         },
         items: [
           {
