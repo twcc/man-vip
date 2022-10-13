@@ -27,7 +27,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-ccs-scheduled-
 * 填寫容器基本資訊、選擇映像檔、基本設定及輸入執行程式的指令；當任務型容器啟動後會自動執行該指令的內容，接著點擊「下一步：儲存資訊>」進入儲存資訊頁面。
 
 :::info
-:bulb: 提示：請先使用 [「HFS 高速檔案系統」](https://www.twcc.ai/doc?page=hfs)上傳欲執行運算的程式內容。
+:bulb: 提示：請先使用 [「HFS 高速檔案系統」](hfs/overview.md)上傳欲執行運算的程式內容。
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f06710efd7d9ee81c80149fc11b663bb.png)
@@ -40,8 +40,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-ccs-scheduled-
 
 :::info 
 :book: 參見
-* [雲端物件儲存服務](https://www.twcc.ai/doc?page=object)
-* [HFS 儲存服務](https://www.twcc.ai/doc?page=hfs)
+* [雲端物件儲存服務](cos/overview.md)
+* [HFS 儲存服務](hfs/overview.md)
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1b2b5540a2ac2d584332e9ad1b96cf74.png)
@@ -89,7 +89,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-ccs-scheduled-
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f64b3640255755955947cdfba9fa7f5b.png)
 
 :::caution
-- 「任務 log」功能無法確保您的所有紀錄在容器結束運行後，仍可保存及取得，建議您將 log 轉存至 [TWCC HFS](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh) 或 上傳到 [TWCC COS](https://man.twcc.ai/@twccdocs/doc-cos-main-zh) 中，以確保紀錄可用性。
+- 「任務 log」功能無法確保您的所有紀錄在容器結束運行後，仍可保存及取得，建議您將 log 轉存至 [TWCC HFS](hfs/overview.md) 或 上傳到 [TWCC COS](cos/overview.md) 中，以確保紀錄可用性。
 - 若希望由 TWCC 維運人員協助您取得完整紀錄，請您來信授權處理 (isupport@twcc.io)，並請勿存放機敏資料。
 :::
 
