@@ -14,7 +14,7 @@ With TWCC Security Group, users can control the network security of the VCS inst
 
 :::info
 - Security Group is designed to set individual security rules for each VCS instance. Therefore, at least one available VCS instance must be created before setting the security group rules.
-- For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, see [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-en#%E5%AE%89%E5%85%A8%E6%80%A7%E7%BE%A4%E7%B5%84).
+- For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-en#%E5%AE%89%E5%85%A8%E6%80%A7%E7%BE%A4%E7%B5%84).
 :::
 
 
@@ -29,8 +29,7 @@ With TWCC Security Group, users can control the network security of the VCS inst
 
 * Click **Security Group** from the service list to go to the **Security Group Management (VCS Instances)** page, and click on the available VCS instance.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d767967e92926d984b6bbb45532f7bc5.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1dfbdda8636a9cf517c1ab718d8e3853.png)
 
 * Enter **Security Group Rules Management** page, the current security group rules will be displayed.
 
@@ -47,7 +46,6 @@ twccli ls vcs -secg -s 937648   # List the security group of the instance with I
 
 </Tabs>
 
-<br/>
 
 <details>
 
@@ -81,7 +79,9 @@ twccli ls vcs -secg -s 937648   # List the security group of the instance with I
 <br/>
 
 :::caution
-Due to frequent security incidents, if your connection comes from the following countries: China, Germany, France, South Korea, the Netherlands, Poland, and Russia, we will disable your remote connection to Windows instances (port: 9833). If you need to connect to TWCC Windows instances, please contact Customer Service.
+Due to frequent security incidents, if your connection comes from the following countries: China, Germany, France, South Korea, the Netherlands, Poland and Russia, we will disable your remote connection to Windows instances (port: 9833).
+
+If you need to connect to TWCC Windows instances, please contact Customer Service.
 :::
 
 
@@ -97,43 +97,28 @@ Due to frequent security incidents, if your connection comes from the following 
 
 * Click **Security Group** from the service list to go to the **Security Group Management (VCS Instances)** page, and click on the available VCS instance.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2209445e8cb15381e21796aa04f2508a.png)
-
-
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1dfbdda8636a9cf517c1ab718d8e3853.png)
  
 * Enter **Security Group Rules Management** page, the current security group rules will be displayed, and click **＋CREATE** to create a new rule.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bc6cb3d8aff5fb3aa093d06e58cf85e8.png)
-
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4a0ee6ab4878d4179f72b88e286a4e1e.png)
 
 * Enter **Create Security Group Rules** page, fill in the setting information of the security group rule, and then click **NEXT: REVIEW & CREATE>**.
-Direction: Select **ingress** or **egress**.
-Port Range (Min): Set the **beginning port** to which this rule applies.
-Port Range (Max): Set the **ending port** to which this rule applies.
-Protocol: Select the protocol, such as tcp, udp, icm, etc. 
-CIDR: Specify the CIDR range of this rule applies on the VCS instance.
+    * Direction: Select **ingress** or **egress**.
+    * Port Range (Min): Set the **beginning port** to which this rule applies.
+    * Port Range (Max): Set the **ending port** to which this rule applies.
+    * Protocol: Select the protocol, such as tcp, udp, icm, etc.
+    * CIDR: Specify the CIDR range of this rule applies on the VCS instance.
 
-:::caution
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7c4886b50ddc06e6e7739580c751f48d.png)
 
-Considering information security, please do not set the CIDR to the insecure network segment of `x.x.x.x/0` except for `0.0.0.0/0`.
+* Review your Security Group rule settings and the project credit, and then click **CREATE**.
 
-:::
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f7722144a582acd6be82aea9b4e66b07.png)
-
-
-
-* Review your Security Group rule settings and the project credit, and then click **CREATE**. 
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cbec7a87f3fe5735a7f53a3877de0396.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8c6bf81bc1a6cadde4f29b637638a044.png)
 
 * Once created, the new Security Group rule will be displayed in the list.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_49f6c96bf930c673cb231c6cca9d2c07.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c7b9e3833e023f503418413c1484e832.png)
 
 </TabItem>
 
@@ -143,7 +128,7 @@ Considering information security, please do not set the CIDR to the insecure net
 You can use `twccli net vcs --help` to check the details of the commands of setting Security Group rules.
 :::
 
-- To permit ingress connection from ==10.10.10.0/24== on port ==TCP:81==, use the commands as follows:
+- To permit ingress connection from 10.10.10.0/24 on port TCP:81, use the commands as follows:
 
 ```
 twccli net vcs -secg -s 892486 -cidr 10.10.10.0/24 -in -proto tcp -p 81
@@ -162,6 +147,12 @@ twccli ls vcs -secg -s 892486
 
 </Tabs>
 
+
+:::caution
+- Considering information security risk, please do not set the CIDR to the insecure network segment of `x.x.x.x/0` except for `0.0.0.0/0`.
+- Please set the port range carefully and measure the open range carefully. To avoid the risk of intrusions, it is not recommended to set the ingress port range from 0 to 65535.
+:::
+
 <br/>
 
 
@@ -176,8 +167,7 @@ Go to the **Security Group Rules Management** page> Select rules> click **DELETE
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b9ae7ca9d9f718eb07b29583dc844cb9.png)
 
-
-- Or click the <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> menu button on the right side of the rule, and click **DELETE**.
+- Or click the &nbsp;<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>&nbsp; menu button on the right side of the rule, and click **DELETE**.
 
 </TabItem>
 
@@ -187,7 +177,7 @@ Enter the command :point_right: `twccli rm vcs -secg $SecurityGroupId` to delete
 
 :::info
 Please use the UUID to identify the Security Group rule you want to delete.
-You only need to provide at least ==the first 8 codes== of UUID to delete it.
+You only need to provide at least the first 8 codes of UUID to delete it.
 :::
 Example:point_down::
 ```bash

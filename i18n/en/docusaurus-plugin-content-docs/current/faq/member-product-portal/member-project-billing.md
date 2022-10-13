@@ -13,7 +13,6 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-membership-pro
 
 <summary>  Q1. How to enter member center?</summary>
 
-==**Need to update:exclamation:**==
 Please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-service-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fhowto-service-access-service-en) for more information about entering member center.
 
 </details>
@@ -22,7 +21,6 @@ Please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-ser
 
 <summary>  Q2. What can I do if I do not receive the SMS verification code message ?</summary>
 
-==**Need to update:exclamation:**==
 1. In order to verify your identity and phone number, you need to enter the verification code received via SMS message to complete the sign-up process. Please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-service-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowo-service-receive-verif-phone-en) for detailed steps.
 2. If the telecommunications company does not provide online services to disable “Reject Enterprise SMS”, please call the company and ask for changing assistance. The change will not be effective immediately. For the effective time, please contact the telecommunications company. 
 
@@ -32,7 +30,6 @@ Please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-ser
 
 <summary>  Q3. What can I do if I forget the supercomputer password?</summary>
 
-==**Need to update:exclamation:**==
 Since we do not record the user's supercomputer password, please reset your password through the service website. Please refer to 
 [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-service-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-hostname-pwd-otp-en#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC) for the detailed resetting steps.
 
@@ -42,7 +39,6 @@ Since we do not record the user's supercomputer password, please reset your pass
 
 <summary>  Q4. What can I do if I forget the portal password?</summary>
 
-==**Need to update:exclamation:**==
 Please visit the service website, click "Login" then click "忘記密碼(Forget password)", please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-service-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-reset-portal-pwd-en) for the detailed steps.
 
 </details>

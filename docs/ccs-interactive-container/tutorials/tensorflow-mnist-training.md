@@ -11,11 +11,11 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorfl
 
 ### Step 1. 登入 TWCC
 
-- 若尚無帳號，請參考 [註冊 TWCC 帳號](https://www.twcc.ai/doc?page=register_account)
+- 若尚無帳號，請參考 [註冊 TWCC 帳號](../../member/user-guides/member-key-quota/sign-up-for-twcc.md)
 
 ### Step 2. 建立開發型容器
 
-- 請參考 [開發型容器](https://www.twcc.ai/doc?page=container#建立開發型容器) 建立開發型容器
+- 請參考 [開發型容器](../user-guides/create-connect/create-container.md) 建立開發型容器
 
 :::info
 映像檔類型請選擇 TensorFlow、映像檔選擇 `tensorflow-19.11-tf2-py3:latest`、硬體選擇支援 1 顆 GPU 的設定即可
@@ -26,7 +26,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorfl
 - 使用 Jupyter Notebook 連線容器，開啟 Terminal
 
 :::info
-:book: 參見[使用 Jupyter Notebook](https://www.twcc.ai/doc?page=container#使用-Jupyter-Notebook)
+:book: 參見[使用 Jupyter Notebook](../user-guides/create-connect/connect-container.md#jupyter-notebook)
 :::
 
 - 輸入以下指令，將 [NCHC_GitHub](https://github.com/TW-NCHC/AI-Services/tree/V3Training) training 程式下載至容器

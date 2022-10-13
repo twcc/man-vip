@@ -36,12 +36,13 @@ Upload files to Cloud Object Storage (COS) bucket from your local computer:
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9abc4dd24ac7959df5f5d223b63b3905.png)
 
+* After selecting the file you want to upload, you can check the **Encryption** box on the left to encrypt the file with a key. Then click **UPLOAD**.
 
+:::info
+For more information on file encryption, please refer to: [<ins>File Encryption</ins>](https://man.twcc.ai/@TWSC/guide-cos-encryption-zh).
+:::
 
-* Select the file you want to upload and click **UPLOAD**.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_80f5636d43907412f20549aa019bcc09.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c2fc1e6c5d53307bb8950987f2d238e5.png)
 
     
 * Click **DONE** when system shows **Upload Successful!**.

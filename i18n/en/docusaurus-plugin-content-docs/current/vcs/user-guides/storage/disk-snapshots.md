@@ -10,12 +10,12 @@ import TabItem from '@theme/TabItem';
 
 # Disk snapshots
 
-To backup data in your data disks, please follow the steps to create and manage data disk snapshots.
+To backup data in your data disks, please refer to the following steps to create and manage data disk snapshots.<br/>
 (※ *The system disk currently does not support the snapshot function. For backing up system disks, please refer to "Virtual Compute Service (VCS) Instance image"* )
 
 
 :::info
-For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, see [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-en#%E8%99%9B%E6%93%AC%E7%A3%81%E7%A2%9F%E6%9C%8D%E5%8B%99).
+For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-en#%E8%99%9B%E6%93%AC%E7%A3%81%E7%A2%9F%E6%9C%8D%E5%8B%99).
 :::
 
 
@@ -30,7 +30,7 @@ Create a snapshot of your data disk to back up your data.
 
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-* On **Data Disk Details** page, click **SNAPSHOT**. When **Create Snapshot** window pops up, enter a name and description for the snapshot, then click **OK** to create the snapshot.
+* On **Data Disk Details** page, click **SNAPSHOT**. When **Create Snapshot** window pops up, enter the name and description for the snapshot, then click **OK** to create the snapshot.
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8437022d472a83e69f231125184ab20f.png)
@@ -52,7 +52,7 @@ Create a snapshot of your data disk to back up your data.
 
 ## View a snapshot
 
-View ID, name, created time, creator and other information of the snapshot.
+View snapshot information such as ID, name, created time, and creator, etc.
 
 <Tabs>
 
@@ -100,7 +100,7 @@ Once the snapshot is deleted, the data cannot be restored!
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0e5ccd941ef7943645d088a96e734f98.png)
 
 
-* Or click the <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> menu button then click **DELETE** to delete the snapshot.
+* Or click the menu button &nbsp;<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>&nbsp; then click **DELETE** to delete the snapshot.
 
 </TabItem>
 

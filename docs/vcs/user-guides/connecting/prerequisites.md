@@ -13,10 +13,10 @@ import TabItem from '@theme/TabItem';
 
 ## Step 1. 建立公用 IP
 
-若需從虛擬網路外部連線登入虛擬運算個體，請先建立公用 IP，並建議使用[安全性群組](https://man.twcc.ai/@preview-twccdocs/guide-vcs-sg-zh)保護個體安全與降低資安風險。
+若需從虛擬網路外部連線登入虛擬運算個體，請先建立公用 IP，並建議使用[安全性群組](../security/security-group.md)保護個體安全與降低資安風險。
 
 :::info
-更多公用 IP 使用資訊，請參考 [<ins>彈性 IP</ins>](https://man.twcc.ai/@preview-twccdocs/guide-vcs-eip-zh)。
+更多公用 IP 使用資訊，請參考[<ins>彈性 IP</ins>](../networking/elastic-ip.md)。
 :::
 
 <!-- Portal start -->

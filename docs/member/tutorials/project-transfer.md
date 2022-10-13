@@ -25,7 +25,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-project-data
 
 ### Step 1. 將舊專案之資料備份至 COS
 
-虛擬運算服務用戶可參考[此文件](https://www.twcc.ai/doc?page=backup)，先將舊專案虛擬運算個體的資料備份至 COS。
+虛擬運算服務用戶可參考[此文件](../../cos/tutorials/backup-synchronize-restore)，先將舊專案虛擬運算個體的資料備份至 COS。
 
 :::info
 因容器運算服務、台灣杉二號之計算資源使用的預設儲存系統為高速檔案系統 (HFS)，個人資料可跨專案使用，因此可略過此步驟。
@@ -63,7 +63,7 @@ S3 browser 不支援直接移轉資料，因此請選取您需轉移的檔案，
 
 ### Step 1. 將舊專案之資料備份至 COS
 
-虛擬運算服務用戶可參考[此文件](https://www.twcc.ai/doc?page=backup)，先將舊專案虛擬運算個體的資料備份至 COS。
+虛擬運算服務用戶可參考[此文件](../../cos/tutorials/backup-synchronize-restore)，先將舊專案虛擬運算個體的資料備份至 COS。
 
 :::info
 因容器運算服務、台灣杉二號之計算資源使用的預設儲存系統為高速檔案系統 (HFS)，個人資料可跨專案使用，因此可略過此步驟。
@@ -71,7 +71,7 @@ S3 browser 不支援直接移轉資料，因此請選取您需轉移的檔案，
 
 ### Step 2. 將舊專案 COS 連結至本機端
 
-請參考[此文件](https://man.twcc.ai/@twccdocs/cosbackup-zh#%E5%AE%89%E8%A3%9D%E8%88%87%E8%A8%AD%E5%AE%9A-s3cmd)安裝 s3cmd，輸入**舊專案資料 (Access Key、Secret Key)**，透過 s3cmd 將本機端連結舊專案 COS。
+請參考[此文件](../../cos/tutorials/backup-synchronize-restore.md#安裝與設定-s3cmd)安裝 s3cmd，輸入**舊專案資料 (Access Key、Secret Key)**，透過 s3cmd 將本機端連結舊專案 COS。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c9dd90a6105018eecaa8f3e6f2d4f0fc.png)
 
