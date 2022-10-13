@@ -18,5 +18,5 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-hfs-check-st
 
 
 :::info
-若空間不敷使用您可以擴充容量，購買價格與調整方式請參考[<ins>價目表</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS)。
+若空間不敷使用您可以擴充容量，購買價格與調整方式請參考[<ins>價目表</ins>](../../pricing.mdx)。
 :::

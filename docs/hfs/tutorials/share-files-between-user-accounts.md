@@ -19,7 +19,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-hfs-share-fi
 
 <b>Step 1. 將檔案上傳至 TWCC COS (分享者)</b>
 
-分享者可透過 [S3 用戶端工具或掛載 COS 的方式](https://man.twcc.ai/@twccdocs/howto-twnia2-access-cos-zh)，將 HFS 檔案上傳至 COS；或 [將 HFS 檔案備份/同步至 COS](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fcosbackup-zh#s3cmd%EF%BC%9A%E9%81%A9%E7%94%A8-VCS-%E5%80%8B%E9%AB%94-Linux%E3%80%81CCS-%E5%AE%B9%E5%99%A8)。
+分享者可透過 [S3 用戶端工具或掛載 COS 的方式](../../twnia2-hpc-cli/tutorials/access-cos.md#1-s3-用戶端工具)，將 HFS 檔案上傳至 COS；或 [將 HFS 檔案備份/同步至 COS](../../cos/tutorials/backup-synchronize-restore.md)。
 
 
 後續步驟區分以下兩種方式進行：
@@ -61,7 +61,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-hfs-share-fi
 
 <b>Step 2. 將 COS 掛載至 TWNIA2  (其他用戶)</b>
 
-其他用戶請參考 [<ins>此篇文章</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-access-cos-zh) 將分享者的 COS 儲存體視為網路硬碟或共享資料夾，掛載至您的 TWNIA2 （登入節點）或虛擬運算個體後，即可存取使用。
+其他用戶請參考 [<ins>此篇文章</ins>](../../twnia2-hpc-cli/tutorials/access-cos.md) 將分享者的 COS 儲存體視為網路硬碟或共享資料夾，掛載至您的 TWNIA2 （登入節點）或虛擬運算個體後，即可存取使用。
     
     
 </details>
