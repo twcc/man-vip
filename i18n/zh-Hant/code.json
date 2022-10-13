@@ -230,9 +230,21 @@
     "message": "展開側邊欄",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "homepage.title": {
+    "message": "臺灣智慧雲端",
+    "description": "首頁標題"
+  },
+  "homepage.tagline": {
+    "message": "TWCC 快速啟用和導入雲端智慧應用",
+    "description": "首頁說明"
+  },
+  "homepage.getStarted": {
+    "message": "快速上手",
+    "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
+  },
   "homepage.services.GPU.title": {
     "message": "快速部署",
-    "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
+    "description": "連結至開始"
   },
   "homepage.services.GPU.desc": {
     "message": "容器運算服務 (CCS) 可快速部署 GPU 處理器的工作環境，提高 29% 的工作效率！",
