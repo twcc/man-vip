@@ -110,7 +110,7 @@ sync-from-GitHub:
   stage: build
   script:
     - git remote add github https://${GITHUB_USRERNAME}:${GITHUB_APIKEY}@github.com/twcc/man-vip
-    - git remote add gitAug http://${AUG_USERNAME}:${AUG_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git
+    - git remote add gitAug https://${AUG_USERNAME}:${AUG_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git
     - git fetch --unshallow github
     - git checkout github/tws-sync
     - export TZ=Asia/Taipei
