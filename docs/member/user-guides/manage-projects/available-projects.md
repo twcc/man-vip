@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 ### Step 1. 登入 TWS 會員中心
 
-- 使用帳號與 TWCC 相同之帳密登入 [TWS 會員中心](https://member.twcc.ai/)，若尚未註冊，請參考 [註冊 TWCC 帳號](https://www.twcc.ai/doc?page=register_account)。
+- 使用帳號與 TWCC 相同之帳密登入 [TWS 會員中心](https://tws.twcc.ai/)，若尚未註冊，請參考 [註冊 TWS / TWCC 帳號](../member-key-quota/sign-up-for-twcc.md)。
 
 <br/>
 
@@ -26,7 +26,7 @@ import TabItem from '@theme/TabItem';
 
 :::info
 若無適用於 TWCC 的專案，您可以：
-  - 請專案主持人 (建立者) 或租戶管理員，將您加入專案，參考 [<ins>管理專案成員</ins>](https://man.twcc.ai/@twsdocs/guide-service-manage-project-team-zh)
+  - 請專案主持人 (建立者) 或租戶管理員，將您加入專案，參考[<ins>管理專案成員</ins>](./manage-project-members.md)。
   - 或請您聯繫 TWS 業務，我們將深入了解您的使用需求，並協助您新增使用專案與額度。
 :::
 
