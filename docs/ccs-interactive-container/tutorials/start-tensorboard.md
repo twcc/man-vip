@@ -8,7 +8,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-launch-t
 
 為了增加機器學習模型辨識的準確度，觀察模型訓練變化、除去錯誤，都是必要但複雜的工作。而 TensorBoard 以網頁形式視覺化呈現 TensorFlow 模型資料的變化，可繪製多種圖形，讓資料科學家可輕鬆檢視並理解神經網路的結構與實驗結果，快速找到優化模型的解決方案。
 
-TWCC 的容器環境中已為用戶安裝 TensorBoard，本篇文章將教學如何啟動 TensorBoard 工具。更多 Tensorboard 介紹與使用方法，請參考[ TensorFlow 官網](https://www.tensorflow.org/tensorboard)。
+TWCC 的容器環境中已為用戶安裝 TensorBoard，本篇文章將教學如何啟動 TensorBoard 工具。更多 Tensorboard 介紹與使用方法，請參考 [TensorFlow 官網](https://www.tensorflow.org/tensorboard)。
 
 :::tip
 建議在 TensorFlow 容器中啟動，較能發揮 TensorBoard 的功能，用於其他容器功能將受限。
@@ -18,7 +18,7 @@ TWCC 的容器環境中已為用戶安裝 TensorBoard，本篇文章將教學如
 
 ## Step 1. 連線進入開發型容器
 
-請參考[<ins>連線方式</ins>](https://man.twcc.ai/@twccdocs/SJlZnSOaN?type=view#%E4%BD%BF%E7%94%A8-Jupyter-Notebook)連線進入您的開發型容器。
+請參考[連線容器](../user-guides/create-connect/connect-container.md#連線容器-1)連線進入您的開發型容器。
 
 <br/>
 
@@ -36,7 +36,7 @@ tensorboard --logdir=~/logdir --port 5000
 :::info
 1. 您需要指定一個作為 TensorBoard 提供網頁服務使用的連接埠 (port)。<div></div>
 在 TWCC 的容器環境中，有三個 port 可供用戶使用，分別是`5000`、`5001`、`5002`，在此以 port `5000` 做為範例。<div></div>
-更多資訊可參考 [<ins>HowTo：設定開發型容器的服務埠</ins>](https://www.twcc.ai/doc?page=howto-ccs-config-service-port)。
+更多資訊可參考[<ins>設定開發型容器的服務埠</ins>](./configure-service-ports.md)。
 3. 上述指令中的 `--logdir` 為 log 檔存放位置，您可自行設定，本文以 `~/logdir` 做為範例。
 :::
 
@@ -77,5 +77,5 @@ tensorboard --logdir=~/logdir --port 5000
 
 
 :::info
-更多 Tensorboard 介紹與使用方法，請參考[<ins>TensorFlow 官網</ins>](https://www.tensorflow.org/tensorboard)。
+更多 Tensorboard 介紹與使用方法，請參考 [<ins>TensorFlow 官網</ins>](https://www.tensorflow.org/tensorboard)。
 :::

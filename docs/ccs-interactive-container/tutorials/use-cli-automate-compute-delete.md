@@ -6,35 +6,35 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-cli-ccs-auto
 
 # 使用 TWCC CLI 自動完成運算及刪除容器
 
-這篇文章將幫助使用者了解如何運用 [TWCC CLI](https://man.twcc.ai/@twccdocs/doc-cli-main-zh) **自動化執行以下工作**：
+這篇文章將幫助使用者了解如何運用 [TWCC CLI](https://github.com/twcc/TWCC-CLI) **自動化執行以下工作**：
 
 ```
 1. 執行運算程式
 2. 刪除容器
 ```
 
-在入口網站或使用 TWCC CLI 建立[開發型容器](https://www.twcc.ai/doc?page=container)後，您可將手動執行的工作交由 script 自動化完成、刪除容器，降低容器持續開啟所需的成本。而運算程式與資料皆會保留在容器預設儲存空間 - [高速檔案系統 (HFS)](https://www.twcc.ai/doc?page=hfs)，無須擔心資料將隨容器刪除而消失。
+在入口網站或使用 TWCC CLI [建立開發型容器](../user-guides/create-connect/create-container.md)後，您可將手動執行的工作交由 script 自動化完成、刪除容器，降低容器持續開啟所需的成本。而運算程式與資料皆會保留在容器預設儲存空間 - [高速檔案系統 (HFS)](/docs/hfs/overview.md)，無須擔心資料將隨容器刪除而消失。
 
 <br/>
 
 
 ### Step 1. 將運算程式上傳至容器
 
-參考[<ins>使用 SFTP + Filezilla 傳輸檔案</ins>](https://man.twcc.ai/@twccdocs/rypYCr_TN?type=view#%E4%BD%BF%E7%94%A8-SFTP--Filezilla-%E5%82%B3%E8%BC%B8%E6%AA%94%E6%A1%88)，將訓練程式上傳到容器預設儲存空間 - 高速檔案系統 (HFS) 空間。
+參考[連線檔案傳輸節點](/docs/hfs/user-guides/connect-data-transfer-node.md)使用 SFTP + Filezilla 傳輸檔案，將訓練程式上傳到容器預設儲存空間 - 高速檔案系統 (HFS) 空間。
 
 <br/>
 
 
 ### Step 2. 安裝並登入 TWCC CLI
 
-- 參考 [<ins>安裝 TWCC CLI</ins>](https://man.twcc.ai/@twccdocs/guide-cli-install-linux-zh)，在開發型容器內部署 TWCC CLI。
+- [安裝 TWCC CLI](https://github.com/twcc/TWCC-CLI)，在開發型容器內部署 TWCC CLI。
 
 :::info
 - 2021 版本<ins>以後</ins>之容器已為用戶預安裝 TWCC CLI，建立後可直接登入使用
 - 2021 版本<ins>以前</ins>的容器映像檔版本需自行安裝
 :::
 
-- 安裝完成後請[登入](https://man.twcc.ai/@twccdocs/guide-cli-signin-zh)。
+- 安裝完成後請[登入](https://github.com/twcc/TWCC-CLI)。
 
 <br/>
 

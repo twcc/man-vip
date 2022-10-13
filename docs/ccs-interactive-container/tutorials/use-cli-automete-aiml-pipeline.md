@@ -23,13 +23,13 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-cli-ccs-depl
 本文範例將使用 TWCC 虛擬運算個體做為 local 端主機，已為使用者安裝 TWCC CLI，可快速執行部署容器自動化管理流程，您也可將 TWCC CLI 安裝於自己的電腦操作。
 
 :::info
-TWCC-CLI 安裝步驟與資源操作指令，可參考 [<ins>TWCC-CLI α</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05)。
+TWCC-CLI 安裝步驟與資源操作指令，可參考 [<ins>TWCC-CLI α</ins>](https://github.com/twcc/TWCC-CLI)。
 :::
 
 <br/>
 
 ### Step 1. 建立虛擬運算個體
-依照[建立虛擬運算個體](https://www.twcc.ai/doc?page=vm#%E5%BB%BA%E7%AB%8B%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)，在使用者網站建立一個虛擬運算個體，設定請參考下方：
+依照[建立虛擬運算個體](/docs/vcs/user-guides/create/create-instances.md)，在使用者網站建立一個虛擬運算個體，設定請參考下方：
 
 ```
 映像檔　：Ubuntu 20.04
@@ -40,11 +40,12 @@ TWCC-CLI 安裝步驟與資源操作指令，可參考 [<ins>TWCC-CLI α</ins>](
 
 ### Step 2. 啟用 TWCC CLI
 
-請參考 [登入 TWCC CLI](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-signin-zh) 啟用 TWCC CLI。
+請 [登入 TWCC CLI](https://github.com/twcc/TWCC-CLI) 啟用 TWCC CLI。
 
 <br/>
 
 ### Step 3. 安裝 jq
+
 jq 是一個 JSON 格式的處理工具。TWCC CLI 資料都可轉換為 JSON 格式呈現，並可利用 jq 截取資料中某些欄位進行運用，相關文件可參考 [jq manual](https://stedolan.github.io/jq/manual/)。
 
 - 輸入以下指令，安裝 jq：
@@ -104,15 +105,15 @@ ssh-copy-id <USERNAME>@<CCS_IP> -p <PORT>
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4aba0afaefcbda5d00554ed19da64eac.png)
 
 :::info
-[<ins>忘記主機密碼？</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC)
+[<ins>忘記主機密碼？</ins>](/docs/member/user-guides/member-key-quota/hpc-account-password-otp#重置主機密碼)
 :::
 
 <br/>
 
 
-### Step 3. 下載範例程式：GPU Burn 
+### Step 3. 下載範例程式：GPU Burn
 
-本文使用 GPU Burn 程式做為操作範例，您可參考以下步驟，在進入容器環境後，載入所需的模型訓練程式，或直接[透過 SFTP + Filezilla ](https://www.twcc.ai/doc?page=hfs#%E4%BD%BF%E7%94%A8-SFTP--Filezilla-%E5%82%B3%E8%BC%B8%E6%AA%94%E6%A1%88) 將程式上傳至容器預設儲存空間 - 高速檔案系統。
+本文使用 GPU Burn 程式做為操作範例，您可參考以下步驟，在進入容器環境後，載入所需的模型訓練程式，或直接 [透過 SFTP + Filezilla](/docs/hfs/user-guides/connect-data-transfer-node.md) 將程式上傳至容器預設儲存空間 - 高速檔案系統。
 
 - 輸入以下指令進入容器環境
 ```bash
