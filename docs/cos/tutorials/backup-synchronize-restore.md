@@ -57,16 +57,16 @@ Secret Key: <YOUR-SECRET-KEY>
 :::info
 1. COS 公開儲存體 Key 可在 TWCC 頁面，點擊「服務列表」>「雲端物件儲存」>「第三方軟體下載」頁面取得：
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_13fa916f80ade7240b2b19b1a7d05fd0.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f6ae3416bfb03f900eb2fb6edf441535.png)
 
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_10b1e2d8c79913236e42bb035e1b08f8.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_23e3004e1cfe1b708483fe44318cdb3a.png)
 
 
 2. 私有儲存體 Key 則可在「私有雲端物件儲存」>「第三方軟體下載」頁面取得：
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c798ba3e83b7f0979f44c4fd43eb664d.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e1f907cbb2fd1526feb916234155a150.png)
 :::
 
 **5. Default Region：直接按 Enter 鍵**
@@ -349,13 +349,13 @@ aws s3 cp  s3://<BUCKET_NAME>/<FILE_NAME> sse-c-test-file --sse-c AES256 --sse-c
 :::info
 1. COS 公開儲存體 Key 可在 TWCC 頁面，點擊「服務列表」>「雲端物件儲存」>「第三方軟體下載」頁面取得：
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4bd8b398c02a8ef1d60d7bd07547dff2.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f6ae3416bfb03f900eb2fb6edf441535.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e28a9e339bca37b4dcf902c088c98774.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_23e3004e1cfe1b708483fe44318cdb3a.png)
 
 2. 私有儲存體 Key 則可在「私有雲端物件儲存」>「第三方軟體下載」頁面取得：
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b2b815bbd03965151022622d8475a165.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e1f907cbb2fd1526feb916234155a150.png)
 :::
 
 
