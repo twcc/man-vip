@@ -238,6 +238,10 @@
     "message": "Create Your Services with TWCC",
     "description": "首頁說明"
   },
+  "homepage.getStarted": {
+    "message": "GET STARTED",
+    "description": "Lead user into document page"
+  },
   "homepage.services.GPU.title": {
     "message": "Rapid & Lightweight Deployment",
     "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
