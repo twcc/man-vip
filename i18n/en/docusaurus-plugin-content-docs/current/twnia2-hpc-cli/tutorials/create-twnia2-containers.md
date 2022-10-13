@@ -4,13 +4,13 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-twnia2-create-sgl
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-twnia2-create-sglrt-container-en' 
 ---
 
-# Create TAIWANIA2 containers
+# Create TWNIA2 containers
 
-Use **Singularity** to package up pieces of software and **create a container environment that can execute jobs in TAIWANIA2 (HPC CLI)** in a way that is portable and reproducible.
+Use **Singularity** to package up the pieces of software and **create a container environment that can execute jobs in TWCC TWNIA2 (HPC CLI)** in a way that is portable and reproducible.
 
 
 - In this document, we will show you how to:
-    - Use Singularity containers in TAIWANIA2, or use [TWCC VCS instance](https://www.twcc.ai/doc?page=vm) to customize containers
+    - Use Singularity containers in TWNIA2, or use [TWCC VCS instance](https://www.twcc.ai/doc?page=vm) to customize containers
     - Run simple container commands
     - Advanced operations: create container sandbox to test environments and lightweight containers
 
@@ -23,42 +23,41 @@ Use **Singularity** to package up pieces of software and **create a container en
 
 ## Prerequisites: Container images
 
-Download container images or customize your container environment.
+Download container images preloaded by TWCC or customize your container environment.
 
 <br/>
 
 
-### 1. Download container images
+### 1. Container images preloaded by TWCC
 
-Once logging in to the TWCC TAIWANIA2, you can use the Singularity `pull` command to download container images from Docker Hub or other container registry, and the file will be automatically converted to SIF container format.
+TWCC has preloaded common NGC containers for users and placed them under the path `/work/TWCC_cntr`:
 
-For example: Download [CUDA 10.1 image](https://hub.docker.com/r/nvidia/cuda/tags) provided by NVIDIA from Docker Hub:
+| [PyTorch](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_21-11.html#rel_21-11) | [TensorFlow](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_21-11.html#rel_21-11) |[CUDA](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#abstract) |[HPC SDK](https://docs.nvidia.com/hpc-sdk/hpc-sdk-release-notes/index.html)|
+| -------- | -------- | -------- | -------- |
+| pytorch_21.11-py3   | tensorflow_21.11-tf2-py3     | cuda_11.5.1-cudnn8-devel-ubuntu20.04     | nvhpc_22.1-runtime-cuda11.5-ubuntu20.04
+| pytorch_21.11-py3_horovod   | tensorflow_21.11-tf1-py3    |  cuda_11.5.1-cudnn8-runtime-ubuntu20.04    | nvhpc_22.1-devel-cuda11.5-ubuntu20.04|
+|   -   | -     |   cuda_11.5.1-cudnn8-devel-centos8   | nvhpc_22.1-runtime-cuda11.5-centos7     |
+|   -     | -     | cuda_11.5.1-cudnn8-runtime-centos8    | nvhpc_22.1-devel-cuda11.5-centos7  |   -     | -     | 11.5.1-cudnn8-devel-centos8      | 
 
-```bash
-singularity pull docker://nvidia/cuda:10.1-devel-ubuntu18.04
+> TWCC Release Date: 31Mar22
+
+You can use the following command to create a container and execute the command, and the used image cache will be stored in `$HOME/.singularity/cache` by default, so you can use the container again quickly and save the time of waiting for download.
+
 ```
-For example: Download NVIDIA [CUDA 10.1 image](https://ngc.nvidia.com/catalog/containers/nvidia:cuda/tags) from NGC Container Registry:
-
-```bash
-singularity pull docker://nvcr.io/nvidia/cuda:10.1-devel-ubuntu18.04
+singularity exec --nv oras://registry.twcc.ai/singularity/<package>:<version> <command to be executed in the container>
 ```
-This article will operate the image provided by NGC Container Registry.
-:::info
-Will use the image provided by [<ins>NGC Container Registry</ins>](https://ngc.nvidia.com/catalog/containers) in this document.
-:::
 
 <br/>
 
+### 2. Download container images
 
-### 2. Customize Singularity containers
-
-For those who are familiar with container technology and want to add other applications and packages to the image, use [TWCC VCS instance](https://www.twcc.ai/doc?page=vm) to customize your image first, then upload the image to TAIWANIA2 (HPC CLI) for use.
+For those who are familiar with container technology and want to add other applications and packages to the image, use [TWCC VCS instance](https://www.twcc.ai/doc?page=vm) to customize your image first, then upload the image to TWNIA2 (HPC CLI) for use.
 
 - In this document, we use **[<ins>TWCC VCS instance</ins>](https://www.twcc.ai/doc?page=vm)** and select CentOS 7 for the operating system.
 
 :::caution
 
-Since customizing the Singularity container images requires sudo privileges, TAIWANIA2 (HPC CLI) is unable to provide users with sudo privileges to avoid damage to the physical server. We suggest you use **[<ins>TWCC VCS instance</ins>](https://www.twcc.ai/doc?page=vm)** to compile your image, and delete it after completion.
+Since customizing the Singularity container images requires sudo privileges, TWNIA2 (HPC CLI) is unable to provide users with sudo privileges to avoid damage to the physical server. We suggest you use **[<ins>TWCC VCS instance</ins>](https://www.twcc.ai/doc?page=vm)** to compile your image, and delete it after completion.
 
 :::
 :::tip
@@ -69,10 +68,10 @@ Ubuntu is mostly used for the container images, so it is recommended to use Cent
 
 
 #### Step 1. Install Singularity in the VCS instance
+
 The installation steps are from Singularity official website. For detailed steps or other versions of Linux, please refer to [Singularity latest file](https://sylabs.io).
 
-
-- Install with the commands in **Ubuntu** VCS instances:
+- Install with the following commands in **Ubuntu** VCS instances:
 
 ```bash
 sudo wget -O- http://neuro.debian.net/lists/xenial.us-ca.full | sudo tee /etc/apt/sources.list.d/neurodebian.sources.list && \
@@ -81,7 +80,7 @@ sudo wget -O- http://neuro.debian.net/lists/xenial.us-ca.full | sudo tee /etc/ap
     sudo apt-get install -y singularity-container
 ```
     
-- Install with the commands in **CentOS** VCS instances:
+- Install with the following commands in **CentOS** VCS instances:
 
 ```bash
 sudo yum update -y && \
@@ -95,22 +94,20 @@ sudo yum update -y && \
 
 #### Step 2. Customize a Singularity container
 
-You can determine the base container using a **Singularity definition file**, and install the required applications to create your own customized container.
+You can determine the source of the base image by writing a **Singularity definition file**, and install the required applications to create your own customized container.
 
-Referring to [Singularity Quick Start](https://sylabs.io/guides/3.6/user-guide/quick_start.html#singularity-definition-files), it shows how to build a definition file. A definition file is devided into **header** and **sections**.
+The following is an example of how to build a definition file with reference to the [Singularity Quick Start](https://sylabs.io/guides/3.6/user-guide/quick_start.html#singularity-definition-files) example. A definition file is devided into **header** and **sections**.
 
 :::info
-- **Header**: Determines the base container to begin with, such as docker, library, and yum.  
-- **Sections**: Divided into sections that perform multiple things, mainly use the following 2 items:
+- **Header**: Determines the base container to begin with, such as docker, library, yum, etc.
+- **Sections**: There are a variety of options to set up here, mainly using the following 2 items:
     - `%post`: Executes within the container at build time after the base OS has been installed.
     - `%environment`: Defines some environment variables that will be available in /environment at runtime.
 :::
 
-
-
 Here is an example of creating a CUDA10.1 image, and compiling deviceQuery container of [CUDA Samples](https://github.com/NVIDIA/cuda-samples):
 
-- Build a Singularity definition file
+- Build a Singularity definition file.
 
 ```
 vim <DEF_FILE_NAME>.def
@@ -151,15 +148,14 @@ Stage: devel
 The writing syntax of **Singularity definition file** and **Dockerfile** are different, but the purpose of them are similar. Users can run commands to install applications and create customized container images through these file.
 :::
 
-- To build a container from this definition file:
+- To build a container from this definition file.
+
 ```bash
 sudo singularity build <CONTAINER_NAME>.sif <DEF_FILE_NAME>.def
 ```
 
 :::tip
-
-Using [<ins>HPC Container Maker</ins>](https://github.com/NVIDIA/hpc-container-maker) to write a Singularity definition file makes it easier to maintain like a program.
-
+We recommend you to use [<ins>HPC Container Maker</ins>](https://github.com/NVIDIA/hpc-container-maker) to write Singularity definition file, which is as easy to maintain as writing programs.
 :::
 
 <br/>
@@ -174,14 +170,14 @@ Download your container image to your local machine.
 
 #### Step 4. Upload the image to Hyper File System (HFS)
 
-Refer to [Hyper File System (HFS)](https://www.twcc.ai/doc?page=hfs), upload the container image to the storage space of TAIWANIA2 (HPC CLI) through the data transferring node `xdata1.twcc.ai`, and store it in the `/home/$USER` directory or `/work/$USER` directory for use.
+Refer to [Hyper File System (HFS)](https://www.twcc.ai/doc?page=hfs), upload the container image to the storage space of TWNIA2 (HPC CLI) through the data transferring node `xdata1.twcc.ai`, and store it in the `/home/$USER` directory or `/work/$USER` directory for use.
 
 <br/>
 
 
 ## Run the container
 
-After the container image is ready, you can run commands in the container and execute jobs in TAIWANIA2 (HPC CLI).
+After the container image is ready, you can run commands in the container and execute jobs in TWNIA2 (HPC CLI).
 
 The following are 2 basic Singularity commands. For more commands information, please refer to [Singularity- Command Line Interface](https://sylabs.io/guides/3.6/user-guide/cli.html).
 
@@ -214,10 +210,9 @@ singularity exec --nv <CONTAINER_NAME>.sif cat /etc/os-release
 
 ### 1. Create sandbox containers
 
-If you need to test whether the package is compatible with the container environment, you can create a **sandbox container**, which does not affect the original container image. You do not need to re-create the container. Moreover, it can be installed or operated in the container:
+If you need to test whether the package is compatible with the container environment, you can create a **sandbox container**, which does not affect the original container image and there is no need to re-create the container. Moreover, it can be installed or operated in the container:
 
-
-- Build a sandbox directory with all contents of the container image
+- Build a sandbox directory with all contents of the container image.
 
 ```bash
 sudo singularity build --sandbox <FOLDER_NAME> docker://nvidia/cuda:10.1-devel-ubuntu18.04
@@ -236,11 +231,10 @@ apt-get update
 apt-get install wget
 ```
 
-- Use the sandbox to create a Singularity container image
-
+- Use the sandbox to create a Singularity container image.
 
 :::info
-Since the sandbox does not write the packages into the definition file, you cannot record which packages are in the container, which is difficult to maintain. We recommend you [<ins>Customize Singularity containers</ins>](#2-customize-singularity-containers).
+Since the sandbox does not write the packages into the definition file, you cannot record which packages are in the container, which is difficult to maintain. It is not recommended to use this method to create a container image. We recommend you [<ins>Customize Singularity containers</ins>](#2-customize-singularity-containers).
 :::
 
 ```bash
@@ -254,7 +248,7 @@ sudo singularity build <CONTAINER_NAME>.sif <FOLDER_NAME>/
 
 In order to create a slimmer container that only stores compiled exe file and dependent runtime library, please refer to the [Singularity official website example](https://sylabs.io/guides/3.6/user-guide/definition_files.html#multi-stage-builds) that uses **Multi-Stage Builds** to define the container building process of more than 2 stages, and run the job by stages in the same Singularity definition file.
 
-Here is an example:
+Take the example of this tutorial:
 - The first stage, it uses `nvcc` to compile and generate `deviceQuery` exe file
 - Then copy deviceQuery to the second stage (**does not include the content for compilation**) to create a lightweight container image
 - Container file size reduced from 1.4G to 664M
