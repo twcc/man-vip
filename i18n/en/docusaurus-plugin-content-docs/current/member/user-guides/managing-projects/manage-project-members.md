@@ -8,18 +8,16 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-# Project members management 
+# Project members management
 
 
 :::caution
-==Need to update:exclamation:==<br/>
-If your <ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins> not applicable for the footage or process below, please refer to this <i class="fa fa-sign-out" aria-hidden="true"></i> <ins>link</ins> for manual instructions.
+If your <ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins> is not applicable for the footage or process below, please refer to this <i class="fa fa-sign-out" aria-hidden="true"></i> <ins>link</ins> for manual instructions.
 :::
 
 :::info
-
-- Before using the TWCC service, please make sure that you have applied for a project in the Member Center or have belonged to a member of a project, refer to [Apply project](https://man.twcc.ai/@twccdocs/apply-project-and-credit-zh) and [Check available project](https://man.twcc.ai/@twccdocs/guide-service-project-availability-zh)
-- Only the project host (creator)" and "project administrator" have the authority to manage project members
+- Before using TWCC service, please make sure you have available projects and quota: [<ins>MCheck available projects</ins>](https://man.twcc.vip/en/docs/member/user-guides/project-management/available-projects/).
+- Only "**Project Host (creator)**" and "**Project Admin**" have the authority to manage project members.
 :::
 
 <br/>
@@ -28,14 +26,9 @@ If your <ins>Member Center <i class="fa fa-question-circle fa-question-circle-fo
 ## Step 1. Project details page
 
 
-- After sign in [TWCC](https://new.twcc.ai/), click the user name in the upper right corner, and then click "Account & Project"
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8d0a46efffba7e4fdbed91cb51b6a21b.png)
+- After signing in [<ins>TWS</ins>](https://tws.twcc.ai/) and entering Member Center, <span>&#10102;</span> click "**會員中心 (Member Center)**":arrow_right: <span>&#10103;</span>"**專案管理 (Projects)**" :arrow_right: <span>&#10104;</span>"**我的專案 (My Projects)**" :arrow_right: <span>&#10105;</span> click the project
 
-
-
-- After entering member center,<span>&#10102;</span> click "Member Center" :arrow_right: <span>&#10103;</span> "Projects" :arrow_right: <span>&#10104;</span> "My Projects" :arrow_right: <span>&#10105;</span> click a project
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4eeb394c655aefef88488f8c3b1f5ae9.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_85549595b7679e2ab9b7067e15641d7c.png)
 
 
 <br/>
@@ -43,13 +36,18 @@ If your <ins>Member Center <i class="fa fa-question-circle fa-question-circle-fo
 
 ## Step 2. Manage project members
 
-- Go to the project details page, click "Project Member", and then click "Edit"
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_70b743ca808f2ea273da915bda47bf99.png)
+- Go to the project details page, click "**專案成員 (Project Member)**", and then click "**編輯 (Edit)**"
 
-
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6405b1768d6310d46ab538187f856b2f.png)
 
 -  <span>&#10102;</span> The project host (creator) or administrator can add members by clicking the "+" icon above
--  <span>&#10103;</span> Click the button shown to view member information and change membership status: set as administrators/general members, or delete members
+-  <span>&#10103;</span> Click the action button to view member information, change member status: set as administrator/general member, delete member
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b64002a9e3fddd6c8d28eec3eda79c92.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7bf932618ff1927b76bc856782bb2b67.png)
+
+
+:::info
+**Contact us:**
+- Business Contact | <ins><a href = "mailto: sales@twsc.io">sales@twsc.io</a></ins>
+- Customer Service and Support | <ins><a href = "mailto: sales@twsc.io">service@twsc.io</a></ins>
+:::

@@ -32,7 +32,7 @@ TWCC 彈性 IP 支援提供 IPv4 公用 IP。在 TWCC 中，您可以將虛擬�
 
 | 規格 | 訂閱 | 每計畫配額上限 |計費機制與定價
 | -------- | -------- | -------- | -------- |
-| 靜態 IP    | 需先訂閱才可配置至資源使用     | 最多可訂閱 5 個     | [TWS 用戶](https://man.twcc.ai/@twsdocs/pricing-zh#%E5%BD%88%E6%80%A7-IP-Elastic-IP-EIP)   |
+| 靜態 IP    | 需先訂閱才可配置至資源使用     | 最多可訂閱 5 個     | [TWS 用戶](/docs/pricing#彈性-ip-elastic-ip-eip)   |
 | 浮動 IP    | 無需訂閱，可直接配置至資源使用    | 2022/1/14 調整為最多 10 個     |  N/A   |
 
 
@@ -53,7 +53,7 @@ TWCC 彈性 IP 支援提供 IPv4 公用 IP。在 TWCC 中，您可以將虛擬�
 在開始使用靜態 IP 之前，請您先訂閱靜態 IP：
 
 :::info
-- 訂閱靜態 IP 之前，請先確認您的計畫/專案已[<ins>建立預設的虛擬網路</ins>](https://man.twcc.ai/@twccdocs/howto-vnw-create-default-network-zh)，否則將會訂閱失敗。
+- 訂閱靜態 IP 之前，請先確認您的計畫/專案已[<ins>建立預設的虛擬網路</ins>](../../tutorials/create-default-network.md)，否則將會訂閱失敗。
 - 浮動 IP 由 TWCC 統一管理，您僅能於管理頁面檢視其狀態與已關聯之資源。
 :::
 
@@ -89,7 +89,7 @@ TWCC 彈性 IP 支援提供 IPv4 公用 IP。在 TWCC 中，您可以將虛擬�
 
 #### 虛擬運算個體
 
-1. [建立虛擬運算個體時](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh)：
+1. [建立虛擬運算個體](../create/create-instances.md)時：
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a9d407b8548c8f2e810d8f8f7a6ef3ea.png)
 
@@ -101,14 +101,14 @@ TWCC 彈性 IP 支援提供 IPv4 公用 IP。在 TWCC 中，您可以將虛擬�
 
 :::caution
 **停止** 虛擬運算個體後，浮動 IP 將會釋放回資源池，個體啟動後，將取得新的浮動 IP。
-更多虛擬運算個體動作對彈性 IP之影響，請參考 <ins>[管理個體：停止/啟動 (與開機)/重開機/關機/刪除](https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-zh)</ins>。
+更多虛擬運算個體動作對彈性 IP之影響，請參考 <ins>[<ins>管理個體：停止/啟動 (與開機)/重開機/關機/刪除</ins>](../manage-monitor/manage-instances.md)</ins>。
 :::
 
 <br/>
 
 #### 負載平衡器
 
-1. [建立負載平衡器時](https://man.twcc.ai/@twccdocs/guide-vcs-lbs-zh#建立負載平衡器)：
+1. [建立負載平衡器](./load-balancing.md)時：
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8ca4c2cc4f7fdb6ab0586489b97b3c62.png)
 

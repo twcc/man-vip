@@ -58,7 +58,7 @@ Secret Key: <YOUR-SECRET-KEY>
 :::info
 1. You can get public COS connection information on **SERVICES**> **Cloud Object Storage (COS)**> **Third-party Software** page.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1fec68be28d21f17d95d130da41e5662.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_44509030fbb4885dfa5539fe745386ad.png)
 
 
 
@@ -93,6 +93,7 @@ if the target S3 system supports dns based buckets.
 DNS-style bucket+hostname:port template for accessing a bucket [%(bucket)s.s3.amazonaws.com]: cos.twcc.ai
 ```
 **8. (Optional) set up encryption password**
+
 If you need data encryption, please enter a password for encryption password, or simply press enter key to skip.
 ```
 Encryption password is used to protect your files from reading
@@ -135,6 +136,7 @@ New settings:
 Test access with supplied credentials? [Y/n] n
 ```
 **14. enter`y` to save the settings**
+
 After entering `y`, you will get the path and file name of the configuration file:`/home/<supercomputer account>/.s3cfg`
 ```shell
 Save settings? [y/N] y
@@ -142,6 +144,7 @@ Configuration saved to '/home/<supercomputer account>/.s3cfg'
 ```
 
 **15. Modify certificate settings to avoid backup/synchronization errors**
+
 (supercomputer account) please change to the supercomputer account shown in step 14
 ```shell
 sed -i 's/check_ssl_certificate = True/check_ssl_certificate = False/g' /home/<supercomputer account>/.s3cfg
@@ -157,7 +160,7 @@ After the setting is completed, you can save your data in VCS instances and cont
     ```
     s3cmd sync /<LOCAL_DIR> s3://<DEST_BUCKET>
     ```
-    - Set the backup schedule, for example, regularly back up files to COS every day at 2:00 am
+    - Set the backup schedule, for example, regularly back up files to COS every day at 2AM
     
     Enter the following command to edit the crontab job
     ```bash
@@ -198,11 +201,11 @@ After the setting is completed, you can save your data in VCS instances and cont
 
     :::
     :::info
-    If you need to back up multiple versions of files, please enable the Bucket Versioning function. See [How to Enable or Disable Versioning for a Bucket](https://s3browser.com/amazon-s3-versioning.aspx) from S3 Browser.
+    If you need to back up multiple versions of files, please enable the Bucket Versioning function. Refer to [Enable or Disable Versioning for a Bucket](https://s3browser.com/amazon-s3-versioning.aspx) from S3 Browser.
     :::
 
 ### Recover backed up/synchronized files from COS
-If the data of VCS instances/containers is deleted by mistake or is lost, you can restore the data from backup or synchronization.
+If the data of VCS instances/containers is deleted by mistake or is lost, you can use the restore function to recover the data. There are two methods: backup and synchronization.
 <span class = "number">&#10102;</span> <b>Restore from backup</b>: All data backed up in COS will be restored to local machine, and the inconsistent data between both sides will still be stored in supercomputer.<br/>
 <span class = "number">&#10103;</span> <b>Restore from synchronization:</b> The data synchronized with COS will be completely restored to local machine, and will use COS data for the inconsistencies between both sides.
 
@@ -291,14 +294,23 @@ aws s3 cp  s3://<BUCKET_NAME>/<FILE_NAME> sse-c-test-file --sse-c AES256 --sse-c
   
 ## Duplicati: applicable to VCS Windows instances
 ### Download and install Duplicati
+
 + Go to [Duplicati download page](https://www.duplicati.com/download) to download and install the latest version suitable for Microsoft Windows.
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4940fe49ea855d3ec1dafbbe5ab44517.png)
+
 ### Back up data to COS
+
 After the installation, you can save your data in VCS instances and containers to COS buckets.
+
 **1. Add backup settings**
+
 Click **+ Add backup** , and select **Configure a new backup**
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bba8aba18cc763d370620a67742b3de5.png)
+
 Set the backup name, select **AES-256 encryption, built-in** for encryption,  and set the passphrase.
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_59c57bde2d4a3f0d1ffa04ec814b3178.png)
     
 **2. Set the backup destination**
@@ -312,40 +324,70 @@ Set the backup name, select **AES-256 encryption, built-in** for encryption,  an
 
 :::info
 1. You can get public COS connection information on **SERVICES**> **Cloud Object Storage (COS)**> **Third-party Software** page.
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1fec68be28d21f17d95d130da41e5662.png)
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e35986692d1a032d4e360b490b8e051e.png)
+
 2. You can find the COS connection information on **Private COS** > **Third-party Software** page.
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_86f73bdb814460d68312c69522c92ce7.png)
 :::
 - After entering the information, click **Test Connection**. If the settings are correct, system will pop up **Connection worked!** message. 
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5d9b3b08b34d2ad17d62b498a33d3967.png)
+
 **3. Set backup source data and schedule**
+
 - Select the folder or file you want to back up from the local computer
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0de0e5dd8c2cd48641747c01b87aefbe.png)
+
 **4. Set automatic backup schedule**
  
-E.g., regular backup automatically at 13:00 every day
+E.g., regular backup automatically at 1 PM every day
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6f272bf0c59d0421e21a455fdf9db45f.png)
+
 5. Set backup options and store settings
-Select the default value for the remote volume size (select a smaller size if your Internet speed is slow). Select backup retention according to your needs (*keep all backups, delete backups that are older than a specific time, keep a specific number of backups, smart backup retention or custom backup retention.*).
+
+Select the default value for the remote volume size (select a smaller size if your Internet speed is slow). The number of backup retention can be selected according to your needs.
+
+Select backup retention according to your needs (*keep all backups, delete backups that are older than a specific time, keep a specific number of backups, smart backup retention or custom backup retention.*).
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4d6d5438c1fbf66cf1b6fbd9abbb2d35.png)
+
 - Click **Save** to save the settings. After that, Home page will display the next backup schedule and backup configuration.
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_273db54d4841201a42d104c31b40a20c.png)
+
 - If you need to back up immediately, please click **Run now**
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8eda7e6aa1a2f568acbd05035304a6a3.png)
+
 - If you don’t need to back up data anymore, click **Delete** to delete the configuration
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_be3ec19ac18ed11bafaa78882afdd685.png)
 
 ### Restore backup data from COS 
 **1. Set the restore configuration**
+
 Click **Restore**, and select the backup configuration you want to restore
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4619d1399e5d1155d46455ad7d610107.png)
+
 **2. Select files**
+
 Select the backup version, and select the files and folders you want to restore
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_76489e382a681d2c07b2952bbf90fc49.png)
+
 **3. Set the restore options**
+
 Set the options according to your needs, and click **Restore** to start the restoration
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ddecefe13808e3fce9851045e66d45e6.png)
+
 After the restoration, it will show you the following message: *Your files and folders have been restored successfully*.
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ff8ed1e91f893f41cd8737c9b0441688.png)

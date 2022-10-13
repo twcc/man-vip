@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 # 上傳、下載檔案、建立資料夾
 
 :::tip
-以下操作方式僅限計畫之 [「<ins>**公共空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/%2F%40TWSC%2Fcos-overview-zh) 適用， [「<ins>**私有空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/%2F%40TWSC%2Fcos-overview-zh) 之檔案管理請透過 [<ins>**第三方軟體**</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40TWSC%2Fguide-cos-connect-info-zh) 操作。
+以下操作方式僅限計畫之 [「<ins>**公共空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](../../overview.md) 適用， [「<ins>**私有空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](../../overview.md) 之檔案管理請透過 [<ins>**第三方軟體**</ins>](../../../category/使用第三方軟體管理檔案) 操作。
 :::
 
 
@@ -39,7 +39,7 @@ import TabItem from '@theme/TabItem';
 * 選擇好欲上傳的檔案後，可勾選左上「**加密**」將檔案使用金鑰加密。完成後，點擊「**上傳**」。
 
 :::info
-更多檔案加密說明，請參考：[<ins>檔案加密</ins>](https://man.twcc.ai/@TWSC/guide-cos-encryption-zh)。
+更多檔案加密說明，請參考：[<ins>檔案加密</ins>](file-encryption.md)。
 :::
 
 ![](https://i.imgur.com/fCSF7DS.png)

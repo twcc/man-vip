@@ -8,11 +8,9 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-
 
 # <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f55059e9d0a6ac45c44bcc0ec1bebff5.png' /> Theano
 
-TWCC provides ready-to-use working environment of NGC optmized Theano. Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
+TWCC provides pay-as-you-go working environment of NGC optmized Theano. Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
 
-## <i class="fa fa-sticky-note" aria-hidden="true"></i>
-<span class="ccsimglist">Information of Image file version
-</span> 
+## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">Information of Image file version</span> 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7a14f82bdf85b45c7641ec55363c4748.png)
 

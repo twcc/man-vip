@@ -111,7 +111,9 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-zh'
 兩者儲存環境相同，但計算環境不同：
 
 - 開發型容器的計算環境是由 TWCC 容器映像檔所建置。
+
 - 而台灣杉二號則需使用者自行部署計算環境。 <i class="fa fa-lightbulb-o fa-20" aria-hidden="true"></i> <b>提示：</b> 台灣杉二號可使用 `module` 載入所需之套件，詳細使用方法請參考[此文件](/docs/twnia2-hpc-cli/user-guides/modules/overview.md)。
+
 
 </details>
 <div style={{height:10+'px'}}></div>
@@ -162,7 +164,9 @@ Q1. 使用台灣杉二號時出現錯誤訊息`QOSMaxSubmitJobPerUserLimit Error
 
 此錯誤訊息顯示您提交超過 20 個計算工作上限 (**gtest** 為測試用 Queue，僅能提交 5 個工作)。
 
+
 若遇此情況，建議您先使用 `squeue` 指令查看任務狀態，再使用 `scancel` 取消狀態為等待中或運行中的任務，減少提交的任務數量。Queue 與計算資源使用說明可參考[此文件](/docs/twnia2-hpc-cli/user-guides/slurm-commands/squeue.md)。
+
 
 </details>
 

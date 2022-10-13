@@ -41,8 +41,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-compute-zh'
 
 :::info
 - 其他相關服務權限：
-    - 高速檔案系統、雲端物件儲存角色權限請參考<ins><a href = "https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-zh">此說明</a></ins>。
-    - 容器連線安全角色權限請參考<a href = "https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh#%E5%AE%B9%E5%99%A8%E9%80%A3%E7%B7%9A%E5%AE%89%E5%85%A8">此說明</a>。
+    - 高速檔案系統、雲端物件儲存角色權限請參考[此說明](storage.md)。
+    - 容器連線安全角色權限請參考[此說明](networking-security.md)。
 - TWCC CLI 可操控之功能之角色權限皆與使用者介面相同。
 :::
 
@@ -100,8 +100,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-compute-zh'
 
 :::info
 - 其他相關服務權限：
-    - 虛擬磁碟請參考<ins><a href = "https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-zh#%E5%8D%80%E5%A1%8A%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99">此說明</a></ins>。
-    - 虛擬網路、負載平衡、Auto Scaling、進階安全請參考<ins><a href = "https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh">此說明</a></ins>。
+    - 虛擬磁碟請參考[此說明](storage.md#虛擬磁碟服務)。
+    - 虛擬網路、負載平衡、Auto Scaling、進階安全請參考[此說明](storage.md)。
 - TWCC CLI 可操控之功能之角色權限皆與使用者介面相同。
 :::
 

@@ -16,7 +16,7 @@ TWCC 開發型容器預設提供 Jupyter Notebook，為透過網頁與使用者�
 
 ## Step 1. 連線進入開發型容器
 
-請參考[<ins>連線方式</ins>](https://man.twcc.ai/@twccdocs/SJlZnSOaN?type=view#%E4%BD%BF%E7%94%A8-Jupyter-Notebook)連線進入您的開發型容器。
+請參考[<ins>連線方式</ins>](../user-guides/create-connect/connect-container.md#jupyter-notebook)連線進入您的開發型容器。
 
 
 ## Step 2. 安裝 Python 3 Kernel

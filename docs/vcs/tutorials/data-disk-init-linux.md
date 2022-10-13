@@ -16,11 +16,11 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-init-vol
 
 ### Step 1. 確認磁碟已連結至個體
 
-[將資料磁碟連結至虛擬運算個體](https://man.twcc.ai/@twccdocs/guide-vcs-vds-manage-disk-zh#%E9%80%A3%E7%B5%90%E8%87%B3%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)後，請確認在使用者介面已正確連結，並取得掛載路徑 (例：`/dev/vdb`)。
+[將資料磁碟連結至虛擬運算個體](../user-guides/storage/view-attach-delete-disks.md#連結至虛擬運算個體)後，請確認在使用者介面已正確連結，並取得掛載路徑 (例：`/dev/vdb`)。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fa75bdb78bc52059698a1e40d540a0da.png)
 
-[連線](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh)進入您的虛擬運算個體，輸入以下指令再次確認磁碟已連結至個體，並查看磁碟詳細資料，確認路徑和容量大小正確。
+[連線](../user-guides/connecting/linux/from-windows.md)進入您的虛擬運算個體，輸入以下指令再次確認磁碟已連結至個體，並查看磁碟詳細資料，確認路徑和容量大小正確。
 
 ```
 sudo fdisk -l
@@ -58,6 +58,7 @@ sudo mkfs -t ext4 <DISK_DEVICE>
 ```
 sudo mkdir <DIRECTORY>
 ```
+
 :::info
 - `<DIRECTORY>`：資料夾路徑 (例：`/home/test`)
 :::
@@ -78,4 +79,5 @@ sudo mount <DISK_DEVICE> <DIRECTORY>
 ```
 df -h
 ```
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_be2f438e28adc36c6c8952a3384044a0.png)

@@ -10,13 +10,13 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorfl
 
 ### Step 1. 登入 TWCC
 
-- 若尚無帳號，請參考 [註冊 TWCC 帳號](https://www.twcc.ai/doc?page=register_account)
+- 若尚無帳號，請參考 [註冊 TWS / TWCC 帳號](/docs/member/user-guides/member-key-quota/sign-up-for-twcc.md)
 
 <br/>
 
 ### Step 2. 建立開發型容器
 
-- 請參考 [開發型容器](https://www.twcc.ai/doc?page=container#建立開發型容器) 建立開發型容器，映像檔類型請選擇 TensorFlow (映像檔請選擇 19.08 以前 (`含 19.08`)，且 Python 2 的版本)
+- 請參考 [開發型容器](../user-guides/create-connect/create-container.md) 建立開發型容器，映像檔類型請選擇 TensorFlow (映像檔請選擇 19.08 以前 (`含 19.08`)，且 Python 2 的版本)
 
 <br/>
 
@@ -26,7 +26,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorfl
 - 使用 Jupyter Notebook 連線容器，新增 Python 2 notebook
 
 :::info 
-:book: 參見[連線使用方式](https://www.twcc.ai/doc?page=container#連線使用方式)
+:book: 參見[<ins>連線容器</ins>](../user-guides/create-connect/connect-container.md#jupyter-notebook)
 :::
 
 <br/>
@@ -113,7 +113,7 @@ for step in range(201):
 ### Step 1. 利用 SSH 登入方式或開啟 Jupyter Notebook (Terminal)
 
 :::info
-:book: 參見[使用 Jupyter Notebook](https://www.twcc.ai/doc?page=container#使用-Jupyter-Notebook)
+:book: 參見[<ins>連線容器</ins>](../user-guides/create-connect/connect-container.md#連線容器-1)
 :::
 
 <br/>

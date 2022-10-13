@@ -8,7 +8,7 @@ import TOCInline from '@theme/TOCInline';
 
 # Change data disks
 
-If you need to change the type of data disk (e.g., replace HDD with SSD), or change the capacity of data disks (e.g., replace small capacity with larger capacity), please refer to this document to replace the original data disk to a new data disk, and delete the original one.
+If you need to change the type of data disk (e.g., replace SSD with HDD), or change the capacity of data disks (e.g., replace small capacity with larger capacity), please refer to this document to synchronize the data from the original disk to the new data disk, and then delete the original one.
 
 This article will take the conversion of the data disk type (SSD to HDD) as an example to demonstrate the operation steps.
 
@@ -23,32 +23,30 @@ This article will take the conversion of the data disk type (SSD to HDD) as an e
 
 * Confirm the type of data disk attached to the instance is SSD.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_56fbf74d4cdb053c62c7de4078d94e6c.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1e3c5a9fdcf43faf5ca5030453acc5dc.png)
 
 * Enter command `df -h` in the VCS instance to view the information of the data disk (file system (Filesystem), capacity (Size), mount path (Mounted on))
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3d9e1124e63cdcc6c839bdee8fc62b5c.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_eefbcb3221a84ab64e83b33e6b74f0bb.png)
 
 <br/>
 
 
 ### Step 2. Create a new HDD data disk with the same capacity
 
-* Create an HDD data disk on the portal, with the same capacity as the SSD data disk of `Step 1.`
+* Create an HDD data disk on the portal, with the same capacity as the SSD data disk in `Step 1.`
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3be49aa561208a4f884332fa2f3f22c0.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2e9ce9eeca1b1f380b954e5c64e63a9c.png)
 
-* Attach the HDD data disk to the VCS instance of `Step 1.`
+* Attach the HDD data disk to the VCS instance in `Step 1.`
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_22036a0e1bbc41a8ac754a19d2026509.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6ff48b1fba106f7ab6af7b2a0f2e43c6.png)
 
+* Confirm that the instance has successfully attached with two types of data disks.
 
-* Confirm that the instance has successfully attached with two types of data disks
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_467ab09ecd7318c9a9f2347cf814e5f8.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_38d639e2727ad7c85445130035dbd04b.png)
-
-* Connect to the VCS instance, mount the HDD data disk to the instance, and initialize it. Please refer to the steps in [HowTo: Initialize Data Disk-Linux Instance](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-en).
+* Connect to the VCS instance, mount the HDD data disk to the instance, and initialize it. Please refer to the steps in [Initialize Linux Disks](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-en).
 
 <br/>
 
@@ -57,8 +55,7 @@ This article will take the conversion of the data disk type (SSD to HDD) as an e
 
 * Enter command `df -h` to confirm the information of the two types of data disks (file system (Filesystem), capacity (Size), mount path (Mounted on))
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5f9b19ba05c409c20a49b5872c3c7e6f.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7563dd8d5bf73e816eead1f350fd0ce5.png)
 
 * Switch to the root user.
 
@@ -73,7 +70,7 @@ rsync -avh <Disk_A> <Disk_B>
 ```
 
 :::info
-- `<Disk_A>` : Enter the mount path of the SSD data disk.
+- `<Disk_A>` : Enter the mounted path of the SSD data disk.
 - `<Disk_B>` : Enter the mounted path of the HDD data disk.
 :::
 
@@ -84,12 +81,11 @@ rsync -avh <Disk_A> <Disk_B>
 
 * Detach the SSD data disk from the VCS instance.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8ce08c3d7ac56e50a39cebfce4968a3f.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_96e61f4c339612669400715d9665c27f.png)
 
 * Delete the SSD data disk to release storage resources.
 
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b66699de0e7f1e26989d01450c2d813b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cee27bbaeb852a76dbfcd3ece69f8d6d.png)
 
 <br/>
 
@@ -102,11 +98,11 @@ The disk replacing method of Windows instances is the same as Linux instances in
 
 ### Step 2. Create a new HDD data disk with the same capacity
 
-After creating a new HDD data disk and attached to the VCS instance, please follow [HowTo: Initialize Data Disk-Windows Instance](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-en) to initialize the disk.
+After creating a new HDD data disk and attached to the VCS instance, please follow [Initialize Windows Disks](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-en) to initialize the disk.
 
 <br/>
 
-### Step 3. Synchronize SSD data disk data to HDD data disk
+### Step 3. Sync data from SSD data disk to HDD data disk
 
 *  Once the disk has been initialized, confirm that both types of data disks have been mounted successfully.
 

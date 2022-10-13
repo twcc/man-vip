@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 # 檢視服務使用歷史紀錄
 
-您於 TWCC 使用者網站、TWCC CLI 使用的服務功能，皆是透過呼叫 TWCC API 以完成各項作業，而服務操作的歷史紀錄可透過 [TWCC 使用者網站檢視](#如何檢視使用紀錄？)，並[下載紀錄檔案](#下載使用紀錄)。
+您於 TWCC 使用者網站、TWCC CLI 使用的服務功能，皆是透過呼叫 TWCC API 以完成各項作業，而服務操作的歷史紀錄可透過 [TWCC 使用者網站檢視](#如何檢視使用紀錄)，並[下載紀錄檔案](#下載使用紀錄)。
 
 您可以從歷史記錄判斷：
 
@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
 
 [1] **`租戶使用者`** 僅能查詢自己的使用紀錄；**`租戶管理員`** 則可以檢視所有成員的紀錄。
 
-[2] TWCC API 對服務操作的動作分為以下 5 類 ([<ins>深入了解 RESTful API </ins>](https://zh.wikipedia.org/wiki/%E8%A1%A8%E7%8E%B0%E5%B1%82%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2))：
+[2] TWCC API 對服務操作的動作分為以下 5 類（[<ins>深入了解 RESTful API</ins>](https://zh.wikipedia.org/wiki/%E8%A1%A8%E7%8E%B0%E5%B1%82%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2)）：
 - `GET`：取得服務資訊
 - `PUT`：更新服務整體資訊
 - `PATCH`：更新服務部份資訊
@@ -56,7 +56,7 @@ import TabItem from '@theme/TabItem';
 
 ### Step 3. 檢視使用紀錄
 
-API 使用歷史紀錄除 TWCC 服務使用活動，亦包含計畫、額度等紀錄，種類與項目繁多，以下舉 2 項紀錄範例說明，更多使用紀錄說明，請您查詢：**[TWCC API Document](https://man.twcc.ai/@twccdocs/api-main-zh)**。
+API 使用歷史紀錄除 TWCC 服務使用活動，亦包含計畫、額度等紀錄，種類與項目繁多，以下舉 2 項紀錄範例說明，更多使用紀錄說明，請您查詢：**[TWCC API Document](/docs/api/CCS)**。
 
 <details>
 

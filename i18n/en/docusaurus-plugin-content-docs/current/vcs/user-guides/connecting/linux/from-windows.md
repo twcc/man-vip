@@ -11,11 +11,10 @@ import TabItem from '@theme/TabItem';
 # Connect to Linux instances from Windows
 
 
-Having completed the [prerequisites and obtain connection information](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-en), you can use one of the following 4 methods to connect to the Linux instance from Windows.
-
+Having completed the [prerequisites and obtained connection information](https://man.twcc.vip/en/docs/vcs/user-guides/connection/prerequisites), you can use one of the following 4 methods to connect to the Linux instance from Windows.
 
 :::info
-Please note that the instance must be in the **`Ready`** state before you can connect to it.
+Please note that you can connect to the instance only when its state is **`Ready`**.
 :::
 
 <!-- 1 start -->
@@ -24,18 +23,17 @@ Please note that the instance must be in the **`Ready`** state before you can co
 
 <summary><b>1. Built-in Command Prompt</b></summary>
 
-On your local machine, open the Command Prompt and enter `ssh -V` to check if the SSH client is available. If yes, you will see the client's version. If not, for quickly install OpenSSH Client, or refer to other connection methods, see [<ins>Microsoft official document</ins>](https://docs.microsoft.com/zh-tw/windows-server/administration/openssh/openssh_install_firstuse#installing-openssh-from-the-settings-ui-on-windows-server-2019-or-windows-10-1809) for more information.
+**Step 1. Make sure the SSH program is installed**
 
-==**Link Need to update to english:exclamation:** 
-Maybe this : https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse#installing-openssh-from-the-settings-ui-on-windows-server-2019-or-windows-10-1809==
+Open your local command prompt and type `ssh -V` to check if you have an SSH client program on your local computer. If so, the version of the program will be displayed. If not, please refer to the [<ins>Microsoft official document</ins>](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse#installing-openssh-from-the-settings-ui-on-windows-server-2019-or-windows-10-1809) for a quick installation of OpenSSH Client, or refer to other connection methods.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9242485b84ba91f9e8777e4bea275744.png)
 
 <br/>
 
-**Step 2. Change the permissions of key pair**
+**Step 2. Change the permissions of the key pair**
     
-Follow the steps in [<ins>Prerequisites</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-en) to obtain the connection information and enter commands in to change the key pair permissions.
+Follow the steps in [<ins>Prerequisites</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/connection/prerequisites) to obtain the connection information and enter commands to change the key pair permissions.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_02120b912a3077ba14f49054f320b674.png)
 
@@ -43,7 +41,7 @@ Follow the steps in [<ins>Prerequisites</ins>](https://man.twcc.ai/@twccdocs/vcs
 
 **Step 3. Connect to your VCS instance**
 
-Enter the commands obtained by following the [<ins>Preparation</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-en) to SSH into your instance.
+Enter the commands obtained by following the [<ins>Prerequisites</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/connection/prerequisites) to SSH into your instance.
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_112f272ffc1d5fac6b569fd1c501af54.png)
@@ -88,7 +86,7 @@ MobaXterm's graphical user interface is intuitive and easy to use. The key pair 
 **Step 1. Download MobaXterm**
 
 
-Please download the [<ins>MobaXterm Home Edition (Portable edition)</ins>](https://mobaxterm.mobatek.net/download-home-edition.html), unzip it, and run **MobaXterm_Personal_[version]**.
+Please download the [<ins>MobaXterm Home Edition (Portable edition)</ins>](https://mobaxterm.mobatek.net/download-home-edition.html), unzip it, and run **`MobaXterm_Personal_[version]`**.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1f3324a847dcf480c383ceed1d7c56a4.png)
 
@@ -129,20 +127,19 @@ Connection established!
 
 <summary><b>3. Third-party software: PuTTY</b></summary>
 
-PuTTY does not support the key pair format `.pem`  , so please convert the `.pem` file to `.ppk`by using PuTTYgen.
+PuTTY does not support the key pair format `.pem`  , so please convert the `.pem` file to `.ppk` using PuTTYgen.
 
 <br/>
 
 **Step 1. Download and install PuTTY**
 
-Please download the [<ins>PuTTY</ins>](https://www.putty.org/) and complete the installation.
+Please download [<ins>PuTTY</ins>](https://www.putty.org/) and complete the installation.
 
 <br/>
 
 **Step 2. Convert the key pair (`.pem`> `.ppk`)**
 
-- Open **PuTTYgen**
-
+- Open **PuTTYgen**.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a06473c2b182bdc8ff67d09fdb621526.png)
 
@@ -151,10 +148,7 @@ Please download the [<ins>PuTTY</ins>](https://www.putty.org/) and complete the 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8a34b1c54db4309cad5d575e6974d198.png)
 
-
-
-
-- Click **OK**
+- Click **OK**.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a46f9a2162f41c8dc33ffe1aefaebb06.png)
 
@@ -173,8 +167,6 @@ Please download the [<ins>PuTTY</ins>](https://www.putty.org/) and complete the 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5a0782c28ef264664f3e37c4dcc7f3fa.png)
 
-
-
 - Click **Session** on the left, enter the Host Name (can be found by clicking the **Connect** on the configuration page) and Port (22)
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db3cf7c5fbaec56d160a214ffb007c18.png)
@@ -188,10 +180,10 @@ Please download the [<ins>PuTTY</ins>](https://www.putty.org/) and complete the 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7b0f282732b28f1ebdd293a4f36c0216.png)
 
-
-- You successfully connect to your instance when the window opens.
+- Successfully connect to the VCS instance when the window opens.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b26159d005ed6963cce089eb47979d6f.png)
+
 </details>
 
 <!-- Space -->
@@ -204,7 +196,7 @@ Please download the [<ins>PuTTY</ins>](https://www.putty.org/) and complete the 
 
 <summary><b>4. Third-party software: VScode</b></summary>
 
-If you are already using VScode to develop your program, you may directly using this software to connect to your VCS instance. VScode supports a variety of platforms, and there are many plug-in software packages available, easy to install, and quite suitable for novices. For complete instructions, please refer to [<ins>Official documentation</ins>](https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks).
+If you are already using VScode to develop your program, you may directly using it to connect to your VCS instance. VScode supports a variety of platforms and has many plug-in software packages that are easy to install and suitable for novices. For complete instructions, please refer to the [<ins>Official documentation</ins>](https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks).
 
 <br/>
 
@@ -241,10 +233,10 @@ Click **Extensions** > search for *remote ssh* > select **Remote- SSH** and clic
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a9e954c2165abc59b5be91f8d314112c.png)
 
 - Please place the key pair pem file under the `~/.ssh/` folder
-==**Need to update:exclamation:**==
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_237f5babfff7d1265879f96d3262a60f.png)
 
-- After opening the config file, copy and paste the following format, and fill in the information of a VCS instances; if there are multiple instance, you can copy and paste several for modification. Save the file when you are ready.
+- After opening the config file, copy and paste the following format, and fill in the information of a VCS instance; if there are multiple instances, you can copy and paste several for modification. Save the file when finished.
 
 ```bash
 Host <INSTANCE_NAME>            # Enter the name of the VCS instance
@@ -264,7 +256,7 @@ Host <INSTANCE_NAME>            # Enter the name of the VCS instance
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ce4b6b932674950fe3732f35fd2627a3.png)
 
-- It will show the information of the instance that have created, select to start the connection.
+- It will show the instance information that have been created, click on it to start the connection.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ab2ee3bcc20dfba930e9666ea38e4911.png)
 
@@ -272,7 +264,7 @@ Host <INSTANCE_NAME>            # Enter the name of the VCS instance
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_03d9ef5fc7818f3893301eced215414f.png)
 
-- Select **Continue** 
+- Select **Continue**.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7647f858a45535cdeeb41552fd27d52f.png)
 
@@ -288,10 +280,12 @@ Host <INSTANCE_NAME>            # Enter the name of the VCS instance
 
 <br/>
 
+:::info
+For urgent debugging/system maintenance, it is recommended to [<ins>connect via Console</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/management-and-monitoring/console) to speed up the workflow.
+:::
+
 :::caution
-
 After connecting to the Linux instance:
-
 - If you have attached the data disk in the file `/etc/fstab` (e.g., `/dev/vdb /mnt ext4 defaults`), we suggest you add `nofail` after the configuration (for example: ` /dev/vdb /mnt ext4 defaults,nofail,x-systemd.device-timeout=1m`) to make sure that your instances can start and connect normally.
-- You cannot connect to VCS instance once the settings of the network interface card are modified. Therefore, we strongly recommend that you do not change the network interface card settings. Please beware when operating and deploying.
+- You will not be able to connect to VCS instance once the settings of the network interface card are modified. Therefore, we strongly discourage you from changing the NIC settings. Please beware when operating and deploying.
 :::

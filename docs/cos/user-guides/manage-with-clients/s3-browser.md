@@ -22,7 +22,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-s3browse
 
 ### 連線儲存空間
 
-- 請參考[此文件](https://man.twcc.ai/@preview-twccdocs/guide-cos-connect-info-zh)取得連線資訊。
+- 請參考[此文件](connection-info.md)取得連線資訊。
 - 安裝好後打開 S3 Browser，設定 TWCC 雲端物件儲存體帳號的連線資訊，Account Type 必須選擇「S3 Compatible Storage」，再依照第三方軟體下載頁面提供的連線資訊，設定 REST Endpoint（cos.twcc.ai）、Access Key 及 Secret Key 即可。
 　　
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b656bd68c28442741aeaa3b2760c0eeb.png)
