@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 容器建立後，您可透過以下方式檢視容器資料或刪除容器。
 
 :::info
-租戶管理員、租戶使用者對於開發型容器使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-zh#%E9%96%8B%E7%99%BC%E5%9E%8B%E5%AE%B9%E5%99%A8)。
+租戶管理員、租戶使用者對於開發型容器使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/compute.md#開發型容器)。
 :::
 
 <br/>
@@ -36,8 +36,8 @@ import TabItem from '@theme/TabItem';
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cf118734826fcdd287da97a30865c0d5.png)
 
 :::caution
-- 「容器日誌」功能無法確保您的所有紀錄在容器結束運行後，仍可保存及取得，建議您將日誌轉存至 [TWCC HFS](https://man.twcc.ai/@preview-twccdocs/doc-hfs-main-zh) 或 上傳到 [TWCC COS](https://man.twcc.ai/@preview-twccdocs/doc-cos-main-zh) 中，以確保紀錄可用性。
-- 若希望由 TWCC 維運人員協助您取得完整紀錄，請您來信授權處理 (isupport@twcc.io)，並請勿存放機敏資料。
+- 「容器日誌」功能無法確保您的所有紀錄在容器結束運行後，仍可保存及取得，建議您將日誌轉存至 [<ins>TWCC HFS</ins>](/docs/hfs/overview.md) 或 上傳到 [<ins>TWCC COS</ins>](/docs/cos/overview.md) 中，以確保紀錄可用性。
+- 若希望由 TWCC 維運人員協助您取得完整紀錄，請您來信授權處理 (<a href = "mailto: isupport@twsc.io">isupport@twsc.io</a>)，並請勿存放機敏資料。
 :::
 
 <br/>
@@ -76,7 +76,7 @@ twccli ls ccs -all
 <Tabs>
 <TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-- 於「**開發型容器管理**」頁可於容器右側點選 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> ，再點選「**刪除**」刪除容器。
+- 於「**開發型容器管理**」頁可於容器右側點選 &nbsp;<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>&nbsp; ，再點選「**刪除**」刪除容器。
 - 或一次勾選單個或多個容器，點選上方「**刪除**」刪除容器。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2d1182756e5313f7ce9a9d286d19b87a.png)
@@ -101,5 +101,5 @@ twccli rm ccs -s 934369
 <br/>
 
 :::info
-若已開啟「[刪除保護機制](https://man.twcc.ai/@twccdocs/guide-ccs-manage-zh#%E6%AA%A2%E8%A6%96%E8%B3%87%E8%A8%8A)」，將無法直接刪除資源，請您先關閉後再執行刪除。
+若已開啟「[<ins>刪除保護機制</ins>](#檢視資訊)」，將無法直接刪除資源，請您先關閉後再執行刪除。
 :::
