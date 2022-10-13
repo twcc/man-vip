@@ -168,4 +168,3 @@ macOS：可使用「文字編輯」軟體
 - 預設目錄即為使用者的 /home 目錄，下方為 /home 目錄底下的資料。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e69ea54b6ed112035eeee732fdda0016.png)
-

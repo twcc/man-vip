@@ -19,7 +19,7 @@ TWCC 容器運算服務 (開發型容器與任務型容器)、HPC 高速運算�
 :::info
 [1] NVIDIA 提供許多 [<ins>Deep Learning 範例</ins>](https://github.com/NVIDIA/DeepLearningExamples)參考，提升操作便利性。<br/>
 [2] NGC 版號由 「**年分.月份**」組成：`NGC 20.09` 即是 2020 年 9 月發行版本。可參閱 [<ins>NGC Support Matrix</ins>](https://docs.nvidia.com/deeplearning/frameworks/support-matrix/index.html)，詳述 NGC 提供 AI frameworks、套件版號的差異。<br/>
-[3] 也可下載 Docker Hub 或其他 Container Registry 的容器使用，更多資訊請參考 [<ins>HowTo：建立 TWNIA2 容器</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-zh)。
+[3] 也可下載 Docker Hub 或其他 Container Registry 的容器使用，更多資訊請參考 [<ins>建立 TWNIA2 容器</ins>](./create-twnia2-containers.md)。
 :::
 
 <br/>
@@ -39,7 +39,7 @@ TWCC 已為使用者預載以下 3 個常用的 NGC 容器，並放置於路徑 
 若想使用其他版本或其他容器，TWCC 台灣杉二號已安裝 Singularity，您可以使用 `singularity pull` 指令，下載 Singularity 容器<sup>[4]</sup>。
 
 :::info
-[4] 可下載 Docker Hub 或其他 Container Registry 的容器使用，更多使用方式與資訊請參考 [<ins>HowTo：建立 TWNIA2 容器</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-zh)。
+[4] 可下載 Docker Hub 或其他 Container Registry 的容器使用，更多使用方式與資訊請參考 [<ins>建立 TWNIA2 容器</ins>](./create-twnia2-containers.md)。
 :::
 
 <br/>
@@ -81,7 +81,7 @@ Stage: build
 ```
 
 :::info 
-[5] 更多如何客製化容器的步驟，請參考[<ins>客製化 Singularity 容器</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-zh#2-%E5%AE%A2%E8%A3%BD%E5%8C%96-Singularity-%E5%AE%B9%E5%99%A8)。<br/>
+[5] 更多如何客製化容器的步驟，請參考[<ins>客製化 Singularity 容器</ins>](./create-twnia2-containers.md#step-2-客製化-singularity-容器)。<br/>
 [6] NGC 提供的容器，TensorFlow 有安裝 Horovod，而 PyTorch 則無，因此需額外安裝。
 :::
 
@@ -93,7 +93,7 @@ Stage: build
 NVIDIA 提供的 TensorFlow、PyTorch、MXNet，皆可啟用混合精度 (Automatic Mixed Precision)，可以提高運算速度，若有需要請參考 NVIDIA [Automatic Mixed Precision for Deep Learning](https://developer.nvidia.com/automatic-mixed-precision)。
 
 :::info
-也可參考以 TWCC 容器服務[<ins>開啟 TensorFlow 自動混合精度運算與執行效能分析</ins>](https://www.twcc.ai/doc?page=howto_ctn6)。
+也可參考以 TWCC 容器服務[<ins>開啟 TensorFlow 自動混合精度運算與執行效能分析</ins>](../../ccs-interactive-container/tutorials/activate-tensorflow-amp.md)。
 :::
 
 <br/>
@@ -227,7 +227,7 @@ srun $SINGULARITY $HOROVOD
     例：
     > 索取 1 GPU，會自動配置 90  GB Memory
       索取 8 GPU，會自動配置 720 GB Memory
-3. 更多 Queue 資訊，請參考 [<ins>Queue 與計算資源使用說明</ins>](https://www.twcc.ai/doc?page=hpc_cli#4-Queue-%E8%88%87%E8%A8%88%E7%AE%97%E8%B3%87%E6%BA%90%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E)。
+3. 更多 Queue 資訊，請參考 [<ins>Queue 與計算資源使用說明</ins>](../user-guides/queues/queues-computing-resources.md)。
 :::
 
 <br/>
@@ -257,7 +257,7 @@ tail -f slurm_<JOB_ID>.out
 ```
 
 :::info
-其他常用指令如下，更多指令請參考 [<ins>Slurm指令</ins>](https://www.twcc.ai/doc?page=hpc_cli#6-Slurm%E6%8C%87%E4%BB%A4)： 
+其他常用指令如下，更多指令請參考 [<ins>Slurm指令</ins>](/docs/category/slurm-指令)：
 1. 使用`squeue -u $USER`：查看正在運行的 job
 2. 使用 `sacct -X`：查看今日運行的 job 及狀態，確認是否還在運行或已結束。
 :::

@@ -23,7 +23,7 @@ import TabItem from '@theme/TabItem';
 
 - 於登入後首頁，選擇 「**雲端物件儲存**」
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_757364a59378a0dc8cf901334662df78.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fedd428471c8c2c1b85ff4481e274905.png)
 
 :::tip
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。

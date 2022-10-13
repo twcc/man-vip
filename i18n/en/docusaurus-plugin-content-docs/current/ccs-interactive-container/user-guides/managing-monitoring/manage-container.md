@@ -12,17 +12,15 @@ import TabItem from '@theme/TabItem';
 After the container is created, you can view the container information or delete the container by the following ways.
 
 :::info
-For the difference between Tenant Admin and Tenant User's permission of Interactive Container, please refer to [<ins>Comparison of role permissions of TWCC</ins>](https://man.twcc.ai/@twccdocs/role-main-ㄍen/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#%E9%96%8B%E7%99%BC%E5%9E%8B%E5%AE%B9%E5%99%A8)。
+For the difference in functional privileges between the Tenant admins and Tenant Users using TWCC, please refer to [<ins>User permissions comparison</ins>](https://man.twcc.ai/@twccdocs/role-main-en).
 :::
 
 <br/>
 
 
-## View the information
+## View information
 
-View the Container ID, name, public IP, state, creation time, creator, image, basic configuration, log, network, storage,...and other information.
-
-
+View information such as container ID, name, public IP, state, creation time, creator, image, basic configuration, log, network, storage, etc.
 
 <Tabs>
 
@@ -31,20 +29,31 @@ View the Container ID, name, public IP, state, creation time, creator, image, ba
 - In **Interactive Container Management** page, you can view the basic information.
 - You can also click on a specific container and enter the **Interactive Container Details** page to view more container information.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_32c67123f253997fe56e8bb537d56601.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ae7be7274e4ae575a119f7bf456fca6d.png)
 
-
-
-- Enter the **CONFIGURATIONS** tab of Interactive Container Details, you can view the basic information, network, storage and other information of the container, and connect to the container.
+- Enter the **CONFIGURATIONS** tab of Interactive Container Details, you can view basic information, network, storage and other information of the container, or connect to the container.
 - Also, you can perform functions such as **Duplicate**, **Delete**, **Refresh** and view **Container Log**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_931ee9a65ca77b046972278f6d2c02f0.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e4a812d099355186aa618e3fd462c0c8.png)
+
+
+:::caution
+- The "Container Logs" feature cannot ensure that all your logs are saved and available after the container stops running. It is recommended for you to save your logs to [TWCC HFS](https://man.twcc.vip/en/docs/hfs/intro) or upload them to [TWCC COS](https://man.twcc.vip/en/docs/cos/intro) to ensure record availability.
+- If you would like TWCC maintenance staff to assist you in obtaining the complete records, please write to us (isupport@twcc.io) to authorize processing and do not store sensitive data.
+:::
+
+<br/>
+
+:::info
+If "Deletion Protection" is enabled, before deleting a resource, you need to disable the protection mechanism before continuing the deletion process, which can prevent the resource from being deleted by mistake and causing service interruption.
+![](https://i.imgur.com/vfuSZhT.gif)
+:::
 
 </TabItem>
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-- View container ID, name, creation time, and state..
+- View container ID, name, creation time, and state.
 
 ```bash
 twccli ls ccs
@@ -66,7 +75,7 @@ twccli ls ccs -all
 
 ## Delete the container
 
-If the container is no longer in use, we suggest deleting the container to reduce costs.
+If the container is no longer in use, we suggest you delete it to save costs.
 
 <Tabs>
 <TabItem value="TWCC Portal" label="TWCC Portal">
@@ -74,10 +83,10 @@ If the container is no longer in use, we suggest deleting the container to reduc
 - On the **Interactive Container Management** page, click <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>  on the right side of the container, then click **DELETE** to delete the container.
 - Or select single or multiple containers at once, and click **DELETE** above to delete the containers.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b3abee1329c47dbd92156cecb3d83e95.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bd56c116ab6bc2b6f250f783c234ca79.png)
 
 
-- In addition, you can also delete the container by clicking **DELETE** in the **Interactive Container Details** page.
+- Also, you can delete the container by clicking **DELETE** in the **Interactive Container Details** page.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7fe8c7f2b599f604e198780abca4086b.png)
 
@@ -92,3 +101,9 @@ twccli rm ccs -s 934369
 
 </TabItem>
 </Tabs>
+
+<br/>
+
+:::info
+If [delete protection](#view-information) is enabled, the resource cannot be deleted directly, please close it first and then delete the resource.
+:::

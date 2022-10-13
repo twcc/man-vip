@@ -53,6 +53,6 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/concept-ccs-memory
 
 
 :::info
-[1] 為使用者實際可使用之記憶體容量。<div>[2] 數值以四捨五入至整數位。</div>
+[1] 為使用者實際可使用之記憶體容量。<br/>[2] 數值以四捨五入至整數位。
 :::
 

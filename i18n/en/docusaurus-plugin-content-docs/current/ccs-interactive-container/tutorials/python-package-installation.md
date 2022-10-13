@@ -94,7 +94,7 @@ rm -rf ~/.local
 pip list --user
 ```
 
-4. Refer to [How to install packages?](##How-to-install-packages?), reinstall the suitable packages. Please choose an appropriate package installation path by yourself.
+4. Refer to [How to install packages](##How-to-install-packages?), reinstall the suitable packages. Please choose an appropriate package installation path by yourself.
 
 5. Run your program again to confirm whether the errors has been resolved.
 

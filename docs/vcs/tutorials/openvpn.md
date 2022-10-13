@@ -21,7 +21,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-setup-oepnvp
 :::
 
 
-請參考[建立虛擬運算個體](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh)建立一台 Linux 虛擬運算個體，並設置公用 IP，作為架設 OpenVPN、連入其他無對外 IP 個體的跳板機。
+請參考[建立虛擬運算個體](../user-guides/create/create-instances.md)建立一台 Linux 虛擬運算個體，並設置公用 IP，作為架設 OpenVPN、連入其他無對外 IP 個體的跳板機。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_033ddd3ab83dd2de73d4667e9ab0eacd.png)
 
@@ -30,18 +30,16 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-setup-oepnvp
 
 
 ## Step 2. 設定跳板機安全性群組
-因 OpenVPN 預設採用 UDP 1194 埠做為通訊，請參考[安全性群組](https://man.twcc.ai/@twccdocs/guide-vcs-sg-zh)，將跳板機加入 Ingress UPD 1194 的安全性群組規則。
+因 OpenVPN 預設採用 UDP 1194 埠做為通訊，請參考[安全性群組](../user-guides/security/security-group.md)，將跳板機加入 Ingress UPD 1194 的安全性群組規則。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ed4e22e5d80b604ee707fc22eb00df90.png)
-
-<br/>
 
 <br/>
 
 
 ## Step 3. 連線並安裝 OpenVPN
 
-- [連線進入 Linux 個體](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh)，使用 `wget` 指令進行下載 OpenVPN 安裝腳本
+- [連線進入 Linux 個體](../user-guides/connecting/linux/from-windows.md)，使用 `wget` 指令進行下載 OpenVPN 安裝腳本
 
 ```
 wget https://git.io/vpn -O openvpn-ubuntu-install.sh

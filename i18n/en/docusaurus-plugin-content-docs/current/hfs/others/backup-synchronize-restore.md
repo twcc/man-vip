@@ -12,7 +12,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/terms-hfs-storage-
 - /work directory: public directory (work) directory of each account (sign up and you can get 100 GB of free storage)
 
 :::info
-If the space is insufficient, you can go to the [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-en) to purchase expansions. Please refer to the [<ins>price list</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS) for the pricing and adjustment method.
+- [1] From September 1, 2021, temporary working directory area for each account of National Science and Technology Council(MST)(former Ministry of Science and Technology)(/work)free quotas, from 100 GB to 1500 GB.
+- [2] If the storage space is insufficient, you can go to [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i ></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) to purchase for expansion. Please refer to [<ins>Price List</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS) for the pricing and adjustment method.
 :::
 
 ### Public disk storage management policies and instructions
