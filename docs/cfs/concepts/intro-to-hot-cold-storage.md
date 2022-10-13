@@ -21,10 +21,10 @@ import TabItem from '@theme/TabItem';
 
 :::info
 - TWCC 使用者介面上「**檔案儲存管理**」、「**存取介面管理**」的功能，皆為對 **熱儲存區** 資料的管理功能。**冷儲存區** 之資料僅提供搬移至冷資料下載的功能，不提供其他檔案管理服務。
-- 需先將檔案上傳至熱儲存區，才可將 ++[檔案搬移](#檔案搬移)++ 至冷儲存區。
+- 需先將檔案上傳至熱儲存區，才可將 <ins>[檔案搬移](#檔案搬移)</ins> 至冷儲存區。
 :::
 
 
 ## 檔案搬移
 
-您可以透過[手動搬移](https://man.twcc.ai/@twccdocs/guide-cfs-move-retrieve-data-zh)，或設定[生命週期](https://man.twcc.ai/@twccdocs/guide-cfs-lifecycle-mngmnt-zh)自動將檔案遷移至冷儲存區進行資料長期儲存，並可隨時在不同儲存間進行檔案遷移。
+您可以透過[手動搬移](../user-guides/move-files/move-retrieve-files.md)，或設定[生命週期](../user-guides/move-files/manage-file-lifecycle.md)自動將檔案遷移至冷儲存區進行資料長期儲存，並可隨時在不同儲存間進行檔案遷移。

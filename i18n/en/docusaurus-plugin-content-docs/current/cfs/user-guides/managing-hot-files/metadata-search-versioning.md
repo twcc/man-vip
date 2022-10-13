@@ -79,6 +79,7 @@ Enter keyword in **Search Bar** to filter out the criteria matching results in a
 :::info
 - Archives of older versions can only be kept for 30 days.
 - If you need to restore the file from an old version, please download the old version and re-upload it.
+- Upload a file with the same name as the cold storage:New files will be stored in the hot storage and displayed on the file storage management;the original file is still stored in cold storage and can be viewed/accessed by clicking on the version record on the right.
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2a989dd79afff11bcfc096b1d6ff677b.png)

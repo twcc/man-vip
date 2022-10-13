@@ -80,10 +80,9 @@ After unmounting, you are able to detach the data disk .
     
     ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d2569823895e6578850c2feff05846cb.png)
 
-    * Enter Data Disk Management page. When the disk enters in the **`AVAILABLE`** state from the **`IN-USE`** state, you are able to delete the disk or attach it to a different instance.
+    * Enter Data Disk Management page. When the disk enters the **`AVAILABLE`** state from the **`IN-USE`** state, you are able to delete the disk or attach it to a different VCS instance.
     
     ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_44536696f4a31678f0bdfc293c8a88b1.png)
-
 
 
 - **Method 2**:
@@ -92,7 +91,7 @@ After unmounting, you are able to detach the data disk .
 
     ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0ac87e56ceb2005e598cb95e319d9ebb.png)
 
-    * When the disk enters in the **`AVAILABLE`** state from the **`IN-USE`** state, you are able to delete the disk or attach it to a different instance.
+    * When the disk enters the **`AVAILABLE`** state from the **`IN-USE`** state, you are able to delete the disk or attach it to a different VCS instance.
     
     ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_44536696f4a31678f0bdfc293c8a88b1.png)
 

@@ -13,14 +13,14 @@ import TabItem from '@theme/TabItem';
 虛擬網路服務主要是為虛擬運算個體提供可自訂的虛擬網路功能。本功能完整存取權限提供給租戶管理員使用，租戶使用者僅具讀取權限。
 
 :::info
-租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-zh#虛擬運算服務)。
+租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/compute#虛擬運算服務)。
 :::
 
 <br/>
 
 ## 建立預設虛擬網路
 
-首次使用 TWCC 所提供的虛擬運算服務，必須先在虛擬網路服務先建立**預設虛擬網路 (Default network)**，才可以開始使用虛擬運算服務。建立步驟請參考：[<ins>HowTo：建立預設虛擬網路</ins>](https://man.twcc.ai/@twccdocs/howto-vnw-create-default-network-zh)。後續若有使用其它網段的需求，可參考下方[<ins>建立自訂虛擬網路</ins>](#建立自訂虛擬網路)。
+首次使用 TWCC 所提供的虛擬運算服務，必須先在虛擬網路服務先建立**預設虛擬網路 (Default network)**，才可以開始使用虛擬運算服務。建立步驟請參考：[建立預設虛擬網路](../../tutorials/create-default-network.md)。後續若有使用其它網段的需求，可參考下方[建立自訂虛擬網路](#建立自訂虛擬網路)。
 
 <br/>
 
@@ -137,7 +137,7 @@ twccli ls vnet -id 261894
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f8d17969e2b9e4677e39667dd4f6ff68.png)
 
 
-- 或點選虛擬網路旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**刪除**」。
+- 或點選虛擬網路旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 > 點選「**刪除**」。
 - 或進入「**虛擬網路詳細資料**」頁 > 點選上方「**刪除**」。
 
 </TabItem>

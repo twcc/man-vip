@@ -43,7 +43,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-keep-you
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b4acc84b64bb17c41533b4718a74bcc2.png)
 
 
-- Then you are able to enter Terminal again to check the status of the running process
+- Then you are able to enter Terminal again to check the status of the running process.
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_62ab66f669dfb35b75aaec84c0ee1993.png)
 
 
@@ -60,7 +60,6 @@ sudo apt-get install screen
 ```
 
 :::info
-==**Need to update the link:exclamation:**==
 :book: Please refer to [<ins>Connect to the container using SSH</ins>](https://www.twcc.ai/doc?page=container#使用-SSH-登入連線).
 :::
 :::info
@@ -88,7 +87,7 @@ screen
 
 ### Step 3. Run the process in the screen shell
 
-- The example is as follows
+- The example is as follows:
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0017c6102df15b490d4492adf889470a.png)
 
@@ -124,7 +123,6 @@ screen -r [A chunk of screen shell ID]
 nohup [/code_path] &
 ```
 :::info
-==**Need to update:exclamation:**==
 :book: Please refer to [<ins>Connect to the container using SSH</ins>](https://man.twcc.ai/s/SJlZnSOaN#%E4%BD%BF%E7%94%A8-SSH-%E7%99%BB%E5%85%A5%E9%80%A3%E7%B7%9A).
 :::
 - The example is as follows, terminal will return the job ID (job ID = 1 marked with red frame), and the output of the process will be displayed in the "nohup.out".

@@ -17,9 +17,9 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 本 HPC 高速運算任務搭配 Singularity 來運行容器，用戶可使用本服務提供的 Docker 映像檔來進行相關 AI 運算。
 
 :::info
-:book: 若需使用 8 顆以上 GPU 或執行跨節點高速運算，請使用[<ins>台灣杉二號(命令列介面)</ins>](https://www.twcc.ai/doc?page=hpc_cli&euqinu=true)，並參考以下教學案例：
-- [<ins>HowTo：建立 TWNIA2 容器</ins>](https://www.twcc.ai/doc?page=howto-twnia2-create-sglrt-container)
-- [<ins>HowTo：容器跨節點高速運算－AI Benchmark</ins>](https://www.twcc.ai/doc?page=howto-twnia2-run-parallel-job-container)
+:book: 若需使用 8 顆以上 GPU 或執行跨節點高速運算，請使用[<ins>台灣杉二號(命令列介面)</ins>](twnia2-hpc-cli/overview.md)，並參考以下教學案例：
+- [<ins>HowTo：建立 TWNIA2 容器</ins>](twnia2-hpc-cli/tutorials/create-twnia2-containers.md)
+- [<ins>HowTo：容器跨節點高速運算－AI Benchmark</ins>](twnia2-hpc-cli/tutorials/ai-benchmark-container.md)
 :::
 
 ## 建立 HPC 高速運算任務
@@ -41,7 +41,7 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 * 接著在任務 1 區塊選擇映像檔版本/快照、硬體規格及輸入指令，當容器啟動後會自動執行該指令的內容或程式。
  
 :::info
-:bulb: 提示：請先使用 [「HFS 儲存服務」](https://www.twcc.ai/doc?page=hfs)上傳欲執行的程式內容。
+:bulb: 提示：請先使用 [「HFS 儲存服務」](hfs/overview.md)上傳欲執行的程式內容。
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e7968b03779782ea62894123f90a592c.png)
@@ -55,8 +55,8 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 
 :::info 
 :book: 參見
-* [雲端物件儲存服務](https://www.twcc.ai/doc?page=object)
-* [HFS 儲存服務](https://www.twcc.ai/doc?page=hfs)
+* [雲端物件儲存服務](cos/overview.md)
+* [HFS 儲存服務](hfs/overview.md)
 :::
 
 * HPC 高速運算任務服務可設定多項運算任務，按一下「+新增任務」，可展開任務 2 設定區塊，繼續設定其他任務。
@@ -134,13 +134,13 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 ### 連線資料傳輸節點 
 
 :::info
-:book: 參見 [HFS 高速儲存服務](https://www.twcc.ai/doc?page=hfs)，使用 SFTP + FileZilla 以圖形化的操作介面，連線並傳輸檔案。
+:book: 參見 [HFS 高速儲存服務](hfs/overview.md)，使用 SFTP + FileZilla 以圖形化的操作介面，連線並傳輸檔案。
 :::
 
 ### 連線登入節點
 
 :::info
-:book: 參見 [登入「登入節點」](https://www.twcc.ai/doc?page=hpc_cli#2-%E7%99%BB%E5%85%A5%E3%80%8C%E7%99%BB%E5%85%A5%E7%AF%80%E9%BB%9E%E3%80%8D)，連線登入節點
+:book: 參見 [登入「登入節點」](twnia2-hpc-cli/user-guides/service-overview/login-node-data-transfer-node.md)，連線登入節點
 :::
 
 * 登入成功之後，可直接使用 Slurm 的基本指令 `sinfo -V`，應會返回此服務的版本資訊，以確認此帳號可以正常使用 Slurm 的功能。

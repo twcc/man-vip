@@ -9,7 +9,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-
 # <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b3382d3255e279896320ff106a1565d.png' /> Caffe2
 
 
-TWCC provides ready-to-use working environment of NGC optimized Caffe2. The NVIDIA Deep Learning SDK accelerates widely-used deep learning frameworks such as Caffe2™. Caffe2 is a deep-learning framework designed to easily express all model types, for example, convolutional neural networks (CNNs), recurrent neural networks (RNNs), and more, in a friendly Python-based API, and execute them using a highly efficiently C++ and CUDA® backend.
+TWCC provides ready-to-use working environment of NGC optimized Caffe2. The NVIDIA Deep Learning SDK accelerates widely-used deep learning frameworks such as Caffe2™. Caffe2 is a deep-learning framework designed to easily express all model types such as convolutional neural networks (CNNs), recurrent neural networks (RNNs), etc. through Python API, and execute them using a highly efficiently C++ and CUDA® backend.
 
 <br/>
 
@@ -30,8 +30,6 @@ TWCC provides ready-to-use working environment of NGC optimized Caffe2. The NVID
 
 <summary><b>Detailed package version information</b></summary>
 
-
-- [caffe2-18.08-py3-v1](https://docs.nvidia.com/deeplearning/frameworks/caffe2-release-notes/rel_18.08.html#rel_18.08)
-- [caffe2-18.08-py2-v1](https://docs.nvidia.com/deeplearning/frameworks/caffe2-release-notes/rel_18.08.html#rel_18.08)
+- [caffe2-18.08-py2/py3-v1](https://docs.nvidia.com/deeplearning/frameworks/caffe2-release-notes/rel_18.08.html#rel_18.08)
 
 </details>

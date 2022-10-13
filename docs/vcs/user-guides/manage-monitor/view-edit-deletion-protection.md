@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 虛擬運算個體建立後，您可透過以下方式檢視個體資料或編輯個體描述。
 
 :::info
-租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-zh#虛擬運算服務)。
+租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/compute.md#虛擬運算服務)。
 :::
 
 <br/>
@@ -80,7 +80,7 @@ twccli ls vcs -all
 
 </TabItem>
 
-<TabItem value="TWCC CLI" label="TWCC CLI (尚無支援)">
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
 
 <br/>
 

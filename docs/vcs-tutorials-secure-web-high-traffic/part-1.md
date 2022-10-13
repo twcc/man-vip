@@ -26,7 +26,7 @@ import TOCInline from '@theme/TOCInline';
 　4. 虛擬網路：選擇需架設負載平衡器的網段
 
 :::caution
-負載平衡器與 [Step 2](#Step-2-建立後方網頁伺服器，架設-NGINX-網頁服務) 的虛擬運算個體建立於相同虛擬網路上，才能發揮平衡流量之作用。
+負載平衡器與 [Step 2](#step-2-建立後方網頁伺服器架設-nginx-網頁服務) 的虛擬運算個體建立於相同虛擬網路上，才能發揮平衡流量之作用。
 :::
 
 :::info
@@ -53,14 +53,14 @@ TWCC 提供三種負載平衡器平衡方法：
 - 進入虛擬運算管理頁，建立名為 *lbssl01* 與 *lbssl02* 的兩台虛擬運算個體。
 
 :::info
-- 詳細虛擬運算個體建立步驟，請參考[<ins>虛擬運算服務</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-create-zh)。
+- 詳細虛擬運算個體建立步驟，請參考[<ins>虛擬運算服務</ins>](../vcs/user-guides/create/create-instances.md)。
 - 範例選用 **Ubuntu 映像** 檔建立，**虛擬網路和負載平衡選用相同網路**，請**開啟公用 IP** 供後續網站管理員維護使用，其他設定皆以預設資訊建立。
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_66a116fc390752364e5dcf841f68cbdb.png)
 
 :::tip
-您也可以在*lbssl01* 個體將網頁架設完成後，再使用[<ins>映像檔</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-vds-instance-image-zh)快速建立 *lbssl02* 網頁伺服器，節省應用程式重複安裝的成本。
+您也可以在*lbssl01* 個體將網頁架設完成後，再使用[<ins>映像檔</ins>](../vcs/user-guides/backup/create-images.md)快速建立 *lbssl02* 網頁伺服器，節省應用程式重複安裝的成本。
 :::
 
 :::info
@@ -73,7 +73,7 @@ TWCC 提供三種負載平衡器平衡方法：
 - 使用公用 IP 連線進入 *lbssl01* 與 *lbssl02* 個體後，分別使用以下 3 個指令，**將 2 台個體安裝 NGINX 架設網頁服務**：
 
 :::info
-1. 詳細虛擬運算個體連線步驟，請參考[<ins>連線虛擬運算個體</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-zh)。
+1. 詳細虛擬運算個體連線步驟，請參考[<ins>連線虛擬運算個體</ins>](../vcs/user-guides/connecting/linux/from-windows.md)。
 2. 範例以 NGINX 做為架設網站的工具，您可以依需求安裝不同工具。
 :::
 

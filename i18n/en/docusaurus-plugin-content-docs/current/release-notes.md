@@ -6,7 +6,33 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/UserPortalHistory_
 
 # TWCC Release Notes
 ## Year 2022
-
+### Sep 2, 2022 (version: 12179961) 
+- **UI**
+    - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Removed the Supply Contract information page.
+- **CFS**
+    - <font style={{'background-color':'#2A56C6'}}><font style={{'color':'white'}}> <b>&nbsp;Fix&nbsp;</b></font></font> &ensp; Fixed cannot access folders.
+- **VCS**
+    - <font style={{'background-color':'#27A5BD'}}><font style={{'color':'white'}}> <b>&nbsp;Feature&nbsp;</b></font></font> &ensp; You can now edit image descriptions on image management page.
+- **VDS**
+    - <font style={{'background-color':'#2A56C6'}}><font style={{'color':'white'}}> <b>&nbsp;Fix&nbsp;</b></font></font> &ensp; Fixed listing only snapshots in AVAILABLE states on the snapshot management page.
+- **LBS**
+    - <font style={{'background-color':'#27A5BD'}}><font style={{'color':'white'}}> <b>&nbsp;Feature&nbsp;</b></font></font> &ensp; You can now control inbound and outbound network traffic with security group rules for load balancers.
+### Aug 19, 2022 (version: baf3d9a5) 
+- **UI**
+    - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Supported auto-detection of browser preferred language.
+    - <font style={{'background-color':'#2A56C6'}}><font style={{'color':'white'}}> <b>&nbsp;Fix&nbsp;</b></font></font> &ensp; Fixed vulnearabilities.
+- **LBS**
+    - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Renamed `VIP` to `Public IP`.
+### Aug 9, 2022 (version: b5da17ec)
+- **CCS**
+    - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Changed platform selection process.
+### Aug 5, 2022 (version: 97403051) 
+- **UI**
+    - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Updated packages.
+- **CFS**
+    - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Showed folder size.
+- **VCS**
+    - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Showed image description.
 ### Jul 27, 2022 (version: f5f933c4) 
 - **UI**
   - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}>
@@ -46,7 +72,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/UserPortalHistory_
     - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Changed the format of environmental variables.
 ### Jun 24, 2022 (verison: 58995806)
 - **UI**
-    - <font style={{'background-color':'#27A5BD'}}><font style={{'color':'white'}}> <b>&nbsp;Feature&nbsp;</b></font></font> &ensp; Added [TWCC Compliance](https://www.twcc.ai/certification) page to present security standards and compliance certifications TWCC supports.
+    - <font style={{'background-color':'#27A5BD'}}><font style={{'color':'white'}}> <b>&nbsp;Feature&nbsp;</b></font></font> &ensp; Added <a href="https://www.twcc.ai/certification">TWCC Compliance</a> page to present security standards and compliance certifications TWCC supports.
 - **CCS, VCS, HPC Job**
     - <font style={{'background-color':'#27A5BD'}}><font style={{'color':'white'}}> <b>&nbsp;Feature&nbsp;</b></font></font> &ensp; Expanded type sorting options.
     - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Rounded pricing to two decimal places.
@@ -82,7 +108,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/UserPortalHistory_
 - **LBS**
     - <font style={{'background-color':'#27A5BD'}}><font style={{'color':'white'}}> <b>&nbsp;Feature&nbsp;</b></font></font> &ensp; For load balancers, you are able to not assign IPs, detach static IPs or change to floating IPs.  
 - **HFS**
-  - <font style={{'background-color':'#2A56C6'}}><font style={{'color':'white'}}> <b>&nbsp;Fix&nbsp;</b></font></font> &ensp; Fixed the link of the HFS **ADJUST STORAGE** button.
+  - <font style={{'background-color':'#2A56C6'}}><font style={{'color':'white'}}> <b>&nbsp;Fix&nbsp;</b></font></font> &ensp; Fixed the link of the HFS <b>ADJUST STORAGE</b> button.
 ### Apr 28, 2022 (version: 462a194a)
 - **CFS**
   - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Changed CFS S3 endpoint and port number to cfss3.twcc.ai and 443. 
@@ -99,7 +125,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/UserPortalHistory_
 - **VCS**
     - <font style={{'background-color':'#27A5BD'}}><font style={{'color':'white'}}> 
     
-    <b>&nbsp;Feature&nbsp;</b></font></font>  &ensp; You can now <ins><a href = "https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-vds-manage-instance-image-zh#%E5%88%86%E4%BA%AB%E6%98%A0%E5%83%8F%E6%AA%94%E3%80%81%E5%88%86%E4%BA%AB%E7%AE%A1%E7%90%86">share images across projects</a></ins><ins><a href = "(https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-create-custom-instance-zh#%E9%81%B8%E7%94%A8%E4%BE%86%E6%BA%90%E8%A8%88%E7%95%AB%E5%88%86%E4%BA%AB%E7%9A%84%E6%98%A0%E5%83%8F%E6%AA%94">create instances</a></ins>
+    <b>&nbsp;Feature&nbsp;</b></font></font>  &ensp; You can now <a href="https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-vds-manage-instance-image-zh#%E5%88%86%E4%BA%AB%E6%98%A0%E5%83%8F%E6%AA%94%E3%80%81%E5%88%86%E4%BA%AB%E7%AE%A1%E7%90%86">share images across projects</a> and use the same image from other projects to <a href="https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-create-custom-instance-zh#%E9%81%B8%E7%94%A8%E4%BE%86%E6%BA%90%E8%A8%88%E7%95%AB%E5%88%86%E4%BA%AB%E7%9A%84%E6%98%A0%E5%83%8F%E6%AA%94">create instances</a>.
     - <font style={{'background-color':'#27A5BD'}}><font style={{'color':'white'}}> <b>&nbsp;Feature&nbsp;</b></font></font> &ensp; 
     - Added search box for images to fasten the VCS instance creation process.
 ### Mar 18, 2022 (version: 37705ad2)
@@ -137,6 +163,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/UserPortalHistory_
 - **VCS**
     - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}> <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Floating IPs will be released when you stop your VCS instances.
     - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}> <b>&nbsp;Change&nbsp;</b></font></font> &ensp; The project quota of Floating IPs: 10. 
+
 ## Year 2021
 ### Dec 17, 2021 (版本: fe8c7c13)
 - **UI**
@@ -168,7 +195,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/UserPortalHistory_
 ### Oct 08, 2021 (version: 55d2d0f7)
 - **UI**
     - <font style={{'background-color':'#27A5BD'}}><font style={{'color':'white'}}> <b>&nbsp;Feature&nbsp;</b></font></font> &ensp; You can now check the TWCC service health on the Service Status page.
-    - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}> <b>&nbsp;Change&nbsp;</b></font></font> &ensp; UI/UX optimization。
+    - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}> <b>&nbsp;Change&nbsp;</b></font></font> &ensp; UI/UX optimization.
 - **VCS**
     - <font style={{'background-color':'#27A5BD'}}><font style={{'color':'white'}}> <b>&nbsp;Feature&nbsp;</b></font></font> &ensp; You can now quickly connect to your VCS instance using a web console to perform system debugging and maintenance.
 ### Sep 29, 2021 (version: f0095b6a)

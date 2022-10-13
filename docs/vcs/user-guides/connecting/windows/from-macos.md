@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 # 連線 Windows 個體：本機為 macOS
 
-完成[準備工作、取得連線資訊](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-zh)後，請參考以下方式連線進入 Windows 個體(本機為 macOS) 。
+完成[準備工作、取得連線資訊](../prerequisites.md)後，請參考以下方式連線進入 Windows 個體(本機為 macOS) 。
 
 :::info
 請注意個體建立後，狀態轉為 **`Ready`**，**需等候一些時間才可遠端連線使用**。
@@ -31,7 +31,6 @@ import TabItem from '@theme/TabItem';
 公用 IP 之後需加上 Port 號`: 9833`，例如：203.145.123.1`:9833`
 :::
 
-
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_aa227034ee0b79c47cfca35ddce2d099.png)
 
 - **Step 2.** 雙點擊已建立的連結並輸入登入帳號與密碼，便可成功連結個體
@@ -44,5 +43,5 @@ import TabItem from '@theme/TabItem';
 :::
 
 :::info
-若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](https://man.twcc.ai/@preview-twccdocs/guide-vcs-debug-tool-console-zh)，可加速工作流程。
+若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](../../manage-monitor/console.md)，可加速工作流程。
 :::

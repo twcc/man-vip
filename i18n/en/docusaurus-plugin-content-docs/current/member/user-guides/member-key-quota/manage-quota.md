@@ -13,12 +13,12 @@ import TabItem from '@theme/TabItem';
 The resource quota management function allows Tenant Admin to manage resource quotas for project members to use TWCC services, such as Container Compute Service or Virtual Compute Service.
 
 :::info
-This function can only be used by the Tenant Admin.
+This function is only available to Tenant Admins.
 :::
 
 * Click the user name in the upper right corner, and then click "Quota".
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5ecba43a124f09b5d085472d93ec5c7a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fdc68cce2ff444f2e3c5503a1a071458.png)
 
 
 <br/>
@@ -29,12 +29,12 @@ This function can only be used by the Tenant Admin.
 
 * Enter the "Quota Management" page, and select "Container Compute Service" from the "Service Usage/Quota" menu to display the Container Compute Service resource usage and quota of the entire project and the project members.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f2067e94c798a73e0654eebc1d1703b5.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3f37d69574442a2a4fb78c65cbd6a39e.png)
 
 
-* Click the member list item, the "Edit Quota" window  will appear, and you can set the member's quota.
+* Click the member list item, the "Edit quota" window  will appear, and you can set the member's quota.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_370b1d3ec8b40f136406d76288d116b1.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8716e6927584de34b2350c70432e3a36.png)
 
 <br/>
 
@@ -44,6 +44,6 @@ This function can only be used by the Tenant Admin.
 * Enter the "Quota Management" page and select "Virtual Compute Service" from the "Service Usage/Quota" menu to display the Virtual Compute Service resource usage and quota of the entire project and project members.
 
 
-* Click the member list item, the "Edit Quota" window will appear, and you can set the member's quota.
+* Click the member list item, the "Edit quota" window will appear, and you can set the member's quota.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_475f1f21f6b797fac0f61517557b3e35.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5b98d9c220fefc40c72ce41f668fe51e.png)
