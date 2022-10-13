@@ -27,5 +27,5 @@ import TOCInline from '@theme/TOCInline';
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_004c258576ac1ca3048313546e0bb339.png)
 
 :::caution
-教學結束！若有任何疑問或建議，歡迎您來信 <ins><a href = "isupport@twcc.ai">isupport@twcc.ai</a></ins>，謝謝！
+<i class="fa fa-envelope" aria-hidden="true"></i>教學結束！若有任何疑問或建議，歡迎您來信 <ins><a href = "isupport@twcc.ai">isupport@twcc.ai</a></ins>，謝謝！
 :::

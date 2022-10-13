@@ -32,7 +32,7 @@ Please create a bucket correspond to dataset for S3 protocol access, and downloa
 ### Get S3 service connection information
 
 
-* After entering **S3 Service** page, you may obtain connection information including service endpoint (using SSL connection): **`cfss3.twcc.ai`**, Signature Version, Access Key adn Secret Key.
+* After entering **S3 Service** page, you may obtain connection information including service endpoint (using SSL connection): **`cfss3.twcc.ai`**, Signature Version, Access Key and Secret Key.
 * Click **CREATE KEY** button to generate Access Key and Secret Key. Key can be regenerate by clicking **RENEW KEY** button.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c9a848865dcb0b1d76ea91e9ea45c029.png)
@@ -75,10 +75,10 @@ CFS also provides SFTP access interface, you can use SFTP client software (e.g.,
     - Port: 22 
 
 :::info
-If you forgot your **Supercomputer account** or **supercomputer password**, see [<ins>Inquire supercomputer account, reset password and obtain OTP authentication code</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en) for more information.
+If you forgot your **Supercomputer account** or **supercomputer password**, please refer to [<ins>Inquire supercomputer account, reset password and obtain OTP authentication code</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en) for more information.
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a5e51cd889a7f5d12061441474228eaa.png)
 
 * After successful login, the files in CFS will be displayed and available for file transfer and access (first-level folder name is the project ID by default).
-* Files stored in the cold storage area, will be displayed with `.COLDDATA` suffix and cannot be downloaded, moved, copied or deleted directly through the SFTP software. Please manage files through the TWCC portal
+* Files stored in the cold storage area, will be displayed with `.COLDDATA` suffix and cannot be downloaded, moved, copied or deleted directly through the SFTP software. Please manage files through the TWCC portal.

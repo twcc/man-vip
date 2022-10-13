@@ -52,7 +52,7 @@ import TOCInline from '@theme/TOCInline';
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_654c8d6681f4f4da6ea193a320e6e1f3.png)
 
 
-* 連線進入虛擬運算個體，將 HDD 資料磁碟掛載到 VM 上，並進行初始化，步驟可參考 [HowTo：初始化磁碟- Linux 個體](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-zh)。
+* 連線進入虛擬運算個體，將 HDD 資料磁碟掛載到 VM 上，並進行初始化，步驟可參考 [初始化磁碟- Linux 個體](./data-disk-init-linux.md)。
 
 <br/>
 
@@ -109,14 +109,14 @@ Windows 個體與 以上 Linux 個體的操作方式雷同，僅 `Step 2.` 初�
 
 ### Step 2. 新建相同容量的 HDD 資料磁碟
 
-新建一 HDD 資料磁碟並將磁碟連結至虛擬運算個體後，初始化步驟請改參考 [HowTo：初始化磁碟- Windows 個體](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-zh)。
+新建一 HDD 資料磁碟並將磁碟連結至虛擬運算個體後，初始化步驟請改參考 [初始化磁碟- Windows 個體](./data-disk-init-windows.md)。
 
 <br/>
 
 
 ### Step 3. SSD 資料磁碟資料同步至 HDD 資料磁碟
 
-* 初始化完成後，確認兩種類型的資料磁碟都已掛載成功。 
+* 初始化完成後，確認兩種類型的資料磁碟都已掛載成功。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e1f878a79bd6c276509485dd1828f1ff.png)
 

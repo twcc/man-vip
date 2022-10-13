@@ -23,11 +23,11 @@ The **load balancer** will be in the front line of the web service architecture.
 
 - Fill in the configuration information of the load balancer, and then click **NEXT: REVIEW & CREATE>**. 
     1. Type: Select **Application Load Balancer**
-    2. Listener: 
-        a. Select **HTTP** for protocol, and set port **80** to provide HTTP service
-        b. Select **HTTPS with SSL** for protocol, and set port **443** to provide HTTPS encrypted transmission service.
+    2. Listener: <br/>
+        a. Select **HTTP** for protocol, and set port **80** to provide HTTP service.<br/>
+        b. Select **HTTPS with SSL** for protocol, and set port **443** to provide HTTPS encrypted transmission service.<br/>
     3. Method: Select **ROUND_ROBIN**
-    4. Virtual network: Select the network on which the load balancer working
+    4. Virtual network: Select the network on which the load balancer working.
  
 :::caution
 Build the load balancer and the VCS instances in the [Step 2](#Step-2.-Create-a-back-end-web-server-and-set-up-NGINX-web-service) at the same virtual network to bring the load balancing into effect.
@@ -61,7 +61,7 @@ TWCC provides 3 load balancing methods:
 - Enter **VCS Instance Management** page and create two VCS instances named *lbssl01* and *lbssl02*.
 
 :::info
-- For creating VCS instances, see [<ins>Virtual Compute Service (VCS)</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-create-en).
+- For creating VCS instances, please refer to [<ins>Virtual Compute Service (VCS)</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-create-en).
 - The example selects **Ubuntu** as the image, **same network for virtual network and load balancer**, and **open the public IP** for the follow-up web maintenance. Other configurations are created with default settings.
 :::
 
@@ -69,7 +69,7 @@ TWCC provides 3 load balancing methods:
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_46111d9799687233769d7259227d0689.png)
 
 You can also use the image file to quickly create a *lbssl02* web server after the *lbssl01* individual has finished setting up the web page to save the cost of repeated installation of the application.
-:::caution
+:::tip
 You can also use the [<ins>image</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-vds-instance-image-en) to quickly create instance *lbssl02* after creating instance *lbssl01* to save the cost of repeated installation.
 :::
 
@@ -84,7 +84,7 @@ We will use the private IP of the VCS instance in the following steps. Please en
 - Use the public IP to connect to *lbssl01* and *lbssl02* instances, and use the following 3 commands to **set up the NGINX web service** in the instances:
 
 :::info
-1. For connecting to the VCS instance, see [<ins> Connect to VCS instance</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-en).
+1. For connecting to the VCS instance, please refer to [<ins> Connect to VCS instance</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-en).
 2. We use NGINX to build websites in the example. You can install different tools according to your needs.
 :::
 
@@ -138,9 +138,9 @@ By setting up a security group, port 80 is established so that the load balancer
  
 - Configuration information
     1. **Direction**: Select **Ingress** (Users connect from outside and enter the instance to use the service)
-    2. **Port Range (Min), Port Range (Max)**: Set **80** (Open port 80 to provide HTTP service, and the web program will automatically direct the connection to port 443 to provide HTTPS web service.)
+    2. **Port Range (Min), Port Range (Max)**: Set **80** (Open port 80 to provide HTTP service, and the web program will automatically direct the connection to port 443 to provide HTTPS web service)
     3. **Protocol**: Select **TCP**
-    4. **CIDR**: Fill in the CIDR of the virtual network to ensure the load balancer on the same network segment can access this instance<br/>
+    4. **CIDR**: Fill in the CIDR of the virtual network to ensure the load balancer on the same network segment can access this instance.<br/>
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0554358279d2ac3ee3a81b8bb834d0d0.png)
 

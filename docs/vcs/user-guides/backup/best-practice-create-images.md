@@ -10,10 +10,10 @@ import TabItem from '@theme/TabItem';
 
 # 建立虛擬運算個體映像檔的最佳作法
 
-您可於多種情況下建立 [TWCC 虛擬運算個體映像檔](https://man.twcc.ai/@twccdocs/vcs-vds-instance-image-zh)，**但在建立前，請您執行以下工作以確保有效取得映像檔**：
+您可於多種情況下建立 [TWCC 虛擬運算個體映像檔](./create-images.md)，**但在建立前，請您執行以下工作以確保有效取得映像檔**：
 
-- **[關機 (Shutdown)](#如何關機-shutdown？) 後再建立映像檔**，若個體狀態為 Ready 且仍有 I/O，建立所需時間較長，關機後再執行可確保製作時間不會過長。
-- **若個體已設定自動掛載資料磁碟，建議指令[加上 "nofail" 選項](#如何加上-nofail-選項？)後再建立映像檔**，以確保使用映像檔回復之個體，可以正常啟動與連線。
+- **[關機 (Shutdown)](#如何關機-shutdown) 後再建立映像檔**，若個體狀態為 Ready 且仍有 I/O，建立所需時間較長，關機後再執行可確保製作時間不會過長。
+- **若個體已設定自動掛載資料磁碟，建議指令[加上 "nofail" 選項](#如何加上-nofail-選項)後再建立映像檔**，以確保使用映像檔回復之個體，可以正常啟動與連線。
 
 <br/>
 
@@ -33,7 +33,7 @@ sudo shutdown
 :::
 
 :::info
-個體狀態與計費關係之說明，請參考[<ins>虛擬運算個體生命週期</ins>](https://www.twcc.ai/doc?page=concept-vcs-lifecycle)。
+個體狀態與計費關係之說明，請參考[<ins>虛擬運算個體生命週期</ins>](../../concepts/instance-lifecycle.md)。
 :::
 
 <br/>

@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 # 管理專案成員
 
 :::info
-- 使用 TWCC 服務前請確認您已有可用專案與額度：[<ins>確認已有可用專案</ins>](https://man.twcc.ai/@twsdocs/guide-service-project-availability-zh)。
+- 使用 TWCC 服務前請確認您已有可用專案與額度：[<ins>確認已有可用專案</ins>](./available-projects.md)。
 - 僅「**專案主持人（建立者）**」、「**專案管理員**」有權限管理專案成員。
 :::
 
@@ -19,7 +19,7 @@ import TabItem from '@theme/TabItem';
 
 ### Step 1. 專案細節頁面
 
-- 登入 [<ins>TWS</ins>](https://tws.twcc.ai/) 後，<span>&#10102;</span> 點選「**會員中心**」:arrow_right: <span>&#10103;</span>「**專案管理**」 :arrow_right: <span>&#10104;</span>「**我的專案** 」:arrow_right: <span>&#10105;</span> 點選專案
+- 登入 [TWS](https://tws.twcc.ai/) 後，<span>&#10102;</span> 點選「**會員中心**」:arrow_right: <span>&#10103;</span>「**專案管理**」 :arrow_right: <span>&#10104;</span>「**我的專案** 」:arrow_right: <span>&#10105;</span> 點選專案
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_85549595b7679e2ab9b7067e15641d7c.png)
 

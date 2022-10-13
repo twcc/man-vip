@@ -45,7 +45,9 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-activate
 <br/>
 
 ## 建立 TWCC 開發型容器
+
 登入 TWCC 後，請參考 [建立開發型容器](../user-guides/create-connect/create-container.md)，建立一個如以下設定的容器：
+
 
 ```
 映像檔類型：TensorFlow
@@ -53,7 +55,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-activate
 基本設定　：c.super
 ```
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2a764baf381ab0a6874bb1901c29826a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7f8c824a5a6c6dffee5d5730c0de2167.png)
 
 <br/>
 
@@ -61,7 +63,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-activate
 
 於「開發型容器管理」頁面待開發型容器的狀態轉為「Ready」時，點選該容器進入「開發型容器詳細資料」頁面。可透過 Jupyter Notebook 或 SSH 連線使用容器。本教學內容採用 SSH 連線，詳細步驟請參閱 [使用 SSH 登入連線](../user-guides/create-connect/connect-container.md#ssh)。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db7b7a3d38d8f9eb0094674ea225f20b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8c81f37d2a9e43f40f56e86233e6a46d.png)
 
 <br/>
 

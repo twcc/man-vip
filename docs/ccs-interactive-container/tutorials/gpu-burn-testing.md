@@ -62,7 +62,7 @@ bash gpu_testing.sh
 ## Step 5. 取得基礎運算資訊
 
 - **檢視計算能力**<br/>
-GPGPU 容器服務所使用之 GPU 皆為 NVIDIA V100 32GB，具有強大之計算能力。使用 gpu-burn 所測試之結果是具有 13198 Gflop/s能力
+GPU 容器服務所使用之 GPU 皆為 NVIDIA V100 32GB，具有強大之計算能力。使用 gpu-burn 所測試之結果為 13198 Gflop/s。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cefd6041539673437d78918f9f444ed6.png)
 
@@ -70,7 +70,7 @@ GPGPU 容器服務所使用之 GPU 皆為 NVIDIA V100 32GB，具有強大之計�
 
 a. 容器使用者界面監控：GPU用量、記憶體使用量
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9a29a96a492454be4ca3d6c6cea23ac9.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4e2d1540341ff81fef49dad87774f4c3.png)
 
 b. 容器 Jupyter Notebook 之 Terminal 內：執行以下程式，可監控 GPU 溫度及電量
 
@@ -78,8 +78,8 @@ b. 容器 Jupyter Notebook 之 Terminal 內：執行以下程式，可監控 GPU
 nvidia-smi
 ```
 
-`GPU數量` 以編號0遞增顯示，下圖範例為1顆GPU<br/>
-`GPU溫度` 以攝氏溫度呈現，下圖範例為31度C<br/>
-`GPU電量` 以瓦數方式程式，下圖範例為43W<br/>
+`GPU數量` 以編號 0 遞增顯示，下圖範例為 1 顆 GPU<br/>
+`GPU溫度` 以攝氏溫度呈現，下圖範例為 31 度 C<br/>
+`GPU電量` 以瓦數呈現，下圖範例為 43W<br/>
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_412e74892656a239328ed35fea78c191.png)

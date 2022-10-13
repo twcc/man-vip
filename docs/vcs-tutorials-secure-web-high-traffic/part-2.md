@@ -66,7 +66,7 @@ sudo certbot --nginx -d <Domain_Name>
 ### Step 3. 將憑證轉檔為 Base64 格式
 
 目前 TWCC SSL 憑證僅支援 PKCS #12 及 Base64 編碼格式，請輸入以下指令轉碼為 Base64 格式，
-詳細內容可參考「[**轉換 SSL 憑證格式**](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowo-lb-convert-cert-zh)」。
+詳細內容可參考「[**轉換 SSL 憑證格式**](../vcs/tutorials/convert-ssl-certificate.md)」。
 
 ```bash
 sudo su
@@ -90,7 +90,7 @@ cat  twcc_ssl_base64.txt
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5eee9d1a0ac7f56dd9697cf908b749bb.png)
    
-- 貼上 [Step 7](#Step-7-將憑證轉檔為-Base64-格式) 複製的 base64 檔內容
+- 貼上 [Step 3](#step-3-將憑證轉檔為-base64-格式) 複製的 base64 檔內容
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7521063385f95debc7b6b62da2b87f0e.png)
 

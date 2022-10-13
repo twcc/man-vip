@@ -42,7 +42,7 @@ TWCC 會在上傳檔案至雲端物件儲存空間時，為您的檔案進行加
 
 ### 加密上傳
 
-步驟同 [<ins>上傳檔案</ins>](https://man.twcc.ai/@twccdocs/guide-cos-upload-download-files-zh#%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88)，上傳前請先勾選 「**加密**」再點選 「**上傳**」，即可將檔案加密。
+步驟同 [<ins>上傳檔案</ins>](upload-download-files-create-folders.md#上傳檔案)，上傳前請先勾選 「**加密**」再點選 「**上傳**」，即可將檔案加密。
 
 ![](https://i.imgur.com/fCSF7DS.png)
 
@@ -64,7 +64,7 @@ TWCC 會在上傳檔案至雲端物件儲存空間時，為您的檔案進行加
 ### 準備工作
 
 
-請先[<ins>下載 S3 browser、完成連線 TWCC 雲端物件儲存、建立儲存體</ins>](https://man.twcc.ai/@twccdocs/guide-cos-s3browser-zh)，並取得<a href="#加密金鑰-ID"><ins>加密金鑰 ID</ins></a>
+請先[<ins>下載 S3 browser、完成連線 TWCC 雲端物件儲存、建立儲存體</ins>](../manage-with-clients/s3-browser.md)，並取得[加密金鑰 ID](#加密金鑰-id)
 
 
 
@@ -105,7 +105,7 @@ TWCC 會在上傳檔案至雲端物件儲存空間時，為您的檔案進行加
 
 :::info
 - 本文以 S3 browser 為範例 Client 端軟體，您可以自行選用其他軟體。
-- 更多 S3 browser 使用雲端物件儲存的教學，可參考 [<ins>使用 S3 browser 管理檔案</ins>](https://man.twcc.ai/@twccdocs/guide-cos-s3browser-zh)
+- 更多 S3 browser 使用雲端物件儲存的教學，可參考 [<ins>使用 S3 browser 管理檔案</ins>](../manage-with-clients/s3-browser.md#儲存體檔案管理)
 :::
 
   </TabItem>

@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 # 建立虛擬運算個體
 
-您可以系統預設資訊以簡單步驟完成建立虛擬運算個體，或是依需求選擇適合的個體型號。完整虛擬運算個體型號 (含資源數量與其他資源大小)，請參考[價目表](https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#虛擬運算服務-Virtual-Compute-Service-VCS)。
+您可以系統預設資訊以簡單步驟完成建立虛擬運算個體，或是依需求選擇適合的個體型號。完整虛擬運算個體型號 (含資源數量與其他資源大小)，請參考[價目表](/docs/pricing.mdx#虛擬運算服務-virtual-compute-service-vcs)。
 
 
 <details>
@@ -41,7 +41,7 @@ import TabItem from '@theme/TabItem';
 
 除 Windows 10 (BYOL) 未提供、Windows Server 提供附帶授權版本，上述映像檔皆有提供。
 
-- 個體規格請參考 [TWCC 價目表 (TWS 用戶)](https://man.twcc.ai/@twsdocs/pricing-zh#%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Virtual-Compute-Service-VCS)
+- 個體規格請參考 [TWCC 價目表 (TWS 用戶)](/docs/pricing.mdx#虛擬運算服務-virtual-compute-service-vcs)
 
 </details>
 
@@ -50,9 +50,9 @@ import TabItem from '@theme/TabItem';
 
 ## 開始之前
 
-- 若尚未註冊使用帳號，請先[註冊 TWCC](https://www.twcc.ai/)。
+- 若尚未註冊使用帳號，請先[註冊 TWS / TWCC 帳號](/docs/member/user-guides/member-key-quota/sign-up-for-twcc)。
 - 若選擇使用 TWCC 入口網站操作，請先登入 [TWCC 入口網站](https://www.twcc.ai/)。
-- 若選擇使用 TWCC CLI 操作，請先[安裝 TWCC CLI](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-install-linux-zh)、並[登入](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-signin-zh)。
+- 若選擇使用 TWCC CLI 操作，請先[安裝 TWCC CLI](https://github.com/twcc/TWCC-CLI)、並[登入](https://github.com/twcc/TWCC-CLI)。
 
 <br/>
 
@@ -99,13 +99,13 @@ import TabItem from '@theme/TabItem';
 
 
 * 在網路設定頁面，可使用系統預設的 default_network 或自訂的虛擬網路。
-* **預設為不配置公用 IP**。若需從虛擬網路外部連線個體，請您點選「**自動配置浮動 IP**」或 「**配置靜態 IP**」，並建議使用[<ins>安全性群組</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-sg-zh)保護個體安全與降低資安風險。使用細節請參考[<ins>彈性 IP</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-sg-zh)。
+* **預設為不配置公用 IP**。若需從虛擬網路外部連線個體，請您點選「**自動配置浮動 IP**」或 「**配置靜態 IP**」，並建議使用[安全性群組](../security/security-group.md)保護個體安全與降低資安風險。使用細節請參考[彈性 IP](../networking/elastic-ip.md)。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a578c6a3945fc9b14c72cc33dc30d387.png)
 
 
 :::info
-1. 首次使用請先建立預設虛擬網路 (default network)，操作步驟請參考：[<ins>HowTo：建立預設虛擬網路</ins>](https://man.twcc.ai/@twccdocs/howto-vnw-create-default-network-zh)。若有自訂虛擬網路之需求，請參考：[<ins>建立自訂虛擬網路</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-vnw-zh)。
+1. 首次使用請先建立預設虛擬網路 (default network)，操作步驟請參考：[<ins>建立預設虛擬網路</ins>](../../tutorials/create-default-network.md)。若有自訂虛擬網路之需求，請參考：[<ins>建立自訂虛擬網路</ins>](../networking/virtual-network.md#建立自訂虛擬網路)。
 2. 建立虛擬網路僅限由「**租戶管理者**」操作，因此若您身份為「**租戶使用者**」，請您聯繫所屬計畫之「**租戶管理者**」協助操作。
 :::
 
@@ -114,9 +114,9 @@ import TabItem from '@theme/TabItem';
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d9dafe55ac87c92b4b0c06678699c836.png)
 
 :::caution
-- [<ins>Auto Scaling</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-auto-sacling-zh) 會依據所連結虛擬運算個體建立時的設定而新增個體，因此：
-    - 若 Auto Scaling 自動新增的個體<ins>**需要**</ins>自動連結新資料磁碟，請您在 **[<ins>建立個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh) 時**，一併建立資料磁碟。
-    - 反之，若 Auto Scaling 自動新增個體<ins>**不需要**</ins>自動連結新資料磁碟，則請您在 **[<ins>建立個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh) 後**，[<ins>另建資料磁碟</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-vds-create-data-disk-zh)，再[<ins>連結至個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-vds-manage-disk-zh#%E9%80%A3%E7%B5%90%E8%87%B3%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)。
+- [<ins>Auto Scaling</ins>](../networking/auto-scaling.md) 會依據所連結虛擬運算個體建立時的設定而新增個體，因此：
+    - 若 Auto Scaling 自動新增的個體<ins>**需要**</ins>自動連結新資料磁碟，請您在 **[<ins>建立個體</ins>](./create-instances.md) 時**，一併建立資料磁碟。
+    - 反之，若 Auto Scaling 自動新增個體<ins>**不需要**</ins>自動連結新資料磁碟，則請您在 **[<ins>建立個體</ins>](./create-instances.md) 後**，[<ins>另建資料磁碟</ins>](../storage/create-data-disks.md)，再[<ins>連結至個體</ins>](../storage/view-attach-delete-disks.md#連結至虛擬運算個體)。
 :::
 
 <!-- :::info
@@ -147,17 +147,17 @@ import TabItem from '@theme/TabItem';
 
 
 :::caution
-TWCC 不負責紀錄及管理您的鑰匙對，請務必下載並妥善保存此鑰匙對 `pem` 檔案，若沒有此鑰匙對，您將無法[<ins>連線虛擬運算個體</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh)。
+TWCC 不負責紀錄及管理您的鑰匙對，請務必下載並妥善保存此鑰匙對 `pem` 檔案，若沒有此鑰匙對，您將無法[<ins>連線虛擬運算個體</ins>](../connecting/linux/from-windows.md)。
 :::
 
 
-* 接著點擊「**下一步：環境變數>**」，可設定符合您需求的環境變數，詳細說明與設定範例請參考 [<ins>HowTo：設定環境變數</ins>](https://man.twcc.ai/@twccdocs/howto-ccs-vcs-setup-env-variable-zh)。
+* 接著點擊「**下一步：環境變數>**」，可設定符合您需求的環境變數，詳細說明與設定範例請參考[設定環境變數](../../tutorials/set-environment-variables.md)。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2ffe89808b9c161fabc71302d825392a.png)
 
 
 
-* 接著點擊「**下一步：檢閱 + 建立>**」，檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態變成 **`Ready`** 後即可開始[<ins>連線</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh)使用。
+* 接著點擊「**下一步：檢閱 + 建立>**」，檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態變成 **`Ready`** 後即可開始[連線](../connecting/linux/from-windows.md)使用。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9b35befff1c8ee37bdf68d147362453a.png)
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0627e4962946edeb20fa029eb2b7c4e7.png)
@@ -168,7 +168,7 @@ TWCC 不負責紀錄及管理您的鑰匙對，請務必下載並妥善保存此
 
 **指令**
 
-**Step 1.** 請先[<ins>建立鑰匙對</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-keypair-zh)
+**Step 1.** 請先[建立鑰匙對](../keypairs.md#建立鑰匙對)
 
 **Step 2.** 建立虛擬運算個體個體
 
@@ -215,9 +215,10 @@ twccli ls vcs -ptype    # 檢視所有產品型號與規格
 </TabItem>
 </Tabs>
 
+<br/>
 
 
-### 建立 <i class="fa fa-windows" aria-hidden="true"></i>  Windows 個體
+### 建立 <i class="fa fa-windows" aria-hidden="true"></i> Windows 個體
 
 <Tabs>
 <TabItem value="TWCC 入口網站" label="TWCC 入口網站">
@@ -238,31 +239,26 @@ twccli ls vcs -ptype    # 檢視所有產品型號與規格
 
 ![](https://i.imgur.com/cMrtu8H.png)
 
-
-
 :::tip
 首次選用後，映像檔會記錄儲存於「**最近使用**」區塊，加快您下次選用的速度。(清除瀏覽器歷史紀錄將會重新記錄)
 :::
-
 
 * 在基本資訊頁面填寫虛擬運算個體的名稱及描述，選擇映像檔的版本及所需的硬體規格，包含 CPU 數量、記憶體容量、儲存容量及額度的不同組合，並選擇「**開啟**」或「**關閉**」刪除保護機制。完成後，接著點擊 **「下一步：網路>」**。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_216c514eea0c60727feeaf582124d7b4.png)
 
-
 :::info
 開啟刪除保護機制，在您刪除資源之前，需先關閉保護機制後才能繼續進行刪除步驟，可防止資源誤刪，導致務中斷。
 :::
 
-
 * 在網路設定頁面，可使用系統預設的 default_network 或自訂的虛擬網路。
-* **預設為不配置公用 IP**。若需從虛擬網路外部連線個體，請您點選「**自動配置浮動 IP**」或 「**配置靜態 IP**」，並建議使用[<ins>安全性群組</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-sg-zh)保護個體安全與降低資安風險。使用細節請參考[<ins>彈性 IP</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-sg-zh)。
+* **預設為不配置公用 IP**。若需從虛擬網路外部連線個體，請您點選「**自動配置浮動 IP**」或 「**配置靜態 IP**」，並建議使用[安全性群組](../security/security-group.md)保護個體安全與降低資安風險。使用細節請參考[彈性 IP](../networking/elastic-ip.md)。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_08a7761f2c23a738ba28b5169ea7d781.png)
 
 
 :::info
-1. 首次使用請先建立預設虛擬網路 (default network)，操作步驟請參考：[<ins>HowTo：建立預設虛擬網路</ins>](https://man.twcc.ai/@twccdocs/howto-vnw-create-default-network-zh)。若有自訂虛擬網路之需求，請參考：[<ins>建立自訂虛擬網路</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-vnw-zh)。
+1. 首次使用請先建立預設虛擬網路 (default network)，操作步驟請參考：[建立預設虛擬網路](../../tutorials/create-default-network.md)。若有自訂虛擬網路之需求，請參考：[建立自訂虛擬網路](../networking/virtual-network.md#建立自訂虛擬網路)。
 2. 建立虛擬網路僅限由「**租戶管理者**」操作，因此若您身份為「**租戶使用者**」，請您聯繫所屬計畫之「**租戶管理者**」協助操作。
 :::
 
@@ -271,9 +267,9 @@ twccli ls vcs -ptype    # 檢視所有產品型號與規格
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_184b6aaa90135456196d14a9d016539f.png)
 
 :::caution
-- [<ins>Auto Scaling</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-auto-sacling-zh) 會依據所連結虛擬運算個體建立時的設定而新增個體，因此：
-    - 若 Auto Scaling 自動新增的個體<ins>**需要**</ins>自動連結新資料磁碟，請您在 **[<ins>建立個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh) 時**，一併建立資料磁碟。
-    - 反之，若 Auto Scaling 自動新增個體<ins>**不需要**</ins>自動連結新資料磁碟，則請您在 **[<ins>建立個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh) 後**，[<ins>另建資料磁碟</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-vds-create-data-disk-zh)，再[<ins>連結至個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-vds-manage-disk-zh#%E9%80%A3%E7%B5%90%E8%87%B3%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)。
+- [<ins>Auto Scaling</ins>](../networking/auto-scaling.md) 會依據所連結虛擬運算個體建立時的設定而新增個體，因此：
+    - 若 Auto Scaling 自動新增的個體<ins>**需要**</ins>自動連結新資料磁碟，請您在 **[<ins>建立個體</ins>](./create-instances.md) 時**，一併建立資料磁碟。
+    - 反之，若 Auto Scaling 自動新增個體<ins>**不需要**</ins>自動連結新資料磁碟，則請您在 **[<ins>建立個體</ins>](./create-instances.md) 後**，[<ins>另建資料磁碟</ins>](../storage/create-data-disks.md)，再[<ins>連結至個體</ins>](../storage/view-attach-delete-disks.md#連結至虛擬運算個體)。
 :::
 
 <!-- :::info
@@ -293,10 +289,16 @@ twccli ls vcs -ptype    # 檢視所有產品型號與規格
 :::
 
 
-* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後，等個體狀態變成 **`Ready`** 後，再等候一些時間即可開始[<ins>連線</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-windows-zh)使用。
+* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後，等個體狀態變成 **`Ready`** 後，再等候一些時間即可開始[連線](../connecting/windows/from-windows.md)使用。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a18e03678c8f5b6aab82049ae19cb021.png)
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_16b71ba4b7fafa65b9a4d60f56bf975c.png)
+
+</TabItem>
+
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
+
+<br/>
 
 </TabItem>
 
@@ -306,7 +308,7 @@ twccli ls vcs -ptype    # 檢視所有產品型號與規格
 
 :::info
 - 虛擬運算個體建立後，外掛**資料磁碟**需經初始化才能使用，步驟請參考：
-    - [<ins>HowTo：初始化磁碟- Linux 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-zh)
-    - [<ins>HowTo：初始化磁碟- Windows 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-zh)
+    - [<ins>初始化磁碟 - Linux 個體</ins>](../../tutorials/data-disk-init-linux.md)
+    - [<ins>初始化磁碟 - Windows 個體</ins>](../../tutorials/data-disk-init-windows.md)
 - 同一用戶一分鐘內僅能執行各 10 次建立、刪除虛擬運算個體。
 :::
