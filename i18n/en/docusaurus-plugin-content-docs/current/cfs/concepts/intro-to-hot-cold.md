@@ -17,13 +17,13 @@ Please refer to the feature description below to select your storage.
 
 | Storage | Feature |Pricing |Suggested Usage |
 | -------- | -------- | -------- | -------- |
-| Hot storage     | Access to files directly  | Higher unit price  | High frequency access file     |
-| Cold storage     | Files should copy from Cold Storage to Cold Data Download area, and then download to edit the file.  | Lower unit price  | Low frequency access file or archive file     |
+| Hot storage     | Access to files directly and edit  | Higher unit price  | High frequency access file     |
+| Cold storage     | Files should copy from Cold Storage to Cold Data Download area, and then download to edit the file  | Lower unit price  | Low frequency access file or archive file     |
 
 
 :::info
 - **File Storage Management** and **Access Interface Management** on TWCC are only eligible to **Hot Storage** data. Data in **Cold Storage** only provided with Cold Data download feature and no other file management service.
-- Files need to be uploaded to **Hot Storage** first, and then ++[transfer file](#File-Transfer)++ to cold storage.
+- Files need to be uploaded to **Hot Storage** first, and then <ins>[transfer file](#File-Transfer)</ins> to cold storage.
 :::
 
 

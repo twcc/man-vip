@@ -10,14 +10,14 @@ import TabItem from '@theme/TabItem';
 # 建立、刪除儲存體
 
 :::tip
-以下操作方式僅限計畫之 [「<ins>**公共空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/%2F%40TWSC%2Fcos-overview-zh) 適用， [「<ins>**私有空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/%2F%40TWSC%2Fcos-overview-zh) 之檔案管理請透過 [<ins>**第三方軟體**</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40TWSC%2Fguide-cos-connect-info-zh) 操作。
+以下操作方式僅限計畫之 [「<ins>**公共空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](../../overview.md) 適用， [「<ins>**私有空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](../../overview.md) 之檔案管理請透過 [<ins>**第三方軟體**</ins>](../../../category/使用第三方軟體管理檔案) 操作。
 :::
 
 ## 開始之前
 
 - 若尚未註冊使用帳號，請先[註冊 TWCC](https://www.twcc.ai/)。
 - 若選擇使用 TWCC 入口網站操作，請先登入 [TWCC 入口網站](https://www.twcc.ai/)。
-- 若選擇使用 TWCC CLI 操作，請先[安裝 TWCC CLI](https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-2-%E5%AE%89%E8%A3%9DTWCC-CLI)[target=_blank] 、並[登入](https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-3-%E9%80%B2%E5%85%A5-TWCC_CLI-%E7%92%B0%E5%A2%83%E4%B8%A6%E9%96%8B%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8B%99)[target=_blank]。
+- 若選擇使用 TWCC CLI 操作，請先<a href="https://github.com/twcc/TWCC-CLI" target="_blank"><ins>安裝 TWCC CLI</ins></a>、並<a href="https://github.com/twcc/TWCC-CLI" target="_blank"><ins>登入</ins></a>。
 
 
 ## 建立儲存體

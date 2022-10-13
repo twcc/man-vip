@@ -7,7 +7,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-twnia2-conda
 # Use Conda to manage packages and submit jobs
 
 
-In this document, we will introduce the package management tool in TWCC TAIWANIA 2 (HPC CLI) - [Miniconda](https://docs.conda.io/en/latest/miniconda.html), and demonstrate how to use Conda to create a virtual environment, install packages, and submit jobs.
+In this document, we will introduce the package management tool in TWCC TWNIA2 (HPC CLI), [Miniconda](https://docs.conda.io/en/latest/miniconda.html), and demonstrate how to use Conda to create a virtual environment, install packages and submit jobs.
 
 <br/>
 
@@ -23,7 +23,7 @@ Miniconda is a solution to package compatibility issues that you can run simple 
 
 ## The update plan
 
-Conda, the package manager, recently [has fixed bugs frequently](https://docs.conda.io/projects/conda/en/latest/release-notes.html) and updated significantly to improve the user experience.
+Due to the [frequent bugs fixed](https://docs.conda.io/projects/conda/en/latest/release-notes.html) of the package management tool Conda, the recent fixes have significantly improved the experience.
 
 To boost the releases with new features for TWCC users, we have removed Anaconda and will continue to update Miniconda (minimal installer for Conda).
 
@@ -38,13 +38,13 @@ You may install Anaconda under your own `/home/$USER`  or `/work/$USER` director
 
 Generally, we use the `conda init` command to set the environment in Anaconda and Miniconda, and Conda will change the user's `~/.bashrc` and add the following content.
 
-
 ```bash
 # >>> conda initialize >>>
 ...
 ...
 # <<< conda initialize <<<
 ```
+
 For those who are new to Linux or Conda, it is not a friendly design. When Conda is no longer used, the Conda parameters forgotten to be removed in `~/.bashrc` might cause other operational issues.
 
 Therefore, TWCC rewrite the modulefile. When using `module load miniconda2` or `module load miniconda3`, the above parameters will be automatically activated; when `module purge`, these environment variables will be automatically removed. In this way, the mechanism can prevent Conda from changing the `~/.bashrc`, and provide users a simple environment to run Conda properly.
@@ -52,11 +52,11 @@ Therefore, TWCC rewrite the modulefile. When using `module load miniconda2` or `
 <br/>
 
 
-## How to use Miniconda ? 
+## How to use Miniconda?
 
 - Use the `module load miniconda2` / `module load miniconda3` command to load the conda environment.
 - Use the `module purge` command to uninstall the conda environment.
-- Due to [the reasons mentioned above](#Redesign-modulefile), we recommended you **remove** the conda initialized contents before use (the remove command `conda init --reverse`).
+- Due to [the reasons mentioned above](#Redesign-modulefile), we recommended you **remove** the conda initialized contents before using (the remove command `conda init --reverse`).
 
 
 :::info
@@ -82,6 +82,7 @@ Here is an example of using Conda to create a virtual environment, install Tenso
 
 
 ### Step 1. Load Conda and create a virtual environment
+
 ```bash
 # Clear the module to make sure that the environment is clean
 module purge
@@ -125,6 +126,7 @@ conda remove --name mytf_gpu --all
 
 
 #### Unload Conda
+
 ```bash
 # Uninstall all loaded modules
 module purge
@@ -154,10 +156,10 @@ rm -rf ~/.condarc ~/.conda ~/.continuum
 
 ### Step 2. Slurm job script with Conda
 
-Once the Conda environment program and are ready, please follow the steps to write a job script using Slurm to request resources, schedule job with queues, and submit jobs according to your needs.
+Once the Conda environment program and are ready, please follow the steps below to write a job script using Slurm to request resources, schedule job with queues, and submit jobs according to your needs.
 
 
-The `.sh` file is the job script will be submitted by Slurm, the content is divided into two parts:
+The `.sh` file is the job script that will be submitted by Slurm, the content is divided into two parts:
 
 1. **Information of Job, project and resources**: job name, number of nodes, number of jobs running per node, number of GPUs per node, maximum job running time, project ID, and queue name.
 3. **The tasks to be executed in the job**
@@ -178,6 +180,7 @@ You may write `.sh`  files using the editor you're used to. We use vim in this e
 :::
 
 - TensorFlow 2 with 1 node / 8GPUs
+
 ```bash
 #!/bin/bash
 #SBATCH --job-name=Hello_TWCC    ## job name
@@ -198,7 +201,6 @@ conda activate mytf_gpu
 python $(your command) 
 ```
 
-
 :::info
 1. You can add an email to get the job state notification to the script header:
     ```bash
@@ -206,8 +208,8 @@ python $(your command)
     #SBATCH --mail-user=$Your_email
     ```
 2. The ratio of the requested resources will be based on the number of GPUs you assign, and will be allocated based on the ratio of 1 GPU: 4 CPU: 90 GB Memory. For examples,
-    > Request 1 GPU, you will get 4 CPU cores and 90 GB Memory automatically allocated.
-      Request 8 GPUs, you will get 32 CPU cores and 720 GB Memory automatically allocated.
+    > Request 1 GPU, you will get 4 CPU cores and 90 GB Memory automatically allocated.<br/>
+    > Request 8 GPUs, you will get 32 CPU cores and 720 GB Memory automatically allocated.
 3. For more information about queue, please refer to [<ins>Usage instructions of queue and computing resources</ins>](https://www.twcc.ai/doc?page=hpc_cli#4-Queue-%E8%88%87%E8%A8%88%E7%AE%97%E8%B3%87%E6%BA%90%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E).
 :::
 
@@ -221,7 +223,7 @@ sbatch <FILE_NAME>.sh
 ```
 
 :::info
-After submitting, you will see the assigned Job ID.
+After submitting, you will see the job ID assigned by the system.
 :::
 
 <br/>
@@ -236,11 +238,10 @@ tail -f slurm_<JOB_ID>.out
 ```
 
 :::info
-For more commonly used commands, see [<ins>Slurm commands</ins>](https://www.twcc.ai/doc?page=hpc_cli#6-Slurm%E6%8C%87%E4%BB%A4):
-1. Use`squeue -u $USER` to view the running job.
+For more commonly used commands, please refer to [<ins>Slurm commands</ins>](https://www.twcc.ai/doc?page=hpc_cli#6-Slurm%E6%8C%87%E4%BB%A4):
+1. Use `squeue -u $USER` to view the running job.
 2. Use `sacct -X`to check today's running job and state to make sure whether it is still running or has already finished.
 :::
-
 
 - For canceling the running job, run the command:
 

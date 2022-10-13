@@ -82,7 +82,7 @@ vim /etc/nginx/sites-available/default
 
 
 - When done, press <kbd>Esc</kbd> key to exit edit mode and enter `:wq!` command and press  <kbd>Enter</kbd> key to save and exit.
-- Please repeat **Step 2 to create a SSL certificate for website service2..**
+- Please repeat **Step 2 to create a SSL certificate for website service2.**
 
 
 :::info

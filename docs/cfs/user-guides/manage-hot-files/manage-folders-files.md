@@ -56,9 +56,10 @@ import TabItem from '@theme/TabItem';
 
 - 檔案上傳限制：單一檔案不得超過 1GB，總檔案數不得超過 1000。
 - 請參考[<ins>版本紀錄</ins>](metadata-search-versioning.md#版本紀錄)了解檔案紀錄說明。
-:::
 
 ## 檢視檔案
+
+
 
 
 
@@ -80,7 +81,9 @@ import TabItem from '@theme/TabItem';
 
 :::info
 - 目前透過 TWCC 入口網站一次僅能下載一個檔案，如欲下載多個檔案，可透過左側功能列之 <ins>[「**存取介面管理**」](https://man.twcc.ai/@twccdocs/guide-cfs-access-interface-mngmnt-zh)</ins> 透過第三方軟體下載。
+
 - 請參考[<ins>版本紀錄</ins>](metadata-search-versioning.md#版本紀錄)了解如何取用舊檔案。
+
 :::
 
 
@@ -90,7 +93,9 @@ import TabItem from '@theme/TabItem';
 * 勾選欲删除的檔案，再點選上方的「**刪除**」按鈕，亦可勾選多個檔案一起删除。
 
 :::info
+
 正在 <ins>[搬移](../move-files/move-retrieve-files.md)</ins> 的檔案無法删除。
+
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7eb3cf9fc746f920cc951934310272d8.png)

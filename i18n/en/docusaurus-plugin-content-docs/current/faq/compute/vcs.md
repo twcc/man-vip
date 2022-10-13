@@ -20,7 +20,7 @@ Third-party open source software such as MobaXterm, PuTTY and VSCode can be used
 
 <summary> Q2. I want to set up web services using VCS instance, but why can't I connect to the instance?</summary>
 
-Please check whether the instance's security group or firewall rules block the connection. For related documents, see:
+Please check whether the instance's security group or firewall rules block the connection. For related documents, refer to:
 
 - [Security Group](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-sg-en)
 - [Basic Virtual Firewall](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-vnf-en)
@@ -81,7 +81,7 @@ If you still have a slow connection after the modification, please contact the T
 
 <summary> Q6. How to connect to the Linux instance using account and password?</summary>
 
-See [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-vcs-create-usr-linux-en) to connect to the Linux instance using the account and password, which is a solution to losing key pairs or damaging files.
+Refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-vcs-create-usr-linux-en) to connect to the Linux instance using the account and password, which is a solution to losing key pairs or damaging files.
 
 </details>
 
@@ -93,19 +93,36 @@ Q7. When connecting to the VCS instance using SSH, the error ```WARNING: REMOTE 
 
 </summary>
 
-The reason for this error is that the certificate stored on the local computer is different from the VCS instance. Therefore, you can avoid this error by deleting the certificate information of the local computer and regenerating it when connecting to the instance. See the following command:
+The reason for this error is that the certificate stored on the local computer is different from the VCS instance. Therefore, you can avoid this error by deleting the certificate information of the local computer and regenerating it when connecting to the instance. Refer to the following command:
 
 
 ```
 ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "Public IP"
 ```
 
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> <b>Note：</b>
 
 `Your_Path` is the path of your local computer, and the following message will appear when you connect again:
 
 
 ```Are you sure you want to continue connecting (yes/no)? ```
 Enter ```Yes``` to connect and generate a new certificate.
+
+</details>
+
+<details>
+
+<summary> Q8. How to deal with macOS computers that can't connect to Linux devices?</summary>
+
+Please go to the **VCS Instance Details** page , click the "**Connect**" button, and follow the instructions provided in the window to set the key pair access rights and SSH connection instance.
+
+</details>
+
+<details>
+
+<summary> Q9. Is there a default password when I use Console to connect to a VCS instance?</summary>
+
+There is no default password, you need to create a separate password before using Console to connect to the Linux instance, for Windows instances just enter the password you set when you created the instance, refer to [Quick debugging and maintenance tools:TWCC VCS console](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-debug-tool-console-zh#Step-3-%E8%BC%B8%E5%85%A5%E9%80%A3%E7%B7%9A%E8%B3%87%E8%A8%8A%EF%BC%8C%E5%AE%8C%E6%88%90%E9%80%A3%E7%B7%9A)。
 
 </details>
 
@@ -163,8 +180,23 @@ The instance will be billed in the ```Starting``` state if it is started from th
 <summary> Q5. In what state will the VCS instance not be billed?</summary>
 
 The VCS instance will not be billed in the ```Queueing```, ```Stopped``` and ```Error``` states, and it will be billed in other states.
-Whether the VCS instance in the ```Starting``` state be billed or not depends on the usage scenario. For detailed explanation, please see Q4.
+Whether the VCS instance in the ```Starting``` state be billed or not depends on the usage scenario. For detailed explanation, please refer to Q4.
 
+</details>
+
+<details>
+
+<summary>
+
+Q6. How to solve the error message ```440301: The request exceeded the quotas of ['floating_ip']``` when creating a VCS instance?
+
+</summary>
+
+The reason for this error message is that the number of floating ip's has reached the limit of the project, you can refer to the following practices.
+1. After deleting the floating IPs that the VCS instance does not need to use for now(the status of the instance is `ready` before it can be deleted), then select Create again.
+2. Floating IPs are released back into the pool after you stop or delete the instance and cannot be reclaimed. If you are using a fixed IP, we recommend that you subscribe and use a static IP.
+3. If you have special needs, please contact our customer service.
+     
 </details>
 
 <div style={{height:10+'px'}}></div>
@@ -176,7 +208,7 @@ Whether the VCS instance in the ```Starting``` state be billed or not depends on
 
 <summary> Q1. How to adjust the configurations of the created VCS instance?</summary>
 
-If the configurations do not meet your requirements after creation and need to be adjusted to a smaller or larger instance, see [<ins>HowTo: Resize VCS instances</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-vcs-resize-instance-en).
+If the configurations do not meet your requirements after creation and need to be adjusted to a smaller or larger instance, refer to [<ins>HowTo: Resize VCS instances</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-vcs-resize-instance-en).
 
 </details>
 
@@ -243,7 +275,7 @@ Q2. When installing packages or updating the VCS instance, it shows `E: Could no
 
 <summary> Q1. Can Cloud Object Storage (COS) be mounted on VCS instances?</summary>
 
-Yes, COS can be mounted on VCS instances. You have the full permission of the instance, so you can perform any operations on the instance. To mount COS using s3fs or related packages, see [<ins>s3fs-fuse</ins>](https://github.com/s3fs-fuse/s3fs-fuse).
+Yes, COS can be mounted on VCS instances. You have the full permission of the instance, so you can perform any operations on the instance. To mount COS using s3fs or related packages, refer to [<ins>s3fs-fuse</ins>](https://github.com/s3fs-fuse/s3fs-fuse).
 
 </details>
 
@@ -252,8 +284,8 @@ Yes, COS can be mounted on VCS instances. You have the full permission of the in
 <summary> Q2. How to regularly back up VCS instance data to Cloud Object Storage (COS)?</summary>
 
 Use TWCC-CLI and `crontab -e` to set up scheduled regular image creation.
-- For details on using TWCC-CLI, see [<ins>4-3. Upload files to bucket</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-3-%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88%E8%87%B3%E5%84%B2%E5%AD%98%E9%AB%94).
-- For details on using `crontab -e`, see [<ins>crontab guru</ins>](https://crontab.guru/) or [<ins>crontab(5) - Linux man page</ins>](https://linux.die.net/man/5/crontab).
+- For details on using TWCC-CLI, refer to [<ins>4-3. Upload files to bucket</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-3-%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88%E8%87%B3%E5%84%B2%E5%AD%98%E9%AB%94).
+- For details on using `crontab -e`, refer to [<ins>crontab guru</ins>](https://crontab.guru/) or [<ins>crontab(5) - Linux man page</ins>](https://linux.die.net/man/5/crontab).
 
 </details>
 
@@ -295,6 +327,51 @@ There are 2 methods you can use to upload your local data to the VCS instance:
 
 ## Network & Security
 
+### Elastic IP
+
+<details>
+
+<summary>
+
+Q1. Can I retrieve the public IP used by the VCS instance before it was `stopped` ?
+ 
+</summary>
+
+After you stop the VCS instance, the floating IP will be released back to the resource pool and a new floating IP will be available after the individual starts.
+
+If your usage scenario applies to fixed IPs, it is recommended that you subscribe and use static IPs. Please refer to [Elastic IP](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-eip-zh) to learn more.
+
+</details>
+
+<details>
+
+<summary> Q2. Is it impossible to create a VCS instance after the number of default IPs available to the project has been exhausted?</summary>
+
+You can continue to create VCS instances after the floating IP quota is used up, but you cannot configure floating IPs.If you need additional IPs, please subscribe for static IP. If you have special needs, please contact our customer service.
+
+Please refer to [Elastic IP Subscription Policy](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-eip-zh#%E5%BD%88%E6%80%A7-IP-%E8%A8%82%E9%96%B1%E6%94%BF%E7%AD%96) to learn more.
+
+</details>
+
+<details>
+
+<summary> Q3. Why can't I subscribe to a static IP?</summary>
+
+Please check your user status first. Only the **Tenant Administrator** can subscribe to static IPs and stop subscriptions in the project.
+If you have confirmed your administrator status and are still unable to subscribe, please contact Customer Service.
+
+</details>
+
+<details>
+
+<summary> Q4. If I want to convert a floating IP bound to DNS to a static IP, is there a transition period for the conversion?</summary>
+
+If the server (VCS instance) is hosting only one external service, you can first hook up a scheduled static IP to the load balancer and then forward the traffic from the load balancer to the back-end service server. After the DNS IP conversion is complete, then the static IP is hooked up to the server.
+
+</details>
+
+<div style={{height:10+'px'}}></div>
+
 ### Virtual network
 
 <details>
@@ -314,6 +391,31 @@ For Basic Virtual Firewall (BVF) configurations, refer to [<ins>this document</i
 - The default open ports of Linux instance: 22、443
 - The default open ports of Wondows instance: 22、443、9833
 - You may open an additional port by setting the security group, please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-sg-en).
+
+</details>
+
+<details>
+
+<summary>
+
+ Q3. How to solve the error message ```440301: The request exceeded the quotas of ['floating_ip']``` when creating a VCS instance?
+ 
+</summary>
+
+
+The reason for this error message is that the number of floating ip's has reached the limit of the project, you can refer to the following practices.
+1. After deleting the floating IPs that the VCS instance does not need to use for now(the status of the instance is `ready` before it can be deleted), then select Create again.
+2. If you have special needs, please contact our customer service.
+
+</details>
+
+<details>
+
+<summary> Q4. Is there a limit to the speed of the network?</summary>
+
+TWCC does not limit the speed of the network within the virtual computing entity. If you find that your transfer speeds are slow, we recommend that you take the following steps:
+1. Using the Network Speed Tool (e.g. [Speedtest](https://www.speedtest.net/)), then send the test results to the technical support email (isupport@twcc.ai) and we will determine if the speed is abnormal based on the information you provide.
+2. Confirm that the network speed of the source is not limited.
 
 </details>
 
@@ -353,7 +455,7 @@ The image creation takes about 10-15 minutes.
 
 <summary> Q2. How to shorten the image creation time?</summary>
 
-If data transmitting while creating the image, the backup might be inconsistent, and the data might be saved incompletely; moreover, the backup process is longer than usual. Therefore, we suggest you shut down the instance manually (`$ sudo shutdown`) and make sure the data has been written into the virtual disks before creating an image.
+If data transmitting while creating the image, the backup might be inconsistent, and the data might be saved incompletely; moreover, the backup process is longer than usual. Therefore, we suggest you shut down the instance manually (`sudo shutdown`) and make sure the data has been written into the virtual disks before creating an image.
 
 </details>
 
@@ -362,7 +464,35 @@ If data transmitting while creating the image, the backup might be inconsistent,
 <summary> Q3. How to automate the VCS image creation?</summary>
 
 Use TWCC-CLI and `crontab -e` to set up scheduled regular image creation.
-- For details on using TWCC-CLI, see [<ins>3-6. VCS instance image</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#3-6-%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94%E5%BF%AB%E7%85%A7-TBD%E2%80%A6).
-- For details on using `crontab -e`, see [<ins>crontab guru</ins>](https://crontab.guru/) or [<ins>crontab(5) - Linux man page</ins>](https://linux.die.net/man/5/crontab).
+- For details on using TWCC-CLI, refer to [<ins>3-6. VCS instance image</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#3-6-%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94%E5%BF%AB%E7%85%A7-TBD%E2%80%A6).
+- For details on using `crontab -e`, refer to [<ins>crontab guru</ins>](https://crontab.guru/) or [<ins>crontab(5) - Linux man page</ins>](https://linux.die.net/man/5/crontab).
+
+</details>
+
+<details>
+
+<summary> Q4. Why can't I share an image to another project?</summary>
+
+1. Only tenant administrators can share image to other target projects, and they must be tenant administrators of both the source and target projects.
+2. Cross-project sharing of licensed images is not supported (e.g. Windows servers with licenses).
+
+</details>
+
+<details>
+
+<summary> Q5. Why can't I select the GPU specification in the target project to create a VCS instance after the image of the GPU VM uses image sharing?
+
+</summary>
+
+The image sharing function only supports the creation of CPU VCS instances in the target project, and does not support creating GPU VCS instances yet.
+
+</details>
+
+<details>
+
+<summary> Q6. Why does the image status after sharing give an error? </summary>
+
+If you share images generated from VCS instances created before 2021/3/27, such images will take too long to share and will fail due to unoptimized performance.
+For sharing requests, please contact technical support:[isupport@twcc.ai](isupport@twcc.ai)。
 
 </details>

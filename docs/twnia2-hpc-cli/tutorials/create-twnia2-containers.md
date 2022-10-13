@@ -10,7 +10,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-twnia2-creat
 您可透過 「**Singularity**」 包裝您所需的套件與程式，**建立可在 TWCC 台灣杉二號 (命令列介面) (TWNIA2 (HPC CLI)) 服務執行運算工作的容器環境**，並可以快速部署套件、搬移、以及分享。
 
 - 本篇文章將教學：
-    - 如何在台灣杉二號使用 Singularity 容器，或利用 [TWCC 虛擬運算個體](https://www.twcc.ai/doc?page=vm)客製化容器
+    - 如何在台灣杉二號使用 Singularity 容器，或利用 [TWCC 虛擬運算個體](../../vcs/overview.md) 客製化容器
     - 運行簡易容器指令
     - 進階操作：建立容器沙盒測試環境、輕量化容器
 
@@ -55,12 +55,12 @@ singularity exec --nv oras://registry.twcc.ai/singularity/<套件名>:<版本號
 
 ### 2. 下載容器映像檔
 
-熟悉容器技術的進階用戶，若希望映像檔加入其他應用程式、套件，可先使用 [TWCC 虛擬運算個體](https://www.twcc.ai/doc?page=vm)客製化您的容器映像檔，再將映像檔上傳至台灣杉二號 (命令列介面) 使用。
+熟悉容器技術的進階用戶，若希望映像檔加入其他應用程式、套件，可先使用 [TWCC 虛擬運算個體](../../vcs/overview.md) 客製化您的容器映像檔，再將映像檔上傳至台灣杉二號 (命令列介面) 使用。
 
-- 本篇以 **[<ins>TWCC 虛擬運算個體</ins>](https://www.twcc.ai/doc?page=vm)** 示範，系統選用 CentOS 7。
+- 本篇以 **[<ins>TWCC 虛擬運算個體</ins>](../../vcs/overview.md)** 示範，系統選用 CentOS 7。
 
 :::caution
-由於客製化 Singularity 容器映像檔需使用 sudo 權限，台灣杉二號 (命令列介面, HPC CLI) 服務為避免造成實體機損壞，恕無法提供 sudo 權限給用戶，建議使用 **[<ins>TWCC 虛擬運算個體</ins>](https://www.twcc.ai/doc?page=vm)** 環境編譯您的容器映像檔，完成後即可刪除。
+由於客製化 Singularity 容器映像檔需使用 sudo 權限，台灣杉二號 (命令列介面, HPC CLI) 服務為避免造成實體機損壞，恕無法提供 sudo 權限給用戶，建議使用 **[<ins>TWCC 虛擬運算個體</ins>](../../vcs/overview.md)** 環境編譯您的容器映像檔，完成後即可刪除。
 :::
 :::tip
 因為容器映像檔系統多使用 Ubuntu，建議虛擬運算個體環境選用 CentOS，較好判斷環境是容器之內或是之外。
@@ -173,7 +173,7 @@ sudo singularity build <CONTAINER_NAME>.sif <DEF_FILE_NAME>.def
 
 #### Step 4. 將容器映像檔上傳至高速檔案系統 (HFS)
 
-參考[高速檔案系統](https://www.twcc.ai/doc?page=hfs)，將容器映像檔透過資料傳輸節點 `xdata1.twcc.ai` 上傳至台灣杉二號 (命令列介面)的儲存空間，放在 `/home/$USER` 或 `/work/$USER` 目錄下使用。
+參考[高速檔案系統](../../hfs/overview.md)，將容器映像檔透過資料傳輸節點 `xdata1.twcc.ai` 上傳至台灣杉二號 (命令列介面)的儲存空間，放在 `/home/$USER` 或 `/work/$USER` 目錄下使用。
 
 <br/>
 
@@ -195,7 +195,7 @@ singularity shell --nv <CONTAINER_NAME>.sif
 
 **2. `exec` (Run a command within a container)**
 
-- 執行容器內的`cat`指令，例如執行以下指令，os-relase 會顯示容器 OS 為 ubuntu。
+- 執行容器內的 `cat` 指令，例如執行以下指令，os-relase 會顯示容器 OS 為 ubuntu。
 
 ```bash
 singularity exec --nv <CONTAINER_NAME>.sif cat /etc/os-release
@@ -238,7 +238,7 @@ apt-get install wget
 
 
 :::info
-由於沙盒未將套件寫入 definition file，您無法紀錄容器內有哪些套件，維護不易，較不推薦使用此方式建立容器映像檔。建議使用[<ins>客製化 Singularity 容器</ins>](#2-客製化-Singularity-容器)之方式。
+由於沙盒未將套件寫入 definition file，您無法紀錄容器內有哪些套件，維護不易，較不推薦使用此方式建立容器映像檔。建議使用[<ins>客製化 Singularity 容器</ins>](#step-2-客製化-singularity-容器)之方式。
 :::
 
 ```bash
