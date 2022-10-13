@@ -11,13 +11,13 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-
 
 
 
-TWCC provides ready-to-use working environment of NGC optimized MXNet. MXNet is a deep learning framework designed for both efficiency and flexibility. It allows you to mix the flavors of symbolic programming and imperative programming to maximize efficiency and productivity. In its core is a dynamic dependency scheduler that automatically parallelizes both symbolic and imperative operations on the fly. A graph optimization layer on top of that makes symbolic execution fast and memory efficient. The library is portable and lightweight, and it scales to multiple GPUs and multiple machines.
+TWCC provides ready-to-use working environment of NGC optimized MXNet. MXNet is a deep learning framework designed for both efficiency and flexibility. It allows you to mix the flavors of symbolic programming and imperative programming to maximize efficiency and productivity. In its core is a dynamic dependency scheduler that automatically parallelizes both symbolic and imperative operations on the fly. A graph optimization layer on top of that makes symbolic execution fast and memory efficient. The library is portable, lightweight, and scalable to multiple GPUs and multiple machines.
 
 <br/>
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">Information of Image file version</span>
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c6ca9e3df6a80fc104f1a7c1258ccca1.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_583d099d5b65e536231dc2e079ed8c95.png)
 
 :::info
 `py3` and `py2` are different Python versions.
@@ -29,6 +29,7 @@ TWCC provides ready-to-use working environment of NGC optimized MXNet. MXNet is 
 
 <summary><b>Detailed package version information</b></summary>
 
+- [mxnet-21.08-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_21-08.html#rel_21-08)
 - [mxnet-21.06-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_21-06.html#rel_21-06)
 - [mxnet-21.02-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_21-02.html#rel_21-02)
 - [mxnet-20.11-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_20-11.html#rel_20-11)

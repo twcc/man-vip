@@ -35,8 +35,8 @@ TWCC 也提供用戶以 `rsync` 指令傳輸檔案，傳輸大量檔案使用體
 
 :::info
 連線方法參見：
-- [<ins>開發型容器</ins>](https://www.twcc.ai/doc?page=container&euqinu=true#%E9%80%A3%E7%B7%9A%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F) - 連線使用方式
-- [<ins>台灣杉二號 (命令列介面)</ins>](https://man.twcc.ai/s/B15nJXe-B#2-%E7%99%BB%E5%85%A5%E3%80%8C%E7%99%BB%E5%85%A5%E7%AF%80%E9%BB%9E%E3%80%8D) - 連線「登入節點」
+- [<ins>開發型容器</ins>](../../ccs-interactive-container/user-guides/create-connect/connect-container.md) - 連線使用方式
+- [<ins>台灣杉二號 (命令列介面)</ins>](../../twnia2-hpc-cli/user-guides/service-overview/login-node-data-transfer-node.md) - 連線「登入節點」
 :::
 
 <b>Step 2. 儲存 SSH 私密金鑰至本機</b>
@@ -106,7 +106,7 @@ macOS：可使用「文字編輯」軟體
 <summary><b>2. 使用主機密碼 + OTP 連線</b></summary>
 
 
-除上述使用金鑰的登入方式，HFS 也可使用 **密碼 + [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC)** 之方式登入，請參考下方說明：
+除上述使用金鑰的登入方式，HFS 也可使用 **密碼 + [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](../../member/user-guides/member-key-quota/hpc-account-password-otp.md#取得-otp-認證碼)** 之方式登入，請參考下方說明：
 
 <b>Step 1. 下載支援 SFTP 連線並可兩段式驗證的軟體</b>
 
@@ -138,7 +138,7 @@ macOS：可使用「文字編輯」軟體
 
 8. 點選「**連線**」
 
-<b>Step 3. 輸入主機密碼及 <a href="https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC">OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></a></b>
+**Step 3. 輸入主機密碼及 [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](../../member/user-guides/member-key-quota/hpc-account-password-otp.md#取得-otp-認證碼)**
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_92b59625eba5f2dbaff85d5c2c030e19.png)
 
@@ -154,9 +154,9 @@ macOS：可使用「文字編輯」軟體
 
 
 :::info
-1. [<ins>忘記主機帳號？</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC)
-2. [<ins>忘記密碼？</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC)
-3. [<ins>如何取得 OTP？</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC)
+1. [<ins>忘記主機帳號？</ins>](../../member/user-guides/member-key-quota/hpc-account-password-otp.md#查詢主機帳號)
+2. [<ins>忘記密碼？</ins>](../../member/user-guides/member-key-quota/hpc-account-password-otp.md#重置主機密碼)
+3. [<ins>如何取得 OTP？</ins>](../../member/user-guides/member-key-quota/hpc-account-password-otp.md#取得-otp-認證碼)
 :::
 
 
@@ -168,4 +168,3 @@ macOS：可使用「文字編輯」軟體
 - 預設目錄即為使用者的 /home 目錄，下方為 /home 目錄底下的資料。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e69ea54b6ed112035eeee732fdda0016.png)
-

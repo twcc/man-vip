@@ -23,13 +23,15 @@ View all buckets in your project:
 - After signing in for TWCC, select <b>Cloud Object Storage (COS)</b>.
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bd4197c43bc416f3329e6dbc475fed56.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_44509030fbb4885dfa5539fe745386ad.png)
 
-
+:::tip
+You can click on the star <i class="fa fa-star-o" aria-hidden="true"></i> on the left side of **All Services** to pin your favorite services to **My Favorite Services** to speed up the process.
+:::
 
 - After entering <b>Cloud Object Storage Management</b> page, you can view all the buckets in the project.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0ed5a1dd57edd31b8a1d55d1741c45f1.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f74c2852f3828639d7ba6f7381fd053a.png)
 
 
 

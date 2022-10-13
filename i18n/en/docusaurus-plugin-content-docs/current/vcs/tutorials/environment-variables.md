@@ -9,19 +9,17 @@ import TabItem from '@theme/TabItem';
 
 # Set environment variables
 
-In this document, we will explain how to set the required environment variables which can adjust the settings of the program to meet your needs when creating [<ins>interactive container</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-create-en) / [ <ins>VCS instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-en).
+In this document, we will explain how to set the environment variables you need to dynamically adjust your application setting to meet your environment requirements while creating [<ins>Interactive Containers</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-create-zh) / [<ins>VCS Instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh) via TWCC portal or TWCC CLI.
 
 
 :::info
-
-This function only applies to certain images:
-- Interactive container: most of images can be used. (But, if you are using Matlab (Preview) or custom image, please contact <ins> <a href = "mailto:isupport@twcc.ai">Technical Support</a > </ins>).
-- VCS instance: Linux images
-
+This function is only available for certain images:
+- Interactive Containers：Most of them are available (If you need to use Matlab (public preview version) or Custom Image, please contact <a href = "mailto:isupport@twcc.ai"><ins>Technical Support</ins></a>).
+- VCS Instance：Linux image.
 :::
 
 
-For example, if you select [TensorFlow image](https://man.twcc.ai/@twccdocs/ccs-concept-image-main-en/%2F%40twccdocs%2Fccs-concept-image-tensorflow-en) to create the container, you can set [`TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH`](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-user-guide/index.html#tf_disable_cudnn_rnn_tensor_op_math)environment variables to enable/disable the Tensor Core math when creating the container.
+For example, if you create the container with [TensorFlow image](https://man.twcc.ai/@twccdocs/ccs-concept-image-main-en/%2F%40twccdocs%2Fccs-concept-image-tensorflow-en), you can set the environment variable [`TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH`](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-user-guide/index.html#tf_disable_cudnn_rnn_tensor_op_math) to enable/disable the Tensor Core math when creating the container.
 
 TensorFlow image enables Tensor Core math by default:
 
@@ -44,14 +42,14 @@ The following example uses a container for instruction. You can also use the sam
 :::
 
 
-When [<ins>creating a container</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-create-en), set the environment variables in the **ENVIRONMENT VARIABLES** tab and then complete the creation and deployment task..
+When [<ins>creating a container</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-create-en), set the environment variables in the **ENVIRONMENT VARIABLES** tab and complete the creation and, then the deployment is done.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a59deaba5daa077c74e5e4e4c319117d.png)
 
 
 :::info
 
-The key and value of environment variables are written in JSON format (see the figue below), so you can set multiple variables at one time:
+The key and value of environment variables are written in the following format (JSON), so you can set multiple variables at once:
 
 ```
     {
@@ -78,16 +76,16 @@ twccli mk ccs -envk TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH -envv 1
 <br/>
 
 
-### Step 2. Confirm the environment variables are set
+### Step 2. Check environment variables
 
-[Connect to the container](https://man.twcc.ai/@twccdocs/guide-ccs-connect-en) and execute the following command to confirm that the environment variables have been set into the container.
+[Connect to the container](https://man.twcc.ai/@twccdocs/guide-ccs-connect-en) and use the following command to confirm that the environment variables are imported to the container.
 
 ```bash
 echo $BUFFER
 ```
 
 :::info
-[<ins>Connect to the VCS instance</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-en) and execute the following command to confirm that the environment variables have been set into the instance.
+[<ins>Connect to the VCS instance</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-en) and confirm that the environment variables are imported to the instance using the following commands.
 ```bash
 echo $Key
 # Enter your key, e.g., $TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH

@@ -51,7 +51,15 @@ Please refer to <ins><a href = "https://www.twcc.ai/doc?page=hfs">this document<
 
 <details>
 
-<summary> Q4. How to purchase additional Hyper File System storage space?</summary>
+<summary> Q4. How to share files to other users?</summary>
+
+Please refer to <ins><a href = "https://man.twcc.ai/@twccdocs/doc-hfs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-hfs-share-files-between-user-accounts-zh)">this document</a></ins> and share it by uploading it to TWCC COS or by opening HFS file permissions.
+
+</details>
+
+<details>
+
+<summary> Q5. How to purchase additional Hyper File System storage space?</summary>
 
 For the price and purchasing method, please refer to the paragraph **View Details** and **HFS Storage Management Policy** in [<ins>this document</ins>](https://www.twcc.ai/doc?page=hfs).
 
@@ -60,7 +68,7 @@ For the price and purchasing method, please refer to the paragraph **View Detail
 
 <details>
 
-<summary> Q5. What is the IP location of the Hyper File System?</summary>
+<summary> Q6. What is the IP location of the Hyper File System?</summary>
 
 203.145.219.101
 
@@ -69,7 +77,7 @@ For the price and purchasing method, please refer to the paragraph **View Detail
 
 <details>
 
-<summary> Q6. The Hyper File System page shows that storage is almost full. How do I know which files occupy the storage space?</summary>
+<summary> Q7. The Hyper File System page shows that storage is almost full. How do I know which files occupy the storage space?</summary>
 
 - In the container or Taiwania 2 (HPC CLI) environment, execute the following command to view which files occupy the storage:
     ```
@@ -90,8 +98,25 @@ For the price and purchasing method, please refer to the paragraph **View Detail
 
 <details>
 
-<summary> Q7. How long does it take for the additional purchase of the Hyper File System to take effect?</summary>
+<summary> Q8. How long does it take for the additional purchase of the Hyper File System to take effect?</summary>
 
 - After purchasing additional storage space in  [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh), wait for 15 minutes before you can use it.
+
+</details>
+
+<details>
+
+<summary> Q9. Why is the used capacity in the Storage and Resource Usage page not reduced when I delete data from the Hyper File System (HFS)?</summary>
+
+The used capacity shown on the page will take some time to update, please check the page again about 1-2 hours after deleting the file.
+
+</details>
+
+<details>
+
+<summary> Q10. Why doesn't Jupyter Notebook free up space immediately after deleting a file?</summary>
+
+- When you delete a file in the Jupyter notebook UI, the file is not deleted immediately, but is moved to `/home/<host account>/.local/share/Trash`.
+- If you need to delete the file and free up space immediately, you need to run `rm -r /home/<host account>/.local/share/Trash` in a Jupyter Terminal, or connect to HFS and delete the file by [other means](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh/%2F%40twccdocs%2Fguide-hfs-connect-to-data-transfer-node-zh) to free up space immediately.
 
 </details>

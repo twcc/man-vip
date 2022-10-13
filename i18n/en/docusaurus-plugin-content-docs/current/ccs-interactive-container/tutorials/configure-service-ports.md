@@ -10,7 +10,7 @@ TWCC Container service adopts Port-Forwarding to forward external network connec
 
 SSH runs on port 22; Jupyter Notebook runs on port 8888. Besides, the container service opens external port: 5000, 5001 and 5002. You can set the daemon of the container service to one of the external ports, and associate the external port with the target port in Interactive Container Details page. After that, you can use the service from your local using the public IP and the external port.
 
-
+The following demonstrates how to set up a web service with Flask in a container, set the daemon of the service on the external port 5002, and associate the service port to use the web service through a local browser:
 
 ## Create a container
 

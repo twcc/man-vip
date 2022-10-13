@@ -30,7 +30,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/concept-ccs-lifecy
 - <i class="fa fa-check" aria-hidden="true"></i> 關聯、分離服務埠...等其他一般操作
 
 :::info
-建立步驟請參考[<ins>建立容器</ins>](/@twccdocs/guide-ccs-create-zh)
+建立步驟請參考[<ins>建立容器</ins>](../user-guides/create-connect/create-container.md)
 :::
 
 
@@ -43,5 +43,5 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/concept-ccs-lifecy
 - /home、/work 資料 (高速檔案系統儲存空間) 將會留存，不會隨容器刪除而清除。
 
 :::info
-個體刪除步驟請參考[<ins>建立容器</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-manage-zh)
+個體刪除步驟請參考[<ins>刪除容器</ins>](../user-guides/manage-monitor/manage-container.md#刪除容器)
 :::

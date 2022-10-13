@@ -9,7 +9,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-intactv-howto-
 本文件主要目的為說明於 TWCC 開發型容器服務上透過 pip 安裝 Python 套件 (package) 的相關操作及應注意事項，以及程式執行失敗的測試及排除方式。
 
 :::info
-更多資訊，請參考[TWCC 開發型容器](https://www.twcc.ai/doc?page=container) 
+更多資訊，請參考[TWCC 開發型容器](../user-guides/create-connect/create-container.md) 
 :::
 
 ## 套件安裝工具
@@ -26,7 +26,7 @@ TWCC 開發型容器服務是基於 [NGC Image](https://docs.nvidia.com/deeplear
 :::info
 1. 為確保資料完整不遺失，請將**重要資料**存放於高速檔案系統 (HFS)，避免存放於系統目錄。
 2. 若將套件安裝於 Home 目錄，建議搭配 pipenv 或 Conda 等 Python 套件管理工具，以避免 Python 套件衝突問題。
-3. 更多資訊，請參考[高速檔案系統 (HFS)](https://www.twcc.ai/doc?page=hfs) 
+3. 更多資訊，請參考[高速檔案系統 (HFS)](../..//hfs/overview.md) 
 :::
 
 ## 套件安裝方式
@@ -94,7 +94,7 @@ rm -rf ~/.local
 pip list --user
 ```
 
-4. 依據上述[套件安裝方式](##套件安裝方式)重新安裝適合此容器之套件，請自行選擇適合的套件安裝位置
+4. 依據上述[套件安裝方式](#套件安裝方式)重新安裝適合此容器之套件，請自行選擇適合的套件安裝位置
 
 5. 再次執行您的程式，確認運行障礙是否已排除
 

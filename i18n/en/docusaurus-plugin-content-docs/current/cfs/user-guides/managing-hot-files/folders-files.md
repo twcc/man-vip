@@ -34,6 +34,7 @@ Please create a [dataset](https://man.twcc.ai/@twccdocs/guide-cfs-dataset-mngmnt
 
 ## Upload file
 * Click **UPLOAD** button in dateset detail page.
+
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e6cca7882b3bf1381bb9fea3ac1036ac.png)
 
 * Drag files into the **Upload File(s)** window or click the **SELECT FILES** button.
@@ -46,10 +47,9 @@ Please create a [dataset](https://man.twcc.ai/@twccdocs/guide-cfs-dataset-mngmnt
 
 
 :::info
-File upload limit: A single file cannot exceed 1GB, and the total number of files cannot exceed 1000.
+- File upload limit: A single file cannot exceed 1GB, and the total number of files cannot exceed 1000.
+- Please refer to [<ins>the version record</ins>](https://man.twcc.ai/@twccdocs/guide-cfs-metadata-search-versioning-zh#%E7%89%88%E6%9C%AC%E7%B4%80%E9%8C%84) for the file record description.
 :::
-
-
 
 ## View file
 
@@ -69,7 +69,8 @@ File upload limit: A single file cannot exceed 1GB, and the total number of file
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b99c2b9a8424bc0e82af837bcc20c75f.png)
 
 :::info
-Currently, only one file can be downloaded at a time through the TWCC portal. You can download multiple files through third-party software ++[Access Interface Management](https://man.twcc.ai/@twccdocs/guide-cfs-access-interface-mngmnt-en)++ on the service list.
+- Currently, only one file can be downloaded at a time through the TWCC portal. You can download multiple files through third-party software <ins>[Access Interface Management](https://man.twcc.ai/@twccdocs/guide-cfs-access-interface-mngmnt-en)</ins> on the service list.
+- Please refer to [<ins>the version record</ins>](https://man.twcc.ai/@twccdocs/guide-cfs-metadata-search-versioning-zh#%E7%89%88%E6%9C%AC%E7%B4%80%E9%8C%84) for the file record description.
 :::
 
 
@@ -79,7 +80,7 @@ Currently, only one file can be downloaded at a time through the TWCC portal. Yo
 * Select files and click the **DELETE** button, you can also select multiple files to delete together.
 
 :::info
-Files on ++[moving](https://man.twcc.ai/@twccdocs/guide-cfs-move-retrieve-data-en)++ cannot be deleted.
+Files on <ins>[moving](https://man.twcc.ai/@twccdocs/guide-cfs-move-retrieve-data-en)</ins> cannot be deleted.
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1f8e1c3d720b031132331f075956d8f3.png)

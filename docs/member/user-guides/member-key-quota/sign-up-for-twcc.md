@@ -17,7 +17,7 @@ import TabItem from '@theme/TabItem';
 
 ### Step 1. 開始註冊
 
-至 [<ins>TWS 官方網站</ins>](https://tws.twcc.ai/)，點選右上角 「**註冊**」
+至 [TWS 官方網站](https://tws.twcc.ai/)，點選右上角 「**註冊**」
 
 ![](https://i.imgur.com/LiFZRnD.png)
 
@@ -64,7 +64,7 @@ import TabItem from '@theme/TabItem';
 
 :::info
 - **註冊帳號後，請您聯繫 TWS 業務，我們將深入了解您的使用需求，並協助您新增使用計畫與額度，進一步啟用 TWCC。**
-- 其他相關文件：[<ins>更改會員資料</ins>](https://man.twcc.ai/@twsdocs/guide-service-update-your-info-zh)、[<ins>重置使用者網站密碼</ins>](https://man.twcc.ai/@twsdocs/guide-service-reset-portal-pwd-zh)。
+- 其他相關文件：[<ins>更改會員資料</ins>](./update-member-info.md)、[<ins>重置使用者網站密碼</ins>](./reset-portal-password.md)。
 :::
 
 :::info

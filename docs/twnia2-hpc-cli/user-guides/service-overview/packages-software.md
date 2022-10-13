@@ -49,7 +49,7 @@ import TabItem from '@theme/TabItem';
 
 
 :::info
-- 如何使用人工智慧框架軟體？請參考 [<ins>建立 TWNIA2 容器</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-zh)、[<ins>容器跨節點高速運算</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-run-parallel-job-container-zh)。
+- 如何使用人工智慧框架軟體？請參考 [<ins>建立 TWNIA2 容器</ins>](../../tutorials/create-twnia2-containers.md)、[<ins>容器跨節點高速運算</ins>](../../tutorials/ai-benchmark-container.md)。
 - 若有使用其他 [<ins>NGC 容器</ins>](https://ngc.nvidia.com/catalog/containers) 之需求，請聯繫客服人員：<ins><a href="isupport@twcc.ai"></a>isupport@twcc.ai</ins>.
 
 :::

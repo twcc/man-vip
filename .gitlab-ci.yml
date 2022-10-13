@@ -83,14 +83,11 @@ deploy-production:
   when: manual
 
 send-to-GitHub:
-  image: python:3.9
+  image: alpine
   stage: test
   script:
-    - apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-    - apt update && apt install -y software-properties-common
-    - apt-add-repository https://cli.github.com/packages
-    - apt update && apt install -y gh
-    - export GITHUB_TOKEN=$GITHUB_APIKEY
+    - apk update && apk add github-cli && apk add git
+    - export GH_TOKEN=$GITHUB_APIKEY
     - git remote add github https://$GITHUB_USRERNAME:$GITHUB_APIKEY@github.com/twcc/man-vip
     - git fetch --unshallow github
     - git config --global user.email "August.Chao@twsc.io"
@@ -98,9 +95,9 @@ send-to-GitHub:
     - git merge -s ours github/main --no-commit --no-ff --allow-unrelated-histories
     - git checkout -b $CI_COMMIT_SHORT_SHA
     - git push -u github $CI_COMMIT_SHORT_SHA
-    - /usr/bin/gh pr create --title "v$CI_COMMIT_SHORT_SHA" --body "Release TWCC manual"
-    - /usr/bin/gh pr create --base tws-sync --title "v$CI_COMMIT_SHORT_SHA" --body "Release TWCC manual"
-    - /usr/bin/gh release create "v$CI_COMMIT_SHORT_SHA" --title "v$CI_COMMIT_SHORT_SHA"
+    - gh pr create --title "v$CI_COMMIT_SHORT_SHA" --body "Release TWCC manual"
+    - gh pr create --base tws-sync --title "v$CI_COMMIT_SHORT_SHA" --body "Release TWCC manual"
+    - gh release create "v$CI_COMMIT_SHORT_SHA" --title "v$CI_COMMIT_SHORT_SHA"
   only:
     - docusaurus-master
   when: manual

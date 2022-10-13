@@ -48,7 +48,7 @@ It will takes a while to transfer a file to the hot storage. After the file is m
 ## Access to cold storage file
 
 
-* Select one of the file in Cold Storage in the dataset contents page, click the **ACCESS** button on right panel to make a copy of the file to Cold Data Download area.
+* Select one of the file in Cold Storage in the dataset contents page, click the **ACCESS** button on right panel to make a copy of the file to Cold Data Downloads.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9ed5f9b00d74fec0a00c8e9379ef58de.png)
 

@@ -5,7 +5,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-project-data-tran
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-project-data-transfer-en' 
 ---
 
-# HowTo：Transfer data from old project to new project
+# Transfer data from old project to new project
 
 If you already applied for a new project and hope that the data in old project can be continuously used, please refer to this documentation to transfer your data via **Cloud Object Storage (COS)**.
 
@@ -53,7 +53,7 @@ S3 browser does not support direct data transfer, please select the file you nee
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fe577644e4b84612e23f54dd6c283968.png)
 
 
-- Then, upload the local data to the COS of new project. We're done!
+- Then, upload the local data to the COS of new project, the data will be successfully transferred to the new project!
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e12c4399174d32bbe619eae62431d9dd.png)
 
@@ -95,7 +95,7 @@ Enter command `s3cmd --configure` again, and enter related information to connec
 
 ### Step 5. Upload the data to new project
 
-Upload the local data to the COS of new project. We're done!
+Upload the local data to the COS of new project, the data will be successfully transferred to the new project!
 
 ```bash
 s3cmd put  --recursive <LOCAL_FILE_NAME> s3://<BUCKET_NAME>

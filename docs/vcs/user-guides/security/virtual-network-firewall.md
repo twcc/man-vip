@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 基礎虛擬防火牆服務提供簡單靈活的架構，在虛擬網路外創建防火牆，對網路內所有虛擬運算個體提供安全防護。
 
 :::info
-租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh#%E5%9F%BA%E7%A4%8E%E8%99%9B%E6%93%AC%E9%98%B2%E7%81%AB%E7%89%86)。
+租戶管理員、租戶使用者對於基礎虛擬防火牆使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/networking-security#基礎虛擬防火牆)。
 :::
 
 <br/>
