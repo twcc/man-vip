@@ -69,7 +69,7 @@ import TabItem from '@theme/TabItem';
 
 <summary><b>服務提供者：TWS</b></summary>
 
-自[TWS 官方網站](https://tws.twcc.ai/)選擇「會員中心」，輸入帳密即可進入會員中心。
+自 [TWS 官方網站](https://tws.twcc.ai/) 選擇「會員中心」，輸入帳密即可進入會員中心。
 
 ![](https://i.imgur.com/mNk06Ct.png)
 

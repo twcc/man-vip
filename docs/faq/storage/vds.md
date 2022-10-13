@@ -23,7 +23,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-bss-zh'
 <summary> Q2. 無法讀取新掛載的磁碟？</summary>
 
 新掛載的磁碟，需完成初始化才能存取資料，初始化步驟請參考：
-[HowTo：初始化磁碟- Linux 個體](https://www.twcc.ai/doc?page=howto-bss-init-vol-linux) 或 [HowTo：初始化磁碟- Windows](https://www.twcc.ai/doc?page=howto-bss-init-vol-windows)。
+[HowTo：初始化磁碟- Linux 個體](/docs/vcs/tutorials/data-disk-init-linux.md) 或 [HowTo：初始化磁碟- Windows](/docs/vcs/tutorials/data-disk-init-windows.md)。
 
 </details>
 
@@ -31,7 +31,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-bss-zh'
 
 <summary> Q3. 如何上傳及下載檔案？</summary>
 
-將磁碟掛載至虛擬運算個體後，[使用 MobaXterm 連線個體](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-zh)，並完成磁碟初始化，於 MobaXterm 頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
+將磁碟掛載至虛擬運算個體後，[使用 MobaXterm 連線個體](/docs/vcs/user-guides/connecting/linux/from-windows.md)，並完成磁碟初始化，於 MobaXterm 頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
 
 </details>
 
@@ -39,7 +39,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-bss-zh'
 
 <summary> Q4. 我想要將舊有的資料碟換成新的資料碟，請問要如何操作？</summary>
 
-詳細操作方式請參考[此文件](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-bss-replace-data-vol-zh)，可變更磁碟類型、容量，並透過同步方式將舊磁碟資料保存至新磁碟。
+詳細操作方式請參考[此文件](/docs/vcs/tutorials/replace-data-disk.md)，可變更磁碟類型、容量，並透過同步方式將舊磁碟資料保存至新磁碟。
 
 </details>
 

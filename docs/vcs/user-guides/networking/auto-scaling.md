@@ -12,16 +12,16 @@ import TabItem from '@theme/TabItem';
 
 Auto Scaling 是一種自動彈性調整的監控機制，本服務能夠在指定條件下<ins>動態**新增**或**移除**虛擬運算個體的數量</ins>，以因應負載增加所造成的資源不足、服務中斷的問題，提升服務品質與效能。
 
-負載達到需求值後擴展數量，低於需求值便立即縮減，並搭配[負載平衡](https://man.twcc.ai/@twccdocs/guide-vcs-lbs-zh)讓流量平均分配，可有效降低長時間建立閒耗之虛擬運算個體成本。
+負載達到需求值後擴展數量，低於需求值便立即縮減，並搭配[負載平衡](./load-balancing.md)讓流量平均分配，可有效降低長時間建立閒耗之虛擬運算個體成本。
 
 :::info
-- 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh#Auto-Scaling)。
+- 租戶管理員、租戶使用者對於 Auto Scaling 使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/networking-security#auto-scaling)。
 :::
 
 :::caution
-[<ins>Auto Scaling</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-auto-sacling-zh) 會依據所連結虛擬運算個體建立時的設定而新增個體，因此：
-- 若 Auto Scaling 自動新增的個體<ins>**需要**</ins>自動連結新資料磁碟，請您在 **[<ins>建立個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh) 時**，一併建立資料磁碟。
-- 反之，若 Auto Scaling 自動新增個體<ins>**不需要**</ins>自動連結新資料磁碟，則請您在 **[<ins>建立個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh) 後**，[<ins>另建資料磁碟</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-vds-create-data-disk-zh)，再[<ins>連結至個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-vds-manage-disk-zh#%E9%80%A3%E7%B5%90%E8%87%B3%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)。
+[<ins>Auto Scaling</ins>](./auto-scaling.md) 會依據所連結虛擬運算個體建立時的設定而新增個體，因此：
+- 若 Auto Scaling 自動新增的個體<ins>**需要**</ins>自動連結新資料磁碟，請您在 **[<ins>建立個體</ins>](../create/create-instances.md) 時**，一併建立資料磁碟。
+- 反之，若 Auto Scaling 自動新增個體<ins>**不需要**</ins>自動連結新資料磁碟，則請您在 **[<ins>建立個體</ins>](../create/create-instances.md) 後**，[<ins>另建資料磁碟</ins>](../storage/create-data-disks.md)，再[<ins>連結至個體</ins>](../storage/view-attach-delete-disks.md#連結至虛擬運算個體)。
 :::
 
 <br/>
@@ -60,7 +60,7 @@ Auto Scaling 是一種自動彈性調整的監控機制，本服務能夠在指�
 
 </TabItem>
 
-<TabItem value="TWCC CLI" label="TWCC CLI (尚未支援)">
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
 
 <br/>
 
@@ -86,7 +86,7 @@ Auto Scaling 是一種自動彈性調整的監控機制，本服務能夠在指�
 
 </TabItem>
 
-<TabItem value="TWCC CLI" label="TWCC CLI (尚未支援)">
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
 
 <br/>
 
@@ -99,7 +99,7 @@ Auto Scaling 是一種自動彈性調整的監控機制，本服務能夠在指�
 
 ## 將 Auto Scaling 連結/掛載至虛擬運算個體
 
-將 Auto Scaling 連結/掛載至虛擬運算個體後，搭配[負載平衡](https://man.twcc.ai/@twccdocs/guide-vcs-lbs-zh)才能發揮其功能，自動平衡虛擬運算個體的負載。
+將 Auto Scaling 連結/掛載至虛擬運算個體後，搭配[負載平衡](./load-balancing.md)才能發揮其功能，自動平衡虛擬運算個體的負載。
 
 <Tabs>
 
@@ -120,7 +120,7 @@ Auto Scaling 是一種自動彈性調整的監控機制，本服務能夠在指�
 
 </TabItem>
 
-<TabItem value="TWCC CLI" label="TWCC CLI (尚未支援)">
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
 
 <br/>
 

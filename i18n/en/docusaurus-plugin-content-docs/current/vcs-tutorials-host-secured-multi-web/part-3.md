@@ -30,5 +30,5 @@ Verify the two websites belong to the same domain, and confirm the website can b
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_01a5767e9a7c56bfa9d393e6ad4d2537.PNG)
 
 :::caution
-End of the tutorial! Any questions and suggestions are welcome and would be appreciated! Contact us at [isupport@twcc.ai](mailto:isupport@twcc.ai).
+<i class="fa fa-envelope" aria-hidden="true"></i>End of the tutorial! Any questions and suggestions are welcome and would be appreciated! Contact us at <ins><a href = "mailto: isupport@twcc.ai">isupport@twcc.ai</a></ins>.
 :::

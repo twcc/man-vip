@@ -1,6 +1,6 @@
 ---
 displayed_sidebar: hfs
-sidebar_label: '高速檔案系統'
+sidebar_label: '服務概觀'
 sidebar_position: 3
 title: 'Hyper File System'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/hfs-overview-en' 

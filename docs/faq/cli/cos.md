@@ -11,6 +11,6 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-cli-cos-zh'
 
 <summary> Q1. 為何我使用 TWCC-CLI 上傳、下載大量檔案時無法成功？</summary>
 
-目前 TWCC CLI 檔案管理功能仍在開發優化中，如需傳輸大量檔案，建議參考[此文件](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fcosbackup-zh)使用 s3cmd 相關指令操作。
+目前 TWCC CLI 檔案管理功能仍在開發優化中，如需傳輸大量檔案，建議參考[此文件](/docs/cos/tutorials/backup-synchronize-restore.md)使用 s3cmd 相關指令操作。
 
 </details>

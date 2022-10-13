@@ -14,7 +14,7 @@ TWCC 所提供的負載平衡服務支援**應用程式負載平衡器 (HTTP 與
 
 
 :::info
-- 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh#%E8%B2%A0%E8%BC%89%E5%B9%B3%E8%A1%A1)。
+- 租戶管理員、租戶使用者對於負載平衡器使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/networking-security#負載平衡)。
 - TWCC CLI 目前不支援此服務。
 :::
 
@@ -47,10 +47,10 @@ TWCC 所提供的負載平衡服務支援**應用程式負載平衡器 (HTTP 與
         * 點擊「**新增**」可設定多組協定或連接埠的監聽器。
     * **平衡方式**：選擇負載平衡方式，有 **ROUND_ROBIN** (循環模式)、**LEAST_CONNECTION** (最少連線優先模式) 及 **SOURCE_IP** (依來源位址分配模式) 三種選項。
     * **虛擬網路**：選擇虛擬網路。
-    * **配置公用 IP**：可選擇不配置、自動配置浮動 IP，或配置靜態 IP<sup>**</sup>。使用細節請參考[<ins>彈性 IP</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-eip-zh)。
+    * **配置公用 IP**：可選擇不配置、自動配置浮動 IP，或配置靜態 IP<sup>**</sup>。使用細節請參考[彈性 IP](./elastic-ip.md)。
 
 :::info
-<sup>*</sup>如需使用 <b>HTTPS with SSL</b> 協定的監聽器，請先[<ins>建立 SSL 憑證</ins>](#建立-SSL-憑證)。<br/>
+<sup>*</sup>如需使用 <b>HTTPS with SSL</b> 協定的監聽器，請先<a href="#建立-ssl-憑證"><ins>建立 SSL 憑證</ins></a>。<br/>
 <sup>**</sup>建立完成後，皆可在「負載平衡詳細資料」頁，調整 IP 選擇。若有配置 IP，需先移除才可選擇其他 IP。
 :::
 
@@ -177,7 +177,7 @@ SSL 憑證有固定效期，您可以在憑證到期時，建立新憑證以更�
 
 
 :::info
-目前 TWCC 僅支援建立 PKCS#12 格式的 SSL 憑證，請參考[<ins>HowTo：轉換 SSL 憑證格式</ins>](https://man.twcc.ai/@twccdocs/howo-lb-convert-cert-zh)。
+目前 TWCC 僅支援建立 PKCS#12 格式的 SSL 憑證，請參考[<ins>轉換 SSL 憑證格式</ins>](../../tutorials/convert-ssl-certificate.md)。
 :::
 
 * 檢視 SSL 憑證的建立資訊，確定後點選「**建立**」
@@ -194,10 +194,10 @@ SSL 憑證有固定效期，您可以在憑證到期時，建立新憑證以更�
 
 ### 管理 SSL 憑證
 
-參考[建立 SSL 憑證](#建立-SSL-憑證)將憑證建立好後，即可在建立應用程式負載平衡器時選用，亦可用將新建的憑證新增或更新到既有的應用程式負載平衡器中。
+參考[建立 SSL 憑證](#建立-ssl-憑證)將憑證建立好後，即可在建立應用程式負載平衡器時選用，亦可用將新建的憑證新增或更新到既有的應用程式負載平衡器中。
 
 :::info
-目前 TWCC 僅支援建立 PKCS#12 格式的 SSL 憑證，請參考[<ins>HowTo：轉換 SSL 憑證格式</ins>](https://man.twcc.ai/@twccdocs/howo-lb-convert-cert-zh)。
+目前 TWCC 僅支援建立 PKCS#12 格式的 SSL 憑證，請參考[<ins>轉換 SSL 憑證格式</ins>](../../tutorials/convert-ssl-certificate.md)。
 :::
 
 <br/>

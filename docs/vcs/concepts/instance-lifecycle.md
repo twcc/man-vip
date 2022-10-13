@@ -64,7 +64,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="TWCC CLI" label="TWCC CLI (尚無支援)">
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
 
 <br/>
 
@@ -113,7 +113,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="TWCC CLI" label="TWCC CLI (尚無支援)">
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
 
 <br/>
 
@@ -149,7 +149,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="TWCC CLI" label="TWCC CLI (尚無支援)">
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
 
 <br/>
 
@@ -241,5 +241,5 @@ twccli ls vcs
 
 :::info
 - 同一用戶一分鐘內僅能執行各 10 次建立、刪除虛擬運算個體。
-- 若已開啟「[刪除保護機制](https://man.twcc.ai/@twccdocs/guide-vcs-view-and-edit-instance-zh)」，將無法直接刪除資源，請您先關閉後再執行刪除。
+- 若已開啟「[<ins>刪除保護機制</ins>](../user-guides/manage-monitor/view-edit-deletion-protection.md#開啟關閉-刪除保護機制)」，將無法直接刪除資源，請您先關閉後再執行刪除。
 :::

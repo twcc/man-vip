@@ -206,7 +206,7 @@ python $(your command)
     例：
     > 索取 1 GPU，會自動配置 4 CPU cores、90  GB Memory
       索取 8 GPU，會自動配置 32 CPU cores、720 GB Memory
-3. 更多 Queue 資訊，請參考 [<ins>Queue 與計算資源使用說明</ins>](https://www.twcc.ai/doc?page=hpc_cli#4-Queue-%E8%88%87%E8%A8%88%E7%AE%97%E8%B3%87%E6%BA%90%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E)。
+3. 更多 Queue 資訊，請參考 [<ins>Queue 與計算資源使用說明</ins>](../user-guides/queues/queues-computing-resources.md)。
 :::
 
 <br/>
@@ -234,7 +234,7 @@ tail -f slurm_<JOB_ID>.out
 ```
 
 :::info
-其他常用指令如下，更多指令請參考 [<ins>Slurm指令</ins>](https://www.twcc.ai/doc?page=hpc_cli#6-Slurm%E6%8C%87%E4%BB%A4)： 
+其他常用指令如下，更多指令請參考 [<ins>Slurm指令</ins>](/docs/category/slurm-指令)：
 1. 使用`squeue -u $USER`：查看正在運行的 job
 2. 使用 `sacct -X`：查看今日運行的 job 及狀態，確認是否還在運行或已結束。
 :::

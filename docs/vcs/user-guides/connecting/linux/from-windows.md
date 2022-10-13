@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 # 連線 Linux 個體：本機為 Windows
 
-完成[準備工作、取得連線資訊](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-zh)後，以下提供 4 種連線 Linux 個體 (本機為 Windows) 的方法，您可選擇任一工具操作。
+完成[準備工作、取得連線資訊](../prerequisites.md)後，以下提供 4 種連線 Linux 個體 (本機為 Windows) 的方法，您可選擇任一工具操作。
 
 :::info
 請注意個體的狀態需為 **`Ready`** 才可連線使用。
@@ -33,7 +33,7 @@ import TabItem from '@theme/TabItem';
 
 **Step 2. 變更鑰匙對存取權限**
     
-依照[<ins>準備工作</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-zh)取得的連線資訊，依序輸入指令，變更鑰匙對權限。
+依照[<ins>準備工作</ins>](../prerequisites.md)取得的連線資訊，依序輸入指令，變更鑰匙對權限。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a8c1e0e1469023aa30e6b049b00b251c.png)
 
@@ -42,7 +42,7 @@ import TabItem from '@theme/TabItem';
 
 **Step 3. 連線虛擬運算個體**
 
-同樣依照[<ins>準備工作</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-zh)取得的連線資訊，使用 SSH 指令連線。
+同樣依照[<ins>準備工作</ins>](../prerequisites.md)取得的連線資訊，使用 SSH 指令連線。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c18eb4e0d432f15f82dd4d661f658acc.png)
 
@@ -89,7 +89,7 @@ MobaXterm 圖形化的使用者介面，直覺好用，鑰匙對不需經轉檔�
 
 **Step 1. 下載 MobaXterm**
 
-請由 [<ins>MobaXterm Home Edition (Portable edition)</ins>](https://mobaxterm.mobatek.net/download-home-edition.html)下載軟體，解壓縮之後，執行**MobaXterm_Personal_[版本]**
+請由 [<ins>MobaXterm Home Edition (Portable edition)</ins>](https://mobaxterm.mobatek.net/download-home-edition.html)下載軟體，解壓縮之後，執行`MobaXterm_Personal_[版本]`
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1a1e876714cd048e9886c992af469497.png)
 
@@ -108,7 +108,7 @@ MobaXterm 圖形化的使用者介面，直覺好用，鑰匙對不需經轉檔�
 1. 點選 「**SSH**」
 2. 在`Remote host`輸入 *公用 IP*
 3. 在`Specify username`輸入 *ubuntu* 或是 *centos*
-4. 點選 「**Advanced SSH settings**」 
+4. 點選 「**Advanced SSH settings**」
 5. 勾選 `Use private key`
 6. 點開資料夾並選取您的鑰匙對 `.pem` 檔案
 7. 點選 「**OK**」 建立連線
@@ -148,12 +148,12 @@ PuTTY 使用的鑰匙對格式為`.ppk`，需先將鑰匙對 `.pem` 檔經由 Pu
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a06473c2b182bdc8ff67d09fdb621526.png)
 
     
-- 點選 「**Load**」並選取您已建立、下載之 `.pem` 檔鑰匙對 
+- 點選 「**Load**」並選取您已建立、下載之 `.pem` 檔鑰匙對
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2a8b788d86f9c3dffe7a618aea53c4a5.png)
 
 
-- 點選 「**確定**」 
+- 點選 「**確定**」
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_26f4e37c54b667cabc7790b9a9663898.png)
 
@@ -286,7 +286,7 @@ Host <INSTANCE_NAME>            # 輸入虛擬運算個體的名稱
 <br/>
 
 :::info
-若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-debug-tool-console-zh)，可加速工作流程。
+若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](../../manage-monitor/console.md)，可加速工作流程。
 :::
 
 :::caution

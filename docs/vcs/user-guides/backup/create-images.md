@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 
 :::info
 1. **虛擬運算個體刪除後，100 GB 的系統磁碟資料將會隨之消失，若您需保存此空間的資料，請參考以下步驟為個體建立映像檔，再刪除個體。**
-2. 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-zh#虛擬運算服務)。
+2. 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/compute#虛擬運算服務)。
 :::
 
 <br/>
@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 ## 建立映像檔
 
 :::caution
-1. **<ins>建立映像檔前，強烈建議請您參考[建立虛擬運算個體映像檔的最佳做法](https://man.twcc.ai/@twccdocs/guide-vcs-snapshot-best-practice-zh)，先執行相關工作，以確保有效取得映像檔。</ins>**
+1. **<ins>建立映像檔前，強烈建議請您參考[建立虛擬運算個體映像檔的最佳做法](./best-practice-create-images.md)，先執行相關工作，以確保有效取得映像檔。</ins>**
 2. 若映像檔狀態停止於 **`QUEUED`** 且久未轉為 **`ACTIVE`**，請洽詢技術支援團隊：<a href="mailto:isupport@twcc.ai">isupport@twcc.ai</a>，我們將協助您解決。
 :::
 
@@ -86,7 +86,7 @@ twccli mk vcs -s 918628 -cus-img
 
 <Tabs>
 
-<TabItem value="TWCC 入口網站" label="TWCC 入口網站 (尚未支援)">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站 (TBD)">
 
 <br/>
 
