@@ -11,11 +11,11 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorfl
 模型訓練需要大量的運算資源，才能取得辨識效果良好的模型，TWCC 提供您容器解決方案，使用 GPU 資源運算，可快速生成模型。
 
 
-本文將一步步教學如何透過 [TWCC 開發型容器](https://www.twcc.ai/doc?page=container)，使用 GPU 資源<sup>[1][2]</sup>，並搭配預設儲存系統–[高速檔案系統 (HFS)](https://www.twcc.ai/doc?page=hfs) 作為訓練資料與模型之存取空間，利用 [TensorFlow Inception V3](https://www.tensorflow.org/api_docs/python/tf/keras/applications/InceptionV3) 卷積類神經網路架構、[CIFAR-10 資料集](https://www.cs.toronto.edu/~kriz/cifar.html) 進行貓、狗影像辨識模型訓練，並生成推論引擎、對外提供圖片辨識服務。
+本文將一步步教學如何透過 [TWCC 開發型容器](../overview.md)，使用 GPU 資源<sup>[1][2]</sup>，並搭配預設儲存系統–[高速檔案系統 (HFS)](../../hfs/overview.md) 作為訓練資料與模型之存取空間，利用 [TensorFlow Inception V3](https://www.tensorflow.org/api_docs/python/tf/keras/applications/InceptionV3) 卷積類神經網路架構、[CIFAR-10 資料集](https://www.cs.toronto.edu/~kriz/cifar.html) 進行貓、狗影像辨識模型訓練，並生成推論引擎、對外提供圖片辨識服務。
 
 :::info
-- [1] 可建立最多含 8 GPUs 的容器，請參考[<ins>規格與定價</ins>](https://www.twcc.ai/doc?page=price#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS)。
-- [2] 若需使用 8 GPUs 以上的資源，您可以使用 [<ins>TWCC 台灣杉二號 (命令列介面)</ins>](https://www.twcc.ai/doc?page=hpc_cli)服務來完成工作。
+- [1] 可建立最多含 8 GPUs 的容器，請參考[<ins>規格與定價</ins>](../../pricing.mdx)。
+- [2] 若需使用 8 GPUs 以上的資源，您可以使用 [<ins>TWCC 台灣杉二號 (命令列介面)</ins>](../../twnia2-hpc-cli/overview.md)服務來完成工作。
 :::
 
 
@@ -23,11 +23,11 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorfl
 
 ### Step 1. 登入 TWCC
 
-若尚無帳號，請參考 [註冊 TWCC 帳號](https://www.twcc.ai/doc?page=register_account)
+若尚無帳號，請參考 [註冊 TWCC 帳號](../../member/user-guides/member-key-quota/sign-up-for-twcc.md)
 
 ### Step 2. 建立開發型容器
 
-請參考 [開發型容器](https://man.twcc.ai/s/SJlZnSOaN#%E5%BB%BA%E7%AB%8B%E9%96%8B%E7%99%BC%E5%9E%8B%E5%AE%B9%E5%99%A8) 並依據下方設定，於 TWCC 建立開發型容器：
+請參考 [開發型容器](../user-guides/create-connect/create-container.md) 並依據下方設定，於 TWCC 建立開發型容器：
 
 ```
 映像檔類型： TensorFlow 18.12
@@ -37,7 +37,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorfl
 
 ### Step 3. 連線容器、下載訓練程式
 
-- 參考 [連線容器](https://www.twcc.ai/doc?page=container#連線使用方式)，使用 Jupyter Notebook 或 SSH 連線進入容器之預設儲存空間
+- 參考 [連線容器](../user-guides/create-connect/connect-container.md)，使用 Jupyter Notebook 或 SSH 連線進入容器之預設儲存空間
 
 
 - 輸入以下指令，將 [TWCC GitHub](https://github.com/TW-NCHC/AI-Services/tree/V3Training) Inception v3 影像模型訓練的架構程式，下載至容器
@@ -87,7 +87,7 @@ bash V3_training.sh --path ./cifar-10-python.tar.gz
 
 ### Step 1. 連線容器
 
-請再次 [連線進入容器](https://www.twcc.ai/doc?page=container#連線使用方式)
+請再次 [連線進入容器](../user-guides/create-connect/connect-container.md)
 
     
 ### Step 2. 生成推論辨識引擎 

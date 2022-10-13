@@ -6,7 +6,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howo-lb-convert-ce
 
 # Convert SSL certificate format
 
-The SSL certificate of the TWCC Load Balancing (HTTPs with SSL) service adopts Base64 encoding format. This article will help users to combine SSL certificate files into PKCS #12 and convert to Base64 encoding format.
+The SSL certificate of the TWCC Load Balancing (HTTPs with SSL) service adopts Base64 encoding format. This document will help users to combine SSL certificate files into PKCS #12 and convert to Base64 encoding format.
 
 <br/>
 
@@ -21,7 +21,7 @@ The SSL certificate of the TWCC Load Balancing (HTTPs with SSL) service adopts B
 
 ### Linux
 
-1. Open the terminal, and enter the following command to combine the 3 obtained certificate files into PKCS #12 format
+1. Open the terminal, and enter the following command to combine the 3 obtained certificate files into PKCS #12 format.
     ```
     openssl pkcs12 -export -out server.p12 -inkey server.key -in server.crt -certfile ca.crt
     ```
@@ -31,12 +31,13 @@ The SSL certificate of the TWCC Load Balancing (HTTPs with SSL) service adopts B
     Enter Export Password:
     Verifying - Enter Export Password:
     ```
-    
-2. Then convert the combined `.p12` file into Base64 encoding
+
+2. Then convert the combined `.p12` file into Base64 encoding.
     ```
     base64 server.p12 | tr -d \\n 
     ```
-3. Copy the Base64 encoded output
+
+3. Copy the Base64 encoded output.
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d2645cf8c4d128ffb9a4b5938adf56ef.png)
 
 <br/>
@@ -64,6 +65,5 @@ The SSL certificate of the TWCC Load Balancing (HTTPs with SSL) service adopts B
     openssl base64 -in server.p12 -out server.txt
     ```
   
-3. Open the Base64 encoded output file and copy the contents of the `server.txt` file
-    
+3. Open the Base64 encoded output file and copy the contents of the `server.txt` file.
     ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_63a0eeb1b5ca73dcda4a085afd55581d.png)

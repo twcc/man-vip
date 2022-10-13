@@ -11,7 +11,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-
 
 
 
-TWCC provides ready-to-use working environment of NGC optimized Cognitive Toolkit™. The NVIDIA Deep Learning SDK accelerates widely-used deep learning frameworks such as the Microsoft® Cognitive Toolkit™ , formerly referred to as CNTK. The Microsoft Cognitive Toolkit empowers you to harness the intelligence within massive datasets through deep learning by providing uncompromised scaling, speed and accuracy with commercial-grade quality and compatibility with the programming languages and algorithms you already use.
+TWCC provides ready-to-use working environment of NGC optimized Cognitive Toolkit™. The NVIDIA Deep Learning SDK accelerates widely-used deep learning frameworks such as the Microsoft® Cognitive Toolkit™, formerly referred to as CNTK. Microsoft Cognitive Toolkit empowers you to harness the intelligence within massive datasets through deep learning by providing uncompromised ans commerciral-grade quality (scaling, speed and accuracy) and the compatibility with the programming languages and algorithms you already work with.
 
 <br/>
 

@@ -15,9 +15,9 @@ import TabItem from '@theme/TabItem';
 
 ## 準備工作
 
-- 建立[開發型容器](create-container.md)。
+- [建立開發型容器](./create-container.md)。
 - 若選擇使用 TWCC 入口網站操作，容器建立後，請於「**開發型容器管理頁**」點選欲連線的容器，進入「**開發型容器詳細資料頁**」。
-- 若選擇使用 TWCC CLI 操作，請先取得[容器 ID](../manage-monitor/manage-container.md)。
+- 若選擇使用 TWCC CLI 操作，請先取得[容器 ID](../manage-monitor/manage-container.md#檢視資訊)。
 
 <br/>
 

@@ -32,5 +32,5 @@ import TOCInline from '@theme/TOCInline';
 
 
 :::caution
-You've reached the end of the tutorial! If you have any questions or suggestions, feel free to contact isupport@twcc.ai, thank you!
+You've reached the end of the tutorial! If you have any questions or suggestions, feel free to contact <ins><a href = "isupport@twcc.ai">isupport@twcc.ai</a></ins>, thank you!
 :::

@@ -14,7 +14,7 @@ Basic Virtual Firewall (BVF) provides a simple and flexible architecture that bu
 
 
 :::info
-For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, see [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-en#%E5%9F%BA%E7%A4%8E%E8%99%9B%E6%93%AC%E9%98%B2%E7%81%AB%E7%89%86).
+For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-en#%E5%9F%BA%E7%A4%8E%E8%99%9B%E6%93%AC%E9%98%B2%E7%81%AB%E7%89%86).
 :::
 
 
@@ -24,15 +24,20 @@ For the permission differences between a Tenant Admin and a Tenant User when usi
 
 ## Create BVFs
 
- * Under **Services**, select **Basic Virtual Firewall (BVF)**, and select **＋CREATE** on the **Basic Virtual Firewall Management** page. 
+ * Under **Services**, select **Basic Virtual Firewall (BVF)**, and select **＋CREATE** on the **Basic Virtual Firewall Management** page.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_37bb67321fe603b9c74a74dd5ae39bb8.png)
-
-
-* Enter a name for the firewall, and then click **NEXT:RULE**.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6668cf5d5b790061f3efb1764915cd95.png)
 
 :::tip
-You can skip this step if you already created the required rules via Security Group. After setting the **NETWORK**, select the VCS instance IP in **ADVANCEDRULE** to synchronize the Security Group rules to the firewall automatically.
+You can click on the asterisk to the left of the service in "**All Services**" <i class="fa fa-star-o" aria-hidden="true"></i> and pin your frequently used services to "**My Favorite Services**" to speed up the process.
+:::
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_36bd577def63d4503c7e96dfaba66aea.png)
+
+* Enter a name for the firewall, and then click **NEXT: RULE**.
+
+:::tip
+You can skip this step if you have already created the required rules via Security Group. After selecting the **NETWORK**, select the VCS instance IP in **ADVANCEDRULE** to synchronize the Security Group rules to the firewall automatically.
 :::
 
 
@@ -63,41 +68,28 @@ If configured without specifying, the default is **Any** for destination IP, des
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8ae6ec03f507390849b997d61598a200.png)
 
-
-    
 * Once added to the list, the firewall rule will be displayed to the list below.
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_94d58d0c0e505fd3a3a72c6267f75c7b.png)
 
-
-
-
 * Repeat the above steps to create more firewall rules you need. You can also click the firewall rule list to select other firewall rules in the project.
-    
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3db9790f79cc6602d410d566809a893a.png)
 
-
-
-
-* When done, click the arrow on the right to adjust the priority of the rules. Click **NEXT:NETWORK** when you are ready.
+* After setting the rules, click the arrow on the right to adjust the priority of the rules. Click **NEXT:NETWORK** when you are ready.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1bebfde14baed80390409cfc43988e81.png)
-
-
 
 :::info
 Higher priority rules will override lower priority rules.
 :::
 
-
-
 :::caution
-If you do not select any firewall rule, the system will default the firewall rule to **deny all traffic**. Therefore, once the firewall is created, it blocks all incoming traffic to any VCS instance within the network.
+If no firewall rule is selected, the system will default the firewall rule to **deny all traffic**. Therefore, once the firewall is created, it blocks all incoming traffic to any VCS instance within the network.
 :::
 
 
-* When done, click **NEXT: ADVANCEDRULE**. In this step, you can synchronize Security Group rules of VCS instances to the firewall (SyncRule).
+* After selecting the network, click **NEXT: ADVANCEDRULE**. In this step, you can synchronize Security Group rules of VCS instances to the firewall, where a corresponding rule is also automatically created (SyncRule).
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1341d832e30dcdb6f0c15783aee3b5c1.png)
 
@@ -113,7 +105,7 @@ The firewall only applies to the instances in the selected Virtual Network. In o
 
 
 
-* Click the list to see the Security Groups rules of the VCS instance, and select the rules you need. Then, select **NEXT:REVIEW&CREATE**.      
+* Click the list to see the Security Groups rules of the VCS instance, and select the rules you need. Then, click **NEXT: REVIEW&CREATE**.
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_40b2c19502f8a2719c255bdca19d4b61.png)
 
@@ -153,7 +145,7 @@ The firewall only applies to the instances in the selected Virtual Network. In o
 
 
 
-* When done, the firewall will enter in the **`PENDING_UPDATE`** state. The new settings take effect when it enters in the **`ACITVE`** state after a few minutes.
+* After finishing editing, the firewall will enter the **`PENDING_UPDATE`** state. The new settings take effect when it enters the **`ACITVE`** state after a few minutes.
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e51c582e4b77a56e74f2f35b80176bf9.png)

@@ -37,7 +37,7 @@ Basic Configuration: type c.super
 
 ### Step 3. Connect to the container, download the training program
 
-- See [Connection method](https://www.twcc.ai/doc?page=container#連線使用方式), and using Jupyter Notebook or SSH to connect to the default storage space of the container.
+- Refer to [Connection method](https://www.twcc.ai/doc?page=container#連線使用方式), and using Jupyter Notebook or SSH to connect to the default storage space of the container.
 
 
 - Enter the following command to download the framework program of [TWCC GitHub Inception v3](https://github.com/TW-NCHC/AI-Services/tree/V3Training) for image recognition model training to the container.
@@ -50,7 +50,7 @@ git clone https://github.com/TW-NCHC/AI-Services.git
   
 ### Step 4. Conduct AI model training
  
- - Enter the **Tutorial_Three** directory
+ - Enter the "**Tutorial_Three**" directory
  
 ```bash
  cd AI-Services/Tutorial_Three
@@ -64,12 +64,10 @@ bash V3_training.sh --path ./cifar-10-python.tar.gz
 
 - The following message in the terminal indicates that the training job is about to start.
 
-:::caution
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_73e007a0bba2a9291a54bd03dd260893.png)
-:::
 
  
-- During the training, you can view the resource usage of CPU/GPU, memory, and network on the **Interactive Container Details** page
+- During the training, you can view the resource usage of CPU/GPU, memory, and network on the "**Interactive Container Details**" page
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ac448244502db32c89da844e30e525bf.png)
 
@@ -88,7 +86,7 @@ The following tutorial demonstrates how to use the trained model to build an inf
 
 ### Step 1. Reconnect to the container
 
-See [Reconnect to the container](https://www.twcc.ai/doc?page=container#連線使用方式).
+Please [connect to the container](https://www.twcc.ai/doc?page=container#連線使用方式) again.
 
     
 ### Step 2. Build an inference engine
@@ -122,18 +120,11 @@ bash V3_inference.sh
 
 - Click **Select File** to select the image file which content is to be recognized, and click **Upload** to upload the image.
 
-:::caution
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b40825dec8c84270d4f3575d8a832fd0.png)
-
-:::
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_def03a869c84683de2a1b1a4ae6dbe69.png)
 
 - Using [Cat pictures](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8dc7172e7891a230d3932a7e987b55e1.jpg) as a test example, the result of image recognition and the similarity value are displayed in the browser, which is the most similar to Egyptian_cat (0.49293482)
 
-
-:::caution
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2ac40d331173b3fc77b5d9acb5959f9b.png)
-:::
 
 
 ### Step 4. Delete the container and recycle resources

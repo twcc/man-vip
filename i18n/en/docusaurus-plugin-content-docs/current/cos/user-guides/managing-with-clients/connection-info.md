@@ -6,12 +6,6 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-connect-
 
 # Connection information
 
-Follow the steps to obtain the connection information (URL of the entry point, access Key, secret Key) of the public space and private space, and you can also update, delete, and create your keys.
-
-
-
-## Public COS
-
 - Enter Third-party Software page to obtain the connection information of public COS, including URL (use SSL): cos.twcc.ai, Access Key and Secret Key.
 
 

@@ -22,7 +22,7 @@ Go to [S3 Browser official website](http://s3browser.com/), click **Download S3 
 
 ### Connect to COS
 
-- See [this document ](https://man.twcc.ai/@preview-twccdocs/guide-cos-connect-info-en) to get connection information.
+- Refer to [this document ](https://man.twcc.ai/@preview-twccdocs/guide-cos-connect-info-en) to get connection information.
 - After installation, open S3 Browser, set the connection information of TWCC COS account, Account Type must select **S3 Compatible Storage**, and then set the REST Endpoint according to the connection information provided on the Third-party Software page (cos.twcc .ai), Access Key and Secret Key.
 　　
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b656bd68c28442741aeaa3b2760c0eeb.png)

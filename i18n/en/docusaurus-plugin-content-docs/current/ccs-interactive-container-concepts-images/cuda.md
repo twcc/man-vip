@@ -11,7 +11,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-
 # <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b3382d3255e279896320ff106a1565d.png' /> CUDA
 
 
-TWCC provides ready-to-use working environment of NGC’s CUDA. CUDA® is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. Its platform is designed to work with programming languages such as C, C++, and Fortran. This accessibility makes it easier for specialists in parallel programming to use GPU resources.
+TWCC provides ready-to-use working environment of NGC’s CUDA. CUDA® is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use CUDA-enabled graphics processing units (GPUs) for general purpose processing. Its platform is designed to work with programming languages such as C, C++, and Fortran. This accessibility makes it easier for specialists in parallel programming to use GPU resources.
 
 <br/>
 
@@ -19,7 +19,7 @@ TWCC provides ready-to-use working environment of NGC’s CUDA. CUDA® is a para
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">Image version information</span> 
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6481ced697382199ee8d54cac48051f5.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0b44acff00d30a61f107c6ec09513f3f.png)
 
 
 <details class="docspoiler">

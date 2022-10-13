@@ -4,31 +4,30 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-tensorflow-vi
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorflow-visualize-data-distribution-en' 
 ---
 
-# Visualize data distribution-implement Linear-Regression with TensorFlow
+# Visualize data distribution - implement Linear-Regression with TensorFlow
 
 
 ## 1. Using Jupyter Notebook (Python)
 
 ### Step 1. Sign in TWCC
 
-- If you don’t have an account yet, please refer to [Sign up for a TWCC account](https://www.twcc.ai/doc?page=register_account).
+- If you don’t have an account yet, please refer to [Sign up for a TWCC account](https://man.twcc.vip/en/docs/member/user-guides/member-key-quota/sign-up-for-twcc/).
 
 <br/>
 
 ### Step 2.  Create an Interactive Container
 
-- Please refer to [Interactive Container](https://www.twcc.ai/doc?page=container#建立開發型容器) to create a Interactive Container.
-- Please select TensorFlow for the image type (For image, please select a version with Python 2 before 19.08 (`not including 19.08`)).
+- Please refer to [Interactive Container](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/create-an-interactive-container) to create an Interactive Container, and select TensorFlow for the image type (For image, please select a version with Python 2 before 19.08 (`not including 19.08`)).
 
 <br/>
 
 
 ### Step 3. Connect to the Container
 
-- Use Jupyter Notebook to connect the container and add Python 2 notebook
+- Use Jupyter Notebook to connect the container and add a Python 2 notebook.
 
 :::info
-:book: See [Connection method](https://www.twcc.ai/doc?page=container#連線使用方式)
+:book: See [Connection method](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/connect-to-your-container/#jupyter-notebook)
 :::
 
 <br/>
@@ -36,7 +35,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorfl
 
 ### Step 4. Execute Linear-Regression program
 
-- Copy and paste the following code to Jupyter Notebook
+- Copy and paste the following code to Jupyter Notebook.
 
 ```python
 %matplotlib inline
@@ -89,7 +88,7 @@ for step in range(201):
 
 ### Step 5. Visualize data distribution
 
-- TensorFlow will slowly find the weight value of fitting and draw a linear regression line
+- TensorFlow will slowly find the fitting weights and draw a linear regression line.
 
 :::info 0 [-0.7029411] [0.33094117]
 <img style={{'background-color':'white'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fb0b79090def125ce1173c78dad6362a.png"/>
@@ -106,7 +105,7 @@ for step in range(201):
 ## 2. Using SSH or Jupyter Notebook (Terminal) for connection
 
 :::info
-:bulb: The following example is from [TensorFlow Official Tutorial](https://www.tensorflow.org/api_guides/python/regression_examples)
+:bulb: The following example is based on the official TensorFlow tutorial.
 :::
 
 <br/>
@@ -114,7 +113,7 @@ for step in range(201):
 ### Step 1. Using SSH to log in or open Jupyter Notebook (Terminal)
 
 :::info
-:book: See [Using Jupyter Notebook](https://www.twcc.ai/doc?page=container#使用-Jupyter-Notebook)
+:book: See [Using Jupyter Notebook](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/connect-to-your-container/#jupyter-notebook)
 :::
 
 <br/>
@@ -157,8 +156,7 @@ cd tensorflow/examples/get_started/regression
 python linear_regression.py
 ```
 
-- The following message will be output during the computing:
-
+- The following message will be output during the computation:
     - Check point directory: You can use the TensorBoard tool to visualize neural networks and analyze training trends
     - The loss value after every 100 iterations, which helps to determine whether the model training has converged
 

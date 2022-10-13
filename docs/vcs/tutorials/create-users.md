@@ -14,7 +14,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-create-u
 
 ### Step 1. 新增使用者帳號密碼
 
-- 使用鑰匙對[連線進入虛擬運算個體](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh)
+- 使用鑰匙對[連線進入虛擬運算個體](../user-guides/connecting/linux/from-windows.md)
 - 使用以下指令新增 1 個使用者帳號 (您可依需求新增更多使用者)，並輸入密碼及相關個人資訊
 
 ```bash

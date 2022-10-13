@@ -26,7 +26,7 @@ TWCC 不負責紀錄及管理您的鑰匙對，建立後請務必下載並妥善
 
 **1. 於建立虛擬運算個體時建立**
 
-- 您可於[建立虛擬運算個體](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh)時，於「鑰匙對」頁籤建立鑰匙對。
+- 您可於[建立虛擬運算個體](./create/create-instances.md)時，於「鑰匙對」頁籤建立鑰匙對。
 
 **2. 於鑰匙對管理頁建立**
 
@@ -115,7 +115,7 @@ twccli ls key
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bbfda9c9b2de52067e3d6f1e67687404.png)
 
-- 或點選鑰匙對旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**刪除**」。
+- 或點選鑰匙對旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 > 點選「**刪除**」。
 - 或進入「**鑰匙對詳細資料**」頁 > 點選上方「**刪除**」。
 
 </TabItem>

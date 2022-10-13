@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
 
 :::info
 - <sup>**</sup> 在登入節點當機時，若使用 `srun` and `salloc` 指令提交 job 可能會造成計算中斷或資料流失，因此建議使用 `sbatch` 指令運行大規模計算工作。
-- <sup>***</sup>TWCC 也提供用戶以 `rsync` 指令傳輸檔案，傳輸大量檔案使用體驗佳。但由於系統無提供 `rsync` 之傳輸紀錄，若有資安疑慮恐無法追查。若您同意承擔使用風險並授權 TWCC 開啟 `rsync` 功能，請您向 <ins><a href="isupport@twcc.ai"></a>isupport@twcc.ai</ins> 提出需求。
+- <sup>***</sup> TWCC 也提供用戶以 `rsync` 指令傳輸檔案，傳輸大量檔案使用體驗佳。但由於系統無提供 `rsync` 之傳輸紀錄，若有資安疑慮恐無法追查。若您同意承擔使用風險並授權 TWCC 開啟 `rsync` 功能，請您向 <ins><a href="isupport@twcc.ai"></a>isupport@twcc.ai</ins> 提出需求。
 :::
 
 

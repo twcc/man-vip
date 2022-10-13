@@ -17,7 +17,7 @@ TWCC 提供以下加值的**安全服務**，用以加強資源使用的資訊�
 
 <!--- - <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_97b051a42f32d34e7fafe51f81f8cb63.png" width="30" heigh="30"> **Web 應用程式防火牆**：使用 WAF 保護網站伺服器，避免網頁應用程式遭到網路攻擊導致服務受到影響或是資料損失。-->
 
-除了提供以上可靠的加值安全服務，TWCC 重視客戶的信任，平台系統每年強化資安機制與政策以獲得國際資安認證（見下方 [<i class="fa fa-certificate" aria-hidden="true"></i>TWCC 資安國際認證](##-TWCC-資安國際認證)、[<i class="fa fa-shield" aria-hidden="true"></i> TWCC 資安系統與機制](#-TWCC-資安系統與機制)），取得政府、教育、醫療單位、科技公司用戶之合作機會，為多元的客戶管理機敏資料。
+除了提供以上可靠的加值安全服務，TWCC 重視客戶的信任，平台系統每年強化資安機制與政策以獲得國際資安認證（見下方 [<i class="fa fa-certificate" aria-hidden="true"></i>TWCC 資安國際認證](#-twcc-資安國際認證)、[<i class="fa fa-shield" aria-hidden="true"></i> TWCC 資安系統與機制](#-twcc-資安系統與機制)），取得政府、教育、醫療單位、科技公司用戶之合作機會，為多元的客戶管理機敏資料。
 
 <br/>
 
