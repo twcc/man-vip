@@ -7,7 +7,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-overview-zh'
 ---
 
 
-# ![-](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0b81080da8a39866cd1e0aa0471e9552.png) 服務概觀
+# <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0b81080da8a39866cd1e0aa0471e9552.png" width="35" height="25"/> 服務概觀
+
 
 
 ## 容器運算服務 (CCS) 可快速部署 GPU 處理器的工作環境，提高工作效率！
@@ -16,7 +17,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-overview-zh'
 
 <br/>
 
-### ![-](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9031b03afa1291f2d95f9dbc60cf2948.png) 輕鬆使用服務
+### <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9031b03afa1291f2d95f9dbc60cf2948.png" width="35" height="25"/> 輕鬆使用服務
 <!-- <img style={{width:35+'px', height:25+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9031b03afa1291f2d95f9dbc60cf2948.png'/>  -->
 
 
@@ -24,21 +25,21 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-overview-zh'
 
 <br/>
 
-### ![-](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_afd344f9a1b3d0567f83a250da8b8d26.png) 快速部署工作環境
+### <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_afd344f9a1b3d0567f83a250da8b8d26.png" width="35" height="25"/> 快速部署工作環境
 <!-- <img style={{width:35+'px', height:25+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_afd344f9a1b3d0567f83a250da8b8d26.png'/>  -->
 
 採用 Kubernetes 架構，並導入 Nvidia 優化 AI 軟體堆疊，串接與世界接軌的虛擬化技術，短時間內便能快速部署開發工作環境，相較於傳統的方式可節省 3 倍的時間，並能彈性地轉換平台。
 
 <br/>
 
-### ![-](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d404fdf4e28033ae3c6185c87888ab51.png) 多樣化的 AI 框架
+### <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d404fdf4e28033ae3c6185c87888ab51.png" width="35" height="25"/> 多樣化的 AI 框架
 <!-- <img style={{width:35+'px', height:25+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d404fdf4e28033ae3c6185c87888ab51.png'/> -->
 
 提供 Nvidia 優化之     TensorFlow、PyTorch、CUDA、Matlab (BYOL)、Caffe、CNTK、MXNet、Caffe2、TensorRT、Triton Inference Server、Theano、Torch、DIGITS、NeMo、Clara Train SDK、RAPIDS、Merlin Training、Merlin Inference 等等的 AI 框架，無需費心安裝，並能滿足不同模型訓練與推論的需求。
 
 <br/>
 
-### ![-](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cb712cc256270388197b36fdb9757d68.png)不同的容器選擇
+### <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cb712cc256270388197b36fdb9757d68.png" width="35" height="25"/> 不同的容器選擇
 <!-- <img style={{width:35+'px', height:25+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cb712cc256270388197b36fdb9757d68.png'/>  -->
 
 - 開發型容器可搭配 Jupyter Notebook 編寫程式，線上除錯、運算，行動裝置也能完成工作，隨時掌握進度。
@@ -46,14 +47,14 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-overview-zh'
 
 <br/>
 
-### ![-](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_22d79d4fc2df0425c3f9c9e1e0591396.png) 安全、快速的儲存系統
+### <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_22d79d4fc2df0425c3f9c9e1e0591396.png" width="35" height="25"/> 安全、快速的儲存系統
 <!-- <img style={{width:35+'px', height:25+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_22d79d4fc2df0425c3f9c9e1e0591396.png'/>  -->
 
 提供高吞吐量的高速檔案系統加速運算，亦可使用雲端物件儲存系統，資料能安全儲存，無需擔心資料遺失。
 
 <br/>
 
-### ![-](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b5b69c51d21e91a714e4152465fed59e.png) 多項底層優勢
+### <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b5b69c51d21e91a714e4152465fed59e.png" width="35" height="25"/> 多項底層優勢
 <!-- <img style={{width:35+'px', height:25+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b5b69c51d21e91a714e4152465fed59e.png'/>  -->
 
 
