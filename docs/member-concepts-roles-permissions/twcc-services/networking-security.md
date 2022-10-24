@@ -23,12 +23,12 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-netndsec-zh'
 
 | 功能 | 租戶管理員 | 租戶使用者 |
 | -------- | -------- | -------- |
-|建立個人虛擬運算個體之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|建立專案所有虛擬運算個體之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|檢視個人虛擬運算個體之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視專案所有虛擬運算個體之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|刪除個人虛擬運算個體之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|刪除專案所有虛擬運算個體之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|建立個人虛擬運算個體 / 負載平衡器之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|建立專案所有虛擬運算個體 / 負載平衡器之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|檢視個人虛擬運算個體 / 負載平衡器之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|檢視專案所有虛擬運算個體 / 負載平衡器之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|刪除個人虛擬運算個體 / 負載平衡器之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|刪除專案所有虛擬運算個體 / 負載平衡器之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 
 ## 負載平衡
 
