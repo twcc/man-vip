@@ -1,43 +1,48 @@
 ---
 sidebar_position: 3
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-manage-disk-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-manage-disk-zh' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-manage-disk-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-manage-disk-en' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 檢視/連結/刪除資料磁碟
+# Manage data disks
 
-**資料磁碟** 建立後，您可以檢視磁碟資料、將磁碟連結至虛擬運算個體 (或與個體分離)、刪除磁碟。<br/>(*※ 系統磁碟目前不支援以下管理功能*)
+After a **data disk** is created, you can view the disk information, attach the disk to (or detach it from) a VCS instance, and delete the disk.<br/>
+(*※ System disk currently does not support the following management functions*.)
 
 :::info
-租戶管理員、租戶使用者對於虛擬磁碟使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/storage.md#虛擬磁碟服務)。
+For the differences between Tenant Admins and Tenant Users using VCS instance, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-en#%E8%99%9B%E6%93%AC%E7%A3%81%E7%A2%9F%E6%9C%8D%E5%8B%99).
 :::
+
 
 <br/>
 
-## 檢視磁碟
 
-檢視您的資料磁碟建立時間、ID、名稱、容量、類型、狀態、已連結之虛擬運算個體、掛載的路徑。
+## View data disks
+
+View the ID, created time, name, size, type, state, description, attached VCS instance, and mount path of your data disk.
 
 <Tabs>
 
-<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
+<TabItem value="TWCC Portal" label="TWCC Portal">
 
-- 進入「**資料磁碟管理**」頁，可檢視磁碟概略資訊。
+- Enter **Data Disk Management** page, then you can view the summary information of the disk. 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5d355da56d7b0dd4c1d31b98abe388ac.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bd8f238dd56b9bd437f4b3c2dbbbccbf.png)
 
-- 若點選您的資料磁碟，進入「**資料磁碟詳細資料**」頁，則可檢視詳細的磁碟資訊。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2c8742497a8cf2272b14d8fd77964bfd.png)
+- Click on one of your data disks and enter the **Data Disk Details** page, then you can view the detailed disk information.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a56cfee1ff28f578bff894daed2d5a62.png)
+
 
 </TabItem>
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-- 檢視磁碟 ID、名稱、建立時間、掛載路徑、容量、狀態、類型。
+- View the ID, name, created time, mount path, size, state and type of the disk.
 
 ```bash
 twccli ls vds
@@ -49,46 +54,42 @@ twccli ls vds
 
 </Tabs>
 
+
 <br/>
 
 
-## 連結至虛擬運算個體
+## Attach to VCS instances
 
-資料磁碟建立好後，需先與虛擬運算個體連結，連結後進入虛擬運算個體，將磁碟初始化後才可使用。
+After a data disk is created, you need to attach it to a VCS instance and initialize it in the VCS instance before using it.
 
 <Tabs>
 
-<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
+<TabItem value="TWCC Portal" label="TWCC Portal">
 
-*  資料磁碟建立後，會出現在資料磁碟管理列表的最上方，等待其狀態變成 **`AVAILABLE`** 後即可開始連結至個體使用。
+* The newly created data disk will appear at the top of the Data Disk Management list. When it enters the **`AVAILABLE`** state, you can attach it to an instance and use it.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6f7c1cc7ccb72aebc2efda985d717abf.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6da326c54d62392da23c299de1f3ed25.png)
 
+* Click the list to enter Data Disk Details page, and click **ATTACH**.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f025c6f70f0b5daa88ec8ea0dd3ee0dc.png)
 
-* 點擊該列表進入資料磁碟詳細資料頁面，點擊「**連結**」。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2f6a1a074dcc0abaf7d0fa34b5a05518.png)
-
-
-
-* 出現「**連結磁碟**」視窗後，選擇欲連結的虛擬運算個體後按下「**確定**」。
+* When **Attach Disk** window pops up, select the VCS instance you want to attach to and click **OK**.
 
 :::info
-下拉選單僅顯示可連結資料磁碟 (狀態非 **`Stopped`**) 的虛擬運算個體。 
+The drop-down list only displays VCS instances that can be attached with data disks (in a state other than **`Stopped`**).
 :::
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1ed0015b5ca27424909117bac12777e6.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5025d37d70ede7ec72f9cd05fba6fa44.png)
+* After the data disk is attached to the VCS instance, you can click **REFRESH**. The attached instance will be displayed in the section below, the disk will be in the **`IN-USE`** state.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d79c9ac00e3961f1b1f23c7ed57883b5.png)
 
-* 資料磁碟連結至虛擬運算個體後，可按一下「**重新整理**」，已連結的個體會顯示在下方的區塊中，磁碟狀態將顯示 **`IN-USE`**。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fa75bdb78bc52059698a1e40d540a0da.png)
 
 </TabItem>
 
-<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
+<TabItem value="TWCC CLI" label="TWCC CLI (Not yet supported)">
 
 <br/>
 
@@ -96,73 +97,86 @@ twccli ls vds
 
 </Tabs>
 
+<br/>
+
 
 :::info
-1. 若需改為使用其他類型的磁碟，或需變更磁碟容量，請參考：[<ins>變更資料磁碟</ins>](../../tutorials/replace-data-disk.md)。
-2. 資料磁碟連結至虛擬運算個體後，需經初始化才能使用，步驟請參考：
-- [<ins>初始化磁碟- Linux 個體</ins>](../../tutorials/data-disk-init-linux.md)
-- [<ins>初始化磁碟- Windows 個體</ins>](../../tutorials/data-disk-init-windows.md)
+1. To change disk types or disk sizes, please refer to [<ins>HowTo: Change data disk</ins>](https://man.twcc.ai/@twccdocs/howto-bss-replace-data-vol-en).
+2. After the data disk is attached to the VCS instance, you need to initialize it before using it. For the steps, please refer to: 
+- [<ins>HowTo: Initialize data disk- Linux instance</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-en)
+- [<ins>HowTo: Initialize data disk- Windows instance</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-en)
 :::
 
-<br/>
-
-## 自虛擬運算個體分離
-
-若需刪除資料磁碟，或需與其他虛擬運算個體連結，請先將磁碟自原虛擬運算個體分離，再執行其他動作。
-
-卸載、分離資料磁碟詳細步驟，請參考[分離資料磁碟](./detach-data-disks.md)。
 
 <br/>
 
 
-## 刪除資料磁碟
+## Detach from VCS instances
 
-當磁碟不需使用時，您可刪除磁碟。刪除後即<ins>**不再計費**</ins>。
+To delete a data disk or attach it to another VCS instance, please detach it from the original VCS instance before performing other operations.
+
+
+For detailed steps of unmounting and detaching data disks, please refer to [Detach data disks](https://man.twcc.ai/@twccdocs/vcs-vds-guide-detach-data-disk-en).
+
+
+<br/>
+
+
+
+## Delete data disks
+
+You can delete a disk when it is no longer in use. Once deleted, <ins>**it will not be billed anymore**</ins>.
+
 
 :::caution
-1. 删除資料磁碟前請注意，磁碟一旦删除將無法挽回。
-1. 若資料磁碟的狀態為 **`IN-USE`** 必須先將該磁碟自虛擬運算個體分離，狀態變成 **`AVAILABLE`** 後，才能刪除。
-2. 當資料磁碟的快照存在時，將無法刪除該磁碟，請您先完成刪除磁碟快照，再刪除磁碟。
+1. Be careful before deleting the data disk. Once the disk is deleted, it cannot be recovered.
+2. If the state of the data disk is **`IN-USE`**, the disk must be detached from the VCS instance and enter the **`AVAILABLE`** state first before it can be deleted.
+3. When a snapshot of the data disk exists, the disk cannot be deleted. Please delete the disk snapshot before deleting the data disk.
 :::
 
 
 <Tabs>
 
-<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
+<TabItem value="TWCC Portal" label="TWCC Portal">
 
-- 進入「**資料磁碟管理**」頁 > 勾選磁碟 > 點選上方「**刪除**」。
+- Enter **Data Disk Management** page > select the data disk(s) you want to delete > click **DELETE** at the top.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_910467bce5c2fd908efdf45c606cdbed.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6d9947298979e85c4062f988994e51e4.png)
 
-- 或點選磁碟旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 > 點選「**刪除**」。
-- 或進入「**資料磁碟詳細資料**」頁 > 點選上方「**刪除**」。
+
+- Or click &nbsp;<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>&nbsp; next to the data disk > click **DELETE**.
+- Or enter **Data Disk Details** page> click **DELETE** at the top.
 
 </TabItem>
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-**指令**
+
+**Command**
+
 
 ```bash
-twccli rm vds -id   # 資料磁碟 ID 
-              [-f]  # 是否強制刪除
+twccli rm vds -id       # Data disk ID 
+              [-f]      # Whether a force deletion
 ```
 
 :::info
-1. **[ ]** 中括號內為選擇性參數，其餘為必要參數。
+1. The parameters in the square brackets **[ ]** are optional and the rest are required.
 :::
+
 
 <br/>
 
-**範例**
+**Examples**
 
-- 刪除 ID 為 `376749` 的資料磁碟
+
+- Delete the data disk with ID `376749`.
 ```bash
 twccli rm vds -id 376749
 ```
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e2a0873513f1cc8f60be01a78ae3b456.png)
 
-- 強制(無警告視窗)刪除 ID 為 `376716` 的資料磁碟
+- Force to delete (without warning) the data disk with ID `376716`.
 
 ```bash
 twccli rm vds -id 376749 -f

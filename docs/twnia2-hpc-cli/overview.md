@@ -1,40 +1,38 @@
 ---
+sidebar_label: 'Service overview'
 sidebar_position: 1
-sidebar_label: '台灣杉二號 (命令列介面)'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/twnia2-overview-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/twnia2-overview-zh'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/twnia2-overview-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/twnia2-overview-en'
 ---
 
+# Service overview
 
-# 服務概觀
+## Taiwania2 - AI supercomputer
 
-## 台灣杉二號 - AI 超級電腦主機
-
-台灣杉二號為 AI 超級電腦主機，共運用 2,016 個 NVIDIA® Tesla® V100 GPU，以 9 PFLOPS（每秒執行 9 千兆次浮點運算) 的優異效能，在 2018 年底公布的[全球 500 大高速計算主機 (TOP500) 中排名第 20 名](https://www.top500.org/system/179590/)，[能源效率（Green500）排名第 10 名](https://www.top500.org/lists/green500/2018/11/)。
+Taiwania2 is an AI supercomputer mainframe, consisting of 2,016 NVIDIA® Tesla® V100 GPU, and has the excellent performance of 9 PFLOPS (9 Peta floating-point operations per second). In 2018, Taiwania2 [ranked 20 of the TOP500 list](https://www.top500.org/system/179590/), and [ranked 10 of the Green500 list](https://www.top500.org/lists/green500/2018/11/).
 
 
 ![](https://twcc-wordpress-file.cos.twcc.ai/wp-content/uploads/2019/09/19130553/1-2.png)
 
 
-為提供多元服務類型，台灣杉二號主機上提供[開發型容器服務](../ccs-interactive-container/overview.md)、[任務型容器服務](../ccs-scheduled-container.md)及 [HPC 高速運算任務](../hpc-job.md)、台灣杉二號(命令列介面) (本服務)。
+Taiwania2 provides various services, including  [Interactive Container](https://man.twcc.ai/@twccdocs/doc-ccs-main-en), [Scheduled Container](https://man.twcc.ai/@twccdocs/HyMqnHupV?type=view),  [HPC Job](https://man.twcc.ai/@twccdocs/HyVzTSOpN?type=view) and Taiwania2 (HPC CLI) (This service).
 
 
-## 台灣杉二號 (命令列介面) - 運算服務
+## Taiwania2 (HPC CLI) - The compute service
 
 
-本運算服務資源由**計算節點**、**高速檔案系統節點**、**登入與資料傳輸節點**組成，服務以 「**Slurm**」 作為資源調度系統，並支援 MPI 功能，為容錯度高、高可擴展性叢集管理系統，適用於大、小型的 Linux 群集，為超級計算機所使用的資源管理器，排程各個使用者工作的優先順序權。
-- 可在一段時間內替用戶分配計算資源的獨佔或非獨占使用
-- 提供管理框架，於計算節點上進行資源的分配、執行與監控
-- 可透過排程管理的工作佇列 (Queueing) 來仲裁資源分配
+Taiwania2 (HPC CLI) compute service consist of the following nodes: **compute**, **Hyper File System node** and **login and data transmission**. Taiwania2 (HPC CLI) uses **Slurm** which is well-suited for different sizes of Linux clusters, supports MPI, and is a fault-tolerant, and highly scalable cluster management and job scheduling system.
+- Allocating exclusive and/or non-exclusive access to resources (compute nodes) to users for some duration of time
+- Providing a framework for starting, executing, and monitoring work on the set of allocated nodes
+- Arbitrating contention for resources by managing a queue of pending work
 
-並搭配 「**Singularity**」容器解決方案來運行容器，用戶可使用本服務提供的 Docker 映像檔來進行相關 AI 運算，並能快速複製、改寫容器映像檔，工作環境維護成本低，並能執行效能卓越的大規模平行運算。
+Moreover, with the **Singularity** container system, users can use the Docker image provided by Taiwania2 to perform AI computing and can quickly copy and change the container image. Singularity performs excellent massively parallel computing with low maintenance.
 
-台灣杉二號 (命令列介面) 整體服務特點：
+Benefits of Taiwania2 (HPC CLI):
 
-- **跨節點調度 GPU，實現高速分散式平行運算**
-    透過 Slurm 資源調度軟體，操作強大的超級電腦 (HPC)，搭配 MPI 程式，能實現跨結點的分散式平行運算，將高負載的工作量平均分派，提升處理效率！
-- **大頻寬網路串連節點，資料傳輸快速**
-    採用100 Gb/s 超高速網路串連GPU主機群，有極高的吞吐量與極低的延遲，解決傳統技術的瓶頸，巨量資料傳輸效率不妥協！
-- **GPU Direct 與 RDMA 架構，極致加速**
-    透過 NVLink 與超高速網路計算 (InfiniBand) 架構的整合，使 RDMA (Remote Direct Memory Access) 技術可大幅提升跨節點的大數據資料傳輸效率，並顯著提高整體運算效率。
-
+- **Multi-node GPU allocation makes high-performance distributed, parallel computing a reality**
+    Using Slurm, resources allocation manager, to operate the powerful HPC can make multi-node parallel computing a reality. Evenly distributing high workload improves processing efficiency.
+- **High bandwidth networks connect nodes for rapid data transmission**
+    Using 100 Gbs high-speed networks to connect GPU clusters produces exceptionally high throughput and extremely low latency, and it solves the bottleneck of traditional technologies. We never compromise on the transmission efficiency of huge-volume data.
+- **Extreme accelerating with GPU Direct and RDMA architecture**
+    The integration of NVLink and InfiniBand makes RDMA (Remote Direct Memory Access) boost multi-node significant data transmission and compute performance.

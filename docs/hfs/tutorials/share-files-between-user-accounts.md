@@ -1,38 +1,41 @@
 ---
 sidebar_position: 7
-sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-hfs-share-files-between-user-accounts-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-hfs-share-files-between-user-accounts-zh'
+GA: UA-155999456-1
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-hfs-share-files-between-user-accounts-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-hfs-share-files-between-user-accounts-en'
 ---
 
-# 跨帳號分享 HFS 檔案
+# Share HFS files between user accounts
 
-此篇文章教學如何在不同帳號之間互相分享 HFS 檔案，您可以：
+This tutorial will walk you through the methods and steps required to share HFS files to other user accounts and access shared files. You can:
 
-1. 上傳並透過 TWCC COS 分享
-    - 其他用戶空間藉由檔案 URL 下載至其空間 
-    - 其他用戶可將 COS 掛載方式存取 (共享資料夾、網路硬碟) 
-2. 開放 HFS 檔案權限
+1. Upload files to TWCC COS and share
+    - Other users can download files via URLs to their space.
+    - Other users can mount COS as a disk to access the files (i.e., a shared folder or a network drive). 
+2. Change HFS file permissions.
 
-請參考以下步驟操作，步驟區分「分享者」如何分享檔案與「其他用戶」如何存取檔案：
+Please refer to the following steps on how to share files (sharer) and steps on how other users access files (other users):
+
  
-## 1. 上傳並透過 TWCC COS 分享檔案
+## 1. Upload files to TWCC COS and share
 
-<b>Step 1. 將檔案上傳至 TWCC COS (分享者)</b>
+### Step 1. Upload files to TWCC COS (sharer)
 
-分享者可透過 [S3 用戶端工具或掛載 COS 的方式](../../twnia2-hpc-cli/tutorials/access-cos.md#1-s3-用戶端工具)，將 HFS 檔案上傳至 COS；或 [將 HFS 檔案備份/同步至 COS](../../cos/tutorials/backup-synchronize-restore.md)。
+Sharers can upload HFS files to COS through [S3 client tools or mounting COS as a disk](https://man.twcc.ai/@twccdocs/howto-twnia2-access-cos-zh); or [Backup/Sync HFS files to COS](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fcosbackup-zh#s3cmd%EF%BC%9A%E9%81%A9%E7%94%A8-VCS-%E5%80%8B%E9%AB%94-Linux%E3%80%81CCS-%E5%AE%B9%E5%99%A8).
 
 
-後續步驟區分以下兩種方式進行：
+
+Next steps:
 
 <details class="docspoiler">
 
-<summary><b>其他用戶空間藉由檔案 URL 下載至其空間</b></summary>
+<summary><b> Other users download files via URLs to their space</b></summary>
 
-<b>Step 2. 取得檔案 URL (分享者)</b>
+### Step 2. Get file URLs (sharer)
 
-透過第三方軟體取得檔案 URL，並將 URL 分享給其他使用者
+Get the file URL through third-party software and share the URL with other users.
     
-(以下以 Cyberduck 為操作範例)
+(The following uses Cyberduck as an operation example)
 
 > ![](https://i.imgur.com/VuuWRhK.png)
 
@@ -40,10 +43,9 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-hfs-share-fi
 > ![](https://i.imgur.com/Pklqlw4.png)
 
 
-<b>Step 3. 將檔案下載自其空間 (其他用戶)</b>
+### Step 3. Download files to your space (other users)
 
-自分享者取得檔案 URL後，輸入以下 `wgwt` 指令即可將檔案下載至其空間 (台灣杉二號 (命令列介面)、虛擬運算個體或容器)
-    
+After obtaining the file URL from the sharer, enter the following `wgwt` command to download the file to your space (TWCC TAIWNIA2 (CLI), VCS, CCS, or other local machines)
 
 ```
 & wget <COS file URL> 
@@ -57,133 +59,143 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-hfs-share-fi
 
 <details class="docspoiler">
 
-<summary><b> 其他用戶可將 COS 掛載方式存取 (共享資料夾、網路硬碟) </b></summary>
+<summary><b> Other users mount COS as a disk to access the files (i.e., a shared folder or a network drive) </b></summary>
 
-<b>Step 2. 將 COS 掛載至 TWNIA2  (其他用戶)</b>
+### Step 2. Mount COS to TWNIA2 (other users)
 
-其他用戶請參考 [<ins>此篇文章</ins>](../../twnia2-hpc-cli/tutorials/access-cos.md) 將分享者的 COS 儲存體視為網路硬碟或共享資料夾，掛載至您的 TWNIA2 （登入節點）或虛擬運算個體後，即可存取使用。
+For other users, please refer to [<ins>this article</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-access-cos-zh) to mount the sharer's COS as a network disk or shared folder. 
     
+Files can be accessed after being mounted to your TWNIA2 (login node) or VCS instances.
     
 </details>
 
 
-## 2. 開放 HFS 檔案權限
+## 2. Change HFS file permissions
     
-以下利用檔案系統支援的 ACL (Access-control list) 進行 HFS 檔案/目錄 權限開放設定，分享者可透過登入台灣杉二號 (命令列介面) 輸入指令操作。
+The following steps change the permissions of HFS files/directories through the ACL (Access-control list) enabled on the file system.
+
+The sharer can log in to TWNIA2 (CLI) to enter commands to change file permissions.
 
 :::caution   
-- 此為進階分享方法，設定錯誤容易造成資料外洩。考量資安問題，較建議您使用上述方法，透過 COS 分享檔案。
-- 此方法僅開放檔案權限，非轉移檔案。因此開放權限後，檔案容量仍佔用分享者的儲存空間。
-- 請先連線進入登入節點，以執行開放檔案權限設定。
-:::
-
-:::info    
-參考資料：[<ins>國網中心</ins>](https://iservice.nchc.org.tw/nchc_service/nchc_service_qa_single.php?qa_code=662)
+- This is an advanced method, and incorrect settings can lead to data leakage. Considering information security issues, it is recommended that you use the above method to share files through COS.
+- This method only changes file permissions and does not transfer files. Therefore, the files keep occupying the storage space of the sharer after the permission is changed.
+- Please connect to the login node before you changing the file permission.
+     
 :::
     
-### UNIX 檔案權限說明
+    
 
-使用 `ls -l` 指令，可以檢視檔案的資訊，其中第一欄表示 Owner、Group、Other (非 Owner 或 Group) 對於該檔案/目錄，所具有的權限，舉例：`-rw-r--r--`，說明如下：
+:::info  
+Reference：[<ins>NCHC</ins>](https://iservice.nchc.org.tw/nchc_service/nchc_service_qa_single.php?qa_code=662)
+:::
+    
+### UNIX file permissions
+    
+Use the `ls -l` command to view the information of the file. The first column indicates the permissions of Owner, Group, Other (not Owner or Group) for the file/directory, for example: `-rw-r-- r--`, the permission escription is as follows:
 
-| 第 1 欄 | 第 2~4 欄| 第 5~7 欄| 第 8~10 欄|
+| Column 1 | Column 2-4| Column 5-7| Column 8-10|
 | -------- | -------- | -------- | -------- |
-| `-`：檔案 (`d`: 目錄)    |Owner 具 r、w、x 權限   | Group 具 r 權限    |Other 具 r 權限|
+| `-`：file (`d`: directory)    |Owner has r、w、x permissions   | Group has r permission    |Other has r permission|
 
 
-### 設定 ACL 權限
+### Change ACL permissions
     
 ```
-setfacl [-bkRd] [{-m|-x} ACL參數] 目標檔名
+setfacl [-bkRd] [{-m|-x} ACL parameter] target_file_name
 ```
 
-#### 指令
+#### Commands
     
-- `setfacl`：設定/移除 檔案/目錄 的 ACL 權限
+- `setfacl`：set/remove the ACL permissions of a file/directory
 
-#### 參數
- 
-- `-m` ：設定後續的 ACL 參數給檔案使用，不可與 `-x` 合用；
-- `-x` ：刪除後續的 ACL 參數，不可與 `-m` 合用；
-- `-b` ：移除『所有的』 ACL 參數；
-- `-k` ：移除『預設的』 ACL 參數，關於所謂的『預設』參數於後續範例中介紹；
-- `-R` ：遞迴設定 ACL，亦即包括次目錄都會一同設定；
-- `-d` ：設定『預設 ACL 參數』。只對目錄有效，在該目錄新建的資料會引用此預設值
+#### Parameters
     
-#### 使用者、群組
+    
+- `-m` sets following ACL parameters to the files. Cannot be used with `-x`;
+- `-x` : deletes following ACL parameters. Cannot be used with `-m`;
+- `-b` : removes "all" ACL parameters;
+- `-k` : removes the "default" ACL parameters. The "default" parameters will be introduced in the following examples;
+- `-R` : sets ACL recursively, that is, the subdirectories will set the same permission;
+- `-d` : sets "Default ACL parameters". Only valid for directorys, the new data in the directory will inherit to this default value.
+    
+#### User and Group
 
-- `-u`：對特定使用者設定權限 (後接主機帳號)
-- `-g`：對所有特定計畫成員設定權限 （後接計畫代碼）
+- `-u`：change files permissions to a specific user (add his/her UNIX account behind)
+- `-g`：change files permissions to members of a project （add project number behind）
 
-#### 權限種類
+#### Permission types
     
-- `r`：讀取權限
-- `w`：修改、寫入權限
-- `x`：`執行某檔案 或 `進入某目錄` 的權限
+- `r`：read permission
+- `w`：edit and write permissions
+- `x`：`execute files` or `enter folders` permissions
 
     
-### 操作範例
-#### 1. 設定 檔案/目錄 ACL 權限 (分享者)
+### Operation examples
+#### 1. Set file/directory ACL permission (sharer)
     
-- 分享「檔案」之 `讀取`及`修改` 權限給指定主機帳號
+- Share the read and write permissions of a file to a specific user (UNIX account).
     
 ```
-setfacl -m u:<主機帳號>:rw <目標檔案>
+setfacl -m u:<UNIX_account>:rw <target_file>
 ```
 
-- 分享「主機帳號的家目錄」`讀取`及`執行` 權限至指定計畫群組
+- Share the read and execute permissions of /home under a UNIX account to a specific project.
+
 ```
-setfacl -m g:<計畫代碼>:rx /home/<主機帳號>
+setfacl -m g:<project_number>:rx /home/<UNIX_account>
 ```
-:::info    
-由於開啟資料夾需要執行權限，故需要加入執行權限 `x` 參數。
+:::info   
+The execute permission `x` parameter is added since opening the folder requires the execute permission. 
 :::
 
-#### 2. 確認檔案已設定 ACL 權限 (分享者)
+#### 2. Check the file ACL permissions has been set (sharer)
     
-- 若權限設定成功，權限欄位將會出現`+`號
+
+    
+- If the permission is set successfully, a `+` sign will appear in the permission column.
     
 ```
-ls -ald /path/<目標檔案 or 目錄> 
+ls -ald /path/<target_file or directory> 
 ```
     
     
 ![](https://i.imgur.com/59x20QD.png)
 
 
-#### 3. 檢視檔案/目錄 ACL 權限 (分享者)
+#### 3. View ACL permissions of file/directory (sharer)
 
 ```
-getfacl <目標檔案 or 目錄>
+getfacl <target_file or directory>
 ```
 
-輸入後您將會取得以下檔案/目錄的權限資訊：
+You will get the following information of a file/directory:
 
 ```
 # file: path/file
-# owner: <檔案擁有者主機帳號>
-# group: <檔案擁有者初始計畫代碼>
+# owner: <UNIX account of the file owner>
+# group: <project number of the file owner>
 user::rwx 
-user:<主機帳號>:rwx (給予目標主機帳號的權限)
+user:<UNUX account>:rwx (permission set to the target user)
 group::---
-group:<計畫代碼>:r-x (給予目標計畫的權限)
+group:<project number>:r-x (permission set to the target project)
 mask::r-x
 other::--- 
 ```
     
-#### 4. 存取檔案 (其他用戶)
-    
-其他用戶於指令列 `cd` 至分享者的主機帳號，即可存取開啟權限的檔案與目錄
+#### 4. Access files (other users)
+
+Other users can enter `cd` command with sharer account to access files or folders. 
     
 ```
-cd <分享者主機帳號> 
+cd <UNIX_account_of_sharer> 
 ```
 
 
-#### 5. 移除檔案/目錄 ACL 權限 (分享者)
+#### 5. Remove ACL permissions of file/directory (sharer)
     
-若檔案、目錄不再分享，執行以下指令即可移除檔案/目錄所有的權限
-    
+If the files or directories are no longer shared, execute the following command to remove all permissions of the files/directories
     
 ```
-setfacl -b <目標檔案 or 目錄>
+setfacl -b <target_file or directory>
 ```
+

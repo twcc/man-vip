@@ -1,20 +1,19 @@
 ---
 sidebar_position: 2
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-gnu-compiler-collection-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-gnu-compiler-collection-zh' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-gnu-compiler-collection-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-gnu-compiler-collection-en'
 ---
 
 
 # GNU Compiler Collection
 
-
-- 套件官網
+- Package official website
   - [GCC](https://gcc.gnu.org)
-- release note
+- Release note
   - [gcc9](https://gcc.gnu.org/gcc-9)
   - [gcc8](https://gcc.gnu.org/gcc-8)
   - [gcc7](https://gcc.gnu.org/gcc-7)
-- 套件來源：下載 [SCL Repository](https://wiki.centos.org/AdditionalResources/Repositories/SCL) 提供的 `devtoolset-{7,8,9}-toolchain` 和 `devtoolset-{7,8,9}-libatomic-devel`
+- Package source: Download [SCL Repository](https://wiki.centos.org/AdditionalResources/Repositories/SCL) provided `devtoolset-{7,8,9}-toolchain` and `devtoolset-{7,8,9}-libatomic-devel`
 
 <br/>
 

@@ -1,216 +1,206 @@
 ---
 sidebar_position: 3
-title: '負載平衡'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-lbs-zh'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-lbs-zh'
+title: 'Load Balancing'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-lbs-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-lbs-en'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5eaf2d8a3b112a4b8c49a853eaab60d8.png) 負載平衡
+# ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5eaf2d8a3b112a4b8c49a853eaab60d8.png) Load Balancing
 
-TWCC 所提供的負載平衡服務支援**應用程式負載平衡器 (HTTP 與 HTTPs with SSL) **和**網路負載平衡器 (TCP)**，當流量變大時，可以將流量分配到不同的虛擬運算個體上，以維持服務的靈活性、擴充能力及高可用性。
+TWCC Load Balancing Service offers **Application Load Balancer (HTTP and HTTPs with SSL)** and **Network Load Balancer (TCP)**. When network traffic becomes heavy, the Load Balancer automatically distributes traffic to different VCS instances to keep the service flexible, scalable and highly available.
 
 
 :::info
-- 租戶管理員、租戶使用者對於負載平衡器使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/networking-security#負載平衡)。
-- TWCC CLI 目前不支援此服務。
+- For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務).
+- TWCC CLI currently does not support this feature.
 :::
 
 <br/>
 
 
-## 建立負載平衡器
+## Create load balancers
 
-* 由服務列表點選「**負載平衡**」進入「負載平衡器管理」頁面，點擊「**＋建立**」。
+* On the service list, click **Load Balancing** to go to the **Load Balancer Management** page, and select **+CREATE**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6668cf5d5b790061f3efb1764915cd95.png)
 
 :::tip
-您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
+You can click on the asterisk to the left of the service in "**All Services**" <i class="fa fa-star-o" aria-hidden="true"></i> and pin your frequently used services to "**My Favorite Services**" to speed up the process.
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6434a60c23bf7870903b5c5315460041.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_874be1b43ef4974aaedbc0001bca7a1c.png)
 
-
-* 輸入負載平衡器設定資訊，完成後點擊「**下一步：檢閱+建立>**」。
-    * **名稱**：輸入負載平衡器的名稱。
-    * **描述 (非必填)**：輸入負載平衡器的描述。
-    * **類型**：選擇負載平衡器的類型為應用程式負載平衡器或網路負載平衡器。
-    * **監聽器**
-        * **協定**：
-        * 應用程式負載平衡器可處理 **HTTP** 或 **HTTPs with SSL** 協定的流量<sup>*</sup>。
-            * 網路負載平衡器可處理 **TCP** 傳輸控制協定的流量。
-        * **連接埠**：輸入負載平衡器要轉送的服務埠號。
-        * **SSL 憑證**：
-        * 點擊「**新增**」可設定多組協定或連接埠的監聽器。
-    * **平衡方式**：選擇負載平衡方式，有 **ROUND_ROBIN** (循環模式)、**LEAST_CONNECTION** (最少連線優先模式) 及 **SOURCE_IP** (依來源位址分配模式) 三種選項。
-    * **虛擬網路**：選擇虛擬網路。
-    * **配置公用 IP**：可選擇不配置、自動配置浮動 IP，或配置靜態 IP<sup>**</sup>。使用細節請參考[彈性 IP](./elastic-ip.md)。
+* Configure the load balancer, and then click **NEXT: REVIEW & CREATE >**.
+    * **Name**: Enter the name of the load balancer.
+    * **Description** (optional): Enter the description for the load balancer.
+    * **Type**: Choose the type of load balancer as Application Load Balancer or Network Load Balancer.
+    * **Listener**
+        * **Protocol**:
+            * Application Load Balancer can handle **HTTP** and **HTTPs with SSL** traffic*.
+            * Network Load Balancer can handle **TCP** traffic.
+        * **Port**: Enter the port number for port forwarding.
+        * **SSL certificate**:
+        * Click **Add** to configure multiple listerners and ports.
+    * **Method**: Select one method of balancing from **ROUND_ROBIN**, **LEAST_CONNECTIONS**, and **SOURCE_IP**.
+    * **Virtual Network**: Select a virtual network.
+    * **Assign Public IP**: You can choose not to assign it, auto-assign a floating IP, or assign a static IP**. Please refer to [<ins>Elastic IP</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/networking/elastic-ip) for usage details.
 
 :::info
-<sup>*</sup>如需使用 <b>HTTPS with SSL</b> 協定的監聽器，請先<a href="#建立-ssl-憑證"><ins>建立 SSL 憑證</ins></a>。<br/>
-<sup>**</sup>建立完成後，皆可在「負載平衡詳細資料」頁，調整 IP 選擇。若有配置 IP，需先移除才可選擇其他 IP。
+*To use a **HTTPS with SSL** listener, please [<ins>create SSL Certificate</ins>](#create-ssl-certificates) first.<br/>
+**After creation, you can adjust the IP selection on the "Load Balancer Details" page. If you have assigned IPs, you need to detach them before you can select other IPs.
 :::
 
-![](https://i.imgur.com/i1HA3yY.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_332a015f4c4eea6b4235607942c898dc.png)
 
+* Review the configuration for the load balancer, and then click **CREATE**.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3555bd4f985a5e6f022a1f8674b5f84b.png)
 
-* 檢視負載平衡器的設定資訊，確定後點選「**建立**」。
+* After the load balancer has been created, you will be directed back to the list page. The newly created load balancer appears at the top of the list, and you can select the load balancer to enter its detail page. You can edit the settings when it turns to the **ACTIVE** state.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d84d97c603859f4f9ca3d11d3065e33d.png)
-
-* 建立完成後，會回到負載平衡器列表，最新建立負載平衡器會出現在最上方，按一下該列表進入負載平衡器內容頁面，等到狀態變成 「**ACTIVE**」 後，才可繼續編輯。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5ea35b095d53eea05bcf32ebaab32654.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d094fb59f4c3db5ec2b4ac2ddeca64c9.png)
 
 :::info
-負載平衡器建立好後，需將[<ins>虛擬運算個體連結至負載平衡器</ins>](#連結虛擬運算個體)，才能為您的服務發揮平衡流量的作用。
+After creating, [<ins>attach the load balancer to VCS instances</ins>](#attach-load-balancers-to-vcs-instances) to enable the traffic balancing mechanism for your applications.
 :::
 
 <br/>
 
 
-## 負載平衡器管理
-* 在負載平衡器管理頁面，點選負載平衡器列表，進入負載平衡器詳細資料頁面。
+## Manage load balancers
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5ea35b095d53eea05bcf32ebaab32654.png)
+* On the **Load Balancer Management** page, click the list of load balancers to enter the load balancer details page.
 
-* 進入負載平衡器內容頁面可檢視基本資訊及網路的連接設定，或執行「**編輯**」、「**删除**」、「**重新整理**」等功能。
-* 負載平衡器建立好後，會產生一組 VIP (Virtual IP)，以供對外服務使用；並提供私有 IP 維運使用。
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_849d210541eb085a1601cd22d7e63aff.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d503587a25478670a711187aac6734fb.png)
+* On the load balancer details page, you can view the basic information and the configuration for network connections, or execute actions including **EDIT**, **DELETE**, **REFRESH**, etc.
+* Once the load balancer is created, a VIP (Virtual IP) will be generated for external services, and private IP will be provided for maintenance purpose.
 
-<br/>
-
-
-### 更新負載平衡器憑證
-
-SSL 憑證有固定效期，您可以在憑證到期時，建立新憑證以更換過期的憑證：
-
-* 進入負載平衡器詳細資訊頁面，點擊「**編輯**」按鈕。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c918132617bef4caa665199195d26def.png)
-
-
-* 為已建立的 HTTPS with SSL 監聽器選取新建的憑證名稱，再點擊「**確認**」。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_63f61ef5ae2b846a58c0a7df25dc5af8.png)
-
-
-
-* 更新後返回負載平衡器詳細資訊頁面，即可看到 SSL 憑證名稱，生效後狀態會變成 「**Active**」，即代表已成功更新 SSL 憑證。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fbf16e97e47eacd0436f3b61977efc74.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a63efa359922aa5902b9843766a79f87.png)
 
 <br/>
 
 
-## 連結虛擬運算個體
+### Update Load balancer's SSL certificate
 
-* 進入負載平衡器管理頁面，點選欲連接的負載平衡器，點擊 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，再點選「**編輯**」。
+SSL certificates have a validity period. You can create a new certificate to replace the certificate about to expire:
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5f1da10111b8e5edba97741e3289c7a3.png)
+* Enter the **Load Balancer Details** page, and then click the **EDIT** button.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8b6671c73ef98aeed7c5f80d95dbbee8.png)
+
+* Select the newly created certificate name for the existing HTTPS with SSL listener, and then click **OK**.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c9b1bc7ab92f0c4a685a66afae087905.png)
+
+* After the update, you will be directed to the **Load Balancer Details** page. You can see the name of the new SSL certificate, and its state wll change to the **`ACTIVE`** when it is successfully renewed.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d6437988b429ae87a60da18ef33641c9.png)
+
+
+<br/>
+
+
+
+## Attach load balancers to VCS instances
+
+* Enter **Load Balancer Management** page. Select the load balancer you want to attach, click the menu button &nbsp;<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>&nbsp; and then click on **EDIT**.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_370402679f6bc74b477b9f626c2fb227.png)
 
 :::tip
-當項目列表太多時，可善用搜尋欄，輸入關鍵字後即可快速找到所欲設定的負載平衡器。
+You can use the search bar with keywords to find your load balancer if too many are on the list.
 :::
 
-* 亦可從負載平衡器內容頁面，點擊「**編輯**」按鈕。
+* You may also find **EDIT** button in **Load Balancer Details** page.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d6d989100cf030c4fa5d6ced98ff9261.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_70349eaee84ff70c3ef37a8637c9aa03.png)
 
+* Click **Add Server** in the Edit Load Balancer window to attach VCS intances to the load balancer.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2f080c14faa757a34c4dbc625f94b59b.png)
 
+* Enter the **Private IP** and **Port** of the VCS intance, e.g., `192.xxx.xxx.xx:80` . Then select **Add Server** to set up the private IP and port of the second VCS instance.
 
-* 在編輯負載平衡器視窗，按一下「**新增伺服器**」，新增虛擬運算個體。
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_734b582facb7df0e8e810f2da2b6cc9f.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_87350e9d536973d9941fd9262dea46d8.png)
+* Click **OK** when all servers are added.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4974a6c96906d3a185251f5a3e054f67.png)
 
+* Back to the **Load Balancer Details** page, the IPs of attached instances are shown in the **Networks & Connection** block. The load balancer starts running when it turns to the **ACTIVE** state.
 
-
-* 輸入欲連接的虛擬運算個體**私有 IP** 及**連接埠**，例如：`192.xxx.xxx.xx:80`。
-  再按一下「**新增伺服器**」繼續設定第二台虛擬運算個體的私有 IP 及連接埠。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_43008c707a2be6009ebfb65d3b23d8d7.png)
-
-
-
-* 所有的伺服器都加入後，再點擊「**確認**」按鈕即可。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3193e67d59e971e317f8ec9fe20a3d62.png)
-
-
-
-
-* 回到負載平衡器內容頁面，網路區塊中會出現已連結的個體 IP 位址，等到狀態變成 「**ACTIVE**」 後即可使用。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bda331274fdaf5296290f21f2ac5cf0b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d509246e60c1c6291859fa13713c213c.png)
 
 <br/>
 
 
-## SSL 憑證
 
-負載平衡器部署 SSL 憑證服務，可建立網頁伺服器、網頁瀏覽器之間的安全加密連線，防止資料在傳輸過程中遭駭客竊取、竄改，幫助您建立與用戶之間的信任。
+## SSL Certificates
+
+
+Deploy SSL certificates on your load balancers can help you build trust with customers by encrypting and securing communications between the web server and the client browser, preventing criminals from reading or modifying information transferred.
 
 :::info
-為符合資安要求，僅提供 TLS 1.2 傳輸層安全性協定。
+In order to comply with the information security requirements, only the TLS 1.2 transport layer security protocol is provided.
 :::
+
 
 <br/>
 
-### 建立 SSL 憑證
 
-* 點選左側「**SSL 憑證**」，在「**SSL 憑證管理**」頁面，點擊「**＋建立**」。
+### Create SSL certificates
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2b06046e5e360cf9c6b7aae828874e7c.png)
+* Click **SSL Certificate** on the left side > Click **+CREATE** in the **SSL Certificate Management** page.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5041efccfb937b2749cb1d15fe32ad4a.png)
 
-* 輸入 SSL 憑證的名稱、描述及 Base64 編碼資訊 (PKCS#12 格式)，完成後點擊「**下一步：檢閱 + 建立>**」
+* Enter the name, description, and Base64 Encode (PKCS#12 format) of your SSL certificate, and then click **NEXT: REVIEW & CREATE** >
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_94c16cf15abbd26e42e7ff6869f55dac.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_efe577b9eebbb33d3fb36fde5dd1890e.png)
 
 :::info
-目前 TWCC 僅支援建立 PKCS#12 格式的 SSL 憑證，請參考[<ins>轉換 SSL 憑證格式</ins>](../../tutorials/convert-ssl-certificate.md)。
+TWCC currently supports only PKCS#12 format, please refer to [<ins>Convert SSL certificate format</ins>](https://man.twcc.vip/en/docs/vcs/tutorials/convert-ssl-certificate) for more information.
 :::
 
-* 檢視 SSL 憑證的建立資訊，確定後點選「**建立**」
+* Review SSL certificate configuration, and then click **CREATE**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ade1caffa03554d8eb14f031a453dfa5.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_26803d2b57bb256c6946827e9f129c21.png)
 
-
-* 憑證建立後會出現在 SSL 憑證管理的列表中，當狀態顯示為「**Active**」即可在 HTTPS with SSL 的監聽器中選用。
+* The certificate will appear in the list after creation. You can deploy the certificate on a HTTPs with SSL listener when it turns to the **ACTIVE** state.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3f77e7e47a585410d2df100933954846.png)
 
+
 <br/>
 
 
-### 管理 SSL 憑證
+### Manage SSL certificates
 
-參考[建立 SSL 憑證](#建立-ssl-憑證)將憑證建立好後，即可在建立應用程式負載平衡器時選用，亦可用將新建的憑證新增或更新到既有的應用程式負載平衡器中。
+After creating the SSL certificate with [reference](#create-ssl-certificates), you can select it when creating an Application Load Balancer, or you can add/update it to an existing load balancer.
 
 :::info
-目前 TWCC 僅支援建立 PKCS#12 格式的 SSL 憑證，請參考[<ins>轉換 SSL 憑證格式</ins>](../../tutorials/convert-ssl-certificate.md)。
+TWCC currently supports only PKCS#12 format, please refer to [<ins>Convert SSL certificate format</ins>](https://man.twcc.vip/en/docs/vcs/tutorials/convert-ssl-certificate) for more information.
 :::
 
 <br/>
 
 
-### 删除 SSL 憑證
+### Delete SSL certificates
 
-* 進入 SSL 憑證管理頁面，勾選欲删除的 SSL 憑證列表，再點擊上方的  「**删除**」按鈕即可。
+* Go to the **SSL Certificate Management** page, select the SSL certificate you want to delete, and then click the **DELTE** button.
+
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2fbf0b28ee7acdc4ac63c10fffe58438.png)
 
+
 <br/>
 
+
+
 :::info
-為確保 SSL 憑證的安全性，僅建立者本人可以檢視與使用自己建立的 SSL 憑證。
+To secure SSL certificates, only the creator can view and use the SSL certificate.
 :::

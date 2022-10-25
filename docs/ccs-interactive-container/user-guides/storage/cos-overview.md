@@ -1,7 +1,8 @@
 ---
-sidebar_position: 1
-title: '服務概觀'
+displayed_sidebar: cos
 sidebar_label: '雲端物件儲存'
+sidebar_position: 4
+title: '服務概觀'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/cos-overview-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/cos-overview-zh'
 ---
@@ -16,7 +17,7 @@ TWCC 雲端物件儲存服務提供與 Amazon S3 相容之物件儲存 (Object S
 - **計畫公共空間**：資料為計畫間所有成員共用。
 - **個人私有空間<sup>[2]</sup>**：資料為個別用戶專用。
 
-除了可獨立做為穩定安全的資料儲存空間，您也可以利用此儲存服務做為 TWCC 虛擬運算服務、容器運算服務的資料備份系統，請參考[資料備份](tutorials/backup-synchronize-restore.md)了解操作方式。
+除了可獨立做為穩定安全的資料儲存空間，您也可以利用此儲存服務做為 TWCC 虛擬運算服務、容器運算服務的資料備份系統，請參考[資料備份](https://man.twcc.ai/@twccdocs/cosbackup-zh)了解操作方式。
 
 
 :::info

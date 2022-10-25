@@ -1,55 +1,52 @@
 ---
 sidebar_position: 1
-title: '本機為 Windows'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-windows-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-to-windows-from-windows-zh' 
+title: 'From Windows'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-windows-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-to-windows-from-windows-en'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 連線 Windows 個體：本機為 Windows
+# Connect to Windows instances from Windows
 
-完成[準備工作、取得連線資訊](../prerequisites.md)後，請參考以下方式連線進入 Windows 個體 (本機為 Windows) 。
+Having completed the [prerequisites and obtained connection information](https://man.twcc.vip/en/docs/vcs/user-guides/connection/prerequisites), please refer to the following method to connect to the Windows instance from Windows.
 
 :::info
-請注意個體建立後，狀態轉為 **`Ready`**，**需等候一些時間才可遠端連線使用**。
+Please note that after the instance has been created and changed to the **`Ready`** state, it will take some time for the remote connection to become available.
 :::
 
 :::caution
-1. 因資安事件頻傳，如果您的連線來自以下這些國家，我們將關閉您使用遠端連線至 Windows 個體的功能 (連接埠：9833)：中國、德國、法國、韓國、荷蘭、波蘭、俄國若需連線 TWCC Windows 個體，請您與客服聯絡。
-2. 若您修改網路卡設定，將會導致無法連線進入虛擬運算個體，因此我們強烈不建議您更動網卡設定，請您操作與部署時特別留意。
+1. Due to frequent information security incidents, if your connection comes from the following countries, we will disable your remote connection to Windows instances (port: 9833): China, Germany, France, South Korea, Netherlands, Poland and Russia. If you need to connect to TWCC Windows instance, please contact Customer Service.
+2. You will not be able to connect to VCS instance once the settings of the network interface card are modified. Therefore, we strongly discourage you from changing the NIC settings. Please beware when operating and deploying.
 :::
 
 <br/>
 
-## 連線方式
+## Connection method
 
+- **Step 1.** Open the **Remote Desktop Connection** program (Windows built-in tool, or you can download it from the official Microsoft website).
 
-- **Step 1.** 開啟 「**遠端桌面連線**」程式 (Windows 系統已有內建，或至 Microsoft 官方網頁搜尋下載)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_684a5e256e0fa4a4941d16eec10433e6.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_466c89194d84a1226aa9ab41b5eeccda.png)
-
-
-- **Step 2.** 輸入此個體之公用 IP、Port 與使用者名稱，接著點擊「**連線**」
+- **Step 2.** Enter the public IP address, port number and user name of the instance, and then click **Connect**.
     
 :::info
-公用 IP 之後需加上 Port 號`: 9833`，例如：203.145.123.1`:9833`
+Remember to add the port number `9833` after the public IP. E.g., 203.145.222.23`:9833`.
 :::
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b1373c3c43427837667e57a967250fc0.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_aef2d446246e4303d61002b597569081.png)
+- **Step 3.** Enter the password to connect successfully.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_85a08f020c91828bcd92f5d2800af23a.png)
 
-- **Step 3.** 輸入密碼即連線成功
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f92a67b5fd65e5ea4b52d6d54fc6d34b.png)
-
+<br/>
 
 :::tip
-帳號：administrator<br/>
-密碼：使用者自行定義之個體密碼
+Account: administrator<br/>
+Password: User-defined VCS instance password
 :::
 
 :::info
-若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](../../manage-monitor/console.md)，可加速工作流程。
+For urgent debugging/system maintenance, it is recommended to [<ins>connect via Console</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/management-and-monitoring/console) to speed up the workflow.
 :::

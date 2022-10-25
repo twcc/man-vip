@@ -1,32 +1,32 @@
 ---
 sidebar_position: 4
-title: '雲端檔案服務 (CFS)'
+title: 'Cloud File Service (CFS)'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-cfs-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-cfs-zh'
 ---
 
-# TWCC FAQs | 雲端檔案服務 (CFS)
+# TWCC FAQs | Cloud File Service (CFS)
 
 <details>
 
-<summary> Q1. 上傳新版本的檔案，原先置放於冷儲存區的檔案卻轉移到熱儲存區？</summary>
+<summary> Q1. When I upload a new version of a file, the file that was in the cold storage is moved to the hot storage?</summary>
 
-檔案版本管理功能，於上傳新版本後，原檔案會成為舊版本並置於原儲存區不會被搬移。在資料夾檔案列表所顯示為最新版本的檔案，舊版本可於該檔案右側目錄點擊「版本紀錄」查看。
+File version management function, after uploading a new version, the original file will become the old version and placed in the original storage area without being moved. The latest version of the file is displayed in the folder file list. Older versions can be viewed by clicking on the **version history** in the directory to the right of the file.
 
 </details>
 
 <details>
 
-<summary> Q2. 為何無法從會員中心的資源用量紀錄中查詢CFS的用量資訊？</summary>
+<summary> Q2. Why can't I check the CFS usage information from the resource usage record in the Member Center?</summary>
 
-CFS 用量只有專案管理員或建立者才有權限查看用量紀錄，若您的帳號權限為使用者，將無法查閱資源用量，可請該專案的管理員協助查詢或是提升您的權限。
+CFS usage is only available to the administrator or creator. If your account is a user, you will not be able to view resource usage. You can ask the project's administrator to help you with queries or increase your permissions.
 
 </details>
 
 <details>
 
-<summary> Q3. 資料夾內會有兩個相同檔名的檔案？</summary>
+<summary> Q3. Can there be two files with the same file name in a folder?</summary>
 
-出現此情況的原因為前一次檔案上傳尚未完成，即上傳相同檔名的檔案。因此未完成上傳的檔案無版本資訊，而再次上傳的檔案會被視作新檔案。建議利用網頁上傳新版本檔案時，先確認清單內已有該檔案再上傳。如果是使用 API，請勿連續上傳相同檔名的檔案到同一個資料夾內。
+This happens because the upload of the previous file is not yet complete, i.e. a file with the same file name has already been uploaded. Therefore, files that have not been uploaded have no version information, and files that have been re-uploaded are considered new. We recommend that when uploading a new version of a file from the web, make sure the file is already in the list before uploading. If you use the API, do not continuously upload files with the same file name to the same folder.
 
 </details>

@@ -1,115 +1,116 @@
 ---
 sidebar_position: 1
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-create-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-create-zh' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-create-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-create-en' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 建立開發型容器
+# Create an Interactive Container
 
-您可以系統預設資訊以一個指令完成容器建立，或是依需求選擇適合的容器型號。
+You can create an interactive container with the default setting using a single command, or choose a container type according to your needs.
 
-完整容器型號 (含 GPU 數量與其他資源大小)，請參考[價目表](/pricing.mdx#容器運算服務-container-compute-service-ccs)。
-
-<br/>
-
-
-## 開始之前
-
-- 若尚未註冊使用帳號，請先[註冊 TWCC](/docs/member/user-guides/member-key-quota/sign-up-for-twcc.md)。
-- 若選擇使用 TWCC 入口網站操作，請先登入 [TWCC 入口網站](https://www.twcc.ai/)。
-- 若選擇使用 TWCC CLI 操作，請先[安裝 TWCC CLI](https://github.com/twcc/TWCC-CLI) 、並[登入](https://github.com/twcc/TWCC-CLI)。
+For the detailed information of container types (including the number of GPUs and other resource sizes), please refer to [TWCC Pricing](https://www.twcc.ai/doc?page=price#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS)。
 
 <br/>
 
+## Before we get started
 
-## 建立開發型容器
+- If you haven't sign up for a user account, please [sign up for TWCC](https://www.twcc.ai/) first.
+- If you would like to operate with TWCC portal, please sign in to [TWCC portal](https://www.twcc.ai/) first.
+- If you would like to operate with TWCC CLI, please [install TWCC CLI](https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-2-%E5%AE%89%E8%A3%9DTWCC-CLI) first, and then [sign in](https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-3-%E9%80%B2%E5%85%A5-TWCC_CLI-%E7%92%B0%E5%A2%83%E4%B8%A6%E9%96%8B%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8B%99).
+
+<br/>
+
+## Create Interactive Container
+
 
 <Tabs>
-<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
+<TabItem value="TWCC Portal" label="TWCC Portal">
 
-- 由服務列表點選「**開發型容器**」，在「**開發型容器管理**」頁面，點擊「**＋建立**」。
+- Click **Interactive Container** from the service list, and then click "**＋CREATE**" on the "**Interactive Management page**" page.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
-
-:::tip
-您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
-:::
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1c43aab7948fc1f045440c590f458fea.png)
-
-* 選擇映像檔類型：您可瀏覽並選擇 NGC 優化之深度學習框架，或直接於左上方搜尋欲使用的框架名稱 (例：PyTorch, TensorFlow...等)。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f3c003776fbf81f0ebae37ae3dba97e3.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6668cf5d5b790061f3efb1764915cd95.png)
 
 :::tip
-1. TWCC 提供的 NGC 容器映像檔類型、版本、套件，請參考：[<ins>容器映像檔</ins>](/docs/ccs-interactive-container-concepts-images/overview.md)
-2. 首次選用後，映像檔會記錄儲存於「**最近使用**」區塊，加快您下次選用的速度（清除瀏覽器歷史紀錄將會重新記錄）。
+You can click on the asterisk to the left of the service in "**All Services**" <i class="fa fa-star-o" aria-hidden="true"></i> and pin your frequently used services to "**My Favorite Services**" to speed up the process.
 :::
 
-* 填寫容器基本資訊與硬體規格配置，並選擇「**開啟**」或「**關閉**」刪除保護機制。<br/>
-完成後，接著點擊 **「下一步：儲存資訊>」** 。
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c40df078ec48ab4db3d060f52d37d092.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ba201ac8e196f736b6d0616938766c16.png)
+* Choose Image Type: You can browse and select the deep learning framework optimized by NGC, or directly search for the name of the framework in the search bar (e.g. PyTorch, TensorFlow...).
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8a53c677b248ea69b8d219cbc5f34464.png)
+
+:::tip
+1. For the NGC container image type, version and packages provided by TWCC, please refer to [<ins>Container Images</ins>](https://man.twcc.vip/en/docs/ccs_framwork_image/intro).
+2. After the first selection, system would record and display the image in **Recent Used** block to speed up your next selection. (Clearing the browser history will also clear this record.)
+:::
+
+* Fill in the basic information and configuration of the container, then click "**NEXT : STORAGE>**".
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0a0576b404533e0480a3f35fafe23e18.png)
 
 :::info
-開啟「刪除保護機制」，在您刪除資源之前，需先關閉保護機制後才能繼續進行刪除步驟，可防止資源誤刪，導致服務中斷。
+If "Deletion Protection" is enabled, before deleting a resource, you need to disable the protection mechanism before continuing the deletion process, which can prevent the resource from being deleted by mistake and causing service interruption.
 :::
 
-* 容器建立後系統會自動掛載高速檔案系統 (HFS) 的兩個目錄 (/home 與 /work) 至容器，以利使用者在運行人工智慧運算時擁有更好的性能，亦可使用 TWCC 雲端物件儲存服務。
+* The system will automatically attach the two directories (/home and /work) of the Hyper File System (HFS) to the container after creation for better performance when running AI computing. In addition, TWCC Cloud Object Storage is another storage option.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d801834abe5f168c9fc1d77253e106f4.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_71287b579154f911fb08860a9746be0e.png)
 
-* 接著點擊「**下一步：環境變數>**」，可設定符合您需求的環境變數，詳細說明與設定範例請參考 [<ins>設定環境變數</ins>](../../tutorials/set-environment-variables.md)。
+* Then click "**NEXT : ENVIRONMENT VARIABLES>**" to set the environment variables that meet your needs. For detailed explanation and setting examples, please refer to [<ins>Setting Environment Variables</ins>](https://man.twcc.vip/en/docs/ccs/tutorials/add-python3-kernel-to-jupyter-notebook).
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ebcf6338e3bba3e49f69c4eb3dcefd00.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_78faad93eaa1e43c081cfd1200daf530.png)
 
-* 點擊「**下一步：檢閱+建立>**」，檢視整個容器的規格和價格，確定後點選「**建立**」即完成。
+* Click "**NEXT : REVIEW&CREATE>**" to check the configuration and price of the container. Then, click "**CREATE**" to confirm the creation.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0eab8ab1660cace6b843aea7cbb1e808.png)
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cb943abf574920c1a1a46b62e4695590.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_37022fcab3b07a9daacc61f124e1d850.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c6ee8a809e952616c123a93f50670333.png)
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-**指令**
+**Command**
 
 ```bash
-twccli mk ccs [-n]      #容器名稱
-              [-itype]  #映像檔類型
-              [-img]    #映像檔版本
-              [-gpu]    #GPU 數量
-              [-envk]   #環境變數 Key
-              [-envv]   #環境變數 Value
+twccli mk ccs [-n]      # Name of the container
+              [-itype]  # Image type
+              [-img]    # Image version
+              [-gpu]    # Number of GPUs(Pcs)
+              [-envk]   # Environment variables key
+              [-envv]   # Environment variables value
 ```
-
 :::info
-- 若不帶任何參數則以預設資訊建立容器：
+If you do not input any parameters, the container will be created with the default settings:
 
-| 映像檔類型、映像檔 | 容器名稱 |硬體設定|
+| Image type, Image | Name of container |Container type|
 | -------- | -------- | -------- |
-| TensorFlow (latest environment)    | twcc-cli     | 1 GPU + 04 cores + 090GB memory |
+| TensorFlow (latest environment)    | twcc-cli     | c.super (1 GPU + 04 cores + 90 GB memory) |
 
-- 環境變數詳細說明與設定範例請參考 [<ins>設定環境變數</ins>](../../tutorials/set-environment-variables.md)。
+For detailed explanation and setting examples, please refer to [<ins>Setting Environment Variables</ins>](https://man.twcc.vip/en/docs/ccs/tutorials/add-python3-kernel-to-jupyter-notebook).
 :::
 
 <br/>
 
-**範例**
+**Example**
 
-- 建立名稱為 **`cusccs`**、映像檔類型 **`Caffe2`**，映像檔規格為 **`caffe2-18.08-py3-v1:latest`**、GPU 數量 **`2`** 的容器。
+- Create a container with the name **`cusccs`**, image type **`Caffe2`**, image version **`caffe2-18.08-py3-v1:latest`**, and GPU quantity **`2`**.
 
 ```bash
 twccli mk ccs -itype "Caffe2" -img "caffe2-18.08-py3-v1:latest" -gpu 2 -n cusccs
 ```
 
 :::caution
-- 容器名稱命名字元條件：需為**小寫字母或數字**，**首字元需為小寫字母**，**長度 6-16 個字元**。
--  若設定不符合以上條件，將出現以下錯誤訊息：
+- Container name requirements: It must be **consist of lowercase letters or numbers, the first character must be a lowercase letter, and be 6-16 characters long.**
+- If the setting does not meet the above requirements, the following error message will appear:
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_095834bd7ee5d99d3a70596a7c462629.png)
 :::
+
+<!-- :::spoiler 操作範例截圖(點我)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_753112dc54b2646270806ad6385277ba.png)
+::: -->
 
 </TabItem>
 </Tabs>
@@ -117,16 +118,16 @@ twccli mk ccs -itype "Caffe2" -img "caffe2-18.08-py3-v1:latest" -gpu 2 -n cusccs
 ---
 
 :::info
-1. 詳細映像檔介紹與說明請參考 [<ins>TWCC 容器映像檔</ins>](/docs/ccs-interactive-container-concepts-images/overview.md)。
-2. 容器型號、資源比例與費率，請參考[<ins>價目表</ins>](/docs/pricing.mdx#容器運算服務-container-compute-service-ccs)。
-3. **可用記憶體容量**若以 GiB (1 GiB = 2<sup>30</sup> bytes) 為計算單位，以 c.super 為例，則可用記憶體容量為 84 GiB，請參考[<ins>記憶體容量換算</ins>](../../concepts/container-memory-capacity-conversion.md)了解更多。
+1. For more information about the images, please refer to [<ins>TWCC Container Image</ins>](https://man.twcc.vip/en/docs/ccs_framwork_image/intro).
+2. For more information about the container types, resource ratio and pricing, please refer to [<ins>TWCC Pricing</ins>](https://www.twcc.ai/doc?page=price#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS).
+3. If **available memory capacity** of containers is calculated in GiB (1 GiB =  2<sup>30</sup> bytes), take c.super as an example, its available memory capacity will be 84 GiB. For more information, please refer to [<ins>Memory capacity conversion</ins>](https://man.twcc.ai/@twccdocs/concept-ccs-memory-conversion-en) for more details.
 :::
 
 :::caution
-1. 為使資料完整保存，請將您的重要資料存放於高速檔案系統 (HFS) 中，並避免將資料存放於容器磁碟內。
-2. **容器建立後，在您刪除之前將會持續計費**。
+1. To keep the data intact, please store the important data in the Hyper File System (HFS) rather than container disks.
+2. **After the container is created, it will continue to be billed until you delete it.**
 :::
 
-:::info **相關文件**
-- <a href="/docs/cos/overview"><ins>雲端物件儲存服務</ins></a>、<a href="/docs/hfs/overview"><ins>高速檔案系統</ins></a>
+:::info **Related documents** 
+- <a href="https://man.twcc.vip/en/docs/cos/intro/"><ins>Cloud Object Storage (COS)</ins></a>, <a href="https://man.twcc.vip/en/docs/hfs/intro/"><ins>Hyper File System (HFS)</ins></a>
 :::

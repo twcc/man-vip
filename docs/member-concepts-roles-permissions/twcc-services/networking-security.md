@@ -1,79 +1,73 @@
 ---
 sidebar_label: '聯網與資安服務'
 sidebar_position: 3
-sync_original_production: 'https://man.twcc.ai/@twccdocs/role-netndsec-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-netndsec-zh'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/role-netndsec-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-netndsec-en' 
 ---
 
+# Comparison of role permissions of TWCC： Network & Security Service
 
-# TWCC 角色權限比較：聯網與資安服務
+## Virtual Network (VNW)
 
-
-## 虛擬網路
-
-| 功能 | 租戶管理員 | 租戶使用者 |
+| Function | Tenant Admin | Tenant User |
 | -------- | -------- | -------- |
-|建立虛擬網路|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視專案所有虛擬網路資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|使用專案所有虛擬網路|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|刪除專案所有虛擬網路|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Create Virtual Network|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|View all Virtual Network information in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Use all Virtual Network in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Delete all Virtual Network in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 
+## Security Group
 
-## 安全性群組
-
-| 功能 | 租戶管理員 | 租戶使用者 |
+| Function | Tenant Admin | Tenant User |
 | -------- | -------- | -------- |
-|建立個人虛擬運算個體之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|建立專案所有虛擬運算個體之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|檢視個人虛擬運算個體之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視專案所有虛擬運算個體之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|刪除個人虛擬運算個體之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|刪除專案所有虛擬運算個體之安全性群組規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Create Security Group rule of personal VCS instance|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Create Security Group rule of all VCS instances in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|View Security Group rule of personal VCS instance|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View Security Group rule of all VCS instances in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Delete Security Group rule of personal VCS instance|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Delete Security Group rule of all VCS instances in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 
-## 負載平衡
+## Load Balancing Service (LBS)
 
-| 功能 | 租戶管理員 | 租戶使用者 |
+| Function | Tenant Admin | Tenant User |
 | -------- | -------- | -------- |
-|建立負載平衡|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視個人負載平衡資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視專案所有負載平衡資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|編輯個人負載平衡|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|編輯專案所有負載平衡|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|使用個人負載平衡|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|使用專案所有負載平衡|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|刪除個人負載平衡|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|刪除專案所有負載平衡|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|檢視個人 SSL 憑證|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視專案所有 SSL 憑證|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|刪除個人 SSL 憑證|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|刪除專案所有 SSL 憑證|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Create load balancer|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View personal load balancer information|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View all load balancer information in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Edit personal load balancer|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Edit all load balancer in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Use personal load balancer|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Use all load balancer in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Delete personal load balancer|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Delete all load balancer in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|View personal SSL certificate|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View all SSL certificate in the project|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Delete personal SSL certificate|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Delete all SSL certificate in the project|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 
 
 
 ## Auto Scaling 
 
-| 功能 | 租戶管理員 | 租戶使用者 |
+| Function | Tenant Admin | Tenant User |
 | -------- | -------- | -------- |
-|建立 Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視個 Auto Scaling資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視專案所有 Auto Scaling資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|編輯個人 Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|編輯專案所有 Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|使用個人 Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|使用專案所有 Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|分離個人 Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|分離專案所有 Auto Scaling|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|刪除個人 Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|刪除專案所有 Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Create Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View personal Auto Scaling information|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View all Auto Scaling information in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Edit personal Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Edit all Auto Scaling in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Use personal Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Use all Auto Scaling in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Delete personal Auto Scaling|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Delete all Auto Scaling in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 
-## 基礎虛擬防火牆
+## Basic Virtual Firewall (BVF)
 
-| 功能 | 租戶管理員 | 租戶使用者 |
+| Function | Tenant Admin | Tenant User |
 | -------- | -------- | -------- |
-|建立防火牆|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|檢視防火牆資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|編輯規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|刪除規則|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|刪除防火牆|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|虛擬運算個體受防火牆影響|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-
+|Create firewall|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|View firewall information|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Edit rules|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Delete rules|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Delete firewall|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|VCS instance is affected by firewall|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>

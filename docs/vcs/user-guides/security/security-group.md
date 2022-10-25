@@ -1,56 +1,60 @@
 ---
 sidebar_position: 2
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-sg-zh'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-sg-zh'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-sg-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-sg-en'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 安全性群組
+# Security Group
 
+With TWCC Security Group, users can control the network security of the VCS instance by setting security rules to manage the ingress and egress traffic (network segments, protocols, or ports) of the instance.
 
-TWCC 提供安全性群組功能，使用者可透過設定安全規則進行虛擬運算個體的網路安全控管，管理虛擬運算個體允許連入連出的網段、協定、連接埠。
 
 :::info
-- 安全性群組功能是為各個虛擬運算個體設定個別的安全規則而設計，所以必須先建立至少一個可用的虛擬運算個體，才可以設定其安全群組規則。
-- 租戶管理員、租戶使用者對於安全性群組使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/networking-security#安全性群組)。
+- Security Group is designed to set individual security rules for each VCS instance. Therefore, at least one available VCS instance must be created before setting the security group rules.
+- For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-en#%E5%AE%89%E5%85%A8%E6%80%A7%E7%BE%A4%E7%B5%84).
 :::
+
 
 <br/>
 
-## 檢視虛擬運算個體安全性群組規則
+
+## View the Security Group rules of VCS instances
 
 <Tabs>
 
-<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
+<TabItem value="TWCC Portal" label="TWCC Portal">
 
-* 由服務列表點選「**安全性群組**」進入「**安全性群組管理 (虛擬運算個體列表)**」頁面，點選可用的虛擬運算個體。
+* Click **Security Group** from the service list to go to the **Security Group Management (VCS Instances)** page, and click on the available VCS instance.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_491c26f5432bafabc42dcfbde67d3d19.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1dfbdda8636a9cf517c1ab718d8e3853.png)
 
-* 進入網路安全規則管理頁面，會顯示目前的網路安全規則，
+* Enter **Security Group Rules Management** page, the current security group rules will be displayed.
 
 </TabItem>
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
 ```bash
-twccli ls vcs                   # 列出現有虛擬運算個體
-twccli ls vcs -secg -s 937648   # 列出 ID 為 937648 個體的安全性群組
+twccli ls vcs                   # List existing VCS instances
+twccli ls vcs -secg -s 937648   # List the security group of the instance with ID 937648
 ```
 
 </TabItem>
 
 </Tabs>
 
+
 <details>
 
-<summary>虛擬運算個體預設之安全性群組規則</summary>
+<summary>Default Security Group rules of VCS instances</summary>
 
-- TWCC Linux 個體預設開放的輸入/輸出規則：
 
-| 方向 | 網路類型 | 連接埠 (最小) | 連接埠 (最大)| 協定|CIDR |
+- The default ingress/egress rules of TWCC Linux instances:
+
+| Direction | Internet protocol | Port (minimum) | Port (maximum)| Protocol|CIDR |
 | -------- | -------- | -------- |-------- | -------- | -------- |
 | ingress     | IPv4     | 443     |443 | tcp|0.0.0.0/0 |
 | ingress     | IPv4     | 22     | 22|tcp |0.0.0.0/0 |
@@ -58,9 +62,9 @@ twccli ls vcs -secg -s 937648   # 列出 ID 為 937648 個體的安全性群組
 | ingress     | IPv4     |      | |icmp | 0.0.0.0/0|
 | egress     | IPv6     |      | |ANY |::/0 |
 
-- TWCC Windows 個體預設開放的輸入/輸出規則：
+- The default ingress/egress rules of TWCC Windows instances:
 
-| 方向 | 網路類型 | 連接埠 (最小) | 連接埠 (最大)| 協定|CIDR |
+| Direction | Internet protocol | Port (minimum) | Port (maximum)| Protocol|CIDR |
 | -------- | -------- | -------- |-------- | -------- | -------- |
 | ingress     | IPv4     | 9833     |9833 | tcp|0.0.0.0/0 |
 | ingress     | IPv4     | 443     |443 | tcp|0.0.0.0/0 |
@@ -69,61 +73,62 @@ twccli ls vcs -secg -s 937648   # 列出 ID 為 937648 個體的安全性群組
 | ingress     | IPv4     |      | |icmp | 0.0.0.0/0|
 | egress     | IPv6     |      | |ANY |::/0 |
 
+
 </details>
 
 <br/>
 
 :::caution
-因資安事件頻傳，如果您的連線來自以下這些國家，我們將關閉您使用遠端連線至 Windows 個體的功能 (連接埠：9833)：中國、德國、法國、韓國、荷蘭、波蘭、俄國
+Due to frequent security incidents, if your connection comes from the following countries: China, Germany, France, South Korea, the Netherlands, Poland and Russia, we will disable your remote connection to Windows instances (port: 9833).
 
-若需連線 TWCC Windows 個體，請您與客服聯絡。
+If you need to connect to TWCC Windows instances, please contact Customer Service.
 :::
+
 
 <br/>
 
-## 建立安全性群組規則
+
+
+## Create Security Group rules
 
 <Tabs>
 
-<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
+<TabItem value="TWCC Portal" label="TWCC Portal">
 
-* 由服務列表點選「**安全性群組**」進入「**安全性群組管理 (虛擬運算個體列表)**」頁面，點選可用的虛擬運算個體。
+* Click **Security Group** from the service list to go to the **Security Group Management (VCS Instances)** page, and click on the available VCS instance.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_491c26f5432bafabc42dcfbde67d3d19.png)
-
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1dfbdda8636a9cf517c1ab718d8e3853.png)
  
-* 進入網路安全規則管理頁面，會顯示目前的網路安全規則，點擊「**＋建立**」，可創建新的規則。
+* Enter **Security Group Rules Management** page, the current security group rules will be displayed, and click **＋CREATE** to create a new rule.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_62c9d8a1bc691b23c90db9065ae46233.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4a0ee6ab4878d4179f72b88e286a4e1e.png)
 
+* Enter **Create Security Group Rules** page, fill in the setting information of the security group rule, and then click **NEXT: REVIEW & CREATE>**.
+    * Direction: Select **ingress** or **egress**.
+    * Port Range (Min): Set the **beginning port** to which this rule applies.
+    * Port Range (Max): Set the **ending port** to which this rule applies.
+    * Protocol: Select the protocol, such as tcp, udp, icm, etc.
+    * CIDR: Specify the CIDR range of this rule applies on the VCS instance.
 
-* 進入「建立網路安全規則」頁面，填寫網路安全規則的設定資訊，完成後點擊「**下一步：檢閱+建立>**」。
-    * 方向：選擇「ingress」輸入或「egress」輸出。
-    * 連接埠範圍(最小)：設定套用此規則開始的連接埠。
-    * 連接埠範圍(最大)：設定套用此規則結束的連接埠。
-    * 協定：選擇欲管控的協定如 tcp、udp、icmp... 等。
-    * CIDR：指要套用此虛擬運算個體安全規則的 CIDR 網段。
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7c4886b50ddc06e6e7739580c751f48d.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_65f5a4642010788eaade8690416c0fd4.png)
+* Review your Security Group rule settings and the project credit, and then click **CREATE**.
 
-* 檢視網路安全規則的設定資訊及計畫的額度資訊，確定後點選「**建立**」。
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8c6bf81bc1a6cadde4f29b637638a044.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8694bfd1e5382dc5e95b6955c19a9c0e.png)
+* Once created, the new Security Group rule will be displayed in the list.
 
-* 建立完成後，即可於安全性群組規則列表新增一項新的安全規則。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f644003a278a6603269b5ba1a4fd09da.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c7b9e3833e023f503418413c1484e832.png)
 
 </TabItem>
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
 :::info
-若要進行設定網路安全性群組，請使用 `twccli net vcs --help` 進行查詢各細項功能
+You can use `twccli net vcs --help` to check the details of the commands of setting Security Group rules.
 :::
 
-- 若要設定對安全網路段：10.10.10.0/24，開放 TCP:81 埠的連入(ingress)，使用指令如下
+- To permit ingress connection from 10.10.10.0/24 on port TCP:81, use the commands as follows:
 
 ```
 twccli net vcs -secg -s 892486 -cidr 10.10.10.0/24 -in -proto tcp -p 81
@@ -132,7 +137,7 @@ twccli ls vcs -secg -s 892486
 
 <details>
 
-<summary>操作範例截圖(點我)</summary>
+<summary>Check the screenshot</summary>
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c3070ab4f93cd206e3945c68e786abfb.png)
 
@@ -142,39 +147,39 @@ twccli ls vcs -secg -s 892486
 
 </Tabs>
 
+
 :::caution
-- 考量資安風險，CIDR 請勿設定 x.x.x.x"/0" (即與 0.0.0.0/0 等效) 之危險網段。
-- 連接埠範圍請審慎設定，並請小心衡量開放範圍。為避免入侵風險，不建議您設定 ingress 連接埠範圍為 0 ~ 65535。
+- Considering information security risk, please do not set the CIDR to the insecure network segment of `x.x.x.x/0` except for `0.0.0.0/0`.
+- Please set the port range carefully and measure the open range carefully. To avoid the risk of intrusions, it is not recommended to set the ingress port range from 0 to 65535.
 :::
 
 <br/>
 
 
-## 删除安全性群組規則
+
+## Delete Security Group rules
 
 <Tabs>
 
-<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
+<TabItem value="TWCC Portal" label="TWCC Portal">
 
-進入「**安全性群組規則管理**」頁面 > 勾選規則 > 點擊上方「**刪除**」。
+Go to the **Security Group Rules Management** page> Select rules> click **DELETE** above.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9c9f9025a29dc292698fc94c87ae62ce.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b9ae7ca9d9f718eb07b29583dc844cb9.png)
 
-- 或點擊規則右邊之 「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 選單按鈕，並點擊「**刪除**」。
+- Or click the &nbsp;<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>&nbsp; menu button on the right side of the rule, and click **DELETE**.
 
 </TabItem>
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-
-若要取消已設定的安全性群組，可使用 :point_right: `twccli rm vcs -secg $SecurityGroupId `
+Enter the command :point_right: `twccli rm vcs -secg $SecurityGroupId` to delete Security Group rules.
 
 :::info
-刪除安全性群組的時候，請使用安全性群組的 UUID 進行刪除。
-UUID 最短僅需提供前8碼，即可進行刪除。
+Please use the UUID to identify the Security Group rule you want to delete.
+You only need to provide at least the first 8 codes of UUID to delete it.
 :::
-
-參考範例:point_down:：
+Example:point_down::
 ```bash
 twccli rm vcs -secg ff781775
 ```

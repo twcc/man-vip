@@ -7,7 +7,7 @@ servers:
       ApiHost:
         default: slurm-taichung-default
 info:
-  version: 1.0.0
+  version: 1.2.0
   title: Slurm API
   description: |
     This is Slurm API.
@@ -75,6 +75,37 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ProjectQuotaSerializer'
+  /projects/reports/:
+    get:
+      tags:
+        - project
+      summary: Get assets reports for the projects.
+      description: Get assets reports for the projects.
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - name: begin_time
+          in: query
+          description: Default is two hours before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the util before the end time. Default is now.
+          schema:
+            type: string
+        - name: user
+          in: query
+          description: user UUID
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupAssetsSerializer'
   /flavors/:
     get:
       tags:
@@ -436,6 +467,25 @@ paths:
                         ]
                       }
                     ]
+  /jobs/{job_id}/runs/{run_id}/logs/:
+    get:
+      tags:
+      - job
+      summary: Get logs information from a run
+      description: Get logs information from a run
+      parameters:
+        - $ref: '#/components/parameters/JobIDParam'
+        - $ref: '#/components/parameters/RunIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
   /jobs/{job_id}/{action}/:
     post:
       tags:
@@ -550,6 +600,135 @@ components:
         floatingip:
           type: integer
           format: int32
+    GroupAssetsSerializer:
+      required:
+      - begin_time
+      - end_time
+      - projects
+      type: object
+      properties:
+        begin_time:
+          type: string
+          format: date-time
+        end_time:
+          type: string
+          format: date-time
+        projects:
+          type: array
+          items:
+            $ref: '#/components/schemas/AssetsProjectObject'
+    AssetsProjectObject:
+      required:
+      - detail
+      - name
+      - summary
+      type: object
+      properties:
+        name:
+          type: string
+        detail:
+          $ref: '#/components/schemas/AssetsDetailObject'
+        summary:
+          type: object
+          properties:
+            JOB-HPC:
+              type: array
+              items:
+                $ref: '#/components/schemas/AssetsSummaryObject'
+    AssetsDetailObject:
+      type: object
+      properties:
+        HOST:
+          type: array
+          items:
+            $ref: '#/components/schemas/AssetsHostObject'
+        JOB-HPC:
+          type: array
+          items:
+            $ref: '#/components/schemas/AssetsJobObject'
+    AssetsSummaryObject:
+      required:
+      - total_cpu
+      - total_gpu
+      - total_gpu_hour
+      - total_memory
+      type: object
+      properties:
+        total_cpu:
+          type: integer
+          format: int64
+        total_memory:
+          type: integer
+          format: int64
+        total_disk:
+          type: integer
+          format: int64
+        total_nic:
+          type: integer
+          format: int64
+        total_gpu:
+          type: integer
+          format: int64
+        total_gpu_hour:
+          type: number
+          format: float
+    AssetsHostObject:
+      type: object
+      properties:
+        interval:
+          type: array
+          items:
+            type: array
+            items:
+              type: string
+        total_dedicate_hours:
+          type: number
+          format: float
+        az_name:
+          type: string
+    AssetsJobObject:
+      required:
+      - cpu
+      - end_time
+      - gpu
+      - gpu_hour
+      - memory
+      - run_id
+      - start_time
+      - stepname
+      - user
+      type: object
+      properties:
+        job_ib:
+          type: integer
+          format: int64
+        job_name:
+          type: string
+        run_id:
+          type: integer
+          format: int64
+        stepname:
+          type: string
+        cpu:
+          type: integer
+          format: int64
+        memory:
+          type: integer
+          format: int64
+        gpu:
+          type: integer
+          format: int64
+        gpu_hour:
+          type: number
+          format: float
+        start_time:
+          type: string
+          format: date-time
+        end_time:
+          type: string
+          format: date-time
+        user:
+          $ref: '#/components/schemas/UserSerializer'
     FlavorDetailSerializer:
       required:
       - desc
@@ -1178,14 +1357,14 @@ components:
     ProjectInQueryParam:
       name: project
       in: query
-      description: 需要project ID才能請求
+      description: Project ID is required to request
       required: true
       schema:
         type: integer
     ProjectInPathParam:
       name: project_id
       in: path
-      description: 專案ID
+      description: Project ID
       required: true
       schema:
         type: integer
@@ -1222,14 +1401,14 @@ components:
     SolutionsIDParam:
       name: solutions_id
       in: path
-      description: 方案ID
+      description: Solution ID
       required: true
       schema:
         type: integer
     ApiHostParam:
       name: x-api-host
       in: header
-      description: 認證必要參數
+      description: Authentication Required Parameters
       required: true
       schema:
         type: string

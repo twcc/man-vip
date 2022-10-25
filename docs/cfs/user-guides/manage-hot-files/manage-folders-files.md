@@ -1,101 +1,86 @@
 ---
 sidebar_position: 2
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cfs-file-mngmnt-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cfs-file-mngmnt-zh'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cfs-file-mngmnt-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cfs-file-mngmnt-en'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 資料夾與檔案管理
+# Folder and file management
 
-請先 [建立資料集](manage-datasets.md#建立資料集) 再參考以下步驟進行資料夾與檔案管理。
+Please create a [dataset](https://man.twcc.ai/@twccdocs/guide-cfs-dataset-mngmnt-en) first then refer to the following steps for folder and file management.
+## Create folder
 
-## 建立資料夾
+* Click **CREATE FOLDER** button on dateset page, and enter folder name then click **OK** button.
 
-* 在資料集的內容頁面，點擊「**建立資料夾**」，輸入資料夾名稱後按「**確定**」。
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b91937c4451d422dc9b16856bcc16731.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4d7c50abbcc1629f71cc06b8bd196726.png)
+## Sharing folder
 
-
-
-## 資料夾分享
-
-
-* 資料夾分享功能可以讓您與計畫內的指定成員分享雲端檔案服務的資料，在資料集的內容列表頁面，將滑鼠移至資料夾右側的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，再點擊「**設定分享權限**」。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_63322a92beb09808a9a2817556dabc26.png)
-
-* 在「**設定分享權限**」視窗中，選取欲分享的成員及權限，並點擊「**新增成員**」。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2b4030f41b160c94e65610100ec40d88.png)
-
-
-* 設定好分享的成員名單及權限後點擊「**確定**」。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ba639ac91cbb82e7edb9a2f78861033e.png)
+* Folder sharing feature allows you to share data in Cloud File Service(CFS) with designated members in the same project. Move your cursor to the folder right panel  <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> menu button, then click **SHARE** button.
 
 
 
-## 上傳檔案
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0204fedda0bce7ae035ce2452c650417.png)
 
+* On **Sharing** window, select members and permissions, and click **ADD MEMBER**, click **OK** after setting.
 
-* 進入資料集內容頁面後點擊「**上傳**」。
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_11098e994541eacebf9e52de395e1082.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7c5a3919dd1162507fc84979d0d4ddcb.png)
+* Click **OK** after setting member list and permissions.
 
-* 出現「**上傳檔案**」視窗後，可直接將欲上傳的檔案拖曳到此，或點擊「**選擇檔案**」。
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ba82ec5745c7494d940aee212bf6b110.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_346a28147323f6a1de7e7ed8d9b76326.png)
+## Upload file
+* Click **UPLOAD** button in dateset detail page.
 
-* 選擇好欲上傳的檔案後點擊「**上傳**」。
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e6cca7882b3bf1381bb9fea3ac1036ac.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_da7e2753becd4f63436e190f2972e301.png)
+* Drag files into the **Upload File(s)** window or click the **SELECT FILES** button.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4c7d150cbf8c73b496bc593087348913.png)
+
+* Click the **UPLOAD** button after selecting the file you want to upload.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4e8ce1626f5b0bc0f18683a2e03d26de.png)
+
 
 :::info
+- File upload limit: A single file cannot exceed 1GB, and the total number of files cannot exceed 1000.
+- Please refer to [<ins>the version record</ins>](https://man.twcc.ai/@twccdocs/guide-cfs-metadata-search-versioning-zh#%E7%89%88%E6%9C%AC%E7%B4%80%E9%8C%84) for the file record description.
+:::
 
-- 檔案上傳限制：單一檔案不得超過 1GB，總檔案數不得超過 1000。
-- 請參考[<ins>版本紀錄</ins>](metadata-search-versioning.md#版本紀錄)了解檔案紀錄說明。
+## View file
 
-## 檢視檔案
+* On dataset page, click a file to view file information.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2b9986b928318c965d19e9fb39fd62b9.png)
 
+* You can view basic information of the file at file content page.
 
-
-
-* 在資料集的內容頁面，點選欲檢視的檔案列表。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_74d721fae45fc1597fff774bea6e48ae.png)
-
-* 進入檔案內容頁面後可檢視檔案的基本資訊。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_86403aa7cfc4a0950d1f3775920be839.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_50b14ee8e9f1934e33793aa9d7dbe2f0.png)
 
 
-## 下載檔案
+## Download file
 
+* On dataset page, select files and click the **DOWNLOAD** button.
 
-在資料集的內容頁面，勾選欲下載的檔案後點擊列表上方的「**下載**」按鈕。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8646437146760e77ce21f2140ebb8a7e.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b99c2b9a8424bc0e82af837bcc20c75f.png)
 
 :::info
-- 目前透過 TWCC 入口網站一次僅能下載一個檔案，如欲下載多個檔案，可透過左側功能列之 <ins>[「**存取介面管理**」](https://man.twcc.ai/@twccdocs/guide-cfs-access-interface-mngmnt-zh)</ins> 透過第三方軟體下載。
-
-- 請參考[<ins>版本紀錄</ins>](metadata-search-versioning.md#版本紀錄)了解如何取用舊檔案。
-
+- Currently, only one file can be downloaded at a time through the TWCC portal. You can download multiple files through third-party software <ins>[Access Interface Management](https://man.twcc.ai/@twccdocs/guide-cfs-access-interface-mngmnt-en)</ins> on the service list.
+- Please refer to [<ins>the version record</ins>](https://man.twcc.ai/@twccdocs/guide-cfs-metadata-search-versioning-zh#%E7%89%88%E6%9C%AC%E7%B4%80%E9%8C%84) for the file record description.
 :::
 
 
 
-## 删除檔案
+## Delete file
 
-* 勾選欲删除的檔案，再點選上方的「**刪除**」按鈕，亦可勾選多個檔案一起删除。
+* Select files and click the **DELETE** button, you can also select multiple files to delete together.
 
 :::info
-
-正在 <ins>[搬移](../move-files/move-retrieve-files.md)</ins> 的檔案無法删除。
-
+Files on <ins>[moving](https://man.twcc.ai/@twccdocs/guide-cfs-move-retrieve-data-en)</ins> cannot be deleted.
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7eb3cf9fc746f920cc951934310272d8.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1f8e1c3d720b031132331f075956d8f3.png)

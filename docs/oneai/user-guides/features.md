@@ -7,6 +7,11 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/oneai-aimaker-rele
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+:::info Coming soon!
+We are still working on the English version of this document. Thanks for your patience!
+:::
+
+
 # AI Maker
 
 AI Maker 為一套簡化機器學習開發、部署、管理流程的工具。

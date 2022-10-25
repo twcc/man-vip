@@ -1,47 +1,49 @@
 ---
 sidebar_position: 2
-title: '本機為 macOS'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-macos-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-to-windows-from-macos-zh' 
+title: 'From macOS'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-macos-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-to-windows-from-macos-en' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 連線 Windows 個體：本機為 macOS
+# Connect to Windows instances from macOS
 
-完成[準備工作、取得連線資訊](../prerequisites.md)後，請參考以下方式連線進入 Windows 個體(本機為 macOS) 。
+Having completed the [prerequisites and obtained connection information](https://man.twcc.vip/en/docs/vcs/user-guides/connection/prerequisites), please refer to the following method to connect to Windows instance from macOS.
 
 :::info
-請注意個體建立後，狀態轉為 **`Ready`**，**需等候一些時間才可遠端連線使用**。
+Please note that after the instance has been created and changed to the **`Ready`** state, it will take some time for the remote connection to become available.
 :::
 
 :::caution
-1. 因資安事件頻傳，如果您的連線來自以下這些國家，我們將關閉您使用遠端連線至 Windows 個體的功能 (連接埠：9833)：中國、德國、法國、韓國、荷蘭、波蘭、俄國若需連線 TWCC Windows 個體，請您與客服聯絡。
-2. 若您修改網路卡設定，將會導致無法連線進入虛擬運算個體，因此我們強烈不建議您更動網卡設定，請您操作與部署時特別留意。
+1. Due to frequent information security incidents, if your connection comes from the following countries, we will disable your remote connection to Windows instances (port: 9833): China, Germany, France, South Korea, Netherlands, Poland and Russia. If you need to connect to TWCC Windows instance, please contact Customer Service.
+2. You will not be able to connect to VCS instance once the settings of the network interface card are modified. Therefore, we strongly discourage you from changing the NIC settings. Please beware when operating and deploying.
 :::
 
 <br/>
 
-## 連線方式
+## Connetion method
 
-- **Step 1.** 至 Mac App Store 下載 「**Microsoft Remote Desktop**」 應用程式並開啟，點擊「**Add Desktop**」，輸入此個體之公用 IP、Port，接著點擊「**Add**」
+- **Step 1.** Download **Microsoft Remote Desktop** from Mac App Store, then open it. Click **Add Desktop**, enter the public IP and port of the instance, then click **Add**.
     
 :::info
-公用 IP 之後需加上 Port 號`: 9833`，例如：203.145.123.1`:9833`
+Remember to add the port number `9833` after the public IP. E.g., 203.145.222.23`:9833`.
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_aa227034ee0b79c47cfca35ddce2d099.png)
 
-- **Step 2.** 雙點擊已建立的連結並輸入登入帳號與密碼，便可成功連結個體
+- **Step 2.** Double-click the added connection and enter the username and password to connect to the instance.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_efdbd4140922207a512b84da8e697024.png)
 
+<br/>
+
 :::tip
-帳號：administrator<br/>
-密碼：使用者自行定義之個體密碼
+username: administrator<br/>
+password: user-defined instance password
 :::
 
 :::info
-若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](../../manage-monitor/console.md)，可加速工作流程。
+For urgent debugging/system maintenance, it is recommended to [<ins>connect via Console</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/management-and-monitoring/console) to speed up the workflow.
 :::

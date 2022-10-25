@@ -1,7 +1,7 @@
 const env_list = {
     staging: "Staging",
     preview: "Preview",
-    production: "TWCC",
+    production: "TWS",
   },
   i18nDirPath = {
     docs: "docusaurus-plugin-content-docs/current",
@@ -12,7 +12,8 @@ const env_list = {
         zhUrl = `${baseUrl}/${versionDocsDirPath}/${docPath}`;
   if (docPath === 'releaseNotes.md') return zhUrl;
   const rdir = i18nDirPath[versionDocsDirPath];
-  if (locale !== "zh-Hant" && rdir) return `${baseUrl}/i18n/${locale}/${versionDocsDirPath.replace(versionDocsDirPath,rdir)}/${docPath}`;
+  // if (locale !== "zh-Hant" && rdir) return `${baseUrl}/i18n/${locale}/${versionDocsDirPath.replace(versionDocsDirPath,rdir)}/${docPath}`;
+  if (locale !== "zh-Hant" && rdir) return `${baseUrl}-${locale}/${versionDocsDirPath}/${docPath}`;
   return zhUrl
 };
 
@@ -24,9 +25,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: env_list[process.env.Target || "production"],
-  tagline: "TWCC Manual",
+  tagline: "Create your services with TWCC.",
   url: "https://man.twcc.vip",
-  baseUrl: "/",
+  baseUrl: "/en/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -148,8 +149,8 @@ const config = {
       navbar: {
         title: undefined,
         logo: {
-          alt: "TWCC Logo",
-          src: "img/LOGO.svg",
+          alt: "TWS Logo",
+          src: "img/TWS-Logo.svg",
         },
         items: [
           {

@@ -1,48 +1,59 @@
 ---
 sidebar_position: 1
-title: '虛擬磁碟服務概觀'
-sidebar_label: '虛擬磁碟服務'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-overview-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-overview-zh' 
+title: 'VDS overview'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-overview-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-overview-en' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a62be3bdf4bc257526e95e16b063a777.png) 虛擬磁碟服務概觀
-虛擬磁碟服務可為虛擬運算個體擴充儲存空間，隨用隨付，可自行設定容量大小，彈性方便，為專為 TWCC 虛擬運算服務設計之儲存空間，提供高可用性、一致性、低延遲的服務。
+# ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a62be3bdf4bc257526e95e16b063a777.png) Virtual Disk Service (VDS) overview
 
-<br/>
 
-## 相關服務
-
-虛擬磁碟服務應用於多項虛擬運算服務相關的功能：
-
-<br/>
-
-### 虛擬運算個體儲存空間
-
-- **系統磁碟**：提供虛擬運算個體內建 100 GB 標準硬碟 (HDD) 的系統磁碟。
-- **資料磁碟**：虛擬運算個體可外掛多個資料磁碟以擴充儲存空間。提供固態硬碟 (SSD) 與標準硬碟 (HDD) 兩種儲存選擇：
-    - **固態硬碟 (SSD)**：
-        - 提供低延遲的服務 (少於 10 毫秒) 與高效穩定的傳輸量 (from 3 IOPS/GB to 16 IOPS/GB)，增強應用程式的可靠性與延展性，適合需高效能處理的企業應用程式與高吞吐量的巨量資料工作。
-        - 提供每個虛擬運算個體最大傳輸量為 2,375 MB/秒。
-        - 最多可支援 16 TB 的儲存空間。
-    - **標準硬碟 (HDD)**
-        - 提供傳輸效能每 TB 250 MB/秒，適用於不頻繁存取與不易受延遲時間影響的大型資料。
-        - 提供每個虛擬運算個體最大傳輸量為 2,375 MB/秒。
-        - 最多可支援 16 TB 的儲存空間。
-
-<br/>
-
-### 個體、磁碟備份服務
-
-提供儲存備份虛擬運算個體的映像檔、資料磁碟之快照。
+Virtual Disk Service is a pay-as-you-go, flexible and convenient way to expand storage for Virtual Compute Service (VCS) instances. It is designed as the storage space for TWCC VCS service to provide high-availability, consistent, and low-latency services.
 
 <br/>
 
 
-## 使用介面
 
-- [TWCC 入口網站](https://www.twcc.ai)
+## Related services
+
+Virtual Disk Service (VDS) plays a significant role in Virtual Compute Service (VCS):
+
+
+<br/>
+
+
+
+### VCS instance storage
+
+- **System disks**: We provide a system disk with a built-in 100 GB hard disk drive (HDD) in a VCS instance.
+- **Data disks**: VCS instances can mount multiple data disks to expand the storage. VDS provides the following two disk types:
+    - **Solid-state drive (SSD)**:
+        - Provides low-latency services (less than 10 milliseconds), efficient and stable transfers (from 3 IOPS/GB to 16 IOPS/GB) to enhance the reliability and scalability of applications. SSD is well-suited for enterprise applications that require high performance and high-throughput computations with big data.
+        - Provides a maximum transfer capability of 2,375 MB/sec for each VCS instance.
+        - Supports up to 16 TB of storage space.
+    - **Hard disk drive (HDD)**:
+        - Provides transfer capability of 250 MB/sec per TB. HDD is well-suited for mass data that is not frequently accessed and is unaffected by delays.
+        - Provides a maximum transfer capability of 2,375 MB/sec for each VCS instance.
+        - Supports up to 16 TB of storage space.
+
+
+<br/>
+
+
+
+### Instances and disks backup service
+
+TWCC provides storage for the backup of images and data disks of VCS instances.
+
+
+<br/>
+
+
+
+## Platforms
+
+- [TWCC Portal](https://www.twcc.ai)
 - [TWCC CLI](https://github.com/twcc/TWCC-CLI)

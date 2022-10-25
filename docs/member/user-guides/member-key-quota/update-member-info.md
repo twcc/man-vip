@@ -1,46 +1,47 @@
 ---
 sidebar_position: 3
-sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-update-your-info-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-update-your-info-zh'
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-update-your-info-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-update-your-info-en' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 更改會員資料
 
+# Update member information
 
-若您需修改姓名、手機、聯絡與備用信箱...等會員資料，或調整接收行銷資訊選項，請參考以下步驟修改。
+:::caution
+If your [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) is not applicable for the footage or process below, please refer to this <i class="fa fa-sign-out" aria-hidden="true"></i> [<ins>link</ins>](https://man.twcc.ai/@twsdocs/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fguide-service-signup-zh) for manual instructions.
+:::
+
+If you need to modify your member information, such as name, phone number, email address, etc., or adjust your options for receiving marketing messages, please refer to the following steps.
 
 <br/>
 
-
-### Step 1. [【登入會員中心】](https://tws.twcc.ai/)
+### Step 1. [【Sign in to Member Center】](https://tws.twcc.ai/)
 
 ![](https://i.imgur.com/mNk06Ct.png)
 
 <br/>
 
+###  Step 2. Personal information
 
-###  Step 2. 個人資料頁
-
-進入會員中心後，點選「**會員中心**」 > 「**會員資訊**」 > 「**個人資料**」
+After entering Member Center, click "**會員中心 (Member Center)**" > "**會員資訊 (Member Profile)**" > "**個人資料 (Personal)**".
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7215da046b4043ea95f70b81fbaec07a.png)
 
 <br/>
 
+###  Step 3. Update and submit 
 
-###  Step 3. 修改並提交會員資料 
-
-填入修改之資訊，再點選「**提交**」，即修改完成！
+Update your data and click "**提交 (Submit)**".
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4917e360a1350e806f18aca522cebe1f.png)
 
 <br/>
 
 :::info
-**聯絡我們：**
-- 業務聯絡 | <ins><a href = "mailto: sales@twsc.io">sales@twsc.io</a></ins>
-- 客戶服務及支援 | <ins><a href = "mailto: sales@twsc.io">service@twsc.io</a></ins>
+**Contact us:**
+- Business Contact | <ins><a href = "mailto: sales@twsc.io">sales@twsc.io</a></ins>
+- Customer Service and Support | <ins><a href = "mailto: sales@twsc.io">service@twsc.io</a></ins>
 :::

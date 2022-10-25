@@ -1,163 +1,317 @@
 ---
-sidebar_position: 9
-sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-tensorflow-visualize-data-distribution-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorflow-visualize-data-distribution-zh' 
+sidebar_position: 8
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-activate-tensorflow-amp-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-activate-tensorflow-amp-en' 
 ---
 
-# 視覺化呈現資料分佈－用 TensorFlow 實作 Linear-Regression
+import TOCInline from '@theme/TOCInline';
 
-## 1. 使用 Jupyter Notebook (Python)
+# Activate TensorFlow automatic mixed-precision computing and execution performance analysis
 
-### Step 1. 登入 TWCC
+This article will teach users how to use the TWCC Interactive Container step by step to train a handwritten digit recognition model on MNIST dataset with the automatic mixed precision (hereinafter referred to as AMP) enabled in TensorFlow to maintain the model accuracy and shorten the computing time. Finally, ResNet-50 is used to perform a simple performance analysis. The content outline is as follows:
 
-- 若尚無帳號，請參考 [註冊 TWS / TWCC 帳號](/docs/member/user-guides/member-key-quota/sign-up-for-twcc.md)
+- Introduction to AMP
+- Create a TWCC Interactive Container
+- SSH into the container
+- Enable AMP
+    - Environment variable setting method
+    - A code example of handwritten digit recognition on MNIST dataset
+- Benchmark performance analysis: ResNet-50 v1.5
 
 <br/>
 
-### Step 2. 建立開發型容器
+## Introduction to AMP
 
-- 請參考 [開發型容器](../user-guides/create-connect/create-container.md) 建立開發型容器，映像檔類型請選擇 TensorFlow (映像檔請選擇 19.08 以前 (`含 19.08`)，且 Python 2 的版本)
+Traditional high-performance computing uses Double Precision computing to ensure the convergence of numerical algorithms (e.g., atmospheric simulation).  However, Double precision computing (FP32) requires a lot of memory space since it uses 32 bits to represent 16 digits of floating point.
+
+Some numerical computing (e.g., deep learning) does not need to rely entirely on double-precision computing. The use of automatic mixed precision computing (AMP) can speed up the computing speed and maintain the accuracy of the model.
+
+:::info
+:bulb: The following tests shows that the accuracy of the model is indeed not affected by AMP:
+
+- Using ResNet-50 v1.5 model for image recognition model training on ImageNet dataset (140 GB)
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8322f66246de6c922ea960a815aa7934.png)
+
+- Using 4 or 8 GPUs, after 50 epochs training, the accuracy is as follows. Double precision computing (FP32) and automatic mixed precision computing (AMP) show similar accuracy:
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a1cc0ebcb690bec2f930f3bb361c17f6.png)
+
+:::
+
+The following tutorial demonstrates how to enable AMP in TWCC Interactive Container.
 
 <br/>
 
 
-### Step 3. 連線進入 Container
+## Create a TWCC Interactive Container
 
-- 使用 Jupyter Notebook 連線容器，新增 Python 2 notebook
+After signing in, please refer to  [Create a Interactive Container](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/create-an-interactive-container) and create a container with following settings:
 
-:::info 
-:book: 參見[<ins>連線容器</ins>](../user-guides/create-connect/connect-container.md#jupyter-notebook)
+```
+Image type          : TensorFlow
+Image version       : tensorflow-19.08-py3:latest
+Basic configuration : c.super
+```
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cbbca5b4fd9382ddb3b1c10265650bd0.png)
+
+<br/>
+
+
+## SSH into the container
+
+On the **Interactive Container Management** page, click the container to enter the **Interactive Container Details** page when the container state changes from `Initializing` to `Ready`. We use SSH to connect to the container in this tutorial, and Jupyter Notebook is another option. For detailed steps, please refer to [Using SSH connection sign in](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/connect-to-your-container/#ssh).
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2a9f52977b7ca8da50e7742c02c5cbe1.png)
+
+<br/>
+
+## Enable AMP
+
+Enabling AMP involves two steps: setting environment variables and rewriting the computing program. The demonstration is as follows:
+
+<br/>
+
+### Environment variable setting method
+
+To set the environment variable in the bash shell, you can directly enter the commands in the command line as follows:
+
+```bash
+export TF_ENABLE_AUTO_MIXED_PRECISION=1
+export TF_ENABLE_AUTO_MIXED_PRECISION_GRAPH_REWRITE=1
+```
+
+:::info
+
+:bulb: In TWCC Interactive Container (TensorFlow 19.08-p3:latest), AMP is enabled by default, you can use the command ```echo $TF_ENABLE_AUTO_MIXED_PRECISION``` to verify:<br/>
+Response = 1 means AMP is **enabled**<br/>
+Response = 0 means AMP is **stopped**
+
 :::
 
 <br/>
 
 
-### Step 4. 執行 Linear-Regression 程式
+### Code examples
 
-- 複製貼上以下程式碼內容至 Jupyter Notebook
+- Graph-based example：
 
 ```python
-%matplotlib inline
+opt = tf.train.AdamOptimizer()
+opt = tf.train.experimental.enable_mixed_precision_graph_rewrite(opt)
+train_op = opt.miminize(loss)
+```
+
+- Keras-based example：
+
+```python
+opt = tf.keras.optimizers.Adam()
+opt = tf.train.experimental.enable_mixed_precision_graph_rewrite(opt)
+model.compile(loss=loss, optimizer=opt)
+model.fit(...)
+```
+
+<br/>
+
+### A code example of handwritten digit recognition on MNIST dataset
+
+In Python, AMP can be enabled in Keras with the collocation of TensorFlow to train a handwritten digit recognition on MNIST dataset as follows:
+ 
+```python
 import tensorflow as tf
-import numpy as np
-import matplotlib.pyplot as plt
-
-# 用 numpy 亂數產生 100 個點
-x_data = np.random.rand(100).astype(np.float32)
-y_data = x_data * 0.1 + 0.3
-
-# Try to find values for W and b that compute y_data = W * x_data + b
-# (We know that W should be 0.1 and b 0.3, but TensorFlow will
-# figure that out for us.)
-
-W = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
-b = tf.Variable(tf.zeros([1]))
-y = W * x_data + b
-
-# Minimize the mean squared errors.
-loss = tf.reduce_mean(tf.square(y - y_data))
-optimizer = tf.train.GradientDescentOptimizer(0.2)
-train = optimizer.minimize(loss)
-
-# Before starting, initialize the variables.  We will 'run' this first.
-init = tf.global_variables_initializer()
-
-# Launch the graph.
-sess = tf.Session()
-sess.run(init)
-
-# Fit the line.
-for step in range(201):
-    sess.run(train)
-    if step % 20 == 0:
-        print(step, sess.run(W), sess.run(b))
-        plt.plot(x_data, y_data, 'ro', label='Original data')
-        plt.plot(x_data, sess.run(W) * x_data + sess.run(b), label='Fitted line')
-        plt.legend()
-        plt.show()
-
-# Learns best fit is W: [0.1], b: [0.3]
+start_time = time.time()
+opt=keras.optimizers.Adadelta()
+opt = tf.train.experimental.enable_mixed_precision_graph_rewrite(opt)
+model.compile(loss=keras.losses.categorical_crossentropy,
+              optimizer=opt,
+              metrics=['accuracy'])
+elapsed_time = time.time() - start_time
+print('Time for model.compile:', elapsed_time)
 ```
-
-- 點擊 「Run」
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_50e380fb051e664273ddc4a0def4346f.png)
-
-<br/>
-
-
-### Step 5. 資料分佈視覺化呈現
-
-- TensorFlow 會慢慢地找出 fitting 的權重值並繪製線性迴歸線
-
-:::info 0 [-0.7029411] [0.33094117]
-<img style={{'background-color':'white'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fb0b79090def125ce1173c78dad6362a.png"/>
-:::
-:::info 100 [0.03479815] [0.33622062]
-<img style={{'background-color':'white'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_257640a2d6ddf46bc0c7eea9ea26efc8.png"/>
-:::
-:::info 200 [0.09321669] [0.30376825]
-<img style={{'background-color':'white'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0d2ff561591c061432b01fc7728eca4c.png"/>
-:::
-
-<br/>
-
-## 2. 使用 SSH 或 Jupyter Notebook (Terminal)
 
 :::info
-:bulb: 以下範例參考自 TensorFlow 官方教學
+:bulb: The `KerasMNIST.py` (AMP disabled) and `kerasMNIST-AMP.py` (AMP enabled)  program files can be downloaded [here](https://github.com/TW-NCHC/AI-Services/tree/master/Tutorial_One) for reference.
 :::
 
 <br/>
 
-### Step 1. 利用 SSH 登入方式或開啟 Jupyter Notebook (Terminal)
+
+## Benchmark performance analysis: ResNet-50 v1.5
+
+The following table shows the performance comparison of five image recognition training using ResNet-50 v1.5 with different settings:
+
+| Group| AMP | XLA |  Precesion |Batch Size |
+| -------- | -------- | -------- | -------- | -------- |
+| 1| :negative_squared_cross_mark:     | :negative_squared_cross_mark:     | Double precision     | 128 (Baseline)     |
+| 2| :negative_squared_cross_mark:     |:negative_squared_cross_mark:     | Double precision     | 256     |
+| 3| :white_check_mark:     | :negative_squared_cross_mark:     | Mixed precision (single and half precision)    | 256     |
+| 4| :white_check_mark:     | :white_check_mark:     | Mixed precision (single and half precision)     | 256    |
+| 5| :white_check_mark:     | :white_check_mark:     | Mixed precision (single and half precision)   | 512    |
+
 
 :::info
-:book: 參見[<ins>連線容器</ins>](../user-guides/create-connect/connect-container.md#連線容器-1)
+Accelerated Linear Algebra (XLA) can optimize TensorFlow computing and accelerate processing speed.
 :::
 
-<br/>
-
-### Step 2. 從 GitHub 下載 TensorFlow 程式
+When you create a TWCC Interactive Container (TensorFlow 19.08-p3:latest), the sample code of ResNet-50 v1.5 already exists in the `/workspace/nvidia-examples/resnet50v1.5` directory. Create a new directory (e.g., results) under this directory to store the model data. Enter the command in the command line as follows:
 
 ```bash
-git clone https://github.com/tensorflow/tensorflow.git
+cd /workspace/nvidia-examples/resnet50v1.5
+mkdir results
 ```
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_94baa375f655c1c8a10cecd3ca0c0d4b.png)
 
 <br/>
 
 
-### Step 3. 切換 Tensorflow 分支至 1.10
+###  Group 1. Control group: Baseline
+
+> AMP disabled | Double precision｜Batch size = 128
+
+The environment enables automatic mixed precision by default, so the execution control group must disable the automatic mixed precision  in the environment variable in advance. To do so, directly enter the execution command in the command line as follows:
 
 ```bash
-cd tensorflow && git checkout r1.10
+export TF_ENABLE_AUTO_MIXED_PRECISION=0
+export TF_ENABLE_AUTO_MIXED_PRECISION_GRAPH_REWRITE=0
+python ./main.py --mode=training_benchmark --warmup_steps 200 \
+       --num_iter 500 --batch_size 128 --iter_unit batch --results_dir results \
+       --nouse_tf_amp  --nouse_xla
 ```
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b54848bfd66229b4d336c2a804a4584.png)
+
+Using the following command to dynamically observe the usage of GPU memory every 10 seconds. We can observe that the GPU memory usage is about 25.43 GB. The GPU memory capacity allocated (32.48 GB) is not yet fully utilized.
+
+```bash
+nvidia-smi --loop=10
+``` 
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cf31d97e7819afb3bcdc7f8137c2ae5b.png)
+
+The model training completed, and it could process about 393.49 images per second:
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9a1072b7574cc7dc6abcee91ef520147.png)
 
 <br/>
 
 
-### Step 4. 切換至 example/regression 目錄
+
+###  Group 2. Batch Size 256
+
+>  AMP disabled | Double precision | Batch size = 256
+
+From the control group, we dynamically observe the usage of GPU memory and find that the GPU memory has not been fully utilized, so we doubled the batch size and directly entered the execution command in the command line as follows:
 
 ```bash
-cd tensorflow/examples/get_started/regression
+rm -rf results/*
+python ./main.py --mode=training_benchmark --warmup_steps 200 \
+       --num_iter 500 --batch_size 256 --iter_unit batch --results_dir results \
+       --nouse_tf_amp  --nouse_xla
 ```
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5a7ccd02f252fa2873aa6b5ad6c7f3f3.png)
+GPU memory usage: 31.31 GB
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5870f78d6d1165271e5a9984d98cfc70.png)
+
+Processing about 405.73 images per second, showing performance 1.03 times better than the control group.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2cf72e347cfc8a17634c2ed9c1f4fa0a.png)
 
 <br/>
 
 
-### Step 5. 使用 Python 指令運行範例程式
+###  Group 3. AMP enabled
+
+> Enable AMP | Mixed precision (single and half precision)｜Batch size = 256
+
+Enter the following command to set the environment variable to enable AMP, and perform computing:
 
 ```bash
-python linear_regression.py
+rm -rf results/*
+export TF_ENABLE_AUTO_MIXED_PRECISION=1
+export TF_ENABLE_AUTO_MIXED_PRECISION_GRAPH_REWRITE=1
+
+python ./main.py --mode=training_benchmark --warmup_steps 200 \
+       --num_iter 500 --batch_size 256 --iter_unit batch --results_dir results \
+       --nouse_xla
 ```
 
-- 運算過程中會輸出以下訊息 :
-    - Check point 目錄 : 可以使用 TensorBoard 工具來視覺化神經網絡及分析訓練趨勢圖
-    - 每 100 次迭代後的 loss 數值，這有助於確定模型訓練是否有收斂
+GPU memory usage has been reduced to 19.28 GB.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0c66fb2a3b252f1eac4ef50818c90af1.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8dd7455480c860b2b62e17e0e48bc585.png)
+
+Processing about 1308.37 images per second, showing performance 3.33 times better than the control group.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b4251f877ae84fc3c466ac5330d8b041.png)
+
+<br/>
+
+
+### Group 4. XLA enabled
+
+> AMP & XLA enabled | Mixed precision (single and half precision) | Batch size = 256
+
+Enter the command directly in the command line as follows:
+
+```bash
+rm -rf results/*
+python ./main.py --mode=training_benchmark --warmup_steps 200 \
+       --num_iter 500 --batch_size 256 --iter_unit batch --results_dir results
+```
+
+GPU memory usage: 19.29 GB
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1ad535760722e06f87c90a9a92cca09e.png)
+
+Processing about 1309.21 images per second, showing performance 3.33 times better than the control group.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_926a8e53f6578ecae4cf7d19fbb6e81f.png)
+
+<br/>
+
+
+###  Group 5. Double the batch size again
+
+> AMP & XLA enabled | Mixed precision (single and half precision) ｜Batch size = 512
+
+<details>
+<summary><b>ResNet-50 v1.5 Benchmark performance analysis example</b></summary>
+<div>
+
+You can run the performance analysis of ResNet-50 directly through the following commands, the running time is about 3 minutes<br/>
+`wget -q -O - http://bit.ly/TWCC_CCS_AMP-XLA | bash`
+
+</div>
+</details>
+
+<br/>
+
+Since AMP greatly reduces the usage of GPU memory, we double the batch size in an attempt to increase the execution performance. Enter the command directly in the command line as follows:
+
+```bash
+rm -rf results/*
+python ./main.py --mode=training_benchmark --warmup_steps 200 \
+       --num_iter 500 --batch_size 512 --iter_unit batch --results_dir results
+```
+
+GPU memory usage: 31.31 GB
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_faced67f531ced2b7e3f4f2d922ba55c.png)
+
+Processing about 1361.00 images per second, showing performance 3.46 times better than the control group.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7da55c796423eb1359f95ecf7ab4db35.png)
+
+<br/>
+
+### Performance comparison
+
+Summarizing the above image processing data results (img/sec, GPU memory usage) for each group, the performance comparison is shown in the following chart. Compared with the control group, the performance of enabling AMP acceleration is quite significant in reducing GPU memory usage and shortening training computing time:
+
+| Group| AMP | XLA | Precesion |Batch Size |Number of images processed per second (img/sec) | GPU memory usage (GB)|
+| -------- | -------- | -------- | -------- | -------- |-------- |-------- |
+| 1 (Baseline)| :negative_squared_cross_mark:     | :negative_squared_cross_mark:     | Double precision     | 128     |393.49 |25.43|
+| 2| :negative_squared_cross_mark:     |:negative_squared_cross_mark:     | Double precision     | 256     |405.73|31.31|
+| 3| :white_check_mark:     | :negative_squared_cross_mark:     | Mixed precision (single and half precision)     | 256     |1308.37|19.29|
+| 4| :white_check_mark:     | :white_check_mark:     | Mixed precision (single and half precision)      | 256    |1309.21|19.29|
+| 5| :white_check_mark:     | :white_check_mark:     | Mixed precision (single and half precision)    | 512    |1361.00|31.31|
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c22b59516faf0a9d42cd8efd4154aa67.png)

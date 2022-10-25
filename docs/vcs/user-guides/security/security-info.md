@@ -1,12 +1,12 @@
 ---
 sidebar_position: 4
-sync_original_production: 'https://man.twcc.ai/@twccdocs/info-vcs-security-zh'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/info-vcs-security-zh'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/info-vcs-security-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/info-vcs-security-en'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 外部資安資訊
+# External resources of information security
 
-建議您定期瀏覽資安相關網站，例如： [TWCERT/CC台灣電腦網路危機處理暨協調中心](https://www.twcert.org.tw)、[行政院國家資通安全會報技術服務中心](https://www.nccst.nat.gov.tw/)，以獲得新的資訊安全相關訊息。
+We suggest you to regularly visit information security related websites, such as: [Taiwan Computer Emergency Response Team / Coordination Center (TWCERT/CC)](https://www.twcert.org.tw/en/mp-2.html), and [National Center for Cyber Security Technology](https://www.nccst.nat.gov.tw/Default?lang=en), to obtain new messages about information security.

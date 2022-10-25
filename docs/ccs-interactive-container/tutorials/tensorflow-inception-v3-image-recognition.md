@@ -1,139 +1,148 @@
 ---
-sidebar_position: 6
-sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-tensorflow-inception-v3-port-zh'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorflow-inception-v3-port-zh'
+sidebar_position: 5
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-keep-your-processes-running-continuously-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-keep-your-processes-running-continuously-en' 
 ---
 
-# 使用 TensorFlow Inception V3 訓練影像辨識模型、生成推論引擎
-
-深度學習分為兩階段：**訓練**與**推論**，前者需對大量的資料數據進行無數次的計算，訓練並產生模型；而後者則是將模型對外提供辨識服務。
-
-模型訓練需要大量的運算資源，才能取得辨識效果良好的模型，TWCC 提供您容器解決方案，使用 GPU 資源運算，可快速生成模型。
+# Keep your processes running continuously
 
 
-本文將一步步教學如何透過 [TWCC 開發型容器](../overview.md)，使用 GPU 資源<sup>[1][2]</sup>，並搭配預設儲存系統–[高速檔案系統 (HFS)](../../hfs/overview.md) 作為訓練資料與模型之存取空間，利用 [TensorFlow Inception V3](https://www.tensorflow.org/api_docs/python/tf/keras/applications/InceptionV3) 卷積類神經網路架構、[CIFAR-10 資料集](https://www.cs.toronto.edu/~kriz/cifar.html) 進行貓、狗影像辨識模型訓練，並生成推論引擎、對外提供圖片辨識服務。
+- When we operate containers using SSH, the processing might be interrupted due to the Internet disconnection. We provide the following 3 solutions to ensure that the computing work can continuously run in the background.
+
+
+## Method 1. Using Jupyter Notebook
+
+### Step 1. Click into the created Interactive Container in TWCC
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_44743f61fe00be39e65f5926df2992f8.png)
+
+
+
+
+### Step 2. Connect to the the container using Jupyter Notebook 
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4759b121a387fdfd53d289929e9fa290.png)
+
+
+
+### Step 3. Open the terminal to operate the container
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a027717a19eb85582f5f893ec2ed999c.png)
+
+
+
+### Step 4. Enter and run the command
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_92e9382801d6dd746faeffa8043ddb86.png)
+
 
 :::info
-- [1] 可建立最多含 8 GPUs 的容器，請參考[<ins>規格與定價</ins>](../../pricing.mdx)。
-- [2] 若需使用 8 GPUs 以上的資源，您可以使用 [<ins>TWCC 台灣杉二號 (命令列介面)</ins>](../../twnia2-hpc-cli/overview.md)服務來完成工作。
+:bulb: The URL bar will display the terminal number: `terminals/1`, which will be used for the following steps.
+:::
+### Step 5. Check the status of the running process
+- If you close the Terminal, the process will run continuously in the background.
+- To check the running status of the process, click **Running** in Jupyter Notebook, and click the terminal number you want to check below.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b4acc84b64bb17c41533b4718a74bcc2.png)
+
+
+- Then you are able to enter Terminal again to check the status of the running process.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_62ab66f669dfb35b75aaec84c0ee1993.png)
+
+
+
+
+## Method 2. Using Screen 
+
+### Step 1. Install Screen
+
+- Connect to the container using SSH, and then enter the command to install Screen:
+
+```bash=
+sudo apt-get install screen
+```
+
+:::info
+:book: Please refer to [<ins>Connect to the container using SSH</ins>](https://www.twcc.ai/doc?page=container#使用-SSH-登入連線).
+:::
+:::info
+:warning: Warning: If the installation process shows `E: Unable to locate package screen`, please run the following command to update, then install Screen again.
+```bash=
+sudo apt-get update
+```
 :::
 
 
-## Part 1. 影像辨識模型訓練
-
-### Step 1. 登入 TWCC
-
-若尚無帳號，請參考 [註冊 TWCC 帳號](../../member/user-guides/member-key-quota/sign-up-for-twcc.md)
-
-### Step 2. 建立開發型容器
-
-請參考 [開發型容器](../user-guides/create-connect/create-container.md) 並依據下方設定，於 TWCC 建立開發型容器：
-
+### Step 2. Enter Screen 
+```bash=
+screen
 ```
-映像檔類型： TensorFlow 18.12
-映像檔版本： 支援 Python 2 的版本
-基本設定：   型號 c.super 
+- After entering Screen, please read the description.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_47056d9911ee362ef05bc9e6ac33febc.png)
+
+
+- Press **Return** key to enter the command
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e1b9bebfacbf19334f64d7f9c5b4cd7b.png)
+
+
+
+### Step 3. Run the process in the screen shell
+
+- The example is as follows:
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0017c6102df15b490d4492adf889470a.png)
+
+
+
+### Step 4. Detach screen shell
+
+- When the process is running, press `ctrl + a + d`, it will show detach successful message (shell ID marked with red frame). Then, the process can run continously in the background, even if SSH is disconnected.
+
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_017ef5c98429becb339bd36d43cdc7d2.png)
+
+
+
+### Step 5. Check the status of the running process
+
+- If you want to enter that screen shell again, enter the command to operate container and check the status of the process:
+
+```bash=
+screen -r [A chunk of screen shell ID]
 ```
+:::info
+:book: [<ins>More Screen command</ins>](https://blog.gtwang.org/linux/screen-command-examples-to-manage-linux-terminals/)
+:::
 
-### Step 3. 連線容器、下載訓練程式
+## Method 3. Using Linux nohup command
 
-- 參考 [連線容器](../user-guides/create-connect/connect-container.md)，使用 Jupyter Notebook 或 SSH 連線進入容器之預設儲存空間
+### Step 1. Connect to the container using SSH and run the process
 
+- Enter the command below to run the process in the background.
 
-- 輸入以下指令，將 [TWCC GitHub](https://github.com/TW-NCHC/AI-Services/tree/V3Training) Inception v3 影像模型訓練的架構程式，下載至容器
+```bash=
+nohup [/code_path] &
+```
+:::info
+:book: Please refer to [<ins>Connect to the container using SSH</ins>](https://man.twcc.ai/s/SJlZnSOaN#%E4%BD%BF%E7%94%A8-SSH-%E7%99%BB%E5%85%A5%E9%80%A3%E7%B7%9A).
+:::
+- The example is as follows, terminal will return the job ID (job ID = 1 marked with red frame), and the output of the process will be displayed in the "nohup.out".
 
- ```bash
-git clone https://github.com/TW-NCHC/AI-Services.git
- ```
-
-
-  
-### Step 4. 進行 AI 模型訓練
- 
- - 進入 「**Tutorial_Three**」目錄
- 
- ```bash
- cd AI-Services/Tutorial_Three
- ``` 
- 
- - 執行模型訓練
- 
- ```bash
-bash V3_training.sh --path ./cifar-10-python.tar.gz
- ``` 
-
-- 在 Terminal 看到以下訊息，表示即將開始訓練模型
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d220eceddf16a2cc6c0e29a2af8b569b.png)
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_73e007a0bba2a9291a54bd03dd260893.png)
+### Step 2. View the output content
 
- 
-- 在訓練過程中，可在「**開發型容器詳細資料**」頁面可檢視 CPU/GPU、記憶體與網路的資源使用狀況
+- Enter the following command to view the latest output of the process.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_478e0058ec490e285909748ed46c5781.png)
+```bash=
+tail nohup.out
+```
+- The output is displayed as follows:
 
-
- 
-- 模型訓練完成，將會存放在路徑： `AI-Services/Tutorial_Three/inceptionv3/train/weights` 
-
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2a714f02d570256125e5b2ab9c92234c.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a118f65cfb32d6b14fb291a322ca56b2.png)
 
 
 
-## Part 2. 生成推論辨識引擎
-
-以下教學如何將訓練好的模型，生成推論引擎，並對外提供圖片推論、辨識的網頁服務。
-
-### Step 1. 連線容器
-
-請再次 [連線進入容器](../user-guides/create-connect/connect-container.md)
-
-    
-### Step 2. 生成推論辨識引擎 
- 
-- 進入 Tutorial_Three 目錄
-
-```bash
-cd AI-Services/Tutorial_Three
-``` 
- 
-- 開啟 AI 推論引擎的服務
-
-```bash
-bash V3_inference.sh
-``` 
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_309b6636ffb075f5de28ceeca0b7bac9.png)
-
-
-### Step 3. 圖片辨識網站
-
-- 請先至開發型容器詳細資料頁 :arrow_right: 點選「**關聯**」服務埠 :arrow_right: 勾選「**5001**」 :arrow_right: 再按下確定便可開啟 HTTP 網頁服務端點
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e7c40c0c9fce17a0187f1f12be330b80.png)
-
-
-- 開啟瀏覽器 :arrow_right: 在網址列輸入 **`容器公用IP:對外埠`** (如下，可於容器詳細資料頁查詢) 便可開始使用 AI Inference 的服務
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c4c4b345e4761709116ae1c55c89590e.png)
-
-
-- 點選「**選擇檔案**」選擇要進行辨識內容的圖片檔案，並點選「**Upload**」上傳圖片
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e2799644668d5a4edf5d6e228515e8bd.jpg)
-
-
-- 以[貓咪圖片](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8dc7172e7891a230d3932a7e987b55e1.jpg)作為測試範例，圖片辨識的結果與相似度數值顯示在瀏覽器，與 Egyptian_cat (0.49293482) 最為相似
-
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b8464fe7cd03c895eb918b64a8778633.jpg)
-
-
-### Step 4. 刪除容器，回收資源
-
-
-**容器建立後即持續計費**，若不再需要執行訓練與推論，您可以從 TWCC 「**開發型容器管理**」頁，勾選容器、點選「**刪除**」，回收資源並停止計費。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a18ff79ec4afc015c2129eb96b44ccb0.png)
-
+:::info
+:book: [<ins>More nohup command</ins>](https://blog.gtwang.org/linux/linux-nohup-command-tutorial/)
+:::

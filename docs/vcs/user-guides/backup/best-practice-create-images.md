@@ -1,50 +1,52 @@
 ---
 sidebar_position: 2
-title: '建立映像檔最佳作法'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-snapshot-best-practice-zh'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-snapshot-best-practice-zh'
+title: 'Best practices to create VCS instance images'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-snapshot-best-practice-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-snapshot-best-practice-en'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 建立虛擬運算個體映像檔的最佳作法
+# Best practices to create VCS instance images
 
-您可於多種情況下建立 [TWCC 虛擬運算個體映像檔](./create-images.md)，**但在建立前，請您執行以下工作以確保有效取得映像檔**：
+You can create [TWCC VCS instance image](https://man.twcc.ai/@twccdocs/vcs-vds-instance-image-en) in a variety of situations, **but before creating, please perform the following tasks to ensure that the image is effectively obtained**:
 
-- **[關機 (Shutdown)](#如何關機-shutdown) 後再建立映像檔**，若個體狀態為 Ready 且仍有 I/O，建立所需時間較長，關機後再執行可確保製作時間不會過長。
-- **若個體已設定自動掛載資料磁碟，建議指令[加上 "nofail" 選項](#如何加上-nofail-選項)後再建立映像檔**，以確保使用映像檔回復之個體，可以正常啟動與連線。
+- **Create an instance image after [shutting down your instance](#how-to-shut-down-instances)**. If the state of the instance is **`Ready`** and I/O is still available, it will take longer to create, so shutting down before creating the image will ensure a reasonable creation time.
+- **If you have configured auto mount data disks to your instance, it is suggested to [add "nofail" option](#how-to-add-the-nofail-option) after the configuration command before creating an image** to ensure that the instance restored by the image can be started and connected normally.
+
 
 <br/>
 
 
-## 如何關機 (shutdown)？
 
-- SSH 連線進入虛擬運算個體後，執行關機指令即可將個體關機。 
+## How to shut down instances?
+
+- After connecting to your VCS instance via SSH, you can use the shutdown command to shut down the instance.
 
 ```bash
 sudo shutdown
 ```
 
-- 關機完成後，個體狀態將顯示為 **`shutdown`**
+- After shutdown is complete, the instance will be in the **`shutdown`** state.
 
-:::caution
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d0a1329d89f244dfca9d602ef826b0dd.png)
-:::
 
 :::info
-個體狀態與計費關係之說明，請參考[<ins>虛擬運算個體生命週期</ins>](../../concepts/instance-lifecycle.md)。
+For the relationship between instance state and billing, please refer to [<ins>VCS instance lifecycle</ins>](https://man.twcc.vip/en/docs/vcs/concepts/instance-lifecycle).
 :::
+
 
 <br/>
 
 
-## 如何加上 nofail 選項？
 
-- 若您曾在 /etc/fstab 檔案內有設定自動掛載資料磁碟指令
-(例：`/dev/vdb /mnt ext4 defaults`)<br/>
+## How to add the nofail option?
+
+
+- If you have configured auto mount data disks to your instance in the file /etc/fstab (e.g., `/dev/vdb /mnt ext4 defaults`)<br/>
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_09ddb7ad46cfae66dcb3fa7cb75244c0.png)
 
-- 請您在原設定後方加上 `nofail` 選項，避免掛載資料磁碟作業錯誤，造成您以映像檔建立的個體無法正常啟動與連線，
-(例：`,nofail,x-systemd.device-timeout=1m`)<br/>
+- Please add `nofail` after the original settings to avoid errors in mounting the data disks, causing the instance created with the image to fail to be started and connected normally.
+(e.g., `,nofail,x-systemd.device-timeout=1m`)<br/>
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d82af67186cc021e21a4f4d59630cc4d.png)

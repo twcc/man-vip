@@ -1,31 +1,27 @@
 {
   "link.title.Docs": {
-    "message": "Docs",
+    "message": "文件",
     "description": "The title of the footer links column with title=Docs in the footer"
   },
   "link.title.Members": {
-    "message": "Members",
+    "message": "用戶指南",
     "description": "The title of the footer links column with title=Members in the footer"
   },
   "link.title.More": {
-    "message": "More",
+    "message": "更多",
     "description": "The title of the footer links column with title=More in the footer"
   },
-  "link.item.label.Introduction": {
-    "message": "Introduction",
+  "link.item.label.Overview": {
+    "message": "簡介",
     "description": "The label of footer link with label=Introduction linking to /docs/introduction"
   },
   "link.item.label.Academic Users": {
-    "message": "Academic Users",
+    "message": "學員用戶",
     "description": "The label of footer link with label=Academic Users linking to https://iservice.nchc.org.tw"
   },
   "link.item.label.Enterprise Users": {
-    "message": "Enterprise Users",
+    "message": "企業用戶",
     "description": "The label of footer link with label=Enterprise Users linking to https://tws.twcc.ai"
-  },
-  "link.item.label.Blog": {
-    "message": "Blog",
-    "description": "The label of footer link with label=Blog linking to /blog"
   },
   "link.item.label.GitHub": {
     "message": "GitHub",

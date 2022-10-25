@@ -125,12 +125,12 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/UserPortalHistory_
 - **VCS**
     - <font style={{'background-color':'#27A5BD'}}><font style={{'color':'white'}}> 
     
-    <b>&nbsp;Feature&nbsp;</b></font></font>  &ensp; You can now <a href="vcs/user-guides/backup/manage-images#分享映像檔分享管理">share images across projects</a> and use the same image from other projects to <a href="vcs/user-guides/create/create-custom-instances#建立客製化個體-1">create instances</a>.
+    <b>&nbsp;Feature&nbsp;</b></font></font>  &ensp; You can now <a href="https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-vds-manage-instance-image-zh#%E5%88%86%E4%BA%AB%E6%98%A0%E5%83%8F%E6%AA%94%E3%80%81%E5%88%86%E4%BA%AB%E7%AE%A1%E7%90%86">share images across projects</a> and use the same image from other projects to <a href="https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-create-custom-instance-zh#%E9%81%B8%E7%94%A8%E4%BE%86%E6%BA%90%E8%A8%88%E7%95%AB%E5%88%86%E4%BA%AB%E7%9A%84%E6%98%A0%E5%83%8F%E6%AA%94">create instances</a>.
     - <font style={{'background-color':'#27A5BD'}}><font style={{'color':'white'}}> <b>&nbsp;Feature&nbsp;</b></font></font> &ensp; 
     - Added search box for images to fasten the VCS instance creation process.
 ### Mar 18, 2022 (version: 37705ad2)
 - **CFS**
-    - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Added messages to recommend using <ins><a href = "cfs/user-guides/manage-hot-files/access-interfaces-hot-files">S3 or SFTP</a></ins> to upload large files or large numbers of files.
+    - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Added messages to recommend using <ins><a href = "https://man.twcc.ai/@twccdocs/doc-cfs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cfs-access-interface-mngmnt-en">S3 or SFTP</a></ins> to upload large files or large numbers of files.
 ### Mar 4, 2022 (version: 64f9a585)
 - **UI**
     - <font style={{'background-color':'#FF5722'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Changed links to Member Center.

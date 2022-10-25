@@ -1,75 +1,75 @@
 ---
 sidebar_position: 4
-sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-twnia2-access-cos-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-twnia2-access-cos-zh' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-twnia2-access-cos-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-twnia2-access-cos-en' 
 ---
 
-# 存取雲端物件儲存 (COS)
+# Access Cloud Object Storage (COS)
 
 
-[TWCC 台灣杉二號 (命令列介面) (TWNIA2 (HPC CLI))](../overview.md) 除了可使用[高速檔案系統 (Hyper File System, HFS)](../../hfs/overview.md) 作為運算的儲存空間外，也可將較少存取的靜態資料存放於 [TWCC 雲端物件儲存 (Cloud Object Storage, COS)](../../cos/overview.md)。
+Except for using [Hyper File System (HFS)](https://www.twcc.ai/doc?page=hfs) as the compute storage, [TWCC TWNIA2 (HPC CLI)](https://www.twcc.ai/doc?page=hpc_cli) can also use [TWCC Cloud Object Storage (COS)](https://www.twcc.ai/doc?page=object) as a storage option for data accessed less frequently.
 
-本文將介紹 2 種方式，教學 TWNIA2 (HPC CLI) 如何存取 [TWCC 雲端物件儲存 (Cloud Object Storage, COS)](../../cos/overview.md) 空間的資料：
+This article will demonstrate two method to access files in [TWCC Cloud Object Storage (COS)](https://www.twcc.ai/doc?page=object) from TWNIA2 (HPC CLI):
 
-1. **S3 用戶端工具**
-    透過 HTTPS (超級文字傳輸安全協定) 上傳及下載檔案，使用者可以在**登入節點**，以及**提交 job 到計算節點時**使用。
+1. **S3 client tools**<br/>
+    With the S3 client tools, you can upload and download files via HTTPS (HyperText Transfer Protocol Secure) on the **login node** and when you submit jobs to the **compute nodes**.
 
-2. **掛載為網路硬碟**
-    採用 [FUSE (Filesystem in Userspace)](https://en.wikipedia.org/wiki/Filesystem_in_Userspace) 技術遠端掛載 COS 空間為網路硬碟，**僅限掛載於登入節點** (ln01.twcc.ai)。
+2. **Mount COS as a network hard drive**<br/>
+    Mount COS as the storage space using [FUSE (Filesystem in Userspace)](https://en.wikipedia.org/wiki/Filesystem_in_Userspace). Only the **login node** (ln01.twcc.ai) is available.
 
 :::info
-建議用戶優先考慮使用 **S3 用戶端工具**：
-
-- 因 FUSE 技術掛載 COS，並非實際本機檔案系統，因此為避免資料流失，用戶**僅能上傳單一檔案** (可多檔讀取、下載)。
-- 此外還有[<ins>諸多限制</ins>](https://github.com/s3fs-fuse/s3fs-fuse#limitations)，因此僅提供用戶在登入節點使用。
+It is recommended to use **S3 client tools**:
+- The COS mounted via FUSE is not a local drive. To prevent data loss, you can only upload one file at a time (read and download multiple files is available).
+- There are also [<ins>many other limitations</ins>](https://github.com/s3fs-fuse/s3fs-fuse#limitations), so mounting COS as a network hard drive is only available on the login node.
 :::
 
-
-您可依需求擇一使用，以下說明如何使用此 2 種方式。
+Below we demonstrate accessing COS with the two methods. You can choose either of them according to your needs.
 
 <br/>
 
-## 1. S3 用戶端工具
 
-S3 用戶端工具種類繁多，以下介紹的工具以 CLI 操作形式為主，您可依需求選擇使用，範例將採用 `TWCC CLI`、`S3cmd` 存取 COS 資料：
+## 1. S3 client tools
+
+There are many types of S3 client tools. The tools introduced below are mainly CLI tools. Choose a tool you preferred. In the following examples we use `TWCC CLI` and `S3cmd` to access COS data:
 - **[S3cmd](https://github.com/s3tools/s3cmd)**<br/>
-  以 Python 撰寫，開發早且功能完整穩定，為最知名 S3 CLI 工具之一。
+  Written in Python, S3md is one of the most well-known S3 CLI tools, with early development as well as complete and stable functionality.
 - **[TWCC CLI](https://github.com/TW-NCHC/TWCC-CLI)**<br/>
-  若已經熟悉 TWCC CLI，可以優先考慮使用，並可操作多項 TWCC 服務。
-- 其他工具
+  Consider using TWCC CLI if you are already familiar with it. You can use it to operate various TWCC services.
+- Other tools
     - **[Rclone](https://github.com/rclone/rclone)**<br/>
-  可串接多種雲端儲存空間，在 TWCC 台灣杉二號與雲端物件儲存之間，適合小檔案的傳輸。
+  Rclone is able to access to various cloud storage. It is well-suited for transferring small files between TWCC TWNIA2 (HPC CLI) and COS.
     - **[S5cmd](https://github.com/peak/s5cmd)**<br/>
-  以 GO 語言撰寫，傳輸速度較 Python 撰寫之工具快，但功能無 S3cmd 完整。
+    S5cmd is written in Go language, and its transmission speed is faster than the tool written in Python but with fewer functions.
 
 <br/>
 
 
-### 安裝及設定
+### Installtion and Settings
 
-- 存取 TWCC 雲端物件儲存服務需輸入 **Access Key** 與 **Secret Key**。請登入至 [TWCC 使用者網站](https://www.twcc.ai/) > 雲端物件儲存服務頁面查看。
-- 至 `雲端物件儲存 (計畫成員共享空間)` 或 `私有雲端物件儲存 (個人空間)` 之**第三方軟體下載**頁面，即可找到 Key 資訊。
+- Accessing TWCC COS required the **Access Key** and the **Secret Key**. Please login to [TWCC portal](https://www.twcc.ai/) and go to the COS page to get the keys.
+- Go to the **Third-party Software** page of `Cloud Object Storage (Shared storage space between project members)` or `Private COS (private storage space)` to get the keys.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5db9d1f9718fc6c8ed4dee7a4995bee4.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_716af2cfd86e8e784e3bce0f1268254e.png)
 
 <br/>
 
 
 #### S3cmd
 
-- **安裝**
+- **Install**
 ```bash
-# 使用 pip 安裝
+# Using pip to install
 pip install s3cmd --user
 ```
-- **寫入金鑰**
+
+- **Enter key**
 ```bash
-# 可自行選擇熟悉 editor 寫入 ~/.s3cfg，這邊以 vim 為例
+# Here we use vim as the editing tool, you may use your familiar editor to edit ~/.s3cfg
 vim ~/.s3cfg
 ```
 
 ```bash
-# 寫入內容
+# Edit content
 -----------------------
 # Setup endpoint
 host_base = cos.twcc.ai
@@ -87,27 +87,24 @@ secret_key = <COS Secret Key>
 
 #### TWCC CLI
 
-- **安裝**
+- **Install**
+
 ```bash
-# 使用 pip3 安裝
+# Using pip3 to install
 pip3 install TWCC-CLI --user
 ```
-- **如何加入金鑰、選擇計畫，進入 TWCC CLI 環境，詳情可參考 [TWCC CLI 文件](https://github.com/twcc/TWCC-CLI)**。
+
+- For **how to enter key, select projects or enter TWCC CLI environment, please refer to [TWCC CLI document](https://man.twcc.ai/@twccdocs/twcc-cli-v05#1-3-%E9%80%B2%E5%85%A5-TWCC_CLI-%E7%92%B0%E5%A2%83%E4%B8%A6%E9%96%8B%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8B%99)** for more information.
 
 
 <!-- #### MCLI
 - **安裝**
-
 已預先裝於台灣杉二號，使用以下指令載入工具即可。
-
 ```bash
 $ module load mcli
 ```
-
 - **寫入金鑰**
-
 加入金鑰，指令及參考範例如下。
-
 ```bash
 $ mcli config host add twcc https://cos.twcc.ai <COS Access Key> <COS Secret Key>
 ``` -->
@@ -115,11 +112,11 @@ $ mcli config host add twcc https://cos.twcc.ai <COS Access Key> <COS Secret Key
 <br/>
 
 
-### 操作範例
+### Examples
 
-每個範例動作，依序展示使用指令 `S3cmd`、`TWCC CLI` 的操作方式。
+We demonstrate each example using `S3cmd` and `TWCC CLI` in order.
 
-- **建立名為 `mytwccbucket` 的 bucket**
+- **Create a bucket named `mytwccbucket`**
   
 ```bash
 # for S3cmd
@@ -129,15 +126,15 @@ s3cmd mb s3://mytwccbucket
 twccli mk cos -bkt mytwccbucket
 ```
 
-- **上傳檔案**
+- **Upload files**
 
-先在 /home 目錄建立一個空檔案，檔名為 `myfile`
+Create an empty folder in /home directory named `myfile`.
   
 ```bash
 touch ~/myfile
 ```
 
-複製檔案到 `mytwccbucket` bucket
+Copy the file to `mytwccbucket` bucket.
   
 ```bash
 # for S3cmd
@@ -146,9 +143,11 @@ s3cmd put ~/myfile s3://mytwccbucket/
 # for TWCC CLI
 twccli cp cos -bkt mytwccbucket -fn myfile -sync to-cos
 ```
-- **查閱檔案**
 
-查閱是否上傳成功
+- **View files**
+
+Check if the upload is successful.
+
 ```bash
 # for S3cmd
 s3cmd ls s3://mytwccbucket/myfile
@@ -156,9 +155,10 @@ s3cmd ls s3://mytwccbucket/myfile
 # for TWCC CLI
 twccli ls cos -bkt mytwccbucket
 ```
-- **刪除檔案**
+- **Delete files**
 
-刪除剛上傳的 myfile
+Delete myfile just uploaded.
+
 ```bash
 # for S3cmd
 s3cmd rm s3://mytwccbucket/myfile
@@ -166,9 +166,9 @@ s3cmd rm s3://mytwccbucket/myfile
 # for TWCC CLI
 twccli rm cos -bkt mytwccbucket -okey myfile
 ```
-- **刪除 bucket**
+- **Delete buckets**
 
-請先確認 bucket 內無檔案，再刪除 bucket
+Please make sure the bucket is empty before deleting it.
 
 ```bash
 # for S3cmd
@@ -178,31 +178,32 @@ s3cmd rb s3://mytwccbucket
 twccli rm cos -bkt mytwccbucket
 ```
 
-:::info 其他參數及說明
+:::info
+Other parameters and description:
 - S3cmd
-可以下 `$ s3cmd --help` 參考，或是查閱 [<ins>s3cmd GitHub</ins>](https://github.com/s3tools/s3cmd#simple-s3cmd-howto)
+Check by entering the `s3cmd --help` command or learn more on [<ins>s3cmd GitHub</ins>](https://github.com/s3tools/s3cmd#simple-s3cmd-howto).
 - TWCC CLI
-可以下 `$ twccli --help` 參考，或是查閱 [<ins>TWCC CLI 文件</ins>](https://github.com/twcc/TWCC-CLI)
+Check by entering the `twccli --help` command or learn more on [<ins>TWCC CLI document</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage).
 :::
 
 <br/>
 
 
-## 2. 掛載
+## 2. Mount
 
-以下將介紹兩種掛載工具：[Goofys](https://github.com/kahing/goofys) 與 [S3fs](https://github.com/s3fs-fuse/s3fs-fuse)，您可依需求選擇。
+The following are two mounting tools: [Goofys](https://github.com/kahing/goofys) and [S3fs](https://github.com/s3fs-fuse/s3fs-fuse), you may choose according to your needs.
 
 :::info
-掛載方式僅能在登入節點 ln01.twcc.ai 使用。
+The mounting methods are only able to used on ln01.twcc.ai login node.
 :::
 
 <br/>
 
 
-### 建立 COS bucket
+### Create a COS bucket
 
-- 請參考 TWCC [雲端物件儲存](../../cos/overview.md)手冊，並在使用者網站先建立 1 個 COS bucket。(Bucket 的管理無法透過 TWNIA2 操作)
-- 登入 ln01.twcc.ai 後，在自己帳號下創立 `~/mount_cos` 資料夾：
+- Please refer to TWCC [Cloud Object Storage](https://www.twcc.ai/doc?page=object) manual and create a COS bucket on the TWCC portal (The management of buckets cannot be operated using TWNIA2).
+- After logging in to ln01.twcc.ai, create a `~/mount_cos` folder under your account:
 
 ```bash
 mkdir -p ~/mount_cos
@@ -211,18 +212,18 @@ mkdir -p ~/mount_cos
 <br/>
 
 
-### 寫入金鑰
+### Enter keys
 
-以下將建立資料夾 `~/.aws`，請複製 TWCC 網頁的 COS 金鑰字串，寫入 `~/.aws/credentials`。
+Create a folder under the `~/.aws` directory, and copy TWCC COS keys to `~/.aws/credentials`.
 
-可自行選擇熟悉 editor ，範例以 `vim` 為例：
+Here we use vim as the editing tool, you may use your familiar editor.
 
 ```bash
 mkdir -p ~/.aws
 vim ~/.aws/credentials
 ```
 
-寫入以下內容：
+Enter the content below:
 
 ```bash
 [default]
@@ -234,10 +235,10 @@ aws_secret_access_key = COS Secret Key
 
 
 ### [Goofys](https://github.com/kahing/goofys) 
-- 以 Go 語言撰寫，效能佳，可優先考慮使用。
 
+- Written in Go language, the performance is good, so you can give priority to using it.
 
-掛載指令:
+Mount command:
 ```bash
 goofys --endpoint https://cos.twcc.ai mytwccbucket ~/mount_cos
 ```
@@ -246,48 +247,48 @@ goofys --endpoint https://cos.twcc.ai mytwccbucket ~/mount_cos
 
 
 ### [S3fs](https://github.com/s3fs-fuse/s3fs-fuse)
-- S3fs為知名的 s3 掛載工具。
 
-掛載指令：
+- A well-known s3 mounting tool.
+
+Mount command:
 
 ```bash
-s3fs mytwccbucket ~/mount_cos -o url=https://cos.twcc.ai/ -o use_path_request_style
+s3fs mytwccbucket ~/mount_s3 -o url=https://cos.twcc.ai/ -o use_path_request_style
 ```
 
 <br/>
 
 
-### 存取方式
+### Access files
 
-掛載完成後，只需在`~/mount_cos` 路徑之下讀寫，就能存取剛建立的 COS `mytwccbucket` 資料。
+After you complete mounting COS, you can access files in the newly created bucket `mytwccbucket` under the `~/mount_cos` directory.
 
-以下示範操作
+Example:
 
 ```bash
-# 寫入一個空檔案，檔名為 myfile
+# Create a new file named myfile
 touch ~/mount_cos/myfile
 ```
-
-此時在 TWCC 網頁的雲端物件儲存管理，點選`mytwccbucket`，可以查看到內容新增了`myfile`檔案。
+Now you can click on `mytwccbucket` on the **Cloud Object Storage Management** page on the TWCC portal. You can see that `myfile` has been added to the content.
 
 <br/>
 
 
-### 卸載
+### Unmount
 
-請先離開掛載的資料夾，回到 /home 目錄。
+Please exit the mounted folder and back to the /home directory.
 
 ```bash
 cd ~/
 ```
 
-再執行卸載指令。
+Enter the unmount command.
 
 ```bash
 fusermount -u ~/mount_cos
 ```
 
-再執行以下指令，資料夾裡無檔案，即卸載完成。
+Enter the command below. The unmount is completed if there are no files listed. 
 
 ```bash
 ls ~/mount_cos
