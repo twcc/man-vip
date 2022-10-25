@@ -67,7 +67,7 @@ deploy-staging-en:
   <<: *standard_operation
   stage: deploy
   script:
-    - npm run staging
+    - npm run staging --locale en
     - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/staging/en/
   only:
     - merge_requests
@@ -88,7 +88,7 @@ deploy-preview-en:
   <<: *standard_operation
   stage: deploy
   script:
-    - npm run preview
+    - npm run preview --locale en
     - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/preview/en/
   only:
     - docusaurus-dev-en
@@ -109,7 +109,7 @@ deploy-production-en:
   <<: *standard_operation
   stage: deploy
   script:
-    - npm run production
+    - npm run production --locale en
     - ls -alh build
     - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/production/en
   only:
