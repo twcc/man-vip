@@ -61,7 +61,6 @@ deploy-staging:
     - rsync -ravz --exclude en --delete build/ ubuntu@man.twcc.vip:/var/www/staging/
   only:
     - merge_requests
-    - docusaurus-dev
   when: manual
 
 deploy-staging-en:
