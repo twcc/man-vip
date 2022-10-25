@@ -15,6 +15,13 @@ stages:
     - echo "$MAN_SERVER_SSH_KEY" >> ~/.ssh/id_dsa
     - chmod 600 ~/.ssh/id_dsa
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - npm install --legacy-peer-deps
+  cache:
+    key:
+      files:
+        - package.json
+    paths:
+      - node_modules/
 
 sync-openapi:
   <<: *standard_operation
@@ -29,7 +36,6 @@ sync-openapi:
     - export VERSION=`date +"openapi-sync-%Y%m%d_%H%M"`
     - git checkout -b $VERSION
     - cp -r ../openapidoc/Main/yaml/. ./openapi
-    - npm install --legacy-peer-deps
     - npm run clear-api
     - npm run gen-api
     - git config --global user.email "sean.chang@twsc.io"
@@ -39,19 +45,8 @@ sync-openapi:
     - git push -u origin $VERSION
   when: manual
 
-.build_template: &build_base
-  <<: *standard_operation
-  script:
-    - npm install --legacy-peer-deps
-  cache:
-    key:
-      files:
-        - package.json
-    paths:
-      - node_modules/
-
 test-build:
-  <<: *build_base
+  <<: *standard_operation
   stage: test
   script:
     - npm run staging
@@ -59,7 +54,7 @@ test-build:
     - merge_requests
 
 deploy-staging:
-  <<: *build_base
+  <<: *standard_operation
   stage: deploy
   script:
     - npm run staging
@@ -70,7 +65,7 @@ deploy-staging:
   when: manual
 
 deploy-staging-en:
-  <<: *build_base
+  <<: *standard_operation
   stage: deploy
   script:
     - npm run staging
@@ -81,7 +76,7 @@ deploy-staging-en:
   when: manual
 
 deploy-preview:
-  <<: *build_base
+  <<: *standard_operation
   stage: deploy
   script:
     - npm run preview
@@ -91,7 +86,7 @@ deploy-preview:
   when: manual
 
 deploy-preview-en:
-  <<: *build_base
+  <<: *standard_operation
   stage: deploy
   script:
     - npm run preview
@@ -101,7 +96,7 @@ deploy-preview-en:
   when: manual
 
 deploy-production:
-  <<: *build_base
+  <<: *standard_operation
   stage: deploy
   script:
     - npm run production
@@ -112,7 +107,7 @@ deploy-production:
   when: manual
 
 deploy-production-en:
-  <<: *build_base
+  <<: *standard_operation
   stage: deploy
   script:
     - npm run production
