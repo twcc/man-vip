@@ -117,16 +117,20 @@ deploy-production-en:
   when: manual
 
 
-send-to-GitHub:
-  image: alpine
+.sync-GitHub-template: &sync_operation
+  image: alpine:3.16
   stage: sync
-  script:
+  before_script:
     - apk update && apk add github-cli && apk add git
     - export GH_TOKEN=$GITHUB_APIKEY
     - git remote add github https://$GITHUB_USRERNAME:$GITHUB_APIKEY@github.com/twcc/man-vip
     - git fetch --unshallow github
     - git config --global user.email "August.Chao@twsc.io"
     - git config --global user.name $GITHUB_USRERNAME
+
+send-to-GitHub:
+  <<: *sync_operation
+  script:
     - git merge -s ours github/main --no-commit --no-ff --allow-unrelated-histories
     - git checkout -b $CI_COMMIT_SHORT_SHA
     - git push -u github $CI_COMMIT_SHORT_SHA
@@ -135,6 +139,15 @@ send-to-GitHub:
     - gh release create "v$CI_COMMIT_SHORT_SHA" --title "v$CI_COMMIT_SHORT_SHA"
   only:
     - docusaurus-master
+  when: manual
+
+send-to-GitHub-en:
+  <<: *sync_operation
+  script:
+    - git checkout -b EN-$CI_COMMIT_SHORT_SHA
+    - git push -u github EN-$CI_COMMIT_SHORT_SHA
+    - gh pr create --base tws-sync-en --title "EN-v$CI_COMMIT_SHORT_SHA" --body "Release EN TWCC manual"
+  only:
     - docusaurus-master-en
   when: manual
 
