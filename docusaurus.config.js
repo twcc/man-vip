@@ -12,7 +12,8 @@ const env_list = {
         zhUrl = `${baseUrl}/${versionDocsDirPath}/${docPath}`;
   if (docPath === 'releaseNotes.md') return zhUrl;
   const rdir = i18nDirPath[versionDocsDirPath];
-  if (locale !== "zh-Hant" && rdir) return `${baseUrl}/i18n/${locale}/${versionDocsDirPath.replace(versionDocsDirPath,rdir)}/${docPath}`;
+  // if (locale !== "zh-Hant" && rdir) return `${baseUrl}/i18n/${locale}/${versionDocsDirPath.replace(versionDocsDirPath,rdir)}/${docPath}`;
+  if (locale !== "zh-Hant" && rdir) return `${baseUrl}-${locale}/${versionDocsDirPath}/${docPath}`;
   return zhUrl
 };
 
