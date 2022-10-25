@@ -102,7 +102,7 @@ deploy-preview-en:
 
 deploy-production:
   <<: *build_base
-  stage: production
+  stage: deploy
   script:
     - npm run production
     - ls -alh build
@@ -113,7 +113,7 @@ deploy-production:
 
 deploy-production-en:
   <<: *build_base
-  stage: production
+  stage: deploy
   script:
     - npm run production
     - ls -alh build
