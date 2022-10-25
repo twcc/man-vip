@@ -1,16 +1,18 @@
 ---
 sidebar_position: 1
-title: '雲端物件儲存 (COS)'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-cli-cos-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-cli-cos-zh'
+title: 'TWCC FAQs | TWCC CLI: Cloud Object Storage (COS)'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-cli-cos-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-cli-cos-en'
 ---
 
-# TWCC FAQs | TWCC CLI：雲端物件儲存 (COS)
+# TWCC FAQs | TWCC CLI: Cloud Object Storage (COS)
 
 <details>
 
-<summary> Q1. 為何我使用 TWCC-CLI 上傳、下載大量檔案時無法成功？</summary>
+<summary> Q1. Why do I fail when uploading and downloading a large number of files using TWCC-CLI?</summary>
 
-目前 TWCC CLI 檔案管理功能仍在開發優化中，如需傳輸大量檔案，建議參考[此文件](/docs/cos/tutorials/backup-synchronize-restore.md)使用 s3cmd 相關指令操作。
+Currently, the TWCC CLI file management function is still developing and optimizing. To transfer a large number of files, refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fcosbackup-en) to operate with s3cmd.
+
 
 </details>
+

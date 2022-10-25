@@ -1,40 +1,41 @@
 ---
 sidebar_position: 2
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-s3browser-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-s3browser-zh'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-s3browser-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-s3browser-en'
 ---
 
-# S3 Browser
-
-除使用網頁上傳或下載檔案，若需傳輸大型檔案，建議您透過常用的第三方軟體如 [S3 Browser](http://s3browser.com/) 或 [Cyberduck](https://cyberduck.io/) 來管理雲端物件儲存體的內容。
+# Manage files with third-party software - S3 Browser
 
 
-* S3 Browser 是一款簡單好用的 Amazon S3 Windows 客戶端程式，它提供了一個簡單的 Web 服務接口，可隨時從 Web 上的任何位置儲存和檢索資料。
-* S3 Browser 免費版僅供非商業用途使用，詳情請參見 [S3 Browser 官網](http://s3browser.com/)。
+In addition to uploading or downloading files using Portal, if you need to transfer large files, we recommend using commonly used third-party software such as [S3 Browser](http://s3browser.com/) or [Cyberduck](https://cyberduck.io/ ) to manage files in COS buckets.
 
-## 連線雲端物件儲存
+* S3 Browser is a simple and easy to use Amazon S3 Windows client that provides a simple web service interface to store and retrieve data from anywhere on the web.
+* The S3 Browser Free Edition is for non-commercial use only. For details, see [S3 Browser official website](http://s3browser.com/).
 
-### 下載 S3 browser
+## Connect to COS
 
-進入 [S3 Browser 官網](http://s3browser.com/)，點擊「Download S3 Browser」下載並安裝 S3 Browser。
+### Download S3 browser
+
+Go to [S3 Browser official website](http://s3browser.com/), click **Download S3 Browser** to download and install S3 Browser.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0d02ac87a4e07204c391baf0257d4e85.png)
 
-### 連線儲存空間
+### Connect to COS
 
-- 請參考[此文件](connection-info.md)取得連線資訊。
-- 安裝好後打開 S3 Browser，設定 TWCC 雲端物件儲存體帳號的連線資訊，Account Type 必須選擇「S3 Compatible Storage」，再依照第三方軟體下載頁面提供的連線資訊，設定 REST Endpoint（cos.twcc.ai）、Access Key 及 Secret Key 即可。
+- Refer to [this document ](https://man.twcc.ai/@preview-twccdocs/guide-cos-connect-info-en) to get connection information.
+- After installation, open S3 Browser, set the connection information of TWCC COS account, Account Type must select **S3 Compatible Storage**, and then set the REST Endpoint according to the connection information provided on the Third-party Software page (cos.twcc .ai), Access Key and Secret Key.
 　　
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b656bd68c28442741aeaa3b2760c0eeb.png)
 
 
-## 儲存體、檔案管理
+## Manage buckets and files
+* After the connection is successful, you can view the files of the TWCC COS bucket, and you can also create new buckets using S3 Browser.
+* Click **New bucket** in S3 Browser, then enter a name for the bucket in Create New Bucket pop-up window, and then click **Create new bucket**.
 
-* 連線成功後即可看到 TWCC 雲端物件儲存系統上的儲存體內容，透過 S3 Browser 亦可建立新的儲存體。
-* 在 S3 Browser 點選「**New Bucket**」，接著在 Create New Bucket 視窗輸入 欲建立的 TWCC 儲存體名稱，再按下「**Create new Bucket**」。
+
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_07f90f276605abca62b538a6b76c42f4.png)
 
-* 點選左側之儲存體 (Bucket)，即可上傳或下載檔案。
+* Click the bucket on the left then you are able to upload or download files.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3efb2b8eefb6fb44125f06ca211de9d0.png)

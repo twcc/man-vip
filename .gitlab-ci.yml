@@ -1,7 +1,7 @@
 stages:
-  - build
   - deploy
   - test
+  - sync
 
 .ssh_config_and_build: &standard_operation
   image: node:alpine3.16
@@ -15,15 +15,13 @@ stages:
     - echo "$MAN_SERVER_SSH_KEY" >> ~/.ssh/id_dsa
     - chmod 600 ~/.ssh/id_dsa
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-
-test-build:
-  <<: *standard_operation
-  stage: test
-  script:
     - npm install --legacy-peer-deps
-    - npm run staging
-  only:
-    - merge_requests
+  cache:
+    key:
+      files:
+        - package.json
+    paths:
+      - node_modules/
 
 sync-openapi:
   <<: *standard_operation
@@ -38,7 +36,6 @@ sync-openapi:
     - export VERSION=`date +"openapi-sync-%Y%m%d_%H%M"`
     - git checkout -b $VERSION
     - cp -r ../openapidoc/Main/yaml/. ./openapi
-    - npm install --legacy-peer-deps
     - npm run clear-api
     - npm run gen-api
     - git config --global user.email "sean.chang@twsc.io"
@@ -48,43 +45,81 @@ sync-openapi:
     - git push -u origin $VERSION
   when: manual
 
-deploy-staging:
+test-build:
   <<: *standard_operation
-  stage: build
+  stage: test
   script:
-    - npm install --legacy-peer-deps
     - npm run staging
-    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/staging/
   only:
     - merge_requests
+
+deploy-staging:
+  <<: *standard_operation
+  stage: deploy
+  script:
+    - npm run staging
+    - rsync -ravz --exclude en --delete build/ ubuntu@man.twcc.vip:/var/www/staging/
+  only:
+    - merge_requests
+  when: manual
+
+deploy-staging-en:
+  <<: *standard_operation
+  stage: deploy
+  script:
+    - npm run staging -- --locale en
+    - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/staging/en/
+  only:
+    - merge_requests
+    - docusaurus-dev-en
   when: manual
 
 deploy-preview:
   <<: *standard_operation
   stage: deploy
   script:
-    - npm install --legacy-peer-deps
     - npm run preview
-    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/preview/
+    - rsync -ravz --exclude en --delete build/ ubuntu@man.twcc.vip:/var/www/preview/
   only:
     - docusaurus-dev
+  when: manual
+
+deploy-preview-en:
+  <<: *standard_operation
+  stage: deploy
+  script:
+    - npm run preview -- --locale en
+    - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/preview/en/
+  only:
+    - docusaurus-dev-en
   when: manual
 
 deploy-production:
   <<: *standard_operation
   stage: deploy
   script:
-    - npm install --legacy-peer-deps
     - npm run production
     - ls -alh build
-    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/production/
+    - rsync -ravz --exclude en --delete build/ ubuntu@man.twcc.vip:/var/www/production/
   only:
     - docusaurus-master
   when: manual
 
+deploy-production-en:
+  <<: *standard_operation
+  stage: deploy
+  script:
+    - npm run production -- --locale en
+    - ls -alh build
+    - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/production/en
+  only:
+    - docusaurus-master-en
+  when: manual
+
+
 send-to-GitHub:
   image: alpine
-  stage: test
+  stage: sync
   script:
     - apk update && apk add github-cli && apk add git
     - export GH_TOKEN=$GITHUB_APIKEY
@@ -100,11 +135,12 @@ send-to-GitHub:
     - gh release create "v$CI_COMMIT_SHORT_SHA" --title "v$CI_COMMIT_SHORT_SHA"
   only:
     - docusaurus-master
+    - docusaurus-master-en
   when: manual
 
 sync-from-GitHub:
   image: python:3.9
-  stage: build
+  stage: sync
   script:
     - git remote add github https://${GITHUB_USRERNAME}:${GITHUB_APIKEY}@github.com/twcc/man-vip
     - git remote add gitAug https://${AUG_USERNAME}:${AUG_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git

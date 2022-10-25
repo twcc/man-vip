@@ -26,7 +26,7 @@ const config = {
   title: env_list[process.env.Target || "production"],
   tagline: "Create your services with TWCC.",
   url: "https://man.twcc.vip",
-  baseUrl: "/",
+  baseUrl: "/en/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",

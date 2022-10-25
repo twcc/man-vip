@@ -1,44 +1,49 @@
 ---
 sidebar_position: 7
-sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-quota-mngmnt-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-quota-mngmnt-zh' 
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-quota-mngmnt-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-quota-mngmnt-en' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 資源配額管理
 
-資源配額管理功能讓租戶管理員可以管理計畫成員使用 TWCC 服務的資源額度，例如容器服務配額或虛擬機器服務。
+# Resource quota management
+
+The resource quota management function allows Tenant Admin to manage resource quotas for project members to use TWCC services, such as Container Compute Service or Virtual Compute Service.
 
 :::info
-此功能需租戶管理員才可使用。
+This function is only available to Tenant Admins.
 :::
 
-* 點擊右上角使用者名稱，再點選「資源配額管理」。
+* Click the user name in the upper right corner, and then click "Quota".
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_54d3bce515396613658e73c0fabd8875.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fdc68cce2ff444f2e3c5503a1a071458.png)
+
 
 <br/>
 
 
-## 容器服務配額管理
 
-* 進入「資源配額管理」頁面，從「計畫使用量/配額」選單選擇「容器服務」可顯示整個計畫及計畫成員的容器服務資源使用量及配額。
+### Quota management of Container Compute Service
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_83e7e1971f75a4024718aaaff42d45bc.png)
+* Enter the "Quota Management" page, and select "Container Compute Service" from the "Service Usage/Quota" menu to display the Container Compute Service resource usage and quota of the entire project and the project members.
 
-* 點擊成員列表項目，出現「編輯配額」視窗，可設定該成員的配額。
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3f37d69574442a2a4fb78c65cbd6a39e.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_64452fe6c77644827a300d7c7fc49576.png)
+
+* Click the member list item, the "Edit quota" window  will appear, and you can set the member's quota.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8716e6927584de34b2350c70432e3a36.png)
 
 <br/>
 
 
-## 虛擬運算服務配額管理
+### Quota management of Virtual Compute Service
 
-* 進入「配額管理」頁面，可從「計畫使用量/配額」選單選擇「虛擬運算服務」可顯示整個計畫及計畫成員的虛擬機器服務資源使用量及配額。
+* Enter the "Quota Management" page and select "Virtual Compute Service" from the "Service Usage/Quota" menu to display the Virtual Compute Service resource usage and quota of the entire project and project members.
 
-* 點擊成員列表項目，出現「編輯配額」視窗，可設定該成員的配額。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7440584eb3fa7f5d298f5fd6cbdd58e3.png)
+* Click the member list item, the "Edit quota" window will appear, and you can set the member's quota.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5b98d9c220fefc40c72ce41f668fe51e.png)

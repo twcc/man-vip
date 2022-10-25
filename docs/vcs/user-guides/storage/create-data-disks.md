@@ -1,40 +1,43 @@
 ---
 sidebar_position: 2
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-create-data-disk-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-create-data-disk-zh' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-create-data-disk-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-create-data-disk-en' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 建立資料磁碟
+# Create data disks
 
-若虛擬運算個體儲存空間不足，您可以建立資料磁碟，再連結至個體、將磁碟初始化後即可使用。
+If the storage space of your VCS instance is insufficient, you can create data disks. Then, attach the disks to the instance, and initialize the disks for use.
+
 
 <Tabs>
 
-<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
+<TabItem value="TWCC Portal" label="TWCC Portal">
 
-**1. 建立虛擬運算個體時建立**
 
-- 您可於[建立虛擬運算個體](../create/create-instances.md)時，於「儲存」頁籤指定建立資料磁碟 (僅能建立 1 個磁碟，並僅能選擇類型、容量，無法指定名稱)。
+**1. Create a data disk when creating a VCS instance**
 
-**2. 於資料磁碟管理頁建立**
+- You can create a data disk when creating your [<ins>VCS instance</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/creation/vcs-instances) on the **STORAGE** tab. (Only 1 disk can be created and only type and size can be specified, but no name can be assigned.)
 
-若需建立更多磁碟，請參考下方說明：
+**2. Create a data disk on Data Disk Management page**
 
-* 由服務列表點選進入「**虛擬磁碟**」服務，在「**資料磁碟管理**」頁面，點擊「**＋建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
+If you need to create more disks, please follow the instructions below:
 
+* Click **Virtual Disk Service (VDS)** from the service list. On the **Data Disk Management** page, click **＋CREATE**.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6668cf5d5b790061f3efb1764915cd95.png)
 
 :::tip
-您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
+You can click on the asterisk to the left of the service in "**All Services**" <i class="fa fa-star-o" aria-hidden="true"></i> and pin your frequently used services to "**My Favorite Services**" to speed up the process.
 :::
 
-* 填寫資料磁碟名稱、描述、此資料磁碟是要重新建立或從還原快照、容量及磁碟類型 (提供 HDD、SSD 磁碟)，接著點擊「**下一步：檢閱+建立>**」。
+* Fill in the data disk name, description, whether the data disk is newly created or restored from a snapshot, size (GB), and disk type (HDD or SSD), and then click **NEXT: REVIEW & CREATE>**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_45c53d5003d1b66785e556a092b99f0a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_30e5b2632e35e15bda8378a625e74a07.png)
+
 
 
 
@@ -43,41 +46,47 @@ import TabItem from '@theme/TabItem';
 ::: -->
 
 
-* 檢視資料磁碟的設定，確認後按下「**建立**」。
+* Review the configurations of the data disk and then click **CREATE**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_062d6a00a7b7e9910dee1b34414b223c.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a7948cfc0763146b7b0e7d170a06a35f.png)
+
 
 </TabItem>
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
 
-**指令**
+
+**Command**
+
 
 ```bash
-twccli mk vcs [-n]      # 資料磁碟名稱
-              [-sz]     # 資料磁碟容量
+twccli mk vcs [-n]      # Data disk name
+              [-sz]     # Data disk size (GB)
 ```
 :::info
-1. **[ ]** 中括號內為選擇性參數，其餘為必要參數。
-2. 若不帶選擇性參數，則以預設資訊建立資料磁碟：
+1. The parameters in the square brackets **[ ]** are optional and the rest are required.
+2. Without optional parameters, the data disk will be created with the default settings.:
 
-| 磁碟類型 | 名稱 |容量大小|
+| Disk type | Name |Disk size|
 | -------- | -------- | -------- | 
 | HDD  | twccli  | 100 GB  | 
 :::
 
+
 <br/>
 
-**範例**
+**Example**
 
-- 建立名為 **`clitest`** ，且指定儲存容量為 **`10 GB`** 的虛擬磁碟服務。
+
+- Create a data disk named **`clitest`**, and disk size is **`10 GB`**.
 
 ```bash
 twccli mk vds -n clitest -sz 10
 ```
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3da7383c28c4700cd8429fbbb282a58d.png)
+
 
 </TabItem>
 

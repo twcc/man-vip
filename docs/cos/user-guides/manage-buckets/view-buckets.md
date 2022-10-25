@@ -1,47 +1,46 @@
 ---
 sidebar_position: 2
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-view-bucket-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-view-bucket-zh'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-view-bucket-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-view-bucket-en'
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 檢視儲存體
+# View buckets
 
 :::tip
-以下操作方式僅限計畫之 [「<ins>**公共空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](../../overview.md) 適用， [「<ins>**私有空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](../../overview.md) 之檔案管理請透過 [<ins>**第三方軟體**</ins>](../../../category/使用第三方軟體管理檔案) 操作。
+The following operation methods are only applicable to the [<ins>**public space**<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@preview-twccdocs/doc-cos-main-en/%2F%40TWSC%2Fcos-overview-en) of the project. For managing your [<ins>**private space**<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@preview-twccdocs/doc-cos-main-en/%2F%40TWSC%2Fcos-overview-en), please use [<ins>**third-party software**</ins>](https://man.twcc.ai/@preview-twccdocs/doc-cos-main-en/https%3A%2F%2Fman.twcc.ai%2F%40TWSC%2Fguide-cos-connect-info-en).
 :::
 
-檢視您計畫內所有的儲存體：
+View all buckets in your project:
 
 <!-- 1 start -->
 
 <Tabs>
-  <TabItem value="TWCC 入口網站" label="TWCC 入口網站" default>
+  <TabItem value="TWCC Portal" label="TWCC Portal" default>
+   
+
+- After signing in for TWCC, select <b>Cloud Object Storage (COS)</b>.
 
 
-- 於登入後首頁，選擇 「**雲端物件儲存**」
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fedd428471c8c2c1b85ff4481e274905.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_44509030fbb4885dfa5539fe745386ad.png)
 
 :::tip
-您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
+You can click on the star <i class="fa fa-star-o" aria-hidden="true"></i> on the left side of **All Services** to pin your favorite services to **My Favorite Services** to speed up the process.
 :::
 
+- After entering <b>Cloud Object Storage Management</b> page, you can view all the buckets in the project.
 
-- 進入「**雲端物件儲存管理**」頁面後，即可檢視計畫內所有的儲存體
-
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8472a638afd0fdea3bfdad683e82e712.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f74c2852f3828639d7ba6f7381fd053a.png)
 
 
 
   </TabItem>
   <TabItem value="TWCC CLI" label="TWCC CLI">
+    
 
+- View all buckets in the project
 
-- 檢視計畫內所有的儲存體
 
 ```bash
 twccli ls cos

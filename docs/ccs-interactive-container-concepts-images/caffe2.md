@@ -2,26 +2,25 @@
 sidebar_label: 'Caffe2'
 sidebar_position: 9
 title: Caffe2
-sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-caffe2-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-caffe2-zh' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-caffe2-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-caffe2-en' 
 ---
-
 
 # <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b3382d3255e279896320ff106a1565d.png' /> Caffe2
 
 
-TWCC 提供 NGC optimized Caffe2 立即可用的工作環境。NVIDIA 開發的深度學習軟體開發套件，加速了深度學習框架的廣泛應用，如Caffe2™。Caffe2 是個深度學習框架，能透過Python API 輕鬆使用所有模型，例如卷積神經網路 (CNNs)、遞迴神經網路 (RNNs) 等，並使用效率高的 C++ 語言和後端的CUDA® 來執行運算。
+TWCC provides ready-to-use working environment of NGC optimized Caffe2. The NVIDIA Deep Learning SDK accelerates widely-used deep learning frameworks such as Caffe2™. Caffe2 is a deep-learning framework designed to easily express all model types such as convolutional neural networks (CNNs), recurrent neural networks (RNNs), etc. through Python API, and execute them using a highly efficiently C++ and CUDA® backend.
 
 <br/>
 
 
-## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">映像檔版本資訊</span> 
+## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">Information of Image file version</span> 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_988af03ed1d907afb2c3fe0e844f307d.png)
 
 
 :::info
-`py3` 與 `py2` 則為 Python 之版本差異。
+`py3` and `py2` are different Python versions.
 :::
 
 <br/>
@@ -29,8 +28,7 @@ TWCC 提供 NGC optimized Caffe2 立即可用的工作環境。NVIDIA 開發的�
 
 <details class="docspoiler">
 
-<summary><b>點我參考詳細版本套件資訊</b></summary>
-
+<summary><b>Detailed package version information</b></summary>
 
 - [caffe2-18.08-py2/py3-v1](https://docs.nvidia.com/deeplearning/frameworks/caffe2-release-notes/rel_18.08.html#rel_18.08)
 

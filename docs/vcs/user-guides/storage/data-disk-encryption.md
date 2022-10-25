@@ -1,59 +1,55 @@
 ---
 sidebar_position: 6
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-encryption-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-encryption-zh' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-encryption-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-encryption-en' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 資料磁碟加密
+# Data disk encryption
 
-TWCC 虛擬磁碟加密可保護用戶資料安全，以符合組織所需的安全性和合規性承諾。使用方式與一般磁碟相同，系統將自動以[進階加密標準 (AES-256) 演算法](https://zh.wikipedia.org/wiki/%E9%AB%98%E7%BA%A7%E5%8A%A0%E5%AF%86%E6%A0%87%E5%87%86)加密磁碟的資料，僅加密過程將可能略為影響資料存取效率。
+TWCC Virtual Disk Encryption secures user data to meet the security and compliance commitments required by organizations. Used in the same way as a regular disk, the system will automatically encrypt the data on the disk using the [Advanced Encryption Standard (AES-256) algorithm](https://en.m.wikipedia.org/wiki/Advanced_Encryption_Standard), except that the encryption process may slightly affect data access efficiency.
 
-使用 TWCC 虛擬磁碟加密可保護您以下資料的安全：
+Using TWCC virtual disk encryption secures the following data:
 
-1. 儲存於磁碟內的資料
-2. 磁碟與虛擬運算個體之間傳輸的資料
-3. 以磁碟建立的備份快照
-4. 以該快照建立的磁碟
+1. Data stored on the disk
+2. Data transferred between the disk and the VCS instance
+3. Backup snapshots created from a disk
+4. Disks created with the snapshot
 
 <br/>
 
-## 如何使用？
+## How to use it?
 
-### 建立加密磁碟
+### Create an encrypted disk
 
-- 您可以在[建立虛擬運算個體](../create/create-instances.md)時，於儲存頁建立加密資料磁碟，可選擇 HDD 加密，或 SSD 加密磁碟，並設定磁碟容量。
+- You can create an encrypted data disk on the storage page when you [create VCS instances](https://man.twcc.vip/en/docs/vcs/user-guides/creation/vcs-instances), you can choose either HDD Encryption or SSD Encryption disk, and set the disk capacity.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cf9fc17017c6637a459907a36a787297.png)
-  
-- 或是於虛擬磁碟管理頁建立加密磁碟，再將磁碟[連結至虛擬運算個體](./view-attach-delete-disks.md#連結至虛擬運算個體)。
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9085231c49d531147f799c7ee0c426e1.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_71e884dbfb16fc5c694c477d0847b305.png)
+- Or create an encrypted disk on the Data Disk Management page and [attach it to a VCS instance](https://man.twcc.vip/en/docs/vcs/user-guides/storage/viewInfo-attachToVCS-deleteDataDisks#attach-to-vcs-instances).
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a19a7c843850636f64e72e3d41fef720.png)
 
 :::info
-建立完成，參考下方文件將磁碟初始化後即可使用：
-- [<ins>初始化磁碟- Linux</ins>](../../tutorials/data-disk-init-linux.md)
-- [<ins>初始化磁碟- Windows</ins>](../../tutorials/data-disk-init-windows.md)
+Once created, refer to the following documents to initialize the disk and then use it.
+- [<ins>Initialize Linux disks</ins>](https://man.twcc.vip/en/docs/vcs/tutorials/data-disk-init-linux)
+- [<ins>Initialize Windows disks</ins>](https://man.twcc.vip/en/docs/vcs/tutorials/data-disk-init-windows)
 :::
 
-<br/>
+### Moving data from an old disk to an encrypted disk
 
-### 將舊磁碟資料搬移至加密磁碟
-
-若您想將無加密磁碟升級為安全性較高的加密磁碟，請參考[變更資料磁碟](../../tutorials/replace-data-disk.md)，在建立並連結加密磁碟後，將您的資料搬移至新磁碟，再刪除舊磁碟即可完成更換。
+If you want to upgrade a non-encrypted disk to a more secure encrypted disk, please refer to [Change data disks](https://man.twcc.vip/en/docs/vcs/tutorials/replace-data-disk), after creating and attaching an encrypted disk, move your data to the new disk, and then delete the old disk to complete the replacement.
 
 <br/>
 
-### 磁碟快照
+## Disk Snapshots
 
-很抱歉，加密磁碟[快照](./disk-snapshots.md)功能目前不開放使用，待用戶體驗完整優化後將再行開放。
+Sorry, the encrypted [disk snapshots](https://man.twcc.vip/en/docs/vcs/user-guides/storage/snapshot) feature is not available now, but it will be available again when the user experience is fully optimized.
 
 <br/>
-
 
 :::info
-若需防止虛擬運算個體受攻擊時影響磁碟資料，請參考[<ins>磁碟加密 (以 CentOS 為例)</ins>](https://drive.google.com/file/d/1A6gdyL0lUMauygwM9cLtgU8GwbRpK36s/view)，從 OS 層設定磁碟加密，雙重保護您的檔案安全。
+If you need to prevent disk data from being affected by an attack to your VCS instance, please refer to [<ins>Disk Encryption (CentOS as an example)</ins>](https://drive.google.com/file/d/1A6gdyL0lUMauygwM9cLtgU8GwbRpK36s/view) to set disk encryption from the OS level to double protect your data.
 :::

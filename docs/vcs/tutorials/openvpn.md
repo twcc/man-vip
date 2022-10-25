@@ -1,126 +1,123 @@
 ---
 sidebar_position: 2
-sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-setup-oepnvpn-client-to-site-vpn-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-setup-oepnvpn-client-to-site-vpn-zh' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-setup-oepnvpn-client-to-site-vpn-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-setup-oepnvpn-client-to-site-vpn-en'
 ---
 
-# 架設 OpenVPN 個體建立 Client-to-Site VPN 連線
+# Set up an OpenVPN instance to establish a Client-to-Site VPN connection
 
-此篇文章將教學如何於 TWCC 虛擬運算個體安裝 OpenVPN，由本地端電腦建立連線至跳板機的安全連線通道，再由跳板機連線至同虛擬網路內的其他個體。
+
+In this tutorial, we will teach you how to install OpenVPN on TWCC VCS instances to establish a secure connection from the local computer to the jump server, and then from the jump server to other instances in the same virtual network.
 
 :::info
-以下虛擬運算個體以 Linux (Ubuntu) 為範例，本地端電腦則以 Windows 為操作範例。
+Below we use the combination of a Linux (Ubuntu) VCS instance and a local Windows computer as an example.
 :::
 
 <br/>
 
-## Step 1. 建立虛擬運算個體 (Linux)
+## Step 1. Create VCS instances (Linux)
 
 :::info
-以下步驟僅適用 Ubuntu18.04 以上版本之個體。
+The following steps are only applicable to instances with Ubuntu 18.04 or above.
 :::
 
+Please refer to [Create VCS instances](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh) to create a Linux VCS instance with a public IP as a jump server to set up OpenVPN and connect to other unattached IP appliances.
 
-請參考[建立虛擬運算個體](../user-guides/create/create-instances.md)建立一台 Linux 虛擬運算個體，並設置公用 IP，作為架設 OpenVPN、連入其他無對外 IP 個體的跳板機。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_033ddd3ab83dd2de73d4667e9ab0eacd.png)
-
-<br/>
-
-
-
-## Step 2. 設定跳板機安全性群組
-因 OpenVPN 預設採用 UDP 1194 埠做為通訊，請參考[安全性群組](../user-guides/security/security-group.md)，將跳板機加入 Ingress UPD 1194 的安全性群組規則。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ed4e22e5d80b604ee707fc22eb00df90.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a5beadf106baf7e64ce997391c27ab2a.png)
 
 <br/>
 
 
-## Step 3. 連線並安裝 OpenVPN
 
-- [連線進入 Linux 個體](../user-guides/connecting/linux/from-windows.md)，使用 `wget` 指令進行下載 OpenVPN 安裝腳本
+## Step 2. Set up the security group of the jump server
+
+Since OpenVPN uses UDP 1194 port for communication by default, please refer to [Security Group](https://man.twcc.ai/@twccdocs/guide-vcs-sg-zh) to add Ingress UPD 1194 security group rule to the jump server.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e4bfa535e2f1419f3644785ff8301fa8.png)
+
+<br/>
+
+
+## Step 3. Connect and install OpenVPN
+
+- [Connect to Linux instances](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh) and use `wget` command to download the OpenVPN installation script.
 
 ```
 wget https://git.io/vpn -O openvpn-ubuntu-install.sh
 ```
 
-- 使用 chmod 命令設定權限，讓安裝腳本可順利執行
+- Use the chmod command to set permissions so that the installation script can be run successfully.
 
 ```
 chmod -v +x openvpn-ubuntu-install.sh
 ```
 
-
-- 執行腳本安裝 OpenVPN
+- Run the script to install OpenVPN.
 
 ```
 sudo ./openvpn-ubuntu-install.sh
 ```
 
-- 安裝過程中詢問對話皆可按 `Enter` 繼續
+- You can press `Enter` to continue the dialog during installation.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bcc0348c5c83b00ae5a67cb3b46c2bd9.png)
 
 
-- 安裝完成後會產生 `clinet.ovpn` 檔，儲存在 /root 底下
+- After installation, the `client.ovpn` file will be created and stored under /root .
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_35093692a150b6b37b2b59ddf9082503.png)
 
 
-- 更改 `clinet.ovpn` 檔案路徑
+- Change the directory of the `client.ovpn` file.
 
 ```
 sudo mv /root/client.ovpn /home/ubuntu
 ```
 
-
-- 將 `clinet.ovpn` 下載至本地端電腦
+- Download `client.ovpn` to the local computer.
 
 ![](https://i.imgur.com/8OqGSOr.png)
 
 <br/>
 
 
-## Step 4. 本地端安裝 OpenVPN Client
+## Step 4. Install OpenVPN Client locally
 
-請在您的本地端電腦，下載並安裝完成 [OpenVPN Client](https://openvpn.net/vpn-client/)，以進行 VPN 連線。
+Please download and install [OpenVPN Client](https://openvpn.net/vpn-client/) on your local computer for VPN connection.
 
 <br/>
 
 
-## Step 5. 啟動 VPN 連線
+## Step 5. Activate VPN connection
 
-- 打開 OpenVPN 程式，將 Step 3. 下載的 `clinet.ovpn` 檔案，直接拖曳並匯入 FILE
+- Open the OpenVPN program, drag and import the `client.ovpn` file downloaded in Step 3. directly into FILE.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0052af78144363408630ea8ee7dd96f8.png)
 
-- 拖曳完成後，點選「**CONNECT**」進行連線
+- After dragging is complete, click **CONNECT** to connect.
 
 ![](https://i.imgur.com/uZD9gD1.png)
 
-
-- 連線成功！
+- Connected successfully!
 
 ![](https://i.imgur.com/eec3eJT.png)
 
 <br/>
 
 
-## Step 6. 確認 VPN 加密連線已啟用
+## Step 6. Make sure VPN encrypted connection is enabled
 
-確認在 Step 5. 啟動 VPN 連線之下，本地端電腦可與跳板機、其他同虛擬網路內的個體私有 IP 連線，即 VPN 連線成功：
+Confirm that with the VPN connection activated in step 5. the local computer can connect to the jump server and other instances in the same virtual network with private IP, which means the VPN connection is successful.
 
-- 取得跳板機之「私有 IP」
+- Obtain the **private IP** of the jump server.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9516eae28be233d2a2e32f4b9a11c0cc.png)
 
-
-- 本地端電腦開啟 CMD，使用 ping 指令，確認可與跳板機私有 IP 連線
+- Open CMD on the local computer and use the ping command to confirm that it can connect to the private IP of the jump server.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1ac71acfda06dcfd2ab139742284e280.png)
 
-- 也可以同時 ping 到同虛擬網路內的其他虛擬運算個體
+- You can also ping other VCS instances in the same virtual network at the same time.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_309e93a516dbce476590ff44dd9568cb.png)
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_aa4f7abd06e48bbcf008b1e06c648eac.png)

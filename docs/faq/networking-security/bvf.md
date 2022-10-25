@@ -1,16 +1,16 @@
 ---
 sidebar_position: 2
-title: '基礎虛擬防火牆 (BVF)'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-bvf-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-bvf-zh'
+title: 'Basic Virtual Firewall (BVF)'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-bvf-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-bvf-en'
 ---
 
-# TWCC FAQs | 基礎虛擬防火牆 (BVF)
+# TWCC FAQs | Basic Virtual Firewall (BVF)
 
 <details>
 
-<summary> Q1. 為什麼防火牆裡面的規則沒有作用？</summary>
+<summary> Q1. Why don't the rules inside the firewall work?</summary>
 
-防火牆規則作用與否將受規則的排序影響。請至防火牆詳細資料頁，編輯規則順序，將您重要的防火牆規則順序移到第一位，防火牆才會優先讓該規則作用。
+Firewall rules will be affected by the order of the rules. Please go to the firewall details page and edit the order of the rules to move the order of your important firewall rules to the first one before the firewall will give priority to them.
 
 </details>

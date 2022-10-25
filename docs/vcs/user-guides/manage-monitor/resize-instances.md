@@ -1,86 +1,86 @@
 ---
 sidebar_position: 6
-title: '調整規格'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-resize-instance-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-resize-instance-zh' 
+title: 'Resize VCS instances'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-resize-instance-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-resize-instance-en' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 調整虛擬運算個體規格
+# Resize VCS instances
 
-若您需調整虛擬運算個體的規格，本文將提供教學步驟，幫助您使用「**映像檔功能**」將個體資料與內部配置，快速轉移至新規格個體。
+This tutorial will show you how to resize your VCS instance using the **Image** function to quickly transfer instance data and configuration to a new instance with different size.
 
-以下內容以 **v.8xsuper** 型號建立之個體，調整至 **v.super** 型號為操作範例，映像檔選用 Ubuntu。
+The following example resizes a Linux instance created from instance type **v.8xsuper** to **v.super**.
 
 :::info
-完整型號、規格與價格之比較，請參考[<ins>價目表</ins>](/docs/pricing.mdx#虛擬運算服務-virtual-compute-service-vcs)。
+The comparison of all instance types, configurations and prices, please refer to [<ins>Pricing</ins>](https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#虛擬運算服務-Virtual-Compute-Service-VCS) for more information.
 :::
+
 
 <br/>
 
 
-### Step 1. 建立虛擬運算個體映像檔
 
-透過對虛擬運算個體建立映像檔，保存個體資料。
+### Step 1. Create a VCS instance image
+
+Save the instance data by creating an image for the VCS instance.
 
 :::tip
-1. 請問映像檔建立的時間需要多久？請參考[<ins>TWCC FAQ 虛擬運算服務 > 個體映像檔 > Q1</ins>](/docs/faq/compute/vcs.md#個體映像檔)。
-2. 如何縮減映像檔建立的時間？ 請參考[<ins>TWCC FAQ 虛擬運算服務 > 個體映像檔 > Q2</ins>](/docs/faq/compute/vcs.md#個體映像檔)。
+1. How long does it take to create the image?<br/>
+Please refer to [<ins>TWCC FAQ VCS > Instance Image File > Q1</ins>](https://man.twcc.ai/@twccdocs/faq-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-vcs-zh#%E5%80%8B%E9%AB%94%E5%BF%AB%E7%85%A7).
+2. How to reduce the time for image creation?<br/>
+Please refer to [<ins>TWCC FAQ VCS > Instance Image File > Q2</ins>](https://man.twcc.ai/@twccdocs/faq-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-vcs-en#%E5%80%8B%E9%AB%94%E5%BF%AB%E7%85%A7).
 :::
 
-- 進入「**虛擬個體詳細資料頁**」，確認需調整的個體規格（型號：**v.8xsuper**）
+- Go to the **VCS Instance Details** page to check the instance specification to be resized (type: **v.8xsuper**, configurations: `v.8xsuper`)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b5c4c419bdf5878977031b818175decf.png)
-
-
-- 點選「**映像檔**」。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bfa1b95e88d157b17f7ffaf6eefdeefb.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fcf77e04045a58e62b5fb56f1093b437.png)
 
 
-- 輸入***映像檔名稱*** 並且點選「**確認**」。
+- Click **Image**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e5a610cd361317db4582d2fbce6dfb86.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_decf1e057354dab8a234c9a7ef37419d.png)
 
+- Enter ***Image File Name*** and click **OK**.
 
-- 完成建立虛擬運算個體映像檔
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3b733ce5cd7d55bfffc16244e38f328f.png)
 
+- Complete the creation of a VCS instance image.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e0e853a829b12733cfb22ab94b103d59.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e5ab95872b7a3f15009a7079b452b244.png)
 
 
 <br/>
 
 
-### Step 2. 利用映像檔建立新規格的虛擬運算個體
 
-- 進入「**虛擬運算**」服務，在「**虛擬運算個體管理**」頁面，點擊「**＋建立**」
+### Step 2. Create an instance with a new type from the image
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ca0a9fc33d66462a539aa7774bb209f1.png)
+- Select **Virtual Compute Service (VCS)**. On the **VCS Instance Management** page, click **＋CREATE**.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2be4f164f3529616554c7a2531e511ca.png)
 
-- 輸入 **虛擬運算個體名稱**，並且選取已建立好的映像檔
+- Enter **VCS Instance Name**, and select the created image.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f9d64c979a7b6388d738fad9348e6879.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_41e16f56cb54c69d9f4bbe56f1192b7e.png)
 
+- Select **v.super** for the instance type in the Basic Configuration, and click **REVIEW & CREATE**.
 
-- 於基本設定處選取型號 **v.super**，並且點選「**檢閱 + 建立**」
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_936cbfb01132c6d389f63a8013b35df7.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_358044f8ad155b43f579292079da88b5.png)
+- The instance resize is complete! Successfully create a VCS instance (type: **v.super**) from the image, and transfer the original instance data to the new instance.
 
-
-- 規格調整完成！成功以映像檔建立虛擬運算個體（型號：**v.super**），將原個體資料轉移至新規格個體。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f46af88d8bfd2548bc41737f634c7727.png)
-
-<br/>
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3d6dda75fb5cc901749febfbd9d71c93.png)
 
 <br/>
 
 
-:::info 
-- 若您原虛擬運算個體有連結資料磁碟，請先將資料磁碟分離，再連結至新個體。
-- 若原虛擬運算個體不再繼續使用，建議您刪除該個體，回收計算資源。
+
+:::info
+
+- If your original VCS instance has been mounted with data disks, please unmount the data disks first, and then attach them to the new instance.
+- If the original VCS instance is no longer in use, it is recommended to delete the instance and release computing resources.
+
 :::

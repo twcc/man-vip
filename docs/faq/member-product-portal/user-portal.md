@@ -1,17 +1,17 @@
 ---
 sidebar_position: 2
-title: '使用者網站'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-portal-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-portal-zh'
+title: 'TWCC FAQs | Portal'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-portal-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-portal-en'
 ---
 
-# TWCC FAQs | 使用者網站
+# TWCC FAQs | Portal
 
 <details>
 
-<summary> Q1. TWCC 支援哪些瀏覽器？</summary>
+<summary> Q1. Which browsers are supported for TWCC ？</summary>
 
-建議使用下列支援的瀏覽器，可享有最佳使用者體驗：
+It is recommended to use the following supported browsers for the best user experience:
 
 |  | Windows7 | Windows10+ | Mac OS 10+ |Ubuntu 16.04+(Linux) |
 | -------- | -------- | -------- | -------- |-------- |
@@ -25,47 +25,51 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-portal-zh'
 
 <details>
 
-<summary> Q2. 為何登入後畫面空白？</summary>
+<summary> Q2. Why is the screen blank after sign-in?</summary>
 
-在 TWCC 使用者網站更版後，若您的瀏覽器有紀錄快取，登入後將會呈現空白畫面，清除快取後即可正常登入。
-</details>
-
-<details>
-
-<summary> Q3. 登入密碼連續輸入錯誤會有甚麼情況？</summary>
-
-若密碼輸入錯誤連續達 3 次，將會有 15 分鐘無法進行登入，請您稍後再試。
-</details>
-
-<details>
-
-<summary> Q4. 租戶管理員與一般租戶使用者身分，在使用 TWCC 各服務上有什麼區別？</summary>
-
-兩種身分有功能使用權限的差別，各功能權限差異請參考[<ins>此文件</ins>](/docs/member/concepts/overview.md)。
+After TWCC update the new version, a blank screen will be displayed after signing in if your browser stores the previous version cache. Clear the cache to sign in normally.
 
 </details>
 
 <details>
 
-<summary> Q5. 如何查詢計畫的 GPU 使用上限？ </summary>
+<summary> Q3. What will happen if the password is entered incorrectly continuously？</summary>
 
-請參考[<ins>此文件</ins>](/docs/member/user-guides/member-key-quota/manage-quota.md)中的「資源配額管理」。  
+If you enter the password incorrectly for 3 consecutive times, you will not be able to sign in for 15 minutes. Please try again later.
 
 </details>
 
 <details>
 
-<summary> 
+<summary> Q4. What is the difference between Tenant Admin and Tenant User in using TWCC services?</summary>
 
-Q6. 為什麼創建資源時出現錯誤訊息:`[i-service] no quota to request resource.user`？
+The differences between Tenant Admin and Tenant User are role permissions, please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-overview-en) for the differences between the two roles.
+
+</details>
+
+
+<details>
+
+<summary> Q5. How to check the limit of GPU usage of the project?</summary>
+
+Please refer to "Quota" of [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-service-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2FHJYrLYukr%3Ftype%3Dview%23%25E8%25B3%2587%25E6%25BA%2590%25E9%2585%258D%25E9%25A1%258D%25E7%25AE%25A1%25E7%2590%2586).
+
+</details>
+
+<details>
+
+<summary>
+
+Q6. An error when creating resource:`[i-service] no quota to request resource.user`？
 
 </summary>
 
-當您在使用網站操作資源時 (例：創建或啟動虛擬運算個體、卸載磁碟或是使用容器服務...等)，出現以下錯誤訊息：
 
-- `錯誤代碼：401(Unauthorized)`
-- `錯誤訊息：[i-service] no quota to request resource.user`
+If the following error messages occur when you're using services/resources of TWCC, (e.g., create or start a VCS instance, detach the data disk or use container services...etc.):
 
-表示您的計畫的使用額度不足，請先確認您的計畫母錢包與使用者的子錢包是否有足夠的額度進行使用。
+- `error code：401(Unauthorized)`
+- `error message：[i-service] no quota to request resource.user`
+
+They indicate that the credit of the project is insufficient. Please check whether the main wallet or the user's sub wallet of your project is still enough for using services.
 
 </details>

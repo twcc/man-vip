@@ -1,29 +1,25 @@
 ---
 sidebar_position: 1
-title: '服務概觀'
-sidebar_label: '雲端檔案服務'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/cfs-overview-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/cfs-overview-zh'
+title: 'Service Overview'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/cfs-overview-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/cfs-overview-en'
 ---
 
+# <img  style={{width:40+'px', height:40+'px'}} src="https://i.imgur.com/HmCCsr5.png" /> Service Overview 
 
-# ![-](https://i.imgur.com/THr1zxE.png) 服務概觀
+## Cloud management and file sharing, providing TWCC services to access data for AI/ML pipeline, data analysis, etc.
 
 
+### Cold and Hot storage
+  - **File upload/download**
+     A cloud storage solution to store files in TWCC.
+  - **File access and management (list/search/versioning/metadata)**
+    Provide file version management and metadata search management.
+  - **File Lifecycle Management - Hot and Cold Storage Data Transfer**
+     A policy set by user to automatically or manually move in-frequent access file to cold storage for long-term data storage, and files can be transfer between two types of storage at any time.
 
-## 雲端管理與共享檔案，提供 TWCC 服務存取資料，以進行 AI/ML pipeline、資料分析等工作
-
-### 冷熱儲存
-  - **檔案上傳/下載**
-    提供連線至 TWCC，將檔案存放在雲端儲存。
-  - **檔案存取與管理 (列表/搜尋/版本歷史/metadata)**
-    提供檔案版本管理與 metadata 搜尋管理。
-  - **檔案生命週期管理 - 冷熱區資料轉移**
-    由使用者設定政策 (policy)，自動或手動將不常存取 (in-frequent access) 之檔案遷移至冷儲存區進行資料長期儲存，並可隨時在不同儲存間進行檔案遷移。
-
-### 檔案分享
-  - **設定分享權限，管控檔案存取**
-    可依需求設定計畫內成員不同權限，進行檔案分享與安全管理。
-  - **支援 S3 及 SFTP 協定，可以第三方軟體存取**
-    除了利用 TWCC 使用者網站存取檔案之外，亦可利用第三方軟體進行檔案存取，提高便利性。
-
+### File Sharing
+  - **Set sharing permissions to control access right**
+    Different permissions of the project members can be set according to needs of file sharing and security management.
+  - **Support S3 and SFTP protocol, can be accessed by third-party software**
+    In addition to using the TWCC portal to access files, third-party software can also be used to access files to improve convenience.
