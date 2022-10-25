@@ -1,67 +1,71 @@
 ---
 sidebar_position: 1
-title: 'Prerequisites'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-prerequisite-en' 
+title: '準備工作'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-prerequisite-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Connect to VCS instances: Prerequisites
+# 連線虛擬運算個體：準備工作
 
 
-## Step 1. Create a public IP address
+## Step 1. 建立公用 IP
 
-Please create a public IP to your VCS instance before connecting to it from the Internet. Once a public IP is assigned to the instance, it is recommended to configure the [Security Group](https://man.twcc.ai/@twccdocs/guide-vcs-sg-en) to protect your instance and reduce the information security risk.
+若需從虛擬網路外部連線登入虛擬運算個體，請先建立公用 IP，並建議使用[安全性群組](../security/security-group.md)保護個體安全與降低資安風險。
 
 :::info
-For more information about using public IP, please refer to [<ins>Elastic IP</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/networking/elastic-ip).
+更多公用 IP 使用資訊，請參考[<ins>彈性 IP</ins>](../networking/elastic-ip.md)。
 :::
 
 <!-- Portal start -->
 
 <Tabs>
 
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-- Go to the detailed information page of the VCS instance you want to connect to.
+- 進入欲連線的虛擬運算個體詳細資料頁面。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c1d6366ecc19ce1a7ff4c4dd058f50fb.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c065f020c08007cad3c40a0d17c32444.png)
 
-- Scroll down to the "Network & Connection" section and click **Assign**.
+- 至「網路與連線」區域，點選「**配置**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db0855da2f03889e497ea83ae4836f68.png)
+![](https://i.imgur.com/hXpkLqY.png)
 
-- Select "Auto-assign Floating IP" or "Assign Static IP".
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b9bca425dbd1f4468d0bcd6c73bf11d9.png)
+- 選擇「**自動配置浮動 IP**」 或 「**配置靜態 IP**」。
 
-- After the creation is complete, the virtual network name and the public IP address will be displayed.
+![](https://i.imgur.com/oF4CrE8.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e2b629cbf5696134f71712677c3aa138.png)
+
+
+- 建立完成後，將顯示所使用的虛擬網路名稱、所取得的公用 IP 位址。
+
+![](https://i.imgur.com/tS0RGPU.png)
 
 
 </TabItem>
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-**Commands**
+**指令**
 
 ```bash
-twccli net vcs -s   # VCS instance ID
+twccli net vcs -s       # 虛擬運算個體 ID
                -fip
 ```
 
 :::info
-1. The parameters in the square brackets **[ ]** are optional and the rest are required.
+**[ ]** 中括號內為選擇性參數，其餘為必要參數。
 :::
 
 <br/>
 
-**Example**
 
-Create a public IP address for the VCS instance with ID **`937648`**, and check if it is successfully created.
+**範例**
+
+為 ID **`937648`** 的虛擬運算個體，建立公用 IP，並檢視是否建立成功
 
 ```bash
 twccli net vcs -s 937648 -fip
@@ -69,52 +73,52 @@ twccli ls vcs
 ```
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_565a7f89f09a26306182a00123a02929.png)
 
+
 </TabItem>
 
 </Tabs>
 
 <br/>
 
-## Step 2. Obtain connection information
+
+## Step 2. 取得連線資訊
 
 <!-- Portal start -->
 
 <Tabs>
 
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-**Linux instances**
+**Linux 個體**
 
-* Go to the detailed information page of the VCS instance you want to connect to.
+* 進入欲連線的虛擬運算個體詳細資料頁面
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c1d6366ecc19ce1a7ff4c4dd058f50fb.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c065f020c08007cad3c40a0d17c32444.png)
 
-* Click the **Connect** button.
+* 點擊「**連線**」按鈕。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c09e3f7969882c7733e4163a5ee30182.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8343bbc37911ad21d03d7f320e033e77.png)
 
-* Once you click the **Connect** button, the instance connection steps using SSH will be displayed. The information varies for different instances.
+* Linux 個體點擊「**連線**」按鈕後，系統會出現使用 SSH 連線到您的虛擬運算個體的資訊及步驟，每台個體的資訊不同。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d809e093216e0e503e4596e29cf9ef3c.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6a67ed29fee947c94562327049f2ca61.png)
 
 :::info
-This example is based on Ubuntu. The system prompts will be different for VCS instances of different operating systems.
+此範例以 Ubuntu 為例，不同作業系統的虛擬運算個體，系統提示資訊將有所不同。
 :::
 
 <br/>
 
-**Windows instances**
+**Windows 個體**
 
-* Go to the detailed information page of the VCS instance to be connected, and click the **Connect** button to check the connection steps.
+* 進入欲連線的虛擬運算個體詳細資料頁面，點擊「**連線**」按鈕後，系統將提供連線提示 
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3a723f629d377148c6c599c6a3f51378.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_66ee6f7ec814ec01ecded36afad044eb.png)
+- 登入帳密：
 
-- Login account and password：
-
-    **Account: administrator**<br/>
-    **Password: User-defined VCS instance password**
+    **帳號：administrator**<br/>
+    **密碼：使用者自行定義之個體密碼**
 
 </TabItem>
 

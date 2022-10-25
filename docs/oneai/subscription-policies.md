@@ -7,9 +7,6 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/oneai-subscription
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-:::info Coming soon!
-We are still working on the English version of this document. Thanks for your patience!
-:::
 
 # 訂閱政策
 
@@ -53,7 +50,7 @@ We are still working on the English version of this document. Thanks for your pa
 #### 其他資訊
 - 定價資訊：
     - [<ins>國網學研界用戶</ins>](https://man.twcc.ai/@twccdocs/SJWlN3YDr#%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7) 
-    - [<ins>TWS 用戶</ins>](https://man.twcc.ai/@twsdocs/pricing-zh#%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%EF%BC%9AOneAI)
+    - [<ins>TWS 用戶</ins>](../pricing.mdx#人工智慧oneai)
 - 詳細服務使用量與計費資訊，請至會員中心查看。
 :::
 

@@ -1,110 +1,97 @@
 ---
-sidebar_position: 3
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-encryption-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-encryption-en'
+sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-view-search-delete-files-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-view-search-delete-files-zh'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# File Encryption
+# 檢視、搜尋、刪除檔案
 
-When uploading files to TWCC Cloud Object Storage, you can choose the file encryption feature. TWCC provides the system default SSE-KMS key to encrypt your uploaded files and protect your important data.
-
-:::info
-- The key is shared by the project and all members have access to the encryption feature.
-- Keys are centrally managed by TWCC and currently do not support the deletion, change or use BYOK.
+:::tip
+以下操作方式僅限計畫之 [「<ins>**公共空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](../../overview.md) 適用， [「<ins>**私有空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](../../overview.md) 之檔案管理請透過 [<ins>**第三方軟體**</ins>](../../../category/使用第三方軟體管理檔案) 操作。
 :::
 
-## Encryption Key ID
+## 檢視檔案內容
 
-When uploading files using third-party software, the files need to be encrypted using the Encryption Key ID (user sites are automatically encrypted by the system).：
-
-Login to TWCC > enter the service list and select **Cloud Object Storage** > enter **Cloud Object Storage Management** and get the Encryption Key ID of the projects on the top right of the page.
-
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_62098fd1deba37313fa0ea7677fc7588.png)
+<!-- 1 start -->
+<Tabs>
+  <TabItem value="TWCC 入口網站" label="TWCC 入口網站" default>
 
 
+*  選定儲存體，並進入儲存體的內容頁面，請點選欲查看的檔案。
 
-## How To Encrypt The Files?
+    
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_72adbc230af97db5e02ca24de1bf2fd0.png)
 
-TWCC encrypts your files when you upload them to cloud object storage, as described below.
-When you download the file, the system will automatically get the decryption key and you don't need to perform additional operations.
 
+* 進入檔案內容頁面後，即可檢視檔案的基本資訊。
+
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e1ecd57f58ba34c49be88e324efa6f13.png)
+
+
+  </TabItem>
+  <TabItem value="TWCC CLI" label="TWCC CLI">
+
+
+檢視儲存體 `bk_cli` 中所有檔案資訊
+
+```bash
+twccli ls cos -bkt bk_cli
+```
+
+  </TabItem>
+</Tabs>
+
+## 搜尋檔案
 
 <!-- 1 start -->
 
 <Tabs>
-  <TabItem value="TWCC Portal" label="TWCC Portal" default>
+  <TabItem value="TWCC 入口網站" label="TWCC 入口網站" default>
 
 
+在「**搜尋**」列輸入欲查找的關鍵字可以自動篩選所有列表欄位內容符合該條件的結果。 
 
-### Encrypted Uploads
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0381491f809a48e02298c45a67771333.png)
 
-Same steps as [<ins>uploading a file</ins>](https://man.twcc.ai/@twccdocs/guide-cos-upload-download-files-zh#%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88), please check **Encrypt** and then click **UPLOAD** to encrypt the file.
+  </TabItem>
+</Tabs>
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_af965af915450fa5d94de1fae5b0bbbb.png)
+## 刪除檔案
 
+删除不必要的檔案可節省儲存空間；**檔案刪除後無法復原，請您在刪除前先確認檔案已備份**。
 
-### Verify That The File Is Encrypted
+<!-- 1 start -->
 
-
-After a file has been encrypted and uploaded, the encrypted properties of the file will be displayed when you go to the file details page.
-
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0b749c20a05ddd9d6e036f8bee56e26f.png)
-
-
-
- </TabItem>
-  <TabItem value="Third-party Software：S3 browser" label="Third-party Software：S3 browser">
+<Tabs>
+  <TabItem value="TWCC 入口網站" label="TWCC 入口網站" default>
 
 
-### Preparation
+* 進入儲存體內容後，點擊該檔案列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>  選單按鈕，再按一下「刪除」即可。亦可點擊勾選欄選擇多個檔案，再點擊上方的「删除」。
 
-Please [<ins>download S3 Browser, complete the connection to TWCC Cloud Object Storage, create the storage</ins>](https://man.twcc.ai/@twccdocs/guide-cos-s3browser-zh), and obtain the <a href="#加密金鑰-ID"><ins>Encryption Key ID</ins></a>.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_53380d4b55caf0a78c19c91ec5006700.png)
 
-
-### Set encryption function
-
-
-**Step 1. Enter the settings page**
-
-Click **Tools** > **Server-Side-Encryption** > **+Add**
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4828b14743452f78d82e199429e0eb94.png)
+* 再次確定欲删除的檔案是否正確，一旦檔案被删除後將無法恢復。
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ceacfeaf972f12ddfb327fef7e180e65.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_df3640ed5ec0decdf6bbe28b3cc45148.png)
 
 
-**Step 2. Set the encryption content**
-
-- Bucket name or mask：Enter the "**Bucket**" name of the file to be encrypted.
-- Encryption type：Select **Server-Side-Encrption with Customer Keys Stored in AWS KMS (SSE-KMS)**
-- KMS key type：Select **Enter KMS master key ARN**, and enter the **Encryption Key ID** provided by TWCC.
-- Click **Save changes** to confirm settings.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e0c48a902bdf32348014b2b2fac25efc.png)
-
-- Click **Save changes** again
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8ccb461736610db73e310b16c5e5fb5d.png)
+  </TabItem>
+  <TabItem value="TWCC CLI" label="TWCC CLI">
 
 
+- 刪除儲存體 `bk_cli` 的 `testfile2` 檔案
 
-### Verify that the file is encrypted
+```bash
+twccli rm cos -bkt bk_cli -okey testfile2
+```   
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_46d8119fc6debd65bcbe77574209266e.png)
 
-After uploading the file, right-click on File > Properties > View File Encryption Properties.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e38b3b62d64c3a5fdecdd2ae7b476b09.png)
-
-
-:::info
-- In this document, we use S3 Browser as an example of client software, you can choose other software
-- For more tutorials on using S3 Browser's Cloud Object Storage, refer to [<ins>Manage files with third-party software - S3 Browser</ins>](https://man.twcc.ai/@twccdocs/guide-cos-s3browser-zh)
-:::
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5c14b3d8059d8ea4ff1efc97df54f006.png)
 
   </TabItem>
 </Tabs>

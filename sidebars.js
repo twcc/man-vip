@@ -16,20 +16,23 @@ const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   tutorialSidebar: [
     {
-      type: "doc", id:"overview", label: "TWCC 文件概觀", 
+      type: "doc", id:"overview", label: "TWCC 文件概觀",
     },
     {
       type: "category",
       label: "從零開始 TWCC",
       link: {
         type: "generated-index",
+        title: "從零開始 TWCC",
+        slug: "/zero-to-hero",
+        keywords: ["zero-to-hero"]
       },
       collapsed: true,
       items: [
-        { type: "doc", id:"ccs-interactive-container/get-started", label: "開發型容器",}, 
+        { type: "doc", id:"ccs-interactive-container/get-started", label: "開發型容器",},
         { type: "doc", id:"twnia2-hpc-cli/get-started", label: "台灣杉二號 (命令列介面)",},
         { type: "doc", id:"hfs/get-started", label: "高速檔案系統",},
-      ], 
+      ],
     },
     {
       type: "category",
@@ -40,7 +43,7 @@ const sidebars = {
       collapsed: true,
       items: [
         {
-          type: "doc", id:"member/user-guides/member-key-quota/sign-up-for-twcc", label: "會員中心", 
+          type: "doc", id:"member/user-guides/member-key-quota/sign-up-for-twcc", label: "會員中心",
         },
         {
           type: "category",
@@ -50,7 +53,7 @@ const sidebars = {
           },
           collapsed: true,
           items: [
-            { 
+            {
               type: "category",
               label: "容器運算服務",
               link: {
@@ -58,7 +61,7 @@ const sidebars = {
               },
               collapsed: true,
               items: [
-                { type: "doc", id:"ccs-interactive-container/overview", label: "開發型容器",}, 
+                { type: "doc", id:"ccs-interactive-container/overview", label: "開發型容器",},
                 { type: "doc", id:"ccs-scheduled-container", label: "任務型容器",},]},
             { type: "doc", id:"hpc-job", label: "HPC 高速運算任務",},
             { type: "doc", id:"vcs/overview", label: "虛擬運算服務",},
@@ -73,7 +76,7 @@ const sidebars = {
           },
           collapsed: true,
           items: [
-            { type: "doc", id:"cos/overview", label: "雲端物件儲存",}, 
+            { type: "doc", id:"cos/overview", label: "雲端物件儲存",},
             { type: "doc", id:"vcs/user-guides/storage/overview", label: "虛擬磁碟服務",},
             { type: "doc", id:"hfs/overview", label: "高速檔案系統",},
             { type: "doc", id:"cos/tutorials/backup-synchronize-restore", label: "資料備份",},
@@ -88,7 +91,7 @@ const sidebars = {
           },
           collapsed: true,
           items: [
-            { type: "doc", id:"vcs/user-guides/networking/virtual-network", label: "虛擬網路",}, 
+            { type: "doc", id:"vcs/user-guides/networking/virtual-network", label: "虛擬網路",},
             { type: "doc", id:"vcs/user-guides/security/security-group", label: "安全性群組",},
             { type: "doc", id:"vcs/user-guides/networking/load-balancing", label: "負載平衡",},
             { type: "doc", id:"vcs/user-guides/networking/auto-scaling", label: "Auto Scaling",},
@@ -103,13 +106,13 @@ const sidebars = {
           },
           collapsed: true,
           items: [
-            { type: "doc", id:"oneai/overview", label: "OneAI",}, 
+            { type: "doc", id:"oneai/overview", label: "OneAI",},
           ],
         },
       ],
     },
   ],
-    
+
   openApiSidebar: [
     {
       type: "category",

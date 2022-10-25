@@ -1,33 +1,13 @@
 ---
 sidebar_position: 1
-title: TWCC Documentation
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-intro-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-intro-zh'
 ---
 
-# TWCC Documentation <i class="fa fa-book" aria-hidden="true"></i>
 
-您可以透過以下各式文件，了解如何使用 TWCC 雲端服務建置和管理功能強大的應用程式。取得文件、程式碼範例、教學課程等資訊。
-
-## <i class="fa fa-child" aria-hidden="true"></i> 【從零開始 TWCC】
-
-【從零開始 TWCC】系列教學文件將以主題式方式為新手用戶深入淺出說明 TWCC 使用方式，將相關文件統整於此，讓您方便參考所需的資訊，順利邁開使用 TWCC 運算資源的第一步！
-
-## <i class="fa fa-info" aria-hidden="true"></i> 【使用指南、概念說明、案例教學】
-
-【使用指南、概念說明、案例教學】提供 TWCC 各服務基礎操作教學、服務概念解釋、服務細節如何實作的教學，以文字、圖示、GIF 動畫引導您使用 TWCC。
-
-## <i class="fa fa-terminal" aria-hidden="true"></i> 【API、CLI 使用手冊】
-
-【API、CLI 使用手冊】則可以帶領您以不同於 TWCC 入口網站的使用介面，以 TWCC API 或 TWCC CLI 介面更快速建置、管理您的資源與應用程式。
-
-## <i class="fa fa-question-circle" aria-hidden="true"></i> 【常見問題】
-
-【常見問題】彙集用戶常遇到的 TWCC 使用疑問並提供解答，您也遇到了卡關問題嗎？請到 FAQs 尋找您需要的答案！
-
-## <i class="fa fa-file-text" aria-hidden="true"></i> 【Release notes】
-
-【Release notes】涵蓋 TWCC 各服務的變更歷程，您將可以找到服務最新資訊，包含新服務或服務新功能上線、服務調整以及服務問題修正。
+# 架設安全、可負載高流量的網站
 
 
-## <i class="fa fa-calculator" aria-hidden="true"></i> 【定價資訊】
+本篇將示範教學如何運用 TWCC [**虛擬運算服務**](../vcs/overview.md)建立 2 台相同的 [**NGINX**](https://www.nginx.com/) 網頁伺服器，並設定[**安全性群組**](../vcs/user-guides/security/security-group.md)，搭配[**負載平衡服務**](../vcs/user-guides/networking/load-balancing.md)、**SSL 憑證**，將使用流量請求分散至不同伺服器，使用單一對外 URL，**確保您的網頁伺服器資料安全傳輸，且不會因同時使用人數過多、連線流量過載而中斷您的網頁服務**。
 
-【定價資訊】可總覽台智雲所提供的所有 TWCC 企業促銷價資訊，讓您了解 TWCC 各服務費用計算模式，並可估算所需成本。
+## <i class="fa fa-backward" aria-hidden="true"></i> 點開第一部分，開始操作吧！

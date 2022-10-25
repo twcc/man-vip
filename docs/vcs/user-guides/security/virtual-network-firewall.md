@@ -1,151 +1,143 @@
 ---
 sidebar_position: 3
-title: 'Basic Virtual Firewall (BVF)'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vnf-en'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vnf-en'
+title: '基礎虛擬防火牆'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vnf-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vnf-zh'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db2be9ff86eff33624e32feceedf17e7.png) Basic Virtual Firewall (BVF)
+# ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db2be9ff86eff33624e32feceedf17e7.png) 基礎虛擬防火牆
 
-Basic Virtual Firewall (BVF) provides a simple and flexible architecture that builds virtual network firewalls to protect all the VCS instances inside.
 
+基礎虛擬防火牆服務提供簡單靈活的架構，在虛擬網路外創建防火牆，對網路內所有虛擬運算個體提供安全防護。
 
 :::info
-For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-en#%E5%9F%BA%E7%A4%8E%E8%99%9B%E6%93%AC%E9%98%B2%E7%81%AB%E7%89%86).
+租戶管理員、租戶使用者對於基礎虛擬防火牆使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/networking-security#基礎虛擬防火牆)。
 :::
-
 
 <br/>
 
+## 建立基礎虛擬防火牆
 
+ * 進入「**基礎虛擬防火牆**」服務，在「**基礎虛擬防火牆管理**」頁面，點擊「**＋建立**」。
 
-## Create BVFs
-
- * Under **Services**, select **Basic Virtual Firewall (BVF)**, and select **＋CREATE** on the **Basic Virtual Firewall Management** page.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6668cf5d5b790061f3efb1764915cd95.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
 
 :::tip
-You can click on the asterisk to the left of the service in "**All Services**" <i class="fa fa-star-o" aria-hidden="true"></i> and pin your frequently used services to "**My Favorite Services**" to speed up the process.
+您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_36bd577def63d4503c7e96dfaba66aea.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1c47cc938a6750f99e2e4dd3696ebc1d.png)
 
-* Enter a name for the firewall, and then click **NEXT: RULE**.
+
+* 輸入名稱及描述，接著點擊「下一步：規則」。
 
 :::tip
-You can skip this step if you have already created the required rules via Security Group. After selecting the **NETWORK**, select the VCS instance IP in **ADVANCEDRULE** to synchronize the Security Group rules to the firewall automatically.
+若安全性群組規則已有建立所需的規則，您可先跳過此步驟。在選擇網路後，在進階規則選擇虛擬運算個體 IP，即可將安全性群組規則自動同步至防火牆。
 :::
 
 
-* Click **CREATERULE**.
+* 點擊「**建立規則**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6e69e5f81d8010e46a088c6d8987ce22.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fe39865423400771cab01818a0fb9f53.png)
 
 
-*    In **Create Virtual Network Firewall Rule** pop-up window, configure the firewall rules, and click **OK** when finished.
-     * Name: Enter a name for the firewall rule
-     * Action: Select the required firewall action, such as allow, deny, reject
-     * Protocol: Select tcp, icmp or udp
-     * Destination IP: Enter the IP address of the destination host
-     * Destination port: Enter the destination port
-     * Source IP: Enter the source IP address
-     * Source port: Enter the source port
 
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5602a4ac87886a1aaade283d4b24f82d.png)
+* 在建立基礎虛擬防火牆規則視窗輸入防火牆規則設定資訊，完成後點擊「**確認**」。
+    * 名稱：輸入防火牆規則名稱
+    * 動作：透過下拉選單選取所需的防火牆動作，例如：allow (允許)、deny (拒絕)、reject (拒絕並回應)
+    * 協定：可選取 tcp、icmp、udp
+    * 終端 IP：輸入終端主機的 IP 位址 (受保護個體的私有 IP)
+    * 終端埠：輸入終端埠
+    * 來源 IP：輸入來源的 IP 位址
+    * 來源埠：輸入來源埠
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dc5e1fc63669854539bcc942eae82caf.png)
+
+:::info
+若不設定終端 IP、終端埠、來源 IP、來源埠，系統將預設為 Any。
+:::
+
+
+* 回到「**基礎虛擬防火牆管理**」頁面，即可看到剛建立的規則，接著點擊「**加入排序**」。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7b397f60dd7f204b8eeefa073ae5f3de.png)
+
+* 加入排序後，防火牆規則會被加入到下方列表中。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3dce3f76176808f6f02972be6c72ae24.png)
+
+
+
+* 重複以上的步驟建立更多防火牆規則，亦可點擊防火牆規則列表，選擇加入相同計畫中已建立的防火牆規則。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_47050a73ea93e08575f9ddc4c0c9c65c.png)
+
+
+
+* 設定好規則後，可點選右側箭頭調整規則優先順序。完成後點擊「**下一步：網路**」。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_04fb17026ec3bc7af4ac697b76270b74.png)
 
 
 :::info
-If configured without specifying, the default is **Any** for destination IP, destination port, source IP, and source port.
+排序越前面的規則，將覆寫排序後面的規則。
 :::
 
 
-* Go back to **Create Basic Virtual Firewall** page, you can see the rule you just created, and then click **ADD TO LIST**.
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8ae6ec03f507390849b997d61598a200.png)
-
-* Once added to the list, the firewall rule will be displayed to the list below.
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_94d58d0c0e505fd3a3a72c6267f75c7b.png)
-
-* Repeat the above steps to create more firewall rules you need. You can also click the firewall rule list to select other firewall rules in the project.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3db9790f79cc6602d410d566809a893a.png)
-
-* After setting the rules, click the arrow on the right to adjust the priority of the rules. Click **NEXT:NETWORK** when you are ready.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1bebfde14baed80390409cfc43988e81.png)
-
-:::info
-Higher priority rules will override lower priority rules.
-:::
 
 :::caution
-If no firewall rule is selected, the system will default the firewall rule to **deny all traffic**. Therefore, once the firewall is created, it blocks all incoming traffic to any VCS instance within the network.
+如未選擇任何防火牆規則，系統將預設防火牆規則為 deny all，拒絕所有流量。防火牆建立後，所有網段皆不可連線虛擬網路內已建立的的任一虛擬運算個體。
 :::
 
 
-* After selecting the network, click **NEXT: ADVANCEDRULE**. In this step, you can synchronize Security Group rules of VCS instances to the firewall, where a corresponding rule is also automatically created (SyncRule).
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1341d832e30dcdb6f0c15783aee3b5c1.png)
+* 選擇網路後，接著點擊「**下一步：進階規則**」，此步驟可將虛擬運算個體的安全性群組規則同步至防火牆，在防火牆也自動創建相對應的規則 (SyncRule)。
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_faaeb1b8ab3bf7de05ae747e9d6f33d3.png)
 
 :::info
-The firewall only applies to the instances in the selected Virtual Network. In other words, the instances not created in the selected Virtual Network will not be protected by the firewall.
+防火牆僅對選取的虛擬網路內之個體作用，若不使用此虛擬網路建立之個體，將不受此防火牆防護。
 :::
 
 
-* In **ADVANCEDRULE** tab, the private IPs of all VCS instances in the Virtual Network are listed.
+* 在進階規則頁面內，會列出虛擬網路下所有的虛擬運算個體的私有 IP 列表。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e31cd502b22e931ab490d4c334637372.png)
+
+
+* 點擊列表中的虛擬運算個體可查看此個體建立的安全性群組規則，勾選欲使用之規則的虛擬運算個體私有 IP，接著點擊「**下一步：檢閱+建立**」。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4e2cf4c55560f38e5cbab61881ac2939.png)
+
+* 檢視欲建立的防火牆資訊，按下「**建立**」即完成。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_524cb4b9604ce59711ee8ae0dd5e8051.png)
+
+* 建立完成的防火牆會出現在虛擬運算防火牆管理列表的最上方，點擊該列表，可查看防火牆詳細資料或編輯規則。
     
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2929b889ef9643f3cbf14baa526c1b47.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_00cda3e43d970a8d3553cb7cc6a92bc1.png)
 
+- 規格名稱包含 "SyncRule" 之規則，即是同步自安全性群組的規則。 
 
-
-* Click the list to see the Security Groups rules of the VCS instance, and select the rules you need. Then, click **NEXT: REVIEW&CREATE**.
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_40b2c19502f8a2719c255bdca19d4b61.png)
-
-
-
-    
-* Review the configuration of the firewall, then click **CREATE** to complete the creation.
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_996b92643cffcc3d0655ad1a92b551d8.png)
-
-
-    
-* The created firewall will be displayed at the top of the **Basic Virtual Firewall Management** list. Click the list to view firewall details or edit rules.
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dc8eb828c5f05b90c84d000af35d9795.png)
-
-
-- The rule name with **SyncRule** is the rule that synchronized from the Security Groups. 
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b07975c5d37b3436fc220158f4075db7.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f1da708e1126b12047b400b659bf733e.png)
 
 <br/>
 
 
+## 編輯防火牆規則
 
-## Edit firewall rules
+* 在「**基礎虛擬防火牆詳細資料**」頁面，點擊「**編輯規則**」，可改變規則的優先順序或是删除規則。
 
-* In **Basic Virtual Firewall Details** page, click **EDIT RULES** to change the priority of the rules or delete the rules.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1b2352610c7c8c90a5201169da971d29.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_02a39d79543f1feacc7b9c1eb082501b.png)
-
-
-* In **Edit Rules** window, you can adjust the order of rules, add or delete rules. Click **OK** when you are ready.  
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_13ba77ac86e1869ef8326ccd4f6f8c5b.png)
+* 即可在「**編輯規則**」視窗中調整規則的順序或是新增、删除規則，編輯好後點擊「**確認**」。  
 
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0a32c8b3217f41650022c5092fb565c8.png)
 
-* After finishing editing, the firewall will enter the **`PENDING_UPDATE`** state. The new settings take effect when it enters the **`ACITVE`** state after a few minutes.
 
+* 完成編輯後，防火牆的狀態會變成 **`PENDING_UPDATE`**。數分鐘後等狀態變成 **`ACITVE`**，即代表此防火牆設定已生效。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e51c582e4b77a56e74f2f35b80176bf9.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4fd245f3c9d0f43dd6e175dbd2939613.png)

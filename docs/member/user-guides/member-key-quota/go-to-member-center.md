@@ -1,32 +1,34 @@
 ---
 sidebar_position: 2
-sync_original_production: 'https://man.twcc.ai/@twsdocs/howto-service-access-service-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/howto-service-access-service-en' 
+sync_original_production: 'https://man.twcc.ai/@twsdocs/howto-service-access-service-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/howto-service-access-service-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Enter Member Center
-
-Member Center is a unified system for managing your projects, members, quotas, resource usage, and billing in TWCC.
-
-The access method is determined by which type of user you are, please refer to the following steps.
+# 進入會員中心
 
 
+會員中心為統一管理您在 TWCC 使用之計畫、成員、額度、資源使用量、帳務的系統。
 
-### Method 1. Access by TWCC
+進入方式依用戶區分，請參考以下步驟：
 
-- Step 1. [Sign in to TWCC](https://www.twcc.ai/)
-- Step 2. Enter Member Center
+<br/>
+
+
+### 方法一、由 TWCC 進入
+
+- Step 1. [登入 TWCC](https://www.twcc.ai/)
+- Step 2. 進入會員中心
 
 <details class="docspoiler">
 
-<summary><b>NCHC users in academic and research circles</b></summary>
+<summary><b>服務提供者：國網中心</b></summary>
 
-Click "**Username**" in the upper right corner, then click "**Account & Project**" to enter the Member Center.
+點選右上角「**使用者名稱**」，再點選「**帳戶計畫資訊**」，即可進入會員中心。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_aa3c1a9410894afdc6f10341c577b93c.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_43481a0d3c544c5964c9c41f3b958e9a.png)
 
 </details>
 
@@ -36,27 +38,26 @@ Click "**Username**" in the upper right corner, then click "**Account & Project*
 
 <details class="docspoiler">
 
-<summary><b>TWS users</b></summary>
+<summary><b>服務提供者：TWS</b></summary>
 
-Click on "**Member Center**", "**Rescource Usage**", or "**Credits Information**" to enter Member Center to view project information.
+點選「**會員中心**」、「**用量資訊**」、「**額度資訊**」皆可進入會員中心檢視專案資訊。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_95178518fe62f0fe9dbdb918e5e6b14d.png)
+![](https://i.imgur.com/VRgIQtC.png)
 
 </details>
 
 <br/>
 
 
-### Method 2. Direct access to Member Center
-
+### 方法二、 直接進入會員中心
 
 <!-- 1 start -->
 
 <details class="docspoiler">
 
-<summary><b>NCHC users in academic and research circles</b></summary>
+<summary><b>服務提供者：國網中心</b></summary>
 
-Sign in to [iService](https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=) to access Member Center.
+登入 [iService](https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=) 即可進入會員中心。
 
 </details>
 
@@ -66,9 +67,9 @@ Sign in to [iService](https://iservice.nchc.org.tw/nchc_service/index.php?lang_t
 
 <details class="docspoiler">
 
-<summary><b>TWS users</b></summary>
+<summary><b>服務提供者：TWS</b></summary>
 
-From the [TWS official website](https://tws.twcc.ai/), select "**會員中心 (Member Center)**" and enter your password to access Member Center.
+自 [TWS 官方網站](https://tws.twcc.ai/) 選擇「會員中心」，輸入帳密即可進入會員中心。
 
 ![](https://i.imgur.com/mNk06Ct.png)
 

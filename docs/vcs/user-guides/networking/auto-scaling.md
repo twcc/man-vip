@@ -1,8 +1,8 @@
 ---
 sidebar_position: 4
 title: 'Auto Scaling'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-auto-sacling-en'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-auto-sacling-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-auto-sacling-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-auto-sacling-zh'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -10,60 +10,83 @@ import TabItem from '@theme/TabItem';
 
 # ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fe3143064a67e3d04615d38683938427.png) Auto Scaling
 
-Auto Scaling is an automatic and dynamic mechanism for adjusting your resources with flexibility. This service will <ins>dynamically **increase** or **decrease** the number of VCS instances</ins> under the designated conditions to solve the problem of insufficient resources or service interruption caused by increasing workloads to improve the quality and efficiency of your service.
+Auto Scaling 是一種自動彈性調整的監控機制，本服務能夠在指定條件下<ins>動態**新增**或**移除**虛擬運算個體的數量</ins>，以因應負載增加所造成的資源不足、服務中斷的問題，提升服務品質與效能。
 
-Auto Scaling is an automatic and flexible adjustment monitoring mechanism that <ins>dynamically **increases** or **decreases** the number of VCS instances</ins> under the designated conditions in response to the problem of insufficient resources or service interruptions caused by the increasing workloads to improve the the quality and efficiency of your service.
-
-When the workload reaches the demand value, it increases the number of instances; when the workload falls below the demand value, it immediately decreases the number of instances. Also, with [load balancing](https://man.twcc.vip/en/docs/vcs/user-guides/networking/load-balancing), traffic can be distributed evenly to effectively reduce the cost of idle VCS instances.
+負載達到需求值後擴展數量，低於需求值便立即縮減，並搭配[負載平衡](./load-balancing.md)讓流量平均分配，可有效降低長時間建立閒耗之虛擬運算個體成本。
 
 :::info
-- For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-en#Auto-Scaling).
+- 租戶管理員、租戶使用者對於 Auto Scaling 使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/networking-security#auto-scaling)。
 :::
 
 :::caution
-[<ins>Auto Scaling</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-auto-sacling-en) scales out new instances whose configuration is identical to the connected instance. Therefore,
-- If the scaled out instance <ins>**needs**</ins> to be attached with a new data disk, please create a data disk when **[<ins>Creating an instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-en)**.
-- On the contrary, if the scaled out instance <ins>**doesn't need**</ins> to be automatically attached with a new data disk, please separately **[<ins>Create a instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-en)** and [<ins>a data disk</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-vds-create-data-disk-en), and then [<ins>attach the disk to the instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-vds-manage-disk-en#%E9%80%A3%E7%B5%90%E8%87%B3%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94).
-
+[<ins>Auto Scaling</ins>](./auto-scaling.md) 會依據所連結虛擬運算個體建立時的設定而新增個體，因此：
+- 若 Auto Scaling 自動新增的個體<ins>**需要**</ins>自動連結新資料磁碟，請您在 **[<ins>建立個體</ins>](../create/create-instances.md) 時**，一併建立資料磁碟。
+- 反之，若 Auto Scaling 自動新增個體<ins>**不需要**</ins>自動連結新資料磁碟，則請您在 **[<ins>建立個體</ins>](../create/create-instances.md) 後**，[<ins>另建資料磁碟</ins>](../storage/create-data-disks.md)，再[<ins>連結至個體</ins>](../storage/view-attach-delete-disks.md#連結至虛擬運算個體)。
 :::
-
 
 <br/>
 
 
-## Create Auto Scaling templates
+## 建立 Auto Scaling 範本
 
-You can create an Auto Scaling template and connect it to multiple VCS instances.
+您可以建立一 Auto Scaling 範本，連結至多個虛擬運算個體使用。
 
 <Tabs>
 
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-* Click **Auto Scaling** from the service list to go to the **Auto Scaling Management** page, and click **+CREATE**.
+* 由服務列表點選「**Auto Scaling**」進入「**Auto Scaling 管理**」頁面，點擊「**＋建立**」
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6668cf5d5b790061f3efb1764915cd95.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
 
 :::tip
-You can click on the asterisk to the left of the service in "**All Services**" <i class="fa fa-star-o" aria-hidden="true"></i> and pin your frequently used services to "**My Favorite Services**" to speed up the process.
+您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
-* Enter the following setting information, and then click **Next: REVIEW & CREATE>**:
-    * **Name**: Enter the name of the Auto Scaling.
-    * **Description** (Optional): Enter the description for the Auto Scaling.
-    * **Meter name**: Select the Meter name, which is a resource indicator for Auto Scaling to determine whether to scale up or down the number of VCS instances. The monitor meter names include four types of indicators, which are <ins>*cpuutil*</ins> `(CPU usage)`, <ins>*memory.usage*</ins> ` (Memory usage)`, <ins>*network.income.bytes.rate*</ins> `(Network incoming rate)`, and <ins>*network.outgoing.usage*</ins> `(Network outgoing rate)`.
-    * **Upper Threshold**: Set the maximum threshold of the meter. For example: *cpuutil* for the meter and 80 for the upper threshold represents that the number of VCS instances will increase when the CPU usage exceeds 80%.
-    * **Lower Threshold**: Set the minimum threshold of the meter. Below this threshold, the number of VCS instances will be decreased.
-    * **Max VCS instance no.**: Set the maximum value of the number of VCS instances, the default value is 2 (Auto scaling requires at least 2 VCS instances).
+* 輸入下列設定資訊，完成後點擊「**下一步：檢閱+建立>**」：
+    * **名稱**：輸入 Auto Scaling 的名稱。
+    * **描述**：輸入 Auto Scaling 的描述，非必填。
+    * **Meter 名稱**：選擇 Meter 名稱， 此為 Auto Scaling 判斷是否擴展、縮減虛擬運算個體數量的資源指標，可判斷 <ins>*cpuutil*</ins> `(CPU 使用率)`、<ins>*memory.usage*</ins> `(記憶體使用率)`、<ins>*network.income.bytes.rate*</ins> `(網路流入率)`、<ins>*network.outgoing.usage*</ins> `(網路流出率)` 四種指標。
+    * **閥值上限**：設定 Meter 的最高閥值。例如：若當 Meter 選用 *cpuutil* ，此數值設定 80 即代表 CPU 的使用率超過 80% 時將擴展虛擬運算個體數量。
+    * **閥值下限**：設定 Meter 的最低閥值，低於此閥值時則會縮減虛擬運算個體數量。
+    * **虛擬運算個體最大上限**：設定虛擬運算個體數量的最大上限，預設值為 2 （Auto Scaling 至少需 2 台虛擬運算個體）。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2468e0c6bb5e1d80fcfae77b33ddb335.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d868aef30fe5e7d4fad60706a7b206d1.png)
 
-* Review the settings of Auto Scaling and project credit information, then click **CREATE**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2c81f304e7d0ed9ef2755486f4367831.png)
+* 檢視 Auto Scaling 的設定及計畫的額度資訊，確定後點選「**建立**」。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0d5547a82935d854983faaaff1441aa9.png)
 
 </TabItem>
 
-<TabItem value="TWCC CLI" label="TWCC CLI (Not yet supported)">
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
+
+<br/>
+
+</TabItem>
+
+</Tabs>
+
+<br/>
+
+## Auto Scaling 管理
+
+檢視資訊、刪除 Auto Scaling。
+
+<Tabs>
+
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
+
+* Auto Scaling 管理頁面，剛建立好的 Auto Scaling 項目會列在最上方。點選 Auto Scaling 列表，可檢視 Auto Scaling 的設定資訊，或執行「**删除**」、「**重新整理**」。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_eee7f8c6944a35087428960db9d26dce.png)
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_846fd28c8f9c42456c22ae6f5b1575b0.png)
+
+</TabItem>
+
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
 
 <br/>
 
@@ -74,60 +97,30 @@ You can click on the asterisk to the left of the service in "**All Services**" <
 <br/>
 
 
-## Manage Auto Scaling
+## 將 Auto Scaling 連結/掛載至虛擬運算個體
 
-View Auto Scaling information and delete the Auto Scaling.
-
-<Tabs>
-
-<TabItem value="TWCC Portal" label="TWCC Portal">
-
-
-* In **Auto Scaling Management** page, the latest created Auto Scaling will be listed at the top. You can click the Auto Scaling list to check detailed information or execute **DELETE** or **REFRESH**.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e46aa8208dc29a30821ea4fa7f8f6dbb.png)
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_64ba47a730a26a9ece85b89dd290542c.png)
-
-</TabItem>
-
-<TabItem value="TWCC CLI" label="TWCC CLI (Not yet supported)">
-
-<br/>
-
-</TabItem>
-
-</Tabs>
-
-
-<br/>
-
-
-
-## Attach Auto Scaling to VCS instances
-
-The attached Auto Scaling should be used with [load balancing](https://man.twcc.vip/en/docs/vcs/user-guides/networking/load-balancing) to automatically balance the workloads of VCS instances.
+將 Auto Scaling 連結/掛載至虛擬運算個體後，搭配[負載平衡](./load-balancing.md)才能發揮其功能，自動平衡虛擬運算個體的負載。
 
 <Tabs>
 
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-*  Click **Virtual Compute Service (VCS)** from the service list to go to the **VCS Instance Management** page, click your instance you want to attach to and go to the **VCS Instance Details** page. Then, click the **ATTACH** button next to **Auto Scaling**.
+*  進入「**虛擬運算個體**」服務，在「**虛擬運算個體管理**」頁面點選欲掛載的個體，進入虛擬運算個體詳細資料頁面，按一下 Auto Scaling 後的「**掛載**」按鈕。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d372632414a0a2eae74be0211cf1ea2d.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db56a399662fec868f71cc242f585682.png)
 
 :::info
-The state of the VCS instance must be **`Ready`** before you can attach/detach the auto scaling to/from the instance.
+虛擬運算個體的狀態必須為 <b>`Ready`</b> ，才可以掛載/移除 Auto Scaling。
 :::
 
-* Auto scaling has to be used with **load balancer** to evenly distribute traffic to each VCS instances in the group to achieve high service availability. 
-* When **Auto Scaling** setting window pops up, select the name of the auto scaling, the notification link service (optional), the load balancer name, and the port information, then click **OK**.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e7e39b4be93690f8cf382fb89b71364c.png)
+* 使用 Auto Scaling 需搭配**負載平衡器**，才能將流量平均分配至群組內的虛擬運算個體上，以達成服務的高可用性。
+* 出現 Auto Scaling 設定視窗後，需選擇 Auto Scaling 的名稱、通知的連結服務、負載平衡器名稱及連接埠等資訊，設定好後按下「**確認**」即完成。
+    
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_982b1da32467ef04536b5a7897bbd197.png)
 
 </TabItem>
 
-<TabItem value="TWCC CLI" label="TWCC CLI (Not yet supported)">
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
 
 <br/>
 

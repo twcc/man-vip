@@ -1,49 +1,43 @@
 ---
 sidebar_position: 3
-title: 'Instance Management'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-manage-instance-en' 
+title: '停止/啟動/重開機/關機/刪除'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-manage-instance-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-manage-instance-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Instance Management: stop/start/shutdown/restart/delete
+# 停止/啟動 (與開機)/重開機/關機/刪除
 
-You may stop, start, shutdown, restart, and delete Virtual Compute Service(VCS) instance according to your needs and scenarios.
+
+您可以依需求與使用情境，對虛擬運算個體執行停止、啟動 (與開機)、重開機、關機、刪除之動作。
 
 :::info
-For the permission differences in VCS instance between Tenant Admins and Tenant Users, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務).
+租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/compute.md#虛擬運算服務)。
 :::
 
 :::tip
-For more information regarding state transitions, **billing**, and the impact of service operations on VCS instances, please refer to [<ins>VCS instance lifecycle</ins>](https://man.twcc.vip/en/docs/vcs/concepts/instance-lifecycle).
+更多虛擬運算個體狀態轉換、**計費與否**、服務操作影響之資訊，請參考[<ins>虛擬運算個體生命週期</ins>](../../concepts/instance-lifecycle.md)。
 :::
-
 
 <br/>
 
 
+## 停止個體
 
-## Stop instances
-
-If you will not use the instance for a period of time and want to keep the resources, you can click **STOP** to shutdown and release the instance resources. The VCS instance will show **`Stopping`** state, and prepare to enter the **`Stopped`** state, which means that the resource has been released. In the **`Stopped`** state, **<ins>the instance will no longer be billed</ins>**.
-
-:::caution
-Please do not delete the instance during the **`Stopping`** state. Otherwise, the process will be affected and cause an **`Error`** in the instance.
-:::
+若您將持續一段時間不使用個體，並希望保留各項資源，您可以點選「**停止**」關機並回收個體資源，個體將呈現 **`Stopping`**，準備進入 **`Stopped`** 資源已釋放的狀態。在 **`Stopped`** 狀態下，<ins>**個體將不再計費**</ins>。
 
 <Tabs>
 
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-- Go to the **VCS Instance Management** page > select the instance > click **STOP** at the top.
+- 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**停止**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a1dcd53620eb41a4c44f5f1d30e2c306.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_65a8bd007a7145bc66057988f0f0b8c8.png)
 
-- Or click <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> next to the instance > click **STOP**.
-- Or enter the **VCS Instance Details** page > click **STOP** at the top.
-
+- 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**停止**」。
+- 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**停止**」。
 
 </TabItem>
 
@@ -55,42 +49,42 @@ Please do not delete the instance during the **`Stopping`** state. Otherwise, th
 
 </Tabs>
 
-The operating restrictions after stopping are as follows.
 
-- <i class="fa fa-times" aria-hidden="true"></i> Connect and login
-- <i class="fa fa-times" aria-hidden="true"></i> Assign/detach public IP
-- <i class="fa fa-times" aria-hidden="true"></i> Attach/detach VDS Data Disk
-- <i class="fa fa-times" aria-hidden="true"></i> Create instance images
-- <i class="fa fa-times" aria-hidden="true"></i> Attach/detach Auto Scaling and Load Balancing Service
+停止後操作限制如下：
+
+- <i class="fa fa-times" aria-hidden="true"></i> 連線登入
+- <i class="fa fa-times" aria-hidden="true"></i> 建立/移除公用 IP
+- <i class="fa fa-times" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
+- <i class="fa fa-times" aria-hidden="true"></i> 建立個體映像檔
+- <i class="fa fa-times" aria-hidden="true"></i> 掛載/移除 Auto Scaling 與負載平衡服務
 
 :::info
-1. Resources that will be **released** after the instance is stopped: GPU, CPU, vCPU, memory, OS disk, Floating IP (New Floating IP will be acquired after the instance is started again).
-2. Resources that will be **kept** after the instance is stopped: Data Disk, Auto Scaling, Load Balancing, Static IP. The above resources will be automatically attached back to the instance after the instance is started again.
-3. Except for the data in memory, which will be erased, all data stored in the instance will be reserved.
+1. 停止後將**釋放**個體資源 — GPU、CPU、vCPU、記憶體、作業系統磁碟、浮動 IP (個體啟動後，將取得新的浮動 IP)。
+2. 停止後將**保留**個體資源 — 資料磁碟、Auto Scaling、負載平衡、固定 IP。以上資源在啟動個體後，皆會自動連結回個體。
+3. 除了記憶體內的資料將被清除，儲存於個體的所有資料皆會保留。
 :::
 
 :::caution
-Please do not delete a VCS instance when it is in the **`Stopping`** state, otherwise it will affect the system processing and cause and instance **`Error`**.
+虛擬運算個體停止中 (**`Stopping`**)，請勿刪除個體，否則將影響系統處理工作，導致個體錯誤 (**`Error`**)。
 :::
 
 <br/>
 
 
+## 啟動個體 (與個體開機)
 
-## Start instances (and boot)
-
-To resume and use a stopped instance, or to start an instance that has been shutdown, please click **Start**. The state of the instance will be **`Starting`** in the process of reallocating resources, and prepare for entering the **`Ready`** state again.
+若要回復並使用已停止的個體，或將已關機的個體開機使用，請點選「**啟動**」，個體狀態將呈現 **`Starting`**，正在重新分配資源中，並準備再次進入 **`Ready`** 狀態。
 
 <Tabs>
 
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-- Go to the **VCS Instance Management** page > select the instance > click **START** at the top.
+- 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**啟動**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d0090dad4cbc6cc5f441cb63277fefb8.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f6b6237bb912f005648dbf8acf37c09f.png)
 
-- Or click <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> next to the instance > click **START**.
-- Or enter the **VCS Instance Details** page > click **START** at the top.
+- 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**啟動**」。
+- 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**啟動**」。
 
 </TabItem>
 
@@ -103,27 +97,27 @@ To resume and use a stopped instance, or to start an instance that has been shut
 </Tabs>
 
 :::info
-Most stopped instances will be created on a new physical host when they are started again.
+停止再啟動之個體，多數將建立於新的實體主機上。
 :::
 
 <br/>
 
 
+## 個體重開機
 
-## Reboot instances
-
-To reboot (turn off and then turn on) an instance in the **`Ready`** state, please click **Reboot**. The state of the instance will be **`Rebooting`** in the process of rebooting, and prepare for entering the **`Ready`** state again.
+若要將 **`Ready`** 狀態的個體執行重開機 (關機並開機)，請點選「**重開機**」，個體狀態將呈現 **`Rebooting`**，正在重開機中，並準備再次進入 **`Ready`** 狀態。
 
 <Tabs>
 
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-- Go to the **VCS Instace Management** page > select the instance > click **REBOOT** at the top.
+- 進入「**虛擬運算個體管理**」頁 > 勾選個體 > 點選上方「**重開機**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2fd1b395f3326ae2835a31ec7709f954.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e9d62c218823db9373ba407a6968fe07.png)
 
-- Or click <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> next to the instance > click **REBOOT**.
-- Or enter the **VCS Instance Details** page > click **REBOOT** at the top.
+
+- 或點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**重開機**」。
+- 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**重開機**」。
 
 </TabItem>
 
@@ -136,75 +130,70 @@ To reboot (turn off and then turn on) an instance in the **`Ready`** state, plea
 </Tabs>
 
 :::info
-Unlike [<ins>stopping instances</ins>](#stop-instances), after rebooting the instances, except for erasing the memory data, **resources are not released back to the resource pool (including floating IP)**, and the stored data are retained and can still be used after rebooting.
+與[<ins>停止個體</ins>](#停止個體)不同，重開機後除了會清除記憶體資料，**資源皆不釋放回資源池 (含浮動 IP)**，且儲存資料皆保留，重新開機後仍可使用。
 :::
 
 <br/>
 
 
+## 個體關機
 
-## Shutdown instances
+執行關機後，個體將進入 **`Shutdown`** 的已關機狀態，在 **`Shutdown`** 關機狀態下，<ins>**個體將持續計費**</ins>。
 
-After performing a shutdown, the instance will be in the **`Shutdown`** state. In the **`Shutdown`** state, <ins>**the instance will continue to be billed**</ins>.
+**TWCC 入口網站、TWCC CLI 不支援關機功能，請您於個體中操作：**
 
-**TWCC portal and TWCC CLI do not support the shutdown function, please operate it in the instance:**
+- Linux 個體：可以於個體中執行`sudo shutdown`、`sudo poweroff -f` 將個體關機
+- Windows 個體：可使用`shutdown -s`、點選桌面左下關機鈕執行關機。
 
-- Linux instance: You can execute `sudo shutdown` or `sudo poweroff -f` in the instance to shut it down
-- Windows instance: You can use `shutdown -s`, or click the shutdown button at the bottom left of the desktop to shut it down.
+關機後操作限制如下：
 
-The operating restrictions after shutdown are as follows.
-
-- <i class="fa fa-times" aria-hidden="true"></i> Connect and login
-- <i class="fa fa-times" aria-hidden="true"></i> Assign/detach public IP
-- <i class="fa fa-check" aria-hidden="true"></i> Attach/detach VDS Data Disk
-- <i class="fa fa-check" aria-hidden="true"></i> Create instance images
-- <i class="fa fa-times" aria-hidden="true"></i> Attach/detach Auto Scaling and Load Balancing Service
+- <i class="fa fa-times" aria-hidden="true"></i> 連線登入
+- <i class="fa fa-times" aria-hidden="true"></i> 建立/移除公用 IP
+- <i class="fa fa-check" aria-hidden="true"></i> 連結/分離虛擬磁碟的資料磁碟
+- <i class="fa fa-check" aria-hidden="true"></i> 建立個體映像檔
+- <i class="fa fa-times" aria-hidden="true"></i> 掛載/分離 Auto Scaling 與負載平衡服務
 
 :::info
-Unlike [<ins>stopping instances</ins>](#stop-instances), after shutting down the instances, except for erasing the memory data, **resources are not released back to the resource pool**. The stored data are retained and can still be used after starting again.
+與[<ins>停止個體</ins>](#停止個體)不同，關機後除了會清除記憶體資料，**資源皆不釋放回資源池**，且儲存資料皆保留，開機後仍可使用。
 :::
 
 <br/>
 
 
-## Delete Instances
+## 刪除個體
 
-To permanantly delete an instance and no longer use it again, please delete the instance.
+若要將個體永久刪除，不再使用，請刪除個體。
 
-Other considerations for deletion:
-- The data in the operating system (boot) disk will also be permanently deleted. If you need to keep it, you can [create an instance image](https://man.twcc.vip/en/docs/vcs/user-guides/backup/creation).
-- The data disk will be automatically unmounted and kept.
+其他刪除的注意事項：
+- 作業系統（開機）磁碟內的資料亦將永久刪除，若需保留可[建立個體映像檔](../backup/create-images.md)。
+- 資料磁碟則會自動分離保留
 
 <Tabs>
 
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-- Go to the **VCS Instance Management** page > click <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> next to the instance > Click **DELETE**.
+- 進入「**虛擬運算個體管理**」頁 > 點選個體旁的「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 &nbsp; > 點選「**刪除**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6efa074941cc3858a671898566da0f05.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ff7d4f7ecaa5fcf2877cf7d8ad53fb2b.png)
 
-- Or go to the **VCS Instance Details** page > click **DELETE** at the top.
+- 或進入「**虛擬運算個體詳細資料**」頁 > 點選上方「**刪除**」。
 
 </TabItem>
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-
-**Command**
-
+**指令**
 
 ```bash
-twccli mk vcs -s    # Instance's ID
-twccli ls vcs       # View result
+twccli rm vcs -s   # 個體 ID
+twccli ls vcs      # 檢視結果
 ```
-
 
 <br/>
 
-**Example**
+**範例**
 
-
-- Delete the VCS instance with ID **`937651`**, and check if it is deleted.
+- 刪除 ID 為 **`937651`** 的虛擬運算個體，確認已刪除。
 
 ```
 twccli rm vcs -s 937651
@@ -219,8 +208,7 @@ twccli ls vcs
 
 <br/>
 
-
 :::info
-- A user can only create and delete virtual computing entities 10 times in a minute.
-- If [Delete Protection](https://man.twcc.vip/en/docs/vcs/user-guides/management-and-monitoring/viewInfo-editDesc-deletionProtection#enabledisable-deletion-protection) is enabled, you cannot delete the resource directly, please disable it first and then delete it again.
+- 同一用戶一分鐘內僅能執行各 10 次建立、刪除虛擬運算個體。
+- 若已開啟「[<ins>刪除保護機制</ins>](./view-edit-deletion-protection.md#開啟關閉-刪除保護機制)」，將無法直接刪除資源，請您先關閉後再執行刪除。
 :::

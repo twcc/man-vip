@@ -1,34 +1,33 @@
 ---
-sidebar_label: 'Getting Started'
 sidebar_position: 2
-sync_original_production: 'https://man.twcc.ai/@twccdocs/getstarted-ccs-create-connec-en'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/getstarted-ccs-create-connec-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/getstarted-ccs-create-connec-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/getstarted-ccs-create-connec-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-# 【Getting Started with TWCC】 Create and connect Interactive Containers
+# 【從零開始 TWCC】建立並連線開發型容器
 
-The "Getting Started with TWCC" series of tutorials will provide novice users with an easily understandable explanation of how to use TWCC. We organize related documents here so that you can easily refer to the information you need to take the first step in using TWCC computing resources! <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+【從零開始 TWCC】系列教學文件將以主題式方式為新手用戶深入淺出說明 TWCC 使用方式，將相關文件統整於此，讓您方便參考所需的資訊，順利邁開使用 TWCC 運算資源的第一步！<i class="fa fa-hand-peace-o" aria-hidden="true"></i>
 
 <br/>
 
-## Guide of the topic and steps
+## 主題與步驟說明
 
-**【Getting Started with TWCC】 Create and connect Interactive Containers**
+**【從零開始 TWCC】建立並連線開發型容器**
 
-In this article, you will learn how to sign up for an account, sign in to TWCC, create a interactive container, and use Jupyter Notebook to quickly connect to the container.
+在此篇文章中，您將學會如何從註冊帳號、登入 TWCC 使用者網站，並建立開發型容器、使用 Jupyter Notebook 快速連線進入容器。
+
 
 :::info
 
-**Interactive Containers? Jupyter Notebook?**
+**開發型容器？Jupyter Notebook？**
 
-- Interactive container is one of the TWCC services that uses container technology for operating system level virtualization for fast software delivery. Interactive container offers multiple AI framework options and can build high-performance NVIDIA V100 GPU environments. Please refer to [<ins>Service Overview</ins>](https://man.twcc.vip/en/docs/ccs/intro) for more information.
+- 開發型容器為 TWCC 服務之一，採用將作業系統層虛擬化的容器技術，可快速交付軟體。開發型容器提供多種 AI framework 選擇，並可建立高效能的 NVIDIA V100 GPU 環境，請參考[<ins>服務概觀</ins>](./overview.md)了解更多。
 
-
-- TWCC provides the development tool [<ins>Jupyter Notebook</ins>](https://jupyter.org/) as an interface for quickly interacting with container computing resources, and for writing and executing scripts. Operating containers via the web is friendly and easy to use!
+- TWCC 提供開發工具 [<ins>Jupyter Notebook</ins>](https://jupyter.org/)，可作為快速與容器運算資源互動的介面，可編寫並執行程式。透過網頁操作容器，友善又好上手！
 
 ::: 
 
@@ -36,23 +35,23 @@ In this article, you will learn how to sign up for an account, sign in to TWCC, 
 
 
 :::info
-TWCC services to be used in this article: Member Center, [<ins>Interactive Container</ins>](https://man.twcc.vip/en/docs/ccs/intro).
+本篇文章將使用到的 TWCC 服務：會員中心、[<ins>開發型容器</ins>](./overview.md)。
 :::
 
 <br/>
 
-## Step by step instructions
+## 操作步驟教學
 
-### Step 1. Prerequisites: accounts, projects and credits
+### Step 1. 準備工作：帳號、計畫(專案)、額度
 
 <details class="docspoiler">
 
 <summary><font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}> <b>&nbsp;Academic&nbsp;</b></font></summary> 
 
-1. [Sign up for an account](https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=#firstPage)
-2. Once finished, you can [apply for a new project](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fapply-project-and-credit-zh), or ask [Tenant Admin<i class="fa fa-question-circle" aria-hidden="true"></i>](https://man.twcc.vip/en/docs/role_permission/intro) to [add you to an available project](https://man.twcc.vip/en/docs/member/user-guides/project-management/project-member-management).
-3. If you are a Tenant Admin, please [purchase credits](https://man.twcc.vip/en/docs/member/user-guides/billing/apply_credits) for your project, TWCC resources can only be created and used when there are credits in the project.
-4. If you are a Tenant Admin, after the credit application is completed, you can split the project's parent wallet into multiple sub-wallets to allocate a fixed amount to your members. If there is no split, the project's parent wallet credit will be used directly. Please refer to [Project Wallet Management](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-manage-project-wallet-zh) for more information.
+1. [註冊帳號](https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=)
+2. 完成後，您可以[新申請計畫](../member/user-guides/billing/apply-credits.md)，或請 [租戶管理員<i class="fa fa-question-circle" aria-hidden="true"></i>](../member/concepts/overview.md) 將您[加入已存在之計畫](../member/user-guides/manage-projects/manage-project-members.md)。
+3. 若您為租戶管理員，請為您的計畫[購買計畫額度](../member/user-guides/billing/apply-credits.md)，計畫需有額度才能建立並使用 TWCC 資源。
+4. 若您為租戶管理員，額度申請完成後，可將計畫母錢包拆分成多個子錢包分配固定額度給成員使用，若無拆分則統一使用計畫母錢包扣抵額度。請參考 [計畫錢包管理](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-manage-project-wallet-zh) 了解更多。
 
 
 </details>
@@ -67,45 +66,45 @@ TWCC services to be used in this article: Member Center, [<ins>Interactive Conta
 
 <summary><font style={{'background-color':'#008ad8', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}> <b>&nbsp;Enterprise&nbsp;</b></font></summary>
 
-1. [Sign up for an account](https://tws.twcc.ai/)
-2. Once finished, you can
-    - Apply for a [Free Experience Program](https://member.twcc.ai/module_page.php?module=nchc_service#nchc_service/nchc_service.php?action=trial_prj_apply_step0), or
-    - Contact TWS Sales (sales@twsc.io) for an in-depth understanding of your needs and we will assist you in adding new projects and credits, or
-    - Ask [Tenant Admin<i class="fa fa-question-circle" aria-hidden="true"></i>](https://man.twcc.vip/en/docs/role_permission/intro) to [add you to an available project](https://man.twcc.vip/en/docs/member/user-guides/project-management/project-member-management).
+1. [註冊帳號](https://tws.twcc.ai/)
+2. 完成後，您可以
+    - 申請[免費體驗專案](https://member.twcc.ai/module_page.php?module=nchc_service#nchc_service/nchc_service.php?action=trial_prj_apply_step0)，或
+    - 聯絡業務 (sales@twsc.io) 我們將深入了解您的使用需求，並協助您新增使用專案與額度，或
+    - 請 [租戶管理員<i class="fa fa-question-circle" aria-hidden="true"></i>](../member/concepts/overview.md) 將您[加入已存在之專案](../member/user-guides/manage-projects/manage-project-members.md)。
 
 
 </details>
 
 <br/>
 
-### Step 2. Sign in to TWCC
-
-1. Once the preparation is done, you can easily [sign in to TWCC](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-signin-twcc-zh) by entering your username and password!
+### Step 2. 登入 TWCC 使用者網站
+    
+1. 準備工作完成後，您就可以輸入帳號、密碼輕鬆登入[TWCC](https://www.twcc.ai/)！
 
 <br/>
 
 
-### Step 3. Create and connect to Interactive Containers
+### Step 3. 建立並連線開發型容器
     
-1. Follow the step-by-step instructions in the tutorial [Create an Interactive Container](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/create-an-interactive-container) and you will learn how to build containers in TWCC Portal.
-2. After creation, please follow the [Connect to your container - Jupyter Notebook](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/connect-to-your-container#jupyter-notebook) to quickly connect to your container.
+1. 請按照 [建立開發型容器](./user-guides/create-connect/create-container.md) 教學步驟一步步完成，您將了解如何在 TWCC 使用者網站中建立容器。
+2. 建立完成後，請按照 [連線容器 - Jupyter Notebook](./user-guides/create-connect/connect-container.md#jupyter-notebook) 步驟，即可快速連線進入您的容器。
 
 <br/>
 
 
 :::info
 
-- Try it out! Use the default settings on the website to build your own containers in a few clicks!
-- There are multiple fully optimized AI frameworks from NGC for you to choose from, see [<ins>TWCC Container Image overview</ins>](https://man.twcc.vip/en/docs/ccs_framwork_image/intro) for more information.
-- [<ins>Delete the container</ins>](https://man.twcc.vip/en/docs/ccs/user-guides/management-and-monitoring/manage-your-container#delete-the-container) to stop further billing.
-- Please refer to the price list for rate information: <a href="https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS"><font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}><b>&nbsp;Academic&nbsp;</b></font></a>, <a href="https://man.twcc.ai/@twsdocs/pricing-zh#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS"><font style={{'background-color':'#008ad8', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}><b>&nbsp;Enterprise&nbsp;</b></font></a>
-- You may view your credits and resource usage in the Member Center. <a href="https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-view-billing-resource-usage-zh"><font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}><b>&nbsp;Academic&nbsp;</b></font></a>
+- 動手試試看！使用網站預設設定，點擊幾步就能建立您專屬的容器！
+- 有多樣來自 NGC 的完整優化 AI framework 提供您選擇，請參考 [<ins>TWCC 容器映像檔</ins>](../ccs-interactive-container-concepts-images/overview) 了解更多。
+- [<ins>刪除容器</ins>](./user-guides/manage-monitor/manage-container#刪除容器)，可停止繼續計費。
+- 費率資訊請參考價目表：<a href="https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS"><font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}><b>&nbsp;Academic&nbsp;</b></font></a>、<a href="/docs/pricing#容器運算服務-container-compute-service-ccs"><font style={{'background-color':'#008ad8', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}><b>&nbsp;Enterprise&nbsp;</b></font></a>
+- 您可於會員中心檢視額度與資源用量 <a href="https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-view-billing-resource-usage-zh"><font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}><b>&nbsp;Academic&nbsp;</b></font></a>
 
 :::
 
 <br/>
 
 
-## Related FAQ 
-- [Membership, Project and Billing](https://man.twcc.vip/en/docs/faq/product_portal/member-project-billing)
-- [Container Compute Service (CCS)](https://man.twcc.vip/en/docs/faq/compute/ccs)
+## 相關 FAQ 
+- [會員、計畫與帳務](/docs/faq/member-product-portal/member-project-billing.md)
+- [容器運算服務 (CCS)](/docs/faq/compute/ccs.md)

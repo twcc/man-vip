@@ -1,37 +1,31 @@
 ---
 sidebar_label: '使用者角色與權限'
-sidebar_position: 3
-sync_original_production: 'https://man.twcc.ai/@twsdocs/role-overview-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-overview-en' 
+sidebar_position: 1
+sync_original_production: 'https://man.twcc.ai/@twsdocs/role-overview-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-overview-zh' 
 ---
-:::caution
-<i class="fa fa-bullhorn" aria-hidden="true"></i> If your <ins> <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i><a href = "https://man.twcc.ai/@TWSC/doc-mber-pjct-blng-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fhowto-service-access-service-zh">Service member center</a></ins> does not correspond to the follwing screeshots or process, please <i class="fa fa-sign-out" aria-hidden="true"></i> <ins><a href = "https://man.twcc.ai/@twsdocs/role-main-en">click this link</a></ins> for reference.
-:::
-
-# Role overview
-
-[TWS member center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://member.twcc.ai/) is an account management platform; [<ins>TWCC</ins>](https://www.twcc.ai/) is a cloud computing platform. Two platforms connected using Single Sign On (SSO), users can log in to both platforms with one account.
-
-- User roles of TWS member service system are divided into three types：**Creator**, **Administrator**, **General member** 
-- User roles of TWCC are divided into two types：**Tenant Admin**, **Tenant User**
-  &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_87ee3726e2e3c9cb43c72c305d242220.png)
 
 
+# 角色總覽
 
-The user roles of the two platforms can correspond to each other, and the corresponding relationship is as follows. Both Creator and Administrator of the TWS member service system are Tenant Admin on TWCC:
+[<ins>TWS 會員中心</ins>](https://member.twcc.ai/) 為會員帳戶管理平台，[<ins>TWCC</ins>](https://www.twcc.ai/) 則為提供運算資源服務平台，兩平台使用單一登入方式 (Single Sign On, SSO) 串接，用戶使用一個帳號即可登入兩種平台。
 
-|Roles|   [<img style={{width:100+'px', height:40+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_70d96777dde1a5c9760751788d5e5d90.png' />](https://iservice.nchc.org.tw/nchc_service/index.php) | [<img style={{width:100+'px', height:20+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_37a176a14aad4b6919b50a13c355774d.jpg' />](https://www.twcc.ai/)|
+- TWS 會員服務系統使用者區分為三種角色：**專案建立者**、**專案管理者**、**專案成員** 
+- TWCC 使用者區分為兩種角色：**租戶管理員**、**租戶使用者**
+  &emsp; &emsp; &emsp;&emsp; &emsp; &emsp; ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4fb239cb4bc8149ee136cc83eb839e12.png)
+
+兩平台的使用者角色可互相對應，對應關係如下，其中 TWS會員服務系統的專案建立者、專案管理員兩種角色，在 TWCC 皆屬於租戶管理員：
+
+|角色|  [<img style={{width:100+'px', height:40+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_70d96777dde1a5c9760751788d5e5d90.png' />](https://iservice.nchc.org.tw/nchc_service/index.php) | [<img style={{width:100+'px', height:20+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_37a176a14aad4b6919b50a13c355774d.jpg' />](https://www.twcc.ai/)|
 | -------- | -------- |-------- |
-|  1  | Creator    |**Tenant Admin**|
-|  2  |  Administrator   |**Tenant Admin**|
-|  3  |   General member   |**Tenant User** |
+|  1  | 專案建立者    |**租戶管理員**|
+|  2  |  專案管理員   |**租戶管理員**|
+|  3  |   專案成員   |**租戶使用者** |
 
-<br/>
-
-<i class="fa fa-arrow-circle-left" aria-hidden="true"></i> For more role permissions of services on TWS member service system and TWCC, please check out the documents on the left side.
+<i class="fa fa-arrow-circle-left" aria-hidden="true"></i> TWS 會員服務系統、TWCC 各項服務的角色權限功能，請參考左側其他說明。
 
 :::info
-**Contact Us：**
-- Business Contacts | <ins><a href = "mailto: sales@twsc.io">sales@twsc.io</a></ins>
-- Customer Service and Support| <ins><a href = "mailto: sales@twsc.io">service@twsc.io</a></ins>
+**聯絡我們：**
+- 業務聯絡 | <ins><a href = "mailto: sales@twsc.io">sales@twsc.io</a></ins>
+- 客戶服務及支援| <ins><a href = "mailto: sales@twsc.io">service@twsc.io</a></ins>
 :::

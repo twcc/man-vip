@@ -1,23 +1,24 @@
 ---
 sidebar_position: 9
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-hdf5-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-hdf5-en' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-hdf5-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-hdf5-zh' 
 ---
 
 
 # HDF5
 
-- Package official website
+
+- 套件官網
   - [HDF5](https://portal.hdfgroup.org)
   - [HDF5 1.10](https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10)
-- Release note
+- release note
   - [HDF5 1.10.7 release notes](https://www.hdfgroup.org/2020/09/release-of-hdf5-1-10-7-newsletter-175)
-- Package source: Official Tar file compiled by the system administrator
+- 套件來源：官網下載 tar 檔，系統管理員自行編譯
 
 <br/>
 
 
-## HDF5 module with Open MPI 4.1.1 matrix
+## HDF5 module with Open MPI 4.1.1 matrix 
 
 | CUDA | Open MPI | module name | usage                                   |
 | ---- | -------- | ----------- | --------------------------------------- |
@@ -31,13 +32,13 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-modul
 | 9.2  | 4.1.1    | hdf5/1.10.7 | ml cuda/9.2 openmpi4/4.1.1  hdf5/1.10.7 |
 | 9.0  | N/A      | N/A         | N/A                                     |
 
-- HDF5 1.10.7 Compile-dependent environment
+- HDF5 1.10.7 編譯相依的環境
 
 | SZIP  | Open MPI | GCC   | CentOS |
 | ----- | -------- | ----- | ------ |
 | 2.1.1 | 4.1.1    | 4.8.5 | 7.8    |
 
-- HDF5 1.10.7  Compilation parameters
+- HDF5 1.10.7  編譯使用的參數
 
 ```bash
 CC=mpicc CXX=mpic++ \
@@ -55,6 +56,6 @@ F9X=mpif90 FC=mpif90 \
 --with-szlib
 ```
 
-- Reference materials for compilation
+- 編譯參考資料
   - [archlinux community pkg](https://github.com/archlinux/svntogit-community/blob/packages/hdf5-openmpi/trunk/PKGBUILD)
   - [spack](https://github.com/spack/spack/blob/develop/var/spack/repos/builtin/packages/hdf5/package.py) 

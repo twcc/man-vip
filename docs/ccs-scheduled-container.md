@@ -1,104 +1,105 @@
 ---
+title: 任務型容器
 GA: UA-155999456-1
-sync_original_production: 'https://man.twcc.ai/@twccdocs/doc-ccs-scheduled-main-en'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-ccs-scheduled-main-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/doc-ccs-scheduled-main-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-ccs-scheduled-main-zh'
 ---
 
 
-# Scheduled Container
+# 任務型容器
 
-Scheduled Container allows you to specify the start time of calculations on request and schedule the resource usage for batch tasks to improve productivity. Resources are recycled as soon as they are used, effectively saving development costs.
+任務型容器服務可依照需求，指定運算的開始執行時間，規劃批次任務使用的資源量，提升工作效率。使用完即回收運算資源，有效節省開發成本。
 
-## Create Scheduled Container
+## 建立任務型容器
 
-* Click **Scheduled Containers** from the list of services, and then click **CREATE** on the **Scheduled Containers** screen.
+* 由服務列表點選「任務型容器」，在「任務型容器管理」頁面，點擊「＋建立」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_aef40da5de183bb3542ebdb3720cb661.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7f595947850ed201ee76b916360e797a.png)
 
 
 :::tip
-You can click on the asterisk <i class="fa fa-star-o" aria-hidden="true"></i> on the left side of **All Services** to pin your favorite services to **My Favorite Services** to speed up the process.
+您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_24f5077423013ccc325f1a4ccde9fcc6.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_df526f70a917c5498d551513a1590b7d.png)
 
 
-* Fill in the basic information of the container, select the image, basic configuration, and enter the command; the command will be executed automatically when the task-based container starts, and then click **NEXT: STROAGE>** to enter the STROAGE page.
+* 填寫容器基本資訊、選擇映像檔、基本設定及輸入執行程式的指令；當任務型容器啟動後會自動執行該指令的內容，接著點擊「下一步：儲存資訊>」進入儲存資訊頁面。
 
 :::info
-:bulb: Tips:Please use [**HPC Job**](https://www.twcc.ai/doc?page=hfs) to upload the content of the program you want to run.
+:bulb: 提示：請先使用 [「HFS 高速檔案系統」](hfs/overview.md)上傳欲執行運算的程式內容。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2a06e1c9e7661e89d4ec3ebd0f732c0f.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f06710efd7d9ee81c80149fc11b663bb.png)
 
 
 
-* After the container is created, the system automatically mounts the Hyper File System to the container for better performance when users run artificial intelligence computing, or use the TWCC Cloud Object Storage service.
+* 容器建立後系統會自動掛載 HFS 類型之高速儲存系統至容器，以利使用者在運行人工智慧運算時擁有更好的性能，亦可使用 TWCC 雲端物件儲存服務。
 
-* Click **NEXT: SCHEDULE** to set the schedule.
+* 點擊「下一步：排程」，設定任務執行排程。
 
 :::info 
-:book: Refer to
-* [Cloud Object Storage](https://www.twcc.ai/doc?page=object)
-* [HFS job](https://www.twcc.ai/doc?page=hfs)
+:book: 參見
+* [雲端物件儲存服務](cos/overview.md)
+* [HFS 儲存服務](hfs/overview.md)
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dbefe7f8061967cb70f90ea6556d91f7.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1b2b5540a2ac2d584332e9ad1b96cf74.png)
 
 
-* The schedule can choose to execute the job immediately after startup or at a specific time after startup, and then click **NEXT : REVIEW & CREATE>**.
+* 排程設定可選擇手動啟動任務或指定任務時間，接著點擊「下一步：檢閱+建立>」。
 :::info
-:bulb: Tips:Scheduled for a specified time can be run as early as the next full time at the set time, once a scheduled container is created, it needs to be started first and will only be executed when the specified time comes.
+:bulb: 提示：指定時間的任務最快可從設定時的下一個整點開始執行，當任務型容器建立後，需先啟動該容器，到了指定的時間才會執行。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d27c7fbead421f6bc61b526d033bd77e.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_319cb64dd16ad5227988135ad4b574f7.png)
 
 
-Then, review the specifications and price of the entire container and click "Create" to finish.
+最後，檢視整個容器的規格和價格，確定後點選「建立」即完成
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_92a3ccac69a3464f578bd5d6e39f502d.png)
-
-
-
-## Scheduled Container Management
-* Once a container has been created, it will appear in the list of scheduled container management containers. Make sure to **START** the container and it will perform the operation immediately or at the specified time when the status changes from **Inactive** to **Active**.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_81e4d0d048b3288794f76dd80e3d9863.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5297c91803fa85a421c7fa7d3e6ac9eb.png)
 
 
-* Click on the container list to view container configuration information or monitor container resource usage.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_72d1955c2961577b573b3e1e23a7797a.png)
+## 任務型容器管理
+* 容器建立後，會出現任務型容器管理的容器列表中，請務必「啟動」容器，待狀態從 Inactive 變為 Ready 時，容器將立即執行運算，或在指定時間執行運算。
 
-
-### CONFIGURATIONS
-
-* Enter the Scheduled Container Details **CONFIGURATIONS** to view basics, storage and connection information, or perform functions such as **start**, **stop**, **delete**, and **refresh**.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_04512a3a335af3fafb7d34a17d11e05b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b3d31b1f4dc578713d6902ba76ca8425.png)
 
 
-### JOBS
+* 點選容器列表，可查閱容器配置資訊或監控容器資源使用狀況。
 
-* Enter the **JOBS** to view the scheduled execution status, including the Job Started, Job Ended, the State, and the log of the container operation.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7ce53d6402345e58eb829e66f8f623ba.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1707082b19e4a47755d9693e32ba9ce9.png)
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2d29c01333ad958dc30c533964e3fd56.png)
+### 配置頁面
+
+* 進入任務型容器詳細資料「配置」頁面，可以檢視容器的基本資訊、儲存及連線資訊，或執行「啟動」、「停止」、「刪除」和「重新整理」等功能。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_06459c429abe3cea660dbd0d7a931bdb.png)
+
+
+### 任務列表頁面
+
+* 進入「任務列表」頁面，可以檢視任務的執行狀況，包含運算開始、結束時間、任務狀態，並能查看容器運算的 log
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_930e313952a21c943d655cc296e0e159.png)
+
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f64b3640255755955947cdfba9fa7f5b.png)
 
 :::caution
-- The **Scheduled Log** feature does not ensure that all your logs are saved and available at the end of a container run. It is recommended that you dump your logs to [TWCC HFS](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh) or upload them to [TWCC COS](https://man.twcc.ai/@twccdocs/doc-cos-main-zh) to ensure their availability.
-- If you would like TWCC maintenance staff to assist you in obtaining complete records, please write to Authorization Processing (isupport@twcc.io) and do not store sensitive data.
+- 「任務 log」功能無法確保您的所有紀錄在容器結束運行後，仍可保存及取得，建議您將 log 轉存至 [TWCC HFS](hfs/overview.md) 或 上傳到 [TWCC COS](cos/overview.md) 中，以確保紀錄可用性。
+- 若希望由 TWCC 維運人員協助您取得完整紀錄，請您來信授權處理 (isupport@twcc.io)，並請勿存放機敏資料。
 :::
 
 
-## Monitoring Scheduled Container
-* Click **Monitoring** on the left to view the monitoring information service provided by the system for Tenant Admin, including the cumulative usage of the plan, the cumulative usage of specific users (a function of the tenant manager), the number of GPUs used, and the time of use.
+## 任務型容器監控
+* 點選左側「任務型容器監控」，可查看本系統為任務容器提供監控資訊服務，包括計畫的總累計使用量、特定使用者的累計使用量 (租戶管理者之功能)、GPU 的使用數量和使用時間等。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f8f18097fe80e28198b6e33c85a847ef.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0589df1ee84336ba157b29c7a4c068e4.png)
 
 
 :::info
-:bulb: Tip: Tenant User can only see their own resource usage information. Tenant Admin can see the resource usage of all users in the project so that they can control the resource usage of the whole project.
+:bulb: 提示：計畫使用者僅能看到自己資源使用資訊，計畫管理者可以看到計畫內所有使用者資源使用情形，以便控管整個專案的資源使用額度。
 :::

@@ -1,32 +1,30 @@
 ---
 sidebar_position: 1
-sync_original_production: 'https://man.twcc.ai/@twccdocs/concept-cfs-hot-and-cold-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/concept-cfs-hot-and-cold-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/concept-cfs-hot-and-cold-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/concept-cfs-hot-and-cold-zh'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Description of hot and cold storage
+# 熱、冷儲存區說明
 
-Cloud File Service (CFS) distinguish file access frequency into **Hot storage** and **Cold storage**. 
-Please refer to the feature description below to select your storage.
+雲端檔案服務以檔案存取頻率區分 **熱儲存區**、**冷儲存區**，您可以參考以下儲存區的特色說明，選擇是否將您的熱儲存區資料搬移至冷儲存區。
 
+## 儲存區簡介
 
-## Introduction to Storage
-
-| Storage | Feature |Pricing |Suggested Usage |
+| 儲存區 | <div style={{width:240+'pt'}} align='left'>特色</div> |價格 |建議用途 |
 | -------- | -------- | -------- | -------- |
-| Hot storage     | Access to files directly and edit  | Higher unit price  | High frequency access file     |
-| Cold storage     | Files should copy from Cold Storage to Cold Data Download area, and then download to edit the file  | Lower unit price  | Low frequency access file or archive file     |
+| 熱儲存區     | 檔案可直接快速取用與編輯  | 單價較高  | 儲存較常存取的檔案     |
+| 冷儲存區     | 檔案需先由冷儲存區複製資料至冷資料下載區<br/>才可取用與編輯  | 單價較低  | 儲存不常存取、<br/>可封存的檔案     |
 
 
 :::info
-- **File Storage Management** and **Access Interface Management** on TWCC are only eligible to **Hot Storage** data. Data in **Cold Storage** only provided with Cold Data download feature and no other file management service.
-- Files need to be uploaded to **Hot Storage** first, and then <ins>[transfer file](#File-Transfer)</ins> to cold storage.
+- TWCC 使用者介面上「**檔案儲存管理**」、「**存取介面管理**」的功能，皆為對 **熱儲存區** 資料的管理功能。**冷儲存區** 之資料僅提供搬移至冷資料下載的功能，不提供其他檔案管理服務。
+- 需先將檔案上傳至熱儲存區，才可將 <ins>[檔案搬移](#檔案搬移)</ins> 至冷儲存區。
 :::
 
 
-## File Transfer
+## 檔案搬移
 
-Users may [transfer file mannually](https://man.twcc.ai/@twccdocs/guide-cfs-move-retrieve-data-en) or [setup a life cycle rules](https://man.twcc.ai/@twccdocs/guide-cfs-lifecycle-mngmnt-en) to move file to Cold storage automatically for long-term storage and also migrate file between storages at any time.
+您可以透過[手動搬移](../user-guides/move-files/move-retrieve-files.md)，或設定[生命週期](../user-guides/move-files/manage-file-lifecycle.md)自動將檔案遷移至冷儲存區進行資料長期儲存，並可隨時在不同儲存間進行檔案遷移。

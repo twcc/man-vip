@@ -1,49 +1,47 @@
 ---
 sidebar_position: 3
-sync_original_production: 'https://man.twcc.ai/@twccdocs/concept-ccs-lifecycle-en'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/concept-ccs-lifecycle-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/concept-ccs-lifecycle-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/concept-ccs-lifecycle-zh'
 ---
 
-# Interactive container life cycle
+# 容器生命週期
 
-You perform actions on interactive containers- from creation to deletion, the state of the containers is closely related to resources, data, and billing. This article will explain in detail all the relationships between life cycle states, meanings, and billing of the container from creation to deletion.
+使用者對開發型容器的執行動作—建立、刪除，所產生的容器生命狀態，與資源、資料、計費息息相關，本文將詳細說明容器從建立到刪除之間，所有的生命週期狀態、意義與計費之間的關係。
 
-The transition between the action and the container state:
+執行動作與容器狀態之間的轉換：
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b6d8c43ef53810887b5d5fc25b6f3baa.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3ad549e6ae909c6ce1fb9ab949cd51ee.png)
 
+- 個體狀態與描述、用量計費的關係如下表所示：
 
-- The relationship between container state, state description, and usage billing is shown in the following table:
-
-| Container state | State description |Container usage billing | 
+| 容器狀態 | 狀態描述 |容器用量計費 | 
 | -------- | -------- | -------- |
-| `Initializing`     | The container is preparing to enter `Ready` state.<br/> Create the container: the system is allocating resources and initializing the container<br/>| Not billed     | 
-| `Ready`     | The initialization has been completed, and the container can be connected and used normally|Billed     | 
-| `Deleting`     | The container is being deleted and will be permanently deleted.|Not billed         | 
+| `Initializing`     |準備進入 `Ready` 狀態。<div></div> 建立容器：系統正在分配資源並初始化容器中<div></div>| 不計費     | 
+| `Ready`     | 初始化已完成，個體已可正常連線使用|計費     | 
+| `Deleting`     | 刪除容器中，容器將被永久刪除|不計費    | 
 
 
-## Create a container
+## 建立容器
 
-When you create a container, the system allocates resources and initializes the container, and the container enters in **`Initializing`** state. The container still cannot be used but will enter in **`Ready`** state  soon. Once 
-the container enters in the **`Ready`** state, you can perform the following actions:
+建立容器後，系統將分配資源並初始化執行容器，容器狀態將呈現 **`Initializing`**，此時尚未能連線使用，但不久後即進入 **`Ready`** 狀態。在 **`Ready`** 狀態下，可操作內容如下：
 
-- <i class="fa fa-check" aria-hidden="true"></i> Connect to the container
-- <i class="fa fa-check" aria-hidden="true"></i> Create container duplicates
-- <i class="fa fa-check" aria-hidden="true"></i> Associate, dissociate service ports... and other operations.
+- <i class="fa fa-check" aria-hidden="true"></i> 連線登入
+- <i class="fa fa-check" aria-hidden="true"></i> 建立容器複本
+- <i class="fa fa-check" aria-hidden="true"></i> 關聯、分離服務埠...等其他一般操作
 
 :::info
-Please refer to the creation steps [<ins>Create container</ins>](/@twccdocs/guide-ccs-create-en).
+建立步驟請參考[<ins>建立容器</ins>](../user-guides/create-connect/create-container.md)
 :::
 
 
-## Delete a container
+## 刪除容器
 
-If you want to delete a container permanently and no longer use it, after clicking delete, the container enters in the **`Deleting`** state, and <ins>**it is not billed anymore**</ins>. After the deletion is complete, the container will disappear from the list.
+若要將容器永久刪除，不再使用，在點選刪除後，個體狀態將呈現 **`Deleting`** ，<ins>**即不再計費**</ins>，刪除完成後，容器將從列表上消失。
 
-Notice of deletion:
-- The data in the container system directory will be permanently deleted. If you need to keep it, you can create [Container duplicate](https://man.twcc.ai/@twccdocs/guide-ccs-duplicate-en).
-- /home, /work data (Hyper File System storage space) will be retained and will not be removed as the container is deleted.
+其他刪除的注意事項：
+- 容器系統目錄下的資料將永久刪除，若需保留可建立[容器複本](https://man.twcc.ai/@twccdocs/guide-ccs-duplicate-zh)。
+- /home、/work 資料 (高速檔案系統儲存空間) 將會留存，不會隨容器刪除而清除。
 
 :::info
-For deletion steps, see [<ins>Create a container</ins>](/@twccdocs/guide-ccs-manage-en) for more information.
+個體刪除步驟請參考[<ins>刪除容器</ins>](../user-guides/manage-monitor/manage-container.md#刪除容器)
 :::

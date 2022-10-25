@@ -2,16 +2,16 @@
 sidebar_label: 'Merlin Inference'
 sidebar_position: 19
 title: 'Merlin Inference'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-merlin-inference-en'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-merlin-inference-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-merlin-inference-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-merlin-inference-zh'
 ---
 
 
 # <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3022d6e6790c870e499eac8e2c77d53c.png' /> Merlin Inference
 
-TWCC provides pay-as-you-go working environment of NGC Merlin Inference container. It is a framework for accelerating the entire recommender systems pipeline on the GPU: from data ingestion and training to deployment. Merlin empowers data scientists, machine learning engineers, and researchers to build high-performing recommenders at scale. Merlin includes tools that democratize building deep learning recommenders by addressing common ETL, training, and inference challenges.
+TWCC提供 NGC Merlin Inference 立即可用的工作環境。NVIDIA Merlin 是一個用於在 GPU 上加速整個推薦系統流程的框架：從資料擷取、訓練到部署，使數據科學家、機器學習工程師和研究人員能夠大規模構建高性能推薦系統。透過其包含的工具，可解決常見的 ETL、訓練和推理問題，降低構建深度學習推薦系統的技術門檻。
 
-## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">Information of Image file version</span> 
+## <span class="ccsimglist">映像檔版本資訊</span> <i class="fa fa-sticky-note" aria-hidden="true"></i>
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5359dea294a635a9a9985b1d9d843ee1.png)
 
@@ -20,11 +20,9 @@ TWCC provides pay-as-you-go working environment of NGC Merlin Inference containe
 
 <details class="docspoiler">
 
-<summary><b>Detailed package version information</b></summary>
+<summary><b>點我參考詳細版本套件資訊</b></summary>
 
 - [NGC Merlin Inference](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/merlin/containers/merlin-inference) 
 
 </details>
-
-
 

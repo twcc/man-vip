@@ -1,81 +1,93 @@
 ---
 sidebar_position: 5
-title: 'Console - Debug and maintenance tool'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-debug-tool-console-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-debug-tool-console-en' 
+title: 'Console-除錯與維護工具'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-debug-tool-console-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-debug-tool-console-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Quick Debug and Maintenance Tool: TWCC VCS Console
+# 快速除錯與維護工具：TWCC VCS Console
 
-TWCC Virtual Compute Service (VCS) provides a Console that allows you to quickly connect to your VCS instance through your browser for debugging, setting and maintenance without having to install Client software locally and set up a public IP in advance. The connection is encrypted with TLS 1.2 to ensure a secure connection and protect your sensitive information.
+TWCC 虛擬運算服務 (VCS) 提供 Console，讓您無需在本地端安裝 Client 軟體、預先建立公用 IP，即可快速透過瀏覽器連線您的虛擬運算個體，進行除錯、設定與維護工作。連線過程皆以 TLS 1.2 加密，確保連線安全，保護您的機敏資訊。
 
 <br/>
 
-## Open Console and connect to VCS instance
+## 開啟 Console 連線虛擬運算個體
 
-### Step 1. Enter Details page
+### Step 1. 進入詳細資料頁
 
-After creating VCS instance, click the instance and enter "**VCS Instance Details**" page.
+建立虛擬運算個體後，點選個體並進入「**虛擬運算個體詳細資料**」頁。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8b971dc1af91154b8a8492411b5fe6d7.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_37df4073ab3ab26c8eaadc791e4dc73a.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db9d8f9e2f69436f3cfc1d1de1b38f4f.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_536acdd31b059748dd7befc1f6f62dac.png)
 
 :::info
-For the first time using Console, please use the key to [**connect to instance via SSH**](https://man.twcc.vip/en/docs/vcs/user-guides/connection/linux/from-windows) and use the following command to set the login password so that you can use the account password to connect to the instance via the Console later.
+首次使用 Console，請您先使用金鑰透過 **[<ins>SSH 連線個體</ins>](../connecting/linux/from-windows.md)** 並使用以下指令設定登入密碼，後續才可使用帳密，透過 Console 連線進入個體。
+
 
 ```bash
-sudo passwd ubuntu             # Use Ubuntu as an example to set the login password
+sudo passwd ubuntu  # 以 Ububtu 為範例設定登入密碼
 ```
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a8dc2923f95519849ab536fc51f9a3e7.png)
 
-After the account is created, if there is no need for connecting to the Internet, you can detach the public IP to reduce the cost of resources.
+帳密建立完後，若無對外連線需求可移除公用 IP，降低資源成本。
 :::
 
 :::caution
-To protect the security of your virtual computing, please set the login password for Ubuntu and CentOS to consist of at least 12 characters with a mix of upper and lower case letters, numbers, and special characters.
+為保護您的虛擬運算個體安全，Ubuntu、CentOS 的登入密碼請設定至少包含 12 個字元，並混合英文大小寫字母、數字及特殊符號。
 :::
 
 <br/>
 
-## Step 2. Open Console
 
-- Scroll down the page to the "**Networks and Connection**" section and click on "**Connect**" to open the Console.
+### Step 2. 開啟 Console
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ab961195932f688d806b1f86c871ebaa.png)
+- 頁面下拉至「**網路與連線**」區塊，點選「**連線**」，即可開啟 Console。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f6eb6c85931b67d7df3cc9b4f33cd494.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fe847f6778f1f07596398fb7a49539fc.png)
+
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_295728cc363de313ba4fdd476a2d03d8.png)
+
+
+
 
 :::caution
-- Please make sure to log out of the operating system after the work session or before closing the Console to ensure the security of the instance.
-- To avoid security concerns, the connection validity is set to 10 minutes (Console already opened is not subject to this limit), and after the connection expires, please click on "**Update Link**" to get a new connection.
+- 請務必於工作階段結束後、關閉 Console 之前，登出作業系統，以確保個體安全。
+- 為避免資安疑慮，連線有效性設定為 10 分鐘 (已開啟之 Console 不受此限)，連線過期後請點選「**更新連結**」，取得新連線。
 :::
 
 <br/>
 
-## Step 3. Enter the connection information and complete the connection
 
-- **Linux instance**: Enter your account (ubuntu or centos) and password to connect to the instance.
+### Step 3. 輸入連線資訊，完成連線
 
+- **Linux 個體**：輸入帳號 (`ubuntu` 或 `centos`)、密碼，即可連線進入個體。
+ 
 :::info
-If the console window does not accept keyboard input, click on the title bar of the window first, then click on the command bar to type.<br/>
+若 Console 視窗無法輸入內容，請先點擊視窗標題列，再點擊指令列，即可輸入。
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ad36eed070250abf714112818f6bcea0.gif)
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8522546062af0abbc44e3a9aa49caf90.png)
 
-- **Windows instance**: Enter the login password to connect to the instance.
+
+
+- **Windows 個體**：輸入登入密碼，即可連線進入個體。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d89ac98795067d2f8228480c0f689a21.png)
 
-By completing Step 1 ~ Step 3, you will be able to connect to your VCS instance in a short period of time, solve problems quickly, and speed up the workflow of system maintenance!
+
+
+完成 Step 1 ~ Step 3，即可讓您在短時間內連線進入進虛擬運算個體，快速進行問題解決，加速系統維運的工作流程！
 
 <br/>
 
+
 :::caution
-Once again, please make sure to log out of the operating system after the work session or before closing the Console to ensure the security of the instance.
+再次提醒您請務必於工作階段結束後、關閉 Console 之前，登出作業系統，以確保個體安全。
 :::

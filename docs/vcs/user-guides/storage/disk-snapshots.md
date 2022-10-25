@@ -1,43 +1,39 @@
 ---
 sidebar_position: 5
-title: 'Disk snapshots'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-disk-snapshot-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-disk-snapshot-en' 
+title: '備份資料磁碟'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vds-disk-snapshot-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vds-disk-snapshot-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Disk snapshots
+# 資料磁碟快照
 
-To backup data in your data disks, please refer to the following steps to create and manage data disk snapshots.<br/>
-(※ *The system disk currently does not support the snapshot function. For backing up system disks, please refer to "Virtual Compute Service (VCS) Instance image"* )
-
+若需備份資料磁碟的資料，請參考以下建立、管理資料磁碟快照之步驟。
+(※ *系統磁碟目前不支援快照功能，若需備份請參考「虛擬運算個體映像檔」*)
 
 :::info
-For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-en#%E8%99%9B%E6%93%AC%E7%A3%81%E7%A2%9F%E6%9C%8D%E5%8B%99).
+租戶管理員、租戶使用者對於虛擬磁碟使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/storage.md#虛擬磁碟服務)。
 :::
 
-
 <br/>
 
+## 建立磁碟快照
 
-## Create a snapshot
-
-Create a snapshot of your data disk to back up your data.
+為您的資料磁碟建立快照，備份資料。
 
 <Tabs>
 
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-* On **Data Disk Details** page, click **SNAPSHOT**. When **Create Snapshot** window pops up, enter the name and description for the snapshot, then click **OK** to create the snapshot.
+* 在「**資料磁碟詳細資料**」頁面，點擊「**快照**」，出現「**建立快照**」視窗，輸入快照的名稱及描述後，按下「**確定**」，即可建立成功。
 
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8437022d472a83e69f231125184ab20f.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6e6c2e6d70b981764777ac47c80b47ee.png)
 
 </TabItem>
 
-<TabItem value="TWCC CLI" label="TWCC CLI (Not yet supported)">
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
 
 <br/>
 
@@ -45,32 +41,27 @@ Create a snapshot of your data disk to back up your data.
 
 </Tabs>
 
-
 <br/>
 
 
+## 檢視磁碟快照
 
-## View a snapshot
-
-View snapshot information such as ID, name, created time, and creator, etc.
+檢視快照 ID、名稱、建立時間、建立者等資訊。
 
 <Tabs>
 
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-* Enter **Data Disk Snapshot Management** page, you will see all the snapshot information in the list, including **ID**, **snapshot name**, **source disk name**, **snapshot state**, **created time** and **creator**. The last created snapshot will be listed at the top. Click the column name to sort or change the sort by the column value.
+* 進入「**資料磁碟快照管理**」頁面，會看到所有的資料磁碟快照列表資訊，包括 **ID**、**快照名稱**、**資料磁碟名稱**、**快照狀態**、**建立時間**及**建立者**。最後創建的快照會列在最上面，點選欄位名稱可依該欄位值排列或改變排列順序。
 
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_34b936c59f84cfc3e8c1670e9800db45.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0a5cff41d5613654cdaa2de772aa9925.png)
 
 
-* Enter keywords in the **search bar** to filter out the results that meet the filter criteria of the list.
-
+* 在「搜尋」列輸入關鍵字可篩選出列表的欄位中符合該特定條件的結果。
 
 </TabItem>
 
-<TabItem value="TWCC CLI" label="TWCC CLI (Not yet supported)">
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
 
 <br/>
 
@@ -78,33 +69,28 @@ View snapshot information such as ID, name, created time, and creator, etc.
 
 </Tabs>
 
-
 <br/>
 
 
-
-## Delete a snapshot
+## 刪除磁碟快照
 
 :::caution
-
-Once the snapshot is deleted, the data cannot be restored!
-
+快照一旦刪除，資料將無法恢復！
 :::
 
 <Tabs>
 
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-* Enter **Data Disk Snapshot Management** page> select the snapshot> click **DELETE** at the top to delete the snapshot.
+* 進入「**資料磁碟快照管理**」頁面 > 勾選快照 > 按下上方「**刪除**」即可刪除快照。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0e5ccd941ef7943645d088a96e734f98.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_28a89d5943a4c619ddf3f17518d5c839.png)
 
-
-* Or click the menu button &nbsp;<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>&nbsp; then click **DELETE** to delete the snapshot.
+* 或點擊 「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 選單按鈕，點選「**刪除**」即可將該快照刪除。
 
 </TabItem>
 
-<TabItem value="TWCC CLI" label="TWCC CLI (Not yet supported)">
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
 
 <br/>
 

@@ -1,48 +1,49 @@
 ---
 sidebar_position: 1
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-port-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-port-en' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-port-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-port-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Container ports (service ports)
+# 容器連接埠（服務埠）
 
-TWCC interactive containers provide 5 **target ports**, port 22, 8888, 5000, 5001, 5002, for external services running on the containers.
+TWCC 開發型容器開放 22、8888、5000、5001、5002，5 個**目標埠**供容器對外服務使用。
 
-By default, the container has SSH server run on port 22 and Jupyter Notebook run on port 8888 with association done automatically, so you can use both ways to connect and operate the container immediately after the container is created.
+容器已預設將 SSH 設置在 22 埠、Jupyter Notebook 設置在 8888 埠，並自動完成關聯，因此容器建立完成後，您即可立即使用這兩種方式連線操作容器。
 
-The custom **target ports** are: 5000, 5001, and 5002. You can set the daemon of the service running on a container to one of the target ports, and associate it with the public port. After that, the system will configure a corresponding **public port (50000 ~ 60000)**. You can expose your service with using the public IP and the public port. (e.g., [AI inference](https://man.twcc.vip/en/docs/ccs/tutorials/tensorflow-mnist-trainign) or [Website service](https://man.twcc.vip/en/docs/ccs/tutorials/configure-service-ports))
-
-<br/>
-
-
-## Prerequisites
-- Create [Interactive Containers](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/create-an-interactive-container).
-- If you choose to use TWCC portal, after the container is created, please click the container you want to connect to on the **Interactive Container Management** page and enter the **Interactive Container Details** page.
-- If you choose to use TWCC CLI operation, please obtain the [Container's ID](https://man.twcc.vip/en/docs/ccs/user-guides/management-and-monitoring/manage-your-container/#view-the-information) first.
+您可以自行運用的**目標埠**為：5000、5001、5002。將架設於容器內服務的 daemon 設置在其中一個目標埠，並關聯對外埠，完成後，系統將配置一個對應的**對外埠 (50000 ~ 60000)**，您即可於透過公用 IP 和對外埠，對外提供該服務 (例：[AI 推論服務](../../tutorials/tensorflow-inception-v3-image-recognition.md)或是[網站服務](../../tutorials/configure-service-ports.md))。
 
 <br/>
 
 
-## View service port information
+## 準備工作
 
-By default, SSH runs on target port 22; Jupyter Notebook runs on target port 8888. (Public ports are all allocated by the system).
+- [建立開發型容器](../create-connect/create-container.md)。
+- 若選擇使用 TWCC 入口網站操作，容器建立後，請於「**開發型容器管理頁**」點選欲連線的容器，進入「**開發型容器詳細資料頁**」。
+- 若選擇使用 TWCC CLI 操作，請先取得[容器 ID](../manage-monitor/manage-container.md#檢視資訊)。
 
-The following methods indicates how to view the external service port information associated with the container.
+<br/>
+
+
+## 檢視服務埠資訊
+
+容器預設將 SSH 目標埠設置在 22 埠、Jupyter Notebook 目標埠設置在 8888 埠 (對外埠皆由系統配置)。
+
+可使用以下方式，檢視目前容器已關聯的對外服務埠資訊。
 
 <Tabs>
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-Scroll down the page to the **Networks & Connection** section > **Port**. The associated service port information is displayed at the bottom left.
+將頁面下拉至「**網路與連線**」區塊 > 「**連接埠**」，已關聯的服務埠資訊顯示於左下方。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9f214fd51f5749ee8b9ee6dee23345e8.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3db2368926911e1dc903a10389c49811.png)
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-View the service port information associated with the container with ID **`886330`**.
+檢視 ID **`886330`** 容器已關聯的服務埠資訊。
 
 ```bash
 twccli ls ccs -p -s 886330
@@ -54,30 +55,30 @@ twccli ls ccs -p -s 886330
 <br/>
 
 
-## Associate the service port
+## 關聯服務埠
 
-You can associate the container with **target ports** 5000, 5001, 5002, and the system will configure a corresponding **public port (50000 ~ 60000)**. You can provide the external services through this mechanism. (e.g., [AI inference](https://man.twcc.vip/en/docs/ccs/tutorials/tensorflow-mnist-trainign) or [Website service](https://man.twcc.vip/en/docs/ccs/tutorials/configure-service-ports)).
+您可以將容器關聯 5000、5001、5002 **目標埠**，完成後系統將配置相對應的**對外埠**。您可以透過此機制，對外提供容器服務 (例：[AI 推論服務](../../tutorials/tensorflow-inception-v3-image-recognition.md)或是[網站服務](../../tutorials/configure-service-ports.md))。
 
 <Tabs>
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-- Click "**ASSOCIATE**" service port :arrow_right: Select the target port of the service daemon `5002` :arrow_right: Click  "**OK**"
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3d1e8b0a33edbe2ee0bdc3b0dd9171b3.png)
+- 點選「**關聯**」服務埠 :arrow_right: 勾選服務 daemon 的所在埠號 `5002` :arrow_right: 點選「**確認**」
         
-- After that, the system will configure a **public port** (`54708`) corresponding to the target port  (`5002`).
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_714db4fec691344f598c4c8c9fce7a8f.png)
+![](https://i.imgur.com/d6O2sWE.png)
+        
+- 完成後，系統將分配一個「**對外埠**」(`53055`)，對應至目標埠 (`5002`)
+        
+![](https://i.imgur.com/a9wXd1e.png)
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-- Associate the container (ID `886330`) with the target port `5000`.
+- 為 ID `886330` 容器，關聯 `5000` 的對外服務埠
 ```bash
 twccli net ccs -p 5000 -open -s 886330
 ```
 
-- After association, enter the [view command](#view-service-port-information) to view the public port allocated by the system.
+- 完成後，可使用[檢視](#檢視服務埠資訊)的指令，檢視系統配置的目標埠號。
 
 </TabItem>
 </Tabs>
@@ -85,25 +86,25 @@ twccli net ccs -p 5000 -open -s 886330
 <br/>
 
 
-## Dissociate the service port
+## 解除關聯服務埠
 
-If the container no longer provides external services, you can dissociate the service port.
+若容器服務不再對外提供，您可將服務埠解除關聯。
 
 <Tabs>
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-In the Interactive Container Details page, click "<b>DISSOCIATE</b>".
+於容器管理頁面，點選「<b>分離</b>」
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6423c9d5a5250258bf5d723d6c89c7b6.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a709233f197d7a361443acbd4d7ea99e.png)
 
-Then check the port number to be dissociated, and click **OK** to successfully dissociate.
+再勾選欲分離的埠號，點選「**確認**」，即可成功分離。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_60d9a8d43ca282904c175f37cb94af93.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c8781033f4b4f8b1bb475d388d4a724f.png)
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-Dissociate the container (ID `886330`) with the target port `5000`.
+將 ID `886330` 的容器，解除 `5000` 對外服務埠關聯
 ```bash
 twccli net ccs -p 5000 -close -s 886330
 ```

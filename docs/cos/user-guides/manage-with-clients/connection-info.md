@@ -1,31 +1,27 @@
 ---
 sidebar_position: 1
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-connect-info-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-connect-info-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-connect-info-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-connect-info-zh'
 ---
 
-# Connection information
+# 連線資訊
 
-- Enter Third-party Software page to obtain the connection information of public COS, including URL (use SSL): cos.twcc.ai, Access Key and Secret Key.
-
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_45bb0cdc52fc7d26afcefa387db2ff90.png)
+- 進入第三方軟體下載頁面，可取得公共空間的連線資訊，包括服務端點 (使用 SSL 連線) : cos.twcc.ai、Access Key 及 Secret Key。
 
 
-- Click **RENEW KEY** at the top right to renew your key.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5feae154bc0bada466f8bb5fd157e877.png)
+
+- 點選右上方「**更新金鑰**」可更新您的金鑰。
 
 
-## Private COS
+## 私有空間
 
-- Click **Private COS** > **Third-party Software** to get connection information of private COS, including URL (use SSL): cos.twcc.ai, Access Key and Secret Key.
+- 點選「**私有雲端物件儲存**」 > 「**第三方軟體下載**」可取得連線資訊，包括服務端點 (使用 SSL 連線) : cos.twcc.ai、Access Key 及 Secret Key。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_283077038d21de247f3277c58f25923a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_14ad10959fb04da6e3dab216e992d99e.png)
 
-
-- Click **RENEW KEY** at the top right to renew your key. You can also click **DELETE KEY**, and then **CREATE KEY** again.
+- 點選右上方「**更新金鑰**」可更新您的金鑰，也可以點選「**刪除金鑰**」，再重新「**建立金鑰**」。
 
 :::caution
-Once the key is deleted, all your files will be deleted and you cannot use private COS anymore.
-
-
+刪除金鑰將無法使用私有雲端物件儲存服務，同時將會刪除所有檔案。
 :::

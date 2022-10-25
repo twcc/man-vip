@@ -1,8 +1,11 @@
 {
-  "label": "User Guides",
+  "label": "使用指南",
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "5 minutes to learn the most important Docusaurus concepts."
+    "description": "5 minutes to learn the most important Docusaurus concepts.",
+    "title": "物件儲存使用指南",
+    "slug": "/cos/zero-to-hero",
+    "keywords": ["user-guides"]
   }
 }

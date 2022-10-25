@@ -1,37 +1,40 @@
 ---
 sidebar_position: 4
-sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-create-usr-linux-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-create-usr-linux-en' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-create-usr-linux-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-create-usr-linux-zh' 
 ---
 
-# Connect to Linux instances using SSH with password
+# 使用帳密 SSH 連線 Linux 個體
 
-In addition to using the **key pair** as a credential for connecting to Linux instances using SSH, this document will show you how to **use the account password to connect to the VCS Linux instance using SSH**. *This method prevents situations where the lost or the corruption of the key pair that makes connecting to the instance impossible, and is suitable for multiple users sharing instances.*
+
+除了透過「**鑰匙對**」做為 SSH 連線 Linux 個體之憑證外，本篇文章教學如何**使用「帳號密碼」 SSH 連線虛擬運算服務 Linux 個體**，*可預防遺失鑰匙對、鑰匙對檔案毀損，或是適用多人一起共用虛擬運算個體之情境*。
 
 <br/>
 
 
-### Step 1. Add a user with password
+### Step 1. 新增使用者帳號密碼
 
-- Use key pair to [connect to your VCS instance](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-en).
-- Execute the following command to add a user account (you can also add multiple users as needed), and then enter the password and related personal information.
+- 使用鑰匙對[連線進入虛擬運算個體](../user-guides/connecting/linux/from-windows.md)
+- 使用以下指令新增 1 個使用者帳號 (您可依需求新增更多使用者)，並輸入密碼及相關個人資訊
 
-```bash 
+```bash
 sudo adduser <USER_ID>
 ```
 
 :::caution
-To protect the security of your VCS instance, please set the login password for Ubuntu or CentOS to contain at least 12 characters with a mix of upper and lower case letters, numbers, and special characters.
+為保護您的虛擬運算個體安全，Ubuntu、CentOS 的登入密碼請設定至少包含 12 個字元，並混合英文大小寫字母、數字及特殊符號。
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3feb85f4dd3cb0590d2f974aea9279bc.png)
 
 <br/>
 
+<br/>
 
-### Step 2. Enable password authentication
 
-- Execute the following command to enable password authentication in sshd.
+### Step 2. 開啟帳密連線功能
+
+- 輸入以下指令開啟 sshd 中的帳密連線功能
 
 ```bash
 sudo sed -i 's/PasswordAuthentication\ no/PasswordAuthentication\ yes/g' /etc/ssh/sshd_config
@@ -40,9 +43,9 @@ sudo sed -i 's/PasswordAuthentication\ no/PasswordAuthentication\ yes/g' /etc/ss
 <br/>
 
 
-### Step 3. Restart the sshd service
+### Step 3. 重啟 sshd 服務
 
-- Execute the following command to restart the sshd service.
+- 輸入以下指令重啟 sshd 服務
 
 ```bash
 sudo systemctl restart sshd
@@ -51,12 +54,12 @@ sudo systemctl restart sshd
 <br/>
 
 
-### Step 4. Check if you can connect to the instance with the account and password
+### Step 4. 確認可用帳號密碼登入
 
-- Use MobaXterm as the connection tool, click **SSH** > enter *Remote host IP* > enter your *user account* > click **OK**
+- 使用 MobaXterm 做為連線工具，點選 「**SSH**」 > 輸入 「*公用 IP*」 > 輸入 「*使用者帳號*」 > 點選  「**OK**」
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6e8b4c94c4b6537e5c57d23062335baa.png)
 
-- The following screen will be displayed, then enter the password you set to log in!
+- 跳出以下畫面，再輸入您設定的密碼即可登入！
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9711b273491092fd4016073a2d89be75.png)

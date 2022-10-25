@@ -1,13 +1,13 @@
 ---
 sidebar_position: 2
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-dns-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-dns-en' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-dns-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-dns-zh' 
 ---
 
-# Configure the container DNS server
+# 設定容器 DNS 伺服器
 
-In order to fully secure your container, TWCC container only provides a default internal DNS server: **10.96.0.10**<br/>
-The system will direct this server (10.96.0.10) to the following three external upstream DNS servers for resolution:
+為周全保護容器安全，TWCC 容器僅提供使用此預設的內部 DNS 伺服器：**10.96.0.10**
+系統會再將 10.96.0.10 導向至以下三個外部上游 DNS 伺服器 (upstream DNS servers) 執行解析工作：
 
 - 101.101.101.101 (TWNIC)
 - 1.1.1.1 (Cloudflare)
@@ -16,5 +16,5 @@ The system will direct this server (10.96.0.10) to the following three external 
 <br/>
 
 :::info
-If you need to direct to other upstream DNS servers, please contact Technical Support: isupport@twcc.ai
+如有導向其它上游 DNS 伺服器的需求，請洽技術支援服務： isupport@twcc.ai
 :::

@@ -1,43 +1,43 @@
 ---
 sidebar_position: 1
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cfs-lifecycle-mngmnt-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cfs-lifecycle-mngmnt-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cfs-lifecycle-mngmnt-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cfs-lifecycle-mngmnt-zh'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Life Cycle Management
+# 生命週期管理
 
-Life Cycle Management provides a variety of file life cycle management rules. You can set filters based on file type, name, size, creation date and the files that unchanged for a long time(by days), etc. Life Cycle Management can perform actions on files, including **Move to Cold Storage**, **Move to Hot Storage** and **Deletion**.
+生命週期管理提供多種檔案生命週期管理規則，可依據檔案的類型、名稱、大小、建立日期、長時間沒有異動的檔案（依天數）等設定篩選條件，再指定欲執行的動作，包含 **搬移至冷儲存區**、**搬移至熱儲存區** 或 **刪除**。
 
-## Edit Life Cycle Rules 
-* On **File Storage Management** page, move cursor to <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> button on right side of dataset, and click **EDIT LIFE CYCLE RULES**.
+## 編輯生命週期規則 
+* 在「**檔案儲存管理**」頁面，將滑鼠移至資料集列表右側的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，再點擊「**編輯生命週期規則**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dceb595fc66961bb7ec5a0d8ed62d95d.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_898aa1c5559452242c98aa147cac6c08.png)
 
-* Enter to **Life Cycle Rules** to setup:
-    * File Name: Enter file name and seperate using comma.
-    * Extension: Enter file extension and seperate using comma.
-    * File size: Enter file size to larger than given numbres.
-    * File creation date: Enter date on the file created
-    * Files that unchanged for a long time: Value(days).
-* Tick multiple rules and click **Trial Results** button. The system will calculates the files which meet the criteria.
-
-:::info
-If `File Name` and `Extension` are both ticked, files that meet the criteria will be performed designated action.
-:::
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_424fe8ad715c4a7199efe64f009c076d.png)
-
-
-* Then select action: Move to Hot Storage, Move to Cold Storage or Deletion, and click **Update**.
+* 進入「**生命週期規則**」頁面後，首先需設定生命週期規則：
+    * 檔案名稱：輸入檔案名稱，文字請用逗號分隔。
+    * 檔案類型：輸入副檔名，以逗號分隔多個類型。
+    * 檔案大小：設定檔案大小大於某一數值。
+    * 檔案建立日期：設定檔案建立的日期。
+    * 長時間沒有異動的檔案：數值（天）。
+* 可勾選多項條件的規則，設定好後點擊「**試算結果**」按鈕，系統會先試算出符合此生命週期規則的檔案。
 
 :::info
-It will takes up to 24 hours to take effect after rule creation or modification.
+若同時設定並勾選 `檔案名稱` 與 `副檔名`，則符合檔案名稱條件或符合副檔名條件的檔案皆會執行動作。
 :::
 
-* After the update, the settings will be applied to the dataset and life cycle rules will be enabled immediately. Click **STOP** to stop the life cycle rules and the settings will be remained.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e0b162e22eaa3ad99f99a769629b400c.png)
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a439505a69374b15245e1077eb3eb7ab.png)
+
+* 接著點選動作選項：搬移至熱儲存區、搬移至冷儲存區或删除，設定好後點擊「**更新**」。
+
+:::info
+新增或編輯規則後，最多要經過 24 小時後才會生效。
+:::
+
+* 更新後，系統會對該資料集套用設定並立即啟用生命週期規則，若不想立即啟用可點擊「**停用**」，停用後生命週期規則的設定仍會保留。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b5ecab2d64d62919a51a7ca906694598.png)

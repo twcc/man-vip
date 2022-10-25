@@ -1,22 +1,21 @@
 ---
 sidebar_position: 1
-title: 'VCS instances'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-create-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-create-en' 
+title: '虛擬運算個體'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-create-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-create-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Create VCS instances
+# 建立虛擬運算個體
 
-
-You can create VCS instances with default configurations in just a few steps or choose a suitable instance type according to your needs. Detailed information regarding to the instance types (e.g., resource numbers and sizes), please refer to [VCS pricing](https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#虛擬運算服務-Virtual-Compute-Service-VCS)\.
+您可以系統預設資訊以簡單步驟完成建立虛擬運算個體，或是依需求選擇適合的個體型號。完整虛擬運算個體型號 (含資源數量與其他資源大小)，請參考[價目表](/docs/pricing.mdx#虛擬運算服務-virtual-compute-service-vcs)。
 
 
 <details>
 
-<summary>TWCC provides the following image</summary>
+<summary>TWCC 提供下列映像檔</summary>
 
 <br/>
 
@@ -29,10 +28,10 @@ You can create VCS instances with default configurations in just a few steps or 
 - **Windows**：
     - Windows 10 (BYOL)：Pro、Enterprise LTSC
     - Windows Server (BYOL)：
-        - 2016 (English/Chinese ver.)
-        - 2019 (English/Chinese ver.)
+        - 2016 (中、英版)
+        - 2019 (中、英版)
 
-- Please refer to [TWCC pricing (NCHC users)](https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Virtual-Compute-Service-VCS) for specific instance specifications.
+- 個體規格請參考 [TWCC 價目表 (國網用戶)](https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Virtual-Compute-Service-VCS)
 
 <br/>
 
@@ -40,269 +39,276 @@ You can create VCS instances with default configurations in just a few steps or 
 
 <br/><br/>
 
-The above images are available except for Windows 10 (BYOL), which is not available, and Windows Server, which comes with a license version.
+除 Windows 10 (BYOL) 未提供、Windows Server 提供附帶授權版本，上述映像檔皆有提供。
 
-- Please refer to [TWCC pricing (TWS users)](https://man.twcc.ai/@twsdocs/pricing-zh#%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Virtual-Compute-Service-VCS) for specific instance specifications.
+- 個體規格請參考 [TWCC 價目表 (TWS 用戶)](/docs/pricing.mdx#虛擬運算服務-virtual-compute-service-vcs)
 
 </details>
 
 <br/>
 
-## Before we get started
 
-- If you haven't sign up for a user account, please [sign up for TWCC](https://www.twcc.ai/) first.
-- If you would like to operate with TWCC portal, please sign in to [TWCC portal](https://www.twcc.ai/) first.
-- If you would like to operate with TWCC CLI, please [install TWCC CLI](https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-2-%E5%AE%89%E8%A3%9DTWCC-CLI) first, and then [sign in](https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-3-%E9%80%B2%E5%85%A5-TWCC_CLI-%E7%92%B0%E5%A2%83%E4%B8%A6%E9%96%8B%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8B%99).
+## 開始之前
+
+- 若尚未註冊使用帳號，請先[註冊 TWS / TWCC 帳號](/docs/member/user-guides/member-key-quota/sign-up-for-twcc)。
+- 若選擇使用 TWCC 入口網站操作，請先登入 [TWCC 入口網站](https://www.twcc.ai/)。
+- 若選擇使用 TWCC CLI 操作，請先[安裝 TWCC CLI](https://github.com/twcc/TWCC-CLI)、並[登入](https://github.com/twcc/TWCC-CLI)。
 
 <br/>
 
 
-### Create <i class="fa fa-linux" aria-hidden="true"></i> Linux instances
+### 建立 <i class="fa fa-linux" aria-hidden="true"></i> Linux 個體
 
 <!-- 1 start -->
 
 <Tabs>
 
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
- * Click "**Virtual Compute Service (VCS)**" to go to the "**VCS Instance Management**" page, and select "**＋CREATE**".
+* 進入「**虛擬運算**」服務，在「**虛擬運算個體管理**」頁面，點擊「**＋建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6668cf5d5b790061f3efb1764915cd95.png)
-
-:::tip
-You can click on the asterisk to the left of the service in "**All Services**" <i class="fa fa-star-o" aria-hidden="true"></i> and pin your frequently used services to "**My Favorite Services**" to speed up the process.
-:::
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_54e12ed7a4b5be26649eab62e1b2c2f5.png)
-
-* Select an image type. TWCC provides commonly used OS images of Linux and Windows that you can create instances and use instantly. You may browse and select, or directly search for the name of the image name on the top left (e.g., Ubuntu, Windows 10, etc.).
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1e689d8dfc9849f6b785be5782475970.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
 
 
 :::tip
-After the first selection, system would record and display the image in "**Recent Used**" block to speed up your next selection. (Clearing the browser history will also clear this record.)
+您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
-* Fill in the name and description of the VCS instance on the configuration page. Select the image version and hardware specifications you need, including different combinations of the number of CPUs, memory capacity, storage capacity the estimated cost, select turn "on" or "off" the deletion protection, then click "**NEXT: NETWORK>**".
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2a2a9e6eb83b42ab497c13e97412d38e.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_24a1990f0b33d78ae1382191aff61ca7.png)
+
+* 選擇映像檔類型，TWCC 提供常用的 Linux、Windows 作業系統映像檔，方便個體建立後可以立即使用。您可瀏覽再選擇，或直接於左上方搜尋欲使用的映像檔名稱 (例：Ubuntu, Windows 10...等)。
+
+![](https://i.imgur.com/cMrtu8H.png)
+
+
+
+:::tip
+首次選用後，映像檔會記錄儲存於「**最近使用**」區塊，加快您下次選用的速度。(清除瀏覽器歷史紀錄將會重新記錄)
+:::
+
+
+* 在基本資訊頁面填寫虛擬運算個體的名稱及描述，選擇映像檔的版本及所需的硬體規格，包含 CPU 數量、記憶體容量、儲存容量及額度的不同組合，並選擇「**開啟**」或「**關閉**」刪除保護機制。完成後，接著點擊 **「下一步：網路>」**。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f8340eb76381f2ca2c9a66c199f22fc8.png)
+
 
 :::info
-If "Deletion Protection" is enabled, before deleting a resource, you need to disable the protection mechanism before continuing the deletion process, which can prevent the resource from being deleted by mistake and causing service interruption.
+開啟刪除保護機制，在您刪除資源之前，需先關閉保護機制後才能繼續進行刪除步驟，可防止資源誤刪，導致務中斷。
 :::
 
-* On the network setting page, you can use the default_network by system default or a customized virtual network (VNW).
-* By default, **Auto-assign Floating IP** is disabled. If you need to connect to an instance from the Internet, please click **Auto-assign Floating IP** or **Assign Static IP**, we suggest you use [security group](https://man.twcc.vip/en/docs/vcs/user-guides/security/security-group/) to ensure the security of instance and reduce information security risks. Please refer to [flexible IP](https://man.twcc.vip/en/docs/vcs/user-guides/networking/elastic-ip) for usage details.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5a02c1ad1f9ef715c00af9993343364e.png)
+* 在網路設定頁面，可使用系統預設的 default_network 或自訂的虛擬網路。
+* **預設為不配置公用 IP**。若需從虛擬網路外部連線個體，請您點選「**自動配置浮動 IP**」或 「**配置靜態 IP**」，並建議使用[安全性群組](../security/security-group.md)保護個體安全與降低資安風險。使用細節請參考[彈性 IP](../networking/elastic-ip.md)。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a578c6a3945fc9b14c72cc33dc30d387.png)
 
 
 :::info
-1. Please create a default VNW (default_network) if you are a first-time user, please refer to the operation steps: [<ins>Create a default network</ins>](https://man.twcc.vip/en/docs/vcs/tutorials/create-default-network). If there is a need for custom VNW, please refer to [<ins>Create custom VNWs</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/networking/virtual-network#create-custom-vnws).
-2. The creation of VNWs is restricted to **Tenant Admins**. If you are a **Tenant User**, please contact the **Tenant Admins** of your project for assistance.
+1. 首次使用請先建立預設虛擬網路 (default network)，操作步驟請參考：[<ins>建立預設虛擬網路</ins>](../../tutorials/create-default-network.md)。若有自訂虛擬網路之需求，請參考：[<ins>建立自訂虛擬網路</ins>](../networking/virtual-network.md#建立自訂虛擬網路)。
+2. 建立虛擬網路僅限由「**租戶管理者**」操作，因此若您身份為「**租戶使用者**」，請您聯繫所屬計畫之「**租戶管理者**」協助操作。
 :::
 
-* On the storage information page, setup the storage size (GB) and type of the data disk (4 data disk types are provided: HDD, SSD, HDD encryption, and SSD encryption).
+* 在儲存資訊頁面，設定外掛資料磁碟 大小（GB）及類型（提供 4 種磁碟類型：HDD、SSD、HDD 加密、SSD 加密）。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_36fee82524d80b8c3ba86320896bb815.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d9dafe55ac87c92b4b0c06678699c836.png)
 
 :::caution
-- [<ins>Auto Scaling</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-auto-sacling-en) scales out new instances whose configuration is identical to the connected instance. Therefore,
-    - If the scaled out instance <ins>**needs**</ins> to be attached with a new data disk, please create a data disk when **[<ins>creating an instance</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/creation/vcs-instances)**.
-    - On the contrary, if the scaled out instance <ins>**doesn't need**</ins> to be automatically attached with a new data disk, please separately **[<ins>create a instance</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/creation/vcs-instances)** and [<ins>a data disk</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/storage/create-data-disks), and then [<ins>attach the disk to the instance</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/storage/viewInfo-attachToVCS-deleteDataDisks#attach-to-vcs-instances).
+- [<ins>Auto Scaling</ins>](../networking/auto-scaling.md) 會依據所連結虛擬運算個體建立時的設定而新增個體，因此：
+    - 若 Auto Scaling 自動新增的個體<ins>**需要**</ins>自動連結新資料磁碟，請您在 **[<ins>建立個體</ins>](./create-instances.md) 時**，一併建立資料磁碟。
+    - 反之，若 Auto Scaling 自動新增個體<ins>**不需要**</ins>自動連結新資料磁碟，則請您在 **[<ins>建立個體</ins>](./create-instances.md) 後**，[<ins>另建資料磁碟</ins>](../storage/create-data-disks.md)，再[<ins>連結至個體</ins>](../storage/view-attach-delete-disks.md#連結至虛擬運算個體)。
 :::
 
 <!-- :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 選擇使用附加 SSD 加密磁碟可加強您的資料安全性，但加密過程將可能略微影響存取效率。Protect individual safety and reduce information security risks.
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 選擇使用附加 SSD 加密磁碟可加強您的資料安全性，但加密過程將可能略微影響存取效率。
 ::: -->
 
-- Then click "**Next: Key Pair>**".
+- 接著點擊「**下一步：鑰匙對>**」
 
-* The key pair is the certificate for connecting to your Linux instance. You can select an existing key pair or click "**+Create Key Pair**" to create a new one.
+* 鑰匙對是登入 Linux 虛擬運算個體的憑證，必須透過鑰匙對，才能連線使用虛擬運算個體功能。可選擇已建立的鑰匙對，若第一次使用請按「**＋建立鑰匙對**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0257748b8ded4e887e96117b346cd75d.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_76b85e1d767f1024086a2e69d0793241.png)
 
-* Enter the name of the key pair and click OK.
+
+
+* 輸入鑰匙對的名稱後點擊確認。
 
 :::info
-The public key is not required and is intended to facilitate your workflow of using the same key in different clouds. Therefore, you may enter your public key in other clouds here and use it to access your TWCC instances.
+公開金鑰為非必填資訊，目的是方便在使用不同的雲端服務時，可以使用同一把金鑰。因此，使用者可以將他們在其他雲端系統內的公開金鑰填入此處，之後就可以使用此金鑰存取本系統。
 :::
 
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4d043ab59e1bc98d1470cb99db876b61.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_57a261c1f9903c2753530ce5e16bfa85.png)
 
 
-*  Once the key pair is created, please be sure to click **Download** immediately and save it properly. Without this key pair, you will not be able to connect to the VCS instance. After downloading, you can close the dialog window.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ae07492cf385fefe15ba37057cf9a5c2.png)
+* 鑰匙對建立後，請務必立即按「**下載**」並妥善保存此鑰匙對，若沒有此鑰匙對，將無法連線該虛擬運算個體，下載後即可關閉此對話視窗。
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4d64cb97650700d44ec73f9bc5c5ba46.png)
 
 
 :::caution
-TWCC is not responsible for recording and managing your key pair. Please be sure to download and properly save the key pair `pem` file. Without this key pair, you will not be able to [<ins>connect to VCS instances</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/connection/linux/from-windows).
+TWCC 不負責紀錄及管理您的鑰匙對，請務必下載並妥善保存此鑰匙對 `pem` 檔案，若沒有此鑰匙對，您將無法[<ins>連線虛擬運算個體</ins>](../connecting/linux/from-windows.md)。
 :::
 
 
-* Check the settings and estimated costs for the VCS instance, and click **Create** to  complete the process. After a few minutes, you can [<ins>connect to the instance</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-en) when it enters in the **`Ready`** state.
+* 接著點擊「**下一步：環境變數>**」，可設定符合您需求的環境變數，詳細說明與設定範例請參考[設定環境變數](../../tutorials/set-environment-variables.md)。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_069ef79ec5b926c0eefe04f0c00aee65.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2ffe89808b9c161fabc71302d825392a.png)
 
-* Click "**Next: Environment variables>**" to set the environment variables that meet your needs. For detailed explanation and setting examples, please refer to [Set Environment Variables](https://man.twcc.vip/en/docs/vcs/tutorials/environment-variables).
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_31bc9d75a05fd876db1c6361b07e1187.png)
 
-* Then, click "**Next: Review & Create>**" to review the settings and estimated cost of the VCS instance. Click "**Create**" to complete, and wait a few minutes, the connection can be started when the state of the instance becomes **`Ready`**.
+* 接著點擊「**下一步：檢閱 + 建立>**」，檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態變成 **`Ready`** 後即可開始[連線](../connecting/linux/from-windows.md)使用。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9e598e7a540443a0396874b127090992.png)
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_20ed16cf36603d91503ca375aba54e92.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9b35befff1c8ee37bdf68d147362453a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0627e4962946edeb20fa029eb2b7c4e7.png)
 
 </TabItem>
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
+**指令**
 
-**Command**
+**Step 1.** 請先[建立鑰匙對](../keypairs.md#建立鑰匙對)
 
-**Step 1.** Please [<ins>create a key pair</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/keypairs#create-key-pairs) first.
-
-**Step 2.** Then, create a VCS instance.
+**Step 2.** 建立虛擬運算個體個體
 
 ```bash
-twccli mk vcs -key      # Key pair name
-              [-n]      # VCS instance name
+twccli mk vcs -key      # 鑰匙對名稱
+              [-n]      # 虛擬運算個體名稱
 ```
-:::info
-1. The parameters in the square brackets **[ ]** are optional and the rest are required.
-2. If there are no optional parameters, instance will be created with the default  settings (or configurations):
 
-| Image type and version |  Instance type |Network|Specification|
+:::info
+1. **[ ]** 中括號內為選擇性參數，其餘為必要參數。
+2. 若不帶選擇性參數，則以預設資訊建立個體：
+
+| 映像檔類型、映像檔 | 型號 |網路資訊|規格|
 | -------- | -------- | -------- | -------- |
 | Ubuntu 16.04    | v.2xsuper  | default_network  | 0 GPU + 8 CPU + 064GB memory |
 :::
 
 <br/>
 
-**Example**
+**範例**
 
-- Use the key pair **`key1`** to create a VCS instance named **`vcscli`**.
+- 使用鑰匙對 **`key1`** 建立名稱為 **`vcscli`** 的虛擬運算個體。
 
 ```bash
 twccli mk vcs -key key1 -n vcscli
 ```
 
 :::caution
-- VCS instance naming conventions: must be **lowercase letters or numbers**, **first character must be lowercase letters**, and **6-16 characters long**.
-- If the instance name does not match the above rules, the following error message will appear:
+- 虛擬運算個體名稱命名字元條件：需為**小寫字母或數字**，**首字元需為小寫字母**，**長度 6-16 個字元**。
+-  若設定不符合以上條件，將出現以下錯誤訊息：
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_095834bd7ee5d99d3a70596a7c462629.png)
 :::
 
 :::tip
-
-Other related TWCC CLI commands:
+其他相關 TWCC CLI 指令：
 
 ```bash
-twccli ls vcs -img      # View all image  specifications
-twccli ls vcs -ptype    # View all instance types and specifications
+twccli ls vcs -img      # 檢視所有映像檔規格
+twccli ls vcs -ptype    # 檢視所有產品型號與規格
 ```
-
 :::
 
 
 </TabItem>
-
 </Tabs>
 
 <br/>
 
 
-### Create <i class="fa fa-windows" aria-hidden="true"></i>  Windows instances
-
-<!-- 1 start -->
+### 建立 <i class="fa fa-windows" aria-hidden="true"></i> Windows 個體
 
 <Tabs>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-<TabItem value="TWCC Portal" label="TWCC Portal">
+* 進入「**虛擬運算**」服務，在「**虛擬運算個體管理**」頁面，點擊「**＋建立**」。
 
- * Click "**Virtual Compute Service (VCS)**" to go to the "**VCS Instance Management**" page, and select "**＋CREATE**".
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6668cf5d5b790061f3efb1764915cd95.png)
-
-:::tip
-You can click on the asterisk to the left of the service in "**All Services**" <i class="fa fa-star-o" aria-hidden="true"></i> and pin your frequently used services to "**My Favorite Services**" to speed up the process.
-:::
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_54e12ed7a4b5be26649eab62e1b2c2f5.png)
-
-* Select an image type. TWCC provides commonly used OS images of Linux and Windows that you can create instances and use instantly. You may browse and select, or directly search for the name of the image name on the top left (e.g., Ubuntu, Windows 10, etc.).
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1e689d8dfc9849f6b785be5782475970.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5491a3fa25058a188c04c8adacde0f79.png)
 
 
 :::tip
-After the first selection, system would record and display the image in "**Recent Used**" block to speed up your next selection. (Clearing the browser history will also clear this record.)
+您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
-* Fill in the name and description of the VCS instance on the configuration page. Select the image version and hardware specifications you need, including different combinations of the number of CPUs, memory capacity, storage capacity the estimated cost, select turn "on" or "off" the deletion protection, then click "**NEXT: NETWORK>**".
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2a2a9e6eb83b42ab497c13e97412d38e.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_58fd9944d2a55400885b40ad37373205.png)
+
+* 選擇映像檔類型，TWCC 提供常用的 Linux、Windows 作業系統映像檔，方便個體建立後可以立即使用。您可瀏覽再選擇，或直接於左上方搜尋欲使用的映像檔名稱 (例：Ubuntu, Windows 10...等)。
+
+![](https://i.imgur.com/cMrtu8H.png)
+
+:::tip
+首次選用後，映像檔會記錄儲存於「**最近使用**」區塊，加快您下次選用的速度。(清除瀏覽器歷史紀錄將會重新記錄)
+:::
+
+* 在基本資訊頁面填寫虛擬運算個體的名稱及描述，選擇映像檔的版本及所需的硬體規格，包含 CPU 數量、記憶體容量、儲存容量及額度的不同組合，並選擇「**開啟**」或「**關閉**」刪除保護機制。完成後，接著點擊 **「下一步：網路>」**。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_216c514eea0c60727feeaf582124d7b4.png)
 
 :::info
-If "Deletion Protection" is enabled, before deleting a resource, you need to disable the protection mechanism before continuing the deletion process, which can prevent the resource from being deleted by mistake and causing service interruption.
+開啟刪除保護機制，在您刪除資源之前，需先關閉保護機制後才能繼續進行刪除步驟，可防止資源誤刪，導致務中斷。
 :::
 
-* On the network setting page, you can use the default_network by system default or a customized virtual network (VNW).
-* By default, **Auto-assign Floating IP** is disabled. If you need to connect to an instance from the Internet, please click **Auto-assign Floating IP** or **Assign Static IP**, we suggest you use [security group](https://man.twcc.vip/en/docs/vcs/user-guides/security/security-group/) to ensure the security of instance and reduce information security risks. Please refer to [flexible IP](https://man.twcc.vip/en/docs/vcs/user-guides/networking/elastic-ip) for usage details.
+* 在網路設定頁面，可使用系統預設的 default_network 或自訂的虛擬網路。
+* **預設為不配置公用 IP**。若需從虛擬網路外部連線個體，請您點選「**自動配置浮動 IP**」或 「**配置靜態 IP**」，並建議使用[安全性群組](../security/security-group.md)保護個體安全與降低資安風險。使用細節請參考[彈性 IP](../networking/elastic-ip.md)。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5a02c1ad1f9ef715c00af9993343364e.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_08a7761f2c23a738ba28b5169ea7d781.png)
 
 
 :::info
-1. Please create a default VNW (default_network) if you are a first-time user, please refer to the operation steps: [<ins>Create a default network</ins>](https://man.twcc.vip/en/docs/vcs/tutorials/create-default-network). If there is a need for custom VNW, please refer to [<ins>Create custom VNWs</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/networking/virtual-network#create-custom-vnws).
-2. The creation of VNWs is restricted to **Tenant Admins**. If you are a **Tenant User**, please contact the **Tenant Admins** of your project for assistance.
+1. 首次使用請先建立預設虛擬網路 (default network)，操作步驟請參考：[建立預設虛擬網路](../../tutorials/create-default-network.md)。若有自訂虛擬網路之需求，請參考：[建立自訂虛擬網路](../networking/virtual-network.md#建立自訂虛擬網路)。
+2. 建立虛擬網路僅限由「**租戶管理者**」操作，因此若您身份為「**租戶使用者**」，請您聯繫所屬計畫之「**租戶管理者**」協助操作。
 :::
 
-* On the storage information page, setup the storage size (GB) and type of the data disk (4 data disk types are provided: HDD, SSD, HDD encryption, and SSD encryption).
+* 在儲存資訊頁面，設定外掛資料磁碟 大小（GB）及類型（提供 4 種磁碟類型：HDD、SSD、HDD 加密、SSD 加密）。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_36fee82524d80b8c3ba86320896bb815.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_184b6aaa90135456196d14a9d016539f.png)
 
 :::caution
-- [<ins>Auto Scaling</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-auto-sacling-en) scales out new instances whose configuration is identical to the connected instance. Therefore,
-    - If the scaled out instance <ins>**needs**</ins> to be attached with a new data disk, please create a data disk when **[<ins>creating an instance</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/creation/vcs-instances)**.
-    - On the contrary, if the scaled out instance <ins>**doesn't need**</ins> to be automatically attached with a new data disk, please separately **[<ins>create a instance</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/creation/vcs-instances)** and [<ins>a data disk</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/storage/create-data-disks), and then [<ins>attach the disk to the instance</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/storage/viewInfo-attachToVCS-deleteDataDisks#attach-to-vcs-instances).
+- [<ins>Auto Scaling</ins>](../networking/auto-scaling.md) 會依據所連結虛擬運算個體建立時的設定而新增個體，因此：
+    - 若 Auto Scaling 自動新增的個體<ins>**需要**</ins>自動連結新資料磁碟，請您在 **[<ins>建立個體</ins>](./create-instances.md) 時**，一併建立資料磁碟。
+    - 反之，若 Auto Scaling 自動新增個體<ins>**不需要**</ins>自動連結新資料磁碟，則請您在 **[<ins>建立個體</ins>](./create-instances.md) 後**，[<ins>另建資料磁碟</ins>](../storage/create-data-disks.md)，再[<ins>連結至個體</ins>](../storage/view-attach-delete-disks.md#連結至虛擬運算個體)。
 :::
 
 <!-- :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 選擇使用附加 SSD 加密磁碟可加強您的資料安全性，但加密過程將可能略微影響存取效率。Protect individual safety and reduce information security risks.
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 選擇使用附加 SSD 加密磁碟可加強您的資料安全性，但加密過程將可能略微影響存取效率。
 ::: -->
 
-- Create Windows login password. Then click **Next: Review & Create>**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6ee5a4ab3d6ed6b9d8b2dc29c666ed15.png)
+- 建立 Windows 登入密碼。接著點擊「**下一步：檢閱 + 建立>**」
+
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_008b4f0c17e1c516c26bbee22ed9224a.png)
+
 
 :::caution
-1. To protect your instance security, we recommend setting a strong password with at least **17 characters**.
-2. This password is for private use and will not be recorded or managed by TWCC. Please be sure to keep it properly, without it, you will not be able to connect to your VCS instance.
+1. 為保護您的虛擬運算個體安全，密碼設定建議至少包含 **17 個字元**。
+2. 此密碼為私人使用，TWCC 將不負責紀錄及管理。請務必妥善保存，若沒有密碼，將無法連線虛擬運算個體。
 :::
 
-* Then, click "**Next: Review & Create>**" to review the settings and estimated cost of the VCS instance. Click "**Create**" to complete, and wait a few minutes, the connection can be started when the state of the instance becomes **`Ready`**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9e598e7a540443a0396874b127090992.png)
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_20ed16cf36603d91503ca375aba54e92.png)
+* 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後，等個體狀態變成 **`Ready`** 後，再等候一些時間即可開始[連線](../connecting/windows/from-windows.md)使用。
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a18e03678c8f5b6aab82049ae19cb021.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_16b71ba4b7fafa65b9a4d60f56bf975c.png)
+
+</TabItem>
+
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
+
+<br/>
 
 </TabItem>
 
 </Tabs>
 
-
 ---
 
 :::info
-- After the VCS instance is created, the additional **Data Disk** needs to be initialized before it can be used. Please refer to the steps below:
-    - [<ins>Initialize Linux disks</ins>](https://man.twcc.vip/en/docs/vcs/tutorials/data-disk-init-linux)
-    - [<ins>Initialize Windows disks</ins>](https://man.twcc.vip/en/docs/vcs/tutorials/data-disk-init-windows)
-- A user can only create and delete VCS instances 10 times respectively in one minute.
+- 虛擬運算個體建立後，外掛**資料磁碟**需經初始化才能使用，步驟請參考：
+    - [<ins>初始化磁碟 - Linux 個體</ins>](../../tutorials/data-disk-init-linux.md)
+    - [<ins>初始化磁碟 - Windows 個體</ins>](../../tutorials/data-disk-init-windows.md)
+- 同一用戶一分鐘內僅能執行各 10 次建立、刪除虛擬運算個體。
 :::

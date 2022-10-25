@@ -2,24 +2,25 @@
 sidebar_label: 'DIGITS'
 sidebar_position: 14
 title: 'DIGITS'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-digits-en'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-digits-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-digits-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-digits-zh'
 ---
+
 
 # <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bb968fa9146487087f1c4634929d931f.png' /> DIGITS
 
-TWCC provides pay-as-you-go working environment of NGC’s DIGITS. The NVIDIA Deep Learning GPU Training System (DIGITS) puts the power of deep learning into the hands of engineers and data scientists. DIGITS can be used to rapidly train the highly accurate deep neural network (DNNs) for image classification, segmentation and object detection tasks. DIGITS simplifies common deep learning tasks such as managing data, designing and training neural networks on multi-GPU systems, monitoring performance in real time with advanced visualizations, and selecting the best performing model from the results browser for deployment. DIGITS is completely interactive so that data scientists can focus on designing and training networks rather than programming and debugging.
+
+TWCC 提供 NGC’s DIGITS 立即可用的工作環境。Learning GPU Training System (DIGITS) 將深度學習的力量交給工程師和資料科學家掌控。 DIGITS 可用於快速地訓練高準確度的深度神經網絡 (DNNs)，能應用於圖像分類、分割和物體偵測。DIGITS 簡化了常見的深度學習任務，例如數據管理、在多 GPU 上設計並訓練神經網路、使用極佳的視覺化系統即時監控性能，並能從成果瀏覽系統中選取效能最佳的模型進行部署。DIGITS 具極佳的互動性，因此資料科學家能專注於神經網路的設計和訓練而非程式編寫和除錯。
 
 
-
-## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">Information of Image file version</span> 
+## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">映像檔版本資訊</span> 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ce4af8f27968fcf3bfb8431c5493d9bd.png)
 
 
 <details class="docspoiler">
 
-<summary><b>Detailed package version information</b></summary>
+<summary><b>點我參考詳細版本套件資訊</b></summary>
 
 - [digits-19.08-caffe/tensorflow](https://docs.nvidia.com/deeplearning/digits/digits-release-notes/rel_19-08.html#rel_19-08)
 - [digits-19.02-caffe/tensorflow-v1](https://docs.nvidia.com/deeplearning/digits/digits-release-notes/rel_19-02.html#rel_19-02)
@@ -27,4 +28,6 @@ TWCC provides pay-as-you-go working environment of NGC’s DIGITS. The NVIDIA De
 - [digits-18.10-v1](https://docs.nvidia.com/deeplearning/digits/digits-release-notes/rel_18.10.html#rel_18.10)
 - [digits-18.08-v1](https://docs.nvidia.com/deeplearning/digits/digits-release-notes/rel_18.08.html#rel_18.08)
 
+
 </details>
+

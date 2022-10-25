@@ -1,30 +1,30 @@
 ---
 sidebar_position: 1
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-queue-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-queue-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-queue-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-queue-zh'
 ---
 
-# Queues and computing resources
+# Queue 與計算資源使用說明
 
-Available queues for submitting jobs in Taiwania 2 (HPC CLI):
+台灣杉二號 (命令列介面) 提交 Job 時，可使用的 Queue 如下：
 
-| Queue name | Maximum walltime (hours) | High priority | Maximum number of jobs per user | Applicable project       | Node type   |
+| Queue 名稱 | 最長執行時間(小時) | 高優先權 | 每位用戶最多 可提交計算工作數量限制 | 適用計畫       | 節點類型     |
 | ---------- | ------------------ | -------- | ---------------- | -------------- | ------------ |
-| gp1d       | 24                 |          | 20               | all projects   | GPU compute nodes |
-| gp2d       | 48                 |          | 20               | all projects   | GPU compute nodes|
-| gp4d       | 96                 |          | 20               | all projects   | GPU compute nodes |
-| gtest      | 0.5                |          | 5                | all projects   | GPU compute nodes |
-| express    | 96                 | v        | 20               | Industrial and personal projects | GPU compute nodes |
+| gp1d       | 24                 |          | 20               | 各式計畫       | GPU 計算節點 |
+| gp2d       | 48                 |          | 20               | 各式計畫       | GPU 計算節點 |
+| gp4d       | 96                 |          | 20               | 各式計畫       | GPU 計算節點 |
+| gtest      | 0.5                |          | 5                | 各式計畫       | GPU 計算節點 |
+| express    | 96                 | v        | 20               | 企業與個人計畫 | GPU 計算節點 |
 
 :::info
-- The compute nodes in Taiwania 2 (HPC CLI) are all GPU nodes. Every single node has 8 GPUs and 36 CPUs. The model names for GPUs is NVIDIA Tesla V100-SXM2-32GB and Intel(R) Xeon(R) Gold 6154 for CPUs.
-- Users can submit up to 20 jobs, and all jobs can run with up to 40 GPUs in total. Each queue also has an upper limit for the maximum number of jobs submitted per user.
-- Every job needs to assign with at least 1 GPU and the ratio of allocated resource cannot exceed: 1 GPU: 4 CPU: 90 GB Memory.
-- gtest is a queue for testing. The maximum number of jobs per user is 5.
-- **<ins>All of your processes will be automatically deleted</ins> if you run a GPU process for more than 5 minutes on the login node.**
-- **A process will be automatically deleted if it uses more than 400% CPU usage on the login node**.
-- Submitting jobs using the `srun` and `salloc` commands when logged into a node may cause computation interruptions or data loss, so it is recommended to use the `sbatch` command to run large computation jobs.
-- We will regularly review and adjust the policies of queues and numbers of compute nodes. 
-- The system admins will clean up login node and the /tmp directory in data transfer node irregularly to maintain the operation of the system. Please avoid storing important data in /tmp directory.
-- Please contact Customer Service if you need to increase a single job's walltime.
+- 台灣杉二號皆為 GPU 計算節點，每一節點有 8 GPUs 和 36 CPUs，型號分別為 NVIDIA Tesla V100-SXM2-32GB，及 Intel(R) Xeon(R) Gold 6154 處理器。
+- 用戶最多提交 20 個計算工作，所有計算工作加總最多使用 40 張 GPUs。各 Queue 亦有限制各用戶最多提交計算工作數目的上限。
+- 每個計算工作至少指定 1 張 GPU，且不能超過  1 GPU : 4 CPU : 90 GB Memory 比例
+- gtest 為測試用 queue，用戶最多提交 5 個計算工作到 gtest 。
+- **當用戶在登入節點運行超過 5 分鐘的 GPU process，將會<ins>自動清除該用戶所有 process</ins>**。
+- **當用戶在登入節點運行超過 400% CPU usage 的 process，該 process 將會自動被清除。**
+- 在登入節點當機時，使用 `srun` and `salloc` 指令提交 job 可能會造成計算中斷或資料流失，因此建議使用 `sbatch` 指令運行大規模計算工作。
+- Queue 與節點數量會定期檢討與調整。
+- 管理員將會不定期清理登入節點與檔案傳輸節點的 /tmp 目錄以維持系統正常運作，請避免於 /tmp 存放重要資料。
+- 若需延長單個 job 的執行時間 (walltime)，請洽詢客服人員。
 :::

@@ -1,72 +1,71 @@
 ---
 sidebar_position: 8
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-service-user-activity-history-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-service-user-activity-history-en' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-service-user-activity-history-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-service-user-activity-history-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+# 檢視服務使用歷史紀錄
 
-# View service activity history
+您於 TWCC 使用者網站、TWCC CLI 使用的服務功能，皆是透過呼叫 TWCC API 以完成各項作業，而服務操作的歷史紀錄可透過 [TWCC 使用者網站檢視](#如何檢視使用紀錄)，並[下載紀錄檔案](#下載使用紀錄)。
 
-The service functions you use on the TWCC portal and TWCC CLI are all done by calling the TWCC API. And the [service activity history](#view-the-service-activity-history) can be viewed on the TWCC portal and [download the log file](#download-the-log-file).
+您可以從歷史記錄判斷：
 
-You can learn the following items from the service activity history:
-
-- The member who started the operation<sup>[1]</sup>
-- The method to start the operation (`GET`/`PUT`/`PATCH`/`POST`/`DELETE`)<sup>[2]</sup>
-- Operated on which services
-- Operation status
-- Operation response time
-- Operation start time
+- 啟動作業的成員<sup>[1]</sup>
+- 啟動作業的方法 (`GET`/`PUT`/`PATCH`/`POST`/`DELETE`)<sup>[2]</sup>
+- 對哪些服務進行操作
+- 作業的狀態
+- 作業回應時間
+- 作業啟動時間
 
 :::info
 
-[1] **`Tenant User`** are only able to inquire their own usage records; **`Tenant Admin`** are able to inquire all members' usage records.
+[1] **`租戶使用者`** 僅能查詢自己的使用紀錄；**`租戶管理員`** 則可以檢視所有成員的紀錄。
 
-[2] TWCC APIs are categorized into 5 types of service methods ([<ins>Get to know about RESTful API </ins>](https://en.wikipedia.org/wiki/Representational_state_transfer)):
-- `GET`：Get service information
-- `PUT`：Update service overall information
-- `PATCH`：Update partial service information
-- `POST`：Create service
-- `DELETE`：Delete service
+[2] TWCC API 對服務操作的動作分為以下 5 類（[<ins>深入了解 RESTful API</ins>](https://zh.wikipedia.org/wiki/%E8%A1%A8%E7%8E%B0%E5%B1%82%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2)）：
+- `GET`：取得服務資訊
+- `PUT`：更新服務整體資訊
+- `PATCH`：更新服務部份資訊
+- `POST`：建立服務
+- `DELETE`：刪除服務
 
 :::
 
 <br/>
 
 
-## View the service activity history
+## 如何檢視使用紀錄？
 
-### Step 1. Enter "History" page
+### Step 1. 進入「使用紀錄」頁面
 
-After sign in to the TWCC portal, click "**User Name**"> "**History**".
+登入 TWCC 使用者網站後，點選「**使用者名稱**」> 「**使用紀錄**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e329095d7fc25ee322edd617b9bc926b.png)
-
-<br/>
-
-### Step 2. Select project member (Tenant Users may skip)
-
-If you are a Tenant Admin, please select your name, or the name of the member whose records you would like to view.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_382eb618f2c7c661f19fd0a2a535105b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_645207cc9ccf3e11a9fe98183549b3a6.png)
 
 <br/>
 
-### Step 3. View activity history
+### Step 2. 選擇計畫成員 (租戶使用者可略)
 
-API activity history includes not only TWCC service activities, but also the records of projects, credits, etc., which covers a wide range of categories and items. The following are 2 examples of the records. For more details, please refer to **[TWCC API Document](https://man.twcc.ai/@twccdocs/api-main-zh)**.
+若您為租戶管理員，請先選擇本人的名稱，或欲檢視紀錄的成員名稱。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_96e7fb16ab8f6b92582ea3f752063e91.png)
+
+<br/>
+
+### Step 3. 檢視使用紀錄
+
+API 使用歷史紀錄除 TWCC 服務使用活動，亦包含計畫、額度等紀錄，種類與項目繁多，以下舉 2 項紀錄範例說明，更多使用紀錄說明，請您查詢：**[TWCC API Document](/docs/api/CCS)**。
 
 <details>
 
-<summary><b>Example 1 - Container Computer Service</b></summary>
+<summary><b>範例1 - 容器運算服務</b></summary>
 
-- Activity history: as shown in the following table
-- Record Description: The user made a request to **Create** (`POST`) **Container** (`k8s-taichung-default/sites`) at `2021/07/21 14:45`, and the API response time to the operation request is `0.746` seconds, the request is successful (`201`), and the system is about to start creating the container.
+- 使用紀錄：如下表
+- 紀錄說明：使用者於 `2021/07/21 14:45` 提出 **建立** (`POST`) **容器** (`k8s-taichung-default/sites`) 的請求，API 回應接收作業時間為 `0.746` 秒，請求成功 (`201`)，系統即將開始建立容器作業。
 
-| Method | Path | Status Code |Response time (sec) |Request Time |
+| 方法 | 路徑 | 狀態碼 |回應時間 (秒) |請求時間 |
 | -------- | -------- | -------- |-------- |-------- |
 | POST    | http://apigateway.twcc.ai:8000/api/v2/k8s-taichung-default/sites/     | 201     |0.746     |2021-07-21 14:45    |
 
@@ -76,37 +75,34 @@ API activity history includes not only TWCC service activities, but also the rec
 
 <details>
 
-<summary><b>Example 2 - Virtual Compute Service</b></summary>
+<summary><b>範例2 - 虛擬運算服務</b></summary>
 
-- Activity history: as shown in the following table
-- Record Description: The user made a request to **Delete** (`DELETE`) **Virtual compute entity (ID: 1986546)** (`openstack-taichung-default-2/sites/1986546`) at `2021/07/21 22:20`, and the API response time to the operation request is `0.263` seconds, the request is successful (`200`), and the system is about to start deleting the instance.
+- 使用紀錄：如下表
+- 紀錄說明：使用者於 `2021/07/21 22:20` 提出 **刪除** (`DELETE`) **虛擬運算個體 (ID: 1986546)** (`openstack-taichung-default-2/sites/1986546`) 的請求，API 回應接收作業時間為 `0.263` 秒，請求成功 (`200`)，系統即將開始刪除個體作業。
 
-| Method | Path | Status Code |Response time (sec) |Request Time |
+| 方法 | 路徑 | 狀態碼 |回應時間 (秒) |請求時間 |
 | -------- | -------- | -------- |-------- |-------- |
-| DELETE    | 	http://apigateway.twcc.ai:8000/api/v3/openstack-taichung-default-2/sites/1986546/     | 200     |0.263     |2021-07-21<br/>22:20    |
+| DELETE    | 	http://apigateway.twcc.ai:8000/api/v3/openstack-taichung-default-2/sites/1986546/     | 200     |0.263     |2021-07-21 22:20    |
 
 </details>
 
 <br/>
 
 
-## Download the log file
+## 下載使用紀錄
 
-The TWCC portal can display up to 1,000 pieces of the latest data at a time, and older data will no longer be viewed. You can click "**Export Report**" to save a record of the moment.
+TWCC 使用者網站一次最多可呈現最新的 1000 筆資料，舊資料將無法再檢視。您可以點選「**輸出報表**」即時留存紀錄。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_788bd83e639bf54045d4f0c2b0b0729d.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5b367455ed76e27b9349159ab21f8f2e.png)
 
 <br/>
 
-
 :::tip
 
-Due to the encoding issue, after the report is downloaded, clicking the file directly to open it with Excel may result in garbled characters.
+因編碼問題，報表下載後，直接點選檔案以 Excel 開啟將會呈現亂碼。
 
-Please open `Excel` > select "**Data**" > click "**From Text/CSV**" to import the log file > File Origin select "**65001:Unicode (UTF-8)**" > after loading, you can view it normally.
+請先開啟 `Excel` 軟體> 點選「**資料**」 >「**從文字/CSV**」 匯入使用紀錄檔案 > 檔案原點選擇 「**65001:Unicode (UTF-8)**」> 載入後即可正常檢視。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4d21f408b2e75897830dc30f2cc8b7af.png)
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_19c1b3a40d77c4a7c60bf079b25e5e16.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_53e0296e819d45e4da8b39c60d17c44c.png)
 
 :::

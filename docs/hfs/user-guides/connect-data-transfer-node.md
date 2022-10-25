@@ -1,18 +1,18 @@
 ---
 sidebar_position: 1
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-hfs-connect-to-data-transfer-node-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-hfs-connect-to-data-transfer-node-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-hfs-connect-to-data-transfer-node-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-hfs-connect-to-data-transfer-node-zh'
 ---
 
-# Connect to the data transfer node
+# 連線檔案傳輸節點
 
-You can use the following method to connect to the data transfer node using **Key** or **Supercomputer Password + OTP Authentication Code**.
+您可以透過以下使用「**金鑰**」或「**主機密碼 + OTP 認證碼**」的方式連線傳輸節點。
 
-After connecting to the data transfer node and entering HFS storage space, you can upload files to the space through SFTP protocol, or download the files from HFS to the your local machine.
-
+連線檔案傳輸節點，進入 HFS 空間後，您可將檔案透過 SFTP 協定上傳至 HFS 空間中，亦可將檔案從 HFS 下載到本地端。
 
 :::info
-TWCC also provides users with the `rsync` command to transfer large amount files with a good experience. However, since the system does not provide the logs of file transmission using `rsync`, it may not be able to be traced if there are information security concerns. If you agree to undertake the risk of use and authorize TWCC to enable the `rsync` function, please send your request to <ins><a href = "mailto: isupport@twcc.ai">isupport@twcc.ai</a></ins> .
+TWCC 也提供用戶以 `rsync` 指令傳輸檔案，傳輸大量檔案使用體驗佳。但由於系統無提供 `rsync` 之傳輸紀錄，若有資安疑慮恐無法追查。若您同意承擔使用風險並授權 TWCC 開啟 `rsync` 功能，請您向 <ins><a href = "mailto: isupport@twcc.ai">isupport@twcc.ai</a></ins> 提出需求。
+
 
 :::
 
@@ -21,74 +21,75 @@ TWCC also provides users with the `rsync` command to transfer large amount files
 
 <details class="docspoiler">
 
-<summary><b>1. Connect using keys</b></summary>
 
-<br/>
+<summary><b>1. 使用金鑰連線</b></summary>
 
-The following example demonstrates with Windows + [<ins>FileZilla</ins>](https://filezilla-project.org) (similar to macOS)
 
-<b>Step 1. Connect to a compute service</b>
 
-- Users of TWCC Interactive Container service can connect to the container through Jupyter Notebook or SSH
-- Users of TWCC Scheduled Container, HPC Job, and Taiwania 2 (HPC CLI) can connect to the login node of Taiwania 2 (HPC CLI)
+以下以 Windows 作業系統 + [<ins>FileZilla</ins>](https://filezilla-project.org) 為例 (macOS 也是類似的操作步驟)
+
+<b>Step 1. 連線運算服務</b> 
+
+- TWCC 開發型容器服務的使用者，可透過 Jupyter Notebook 或 SSH 連線容器
+- TWCC 任務型容器、高速運算任務、台灣杉二號 (命令列介面)的使用者，可透過 台灣杉二號 (命令列介面) 登入節點
 
 :::info
-See the connection method:
-- [<ins>Interactive Container</ins>](https://www.twcc.ai/doc?page=container&euqinu=true#%E9%80%A3%E7%B7%9A%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F)
-- [<ins>Taiwania 2 (HPC CLI)</ins>](https://man.twcc.ai/s/B15nJXe-B#2-%E7%99%BB%E5%85%A5%E3%80%8C%E7%99%BB%E5%85%A5%E7%AF%80%E9%BB%9E%E3%80%8D)
+連線方法參見：
+- [<ins>開發型容器</ins>](../../ccs-interactive-container/user-guides/create-connect/connect-container.md) - 連線使用方式
+- [<ins>台灣杉二號 (命令列介面)</ins>](../../twnia2-hpc-cli/user-guides/service-overview/login-node-data-transfer-node.md) - 連線「登入節點」
 :::
 
-<b>Step 2. Save the SSH private key to the local machine</b>
+<b>Step 2. 儲存 SSH 私密金鑰至本機</b>
 
-- After logging in, enter the following command to read the SSH private key
+- 登入後，輸入以下指令讀取 SSH 私密金鑰
 
 ```bash
 cat ~/.ssh/id_dsa
 ```
-- Take TWCC Interactive Container as an example: open Jupyter Notebook > Terminal.
+- 以登入 TWCC 開發型容器 Jupyter -> Terminal 為例
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_83c3e4d93f717d501cbfd619708186b2.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0ce21b053250616fd41773cfbc967439.png)
 
 
-- Save the SSH private key to your local machine, copy all the red frame part, open notepad and paste it on (the beginning and ending information must be included).
+- 儲存 SSH 私密金鑰到本機，複製紅色部分全部，開啟記事本貼上 (需包含頭尾資訊)
 
 :::info
-macOS：TextEdit software is available
+macOS：可使用「文字編輯」軟體
 :::
    
 ```bash
------BEGIN DSA PRIVATE KEY----- (This line also needs to be copied)
+-----BEGIN DSA PRIVATE KEY----- (這行也需複製)
 ...
 ...
------END DSA PRIVATE KEY----- (This line also needs to be copied)
+-----END DSA PRIVATE KEY----- (這行也需複製)
 ```
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6928c1f27e4b7d521a9382e7bc635473.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e417c2dcdb8ba67f5e68fdefb344b739.png)
+
+
+- 將記事本存檔：檔案位置與檔案名稱不限，副檔名需為 **`.ppk`**，存檔類型請改為 **`所有檔案`**。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_688acdfd3df164086cbc28988fcbfabb.png)
 
 
 
+<b>Step 3. 以 FileZilla + 金鑰登入「資料傳輸節點」</b>
 
-- Save the notepad: the file location and file name are not limited, the extension name must be **`.ppk`**, and the file type should be changed to **`all files`**.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ede7b45b32c02a5519e37ffd2240c5dc.png)
-
-
-<b>Step 3. Log in to the data transfer node with FileZilla + key</b>
-
-
-- Click the site manager in the upper left corner, add a new site in the lower left corner, and the menu as shown in the figure below will pop up
-- For input and selection, refer to the figure below
+- 點選左上角站台管理員、左下方新增站台，跳出如下圖的選單
+- 輸入及選擇，參考下圖
 
 ```
-Protocol: SFTP
-Host: xdata1.twcc.ai
-Logon Type: Key file
-User: supercomputer account
-Key file: directory of the key file
-```
-- Click **Connect** to login successfully
+協定： SFTP
+主機： xdata1.twcc.ai
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9d5a58f6e3d4055fbf0526684adb8310.png)
+登入型式： 金鑰檔案
+使用者 ： 主機帳號
+金鑰檔案： 金鑰檔案的路徑
+```
+- 點選「連線」，即可登入成功
+
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_eefc4f0425480f57ea6e4b0585968cb1.png)
 
 
 
@@ -102,77 +103,68 @@ Key file: directory of the key file
 
 <details class="docspoiler">
 
-<summary><b>2. Connect using supercomputer password + OTP </b></summary>
-
-<br/>
-
-In addition to the above login method using the key, HFS can also login using **password + [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC)**. Please refer to the following instructions:
-<div style={{height:8+'px'}}></div>
-
-<b>Step 1. Download software that supports SFTP connection and 2-Step verification</b>
+<summary><b>2. 使用主機密碼 + OTP 連線</b></summary>
 
 
-Please download and install software that supports SFTP connection and 2-Step verification (e.g., [Filezilla](https://filezilla-project.org/), [Cyberduck](https://cyberduck.io/download/), [WinSCP](https://winscp.net/eng/download.php), etc).
-<div style={{height:8+'px'}}></div>
+除上述使用金鑰的登入方式，HFS 也可使用 **密碼 + [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](../../member/user-guides/member-key-quota/hpc-account-password-otp.md#取得-otp-認證碼)** 之方式登入，請參考下方說明：
 
-<b>Step 2. Connect to the data transfer node</b>
+<b>Step 1. 下載支援 SFTP 連線並可兩段式驗證的軟體</b>
 
-The following uses [<ins>Filezilla</ins>](https://filezilla-project.org/) as an example of operation. After opening the software:
+請下載安裝支援 SFTP 連線並可兩段式驗證的軟體 (例：[Filezilla](https://filezilla-project.org/)、[Cyberduck](https://cyberduck.io/download/)、[WinSCP](https://winscp.net/eng/download.php)...等)。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b46464ae5d5b17d9b5f07c2cb29c0766.png)
+<b>Step 2. 連線檔案傳輸節點</b>
 
+以下以 [<ins>Filezilla</ins>](https://filezilla-project.org/) 為操作示範，開啟軟體後：
 
-1. Open the **Site Manager** on the upper left
-2. Protocol: select **SFTP- SSH File Transfer Protocol**
-3. Host: enter **xdata1.twcc.ai**
-4. Logon type: select **Interactive**
-5. User: enter your supercomputer account
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1224ee0b5e7b5ec0f8733c15c8f67bbb.png)
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6af475d537006f37c20a1507621518cf.png)
+1. 開啟左上「**站台管理員**」
+2. 協定：選擇 「**SFTP- SSH File Transfer Protocol**」
+3. 主機：輸入 「**xdata1.twcc.ai**」
+4. 登入型式： 選擇「**交談式**」
+5. 使用者：輸入您的主機帳號 
 
-6. Click **Transfer Settings**
-7. To avoid the steps of re-entering the password and OTP every time you transfer files, check **Limit number of simultaneous connections** and set the maximum number of connections to **1**.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8785be275b2352339c6959581fc47f07.png)
+
+
+
+6. 點選「**傳輸設定**」
+7. 勾選「**限制同時連線數**」並設定最大連線數「**1**」：避免每次傳輸檔案，需重新輸入 密碼 與 OTP 之步驟。
 
 :::info
-After checking, when multiple files are being transferred, only one file can be transferred at a time. If it is inconvenient for you, it is recommended to connect using the key.
-
+勾選後，當多檔案進行傳輸時，一次僅能傳輸一個檔案，若使用上不便，建議改用金鑰的方式連線。
 :::
 
-8. Click **Connect**.
+8. 點選「**連線**」
 
-<b>Step 3. Enter your supercomputer password and [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC) </b>
+**Step 3. 輸入主機密碼及 [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](../../member/user-guides/member-key-quota/hpc-account-password-otp.md#取得-otp-認證碼)**
 
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3f6b415f290b3987e835b219c3c0d173.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_92b59625eba5f2dbaff85d5c2c030e19.png)
 
 
-9. Enter your supercomputer password
-10. Click **Connect**
+9. 輸入您的主機密碼
+10. 點選「**連線**」 
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7aead02c0c6c3a346672cd55f878fe13.png)
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_41aa3b2d77c946b5025a66710b6d1ae0.png)
-
-
-11. Enter **OTP**
-12. Click **Connect**
+11. 輸入「**OTP**」 
+12. 點選「**連線**」
 
 
 :::info
-1. [<ins>Forget supercomputer account?</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC)
-2. [<ins>Forget password?</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC)
-3. [<ins>How to obtain OTP?</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC)
+1. [<ins>忘記主機帳號？</ins>](../../member/user-guides/member-key-quota/hpc-account-password-otp.md#查詢主機帳號)
+2. [<ins>忘記密碼？</ins>](../../member/user-guides/member-key-quota/hpc-account-password-otp.md#重置主機密碼)
+3. [<ins>如何取得 OTP？</ins>](../../member/user-guides/member-key-quota/hpc-account-password-otp.md#取得-otp-認證碼)
 :::
 
 
 </details>
 
-<br/>
+<div></div>
 
-- After the connection is successful, the **remote site** on the right is the data in the HFS space, and the **local site** on the left is the data of your local machine.
-- The default directory is the user's /home directory, and the data under the /home directory is displayed in the panel below.
+- 連線成功後，右側「遠端站台」即為 HFS 檔案系統內之資料，左側「本機站台」為您本機的資料。
+- 預設目錄即為使用者的 /home 目錄，下方為 /home 目錄底下的資料。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a58a52cfa859a15f09f763dc875ecc68.png)
-
-<br/>
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e69ea54b6ed112035eeee732fdda0016.png)

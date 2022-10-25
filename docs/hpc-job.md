@@ -1,147 +1,149 @@
 ---
+title: HPC 高速運算任務
+sidebar_label: 'HPC 高速運算任務'
 GA: UA-155999456-1
-sync_original_production: 'https://man.twcc.ai/@twccdocs/doc-hpc-job-main-en'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-hpc-job-main-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/doc-hpc-job-main-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-hpc-job-main-zh'
 ---
 
 
-# HPC Job
+# HPC 高速運算任務
 
-TWCC HPC Job uses the international open source software Slurm as the resource scheduler for HPC, a fault-tolerant, highly scalable cluster management system for large and small Linux clusters, and has become the resource manager used by many supercomputers.Slurm itself does not require tuning of the system kernel and is relatively independent. As a cluster management system, Slurm has three key functions:
-* Allocate exclusive or non-exclusive access to a user's computer resources for a period of time.
-* Provide a management framework for resource allocation, execution and monitoring of compute nodes.
-* arbitrate resource allocation through a predefined Queue.
+TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源調度軟體，Slurm 是一個容錯度高、高度可擴展的叢集管理系統，適用於大型和小型的 Linux 群集，至今已成為許多超級計算機所使用的資源管理器。Slurm 本身並不需要針對系統內核（Kernel）做調整，並且相對獨立。作為一個群集管理系統，Slurm 有三個關鍵功能：
+* 可在一段時間內替用戶分配計算資源的獨佔或非獨占使用
+* 提供管理框架，於計算節點上進行資源的分配、執行與監控
+* 可透過排程管理的工作列隊（Queue）來仲裁資源分配
 
-This HPC Job runs containers with Singularity, and users can use the Docker image files provided by this service to perform related AI operations.
+本 HPC 高速運算任務搭配 Singularity 來運行容器，用戶可使用本服務提供的 Docker 映像檔來進行相關 AI 運算。
 
 :::info
-:book: If you need to use more than 8 GPUs or do cross-node high speed computing, please use [<ins>Taiwania2 (HPC CLI)</ins>](https://www.twcc.ai/doc?page=hpc_cli&euqinu=true) and refer to the following tutorial examples:
-- [<ins>Create TAIWANIA2 containers</ins>](https://www.twcc.ai/doc?page=howto-twnia2-create-sglrt-container)
-- [<ins>Run parallel computing with multi-nodes on containers －AI Benchmark</ins>](https://www.twcc.ai/doc?page=howto-twnia2-run-parallel-job-container)
+:book: 若需使用 8 顆以上 GPU 或執行跨節點高速運算，請使用[<ins>台灣杉二號(命令列介面)</ins>](twnia2-hpc-cli/overview.md)，並參考以下教學案例：
+- [<ins>HowTo：建立 TWNIA2 容器</ins>](twnia2-hpc-cli/tutorials/create-twnia2-containers.md)
+- [<ins>HowTo：容器跨節點高速運算－AI Benchmark</ins>](twnia2-hpc-cli/tutorials/ai-benchmark-container.md)
 :::
 
-## Create HPC Job
+## 建立 HPC 高速運算任務
 
-* Enter **HPC Job** Service, and on the **HPC Job Management** page click **CREATE**.
+* 進入「HPC 高速運算任務」服務，在「HPC 高速運算任務管理」頁面，點擊「＋建立」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_aef40da5de183bb3542ebdb3720cb661.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d397f10978041c2b6a160e0692719136.png)
 
 
 :::tip
-You can click on the star <i class="fa fa-star-o" aria-hidden="true"></i> on the left side of **All Services** to pin your favorite services to **My Favorite Services** to speed up the process.
+您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3eb3fe1718abcddb3ff35a0c89b69349.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f46d811575230f74a9c96c0b3edb0d52.png)
 
 
 
-* Enter the Create HPC Job screen and first set the name of the job.
-* Then select the image version/snapshot, hardware specification and input command in the Job 1 block. The content of the command or the program will be executed automatically when the container starts.
+* 進入「建立 HPC 高速運算任務」頁面，首先需設定任務的名稱。
+* 接著在任務 1 區塊選擇映像檔版本/快照、硬體規格及輸入指令，當容器啟動後會自動執行該指令的內容或程式。
  
 :::info
-:bulb: Tip: Please use the [**Hyper File System (HFS)**](https://www.twcc.ai/doc?page=hfs) to upload the content of the program you want to run first.
+:bulb: 提示：請先使用 [「HFS 儲存服務」](hfs/overview.md)上傳欲執行的程式內容。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7bc4ee16088fec1795883d3d426f5615.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e7968b03779782ea62894123f90a592c.png)
 
 
-* Expand "Storage" to see the two HFS high-speed file storage paths mounted by default on this system.
+* 展開儲存資訊，可以看到本系統預設掛載的兩個 HFS 高速檔案儲存路徑。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9efad555551a9b4b7796ea934a826365.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_de333da60735a359b28ab85255d31291.png)
 
 
 
 :::info 
-:book: Refer to
-* [Cloud Object Storage (COS)](https://www.twcc.ai/doc?page=object)
-* [Hyper File System (HFS)](https://www.twcc.ai/doc?page=hfs)
+:book: 參見
+* [雲端物件儲存服務](cos/overview.md)
+* [HFS 儲存服務](hfs/overview.md)
 :::
 
-* HPC jobs can be set up with multiple calculation tasks. Click **ADD JOB** to expand the Job 2 setup block and continue setting up other jobs.
+* HPC 高速運算任務服務可設定多項運算任務，按一下「+新增任務」，可展開任務 2 設定區塊，繼續設定其他任務。
 
 :::info
-:bulb: Tip. Currently, HPC can set up up to five jobs at a time, and each job can run for up to four days.
+:bulb: 提示：目前 HPC 高速運算一次最多能設定五個任務。每個任務最多能跑四天。
 :::
 
-* Then repeat Job 1 to set up multiple compute jobs by selecting the image version/snapshot, hardware specifications, input commands, and storage information.Then click "NEXT : SCHEDULE>".
+* 接著重覆任務 1 的操作，選擇映像檔版本/快照、硬體規格、輸入指令及儲存資訊設定多項運算任務。任務設定完成後接著點擊「下一步：排程>」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_726fc7acecc03d78ce30248a60aec1fc.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0ea8ef0842f5f3602baaead2bd02b2c8.png)
 
 
-* The schedule can choose to execute the job immediately after startup or at a specific time after startup, and then click **NEXT : REVIEW & CREATE>**.
+* 排程設定提供「啟動後立即執行」及「啟動後在指定任務時間開始執行」兩種選擇，選擇任務的執行排程後接著點擊「下一步：檢閱+建立>」。
 
 :::info
-:bulb: Tip: Jobs with a specified time can start as early as the next whole time setting. This job needs to be started manually to initiate the task (including scheduled job).
+:bulb: 提示：指定時間的任務最快可從設定時的下一個整點開始執行，此任務需手動啟動，才會開始執行任務（包括已排程任務）。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_19d1fc514f947a02c25df6a853be6ac5.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2673b4fab8dc081225d8d6b64983d1df.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_18c21896c3caf04edb40f396a54771cd.png)
-
-
-* Check the HPC Job configuration, commands, schedule and quota used, then click **CREATE** to complete.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_df21837ac09ef411fe016a3c93eaf30d.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_07c8012659af88030c30c044e51fb6ad.png)
 
 
+* 檢視 HPC 高速運算任務的配置、命令、排程及預計使用額度等資訊，確認後按下「建立」即完成。
 
-## HPC Job Management
-
-* Once job is created, it will appear at the top of the HPC Job Management list. Make sure to **START** the job and it will be executed immediately or at the specified time when the status changes from **Inactive** to **Active**.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b1d070950bb77b238f2bd7cb22896700.png)
-
-* Click the list to enter the details page.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_19d760828becb73cf8d5814f4fea9620.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_64556c6ec8631e8d1248ca5aa060b9e0.png)
 
 
-* Enter HPC Job Details **CONFIGURATIONS** to view basics, connection information, and job details, or to perform **START**, **STOP**, **DELETE**, and **REFRRESH**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8b6da3563324aa2ca41854ff47fa3be7.png)
+## HPC 高速運算任務管理
+
+* 任務建立後，會出現在 HPC 高速運算任務管理列表的最上方，請務必「啟動」任務，待狀態從 Inactive 變為 Ready 時，任務將立即執行，或在指定時間執行運算
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_99d308c271599172e402f292797b32a1.png)
+
+* 點選該列表，可進入詳細資料頁面。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_433de813c78b4174d620b873754955bb.png)
 
 
-* Click "JOBS" to view the Job Started, Job ended and state.
+* 進入HPC 高速運算任務詳細資料「配置」頁面，可以檢視任務的基本資訊、 連線資訊及任務詳細規格，或執行「啟動」、「停止」、「刪除」和「重新整理」等功能。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bb635fbca2d85123f2b4333fe6558a00.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8af1bf00e626d2040e4e68104c9e184b.png)
 
 
-* Click "VIEW LOG" to view the detailed LOG information of the job execution.
+* 點擊「任務列表」可查看任務的運算開始時間、結束時間及狀態。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_40da7f4c2b4cb5ee07370c5d314926af.png)
+
+
+* 點擊「查看 LOG」可查看任務執行的詳細 LOG 資訊。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7a9928ea5db2d6d8d3c82b71f38b0fa4.png)
 
 
-## Monitoring HPC Job
-* Click **Monitor** on the left side to view the monitoring information service provided by the system for monitoring HPC work, including the cumulative usage of projects, cumulative usage of specific users, total number of GPUs and total GPU time, etc.
+## HPC 高速運算任務監控
+* 點選左側「HPC 高速運算任務監控」，可查看本系統為 HPC 高速運算任務監控提供監控資訊服務，包括計畫的總累計使用量、特定使用者的累計使用量、GPU 的使用數量和使用時間等。
 
 :::info
-:bulb: Tip: Tenant User can only see their own resource usage information. Tenant Admin can see the resource usage of all users in the project so that they can control the resource usage of the whole project.
+:bulb: 提示：計畫使用者僅能看到自己資源使用資訊，計畫管理者可以看到計畫內所有使用者資源使用情形，以便控管整個專案的資源使用額度。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5c169240a4bb66bd95bb5923c3d4ebd6.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c1fe85aae907eb8ca655a93d4e8a2cf0.png)
 
 
-## Connection Usage
+## 連線使用方式
 
-* HPC Job provides data transfer node (xdata1.twcc.ai) and login node (ln01.twcc.ai), using SSH and SFTP connections respectively.
+* HPC 高速運算任務提供資料傳輸節點 (xdata1.twcc.ai)、登入節點 (ln01.twcc.ai)，分別使用 SSH 及 SFTP 兩種連線使用方式。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b352b61cf4888660801573ee9be92b9.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f46fba93e2bf16c33b0ce08ad91ffc1c.png)
 
 
 
-### Connected Data Transmission Nodes  
+### 連線資料傳輸節點 
 
 :::info
-:book: Refer to [Hyper File System](https://www.twcc.ai/doc?page=hfs)，使用 SFTP + FileZilla 以圖形化的操作介面，連線並傳輸檔案。
+:book: 參見 [HFS 高速儲存服務](hfs/overview.md)，使用 SFTP + FileZilla 以圖形化的操作介面，連線並傳輸檔案。
 :::
 
-### Connect To The Node
+### 連線登入節點
 
 :::info
-:book: Refer to[Login node](https://www.twcc.ai/doc?page=hpc_cli#2-%E7%99%BB%E5%85%A5%E3%80%8C%E7%99%BB%E5%85%A5%E7%AF%80%E9%BB%9E%E3%80%8D), connect to the node
+:book: 參見 [登入「登入節點」](twnia2-hpc-cli/user-guides/service-overview/login-node-data-transfer-node.md)，連線登入節點
 :::
 
-* After a successful login, you can directly use Slurm basic command `sinfo -V`, which should return version information for this service and confirm that this account can use Slurm features properly.
+* 登入成功之後，可直接使用 Slurm 的基本指令 `sinfo -V`，應會返回此服務的版本資訊，以確認此帳號可以正常使用 Slurm 的功能。
 
 ```
 sinfo -V
@@ -149,28 +151,28 @@ sinfo -V
 ![image](https://user-images.githubusercontent.com/46370453/184616633-9ed85f25-b638-40c4-9102-a16c0c52db8f.png)
 
 
-## Introduction Of Slurm Basic Commands
+## Slurm 基本指令簡介
 
-This chapter explains the basic Slurm commands and their usage. Users who are already familiar with Slurm can skip these commands. The following is a list of basic Slurm commands. The full usage and descriptions can be found by following the commands with **--help**.
+本章節說明 Slurm 基本指令及用法，已經熟悉 Slurm 的使用者可以略過。以下列出 Slurm 基本指令的用途，在指令後方加上「--help」即可查詢完整用法與說明。
 
-| Command | Description |
+| 指令 | 說明 |
 | -------- | -------- |
-| sacct     | This command is used to list the status of an account's associated job or job sets, such as running, terminated, or completed, and is the most basic job view command.     |
-|salloc|It is used to allocate resources in real time, usually by allocating resources and generating a shell, which is then used to run the srun command to start and execute jobs.|
-|sattach|Standard input, output and error messages can be mounted and unmounted multiple times in the currently running job or job set.|
-|sbatch|Used to submit a job script for later execution. This script usually contains one or more srun instructions to start a parallel job and is one of the most basic job run instructions.|
-|sbcast|It can be used to transfer files from the local hard disk to the hard disk of the node to which the job is assigned, providing better performance on compute nodes with little hard disk space, or compared to shared file systems.|
-|scancel|Can be used to cancel a job or job set that is waiting or running, or to send any signal to all processes associated with a running job or job set.|
-|scontrol|scontrol is an administrative tool for viewing and/or modifying the status of Slurm. Please note that many scontrol commands can only be run as the root user, so they are only available to TWCC administrators.|
-|sinfo|sinfo information contains the status of partitions and nodes managed by Slurm. sinfo has various filtering, sorting and formatting options.|
-|smap|smap contains status information about tasks, partitions and nodes managed by Slurm, but graphically reflects network topology information.|
-|squeue|Squeue displays the status of a job or job srt. It has various filtering, sorting and formatting options. The default is to show running tasks in priority order and then waiting jobs in priority order, which is a common command for viewing jobs.|
-|srun|srun is used to submit tasks, or as individual jobs within a job step. srun has various options for specifying resource requirements, including: minimum and maximum number of nodes, number of CPUs, whether to use specific nodes, and the characteristics of specific nodes (e.g., memory size, hard disk space, certain required features, etc.) A job can contain multi-step tasks that can run continuously or in parallel on independent or shared nodes, depending on the resources of the nodes assigned to them.|
-|strigger|The strigger is used to set, get or view event triggers. Event triggers include events such as a node closing or working close to its time limit.|
+| sacct     | 此指令用於列出帳號的相關任務或任務集之狀態，例如運行中、已終止或是已完成，是最基本的檢視任務指令。     |
+|salloc|用於即時分配資源分配，通常會用於分配資源並且產生一個 shell，然後使用 shell 執行 srun 的命令來啟動並執行任務。|
+|sattach|可將標準輸入、輸出，和錯誤訊息等多次掛載與卸載在當前運行的任務或任務集中。|
+|sbatch|用於提交作業腳本以供以後執行。該腳本通常包含一個或多個用於啟動並行任務的 srun 指令，是最基本的任務運行指令之一。|
+|sbcast|可用於將文件從本地硬碟傳輸到被分配任務的節點硬碟上，可在硬碟空間小的計算節點，或相對於共享文件系統提供更好的效能。|
+|scancel|用於取消正在等待中，或運行中的任務或任務集，也可發出任意訊號給運行的任務或任務集相關的所有進程。|
+|scontrol| scontrol 是用於查看和/或修改 Slurm 狀態的管理工具。請注意，許多 scontrol 命令只能以 root 用戶身份執行，因此只有 TWCC 管理人員可使用。|
+|sinfo|sinfo 資訊包含 Slurm 管理的分區和節點的狀態，sinfo 具有多種的過濾、排序，以及格式選項。|
+|smap|smap 包含 Slurm 所管理的任務、分區，以及節點的狀態資訊，但以圖像方式來反應網路拓墣的資訊。|
+|squeue|Squeue顯示任務或任務集的狀態。它具有各種過濾，排序和格式選項。預設是按優先順序顯示正在運行的任務，然後按優先順序顯示正在等待的任務，是常用檢視任務的指令。|
+|srun|srun 用於提交任務或作為提交任務集中的單一任務。srun有多種選項來指定資源需求，包括：最小和最大節點數，CPU 數，是否使用特定節點，以及特定節點的特徵（例如 Memory 大小，硬碟空間，某些必需的功能等） 。 一個任務可以包含多步驟的任務，並可依照被分配的節點資源，依序或平行在獨立或共享的節點上運作。|
+|strigger|strigger用於設置，取得或查看事件觸發器。事件觸發器包括節點關閉或任務接近其時間限制等事件。|
 
-### Use Sinfo To View Node Status
+### 使用 sinfo 查看節點狀態
  
-The following example directly uses the `sinfo` command to see four states of the node (STATE field), namely drain*, drain, idle, and down, with the "*" asterisk indicating that the node can accept and execute tasks if it does not return to the following example, while down means that the node information is lost.
+以下範例直接使用 `sinfo` 指令，可看到系統內有四種狀態的節點（STATE 欄位），分別為 drain*、drain、idle、down，"*"星號代表這個節點如果再持續不回以下範中可接受任務並執行、down 則是失去該節點資訊。 
 
 
 ```
@@ -185,9 +187,9 @@ sinfo
 
 
 
-### Submit, View And Delete Single Job
+### 提交、查看、刪除單一任務
 
-* Use the `srun` command to schedule a job named demo, sleep 100.
+* 使用 `srun` 指令派送一個名為 demo 的任務，任務內容為 sleep 100。
 
 ```
 srun -J demo sleep 100 &
@@ -195,14 +197,14 @@ srun -J demo sleep 100 &
 ![image](https://user-images.githubusercontent.com/109254397/184206098-e43782b4-cadc-480c-b959-23e71c886e09.png)
 
 
-* Use the sacct command to check the status of the latest job and confirm from the bottom that there is a job named demo running with a job ID of 1962.
+* 使用 sacct 指令查看最近的任務狀況，由最下方確認有一個名為 demo 的任務正在執行中，Job ID 為 1962。
 
 ```
 sacct
 ```
 ![image](https://user-images.githubusercontent.com/109254397/184206909-440fdbbd-6d84-4b01-8612-81c8a8ae6696.png)
 
-* Use the scancel command to delete the job with ID 1962, then enter Confirm Terminate again to terminate the job.　
+* 使用 scancel 指令刪除 ID 為 1962 的任務，再下一次 Enter 確認終止後，即可終止該任務。　
 
 ```
 scancel 1962
@@ -210,7 +212,7 @@ scancel 1962
 ![image](https://user-images.githubusercontent.com/109254397/184207594-2e409d2f-2dfb-4dc4-a5ad-28c01e095654.png)
 
 
-* If you use sacct again, you can see that the ID 1962 job has been terminated (in bold).
+* 再使用 sacct 查看，即可發現 ID 1962 的任務已被終止（粗體字部分）。
 
 ```
 sacct
@@ -218,16 +220,16 @@ sacct
 ![image](https://user-images.githubusercontent.com/109254397/184207841-fb9b8111-f814-48ca-8222-baee3da121ea.png)
 
 
-### Using Sbatch With Singularity Submit Container Jobs
+### 使用 sbatch 搭配 Singularity 提交容器任務
 
-Use the sbatch command to submit the job and use the wrap option to wrap the content to be run. The content is a singulatiry command that uses the ``docker://registry.twcc.ai/ngc/nvidia/ubuntu-v1:flatest'' image file to enable the container and runs the ``**date** command inside the container. id is 1963.
+使用 sbatch 指令提交一個任務，並使用 wrap 選項將要執行的內容包起來。內容為執行一段 singulatiry 的指令，該指令為使用「```docker://registry.twcc.ai/ngc/nvidia/ubuntu-v1:latest```」的鏡像檔來啟用容器，並在容器內執行「date」指令。任務提交後，系統回傳 Job ID 為 1963。
 
 ```
 sbatch --wrap='singularity exec docker://registry.twcc.ai/ngc/nvidia/ubuntu-v1:latest date'
 ```
 ![image](https://user-images.githubusercontent.com/109254397/184208055-6f66fc16-83a7-43bf-b9f1-446cee618d80.png)
 
-* Browse the log information in this directory directly via the tail command.The log format is slurm-Job_ID.out, for example "slurm-1963.out" in the above example. You can see that the image is not enabled, and then execute the date command to display the time.
+* 直接透過 tail 指令，瀏覽該目錄下的 Log 資訊。Log 格式為 slurm-Job_ID.out，如上範例為「slurm-1963.out」。可看到 Image 被解開啟用，隨後執行 date 指令顯示時間。
 
 ```
 tail -f slurm-1963.out 

@@ -1,24 +1,25 @@
 ---
 sidebar_position: 3
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-nvidia-hpc-sdk-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-nvidia-hpc-sdk-en' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-nvidia-hpc-sdk-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-nvidia-hpc-sdk-zh' 
 ---
 
 
 # NVIDIA HPC SDK
 
-- Package official website
+
+- 套件官網
   - [NVHPC SDK](https://developer.nvidia.com/hpc-sdk)
-- Release note
+- release note
   - [nvhpc 21.7](https://docs.nvidia.com/hpc-sdk/archive/21.7/hpc-sdk-release-notes/index.html) 
   - [nvhpc 21.2](https://docs.nvidia.com/hpc-sdk/archive/21.2/hpc-sdk-release-notes/index.html)
   - [nvhpc 20.9](https://docs.nvidia.com/hpc-sdk/archive/20.9/hpc-sdk-release-notes/index.html)
   - [nvhpc 20.7](https://docs.nvidia.com/hpc-sdk/archive/20.7/hpc-sdk-release-notes/index.html)
-- Package source: Download from the official website.
-- The default CUDA version is the latest version in each release.
-- nvhpc has built-in Open MPI, mainly used in OpenACC.
-- nvhpc has built-in qd , and the setting of environment variables is completed.
-- The built-in gcc 4.8.5 of the operating system is installed by default.
+- 套件來源：官方網站下載  
+- 預設 CUDA 版本為每次 release 裡的 newest 版本
+- nvhpc 已內建 Open MPI，主要用於 OpenACC 情境
+- nvhpc 已內建 qd，也已設定 qd 的環境變數
+- 預設搭配作業系統內建的 gcc 4.8.5
 
 <br/>
 

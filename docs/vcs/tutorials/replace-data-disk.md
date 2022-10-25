@@ -1,111 +1,124 @@
 ---
 sidebar_position: 7
-sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-bss-replace-data-vol-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-replace-data-vol-en' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-bss-replace-data-vol-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-bss-replace-data-vol-zh' 
 ---
 
+# 變更資料磁碟
+
+
+若您需要更換使用的資料磁碟類型 (例：將 SSD 轉換為 HDD)，或需要變更資料磁碟容量 (例：由小容量擴充至較大容量)，請您參考此份文件，將原磁碟資料同步至新資料磁碟，再將原資料磁碟刪除。
+
+本文將以轉換資料磁碟類型 (SSD 換為 HDD) 為例，說明操作步驟。
+
 import TOCInline from '@theme/TOCInline';
-
-# Change data disks
-
-If you need to change the type of data disk (e.g., replace SSD with HDD), or change the capacity of data disks (e.g., replace small capacity with larger capacity), please refer to this document to synchronize the data from the original disk to the new data disk, and then delete the original one.
-
-This article will take the conversion of the data disk type (SSD to HDD) as an example to demonstrate the operation steps.
 
 <TOCInline toc={toc} />
 
 <br/>
 
 
-## Linux instances
+## Linux 個體
 
-### Step 1. Confirm the disk type of the instance
+### Step 1. 確認個體資料磁碟類型
 
-* Confirm the type of data disk attached to the instance is SSD.
+* 於使用者介面確認，個體所掛載的資料磁碟為 SSD 類型。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1e3c5a9fdcf43faf5ca5030453acc5dc.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_aeb3f0e8b3a1eb20766a08a88438eff2.png)
 
-* Enter command `df -h` in the VCS instance to view the information of the data disk (file system (Filesystem), capacity (Size), mount path (Mounted on))
+* 虛擬運算個體內輸入`df -h` 指令查看資料磁碟的資訊（檔案系統(Filesystem)、容量(Size)、掛載路徑(Mounted on)）
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_eefbcb3221a84ab64e83b33e6b74f0bb.png)
 
 <br/>
 
+<br/>
 
-### Step 2. Create a new HDD data disk with the same capacity
 
-* Create an HDD data disk on the portal, with the same capacity as the SSD data disk in `Step 1.`
+### Step 2. 新建相同容量的 HDD 資料磁碟
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2e9ce9eeca1b1f380b954e5c64e63a9c.png)
+* 使用者介面新增一個 HDD 資料磁碟，容量同 `Step 1.` 之 SSD 資料磁碟
 
-* Attach the HDD data disk to the VCS instance in `Step 1.`
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_89b884b3a1cffb2f832d84fe30376746.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6ff48b1fba106f7ab6af7b2a0f2e43c6.png)
 
-* Confirm that the instance has successfully attached with two types of data disks.
+* 將 HDD 資料磁碟連結至 `Step 1.` 的虛擬運算個體
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_467ab09ecd7318c9a9f2347cf814e5f8.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_17c6b3ceda5b35e94b4a44981d923e74.png)
 
-* Connect to the VCS instance, mount the HDD data disk to the instance, and initialize it. Please refer to the steps in [Initialize Linux Disks](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-en).
+
+* 確認個體已成功連結兩種類型的資料磁碟
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_654c8d6681f4f4da6ea193a320e6e1f3.png)
+
+
+* 連線進入虛擬運算個體，將 HDD 資料磁碟掛載到 VM 上，並進行初始化，步驟可參考 [初始化磁碟- Linux 個體](./data-disk-init-linux.md)。
 
 <br/>
 
 
-### Step 3. Sync data from SSD data disk to HDD data disk
+### Step 3. SSD資料磁碟資料同步至 HDD 資料磁碟
 
-* Enter command `df -h` to confirm the information of the two types of data disks (file system (Filesystem), capacity (Size), mount path (Mounted on))
+* 輸入`df -h` 確認兩種類型的資料磁碟的資訊（檔案系統(Filesystem)、容量(Size)、掛載路徑(Mounted on)）
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7563dd8d5bf73e816eead1f350fd0ce5.png)
 
-* Switch to the root user.
+
+* 切換成 root 身分。
 
 ```
 sudo -i
 ```
 
-* Enter command `rsync` to synchronize the data of the two data disks.
+* 使用 `rsync` 指令同步兩個資料磁碟的資料。
 
 ```
 rsync -avh <Disk_A> <Disk_B>
 ```
 
 :::info
-- `<Disk_A>` : Enter the mounted path of the SSD data disk.
-- `<Disk_B>` : Enter the mounted path of the HDD data disk.
+- `<Disk_A>`：輸入 SSD 資料磁碟掛載路徑
+- `<Disk_B>`：輸入 HDD 資料磁碟掛載路徑
 :::
 
 <br/>
 
 
-### Step 4. Detach and delete the SSD data disk
+### Step 4. 分離並刪除 SSD 資料磁碟
 
-* Detach the SSD data disk from the VCS instance.
+* 將 SSD 資料磁碟自虛擬運算個體分離。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_96e61f4c339612669400715d9665c27f.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6f9e3237e52ebcf531015cbb2ab4d87c.png)
 
-* Delete the SSD data disk to release storage resources.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cee27bbaeb852a76dbfcd3ece69f8d6d.png)
+* 刪除 SSD 資料磁碟，回收儲存資源。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_717dfbe52ccb104d02c972299c0e83ab.png)
+
+<br/>
 
 <br/>
 
 
-## Windows instances
+## Windows 個體
 
-The disk replacing method of Windows instances is the same as Linux instances in `Step 1.`, but the method of initializing data disk in `Step 2.` and synchronizing data in `Step 3.` are slightly different:
-
-<br/>
-
-### Step 2. Create a new HDD data disk with the same capacity
-
-After creating a new HDD data disk and attached to the VCS instance, please follow [Initialize Windows Disks](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-en) to initialize the disk.
+Windows 個體與 以上 Linux 個體的操作方式雷同，僅 `Step 2.` 初始化資料磁碟的方式與 `Step 3.` 同步資料的方式有些許差異：
 
 <br/>
 
-### Step 3. Sync data from SSD data disk to HDD data disk
 
-*  Once the disk has been initialized, confirm that both types of data disks have been mounted successfully.
+### Step 2. 新建相同容量的 HDD 資料磁碟
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_25092478493e87b17ce423caec4f536e.png)
+新建一 HDD 資料磁碟並將磁碟連結至虛擬運算個體後，初始化步驟請改參考 [初始化磁碟- Windows 個體](./data-disk-init-windows.md)。
 
-* Copy the data of the SSD data disk and paste it to the HDD data disk to complete data synchronization.
+<br/>
+
+
+### Step 3. SSD 資料磁碟資料同步至 HDD 資料磁碟
+
+* 初始化完成後，確認兩種類型的資料磁碟都已掛載成功。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e1f878a79bd6c276509485dd1828f1ff.png)
+
+
+* 複製 SSD 資料磁碟的資料並貼至 HDD 資料磁碟，即可完成資料同步。

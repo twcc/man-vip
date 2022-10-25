@@ -1,87 +1,77 @@
 ---
 sidebar_position: 1
-title: 'Create images'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-vds-instance-image-en'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-vds-instance-image-en'
+title: '建立映像檔'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-vds-instance-image-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-vds-instance-image-zh'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# VCS instance images
+# 虛擬運算個體映像檔
 
-VCS instance images can preserve the state of an instance and the system disk with your operating system. We recommend creating an image for your instance before performing a significant system upgrade or installing special software so that you can roll back to a certain time when needed.
-
+虛擬運算個體映像檔功能可以保留某一時間點個體的狀態、作業系統內建的硬碟的檔案與資料，通常在進行重要的系統更新或特殊軟體安裝前會先建立映像檔，以便需要時可以回復到該時間點的狀態。
 
 :::info
-
-1. **After deleting a VCS instance, the data in the 100 GB system disk will disappear. To back up the system disk, please refer to the following steps to create an image for the instance before deleting it.**
-2. For the difference between Tenant Admin and Tenant User for using VCS instance, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務).
-
+1. **虛擬運算個體刪除後，100 GB 的系統磁碟資料將會隨之消失，若您需保存此空間的資料，請參考以下步驟為個體建立映像檔，再刪除個體。**
+2. 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/compute#虛擬運算服務)。
 :::
-
 
 <br/>
 
-
-## Create an image
+## 建立映像檔
 
 :::caution
-1. **<ins>Before creating an image, it is strongly recommended that you refer to [Best practices to create a VCS instance images](https://man.twcc.vip/en/docs/vcs/user-guides/backup/best-practice-to-create-images/) to ensure effective acquisition of the image.</ins>**
-2. If the image state is stuck in **`QUEUED`** and does not change to **`ACTIVE`** for a long time, please contact the Technical Support: <a href="mailto:isupport@twcc.ai">isupport@twcc. ai</a> for help.
+1. **<ins>建立映像檔前，強烈建議請您參考[建立虛擬運算個體映像檔的最佳做法](./best-practice-create-images.md)，先執行相關工作，以確保有效取得映像檔。</ins>**
+2. 若映像檔狀態停止於 **`QUEUED`** 且久未轉為 **`ACTIVE`**，請洽詢技術支援團隊：<a href="mailto:isupport@twcc.ai">isupport@twcc.ai</a>，我們將協助您解決。
 :::
-
 
 <br/>
 
+### 建立一般映像檔
 
-### Create a general image
-
-Create the image manually.
+手動操作建立映像檔。
 
 <Tabs>
 
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-* Enter **VCS Instance Management** page, click on the instance you want to create an image, then enter **VCS Instance Details** page of the instance, and click **IMAGE**.
+* 進入虛擬運算個體管理頁面，點選欲建立映像檔的個體列表，進入該個體的詳細資料頁面，並點擊「**映像檔**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_449c7b52b1ba61d36cc11e49566bf442.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1eae8d8ba6e77b6985c766895be51052.png)
 
-* Read the instructions in the window, and enter a name and description for the image, then click **OK**.
-* It takes several minutes to create the image. After the **Processing...** prompt disappears, you can continue with other tasks.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_42f2babff73c99d87f6f87c2e2b3ace7.png)
+* 確認視窗提示的資訊，並輸入映像檔的名稱、描述後按「**確定**」。
+* 建立映像檔需數分鐘，等待「**系統需求處理中...**」提示消失後，即可繼續進行其他工作。
 
-* You will be directed to **VCS Instance Image Management** page. Wait for the image state to change from **`QUEUED`** > **`SAVING`** > finally to **`ACTIVE`** before using it.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ed2e50a4cd9980029e9dd4d291761ede.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c4a06905f071589d1866542c3a7e6985.png)
+* 頁面跳轉至虛擬運算個體映像檔管理頁，並等映像檔狀態由 **`QUEUED`** > **`SAVING`**  > 最後變為 **`ACTIVE`** 後即可使用。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b56086ae6e9bd6eb94bf72f918e8d80.png)
 
 </TabItem>
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-
-**Command**
-
+**指令**
 
 ```bash
-twccli mk vcs -s        # Instance ID  
-              -snap     # Create an image
+twccli mk vcs -s            # 個體 ID  
+              -cus-img      # 建立映像檔
 ```
 
 :::info
-1. The parameters in the square brackets **[ ]** are optional and the rest are required.
+1. **[ ]** 中括號內為選擇性參數，其餘為必要參數。
 :::
-
 
 <br/>
 
-**Example**
+**範例**
 
-
-- Create an image for the VCS instance with ID **`918628`** 
+- 為 ID 為 **`918628`** 的虛擬運算個體建立映像檔
 ```bash
-twccli mk vcs -s 918628 -snap
+twccli mk vcs -s 918628 -cus-img
 ```
 
 </TabItem>
@@ -90,16 +80,13 @@ twccli mk vcs -s 918628 -snap
 
 <br/>
 
+### 建立定時映像檔
 
-### Create scheduled images
-
-
-Use `crontab` to create an scheduled image automatically and regularly.
-
+可利用 `crontab` 設定自動定時建立映像檔。
 
 <Tabs>
 
-<TabItem value="TWCC Portal" label="TWCC Portal (Not yet supported)">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站 (TBD)">
 
 <br/>
 
@@ -107,10 +94,9 @@ Use `crontab` to create an scheduled image automatically and regularly.
 
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-- Use `crontab -e` to set the schedule of creating images. For more related functions, please refer to [<ins>CronHowTo</ins>](https://help.ubuntu.com/community/CronHowto).
-- Specify a time for creating the image. The example here is 01:01 midnight.
+- 使用 `crontab -e` 進行設定，相關使用功能請參照 [<ins>CronHowTo</ins>](https://help.ubuntu.com/community/CronHowto)。<br/>
+- 指定任意時間進行快照工作，在此為範例為午夜 01:01。<br/>
 ![](https://i.imgur.com/mQp1kUr.png)
-
 
 </TabItem>
 

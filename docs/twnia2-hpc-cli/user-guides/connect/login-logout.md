@@ -1,53 +1,53 @@
 ---
 sidebar_position: 2
-title: 'Log in Taiwania 2 (HPC CLI)'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-login-and-logout-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-login-and-logout-en'
+title: '登入/登出主機'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-login-and-logout-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-login-and-logout-zh'
 ---
 
-# Log in Taiwania 2 (HPC CLI)
+# 登入主機
 
-After you finish all the prerequisites. Please select login tools according to your operation systems.
+準備工作完成後，請依您的作業系統選擇登入工具。
 
-Windows users may download and install SSH client software (e.g., [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)); macOS user may uses built-in terminal to connect.
+Windows 用戶請下載 SSH client 軟體 (例：[PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)) ；macOS 用戶可直接開啟內建終端機連線
 
-## Login from Windows
+## 本機為 Windows 系統
+
 <!-- 1 start -->
 
 <details class="docspoiler">
 
-<summary><b>Third-party software: MobaXterm</b></summary>
+<summary><b>使用第三方軟體：MobaXterm</b></summary>
 
-### Step 1. Open MobaXterm
+### Step 1. 開啟 MobaXterm
 
-Please download the software from [<ins>MobaXterm Home Edition (Portable edition)</ins>](https://mobaxterm.mobatek.net/download-home-edition.html), unzip it, and run **MobaXterm_Personal_[version]**.
+下載 [MobaXterm](https://mobaxterm.mobatek.net/download-home-edition.html)、解壓縮之後，執行 **MobaXterm_Personal_[版本]**
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1a1e876714cd048e9886c992af469497.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1f3324a847dcf480c383ceed1d7c56a4.png)
+### Step 2. 建立連線
 
-### Step 2. Create a connection
-
-Click **Session** in the upper left corner.
+點擊左上角的 「**Session**」
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_14193d66d4e18c0a81402307bd08b841.png)
 <br/>
 
-Follow the diagram and steps to complete the settings and establish a connection:
+並依照下圖與步驟，完成設定，建立連線：
 
-
-1. Click **SSH**
-2. Enter **ln01.twcc.ai** in `Remote host`
-3. Enter *supercomputer account* in `Specify username`
-4. Click **OK** to establish the connection
-
+1. 點選 「**SSH**」
+2. 在`Remote host`輸入*登入節點網域名稱：ln01.twcc.ai*
+3. 在`Specify username`輸入*主機帳號*
+4. 點選 「**OK**」 建立連線
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_513dfb5381969fff75d9b6f192a0bfd2.png)
 
-5. Enter *supercomputer password* and *OTP* seperately
+
+5. 分別輸入*主機密碼* 與 *OTP*
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d3603c9cb64f35b513296bcb0f3100e4.png)
 
-6. Login successful! You may refer to the system provided instruction manual and instruction for submitting jobs.
+
+6. 登入成功！可參考系統提供概略的操作注意事項、提交 job 使用說明。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_22e1a06c5a1547c3a09f4247e3eca50e.png)
 
@@ -61,25 +61,25 @@ Follow the diagram and steps to complete the settings and establish a connection
 
 <details class="docspoiler">
 
-<summary><b>Third-party software: PuTTY</b></summary>
+<summary><b>使用第三方軟體：PuTTY</b></summary>
 
 <br/>
 
-### Step 1. Open PuTTY
+### Step 1. 開啟 PuTTY
 
-- After opened:
-1. Enter **ln01.twcc.ai**
-2. Click **Open**
+- 開啟後：
+1. 輸入「ln01.twcc.ai」
+2. 點選 「Open」
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d779ddfc20133ba056e34b80365299df.png)
 
 
-### Step 2. Enter supercomputer account, supercomputer password and OTP
+### Step 2. 輸入主機密碼與 OTP
 
-- After finished, the PuTTY terminal window pops out and enter the following information to login:
-1. Enter supercomputer account
-2. Enter supercomputer password
-3. Enter OTP to finish login!
+- 完成後，便會透過 PuTTY 將 Terminal 打開並登入 TWCC 中的 HPC Service：
+1. 輸入主機帳號
+2. 輸入主機密碼
+3. 輸入 OTP，即完成登入！
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2d5943b5d0078544b13320d5e304a14d.png)
@@ -88,21 +88,21 @@ Follow the diagram and steps to complete the settings and establish a connection
 
 </details>
 
-## Login from Linux/macOS
+## 本機為 Linux 或 macOS 系統
 
 <!-- 2. start -->
 
 <details class="docspoiler">
 
-<summary><b>Built-in Terminal</b></summary>
+<summary><b>使用內建終端機</b></summary>
 
 <br/>
 
-### Step 1. Open built-in terminal and enter the login information
+### Step 1. 開啟電腦內建終端機，輸入資訊
 
-1. Enter command `ssh [supercomputer account]@ln01.twcc.ai`
-2. Enter supercomputer password
-3. Enter OTP to finish login!
+1. 輸入指令`ssh [主機帳號]@ln01.twcc.ai`
+2. 輸入主機密碼
+3. 輸入 OTP，即完成登入！
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_04190c45d49a75d1dac66ee61b2a4855.png)
 
@@ -111,21 +111,21 @@ Follow the diagram and steps to complete the settings and establish a connection
 <br/>
 
 :::info
-1. [<ins>Forgot supercomputer account?</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC)
-2. [<ins>Forgot password?</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC)
-3. [<ins>How to obtain OTP?</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC)
+1. [<ins>忘記主機帳號？</ins>](/docs/member/user-guides/member-key-quota/hpc-account-password-otp.md#查詢主機帳號)
+2. [<ins>忘記密碼？</ins>](/docs/member/user-guides/member-key-quota/hpc-account-password-otp.md#重置主機密碼)
+3. [<ins>如何取得 OTP？</ins>](/docs/member/user-guides/member-key-quota/hpc-account-password-otp.md#取得-otp-認證碼)
 :::
 
 
 :::caution
-If you fail to log in 3 times in a row, you will have to wait 15 minutes before you can login again.
+連續登入失敗 3 次，將鎖住用戶 15 分鐘，等時間過後用戶才能再次嘗試登入驗證。
 :::
 
 
 
-## Log out Taiwania 2 (HPC CLI)
+## 登出主機
 
-Enter the command below to log out Taiwania 2 (HPC CLI).
+執行以下指令即可登出主機：
 
 ```bash
 exit

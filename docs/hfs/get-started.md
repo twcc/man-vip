@@ -1,27 +1,28 @@
 ---
-sidebar_label: 'Getting Started with TWCC'
 sidebar_position: 2
+sync_original_production: 'https://man.twcc.ai/@twccdocs/getstarted-hfs-adjust-connec-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/getstarted-hfs-adjust-connec-zh'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-# 【Getting Started with TWCC】
+# 【從零開始 TWCC】調整 HFS 容量並連線傳輸節點
 
-The "Getting Started with TWCC" series of tutorials will provide novice users with an easily understandable explanation of how to use TWCC. We organize related documents here so that you can easily refer to the information you need to take the first step in using TWCC computing resources! <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+【從零開始 TWCC】系列教學文件將以主題式方式為新手用戶深入淺出說明 TWCC 使用方式，將相關文件統整於此，讓您方便參考所需的資訊，順利邁開使用 TWCC 運算資源的第一步！<i class="fa fa-hand-peace-o" aria-hidden="true"></i>
 
-## Guide of the topic and steps
+## 主題與步驟說明
 
-**【Getting Started with TWCC】 Create and connect Interactive Containers**
+**【從零開始 TWCC】調整 HFS 容量並連線傳輸節點**
 
-In this article, you will learn how to register an account, adjust the HFS capacity, and connect to a transport node.
+在此篇文章中，您將學會如何從註冊帳號、調整 HFS 容量，並連線傳輸節點。
 
 
 :::info
 **HFS？**
 
-HFS is one of the TWCC services, it is a scalable, allows simultaneous access to the same file or different files on different nodes and provides high-speed and secure data storage, providing efficient, safe and flexible data transfer for Container Compute Service, HPC Job, and Taiwania 2 (HPC CLI), please refer to[<ins>Service Overview</ins>](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh/%2F%40twccdocs%2Fhfs-overview-zh) to learn more.
+高速檔案系統 (Hyper File System, HFS)為 TWCC 服務之一，為可擴展、高效能的平行檔案系統，允許在不同節點上同時存取同份文件或不同份文件並可提供高速安全的資料儲存，為容器服務及 HPC 高速運算任務、台灣杉二號提供高效、安全及彈性之資料存取與串接，請參考[<ins>服務概觀</ins>](../hfs/overview.md)了解更多。
 
 ::: 
 
@@ -32,12 +33,15 @@ HFS is one of the TWCC services, it is a scalable, allows simultaneous access to
 
 
 :::info
-TWCC services to be used in this article: Member Center and [<ins>Hyper File System</ins>](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh).
+本篇文章將使用到的 TWCC 服務：會員中心、[<ins>高速檔案系統</ins>](../hfs/overview.md)。
 :::
 
 
-## Operating procedure description
+## 操作步驟教學
 
+### Step 1. 準備工作：帳號、計畫(專案)、額度
+
+<!-- 1 start -->
 <details class="docspoiler">
 
 <summary>
@@ -55,17 +59,17 @@ TWCC services to be used in this article: Member Center and [<ins>Hyper File Sys
 </summary> 
 
 
-1. [Sign up for an account](https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=#firstPage)
-2. Once finished, you can [apply for a new project](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fapply-project-and-credit-zh), or ask [Tenant Admin<i class="fa fa-question-circle" aria-hidden="true"></i>](https://man.twcc.vip/en/docs/role_permission/intro) to [add you to an available project](https://man.twcc.vip/en/docs/member/user-guides/project-management/project-member-management).
-3. If you are a Tenant Admin, please [purchase credits](https://man.twcc.vip/en/docs/member/user-guides/billing/apply_credits) for your project, TWCC resources can only be created and used when there are credits in the project.
-4. If you are a Tenant Admin, after the credit application is completed, you can split the project's parent wallet into multiple sub-wallets to allocate a fixed amount to your members. If there is no split, the project's parent wallet credit will be used directly. Please refer to [Project Wallet Management](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-manage-project-wallet-zh) for more information.
+1. [註冊帳號](https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=)
+2. 完成後，您可以[新申請計畫](/docs/member/user-guides/billing/apply-credits.md)，或請 [租戶管理員<i class="fa fa-question-circle" aria-hidden="true"></i>](../member/concepts/overview.md) 將您[加入已存在之計畫](/docs/member/user-guides/manage-projects/manage-project-members.md)。
+3. 若您為租戶管理員，請為您的計畫[購買計畫額度](/docs/member/user-guides/billing/apply-credits.md)，計畫需有額度才能建立並使用 TWCC 資源。
+4. 若您為租戶管理員，額度申請完成後，可將計畫母錢包拆分成多個子錢包分配固定額度給成員使用，若無拆分則統一使用計畫母錢包扣抵額度。請參考 [計畫錢包管理](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-manage-project-wallet-zh) 了解更多。
 
 
 </details>
 
 <!-- Space -->
 
-<div style={{height:8+'px'}}></div>
+<div style={{height:15+'px'}}></div>
 
 <!-- 2. start -->
 
@@ -86,19 +90,19 @@ TWCC services to be used in this article: Member Center and [<ins>Hyper File Sys
 </summary>
 
 
-1. [Sign up for an account](https://tws.twcc.ai/)
-2. Once finished, you can
-    - Apply for a [Free Experience Program](https://member.twcc.ai/module_page.php?module=nchc_service#nchc_service/nchc_service.php?action=trial_prj_apply_step0), or
-    - Contact TWS Sales (sales@twsc.io) for an in-depth understanding of your needs and we will assist you in adding new projects and credits, or
-    - Ask [Tenant Admin<i class="fa fa-question-circle" aria-hidden="true"></i>](https://man.twcc.vip/en/docs/role_permission/intro) to [add you to an available project](https://man.twcc.vip/en/docs/member/user-guides/project-management/project-member-management).
+1. [註冊帳號](https://tws.twcc.ai/)
+2. 完成後，您可以
+    - 申請[免費體驗專案](https://member.twcc.ai/module_page.php?module=nchc_service#nchc_service/nchc_service.php?action=trial_prj_apply_step0)，或
+    - 聯絡業務 (sales@twsc.io) 我們將深入了解您的使用需求，並協助您新增使用專案與額度，或
+    - 請 [租戶管理員<i class="fa fa-question-circle" aria-hidden="true"></i>](../member/concepts/overview.md) 將您[加入已存在之專案](../member/user-guides/manage-projects/manage-project-members.md)。
 
 
 </details>
+<div style={{height:15+'px'}}></div>
 
+### Step 2. 調整 HFS 容量
 
-### Step 2. Adjustment HFS Capacity
-
-TWCC provides a minimum of 100GB of free space for your /home and /work. To increase or decrease the capacity, please refer to the following steps:
+TWCC 提供您至少 /home、/work 各 100 GB 的免費容量空間，若需調提高或調降容量，請參考以下步驟：
 
 <!-- 1 start -->
 
@@ -120,20 +124,20 @@ TWCC provides a minimum of 100GB of free space for your /home and /work. To incr
  </summary> 
 
     
-1. Login [Member Center](https://iservice.nchc.org.tw/nchc_service/index.php) > Select "Member Center" > Select "Purchases" > Select "High Speed File System (HFS)"
+1. 登入[會員中心](https://iservice.nchc.org.tw/nchc_service/index.php) > 選擇「會員中心」> 選擇「申購管理」> 選擇「高速檔案系統 (HFS)」
     
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_14f95145ab43343e88dbbec779da6ace.png)
+![](https://i.imgur.com/7j9JHPK.png)
     
-2. The left half provides capacity, adjustment instructions and personal space usage status,
-   and the right half (top) has the option to change the paid bundle items, On the right half (bottom), you can enter the amount you want to purchase by entering /work or /home > click "Apply" > click "Submit" to adjust the capacity.
+2. 左半部提供容量、調整說明、個人空間使用現況；
+   右半部 (上) 則可選擇變更付費綁定計畫，右半部 (下) 則可以輸入 /work 或 /home 欲購買的額度 > 點選「套用」> 點選「提交」，調整容量。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_23c64c3321fa24ad0d433c0b6b0be3c0.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_958bb3f04232f8928263156f0798b13f.png)
 
 </details>
 
 <!-- Space -->
 
-<div style={{height:8+'px'}}></div>
+<div style={{height:15+'px'}}></div>
 
 <!-- 2. start -->
 
@@ -154,30 +158,30 @@ TWCC provides a minimum of 100GB of free space for your /home and /work. To incr
  </summary>
 
     
-1. Login [Member Center](https://iservice.nchc.org.tw/nchc_service/index.php) > Select **Member Center**> select **Purchases**> select **Hyper File System (HFS)**
+1. 登入[會員中心](https://iservice.nchc.org.tw/nchc_service/index.php) > 選擇「會員中心」> 選擇「申購管理」> 選擇「申購高速檔案系統 (HFS)」
 
 ![](https://i.imgur.com/IzCTOiD.png)
 
-2. The left half provides capacity, adjustment instructions and personal space usage status,
-   and the right half (top) has the option to change the paid bundle items, On the right half (bottom), you can enter the amount you want to purchase by entering /work or /home > click "Apply" > click "Submit" to adjust the capacity.
+2. 左半部個人空間使用現況；
+   右半部 (上) 提供調整說明、並可選擇變更付費綁定計畫，右半部 (下) 則可以拖曳數字的方式，調整 /work 或 /home 欲購買的額度 > 點選「提交」以調整容量。
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_df824be235ea4480028561152af5c57d.png)
 
 
 </details>
-
+<div style={{height:15+'px'}}></div>
 
 :::info
-- Please refer to the price list for rate information: <a href="https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS"><font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}><b>&nbsp;Academic&nbsp;</b></font></a>, <a href="https://man.twcc.ai/@twsdocs/pricing-zh#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS"><font style={{'background-color':'#008ad8', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}><b>&nbsp;Enterprise&nbsp;</b></font></a>
-- You may view your credits and resource usage in the Member Center. <a href="https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-view-billing-resource-usage-zh"><font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px', 'color':'white'}}><b>&nbsp;Academic&nbsp;</b></font></a>
+- 費率資訊請參考價目表：<a href="https://man.twcc.ai/@twccdocs/SJWlN3YDr?type=view#%E9%AB%98%E9%80%9F%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-High-performance-Computing-HPC"><font style={{backgroundColor:'#FF0000', borderRadius: 30+'px', padding: 0.3+'em', fontSize: 16+'px'}}><font style={{color:'white'}}> <b>&nbsp;Academic&nbsp;</b></font></font></a> <a href="../pricing"><font style={{backgroundColor:'#008ad8', borderRadius: 30+'px', padding: 0.3+'em', fontSize: 16+'px'}}><font style={{color:'white'}}> <b>&nbsp;Enterprise&nbsp;</b></font></font></a><div style={{height:15+'px'}}></div>
+- 您可於會員中心檢視額度與資源用量 <a href="https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-view-billing-resource-usage-zh"><font style={{backgroundColor:'#FF0000', borderRadius: 30+'px', padding: 0.2+'em', fontSize: 16+'px'}}><font style={{color:'white'}}> <b>&nbsp;Academic&nbsp;</b></font></font></a>
 :::
 
-### Step 3. Connected transmission node
+### Step 3. 連線傳輸節點
     
-1. Follow the step-by-step tutorial on [Connecting To A Transport Node](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh/%2F%40twccdocs%2Fguide-hfs-connect-to-data-transfer-node-zh) and you will learn how to connect to the transmission node by using the "Key" or "Host Password + OTP Authentication Code" method below. Simply select one for subsequent connections!
-2. After connected, you can [Manage The Files](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh/%2F%40twccdocs%2Fguide-hfs-manage-files-zh)in your space by uploading, downloading or deleting files according to the file management instructions.
+1. 請按照 [連線傳輸節點](user-guides/connect-data-transfer-node.md) 教學步驟一步步完成，您將了解透過「金鑰」或是「主機密碼 + OTP」的方式連線傳輸節點。後續連線擇一使用即可！
+2. 連線後，您即可按照 [檔案管理](user-guides/manage-files.md) 說明，管理您空間的檔案，上傳、下載或刪除。
 
 
-## Related FAQ 
-- [Membership, Project and Billing](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-membership-project-billing-zh)
-- [Hyper File System (HFS)](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh)
+## 相關 FAQ 
+- [會員、計畫與帳務](../faq/member-product-portal/member-project-billing.md)
+- [高速檔案系統 (HFS)](../faq/storage/hfs.md)

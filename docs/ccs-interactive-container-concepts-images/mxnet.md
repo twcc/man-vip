@@ -2,32 +2,31 @@
 sidebar_label: 'MXNet'
 sidebar_position: 8
 title: MXNet
-sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-mxnet-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-mxnet-en' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-mxnet-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-mxnet-zh' 
 ---
 
 
 # <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3022d6e6790c870e499eac8e2c77d53c.png' /> MXNet
 
 
-
-TWCC provides ready-to-use working environment of NGC optimized MXNet. MXNet is a deep learning framework designed for both efficiency and flexibility. It allows you to mix the flavors of symbolic programming and imperative programming to maximize efficiency and productivity. In its core is a dynamic dependency scheduler that automatically parallelizes both symbolic and imperative operations on the fly. A graph optimization layer on top of that makes symbolic execution fast and memory efficient. The library is portable, lightweight, and scalable to multiple GPUs and multiple machines.
+TWCC 提供 NGC optimized MXNet 立即可用的工作環境。MXNet 是致力於提高效能和靈活度的深度學習框架，能讓使用者混合使用符號程式、指令程式的設計風格，將效能和生產力提升到最大值。核心功能是動態相依的調度程式 (dynamic dependency scheduler)，能自動採用平行化運算。最上層的的圖像最佳化層能快速地執行符號程式，並使記憶體運行效率更高。輕量級的可攜式函式庫，能擴展至多個 GPU 與多台機器上運算。
 
 <br/>
 
-## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">Information of Image file version</span>
+## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">映像檔版本資訊</span>
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_583d099d5b65e536231dc2e079ed8c95.png)
 
 :::info
-`py3` and `py2` are different Python versions.
+`py3` 與 `py2` 為 Python 版本差異。
 :::
 
 <br/>
 
 <details class="docspoiler">
 
-<summary><b>Detailed package version information</b></summary>
+<summary><b>點我參考詳細版本套件資訊</b></summary>
 
 - [mxnet-21.08-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_21-08.html#rel_21-08)
 - [mxnet-21.06-py3](https://docs.nvidia.com/deeplearning/frameworks/mxnet-release-notes/rel_21-06.html#rel_21-06)

@@ -1,59 +1,56 @@
 ---
 sidebar_position: 1
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-manage-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-manage-en' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-manage-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-manage-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Manage your container
+# 管理容器
 
-After the container is created, you can view the container information or delete the container by the following ways.
+容器建立後，您可透過以下方式檢視容器資料或刪除容器。
 
 :::info
-For the difference in functional privileges between the Tenant admins and Tenant Users using TWCC, please refer to [<ins>User permissions comparison</ins>](https://man.twcc.ai/@twccdocs/role-main-en).
+租戶管理員、租戶使用者對於開發型容器使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/compute.md#開發型容器)。
 :::
 
 <br/>
 
+## 檢視資訊
 
-## View information
-
-View information such as container ID, name, public IP, state, creation time, creator, image, basic configuration, log, network, storage, etc.
+檢視容器 ID、名稱、公用 IP、狀態、建立時間、建立者、映像檔版本、資源比例、日誌、網路連線、儲存...等資訊。
 
 <Tabs>
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-<TabItem value="TWCC Portal" label="TWCC Portal">
+- 於「**開發型容器管理**」頁可檢視基本資訊。
+- 也可以點選特定容器，進入「**開發型容器詳細資料**」頁檢視更多容器資訊。
 
-- In **Interactive Container Management** page, you can view the basic information.
-- You can also click on a specific container and enter the **Interactive Container Details** page to view more container information.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_66e8d42357ff675c82a5f267559461c0.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ae7be7274e4ae575a119f7bf456fca6d.png)
 
-- Enter the **CONFIGURATIONS** tab of Interactive Container Details, you can view basic information, network, storage and other information of the container, or connect to the container.
-- Also, you can perform functions such as **Duplicate**, **Delete**, **Refresh** and view **Container Log**.
+- 進入開發型容器詳細資料「**配置**」頁面，可以檢視容器的基本資訊、網路、儲存等資訊，連線登入使用該容器
+- 或執行「**複本**」、「**删除**」、「**重新整理**」、查看「**容器日誌**」、啟用或關閉「**刪除保護機制**」等功能。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e4a812d099355186aa618e3fd462c0c8.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cf118734826fcdd287da97a30865c0d5.png)
 
 :::caution
-- The "Container Logs" feature cannot ensure that all your logs are saved and available after the container stops running. It is recommended for you to save your logs to [TWCC HFS](https://man.twcc.vip/en/docs/hfs/intro) or upload them to [TWCC COS](https://man.twcc.vip/en/docs/cos/intro) to ensure record availability.
-- If you would like TWCC maintenance staff to assist you in obtaining the complete records, please write to us (isupport@twcc.io) to authorize processing and do not store sensitive data.
+- 「容器日誌」功能無法確保您的所有紀錄在容器結束運行後，仍可保存及取得，建議您將日誌轉存至 [<ins>TWCC HFS</ins>](/docs/hfs/overview.md) 或 上傳到 [<ins>TWCC COS</ins>](/docs/cos/overview.md) 中，以確保紀錄可用性。
+- 若希望由 TWCC 維運人員協助您取得完整紀錄，請您來信授權處理 (<a href = "mailto: isupport@twsc.io">isupport@twsc.io</a>)，並請勿存放機敏資料。
 :::
 
 <br/>
 
 :::info
-If "Deletion Protection" is enabled, before deleting a resource, you need to disable the protection mechanism before continuing the deletion process, which can prevent the resource from being deleted by mistake and causing service interruption.
+啟用「刪除保護機制」，在您刪除資源之前，需先關閉保護機制後才能繼續進行刪除步驟，可防止資源誤刪，導致中斷。
 ![](https://i.imgur.com/vfuSZhT.gif)
 :::
 
 </TabItem>
-
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-- View container ID, name, creation time, and state.
+- 檢視容器 ID、名稱、建立時間、狀態。
 
 ```bash
 twccli ls ccs
@@ -61,39 +58,38 @@ twccli ls ccs
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8c56a8a4bafb8fd5ee6b4913dc5d9c86.png)
 
-- View all the containers in the project. **(Tenant Admins only)**
+- 檢視計畫下的所有容器 **(僅限租戶管理員使用)**
     
 ```bash
 twccli ls ccs -all
 ```
 
 </TabItem>
-
 </Tabs>
 
 <br/>
 
-## Delete the container
+## 刪除容器
 
-If the container is no longer in use, we suggest you delete it to save costs.
+若容器已無使用，建議您刪除容器以節省成本。
 
 <Tabs>
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-- On the **Interactive Container Management** page, click <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>  on the right side of the container, then click **DELETE** to delete the container.
-- Or select single or multiple containers at once, and click **DELETE** above to delete the containers.
+- 於「**開發型容器管理**」頁可於容器右側點選 &nbsp;<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>&nbsp; ，再點選「**刪除**」刪除容器。
+- 或一次勾選單個或多個容器，點選上方「**刪除**」刪除容器。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bd56c116ab6bc2b6f250f783c234ca79.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2d1182756e5313f7ce9a9d286d19b87a.png)
 
 
-- Also, you can delete the container by clicking **DELETE** in the **Interactive Container Details** page.
+- 另外也可於「**開發型容器詳細資料**」頁，點選上方「**刪除**」刪除容器。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7fe8c7f2b599f604e198780abca4086b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2881ea99d7be4882eab6634184a14f8d.png)
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-- Delete the container with ID `934369`
+- 刪除 ID 為 **`934369`** 的容器
 
 ```bash
 twccli rm ccs -s 934369
@@ -105,5 +101,5 @@ twccli rm ccs -s 934369
 <br/>
 
 :::info
-If [delete protection](#view-information) is enabled, the resource cannot be deleted directly, please close it first and then delete the resource.
+若已開啟「[<ins>刪除保護機制</ins>](#檢視資訊)」，將無法直接刪除資源，請您先關閉後再執行刪除。
 :::

@@ -1,84 +1,84 @@
 ---
 sidebar_label: '新舊專案轉移'
 sidebar_position: 2
-sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-project-data-transfer-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-project-data-transfer-en' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-project-data-transfer-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-project-data-transfer-zh' 
 ---
 
-# Transfer data from old project to new project
 
-If you already applied for a new project and hope that the data in old project can be continuously used, please refer to this documentation to transfer your data via **Cloud Object Storage (COS)**.
+# 新舊專案轉移
 
-
-**Sequence of data transferring：Old project COS** <i class="fa fa-forward" aria-hidden="true"></i> Download to **your local computer** <i class="fa fa-forward" aria-hidden="true"></i> Upload to **New project COS**
+若您申請了新專案並希望可沿用舊專案之資料，可參考本文的說明，透過**雲端物件儲存服務 (Cloud Object Storage, COS)** 轉移您的資料。
 
 
-According to your operating system, refer to [Windows local computer](#Windows-local-computer) or [Linux local computer](#Linux-local-computer).
+**資料轉移順序：舊專案 COS** <i class="fa fa-forward" aria-hidden="true"></i> 下載至**本機端** <i class="fa fa-forward" aria-hidden="true"></i> 上傳至**新專案 COS**
+
+
+請依您的本地端作業系統參考[本地端為 Windows 環境](#本地端為-Windows-環境) 或 [本地端為 Linux 環境](#本地端為-Linux-環境)。
 
 :::info
-Hyper File System (HFS) is attached to the user account, rather than project. Therefore, the data in HFS storage space does not need to transfer, and could still be accessed in the new project.
+因高速檔案系統 (HFS) 是依附於個人帳號，非依附於專案，因此此儲存空間之資料無需轉移，於新專案仍可存取使用。
 :::
 
 
-## Windows local computer
+## 本地端為 Windows 環境
 
-### Step 1. Back up the old project data to COS
+### Step 1. 將舊專案之資料備份至 COS
 
-For those who use Virtual Compute Service (VCS), please refer to [this document](https://www.twcc.ai/doc?page=backup) to back up the old project data in VCS instance to COS.
+虛擬運算服務用戶可參考[此文件](../../cos/tutorials/backup-synchronize-restore)，先將舊專案虛擬運算個體的資料備份至 COS。
 
 :::info
-Users of CCS and Taiwania 2 can skip this step because the default storage of the two services is Hyper File System (HFS).
+因容器運算服務、台灣杉二號之計算資源使用的預設儲存系統為高速檔案系統 (HFS)，個人資料可跨專案使用，因此可略過此步驟。
 :::
 
-### Step 2. Connect old and new COSs with S3 Browser in your local computer
+### Step 2. 將新舊專案 COS 連結至本機 S3 Browser
 
-After you back up, please download S3 browser to your local computer, and connect with COSs of your old project and new project.
+備份完成後，請在本地端下載 S3 browser，並連結您的新、舊專案的 COS。
  
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cc9c3993933db51234e51b0cc5e75e25.png)
 
 
-### Step 3. Download the old project data to local computer
+### Step 3. 將舊專案資料下載至本機端
 
-S3 browser does not support direct data transfer, please select the file you need to transfer and download it to local.
-
+S3 browser 不支援直接移轉資料，因此請選取您需轉移的檔案，並下載至本地端
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d41a89373a36a2eba08bd874ee1fa6b1.png)
 
 
 
-### Step 4. Upload the data to new project
+### Step 4. 資料上傳至新專案
 
-- Switch to new project account in local S3 browser 
+- 將本地端 S3 browser 切換至新專案帳戶
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fe577644e4b84612e23f54dd6c283968.png)
 
 
-- Then, upload the local data to the COS of new project, the data will be successfully transferred to the new project!
+- 再將本地端檔案上傳至新專案 COS 後，就成功將資料轉移至新專案囉！
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e12c4399174d32bbe619eae62431d9dd.png)
 
 
     
-## Linux local computer
+## 本地端為 Linux 環境
 
-### Step 1. Back up the old project data to COS
+### Step 1. 將舊專案之資料備份至 COS
 
-For those who use Virtual Compute Service (VCS), please refer to [this document](https://www.twcc.ai/doc?page=backup) to back up the old project data in VCS instance to COS.
+虛擬運算服務用戶可參考[此文件](../../cos/tutorials/backup-synchronize-restore)，先將舊專案虛擬運算個體的資料備份至 COS。
 
 :::info
-Users of CCS and Taiwania 2 can skip this step because the default storage of the two services is Hyper File System (HFS), and the data in HFS can be used in multiple projects.
+因容器運算服務、台灣杉二號之計算資源使用的預設儲存系統為高速檔案系統 (HFS)，個人資料可跨專案使用，因此可略過此步驟。
 :::
 
-### Step 2. Connect old project COS with local computer
+### Step 2. 將舊專案 COS 連結至本機端
 
-Please refer to [this document ](https://man.twcc.ai/@twccdocs/cosbackup-en#%E5%AE%89%E8%A3%9D%E8%88%87%E8%A8%AD%E5%AE%9A-s3cmd)to install s3cmd, and enter **Old project data (Access Key & Secret Key)** to connect old project COS with local computer via s3cmd.
+請參考[此文件](../../cos/tutorials/backup-synchronize-restore.md#安裝與設定-s3cmd)安裝 s3cmd，輸入**舊專案資料 (Access Key、Secret Key)**，透過 s3cmd 將本機端連結舊專案 COS。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c9dd90a6105018eecaa8f3e6f2d4f0fc.png)
 
     
-### Step 3. Download the old project data to local computer
+### Step 3. 將舊專案資料下載至本機端
 
-Enter the following command to download old project data to local.
+輸入以下指令，將舊專案 COS 檔案下載至本機端
 
 ```bash
 s3cmd get --recursive s3://<BUCKET_NAME>/<FOLDER_NAME or FILE_NAME> <LOCAL_DIR>
@@ -87,15 +87,15 @@ s3cmd get --recursive s3://<BUCKET_NAME>/<FOLDER_NAME or FILE_NAME> <LOCAL_DIR>
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_753677494251c17c870f9b816d6ec86e.png)
 
 
-### Step 4. Connect new project COS with local computer
+### Step 4. 將新專案 COS 連結至本機端
 
-Enter command `s3cmd --configure` again, and enter related information to connect to new project COS.
+重新輸入 `s3cmd --configure` 指令，輸入資訊，連結新專案的 COS
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c9dd90a6105018eecaa8f3e6f2d4f0fc.png)
 
-### Step 5. Upload the data to new project
+### Step 5. 資料上傳至新專案
 
-Upload the local data to the COS of new project, the data will be successfully transferred to the new project!
+再將本地端檔案上傳至新專案 COS 後，就成功將資料轉移至新專案囉！
 
 ```bash
 s3cmd put  --recursive <LOCAL_FILE_NAME> s3://<BUCKET_NAME>

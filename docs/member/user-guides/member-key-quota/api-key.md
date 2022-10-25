@@ -1,64 +1,60 @@
 ---
 sidebar_position: 6
-sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-api-key-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-api-key-en' 
+sync_original_production: 'https://man.twcc.ai/@twsdocs/guide-service-api-key-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twsdocs/guide-service-api-key-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+# API 金鑰管理
 
-# API key management
+TWCC 系統提供每位租戶一把主金鑰（API 金鑰），金鑰會依計畫、使用者及使用身份而不同。透過此金鑰即可以 API 呼叫的方式使用 TWCC 相關服務。「API 金鑰管理」提供金鑰的資訊、延長期限、新增、删除等功能，請妥善管理金鑰。
 
-The TWCC system provides each tenant with a master key (API key), which varies by the project, user, and role. With the key, you can use TWCC related services through API calls. "API Key" provides functions such as key information, period extension, adding, and deleting, etc. Please manage your keys properly.
+* 點擊右上角使用者名稱，再點選「API 金鑰管理」。
 
-* Click the user name in the upper right corner, and then click "API Key".
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9503da6c578c4d03bc807a09af1e61ae.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6a8f74f6c03caf178ce235ed9ab6e936.png)
+* 進入「API 金鑰管理」列表頁面，可查看金鑰的 ID、金鑰、計畫、建立時間及有效時間等資訊。
 
-
-* After entering the "API Key" list page, you can view your keys information, such as key ID, key, project, creation time, expiration time, etc.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9908c827238d718c82f508ac045469d4.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d5fa093e330094d93643f96fa628838a.png)
 
 <br/>
 
 
-### Extend the validity of the key
+## 延長金鑰期限
 
-* In the "API Key Management" list page, click the menu button icon and then click the "Edit" button.
+* 在「API 金鑰管理」列表項目，點擊選單按鈕圖再點擊「編輯」按鈕。　
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4a5fd5c2355f01a455595e0a80dd02b5.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_775468e900cb37405dd3e1cba212677a.png)
 
-* In the "Edit API Key" window, enter the number of days you want to extend, and then click "OK".
+* 在「編輯金鑰」視窗，輸入欲延長的天數，再點擊「確認」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c442108e716759abbe3b0816012d050a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_92bd126db2aa93df21e4d97583fa66ab.png)
 
-* Go back to the "API Key Management" list page, and you can see the extended validity time.
+* 回到「API 金鑰管理」列表頁面，即可看到延長後的有效時間。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bed768c1b1569f5662641dd90957b932.png)
-
-<br/>
-
-
-### Create API Key
-
-* Click "+Create API Key", then click "OK" in the "Create API Key" window to generate a new key.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1f869f79f8332362d3416f3df1680277.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_34644d903d88237dab22250e3ce02e29.png)
 
 <br/>
 
 
-### Delete API Key
+## 新增金鑰
 
-* Check the key you want to delete and click "Delete".
+* 點擊「＋新增金鑰」，接著在「新增金鑰」視窗中點擊「確認」，即可產生一把新的金鑰。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f0849e1792546c74d96b8731233b9f68.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3df137ddd5c24ab718f89ba9e247a3b0.png)
+
+<br/>
 
 
+## 删除金鑰
 
-* Before deleting the key, please note that once the key is deleted, it cannot be recovered. Click "OK" to delete the selected key.
+* 勾選欲删除的金鑰，再點擊「删除」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5d4bdb414769d27e636955c30ae931de.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c051b133bdcf3d71b0791b0d42faa401.png)
+
+
+* 删除金鑰前請注意，金鑰一旦删除將無法挽回，點擊「確認」即可删除所選取的金鑰。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_eeaf48bc87753a134e8033d59ad3b970.png)

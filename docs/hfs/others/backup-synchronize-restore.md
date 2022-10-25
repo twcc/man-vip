@@ -1,43 +1,42 @@
 ---
 sidebar_position: 8
 title: 空間管理政策
-sync_original_production: 'https://man.twcc.ai/@twccdocs/terms-hfs-storage-mngmt-policies-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/terms-hfs-storage-mngmt-policies-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/terms-hfs-storage-mngmt-policies-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/terms-hfs-storage-mngmt-policies-zh'
 ---
 
-# Hyper File System (HFS) storage management policies
+# 高速檔案系統 (HFS) 空間管理政策
 
-### Approved space for private and public disks
-- /home directory: home directory of each account (register for an account to get 100 GB of free storage space)
-- /work directory: public directory (work) directory of each account (sign up and you can get 100 GB of free storage)
+### 個人及公用磁碟核定空間
+- /home 目錄：每個帳號之家目錄 (註冊帳號即可獲得 100 GB 免費空間)
+- /work 目錄：每個帳號之暫存工作目錄 (註冊帳號即可獲得 100 GB 免費空間)
 
 :::info
-- [1] From September 1, 2021, temporary working directory area for each account of Ministry of Science and Technology Projects(/work)free quotas, from 100 GB to 1500 GB.
-- [2] If the storage space is insufficient, you can go to [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i ></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) to purchase for expansion. Please refer to [<ins>Price List</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS) for the pricing and adjustment method.
+- [1] 自2021年9月1日起，國科會(原科技部)計畫每個帳號之的暫存工作目錄區域(/work)免費額度，由原本的 100 GB，提高到 1500 GB。
+- [2] 如空間不敷使用時，您可以到[<ins>會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](../../member/user-guides/member-key-quota/go-to-member-center.md) 購買擴充。購買價格與調整方式請參考[<ins>價目表</ins>](../../pricing.mdx)。
 :::
 
-### Public disk storage management policies and instructions
-- The public disk space (/work) is used for short-term temporary storage of computing jobs. If you need to keep it for a long time, please move the files to other storage services of the NCHC TWCC.
-- The NCHC will not make any backup of the public disk space, and it cannot be recovered if the system is damaged or files are deleted.
-- For the files in the public disk space, users need to back up and kept by themselves. If the files are damaged, lost or deleted, NCHC will not be responsible for any restoration or compensation.
-- To ensure that users have enough temporary storage space to complete computing, the system will automatically clear files that have not been accessed for more than 28 days.
-- Users shall not intend to circumvent the system cleaning policy. It's prohibited to the use of commands or programs (such as touch or other similar commands and scripts) to change the last access time of files. This behavior will seriously affect the performance of public disk space.
-- The public disk space of the NCHC is a high-performance and valuable research facility and it's only used for high-performance computing purposes. It is forbidden to store private files that are not related to high-performance computing purposes.
-- If users are found to have violated the foregoing prohibitions and not changing after repeatedly advised, NCHC has the right to suspend the user's access to the file system. If the user's computing being interrupted, data loss or other derivative losses are caused, NCHC will not be responsible for any compensation liability.
-- The administrator will clean up the /tmp directory of the login node and data transfer node irregularly to maintain the stable operation of the system. Please avoid storing important data in /tmp directory.
-
+### 公用磁碟空間管理政策與使用須知
+- 公用磁碟空間 (/work) 為計算工作短期暫存之用，若需長期保留，請將檔案移至國網中心 TWCC 其它儲存服務。
+- 國網中心不會對公用磁碟空間做任何備份，若系統毀損或檔案刪除皆無法復原。
+- 公用磁碟空間上的檔案用戶需自行備份保留，若發生檔案毀損、遺失或刪除，本中心不負任何還原或賠償責任。
+- 為確保用戶有足夠的暫存空間完成計算工作，系統會自動清除超過28天以上未存取的檔案。
+- 用戶不得意圖規避系統清理政策，禁止使用指令或程式 (如touch或其他作用類似的 command、script) 變更檔案最後存取時間，此行為將嚴重影響公用磁碟空間效能。
+- 國網中心公用磁碟空間為高性能貴重研究設施、僅限於有關高速計算之目的使用，禁止存放與高速計算目的無關之私人用途檔案。
+- 若發現用戶違反前述禁止事項並屢勸不改，國網中心有權暫停用戶對該檔案系統的存取權限，若因而造成用戶計算中斷、資料遺失或其他衍生損失，本中心亦不負任何賠償責任。
+- 管理員將會不定期清理登入節點與檔案傳輸節點的 /tmp 目錄以維持系統正常運作，請避免於 /tmp 存放重要資料。
 
 :::info
-The command to view the last access time of the file is:
+查看檔案最後存取時間的指令為：
 ```bash
 ls -ula /path/to/your_scratch_file or directory
 ```
 :::
    
-- Backup policy for private disk space (/home ) and public disk space (/work)
+- 個人磁碟空間 (/home )、 公用磁碟空間 (/work ) 備份政策
     
 
-|  | /Home |/Work|
+|  | /home |/work|
 | -------- | -------- |-------- |
-| Backup policy  | :white_check_mark: |:negative_squared_cross_mark:|
-| File cleaning policy | :negative_squared_cross_mark:  | 28 days (apply to both free and paid space), touch is prohibited |
+| 備份政策  | :white_check_mark: |:negative_squared_cross_mark:|
+| 檔案清理政策 | :negative_squared_cross_mark:  | 28天 (免費或付費空間均須遵守)、禁止 touch |

@@ -1,23 +1,26 @@
 ---
 sidebar_label: '其他操作'
 sidebar_position: 4
-sync_original_production: 'https://man.twcc.ai/@twccdocs/role-other-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-other-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/role-other-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-other-zh' 
 ---
 
-# Comparison of role permissions of TWCC： Other Operations
+
+# TWCC 角色權限比較：其他操作
 
 
-| Function | Tenant Admin | Tenant User |
+| 功能 | 租戶管理員 | 租戶使用者 |
 | -------- | -------- | -------- |
-|View personal API key|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
-|View all API keys in the project|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|
-|Manage personal API key: edit & delete|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
-|Manage all API keys in the project: edit & delete|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|
-|View personal API activity history|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
-|View all API activity history in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|
-|Quota management|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|
-|View amount of personal resources|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
-|View amount of resources from project members|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|
-|View personal credits|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
-|View project credits|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|
+|檢視個人 API 金鑰|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
+|檢視所有專案成員之 API 金鑰|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|
+|管理個人 API 金鑰：編輯、刪除|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
+|管理所有專案成員之 API 金鑰：編輯、刪除|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|
+|檢視個人 API 使用紀錄|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
+|檢視所有專案成員之 API 使用紀錄|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|
+|資源配額管理|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|
+|檢視個人資源創建數量|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
+|檢視專案所有成員資源創建數量|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|
+|檢視個人額度|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
+|檢視專案額度|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|
+
+

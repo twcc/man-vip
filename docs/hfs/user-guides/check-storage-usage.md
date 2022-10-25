@@ -1,20 +1,22 @@
 ---
 sidebar_position: 3
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-hfs-check-storage-usage-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-hfs-check-storage-usage-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-hfs-check-storage-usage-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-hfs-check-storage-usage-zh'
 ---
 
-# Check storage usage
+# 查看儲存空間使用容量
 
-- After signing into TWCC, click **View Details** to view the HFS storage usage.
+- 登入 TWCC 後，點入「查看服務概況」，即可查看 HFS 儲存容量
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_da9e8e4956f958fc1ad77c0fd1d86e5e.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_92ad1d97057279a623ba84c54928ac41.png)
 
-- You can view the total storage, used and available capacity of the Home and Work directory, and distinguish between free and purchased capacity.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_039830c8fab11b73cd5f1db21a35bf8b.png)
+- 可分別檢視 Home、Work 目錄總儲存容量、已使用與可使用的容量，並可點選「**調整容量**」擴充容量。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_91746d12d0fbb0669e71f71ff9b18526.png)
+
 
 
 :::info
-If the storage space is insufficient, you can expand the capacity. Please refer to the [<ins>Price List</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS) for pricing and adjustment method.
+若空間不敷使用您可以擴充容量，購買價格與調整方式請參考[<ins>價目表</ins>](../../pricing.mdx)。
 :::

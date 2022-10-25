@@ -1,55 +1,53 @@
 ---
 sidebar_position: 3
-sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-vcs-setup-env-variable-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-vcs-setup-env-variable-en' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-vcs-setup-env-variable-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-vcs-setup-env-variable-zh' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Set environment variables
+# 設定環境變數
 
-In this document, we will explain how to set the environment variables you need to dynamically adjust your application setting to meet your environment requirements while creating [<ins>Interactive Containers</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-create-zh) / [<ins>VCS Instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh) via TWCC portal or TWCC CLI.
-
+本文說明如何透過 TWCC 使用者網站、TWCC CLI，在建立 [開發型容器](/docs/ccs-interactive-container/user-guides/create-connect/create-container) / [虛擬運算個體](../user-guides/create/create-instances.md) 時，指定您所需的環境變數，動態調整應用程式的設定，以符合您對環境的需求。
 
 :::info
-This function is only available for certain images:
-- Interactive Containers：Most of them are available (If you need to use Matlab (public preview version) or Custom Image, please contact <a href = "mailto:isupport@twcc.ai"><ins>Technical Support</ins></a>).
-- VCS Instance：Linux image.
+此功能僅適用特定映像檔：
+- 開發型容器：多數皆可使用 (Matlab (公開預覽版)、Custom Image 若需使用此功能，請洽<a href = "mailto:isupport@twcc.ai"><ins>技術支援服務</ins></a>)。
+- 虛擬運算個體：Linux 映像檔
 :::
 
 
-For example, if you create the container with [TensorFlow image](https://man.twcc.ai/@twccdocs/ccs-concept-image-main-en/%2F%40twccdocs%2Fccs-concept-image-tensorflow-en), you can set the environment variable [`TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH`](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-user-guide/index.html#tf_disable_cudnn_rnn_tensor_op_math) to enable/disable the Tensor Core math when creating the container.
+例如：若選用 [TensorFlow 映像檔](/docs/ccs-interactive-container-concepts-images/tensorflow)建立容器，您在建立容器時，即可設定 [`TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH`](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-user-guide/index.html#tf_disable_cudnn_rnn_tensor_op_math)環境變數來開啟/關閉 Tensor Core math。
 
-TensorFlow image enables Tensor Core math by default:
+
+TensorFlow 映像檔預設開啟 Tensor Core math：
 
 ```
-The default value for the environmental variable (Key=Value): TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH=0
+環境變數預設值 (Key=Value)：TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH=0
 ```
-If you need to disable this function, you can assign `1` to the variable when creating the container:
+
+若需設定為關閉，您可在建立容器時指定 value 為 `1`：
 
 <br/>
 
-
-### Step 1. Create a container/VCS instance and set environment variables
+### Step 1. 建立容器 / 虛擬運算個體、指定環境變數
 
 <Tabs>
 
-<TabItem value="TWCC Portal" label="TWCC Portal">
+<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
 :::info
-The following example uses a container for instruction. You can also use the same method to set the environmental variables when [<ins>creating a VCS instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-en).
+以下以開發型容器為範例，虛擬運算個體也是相同的設定方式，在[<ins>建立個體</ins>](../user-guides/create/create-instances.md)時指定環境變數。
 :::
 
 
-When [<ins>creating a container</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-create-en), set the environment variables in the **ENVIRONMENT VARIABLES** tab and complete the creation and, then the deployment is done.
+[建立容器](/docs/ccs-interactive-container/user-guides/create-connect/create-container)時，在「**環境變數**」頁指定環境變數，並建立容器，即部署完成。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a59deaba5daa077c74e5e4e4c319117d.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c1248dbb9deb8a4b57a4f8c8eddb5c36.png)
 
 :::info
-
-The key and value of environment variables are written in the following format (JSON), so you can set multiple variables at once:
+環境變數 Key 與 Value，設定格式如下 (JSON)，可一次設定多筆變數：
 
 ```
     {
@@ -76,18 +74,20 @@ twccli mk ccs -envk TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH -envv 1
 <br/>
 
 
-### Step 2. Check environment variables
+### Step 2. 確認環境變數
 
-[Connect to the container](https://man.twcc.ai/@twccdocs/guide-ccs-connect-en) and use the following command to confirm that the environment variables are imported to the container.
+[連線容器](/docs/ccs-interactive-container/user-guides/create-connect/connect-container)，並使用以下指令，可確認環境變數已寫入容器。
 
 ```bash
 echo $BUFFER
 ```
 
 :::info
-[<ins>Connect to the VCS instance</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-en) and confirm that the environment variables are imported to the instance using the following commands.
+[<ins>連線虛擬運算個體</ins>](../user-guides/connecting/linux/from-windows.md)，並使用以下指令確認環境變數已寫入個體。
+
 ```bash
 echo $Key
+
 # Enter your key, e.g., $TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH
 ```
 :::

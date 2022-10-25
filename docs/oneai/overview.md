@@ -1,13 +1,11 @@
 ---
 title: '服務概觀'
+sidebar_label: 'OneAI'
 sidebar_position: 1
 sync_original_production: 'https://man.twcc.ai/@twccdocs/oneai-overview-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/oneai-overview-zh'
 ---
 
-:::info Coming soon!
-We are still working on the English version of this document. Thanks for your patience!
-:::
 
 # ![-](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a997c10eb5d383ad9ec2ae25a359f64e.png) 服務概觀
 
@@ -15,7 +13,7 @@ We are still working on the English version of this document. Thanks for your pa
 ## TWCC OneAI 提供各式工具，協助您打造與管理 AI 解決方案的生命週期！
 
 
-透過 [訂閱 TWCC OneAI](https://man.twcc.ai/@twccdocs/oneai-subscription-policy-zh)，您可以與計畫成員隨時隨地取得全套 AI 應用的各種新方法。
+透過 [訂閱 TWCC OneAI](subscription-policies.md)，您可以與計畫成員隨時隨地取得全套 AI 應用的各種新方法。
 
 <img style={{'background-color':'white'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_17ca3bdc0b7cad474497f9ee929130ec.png"/>
 

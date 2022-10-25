@@ -1,122 +1,123 @@
 ---
 sidebar_position: 1
-sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-intactv-howto-en'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-intactv-howto-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-intactv-howto-zh'
 ---
-# Python package installation guide of TWCC Interactive Container
 
-This document introduces operations and precautions of installing Python packages via pip on TWCC Interactive Container, also includes solutions when programs fail.
+# Python 套件安裝指南
 
+本文件主要目的為說明於 TWCC 開發型容器服務上透過 pip 安裝 Python 套件 (package) 的相關操作及應注意事項，以及程式執行失敗的測試及排除方式。
 
 :::info
-For more information, please refer to [TWCC Interactive Container](https://www.twcc.ai/doc?page=container) 
+更多資訊，請參考[TWCC 開發型容器](../user-guides/create-connect/create-container.md) 
 :::
 
-## Package installation tool
+## 套件安裝工具
 
-TWCC Interactive Container service is based on pre-loaded AI framework of [NGC Image](https://docs.nvidia.com/deeplearning/frameworks/support-matrix/index.html), in which pip is pre-installed as a Python package manager. You can install the Python package using other tools, such as downloading the offline installation package. We use pip as the installation tool in this document.
+TWCC 開發型容器服務是基於 [NGC Image](https://docs.nvidia.com/deeplearning/frameworks/support-matrix/index.html) 的預載 AI Framework，其中已預安裝 pip 作為 Python 套件管理程式，您可以透過其他的方式安裝 Python 套件，例如下載離線安裝包等，而本文則會以 pip 作為安裝工具。
 
+## 套件安裝位置
 
-## Package installation path
-
-You can choose to install in the system directory (as root user) or the user's home directory (Hyper File System, HFS) when installing packages using pip:
-
-- Installing in the system directory: The life cycle of the development environment would be consistent with that of your container. You can create a container duplicate to save these packages, and then create an Interactive Container from the duplicate when needed, then you will get a consistent development environment. However, if you choose another container, you have to reinstall the packages.
+使用 pip 安裝套件，可選擇安裝於系統目錄 (需 root 身份) 或使用者的 Home 目錄 (高速檔案系統, HFS)：
+- 安裝於系統目錄，開發環境將會隨著容器本身的生命週期存續，您可以選擇製作容器複本將這些套件隨著容器複本一同保存下來，之後再選擇容器複本啟動開發型容器，將可以得到一致的開發環境。但若選擇其他的容器，則必須重新再安裝套件。
 　　
-- Installing in the user's home directory: In principle, the package will be stored permanently in Hyper File System (HFS). By default, the HFS mounted to TWCC Interactive Container is the user's home directory. In other words, the packages will be brought to the new container without reinstallation when you create a new one. **However, TWCC provides multiple AI Frameworks, and the Python version of them may be different, which may cause package conflicts.**
+- 安裝套件於使用者 Home  目錄，套件將會存放於高速檔案系統 (HFS) 上，原則上是永久存續。TWCC 開發型容器預設會掛載 HFS 作為使用者 Home 目錄，換句話說，不論開啟任何容器，套件都會被帶到新容器中，不需要再重新安裝，**但也因為 TWCC 提供的 AI Framework 眾多，其中 Python 預載的版本不盡相同，而可能產生相關套件衝突問題。**
 
 :::info
-1. To ensure that the data is complete, please store your **important data** in Hyper File System (HFS) and avoid storing it in the system directory.
-2. If you install packages in home directory, we recommend using a Python package manager such as pipenv or Conda to avoid Python package conflicts.
-3. For more information, please refer to [Hyper File System (HFS)](https://www.twcc.ai/doc?page=hfs).
+1. 為確保資料完整不遺失，請將**重要資料**存放於高速檔案系統 (HFS)，避免存放於系統目錄。
+2. 若將套件安裝於 Home 目錄，建議搭配 pipenv 或 Conda 等 Python 套件管理工具，以避免 Python 套件衝突問題。
+3. 更多資訊，請參考[高速檔案系統 (HFS)](../..//hfs/overview.md) 
 :::
 
-## How to install packages?
- 
-You should consider the above factors and choose the appropriate package installation path when using the Interactive Container:
+## 套件安裝方式
+  　
+使用者應考量上述因素，在使用開發型容器的開發過程中，自行選擇適合的套件安裝位置：
 
 
-- Installing in the system directory:
+- 安裝於系統目錄內，請使用：
 
 ```bash=
 sudo -s -H pip install {package name}
 ```
  
-- Installing in the user's home directory:
+- 安裝套件於使用者 Home 目錄，請使用：
 
 ```bash=
 pip install　{package name} 
-    
-or
-    
+
+//或
+
 pip install {package name} --user
-//The general user will install the package in the home directory .local by default
+//一般使用者身份預設將會安裝套件於家目錄 .local 下
 ```
 
 
-## Find the installation path of the package
+## 檢視套件安裝位置
 
-- For the packages installed in the system directory:
+- 檢視系統目錄安裝的套件
 
 ```bash=
 pip list
 ```
 
-- For the packages installed in the `~/.local` folder in the user's home directory:
+- 檢視使用者 Home 目錄 `~/.local` 下的安裝套件
 
 ```bash=
 pip list --user
 ```
 
-## Recommended solutions when programs fail
+## 程式執行異常的建議排除方式
 
-Take TensorFlow as an example. Assume that the container created with the image TensorFlow 19.02 runs normally, but the container created with the newly released image of TWCC runs abnormally. It's usually because the Python package installed in home directory is carried to the new container, and that causes a package conflict. Please refer to the following methods to test and debug:
+以 TensorFlow 程式為例，假設原先使用 TensorFlow  19.02 映像檔建立的容器，程式皆執行正常，但使用 TWCC 新上架的映像檔建立的容器，原程式運行卻出現了異常，通常都是 Python 套件安裝於 Home 目錄，被攜帶到新版的容器，而出現套件衝突問題，可採取下列方式測試及排除障礙：
 
-1. Check which Python packages are currently installed in the home directory (Optional)
+1. 先檢視目前在 Home 目錄安裝了哪些 Python 套件 (非必要步驟)
 
 ```bash=
 pip list --user
 ```
   
-2. Manually move the packages away from the installation path temporarily, or remove the packages.
+2. 手動先將套件暫時搬離安裝路徑，或直接清除套件
 
 ```bash=
 mv ~/.local ~/local_backup
-//Rename the package installation path to local_backup 
-or
+//把套件路徑先更名為 local_backup
+
+//或
+
 rm -rf ~/.local  
-//!!!!Remove the packages!!!!Please be careful!!
+//!!!!將直接清除套件!!!!請小心操作
 ```
  
-3. Check again, if the path is clear, it returns nothing. (Optional)
+3. 再檢視一次套件，若已清除則不會顯示任何套件名稱 (非必要步驟)
 
 ```bash=
 pip list --user
 ```
 
-4. Refer to [How to install packages](##How-to-install-packages?), reinstall the suitable packages. Please choose an appropriate package installation path by yourself.
+4. 依據上述[套件安裝方式](#套件安裝方式)重新安裝適合此容器之套件，請自行選擇適合的套件安裝位置
 
-5. Run your program again to confirm whether the errors has been resolved.
+5. 再次執行您的程式，確認運行障礙是否已排除
 
 :::info
-If it still cannot be resolved, please contact Customer Service and provide all possible error messages or screenshots.
-- Toll free: 0809-091-365
-- Technical Support: isupport@narlabs.org.tw
+若仍無法排除，請您聯繫客服人員，並請提供所有可能之錯誤訊息或截圖
+- 免付費客服專線：0809-091-365
+- 技術支援服務：isupport@narlabs.org.tw
 :::
 
 
-6. You can remove or rename the backed-up package directory by yourself, for example, rename it to `local/tensorflow-19.02-py3`. When using the original TensorFlow 19.02 container, you can manually rename the package directory to `.local` to restore the original installation package.
-
+6. 備份的套件目錄您可自行移除或是重新命名，例如重新命名為 `local/tensorflow-19.02-py3`，當使用回原 TensorFlow 19.02 容器時，可手動將套件目錄再更名成`.local`，即可恢復使用原始安裝套件
 
 ```bash=
 mv ~/.local ~/local/localbackup
-//Move programs from system directory /.local to /localbackup
-or 
+//將系統目錄 /.local 的程式移動至 /localbackup
+
+//或
+
 rm -rf ~/.local  
-//!!!!Remove the packages!!!!Please be careful!!
+//!!!!將直接清除套件!!!!請小心操作
 ```
 
 ```bash=
 mv ~/local/tensorflow-19.02-py3 ~/.local
-//Move the backed-up package directory back to .local (the default package installation path)
+//把備份的套件目錄搬回 .local 預設套件安裝路徑
 ```

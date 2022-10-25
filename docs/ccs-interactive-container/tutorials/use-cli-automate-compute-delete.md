@@ -1,89 +1,91 @@
 ---
-sidebar_position: 11
-sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-gpu-burn-testing-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-gpu-burn-testing-en' 
+sidebar_position: 12
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-cli-ccs-automate-compute-delete-with-twccli-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-cli-ccs-automate-compute-delete-with-twccli-zh' 
 ---
 
-# Monitor your resource－GPU Burn Testing
+# 使用 TWCC CLI 自動完成運算及刪除容器
 
+這篇文章將幫助使用者了解如何運用 [TWCC CLI](https://github.com/twcc/TWCC-CLI) **自動化執行以下工作**：
 
-This tutorial demonstrates how to use GPU stress test tools to check whether the GPU is working properly when the GPU is fully loaded.
+```
+1. 執行運算程式
+2. 刪除容器
+```
 
-The GPU is working normally if the final result is `OK`, while `FAULTY` means that there is a problem with the GPU.
-
-<br/>
-
-## Step 1. Sign in to TWCC
-
-- If you don’t have an account yet, please refer to [Sign up for an TWCC account](https://man.twcc.vip/en/docs/member/user-guides/member-key-quota/sign-up-for-twcc/).
+在入口網站或使用 TWCC CLI [建立開發型容器](../user-guides/create-connect/create-container.md)後，您可將手動執行的工作交由 script 自動化完成、刪除容器，降低容器持續開啟所需的成本。而運算程式與資料皆會保留在容器預設儲存空間 - [高速檔案系統 (HFS)](/docs/hfs/overview.md)，無須擔心資料將隨容器刪除而消失。
 
 <br/>
 
-## Step 2. Create an Interactive Container
 
-- Please refer to [Interactive Container](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/create-an-interactive-container) to create an Interactive Container.
-- Please select TensorFlow for the image type, select a image version that supports Python 3, and select 1 GPU for the hardware.
+### Step 1. 將運算程式上傳至容器
+
+參考[連線檔案傳輸節點](/docs/hfs/user-guides/connect-data-transfer-node.md)使用 SFTP + Filezilla 傳輸檔案，將訓練程式上傳到容器預設儲存空間 - 高速檔案系統 (HFS) 空間。
 
 <br/>
 
-## Step 3. Connect to the container, download the training program
 
-- Use Jupyter Notebook to connect to the container and open Terminal.
+### Step 2. 安裝並登入 TWCC CLI
+
+- [安裝 TWCC CLI](https://github.com/twcc/TWCC-CLI)，在開發型容器內部署 TWCC CLI。
 
 :::info
-:book: See [Using Jupyter Notebook](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/connect-to-your-container/#jupyter-notebook)
+- 2021 版本<ins>以後</ins>之容器已為用戶預安裝 TWCC CLI，建立後可直接登入使用
+- 2021 版本<ins>以前</ins>的容器映像檔版本需自行安裝
 :::
 
-- Enter the following command to download the [NCHC_GitHub](https://github.com/TW-NCHC/AI-Services/tree/V3Training) training program to the container.
-
-```bash
-git clone https://github.com/TW-NCHC/AI-Services.git
-```
-
-<br/>
-
- 
-## Step 4. Perform GPU Burn Testing
-
-- Enter the following command to access the **Tutorial_Two** directory.
-
-```bash
-cd AI-Services/Tutorial_Two
-```
-
-- Enter the following command to download GPU_Burn program and start execution.
-
-```bash
-bash gpu_testing.sh
-```
+- 安裝完成後請[登入](https://github.com/twcc/TWCC-CLI)。
 
 <br/>
 
 
-## Step 5. Computing capability
+### Step 3. 檢視開發型容器 ID
+- 輸入以下指令，檢視現在使用的容器 ID：
+```
+twccli ls ccs
+```
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9dbab117e8ee86d346497b2296382ed2.png)
 
-- **View computing capability**<br/>
-The GPU used by the GPU container service is NVIDIA V100 32GB, which has powerful computing capabilities. The test running GPU-burn showed that the container has a computing capability of 13198 Gflop/s.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cefd6041539673437d78918f9f444ed6.png)
-
-
-
-- **Monitor Interactive Container**
-
-a. Interactive Container monitoring: Utilization of CPU, GPU and memory
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ac448244502db32c89da844e30e525bf.png)
+<br/>
 
 
-b. In the Terminal of Jupyter Notebook in the container, you can run the following command to monitor the GPU temperature and power.
+### Step 4. 撰寫自動化 Script
+
+- 輸入以下指令編輯自動化 script：
+```
+vi auto.sh
+```
+- 輸入`i` 進入編輯模式，將以下範例 script 複製貼入 `auto.sh` 中。內容可依據您的運算程式修改。
 
 ```bash
-nvidia-smi
+TWCC_CLI_CMD=/home/<USERNAME>/.local/bin/twccli
+# <USERNAME>：主機帳號
+
+echo "1. 執行運算"
+# 輸入運算程式的執行檔
+
+echo "2. 刪除開發型容器"
+$TWCC_CLI_CMD rm ccs -f -s <CCS_ID>
+# <CCS_ID>：Step 3 的容器 ID
 ```
-`GPU quantity` Displayed in increments of number 0, the example in the figure below is 1 GPU<br/>
-`GPU temperature` Displayed in Celsius, the example in the figure below is 31 degrees C<br/>
-`GPU power usage` Displayed in wattage, the example in the figure below is 43W<br/>
+
+- 按 <kbd>Esc</kbd> 鍵並輸入 `:wq!` 存檔。
+
+<br/>
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_412e74892656a239328ed35fea78c191.png)
+### Step 5. 執行自動化 Script
+
+輸入以下指令，即可將程式運算、刪除容器的工作交由 script 處理！
+
+```
+bash auto.sh
+```
+
+<br/>
+
+### Step 6. 確認容器已自動刪除
+
+您可在程式執行完後，在**開發型容器管理頁**確認容器已從列表上刪除。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6f73878fe713665b83fe7160e460ba57.png)

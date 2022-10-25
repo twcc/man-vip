@@ -1,163 +1,81 @@
 ---
-sidebar_position: 9
-sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-tensorflow-visualize-data-distribution-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-tensorflow-visualize-data-distribution-en' 
+sidebar_position: 10
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-launch-tensorboard-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-launch-tensorboard-zh' 
 ---
 
-# Visualize data distribution - implement Linear-Regression with TensorFlow
+# 在容器中啟動 TensorBoard - ML 實驗視覺化工具
 
+為了增加機器學習模型辨識的準確度，觀察模型訓練變化、除去錯誤，都是必要但複雜的工作。而 TensorBoard 以網頁形式視覺化呈現 TensorFlow 模型資料的變化，可繪製多種圖形，讓資料科學家可輕鬆檢視並理解神經網路的結構與實驗結果，快速找到優化模型的解決方案。
 
-## 1. Using Jupyter Notebook (Python)
+TWCC 的容器環境中已為用戶安裝 TensorBoard，本篇文章將教學如何啟動 TensorBoard 工具。更多 Tensorboard 介紹與使用方法，請參考 [TensorFlow 官網](https://www.tensorflow.org/tensorboard)。
 
-### Step 1. Sign in TWCC
-
-- If you don’t have an account yet, please refer to [Sign up for a TWCC account](https://man.twcc.vip/en/docs/member/user-guides/member-key-quota/sign-up-for-twcc/).
-
-<br/>
-
-### Step 2.  Create an Interactive Container
-
-- Please refer to [Interactive Container](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/create-an-interactive-container) to create an Interactive Container, and select TensorFlow for the image type (For image, please select a version with Python 2 before 19.08 (`not including 19.08`)).
+:::tip
+建議在 TensorFlow 容器中啟動，較能發揮 TensorBoard 的功能，用於其他容器功能將受限。
+:::
 
 <br/>
 
+## Step 1. 連線進入開發型容器
 
-### Step 3. Connect to the Container
+請參考[連線容器](../user-guides/create-connect/connect-container.md#連線容器-1)連線進入您的開發型容器。
 
-- Use Jupyter Notebook to connect the container and add a Python 2 notebook.
+<br/>
+
+
+## Step 2. 啟動 TensorBoard 服務
+
+輸入以下指令啟動 TensorBoard 服務。
+
+```bash
+tensorboard --logdir=~/logdir --port 5000
+```
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_33abbf06c6561af711929eee558586c5.png)
 
 :::info
-:book: See [Connection method](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/connect-to-your-container/#jupyter-notebook)
+1. 您需要指定一個作為 TensorBoard 提供網頁服務使用的連接埠 (port)。<div></div>
+在 TWCC 的容器環境中，有三個 port 可供用戶使用，分別是`5000`、`5001`、`5002`，在此以 port `5000` 做為範例。<div></div>
+更多資訊可參考[<ins>設定開發型容器的服務埠</ins>](./configure-service-ports.md)。
+3. 上述指令中的 `--logdir` 為 log 檔存放位置，您可自行設定，本文以 `~/logdir` 做為範例。
 :::
 
 <br/>
 
 
-### Step 4. Execute Linear-Regression program
+## Step 3. 關聯容器服務埠
 
-- Copy and paste the following code to Jupyter Notebook.
+請關聯 TensorBoard 使用的 port 與容器 port，完成後即可透過您的本機端網頁使用 TensorBoard 服務。
 
-```python
-%matplotlib inline
-import tensorflow as tf
-import numpy as np
-import matplotlib.pyplot as plt
+- 在 TWCC 容器資訊的頁面，按下 「**關聯**」。
 
-# Use numpy to generate 100 random points
-x_data = np.random.rand(100).astype(np.float32)
-y_data = x_data * 0.1 + 0.3
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cc73c5a924078d793f6476bfd4ac159c.png)
 
-# Try to find values for W and b that compute y_data = W * x_data + b
-# (We know that W should be 0.1 and b 0.3, but TensorFlow will
-# figure that out for us.)
 
-W = tf.Variable(tf.random_uniform([1], -1.0, 1.0))
-b = tf.Variable(tf.zeros([1]))
-y = W * x_data + b
+- 在關聯服務埠選視窗中，勾選 「**5000**」，並按下確認。
 
-# Minimize the mean squared errors.
-loss = tf.reduce_mean(tf.square(y - y_data))
-optimizer = tf.train.GradientDescentOptimizer(0.2)
-train = optimizer.minimize(loss)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_585d1f37008afc49c0cec84df9c98155.png)
 
-# Before starting, initialize the variables.  We will 'run' this first.
-init = tf.global_variables_initializer()
+- 確認後，容器資訊頁面中的 「**連接埠**」 會多一筆目標埠為 5000 及對外埠的資訊。以下圖為例，目標埠 5000 的對外埠為 53081。
 
-# Launch the graph.
-sess = tf.Session()
-sess.run(init)
-
-# Fit the line.
-for step in range(201):
-    sess.run(train)
-    if step % 20 == 0:
-        print(step, sess.run(W), sess.run(b))
-        plt.plot(x_data, y_data, 'ro', label='Original data')
-        plt.plot(x_data, sess.run(W) * x_data + sess.run(b), label='Fitted line')
-        plt.legend()
-        plt.show()
-        
-# Learns best fit is W: [0.1], b: [0.3]
-```
-
-- Click **Run**.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d7aa8421020677a326adb22f508f0ef4.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1be6b67ca36f92a6c0333ab90e8a2995.png)
 
 <br/>
 
-### Step 5. Visualize data distribution
 
-- TensorFlow will slowly find the fitting weights and draw a linear regression line.
+## Step 4. 連線 Tensorboard 服務
+- 在容器資訊頁面取得容器的 **「公用 IP」**。
 
-:::info 0 [-0.7029411] [0.33094117]
-<img style={{'background-color':'white'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fb0b79090def125ce1173c78dad6362a.png"/>
-:::
-:::info 100 [0.03479815] [0.33622062]
-<img style={{'background-color':'white'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_257640a2d6ddf46bc0c7eea9ea26efc8.png"/>
-:::
-:::info 200 [0.09321669] [0.30376825]
-<img style={{'background-color':'white'}} src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0d2ff561591c061432b01fc7728eca4c.png"/>
-:::
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_602fd844280ad7e91bab261494c10941.png)
+
+
+- 打開網頁瀏覽器，在網址列輸入 **`容器 IP : 對外埠`**，依範例為 `203.xxx.xxx.xxx:53081` ，即可連線進入Tensorboard。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_efab9cdf24eb0d8abbc3b75bd60e3eac.png)
 
 <br/>
 
-## 2. Using SSH or Jupyter Notebook (Terminal) for connection
 
 :::info
-:bulb: The following example is based on the official TensorFlow tutorial.
+更多 Tensorboard 介紹與使用方法，請參考 [<ins>TensorFlow 官網</ins>](https://www.tensorflow.org/tensorboard)。
 :::
-
-<br/>
-
-### Step 1. Using SSH to log in or open Jupyter Notebook (Terminal)
-
-:::info
-:book: See [Using Jupyter Notebook](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/connect-to-your-container/#jupyter-notebook)
-:::
-
-<br/>
-
-### Step 2. Download the TensorFlow program from GitHub
-
-```bash
-git clone https://github.com/tensorflow/tensorflow.git
-```
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_94baa375f655c1c8a10cecd3ca0c0d4b.png)
-
-<br/>
-
-
-### Step 3. Switch to branch Tensorflow 1.10
-
-```bash
-cd tensorflow && git checkout r1.10
-```
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b54848bfd66229b4d336c2a804a4584.png)
-
-<br/>
-
-
-### Step 4. Switch to the example/regression directory
-
-```bash
-cd tensorflow/examples/get_started/regression
-```
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5a7ccd02f252fa2873aa6b5ad6c7f3f3.png)
-
-<br/>
-
-
-### Step 5. Run the sample program using Python commands
-
-```bash
-python linear_regression.py
-```
-
-- The following message will be output during the computation:
-    - Check point directory: You can use the TensorBoard tool to visualize neural networks and analyze training trends
-    - The loss value after every 100 iterations, which helps to determine whether the model training has converged
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0c66fb2a3b252f1eac4ef50818c90af1.png)

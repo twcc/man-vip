@@ -1,42 +1,40 @@
 ---
 sidebar_position: 3
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-cyberduck-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-cyberduck-en'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cos-cyberduck-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-cyberduck-zh'
 ---
 
-# Manage files with third-party software - Cyberduck
+# Cyberduck
 
-In addition to uploading or downloading files using Portal, if you need to transfer large files, we recommend using commonly used third-party software such as [S3 Browser](http://s3browser.com/) or [Cyberduck](https://cyberduck.io/ ) to manage files in COS buckets.
+除使用網頁上傳或下載檔案，若需傳輸大型檔案，建議您透過常用的第三方軟體如 [S3 Browser](http://s3browser.com/) 或 [Cyberduck](https://cyberduck.io/) 來管理雲端物件儲存體的內容。
 
 :::info
-Cyberduck is a file transfer tool for Mac and Windows. It can also be used to manage the files of Cloud Object Storage and quickly transfer and browse files on the local computer and remote hosts.
-
+Cyberduck 是一套適用於 Mac 和 Windows 的檔案傳輸工具，亦可用來管理雲端物件儲存體的內容，快速地在本地端與遠端主機中傳輸、瀏覽檔案。
 :::
 
 
-## Connect to COS
+## 連線雲端物件儲存
 
-### Download Cyberduck
+### 下載 Cyberduck
 
-* Go to [Cyberduck official website](https://cyberduck.io/) to download and install Cyberduck.
+* 進入 [Cyberduck 官網](https://cyberduck.io/)下載並且進行安裝。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b387f8c18eb6b8e6476431bec8f4229.png)
 
 
-* Cyberduck user interface for Mac or Windows is similar. Open the application after installation and click **Open Connection**.
+* Mac 版或 Windows 版的 Cyberduck 操作界面類似，安裝後開啟程式，點選 新增連線。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1a5d91cc7a586bfccc2d4fbe12a7711d.png)
-
-
-
-* As shown in the figure below, set the connection information of the TWCC Cloud Object Storage account. The host type of the connection must be **Amazon S3**, and then enter the connection information provided on the Third-party Software page to set the server (cos.twcc.ai), Access Key ID and Secret Access Key.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8b9f5f6d28c802a4b02e7cddedf854d7.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a702a3adb1506c8b131106d8019edaf0.png)
 
 
-## Manage buckets and files
+* 如下圖所示，設定 TWCC 雲端物件儲存體帳號的連線資訊，連線的主機類型必須選擇「Amazon S3」，再依照第三方軟體下載頁面所提供的連線資訊，設定 Server（cos.twcc.ai）、Access Key ID 及 Secret Access Key 即可。
 
-After the connection is successful, you can see the files of the bucket on the TWCC COS, and you can also create new folders (buckets) or upload files using Cyberduck.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f54666b246d863435793eaa10ee3f1d9.png)
+
+## 儲存體、檔案管理
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f02f197ae1b24c36649712cf0999c203.png)
+連線成功後即可看到 TWCC 雲端物件儲存系統上的儲存體內容，亦可建立新的資料夾（儲存體）或上傳檔案。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b201777be759b9954c08efdea8fd6e00.png)
+

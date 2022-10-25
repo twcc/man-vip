@@ -1,58 +1,57 @@
 ---
 sidebar_position: 2
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-monitor-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-monitor-en' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-monitor-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-monitor-zh' 
 ---
 
-# Monitor your container
+# 監控容器
 
-There are two ways to monitor container in TWCC portal. You can monitor the utilization of CPU, GPU, memory and GPU memory:
+TWCC 入口網站共有兩處可檢視容器監控的資訊，可監控 CPU、GPU 使用量、記憶體、GPU 記憶體使用量：
 
-- **Interactive Container Details** page: Monitor a specified container.
-- **Monitoring Interactive Container** page: Quickly switch the monitoring information between multiple containers, and view the total GPU number(pcs) and total GPU hour(s) of personal use.
+- 「**開發型容器詳細資料**」頁：可觀察一指定容器。
+- 「**開發型容器監控**」頁：可快速切換多個容器的監控資訊，並可檢視個人 GPU 資源總數、已使用的時間長度。
 
-## Interactive Container Details page
+<br/>
 
-* In **Interactive Container Management** page, choose a specific container.
+## 「開發型容器詳細資料」頁
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ae7be7274e4ae575a119f7bf456fca6d.png)
+* 在「**開發型容器管理**」頁選擇一指定的容器。
 
-* In **Interactive Container Details** page, click **MONITORING** tab to view container monitoring information.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ddbfb7f38a7a4096603b67badbfc2eaa.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c97047bbb8176ced48bef6c1383e273e.png)
 
-- Hover to any monitoring block, click <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> to download the monitoring figure (`.png`) .
-- You can select the time period in the menu on the right side to observe the changes in the container resource utilization within a certain period of time.
+* 並於「**開發型容器詳細資料**」頁內選擇「**監控**」頁籤，即可查看容器監控資訊。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9195b9f05876c34d1671ce0048f3b5d0.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6ba2466a778884482306ccebb07652fb.png)
 
+- 游標移至任一監控圖上，可點選 <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> 圖示下載監控圖檔 (`.png`) 留存。
+- 右側選單則可選擇時間，可觀察特定時長內之容器資源使用變化。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fba25d4dbfec146a9849981328ba5e9d.png)
 
 :::info
-The specific period of time can be chosen from 1 hour, 6 hours, 12 hours, 1 day, 7 days, 30 days.
+特定時長可選擇1小時、6小時、12小時、1天、7天、30天。
 :::
 
 <br/>
 
-## Monitoring Interactive Container page
+## 「開發型容器監控」頁
 
-* Click **Monitoring** on the left menu, and select the container that you want to monitor in **Interactive Container Name** dropdown list. Here, you can switch between containers quickly.
+* 點選左側選單「**監控**」，並於右側「開發型容器名稱」選擇您欲監控之容器，並可快速切換容器。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5037f491c8ac81a6be8362c078ca3879.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_46e8d736c0eeee6c466075afe8e15fcf.png)
 
+* 選擇完成下方即可查看容器服務提供的監控資訊。
 
-* After selection, You can view the monitoring information provided by the container service below.
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7098d0cc6182bc7b07efa4813e0c4c9f.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_47106f0a7964568d93422cdf31e4d5b3.png)
+- 如同「**開發型容器詳細資料**」頁，可下載監控圖檔、觀察特定時長內之容器資源使用變化。另外，還可以檢視**個人在特定時間內 GPU 累計的使用量、GPU 使用的時間**。
 
-- Like **Interactive Container Details** page, you can download the monitoring figures and observe the changes in container resource utilization within a certain period of time. In addition, you can also view personal **Total GPU Numbers(pcs) and Total GPU Hour(s)** within a certain period of time.
-
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6411c83470541a125399dab70f789b79.png)
-
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fd2fc35427dc9a5918e0f501e4d3f2ae.png)
 
 <br/>
 
 
 :::info
-**Tenant Users** can only see their own resource utilization information, while **Tenant Admins** can see the resource utilization of all users in the project to control the resource usage and credit of the project .
+「**租戶使用者**」僅能看到自己資源使用資訊，「**租戶管理員**」則可以看到計畫內所有使用者資源使用情形，以便控管整個專案的資源使用額度。
 :::

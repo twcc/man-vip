@@ -1,23 +1,24 @@
 ---
 sidebar_position: 7
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-fftw3-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-fftw3-en' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-fftw3-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-fftw3-zh' 
 ---
 
 
 # FFTW3
 
-- Package official website
+
+- 套件官網
   - [FFTW](https://www.fftw.org/)
   - [FFTW3 github](https://github.com/FFTW/fftw3)
-- Release note
+- release note
   - [FFTW release notes](https://www.fftw.org/release-notes.html)
-- Package source: Official Tar file compiled by the system administrator
+- 套件來源：官網下載 tar 檔，系統管理員自行編譯
 
 <br/>
 
 
-## FFTW module with Open MPI 4.1.1 matrix
+## FFTW module with Open MPI 4.1.1 matrix 
 
 | CUDA | Open MPI | module name | usage                                   |
 | ---- | -------- | ----------- | --------------------------------------- |
@@ -31,13 +32,13 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-modul
 | 9.2  | 4.1.1    | fftw3/3.3.9 | ml cuda/9.2 openmpi4/4.1.1  fftw3/3.3.9 |
 | 9.0  | N/A      | N/A         | N/A                                     |
 
-- FFTW 3.3.9 Compile-dependent environment
+- FFTW 3.3.9 編譯相依的環境
 
 | Open MPI | GCC   | CentOS |
 | -------- | ----- | ------ |
 | 4.1.1    | 4.8.5 | 7.8    |
 
-- FFTW 3.3.9 Compilation parameters
+- FFTW 3.3.9 編譯使用的參數
 
 ```bash
 CC=mpicc CXX=mpic++ \
@@ -51,6 +52,6 @@ F77=mpif90 F90=mpif90 FC=mpif90 \
 --enable-threads
 ```
 
-- Reference materials for compilation
+- 編譯參考資料
   - [spack](https://github.com/spack/spack/blob/develop/var/spack/repos/builtin/packages/fftw/package.py) 
   - [hpc container maker](https://github.com/NVIDIA/hpc-container-maker/blob/master/hpccm/building_blocks/fftw.py)
