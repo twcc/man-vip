@@ -41,7 +41,7 @@ sync-openapi:
 
 .build_template: &build_base
   <<: *standard_operation
-  before_script:
+  script:
     - npm install --legacy-peer-deps
   cache:
     key:
