@@ -1,81 +1,87 @@
 ---
 sidebar_position: 2
-title: '虛擬運算服務 (VCS)'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-vcs-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-vcs-zh'
+title: 'TWCC FAQs | Virtual Compute Service (VCS)'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-vcs-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-vcs-en'
 ---
 
-# TWCC FAQs | 虛擬運算服務 (VCS)
+# TWCC FAQs | Virtual Compute Service (VCS)
 
-## 連線登入
+## Connect to the VCS instance
 <details>
 
-<summary> Q1. SSH 連線至 TWCC 上的資源 CCS、VCS 和 HPC 有哪些可使用的的開源軟體？</summary>
+<summary> Q1. What open source clients are available for connecting to TWCC resources, like CCS, VCS and HPC?</summary>
 
-可以使用 MobaXterm、PuTTY 和 VSCode...等第三方開源軟體。
+Third-party open source software such as MobaXterm, PuTTY and VSCode can be used.
 
 </details>
 
 <details>
 
-<summary> Q2. 欲使用虛擬運算個體架設服務，卻無法連入？</summary>
+<summary> Q2. I want to set up web services using VCS instance, but why can't I connect to the instance?</summary>
 
-請檢查個體的安全性群組或防火牆規則是否阻擋連線，相關文件請參考：
+Please check whether the instance's security group or firewall rules block the connection. For related documents, refer to:
 
-- [安全性群組](/docs/vcs/user-guides/security/security-group.md)
-- [基礎虛擬防火牆](/docs/vcs/user-guides/security/virtual-network-firewall.md)
-
-</details>
-
-<details>
-
-<summary> Q3. 使用映像檔所建立的虛擬運算個體無法連線進入作業該怎麼處理？</summary>
-
-建立映像檔前請先檢查虛擬運算個體的以下兩項設定：
-1. 若有設定 /etc/fstab 自動掛載磁碟，請註解該設定或加入 `nofail` 的相關設定，否則利用映像檔所建立的虛擬運算個體找不到裝置，便會導致無法連入虛擬運算個體的情況。
-2. 若您所使用的作業系統版本為 Ubuntu 18.04，且有更改 /etc/network/interfaces 網路設定 ，也會造成無法連線。
-
-確認檢查以上兩項設定無誤後，對該台虛擬運算個體再進行一次建立映像檔，並利用新建的映像檔建立虛擬運算個體，如仍無法連線，請詳述情況並寄發 e-mail 至 isupport@twcc.ai，技術團隊將協助您處理。
+- [Security Group](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-sg-en)
+- [Basic Virtual Firewall](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-vnf-en)
 
 </details>
 
 <details>
 
-<summary> Q4. 對網路卡設定進行更改，導致無法連線該怎麼處理？</summary>
+<summary> Q3. The VCS instance created from the image cannot be connected, what should I do? </summary>
 
-網路卡設定經修改後，將會導致無法連線進入虛擬運算個體，因此我們強烈不建議您更動網卡設定，請您操作與部署時特別留意。
+Please check the following two configurations of the VCS instance before creating the image:
+1. If you set /etc/fstab to automatically mount the disk, please comment out this setting or add the `nofail` option, otherwise you will be unable to connect to the instance created by the image if cannot find the device.
+2. If you are using Ubuntu 18.04 instance, and you have changed the network configurations of /etc/network/interfaces, it will also cause the connection failure.
 
-如遇無法連線的情形，請詳述情況與虛擬運算個體資訊，寄發 e-mail 至 isupport@twcc.ai，技術團隊將協助您處理。
+After checking the above two settings, create an image for the VCS instance again, and use the newly created image to create the VCS instance. If it still failed to connect, please describe the situation in detail and send an e-mail to isupport@twcc.ai, the Technical Support team will assist you to solve the problem.
 
 </details>
 
 <details>
 
-<summary> Q5. SSH 連線個體速度有點慢該如何解決？</summary>
+<summary> Q4. What should I do if I can't connect to the instance after changing the network card settings?</summary>
 
-請調整虛擬運算個體的 DNS 設定來提升 SSH 連線的速度，設定的方法與步驟如下：
+After the network card settings are changed, it might cause a failure to connect to the VCS instance. Therefore, we strongly recommend you not to change the network card settings. Please be careful when operating and deploying.
 
-**Step 1.** 輸入指令
+If you can't connect to the instance, please describe the situation and VCS instance information in detail, and send an e-mail to isupport@twcc.ai, the Technical Support team will assist you to solve the problem.
+
+</details>
+
+<details>
+
+<summary> Q5. How to speed up the SSH connection?</summary>
+
+Please adjust the DNS settings of the VCS instance to make the SSH connection speed faster. The setting method and steps are as follows:
+
+**Step 1.** Enter the command
+
 ```
 sudo vi /etc/ssh/sshd_config
 ```
-**Step 2.** 輸入`i` 進入編輯模式
-**Step 3.** 新增一行指令
+
+**Step 2.** Press `i` key to enter insert mode<br/>
+**Step 3.** Add a line of command
+
 ```
 Use DNS no
 ```
-**Step 4.** 按 `esc` 鍵跳離編輯模式，接著輸入 `:wq!` 存檔。
+
+**Step 4.** Press `esc` key to exit insert mode, then enter `:wq!`  to save the file.
 <br/>
-如修改後還是有連線較慢的問題，請您洽詢 TWCC 技術支援服務信箱：isupport@twcc.ai，並提供所在地 IP 與 traceroute 至個體之結果。
+
+If you still have a slow connection after the modification, please contact the Technical Support: isupport@twcc.ai, and provide your local IP and the result of the traceroute to the instance.
+
 
 </details>
 
 
 <details>
 
-<summary> Q6. 如何使用帳號密碼連線 Linux 個體？</summary>
+<summary> Q6. How to connect to the Linux instance using account and password?</summary>
 
-請參考[此文件](/docs/vcs/tutorials/create-users.md)操作，即可使用帳號密碼連線 Linux 個體，可預防鑰匙對遺失或檔案毀損。
+Refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-vcs-create-usr-linux-en) to connect to the Linux instance using the account and password, which is a solution to losing key pairs or damaging files.
 
 </details>
 
@@ -83,100 +89,98 @@ Use DNS no
 
 <summary> 
 
-Q7. SSH 連線虛擬運算個體時，出現錯誤訊息```WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!```該如何排除？
+Q7. When connecting to the VCS instance using SSH, the error ```WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!``` occurs, what should I do?
 
 </summary>
 
-此訊息出現的原因為儲存在 local 端電腦的認證與虛擬運算個體不同，因此只要刪除 local 端電腦的認證資訊，並在連線時重新產生，即可避免發生此問題，您可以參考以下的指令
+The reason for this error is that the certificate stored on the local computer is different from the VCS instance. Therefore, you can avoid this error by deleting the certificate information of the local computer and regenerating it when connecting to the instance. Refer to the following command:
+
 
 ```
-ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
+ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "Public IP"
 ```
 
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> <b>附註：</b>
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> <b>Note：</b>
 
-`Your_Path` 是您 local 端電腦的個人路徑，再次連線會出現以下訊息：
+`Your_Path` is the path of your local computer, and the following message will appear when you connect again:
+
 
 ```Are you sure you want to continue connecting (yes/no)? ```
-
-輸入```Yes```即可順利連線，並產生新的認證。
-
+Enter ```Yes``` to connect and generate a new certificate.
 
 </details>
 
 <details>
 
-<summary> Q8. 使用 macOS 電腦連線 Linux 個體，出現無法連線的情況？</summary>
+<summary> Q8. How to deal with macOS computers that can't connect to Linux devices?</summary>
 
-請於入口網站進入「虛擬運算個體詳細資料」頁，點選「**連線**」按鈕，並按照視窗提供的指令設定鑰匙對存取權限、SSH 連線個體。
+Please go to the **VCS Instance Details** page , click the "**Connect**" button, and follow the instructions provided in the window to set the key pair access rights and SSH connection instance.
 
 </details>
 
 <details>
 
-<summary> Q9. 使用 Console 連線虛擬運算個體，是否有預設的密碼？</summary>
+<summary> Q9. Is there a default password when I use Console to connect to a VCS instance?</summary>
 
-無預設密碼，使用 Console 連線 Linux 個體前需先另外建立密碼，Windows 個體則輸入您建立個體時設定的密碼即可，請參考[快速除錯與維護工具：TWCC VCS Console](/docs/vcs/user-guides/manage-monitor/console)。
+There is no default password, you need to create a separate password before using Console to connect to the Linux instance, for Windows instances just enter the password you set when you created the instance, refer to [Quick debugging and maintenance tools:TWCC VCS console](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-debug-tool-console-zh#Step-3-%E8%BC%B8%E5%85%A5%E9%80%A3%E7%B7%9A%E8%B3%87%E8%A8%8A%EF%BC%8C%E5%AE%8C%E6%88%90%E9%80%A3%E7%B7%9A)。
 
 </details>
+
 <div style={{height:10+'px'}}></div>
 
 
-
-## 管理個體
-<details>
-
-<summary> Q1. 建立虛擬運算個體失敗該怎麼處理？</summary>
-
-請您至「**虛擬運算個體詳細資料頁面**」，游標移至狀態 **`Unsuccessful`** 上將顯示建立失敗的訊息。
-
-請截圖此頁面 (和建立失敗訊息)，連同計畫代碼與虛擬運算個體的資訊 (ID、映像檔、硬體規格...等) 寄發 e-mail 至 isupport@twcc.ai，技術團隊將協助您處理。
-
-</details>
-
+## VCS instance management
 
 <details>
 
-<summary> Q2. 忘記 Windows 虛擬運算個體登入密碼該怎麼處理？</summary>
+<summary> Q1. What should I do if I fail to create the VCS instance?</summary>
 
-在建立虛擬運算個體時，請務必妥善自行保存您的密碼，如忘記密碼您可以刪除該個體並重新建立；如須保存原個體的資料與配置，可先對該個體建立映像檔，再利用該映像檔建立新的個體，即可重設密碼。
+Go to the **VCS Instance Details** page, hover to the **`Unsuccessful`** state, and it will display the creation failure message.
+Please take a screenshot of this page (and the creation failure message), together with the project ID and the VCS instance information (ID, image, hardware configuration, etc.) and send an e-mail to isupport@twcc.ai. Technical Support team will assist you to solve the problem.
 
 </details>
 
 <details>
 
-<summary> Q3. 遺失 Linux 虛擬運算個體的金鑰該怎麼處理？</summary>
+<summary> Q2. What should I do if I forget the login password of the Windows VCS instance?</summary>
 
-在建立虛擬運算個體時，請務必下載並妥善自行保存您的金鑰，如果遺失金鑰您可以刪除該個體並重新建立；如須保存原個體的資料與配置，可先對該個體建立映像檔，再利用該映像檔建立新的個體，即可使用新的金鑰。
+When creating a VCS instance, please be sure to save your password properly. If you forget the password, you can delete the instance and re-create it; if you need to save the data and configuration of the original instance, you can create an image of the instance first, and then create a new instance from the image and reset the password.
 
 </details>
 
 <details>
 
-<summary> Q4. 想了解虛擬運算個體狀態與用量計費關係？</summary>
+<summary> Q3. What should I do if I lose the key pair of the Linux VCS instance?</summary>
 
-| 個體狀態 | 個體用量計費| 
+When creating a VCS instance, please be sure to keep your key pair properly. If you lose the key pair, you can delete the instance and re-create it; if you need to save the data and configuration of the original instance, you can create an image of the instance first, and then create a new instance from the image and use the new key pair.
+
+</details>
+
+<details>
+
+<summary> Q4. What are the relationship between VCS instance states and the usage billing?</summary>
+
+| VCS instance state | Instance usage billing| 
 | -------- | -------- | 
-| ```Starting```   | 不計費    | 
-| ```Ready```      | 計費     |
-| ```Stopping```   | 計費     |
-| ```Shutdown```   | 計費     |
-| ```Queueing```   | 不計費     |
-| ```Deleting```   | 計費，刪除成功後便立即不再計費   |
-| ```Stopped```    | 不計費   |
-| ```Error```      | 不計費   |
+| ```Starting```   | Not billed    | 
+| ```Ready```      | Billed     |
+| ```Stopping```   | Billed     |
+| ```Shutdown```   | Billed     |
+| ```Queueing```   | Not billed     |
+| ```Deleting```   | Billed until the instance is successfully deleted   |
+| ```Stopped```    | Not billed   |
+| ```Error```      | Not billed   |
 
-如果使用情境為虛擬運算個體在```Shutdown```的情況下，重新啟動該台虛擬運算個體，```Starting```的過程中會納入用量計費。
+The instance will be billed in the ```Starting``` state if it is started from the ```Shutdown``` state.
 
 </details>
 
 <details>
 
-<summary> Q5. 虛擬運算個體在哪些狀態下不會收費？</summary>
+<summary> Q5. In what state will the VCS instance not be billed?</summary>
 
-虛擬運算個體僅在```Queueing```、```Stopped```與```Error```的狀態下不會收費，其他狀態皆會收費。
-
-```Starting```則需是使用情境來決定是否納入用量計費，詳細解說請參考Q4。
+The VCS instance will not be billed in the ```Queueing```, ```Stopped``` and ```Error``` states, and it will be billed in other states.
+Whether the VCS instance in the ```Starting``` state be billed or not depends on the usage scenario. For detailed explanation, please refer to Q4.
 
 </details>
 
@@ -184,64 +188,27 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 <summary>
 
- Q6. 建立虛擬運算個體出現錯誤訊息```440301: The request exceeded the quotas of ['floating_ip']```該如何解決？
+Q6. How to solve the error message ```440301: The request exceeded the quotas of ['floating_ip']``` when creating a VCS instance?
 
 </summary>
 
-出現此錯誤訊息的原因為浮動 IP (floating ip) 數量已經達到該計畫的上限，您可以參考以下做法：
-1. 移除虛擬運算個體暫不需使用的浮動 IP (個體狀態為 `Ready` 才可移除) 後，再次選取建立。
-2. 浮動 IP 在您停止或刪除個體後即釋放回資源池，無法循環使用。若您的使用情境適用固定 IP，建議您訂閱並使用靜態 IP (static IP)。
-3. 若有特殊需求，請洽客服人員。
+The reason for this error message is that the number of floating ip's has reached the limit of the project, you can refer to the following practices.
+1. After deleting the floating IPs that the VCS instance does not need to use for now(the status of the instance is `ready` before it can be deleted), then select Create again.
+2. Floating IPs are released back into the pool after you stop or delete the instance and cannot be reclaimed. If you are using a fixed IP, we recommend that you subscribe and use a static IP.
+3. If you have special needs, please contact our customer service.
      
 </details>
+
 <div style={{height:10+'px'}}></div>
 
-## 資源配置與監控
+
+## Resource allocation and monitoring
 
 <details>
 
-<summary> Q1. 如何調整已建立好的虛擬運算個體規格？</summary>
+<summary> Q1. How to adjust the configurations of the created VCS instance?</summary>
 
-如選用的規格在建立後不符使用需求，需調整至較小規格或更大規格的個體，請參考文件：[HowTo：調整虛擬運算個體規格](/docs/vcs/user-guides/manage-monitor/resize-instances.md)。
-
-</details>
-
-<details>
-
-<summary>
-
- Q2. 為什麼我在建立虛擬運算個體時，母錢包與子錢包皆有額度，卻出現`計畫資源已用盡，無法創建資源`的訊息？
- 
- </summary>
-
-該訊息顯示您的 CPU 使用數量已達計畫配額之上限，建議您將不需使用或少用的個體建立成映像檔以利未來重建使用，並刪除虛擬運算個體，即可釋放出 CPU 使用額度。
-
-</details>
-
-<details>
-
-<summary> Q3. 請問要如何知道虛擬運算服務個體網路流量狀態？ </summary>
-
-使用者介面上有簡易呈現監控 CPU、硬碟、記憶體、網路的狀態及流量，若需要更詳細的資訊可以自行安裝程式監控。
-
-</details>
-
-<details>
-
-<summary> Q4. 請問該如何取得 GPU 資源？ </summary>
-
-由於虛擬運算個體之 GPU 資源詢問度踴躍，為了讓資源更能妥善利用與調度，如有 GPU 的需求請來信致 isupport@twcc.ai，將由專人與您進行聯繫。
-
-</details>
-<div style={{height:10+'px'}}></div>
-
-## 套件軟體
-
-<details>
-
-<summary> Q1. 虛擬運算服務是否支援 SMTP？ </summary>
-
-在虛擬運算個體中，使用者可以依需求安裝任何軟體或應用程式，因此您可以將虛擬運算個體作為 SMTP 伺服器來發送信件。
+If the configurations do not meet your requirements after creation and need to be adjusted to a smaller or larger instance, refer to [<ins>HowTo: Resize VCS instances</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-vcs-resize-instance-en).
 
 </details>
 
@@ -249,140 +216,181 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 <summary> 
 
-Q2. 對虛擬運算個體安裝套件或進行更新，出現`E: Could not get lock /var/lib/apt/lists/lock`該如何解決？
+Q2. I have enough credit, but why I got `The project is ran out of the resources and cannot create anymore.` error when I was creating a VCS instance?
 
 </summary>
 
-1. 安裝套件或進行更新時，可能產生許多類似與 lock 檔案相關的錯誤訊息。請您將 lock 檔案刪除後，再次執行您的任務。
-2. 建議改為使用映像檔 Ubuntu 20.04，可避免產生此問題。
+This message shows that your CPU usage has reached the project quota. We recommend you release CPU by creating images of the unused or less used VCS instances for future use, and delete the VCS instances.
 
 </details>
+
+<details>
+
+<summary> Q3. How do I monitor the network traffic of my VCS instance?</summary>
+
+On TWCC Portal, you can monitor the usage of CPU, disk, memory and network traffic with simple charts. You may install the monitoring program by yourself to get more detailed information.
+
+</details>
+
+<details>
+
+<summary> Q4. How can I get GPU resources?</summary>
+
+To efficiently allocate the frequently requested GPU resources, please email us your request at isupport@twcc.ai. We will have someone at your service.
+
+</details>
+
 <div style={{height:10+'px'}}></div>
 
-## 儲存與資料傳輸
+
+## Packages
 
 <details>
 
-<summary> Q1. 虛擬運算服務個體是否可直接掛載雲端物件儲存 (COS)？</summary>
+<summary> Q1. Does Virtual Compute Service support SMTP? </summary>
 
-可以直接掛載 COS，您在 VCS 個體擁有管理者權限，可以對 VCS 個體進行任意操作，掛載建議使用 s3fs 或是相關的套件，可參考 [s3fs-fuse](https://github.com/s3fs-fuse/s3fs-fuse)。
+In a VCS instance, you can install any software or applications for your needs, so you can set up and configure a SMTP server on a VCS instance to send e-mail.
 
 </details>
 
 <details>
 
-<summary> Q2. 如何將虛擬運算中資料定期備份至雲端物件儲存 (COS)？ </summary>
+<summary> 
 
-您可透過 TWCC-CLI 與 `crontab -e` 進行定時建立映像檔設定。
-- TWCC-CLI 使用詳情請參考 [4-3. 上傳檔案至儲存體](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fcli-overview-zh)。
-- `crontab -e` 請參考 [crontab guru](https://crontab.guru/) 或 [crontab(5) - Linux man page](https://linux.die.net/man/5/crontab)。
+Q2. When installing packages or updating the VCS instance, it shows `E: Could not get lock /var/lib/apt/lists/lock`. What should I do?
 
-</details>
+</summary>
 
-<details>
-
-<summary> Q3. 如果把超過 100GB 的映像檔輸入虛擬運算服務個體，會有什麼影響？</summary>
-
-系統碟的大小為 100GB，使用超過 100GB 會使整台虛擬運算個體無法開啟，但不會額外收費。
+1. When installing or updating the packages, there might be some error messages about the lock file. Please delete the lock file and try again.
+2. It is recommended to use Ubuntu 20.04 image to avoid this problem.
 
 </details>
 
-
-<details>
-
-<summary> Q4.如何將虛擬運算個體內的資料下載至本機？</summary>
-
-請參考以下兩種下載方式：
-
-1. 透過雲端物件儲存服務 (COS)傳入本機，此方法不僅能達到資料傳輸的目的，更可以將個體資料備份至 COS：
-    - **Step 1.** [將資料備份到 COS](/docs/cos/tutorials/backup-synchronize-restore.md)。
-    - **Step 2.** 至 TWCC 使用者網站 COS 管理介面[下載檔案](/docs/cos/user-guides/manage-objects/upload-download-files-create-folders.md)，如需要一次下載多個檔案，可搭配[第三方軟體](/docs/category/使用第三方軟體管理檔案)使用。
-
-2. [使用 MobaXterm 連線虛擬運算個體](/docs/vcs/user-guides/connecting/linux/from-windows.md)，於頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
-
-</details>
-
-<details>
-
-<summary> Q5.如何將本機內的資料上傳至虛擬運算個體？</summary>
-
-請參考以下兩種上傳方式：
-1. 透過雲端物件儲存服務 (COS)
-    - **Step 1.** 將本機檔案[上傳至雲端物件儲存服務 (COS)](/docs/cos/user-guides/manage-objects/upload-download-files-create-folders.md)
-    - **Step 2.** [連線進入虛擬運算個體](/docs/vcs/user-guides/connecting/prerequisites.md)
-    - **Step 3.** 透過內建之 TWCC-CLI 工具[將 COS 檔案下載到指定位置](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fcli-overview-zh)。
-3. [使用 MobaXterm 連線虛擬運算個體](/docs/vcs/user-guides/connecting/linux/from-windows.md)，於頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
-
-</details>
 <div style={{height:10+'px'}}></div>
 
-## 網路安全
 
-### 彈性 IP
+## Storage and data transfer
+
+<details>
+
+<summary> Q1. Can Cloud Object Storage (COS) be mounted on VCS instances?</summary>
+
+Yes, COS can be mounted on VCS instances. You have the full permission of the instance, so you can perform any operations on the instance. To mount COS using s3fs or related packages, refer to [<ins>s3fs-fuse</ins>](https://github.com/s3fs-fuse/s3fs-fuse).
+
+</details>
+
+<details>
+
+<summary> Q2. How to regularly back up VCS instance data to Cloud Object Storage (COS)?</summary>
+
+Use TWCC-CLI and `crontab -e` to set up scheduled regular image creation.
+- For details on using TWCC-CLI, refer to [<ins>4-3. Upload files to bucket</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-3-%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88%E8%87%B3%E5%84%B2%E5%AD%98%E9%AB%94).
+- For details on using `crontab -e`, refer to [<ins>crontab guru</ins>](https://crontab.guru/) or [<ins>crontab(5) - Linux man page</ins>](https://linux.die.net/man/5/crontab).
+
+</details>
+
+<details>
+
+<summary> Q3. What happens if an image over 100 GB is imported into a VCS instance?</summary>
+
+The size of the system disk is 100GB. Though you won't be charged for the extra storage, the VCS instance won't be able to start if the system disk is used over 100GB.
+
+</details>
+
+<details>
+
+<summary> Q4. How to download the VCS instance data to the local computer?</summary>
+
+There are 2 methods you can use to download the instance data to your local machine:
+1. Using the Cloud Object Storage (COS). This method can not only achieve the purpose of data transmission, but also back up your instance:
+    - **Step 1.** [<ins> Back up the data to COS</ins>](https://www.twcc.ai/doc?page=backup).<br/>
+    - **Step 2.** From your local machine, go to the **Cloud Object Storage Management** page on TWCC Portal to [<ins>download files</ins>](https://www.twcc.ai/doc?page=object#%E4%B8%8B%E8%BC%89%E6%AA%94%E6%A1%88) or use [<ins> third-party software</ins>](https://www.twcc.ai/doc?page=object#%E4%BD%BF%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BB%9F%E9%AB%94%E7%AE%A1%E7%90%86%E6%AA%94%E6%A1%88) to download multiple files at once.
+2. From your local machine, [<ins>Use MobaXterm to connect to the VCS instance</ins>](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94), and select "**Sftp**" icon on the left side to view, upload and download files. 
+
+</details>
+
+<details>
+
+<summary> Q5. How to upload the local data to the VCS instance?</summary>
+
+There are 2 methods you can use to upload your local data to the VCS instance:
+1. Using Cloud Object Service (COS):
+    - **Step 1.** [<ins>Upload local files to Cloud Object Storage Service (COS)</ins>](https://www.twcc.ai/doc?page=object#%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88)<br/>
+    - **Step 2.** [<ins>Connect to the VCS instance</ins>](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)<br/>
+    - **Step 3.** Use the built-in TWCC-CLI to [<ins>Download the files in COS to the designated directory</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage).
+2. From your local machine, [<ins>Use MobaXterm to connect to the VCS instance</ins>](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94), and select "**Sftp**" icon on the left side to view, upload and download files.
+
+</details>
+
+<div style={{height:10+'px'}}></div>
+
+
+## Network & Security
+
+### Elastic IP
 
 <details>
 
 <summary>
 
- Q1. 可以取回虛擬運算個體在 `Stopped` 之前所使用的公用 IP 嗎？
+Q1. Can I retrieve the public IP used by the VCS instance before it was `stopped` ?
  
 </summary>
 
-停止虛擬運算個體後，浮動 IP (floating IP) 將會釋放回資源池，個體啟動後，將取得新的浮動 IP。
+After you stop the VCS instance, the floating IP will be released back to the resource pool and a new floating IP will be available after the individual starts.
 
-若您的使用情境適用固定 IP，建議您訂閱並使用靜態 IP (static IP)。請參考 [彈性 IP ](/docs/vcs/user-guides/networking/elastic-ip.md) 了解更多。
-
-</details>
-
-<details>
-
-<summary> Q2. 計畫預設可使用 IP 數量用完後，是否就無法建立虛擬運算個體？</summary>
-
-浮動 IP 額度使用完後，您可以持續建立虛擬運算個體，但無法配置浮動 IP。若需要額外的 IP，請您訂閱靜態 IP (static IP) 使用。若有特殊需求，請洽客服人員。
-
-請參考 [彈性 IP 訂閱政策](/docs/vcs/user-guides/networking/elastic-ip.md#彈性-ip-訂閱政策) 了解更多。
+If your usage scenario applies to fixed IPs, it is recommended that you subscribe and use static IPs. Please refer to [Elastic IP](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-eip-zh) to learn more.
 
 </details>
 
 <details>
 
-<summary> Q3. 請問為什麼不能訂閱靜態 IP (static IP)？</summary>
+<summary> Q2. Is it impossible to create a VCS instance after the number of default IPs available to the project has been exhausted?</summary>
 
-請先檢視您的使用身分，專案內僅「租戶管理員」可執行訂閱靜態 IP、停止訂閱。
-若身分確認為管理員仍無法訂閱，請您聯繫客服人員處理。
+You can continue to create VCS instances after the floating IP quota is used up, but you cannot configure floating IPs.If you need additional IPs, please subscribe for static IP. If you have special needs, please contact our customer service.
+
+Please refer to [Elastic IP Subscription Policy](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-eip-zh#%E5%BD%88%E6%80%A7-IP-%E8%A8%82%E9%96%B1%E6%94%BF%E7%AD%96) to learn more.
 
 </details>
 
 <details>
 
-<summary> Q4. 我想將 DNS 綁定的浮動 IP 轉換為 靜態 IP，是否有轉換期的過渡方式？</summary>
+<summary> Q3. Why can't I subscribe to a static IP?</summary>
 
-若伺服器 (虛擬運算個體) 僅架設單一對外服務，您可以將預定使用的靜態 IP (static IP) 先掛載至負載平衡器，並將流量從負載平衡器轉發至後端服務伺服器。待 DNS IP 轉換完畢後，再將靜態 IP 掛載至伺服器上。
+Please check your user status first. Only the **Tenant Administrator** can subscribe to static IPs and stop subscriptions in the project.
+If you have confirmed your administrator status and are still unable to subscribe, please contact Customer Service.
 
 </details>
+
+<details>
+
+<summary> Q4. If I want to convert a floating IP bound to DNS to a static IP, is there a transition period for the conversion?</summary>
+
+If the server (VCS instance) is hosting only one external service, you can first hook up a scheduled static IP to the load balancer and then forward the traffic from the load balancer to the back-end service server. After the DNS IP conversion is complete, then the static IP is hooked up to the server.
+
+</details>
+
 <div style={{height:10+'px'}}></div>
 
-### 虛擬網路
+### Virtual network
 
 <details>
 
-<summary> Q1. 虛擬運算個體建立後為何無法連線網路？ </summary>
+<summary> Q1. Why can't the VCS instance connect to the Internet after creating?</summary>
 
-請檢查虛擬網路設定是否有誤；
-
-若有啟用基礎虛擬網路防火牆，但不清楚規則是否設定正確，我們建議您先把防火牆關閉，並再次嘗試連線。
-
-有關基礎虛擬網路防火牆的設定，請參考[此文件](/docs/vcs/user-guides/security/virtual-network-firewall.md)，或洽詢技術支援：[isupport@twcc.ai](isupport@twcc.ai)。
+Please check the virtual network configurations.
+If you have enabled the Basic Virtual Firewall (BVF), and you're not sure whether the rules are set correctly, we suggest you disable the firewall first and try to connect again.
+For Basic Virtual Firewall (BVF) configurations, refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-vnf-en), or contact the Technical Support: [isupport@twcc.ai](isupport@twcc.ai).
 
 </details>
 
 <details>
 
-<summary> Q2. 如何開啟虛擬運算個體非預設埠進行服務？</summary>
+<summary> Q2. How to open non-default open ports of the VCS instance to run services?</summary>
 
-- Linux 個體預設開啟的埠為： 22、443
-- Windows 個體預設開啟的埠為： 22、443、9833
-  如需開啟額外的埠，請在安全性群組處進行設定，設定方法與步驟請參考[此文件](/docs/vcs/user-guides/security/security-group.md)。
+- The default open ports of Linux instance: 22、443
+- The default open ports of Wondows instance: 22、443、9833
+- You may open an additional port by setting the security group, please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-sg-en).
 
 </details>
 
@@ -390,104 +398,101 @@ Q2. 對虛擬運算個體安裝套件或進行更新，出現`E: Could not get l
 
 <summary>
 
- Q3. 建立虛擬網路時出現錯誤訊息 `440301: The request exceeded the quotas of ['floating_ip']` 該如何解決？
+ Q3. How to solve the error message ```440301: The request exceeded the quotas of ['floating_ip']``` when creating a VCS instance?
  
 </summary>
 
-出現此錯誤訊息的原因為浮動 IP (floating IP) 數量已經達到該計畫的上限，您可以參考以下做法：
-1. 移除虛擬運算個體暫不需使用的浮動 IP (個體狀態為 `Ready` 才可移除) 後，再次建立虛擬網路。
-2. 若有特殊需求，請洽客服人員。
+
+The reason for this error message is that the number of floating ip's has reached the limit of the project, you can refer to the following practices.
+1. After deleting the floating IPs that the VCS instance does not need to use for now(the status of the instance is `ready` before it can be deleted), then select Create again.
+2. If you have special needs, please contact our customer service.
 
 </details>
 
 <details>
 
-<summary> Q4. 是否有限制網路速度？</summary>
+<summary> Q4. Is there a limit to the speed of the network?</summary>
 
-TWCC 沒有對虛擬運算個體內的網速進行限制，如果您發現傳輸速度緩慢，建議您可以進行以下操作：
-1. 使用網路測速工具 (例：[Speedtest](https://www.speedtest.net/))，並將測試結果寄發到技術支援信箱 (isupport@twcc.ai)，我們將會根據您提供的資料判斷是否速度異常。
-2. 確認來源端的網速是否受到限制。
+TWCC does not limit the speed of the network within the virtual computing entity. If you find that your transfer speeds are slow, we recommend that you take the following steps:
+1. Using the Network Speed Tool (e.g. [Speedtest](https://www.speedtest.net/)), then send the test results to the technical support email (isupport@twcc.ai) and we will determine if the speed is abnormal based on the information you provide.
+2. Confirm that the network speed of the source is not limited.
 
 </details>
+
 <div style={{height:10+'px'}}></div>
 
-### Auto Scaling
+### Auto scaling
 
 <details>
 
-<summary> Q1. 如何讓 Auto scaling 擴展出的個體，符合我需求的環境？</summary>
+<summary> Q1. How do I change the instance template that the auto scaling uses to scale out instances to meet my needs?</summary>
 
-請按照以下步驟進行：
-
-* 建立環境映像檔
-  1. 建立虛擬運算個體，部署環境與檔案，並建立個體映像檔 (或使用您現有的個體建立映像檔)
-  2. 利用步驟1所建立的映像檔，再建立一虛擬運算個體
- 
-* 設定 Auto Scaling
-
-  3. 建立 Auto Scaling
-  4. 將 Auto Scaling 掛載至步驟2所建立的個體
-  
-<br/>
-經以上步驟設定，Auto Scaling 擴展出的個體，即會符合您所需的環境。
+Please follow the steps:
+* Create a template image
+1. Create a VCS instance, deploy the environment and files, and create an instance image (or use your existing instance to create an image).
+2. Create a VCS instance from the image created in the Step 1.
+* Set up auto scaling
+3. Create an auto scaling.
+4. Attach the auto scaling to the instance created in Step 2.
+Follow the steps above, the auto scaling will use the template to scale out instances that meet your needs.
 
 </details>
+
 <div style={{height:10+'px'}}></div>
 
-## 個體映像檔
+
+## Image
 
 <details>
 
-<summary> Q1. 映像檔建立的時間需要多久？</summary>
+<summary> Q1. How long does it take to create an image?</summary>
 
-映像檔建立的時間約 10-15 分鐘。
+The image creation takes about 10-15 minutes.
 
 </details>
 
 <details>
 
-<summary> Q2. 如何節省映像檔建立的時間？</summary>
+<summary> Q2. How to shorten the image creation time?</summary>
 
-若建立映像檔的同時，仍有資料進行傳輸，不僅無法確保資料的完整與一致性且花費的時間較多，因此建議先將個體進行手動關機 (`sudo shutdown`) ，確認資料都已寫入虛擬磁碟後，再進行建立映像檔。
-
-</details>
-
-<details>
-
-<summary> Q3. 如何使虛擬運算個體進行自動建立映像檔？ </summary>
-
-您可透過 TWCC-CLI 與 `crontab -e` 進行定時建立映像檔設定。
-- TWCC-CLI 使用詳情請參考 [3-6. 虛擬運算個體映像檔](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fcli-overview-zh)。
-- `crontab -e` 請參考 [crontab guru](https://crontab.guru/) 或 [crontab(5) - Linux man page](https://linux.die.net/man/5/crontab)。
+If data transmitting while creating the image, the backup might be inconsistent, and the data might be saved incompletely; moreover, the backup process is longer than usual. Therefore, we suggest you shut down the instance manually (`sudo shutdown`) and make sure the data has been written into the virtual disks before creating an image.
 
 </details>
 
 <details>
 
-<summary> Q4. 為什麼無法將映像檔分享至另一個計畫？ </summary>
+<summary> Q3. How to automate the VCS image creation?</summary>
 
-1. 僅租戶管理員能分享映像檔至其他目標計畫，且需同時為來源與目標計畫的租戶管理員。
-2. 不支援跨計畫分享含授權的映像檔 (例：含授權之 Windows Server)。
+Use TWCC-CLI and `crontab -e` to set up scheduled regular image creation.
+- For details on using TWCC-CLI, refer to [<ins>3-6. VCS instance image</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#3-6-%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94%E5%BF%AB%E7%85%A7-TBD%E2%80%A6).
+- For details on using `crontab -e`, refer to [<ins>crontab guru</ins>](https://crontab.guru/) or [<ins>crontab(5) - Linux man page</ins>](https://linux.die.net/man/5/crontab).
 
 </details>
 
 <details>
 
-<summary> Q5. GPU VM的映像檔使用映像檔分享後，為何無法在目標計畫中選擇GPU規格建立虛擬運算個體？
+<summary> Q4. Why can't I share an image to another project?</summary>
+
+1. Only tenant administrators can share image to other target projects, and they must be tenant administrators of both the source and target projects.
+2. Cross-project sharing of licensed images is not supported (e.g. Windows servers with licenses).
+
+</details>
+
+<details>
+
+<summary> Q5. Why can't I select the GPU specification in the target project to create a VCS instance after the image of the GPU VM uses image sharing?
 
 </summary>
 
-映像檔分享功能，在目的計畫中只支援建立CPU虛擬運算個體，暫不支援建立GPU擬運算個體
+The image sharing function only supports the creation of CPU VCS instances in the target project, and does not support creating GPU VCS instances yet.
 
 </details>
 
 <details>
 
-<summary> Q6. 為什麼分享後的映像檔狀態呈現 Error？
+<summary> Q6. Why does the image status after sharing give an error? </summary>
 
-</summary>
-
-若是分享由 2021/3/27 前建立之虛擬運算個體所產生的映像檔，此類映像檔因效能尚未優化，將會導致分享的時間過長而失敗。
-有分享需求請洽詢技術支援：[isupport@twcc.ai](isupport@twcc.ai)。
+If you share images generated from VCS instances created before 2021/3/27, such images will take too long to share and will fail due to unoptimized performance.
+For sharing requests, please contact technical support:[isupport@twcc.ai](isupport@twcc.ai)。
 
 </details>

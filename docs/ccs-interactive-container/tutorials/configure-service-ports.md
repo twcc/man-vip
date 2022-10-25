@@ -1,48 +1,50 @@
 ---
 sidebar_position: 2
-sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-config-service-port-zh'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-config-service-port-zh'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-config-service-port-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-config-service-port-en'
 ---
 
-# 設定開發型容器的服務埠
+# Configure the service port of Interactive Containers
 
-TWCC 容器採用 Port-Forwarding 技術，可將外部連線轉發至相同網域下的不同容器，讓外部網路可以使用指定容器內的服務。
+TWCC Container service adopts Port-Forwarding to forward external network connections to different containers under the same domain, so that users can use specified container services from external network.
 
-除 22 埠供 SSH 使用、8888 供 Jupyter Notebook 使用之外，容器開放 5000、5001、5002 三個服務埠，您可以將您在容器內架設的服務的 daemon 設置在其一的對外埠，並在容器詳細資料頁關聯對外埠與目標埠，完成後，您即可於本機透過公用 IP 和對外埠，使用該服務。
+SSH runs on port 22; Jupyter Notebook runs on port 8888. Besides, the container service opens external port: 5000, 5001 and 5002. You can set the daemon of the container service to one of the external ports, and associate the external port with the target port in Interactive Container Details page. After that, you can use the service from your local using the public IP and the external port.
 
-以下示範如何於容器內以 Flask 架設網頁服務，將服務的 daemon 設置在對外埠`5002`上，並關聯服務埠，即可透過本機瀏覽器使用該網頁服務：
+The following demonstrates how to set up a web service with Flask in a container, set the daemon of the service on the external port 5002, and associate the service port to use the web service through a local browser:
 
-## 建立容器
+## Create a container
 
-- 容器建立後，開啟 Jupyter Notebook :arrow_right: Terminal
+- After the container is created, open Jupyter Notebook :arrow_right: Terminal
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7adcd4b991852eb4a7f4d05b98f6adff.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_42fac0b7acc6b4a74b8ba792c022bb5d.png)
 
-## 架設網頁服務、設定服務 port
 
-- 輸入以下指令，下載腳本並執行腳本內容 (安裝 [Flask](https://flask.palletsprojects.com/en/1.1.x/) 架設網頁、讓網頁顯示 `Hello World` 的字串，並設定 port 號為 `5002`)，使用容器架設網頁服務。 
+## Configure a web service and a service port
+
+- Enter the following command, download and run the script (script commands: install [Flask](https://flask.palletsprojects.com/en/1.1.x/) to set up the website, make it display `Hello World`, and set the port number to `5002`) to configure the web service using the container.
 ```bash=
-wget -O - https://bit.ly/TWCC_TestServicePort5002 | bash
+wget -O - https://bit.ly/TWCC_TestServicePort_5002 | bash
 ```
 ![](https://i.imgur.com/TCStO51.png)
         
-- 確認網頁服務已架設完成，且網頁服務 daemon 已位於 `5002` 埠
+- Make sure that the web service has been set up and the daemon is running on port `5002`
         
 ![](https://i.imgur.com/XKvEMYX.png)
 
-## 關聯服務 port
+## Associate service ports
         
-- 回到容器詳細資料頁，點選「關聯」服務埠 :arrow_right: 勾選服務 daemon 的所在埠號 `5002` :arrow_right: 點選「確認」
+- Back to Interactive Container Details page, click ASSOCIATE:arrow_right: select the port number of the service daemon `5002` :arrow_right: click OK
         
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a83708e0a486692acf4221e824667adf.png)
-        
-- 完成後，系統將分配一「目標埠」(53055)，對應至對外埠 (5002)
-        
-![](https://i.imgur.com/a9wXd1e.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_384f2febec1ccdaf1c98a3e8b693efb3.png)
 
-## 使用網頁服務
         
-- 開啟您本機端的瀏覽器，輸入`http://公用IP:目標埠號`，即可看見網頁內容，開始使用網頁服務。
+- After that, the system will allocate a **target port** (53055) corresponding to the external port (5002)
+        
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d916b86e079a007d7b2e51a925db2ad5.png)
+
+
+## Use the web service
+        
+- Open your local browser and enter `http://public IP:target port number`, then you can see the web page and start using the web service.
 
 ![](https://i.imgur.com/Za4GoFg.png)
-

@@ -1,23 +1,23 @@
 ---
 sidebar_position: 1
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-cuda-w-nccl-cudnn-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-cuda-w-nccl-cudnn-zh' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-cuda-w-nccl-cudnn-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-cuda-w-nccl-cudnn-en' 
 ---
 
 
 # CUDA with NCCL/cuDNN
 
-- 套件官網 
+- Packages official website
   - [CUDA](https://developer.nvidia.com/cuda-zone)
   - [NCCL](https://developer.nvidia.com/nccl)
   - [cuDNN](https://developer.nvidia.com/cudnn)
-- release note 
+- Release note
   - [CUDA](https://developer.nvidia.com/cuda-toolkit-archive)
   - [NCCL](https://docs.nvidia.com/deeplearning/nccl/archives/index.html)
   - [cuDNN](https://docs.nvidia.com/deeplearning/cudnn/release-notes/index.html)
-- 套件來源：由於 NVIDIA NGC CUDA 容器已同時安裝 NCCL/cuDNN，故已此為參考，統一複製容器內搭配的檔案
-- 除此之外，NVIDIA HPC SDK 也已包含 CUDA 和 NCCL/OpenMPI，但缺少 cuDNN
-- 提醒 CUDA 11 以後，部分 library 有可能無法搭配和 CentOS 7 預設提供的 gcc 4.8.5，可參考 release note 支援表，搭配 gcc 7 以上的 module 使用
+- Package source: NVIDIA NGC CUDA container has been installed with NCCL/cuDNN. We take this as a reference and copy the files in the container.
+- In addition, NVIDIA HPC SDK also includes CUDA and NCCL/OpenMPI, but lacks cuDNN.
+- Remind that the version after CUDA 11, some libraries may not be compatible with the gcc 4.8.5 provided by CentOS 7 by default. You can refer to the support matrix in the release note for use with modules above gcc 7.
 ![](https://i.imgur.com/G4pwXr4.png)
 ref: https://docs.nvidia.com/hpc-sdk/hpc-sdk-release-notes/index.html
 
@@ -54,4 +54,3 @@ ref: https://docs.nvidia.com/hpc-sdk/hpc-sdk-release-notes/index.html
 | 10.0 | 2.6.4   | 7.6.5    | 10.0-cudnn7-devel-centos7   |
 | 9.2  | N/A     | 7.6.5    | 9.2-cudnn7-devel-centos7    |
 | 9.0  | N/A     | 7.6.5    | 9.0-cudnn7-devel-centos7    |
-

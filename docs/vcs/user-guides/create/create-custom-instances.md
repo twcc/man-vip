@@ -1,54 +1,53 @@
 ---
 sidebar_position: 2
-title: '客製化個體'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-create-custom-instance-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-create-custom-instance-zh' 
+title: 'Custom instances'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-create-custom-instance-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-create-custom-instance-en' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 建立客製化個體
+# Create custom instances
 
-建立 TWCC 虛擬運算個體後，您可以進入個體部署您需要的工具、打造您專屬的客製化環境，並建立[**映像檔**](../backup/create-images.md)保存工作環境，即可重複建立相同客製化的環境，也可以作為備份個體設定之措施，避免個體毀損遺失。
+Once you create a TWCC virtual computing environment, you can access it to deploy the tools you need, create your own custom environment, and create an [**VCS instance image**](https://man.twcc.vip/en/docs/vcs/user-guides/backup/creation) to save your working environment so that you can create the same custom environment over and over again, or as a backup measure to avoid losing your personal settings.
 
 :::info
-租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/compute.md#虛擬運算服務)。
+For the permission differences in VCS instance between Tenant Admins and Tenant Users, please refer to [<ins>User permissions comparison</ins>](https://man.twcc.ai/@twccdocs/role-main-en).
 :::
 
 <br/>
 
-## 開始之前
 
-- 若尚未註冊使用帳號，請先[註冊 TWS / TWCC 帳號](/docs/member/user-guides/member-key-quota/sign-up-for-twcc.md)。
-- 若選擇使用 TWCC 入口網站操作，請先登入[TWCC 入口網站](https://www.twcc.ai/)。
-- 若選擇使用 TWCC CLI 操作，請先[安裝 TWCC CLI](https://github.com/twcc/TWCC-CLI)、並[登入](https://github.com/twcc/TWCC-CLI)。
-- [建立虛擬運算個體](./create-instances.md)，部署工作環境，並建立個體[映像檔](../backup/create-images.md)；或請來源計畫將映像檔[分享](../backup/manage-images.md#分享映像檔分享管理)至您的計畫。
+## Before we get started
 
-<br/>
-
-
-## 建立客製化個體
-
-選用計畫內建立的映像檔、其他計畫分享的映像檔，建立個體步驟不同，請依適用情境參以下操作步驟。
+- If you haven't sign up for a user account, please [sign up for TWCC](https://www.twcc.ai/) first.
+- If you would like to operate with TWCC portal, please sign in to [TWCC portal](https://www.twcc.ai/) first.
+- If you would like to operate with TWCC CLI, please [install TWCC CLI](https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-2-%E5%AE%89%E8%A3%9DTWCC-CLI) first, and then [sign in](https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-3-%E9%80%B2%E5%85%A5-TWCC_CLI-%E7%92%B0%E5%A2%83%E4%B8%A6%E9%96%8B%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8B%99).
+- [Create a VCS instance](https://man.twcc.ai/@twccdocs/guide-vcs-create-en), deploy working environment and create a instance [image file](https://man.twcc.ai/@twccdocs/vcs-vds-instance-image-en).
 
 <br/>
 
-### 選用計畫內建立的映像檔
+## Create a custom instance
+
+Depending on the image created in the selected project or the image shared by other projects, the creation steps are different, so please refer to the following steps according to the applicable situation.
+
+<br/>
+
+### Select the image created in the project
 
 <Tabs>
 
-<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
+<TabItem value="TWCC Portal" label="TWCC Portal">
 
-建立步驟同 [建立虛擬運算個體](./create-instances.md)，僅「**映像檔**」改選擇所要回復的映像檔版本 `(private)xxx您自訂的映像檔名稱xxx`，即可完成建立。
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_020639a28b42ede29aa4ca4ceb1612a5.png)
+The creation procedure is the same as [<ins>Create VCS instances</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/creation/vcs-instances), only **Image** should be changed to select `(private)xxx, xxx is your custome image file name`, then you can complete the creation.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0dcb4912bb77fb6de9f67c58d74bf47a.png)
 
 :::tip
 <details>
 
-<summary> 快速動畫教學 <i class="fa fa-file-video-o" aria-hidden="true"></i> </summary>
+<summary> Quick Animation Tutorial <i class="fa fa-file-video-o" aria-hidden="true"></i> </summary>
 
 ![](https://i.imgur.com/XLTl6xa.gif)
 
@@ -68,15 +67,15 @@ import TabItem from '@theme/TabItem';
 <br/>
 
 
-### 選用來源計畫分享的映像檔
+### Select the image file shared by the source project
 
 <Tabs>
 
-<TabItem value="TWCC 入口網站" label="TWCC 入口網站">
+<TabItem value="TWCC Portal" label="TWCC Portal">
 
-建立步驟同 [建立虛擬運算個體](./create-instances.md)，僅「**映像檔類型**」需先依映像檔的作業系統，選擇 Custom Image Linux 或 Custom Image Windows，才能接續選擇來源計畫分享的映像檔。
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cbe7e981b40b59d824db31876356bddf.png)
+The creation procedure is the same as [<ins>Create VCS instances</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/creation/vcs-instances), except that "**image type**" needs to be selected from Custom Image Linux or Custom Image Windows depending on the operating system of the image file, and then select the image shared by the source project.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_09dbcd06461d854690a0e0d04136673b.png)
 
 </TabItem>
 
@@ -91,9 +90,9 @@ import TabItem from '@theme/TabItem';
 <br/>
 
 :::caution
-選用映像檔建立虛擬運算個體，當狀態為建立中 (**`Starting`**) 時，為確保個體可完整建立，**請勿刪除映像檔**。
+To ensure an instance can be created from an image completely, please **do not delete the image** when the instance is in the **`Starting`** state.
 :::
 
 :::info
-同一用戶一分鐘內僅能執行各 10 次建立、刪除虛擬運算個體。
+A user can only create and delete VCS instances 10 times respectively in one minute.
 :::

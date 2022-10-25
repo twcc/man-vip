@@ -1,114 +1,114 @@
 ---
 sidebar_label: '儲存服務'
 sidebar_position: 2
-sync_original_production: 'https://man.twcc.ai/@twccdocs/role-storage-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-storage-zh' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/role-storage-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-storage-en' 
 ---
 
+# Comparison of role permissions of TWCC：Storage Services
 
-# TWCC 角色權限比較：儲存服務
+## Hyper File System (HFS)
 
-## 高速檔案系統
+- Access via Data Transfer Node (<ins><a href = "xdata1.twcc.ai">xdata1.twcc.ai</a></ins>) or Login Node  (<ins><a href = "ln01.twcc.ai">ln01.twcc.ai</a></ins>)
 
-- 存取方式：透過資料傳輸節點 (<ins><a href = "xdata1.twcc.ai">xdata1.twcc.ai</a></ins>) 或登入節點 (<ins><a href = "ln01.twcc.ai">ln01.twcc.ai</a></ins>)
-
-| 功能 | 租戶管理員 | 租戶使用者 |
+| Function | Tenant Admin | Tenant User |
 | -------- | -------- | -------- |
-|存取個人空間資料|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|存取專案所有使用者之空間資料|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Access personal storage space|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Access all user's storage space in the project|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 
 
-- 存取方式：透過開發型容器 (Jupyter Notebook)
+- Access via Interactive container (Jupyter Notebook)
 
-| 功能 | 租戶管理員 | 租戶使用者 |
+| Function | Tenant Admin | Tenant User |
 | -------- | -------- | -------- |
-|存取個人空間資料|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|存取專案所有使用者之空間資料|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Access personal storage space|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Access all user's storage space in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 
 :::caution
-同一專案下租戶管理員可透過 Jupyter Notebook 存取所有租戶使用者的資料，租戶使用者若跨專案，應自行處理不同專案下的資料權限。
+Tanent Admins can access all storage space in the project via Jupyter Notebook. If Tenant Users have multiple projects, please deal with the data permissions under different projects yourself.
 :::
 
-- 存取方式：透過開發型容器 (SSH)
+- Access via Interactive container (SSH)
 
-| 功能 | 租戶管理員 | 租戶使用者 |
+| Function | Tenant Admin | Tenant User |
 | -------- | -------- | -------- |
-|存取個人空間資料|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|存取專案所有使用者之空間資料|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Access personal storage space|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Access all user's storage space in the project|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 
-## 雲端物件儲存
 
-- 公共空間
+## Cloud Object Storage (COS)
 
-| 功能 | 租戶管理員 | 租戶使用者 |
+- Public COS
+
+| Function | Tenant Admin | Tenant User |
 | -------- | -------- | -------- |
-|建立儲存體|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視個人儲存體與資料|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視專案所有儲存體與資料|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|存取個人儲存體資料|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|存取專案所有使用者之儲存體資料|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|刪除個人儲存體資料|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|刪除專案所有使用者之儲存體資料|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Create bucket|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View personal bucket data|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View all bucket data in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Access personal bucket data|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Access all bucket data in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Delete personal bucket data|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Delete all bucket data in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
 
-- 私人空間
+- Private COS
 
-| 功能 | 租戶管理員 | 租戶使用者 |
+| Function | Tenant Admin | Tenant User |
 | -------- | -------- | -------- |
-|建立儲存體|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視個人儲存體與資料|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視專案所有儲存體與資料|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|存取個人儲存體資料|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|存取專案所有使用者之儲存體資料|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|刪除個人儲存體資料|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|刪除專案所有使用者之儲存體資料|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Create bucket|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View personal bucket data|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View all bucket data in the project|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Access personal bucket data|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Access all bucket data in the project|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Delete personal bucket data|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Delete all bucket data in the project|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 
 
 :::info
-TWCC CLI 可操控之服務 (雲端物件儲存) 角色權限皆與使用者介面相同。
+Role permission of COS using TWCC CLI or portal is the same.
 :::
 
+## Virtual Disk Service (VDS)
 
-## 虛擬磁碟服務
+- General operations: 
 
-- 一般操作 
-
-| 功能 | 租戶管理員 | 租戶使用者 |
+| Function | Tenant Admin | Tenant User |
 | -------- | -------- | -------- |
-|建立資料磁碟|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視個人資料磁碟資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視專案內所有資料磁碟資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|刪除個人資料磁碟|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|刪除專案內所有資料磁碟|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|將個人資料磁碟連結至個人個體|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|將個人資料磁碟連結至其它成員個體|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|將其它成員資料磁碟連結至個人個體|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|將其它成員資料磁碟連結至其它成員之個體|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Create data disk|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View personal data disk information|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View all data disk information in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Delete personal data disk|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Delete all data disk in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Attach personal data disk to personal VCS intance|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Attach personal data disk to VCS Instance of other members|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Connect data disk of other member with personal VCS Instance|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Connect data disk of other member with VCS Instance of other member|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 
 
-- 資料磁碟快照
+- Data Disk Sanpshot
 
-| 功能 | 租戶管理員 | 租戶使用者 |
+| Function | Tenant Admin | Tenant User |
 | -------- | -------- | -------- |
-|建立個人資料磁碟快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|建立非個人資料磁碟快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視個人資料磁碟快照資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|檢視專案內所有資料磁碟快照資訊|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|刪除個人資料磁碟快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|刪除專案內所有資料磁碟快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|使用個人資料磁碟快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|使用專案內所有資料磁碟快照|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-
-## 雲端檔案服務
-
-儲存權限類別：
-
-- <i class="fa fa-eye" aria-hidden="true"></i> 檢視：僅能瀏覽、下載、搜尋檔案。
-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i> 編輯：除檢視權限，還可刪除、上傳檔案、新增資料夾、冷熱儲存搬移。
-- <i class="fa fa-share-square-o" aria-hidden="true"></i> 分享：設定資料夾的分享對象與權限。
+|Create snapshot of personal disk|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Create snapshot of others|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View personal snapshot information|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View all snapshot information in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Delete personal snapshot|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Delete all snapshot in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Use personal snapshot|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Use all snapshot in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 
 
-儲存階層與權限說明：
+## Cloud File Service
 
-| 資料集 | 第一層資料夾 | 子資料夾 |
+Storage permissions category：
+
+- <i class="fa fa-eye" aria-hidden="true"></i> View：Browse, download and search files only.
+- <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit：In addition to view permissions, you can also delete, upload files, add folders, and move hot and cold storage.
+- <i class="fa fa-share-square-o" aria-hidden="true"></i> Share：Set the sharing target and permission for the folder.
+
+
+Storage level and permission description：
+
+| Folder | First Level Folder | Subfolder |
 | -------- | -------- | -------- |
-| 檔案若直接上傳至資料集，**專案內所有成員** 皆可檢視與編輯檔案   | (1) 建立後僅 **專案建立者**、**資料夾建立者** 擁有檢視、編輯、分享的權限<div></div>(2) 被分享檢視或編輯權限之成員，不具分享權限| 繼承第一層資料夾的權限設定     |
+| If the file is uploaded directly to the dataset, **all members of the project** can view and edit the file   | (1) Once created, only **project creator** and **folder creator** have permission to view, edit and share.<div></div>(2) Members with shared view or edit permissions do not have shared permissions| Inherit the permission settings of the first level folder     |

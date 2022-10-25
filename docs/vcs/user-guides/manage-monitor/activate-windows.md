@@ -1,37 +1,42 @@
 ---
 sidebar_position: 1
-title: '啟用 Windows'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-activate-windows-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-activate-windows-zh' 
+title: 'Activate Windows'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-activate-windows-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-activate-windows-en' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 啟用 Windows
+# Activate Windows
 
-Windows 虛擬運算個體建立完成後，需使用您已擁有的授權自行啟用 Windows，以下提供兩種啟用的方法：
-
-<br/>
-
-## 使用數位授權啟用
-
-數位授權 (Windows 10 版本 1511 中稱為數位權利) 是不需要輸入產品金鑰即可啟用 Windows 10 的方式。數位授權已關聯至硬體且連結至 Microsoft 帳戶，因此您不需要在電腦上尋找任何項目。請將電腦連線至網際網路，再登入您已具備數位授權的 Microsoft 帳戶，便完成啟用。
+After VCS Windows instances are created, please activate Windows with your own license. Two activation methods are provided below.
 
 <br/>
 
-## 使用產品金鑰啟用
-
-輸入您擁有的產品金鑰，請選取 [開始] 按鈕，然後選取 [設定] > [更新與安全性] > [啟用] > [變更產品金鑰]。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c651b64dfdca922ea33c06665ea7ea6a.png)
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_82c4ca56262d66163161e1c217f1fe4e.png)
+## Activate using a digital license
+
+Digital license (called a digital entitlement in Windows 10, Version 1511) is a method of activation in Windows 10 that doesn't require you to enter a product key. Digital licenses are associated with your hardware and linked to your Microsoft account, so you don't need to find anything on your instance. Once your instance is connected to the Internet and logged into your Microsoft account, you're all set.
 
 <br/>
+
+
+
+## Activate using a product key
+
+To enter the product key, select the 開始 (Start)  button, and then select 設定 (Settings)  > 更新與安全性 (Update & Security)  > 啟用 (Activation)  > 更新產品金鑰 (Update product key) > 變更產品金鑰 (Change product key).
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a5226ee497a6433a005a9238b166e516.png)
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7e862040f79e7d2be2c69c4afcbbb4a4.png)
+
+
+<br/>
+
 
 
 :::info
-更多資訊，請參考[<ins>啟用 Windows 10</ins>](https://support.microsoft.com/zh-tw/help/12440/windows-10-activate)。
-::: 
+For more information, please refer to [<ins>Activate Windows 10</ins>](https://support.microsoft.com/en-us/windows/activate-windows-c39005d4-95ee-b91e-b399-2820fda32227#ID0EBD=Windows_10).
+:::

@@ -2,20 +2,21 @@
 sidebar_label: 'Caffe'
 sidebar_position: 6
 title: Caffe
-sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-caffe-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-caffe-zh' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-caffe-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-caffe-en' 
 ---
+
 
 
 # <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b3382d3255e279896320ff106a1565d.png' /> Caffe
 
 
-TWCC 提供 NGC’s NVCaffe 立即可用的工作環境。NVIDIA開發的深度學習軟體開發套件，加速了深度學習框架的廣泛應用，如 NVCaffe™。Caffe™ 最初由柏克萊視覺學習中心 (BVLC) 和其他社群貢獻者共同開發。它是一個深度學習的框架，以運算式、速度和模組化為基礎。
+
+TWCC provides ready-to-use working environment of NGC’s NVCaffe. The NVIDIA Deep Learning SDK accelerates widely-used deep learning frameworks such as NVCaffe™. Caffe™ was originally developed by the Berkeley Vision and Learning Center (BVLC) and other community contributors. It is a deep learning framework made with expression, speed, and modularity in mind.
 
 <br/>
 
-
-## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">映像檔版本資訊</span> 
+## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">Image version information</span> 
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7a821571c91c3f51f68b94204c150155.png)
@@ -23,14 +24,14 @@ TWCC 提供 NGC’s NVCaffe 立即可用的工作環境。NVIDIA開發的深度�
 
 
 :::info
-`py3` 與 `py2` 則為 Python 之版本差異。
+`py3` and `py2` are different Python versions.
 :::
 
 <br/>
 
 <details class="docspoiler">
 
-<summary><b>點我參考詳細版本套件資訊</b></summary>
+<summary><b>Detailed package version information</b></summary>
 
 - [caffe-20.02-py3](https://docs.nvidia.com/deeplearning/frameworks/caffe-release-notes/rel_20-02.html#rel_20-02)
 - [caffe-19.11-py3](https://docs.nvidia.com/deeplearning/frameworks/caffe-release-notes/rel_19-11.html#rel_19-11)

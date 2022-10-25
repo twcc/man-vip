@@ -1,39 +1,92 @@
 ---
-sidebar_position: 4
-sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-css-jupyter-add-python3-kernel-zh'
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-css-jupyter-add-python3-kernel-zh'
+sidebar_position: 3
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-vcs-setup-env-variable-en'
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-vcs-setup-env-variable-en'
 ---
 
-# Jupyter Notebook 增加 Python 3 kernel
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Setup The Environmental Variables
+
+This document is to explain how to setup the environment variables you need to  dynamically adjust your application setting to meet your environment requirements when creat [<ins>Interactive Containers</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-create-zh) / [<ins>VCS Instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh) via the TWCC user site and TWCC CLI.
+
+:::info
+This function is only available for certain image:
+- Interactive Containers：Most of them are available (If you need to use Matlab(public preview version) and Custom Image, please contact <ins> <a href = "mailto:isupport@twcc.ai">Technical Support Services</a> </ins>).
+- VCS Instance：Linux image.
+:::
 
 
-TWCC 開發型容器預設提供 Jupyter Notebook，為透過網頁與使用者互動的整合型開發環境，能夠撰寫程式、顯示程式輸出內容、視覺化呈現資料...等多種功能，並可依需求安裝多種語言的運算核心 (Kernel)。
+e.g.：If you use [TensorFlow image](https://man.twcc.ai/@twccdocs/ccs-concept-image-main-zh/%2F%40twccdocs%2Fccs-concept-image-tensorflow-zh) file to create a container, you can set the [`TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH`](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-user-guide/index.html#tf_disable_cudnn_rnn_tensor_op_math) environment variable to enable/disable the Tensor Core math when you create the container.
 
-部分 TWCC 容器映像檔 (例：`caffe-19.08-py2:latest`)，Jupyter Notebook 僅提供 Python 2 kernel (如下圖)，本文將教學使用者如何新增 Python 3 Kernel，打造便利的運算環境。
+TensorFlow image enable Tensor Core math by default:
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0ab2cd237774e371c85e93ff63d1c96a.png)
-
-
-## Step 1. 連線進入開發型容器
-
-請參考[<ins>連線方式</ins>](../user-guides/create-connect/connect-container.md#jupyter-notebook)連線進入您的開發型容器。
-
-
-## Step 2. 安裝 Python 3 Kernel
-
-切換 root 身份，安裝 Python 3 kernel：
-
-```bash
-sudo su 
-apt-get update     
-apt-get install python3-pip
-python3 -m pip install ipykernel  
-python3 -m ipykernel install
+```
+Environmental Variables Preset Values (Key=Value)：TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH=0
 ```
 
-## Step 3. 確認安裝完成
+You can configure a value of `1` to set it to disable, when creating the container:
 
-重新整理 Jupyter Notebook 頁面，按下右上角 「**New**」 下拉選單，確認有 Python 2 與 Python 3，即安裝完成！
+### Step 1. Create containers / VCS Instance and setup the environment variables
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6a55e40d8c1f10531935436e3d7f7e63.png)
+<Tabs>
+  <TabItem value="TWCC Portal" label="TWCC Portal" default>
+    
 
+:::info
+The following is an example of the Interactive Containers, VCS Instance is setup in the same way, setting the environment variables when [<ins>creating the instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh).s
+:::
+
+
+
+When you create the container, setup the environment variables in the "**Environment Variables**" page and [<ins>create the container</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-create-zh), then the deployment is done.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_22347194982f56be9cb4f8fc69ba27de.png)
+
+:::info
+The environmental variables Key and Value are set in the following format (JSON), and multiple variables can be set at once：
+
+```
+    {
+    "Key1":"Value-a",
+    "Key2":"Value-b",
+    "Key3":100
+    }
+```
+
+:::
+
+
+
+  </TabItem>
+  <TabItem value="TWCC CLI" label="TWCC CLI">
+    
+
+```
+twccli mk ccs -envk TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH -envv 1  
+```
+
+
+  </TabItem>
+</Tabs>
+
+### Step 2. Confirm environment variables
+
+[<ins>Connect to the container</ins>](https://man.twcc.ai/@twccdocs/guide-ccs-connect-zh) and use the following command to confirm that the environment variables are imported to the container.
+
+```bash
+echo $BUFFER
+```
+
+:::info
+[<ins>Connect to the VCS Instance</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-zh) and confirm that the environment variables are imported to the instance using the following commands.
+<div></div>
+
+```bash
+echo $Key
+
+# Enter your key, e.g., $TF_DISABLE_CUDNN_RNN_TENSOR_OP_MATH
+```
+
+:::

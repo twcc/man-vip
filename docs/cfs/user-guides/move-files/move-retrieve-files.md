@@ -1,65 +1,71 @@
 ---
 sidebar_position: 1
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cfs-move-retrieve-data-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cfs-move-retrieve-data-zh'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cfs-move-retrieve-data-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cfs-move-retrieve-data-en'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 搬移與取用
+# Move and Access
+
+You can move in-frequent access data to cold storage, and move data to hot storage when needed.
+
+## Move file to Cold Storage
+
+* The file storage will be showed in the dataset contents page. Select one of the file in **Hot Storage** and move your cursor to the right panel <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> button, then click the **MOVE TO COLD STORAGE** button.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7c4d6d10bb1ca729066faa83da4ec933.png)
+
+* Click the **OK** button when the prompt window for confirming file transfer appears. Return to the file contents page, and the **Hot Storage (moving to the Cold Storage)** will be displayed.
 
 
-您可以將不常存取的資料搬移至冷儲存區存放，待需要取用時再將資料搬移至熱儲存區。
-
-## 搬移資料至冷儲存區
-
-* 在資料集的內容列表頁面，會顯示檔案所在的儲存區，選擇一筆在「**熱儲存區**」儲存區的檔案，將滑鼠移至列表右側的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>  選單按鈕，再點選「**搬移至冷儲存區**」。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_01247d535a5db90f5a2f1ce38f825c86.png)
-
-
-* 出現確定搬移的提示視窗後點擊「**確認**」，回到檔案列表頁面，即會顯示「**熱儲存區（正在搬移至冷儲存區）**」。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_47e8a7d4ad230c86d54cc33b9588e5bc.png)
-
-    
-:::info
-將檔案搬移至冷儲存區需要一段時間，搬移成功後該檔案的「**儲存區**」會變成「**冷儲存區**」。
-:::
-   
-## 搬移資料至熱儲存區
-* 在資料集的內容列表頁面，選擇一筆在「**冷儲存區**」區的檔案，將滑鼠移至列表右側的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，再點選「**搬移至熱儲存區**」。
-  
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_38e64275ea848fa39141c3b4ae1f08cd.png)
-        
-* 出現確定搬移的提示視窗後點擊「**確認**」，回到檔案列表頁面，該檔案會顯示「**冷儲存區（正在搬移至熱儲存區）**」。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_94050d513434d3a49da8ad2aec247c35.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7920644e10d5d366a26b674a3a9f2fe4.png)
 
 
 :::info
-搬移資料至熱儲存區需要一段時間，搬移成功後該檔案的「**儲存區**」會變成「**熱儲存區**」。
-:::
-    
-## 取用冷儲存區的檔案
+It will takes a while to transfer a file to the cold storage. After the file is moved successfully, the **Storage Area** of the file will displayed as  **Cold Storage**.
 
-* 在資料集的內容列表頁面，選擇一筆在冷儲存區的檔案，將滑鼠移至列表右側的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，再點選「**取用**」，取用後系統會將資料複製一份至冷資料下載區。
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0463dea00cad6e5e3fa586263df52dbb.png)
-    
-* 出現「**取用冷儲存**」提示視窗後點擊「**確認**」。
-    
-:::info
-冷資料取用，可能將耗費數小時，請至「**冷資料下載**」列表查詢取用進度。
 :::
 
-## 冷資料下載
+## Move data to Hot Storage
 
-* 進入「**冷資料下載**」頁面，從冷儲存區資料取用後會被暫存在此，選擇列表中的「**取用完成**」的檔案，將滑鼠移至列表右側的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，再點選「**下載**」，即可將檔案下載至本地端。
-    
+* Select one of the file in **Cold Storage** in dataset contents page, and move your cursor to the right panel of <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> menu button, then click  the **MOVE TO HOT STORAGE** button.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f6b4a56ec6a7a6c2433128e2cbc2d7ae.png)
+
+* Click the **OK** button when the prompt window for confirming file transfer appears. Return to the file contents page, and the **Cold Storage (moving to the Hot Storage)** will be displayed.
+
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_805a5f9d00d1a7d959f8ccdf3139a590.png)
+
+
 :::info
-暫存在冷資料下載區的檔案 3 天後會被删除，請在期限內下載。
-:::    
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1a3282cca261f04c3833c5259bc216d7.png)
+It will takes a while to transfer a file to the hot storage. After the file is moved successfully, the **Storage Area** of the file will displayed as  **Hot Storage**.
+
+:::
+
+## Access to cold storage file
+
+
+* Select one of the file in Cold Storage in the dataset contents page, click the **ACCESS** button on right panel to make a copy of the file to Cold Data Downloads.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9ed5f9b00d74fec0a00c8e9379ef58de.png)
+
+* Click the **OK** button after the **Access the cold data** prompt window appears.
+
+:::info
+It may take several hours to access the cold data. Please go to the **Download Cold Data** list page to check the progress of the access.
+:::
+
+## Download cold data
+
+
+* Enter the **Download Cold Data** page, and the accessable file from Cold Storage will be temporarily stored in here. Select the **Available** file and move your cursor to the right panel of <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> button, then click the **DOWNLOAD** button to download file to your localhost. 
+
+:::info
+The files will be temporarily stored in the cold data download area and deleted after 3 days, please download within the time limit.
+
+:::
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c555780995cd5cea1a386ffddfd26d23.png)

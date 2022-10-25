@@ -1,55 +1,56 @@
 ---
 sidebar_position: 4
-title: '監控'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-monitor-instance-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-monitor-instance-zh' 
+title: 'Monitoring instances'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-monitor-instance-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-monitor-instance-en' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 監控個體
+# Monitoring instances
 
-TWCC 入口網站可檢視虛擬運算個體監控的資訊，可監控 **CPU 使用量**、**記憶體**、**硬碟讀取/寫入速度**及**網路輸出速率**。
+TWCC portal allows you to view the monitoring information of Virtual Compute Service (VCS) instances, including **CPU Utilization**, **Memory Utilization**, **Disk Read/Write rate** and **Network output rate**.
 
 :::info
-- 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/compute.md#虛擬運算服務)。
-- TWCC CLI 目前不支援此功能。
+- For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務).
+- TWCC CLI currently does not support this feature.
 :::
+
 
 <br/>
 
-## 基本檢視
 
-- 進入「**虛擬運算個體詳細資料**」頁，並選擇一指定的個體。
+## Basic View
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c065f020c08007cad3c40a0d17c32444.png)
+- Go to the **VCS Instance Management** page, and select an instance.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b9409e6342c46db7233e45ca91f106d3.png)
 
-- 於「**虛擬運算個體詳細資料**」頁內選擇「**監控**」頁籤，即可查看個體監控資訊：
-    - **CPU 用量 (%)**：CPU 的使用率，若顯示為 2 (200%)，則表示用滿 2 CPU 的資源。 
-    - **記憶體用量 (MB)**：記憶體使用量，單位為 Megabytes (MB)。
-    - **硬碟讀取/寫入 (B/s)**：可檢視各個磁碟讀取/寫入之速率，單位為 Bytes/second (B/s)。
-    - **網路輸出 (B)**：虛擬運算個體輸出之網路流量，綜合東西流量 (跨虛擬運算個體間的水平傳輸) 與南北流量 (用戶端與個體之間的流量)，單位為 Bytes (B)。
-    
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5157e924787360292d12a28b892c447a.png)
+- Select the **Monitoring** tab on the **VCS Instance Details** page to view the instance monitoring information:
+    - **CPU Utilization(%)**: If the CPU Utilization Rate is displayed as 2 (200%), it means that 2 CPU resources are used up.
+    - **Memory Utilization(MB)**: Memory usage, in Megabytes (MB).
+    - **Disk Reads(B/s)**: View the read/write rate of each disk in Bytes/second (B/s).
+    - **Network Out(B)**: The network traffic of the output of the VCS instance, which is a combination of east-west traffic (horizontal transmission between VCS instances) and north-south traffic (traffic between the client and the VCS instance). The unit is Bytes (B).
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_97cfe20cb58d1cb95797b4a3a707b1bc.png)
 
 :::info
-TWCC 入口網站之網路流量包含東西流量與南北流量的總和，而 [<ins>會員中心<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](/docs/member/user-guides/member-key-quota/go-to-member-center.md)之額度用量、資源用量紀錄則僅顯示南北流量。
+Network traffic on TWCC portal includes the sum of east-west traffic and north-south traffic, while the quota and resource usage records in the [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.vip/en/docs/member/user-guides/member-key-quota/enter-member-center) only show north-south traffic.
 :::
+
 
 <br/>
 
-## 進階操作
 
+## Advanced operation
 
-- 游標移至綠色圓點，可取得用量實際數值。
-- 游標移至任一監控圖上，可點選 <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> 圖示下載監控圖檔 (`.png`) 留存。
-- 右側選單則可選擇時間，可觀察特定時長內之容器資源使用變化。
+- Move the cursor to the green dot to get the actual value.
+- Move the cursor to any monitoring chart, click the <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> icon to download the monitoring chart file (`.png`) .
+- From the menu on the right side, you can select the time to observe the changes of the container resource usage within the specific time period.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_70386adb0dd68bae1b6a18c63e2f854a.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2376c9fcdcca8ac5b3e9d1c06c0f6225.png)
 
 :::info
-特定時長可選擇1小時、6小時、12小時、1天、7天、30天。
+The specific duration can be selected from 1 hour, 6 hours, 12 hours, 1 day, 7 days, and 30 days.
 :::

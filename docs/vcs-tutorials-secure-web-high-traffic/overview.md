@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
-sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-intro-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-intro-zh'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-intro-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-vcs-lb-build-secure-web-handle-high-traffic-intro-en'
 ---
 
+# Build a secure website which handles high traffic
 
-# 架設安全、可負載高流量的網站
+
+This document will show you how to use [**TWCC Virtual Compute Service (VCS)**](https://man.twcc.ai/@twccdocs/doc-vcs-main-en) to build 2 identical [**NGINX**](https://www.nginx.com/) web servers, and set up the [**security group**](https://man.twcc.ai/@twccdocs/guide-vcs-sg-en). Go with [**load balancing**](https://man.twcc.ai/@twccdocs/guide-vcs-lbs-en) and **SSL certificate** to distribute traffic requests to different servers. Besides, use a single external URL to **make sure the secure transmission of your web server data and your web service will not crash by too many concurrent users and overloaded traffic**.
 
 
-本篇將示範教學如何運用 TWCC [**虛擬運算服務**](../vcs/overview.md)建立 2 台相同的 [**NGINX**](https://www.nginx.com/) 網頁伺服器，並設定[**安全性群組**](../vcs/user-guides/security/security-group.md)，搭配[**負載平衡服務**](../vcs/user-guides/networking/load-balancing.md)、**SSL 憑證**，將使用流量請求分散至不同伺服器，使用單一對外 URL，**確保您的網頁伺服器資料安全傳輸，且不會因同時使用人數過多、連線流量過載而中斷您的網頁服務**。
-
-## <i class="fa fa-backward" aria-hidden="true"></i> 點開第一部分，開始操作吧！
+## <i class="fa fa-backward" aria-hidden="true"></i> Click on the first part, let's get started!

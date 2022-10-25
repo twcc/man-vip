@@ -1,90 +1,84 @@
 ---
 sidebar_position: 4
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cfs-access-interface-mngmnt-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cfs-access-interface-mngmnt-zh'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cfs-access-interface-mngmnt-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cfs-access-interface-mngmnt-en'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 熱儲存區檔案存取介面
+# Hot Storage Data Access Interface
 
-雲端檔案服務的熱儲存區資料，除了可透過 TWCC 入口網站存取之外，另外提供了 S3 及 SFTP 存取方式，便於下載或上傳多個或尺存較大的檔案。
+Besides TWCC portal, S3 and SFTP protocol are provided as ways to access CFS hot storage data to facilitate downloading/uploading large or multiple files.
 
-* 點選左側「**存取介面管理**」，進入「**存取介面管理**」服務頁面後，點擊存取介面圖示可進入該服務的頁面。
+* Click on **Access Interface Management** in service list, and choose an access interface icon to enter service.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_808aee16a814eae58c5fcc6411993c9b.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_51cf8d9733a226ab4b3b5b8dfe45d771.png)
 
 ## S3
 
-請先將資料集建立對應的儲存體名稱，以供 S3 protocol 存取，並下載連線軟 (例：S3 browser 或 Cyberduck) 體輸入連線資訊，即可存取資料集。
-
-### 建立 S3 存取資料集
-
-* 點擊 S3 存取設定下方的「**＋建立**」，輸入 S3 的儲存體名稱並選取對應的資料集，再點選「**確定**」。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d3bc978b54189c5055d0f88a13a5a266.png)
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_54a80d4d5ad2e44f02a8a3705882cee5.png)
-
-### 取得 S3 服務連線資訊
-* 點選「**S3 服務**」，進入「**S3 服務**」頁面後，可取得連線資訊，包括服務端點 (使用 SSL 連線) : **`cfss3.twcc.ai`**、Signature Version、Access Key 及 Secret Key。
-* 點擊「**建立金鑰**」可產生一組 Access Key 及 Secret Key。金鑰建立後，點擊「**更新金鑰**」可重新產生金鑰。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cf2eec69af0e5af151afbaad5259faa3.png)
-
-  
+Please create a bucket correspond to dataset for S3 protocol access, and download connection software(i.e., S3 browser or Cyberduck), then enter connection information to access dataset.
 
 
-### 使用第三方軟體連線
+### Create S3 dataset
 
-* 如同 TWCC 雲端物件儲存（COS），您亦可透過常用的第三方軟體如 [S3 Browser](http://s3browser.com/) 或 [Cyberduck](https://cyberduck.io/) 來管理雲端檔案服務（CFS）的儲存內容。
-* 以 S3 Browser 為例，連線資料設定如下：
+* Click the **+Create** button under S3 access settings, enter S3 bucket name select corresponding dataset and click **OK**.
+
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a6c88ae4f46653cf74092f2803a3cf7a.png)
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_da86adc5853f568446dcd0c73518191d.png)
+
+### Get S3 service connection information
+
+
+* After entering **S3 Service** page, you may obtain connection information including service endpoint (using SSL connection): **`cfss3.twcc.ai`**, Signature Version, Access Key and Secret Key.
+* Click **CREATE KEY** button to generate Access Key and Secret Key. Key can be regenerate by clicking **RENEW KEY** button.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c9a848865dcb0b1d76ea91e9ea45c029.png)
+
+### Use third-party software to connect
+
+* Similar to TWCC Cloud Object Storage (COS), you can also manage the items stored in Cloud File Service (CFS) through common third-party software such as [S3 Browser](http://s3browser.com/) or [Cyberduck](https://cyberduck.io/).
+* Take S3 Browser as an example, the connection information is set as follows:
 
 ![](https://i.imgur.com/eZJGnXL.png)
-
 
 <!-- ![](https://i.imgur.com/1F3CEwE.png) -->
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_04937356a53118f5d64fd682b91d85b5.png)
 
 
-   
-* 連線成功後即可看到 TWCC 雲端檔案服務上的所建立的儲存體。
 
-:::info
-若您使用其他第三方軟體，請設定以下資訊確保可連線成功：
-- 地區 (region)：us-east-1
-- 簽章版本 (Signature Version)：V4
-:::
+* After successfully connect, you can see the created bucket on CFS.
 
-### 删除 S3 存取資料集
+### Delete S3 Dataset
 
-* 若不需使用 S3 存取資料集，請在 S3 存取設定下方的儲存體列表，勾選欲删除的儲存體名稱後點擊列表上方的「**删除**」按鈕。
+* If S3 dataset is no longer needed, please select the bucket and click the **DELETE** button.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dbcbc1c13c1c1b622fe588585b00c7bb.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3246037a6309e6713d244e1f0cc3341d.png)
 
 
 ## SFTP
 
-雲端檔案服務亦提供 SFTP 存取介面，您可以使用 SFTP 客戶端軟體 (如：FileZilla) 存取雲端檔案服務之儲存內容。
 
-* 點選「**SFTP 服務**」，進入「**SFTP 服務**」頁面，可以看到 SFTP 服務的連線資訊，包括 SFTP 服務主機位址：**`sftp://cfs.twcc.ai`**、連接埠等資訊。
+CFS also provides SFTP access interface, you can use SFTP client software (e.g., FileZilla) to access the items stored in CFS.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a7b1b278f81463e99cf16451fbeb1d23.png)
+* Click **SFTP Service** to obtain SFTP service connection information, including SFTP service host address: **`sftp://cfs.twcc.ai`** and port information.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6f9e1ea3e727bebce70ef64318abd24f.png)
 
-* 開啟第三方 SFTP 軟體，例如：FileZilla，設定連線資訊即可登入。 
-    - 主機：cfs.twcc.ai
-  	- 使用者名稱：您的主機帳號 
-	- 使用者密碼：您的主機密碼
-    - 連接埠：22  
+* Open third-party SFTP software, such as FileZilla, and enter the connection information to login.
+    - Host: cfs.twcc.ai
+  	- Username: Host Name 
+	- Password: Host Password
+    - Port: 22 
 
 :::info
-若忘記**主機帳號**或**主機密碼**，請參考：[<ins>查詢主機帳密與 OTP 認證碼</ins>](../../../member/user-guides/member-key-quota/hpc-account-password-otp.md)。
+If you forgot your **Supercomputer account** or **supercomputer password**, please refer to [<ins>Inquire supercomputer account, reset password and obtain OTP authentication code</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en) for more information.
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1f63040fedd3e99613ad7da2f3667230.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a5e51cd889a7f5d12061441474228eaa.png)
 
-* 成功登入後便會顯示雲端檔案服務上的檔案，即可進行檔案傳輸與存取（預設第一層資料夾名稱為計畫 ID）。
-* 若您的檔案儲存於冷儲存區，則檔名尾端會以 `.COLDDATA` 文字呈現，存放於冷儲存區的檔案無法於 SFTP 軟體直接下載、搬移、複製、刪除，請於 TWCC 網站上執行搬移異動。
+* After successful login, the files in CFS will be displayed and available for file transfer and access (first-level folder name is the project ID by default).
+* Files stored in the cold storage area, will be displayed with `.COLDDATA` suffix and cannot be downloaded, moved, copied or deleted directly through the SFTP software. Please manage files through the TWCC portal.

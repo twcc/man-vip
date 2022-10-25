@@ -1,50 +1,51 @@
 ---
+sidebar_label: 'Container Image overview'
 sidebar_position: 1
-title: 映像檔概觀
-sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-overview-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-overview-zh' 
+title: Image overview
+sync_original_production: 'https://man.twcc.ai/@twccdocs/ccs-concept-image-overview-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-overview-en' 
 ---
 
 
-# TWCC 容器映像檔概觀
+# TWCC Container Image overview
 
+TWCC provides a variety of [NGC](https://www.nvidia.com/zh-tw/gpu-cloud/containers/) optimized container images for AI computing and AI training frameworks. Working with the bottom layer of TWCC GPU resources, container images help containers show excellent computing performance.
 
-TWCC 提供多種 [NGC](https://www.nvidia.com/zh-tw/gpu-cloud/containers/) AI 運算適用的最佳化容器映像檔，提供多樣化的 AI 訓練框架，搭配 TWCC 底層 GPU 資源，容器可展現極佳運算效能。
-
-容器映像檔類型、映像檔名稱說明如下，您可選擇左側映像檔類型，了解各項 TWCC 映像檔之 AI 訓練框架與套件版本資訊。
-
-<br/>
-
-## 映像檔類型
-
-- **TWCC 映像檔**
-
-    TWCC 與 [NGC](https://www.nvidia.com/zh-tw/gpu-cloud/) 合作，提供用戶以下立即可用之容器映像檔類型：
-
-    TensorFlow、PyTorch、CUDA、Matlab (BYOL)、Caffe、CNTK、MXNet、Caffe2、TensorRT、Triton Inference Server、Theano、Torch、DIGITS、NeMo、Clara Train SDK、RAPIDS、Merlin Training、Merlin Inference。
-
-- **自訂映像檔 (Custom Image)**
-
-    使用上述 TWCC 映像檔建立容器後，您可以部署所需套件，並建立[容器複本](/docs/ccs-interactive-container/user-guides/duplicate-backup/duplicates.md)將環境打包成自訂映像檔 (Custom Image)，即可重複建立相同環境。
+The container image type and image name are described below. You can choose the image type on the left to learn about the AI training framework and package version information of each TWCC image.
 
 <br/>
 
+## Image type
 
-## 映像檔名稱說明
+- **TWCC Image**
 
-- 範例：`tensorflow-20.11-tf2-py3:latest`
-- 說明：**`AI訓練框架`**-**`NGC發行日期 (年.月)`**-**`NGC定義之次版本`**-**`Python版本`**:**`TWCC最新調適之版本`**。
+    TWCC cooperates with [NGC](https://www.nvidia.com/en-us/gpu-cloud/) to provide users with the following available container image types:
+
+    TensorFlow, PyTorch, CUDA, Matlab (BYOL), Caffe, CNTK, MXNet, Caffe2, TensorRT, Triton Inference Server, Theano, Torch, DIGITS, NeMo, Clara Train SDK, RAPIDS, Merlin Training, and Merlin Inference.
+
+- **Custom Image**
+
+    After creating a container with the above TWCC image, you can deploy the required package and create a [duplicate](https://man.twcc.vip/en/docs/ccs/user-guides/duplicate-and-backup/duplicates) to package the environment into a Custom Image, then you are able to create the same environment repeatedly.
+
+<br/>
+
+## Image name description
+
+- Example：`tensorflow-20.11-tf2-py3:latest`
+- Description：**`AI Training framework`**-**`NGC release date (yy.mm)`**-**`Minor version defined by NGC`**-**`Python version`**:**`The latest adapted version of TWCC`**。
+
 
 :::info
-- 大部分映像檔皆適用以上名稱說明，少數映像檔則會另外加註適用之套件名稱，例 `digits-19.08-tensorflow:latest`；或使用該映像檔原版本名稱，例：`matlab-r2019b:latest`。
-- `v1` 表 TWCC 調整最佳化之版本。
-- 自訂映像檔 (Custom Image) 可自訂識別標籤 (tag)，取代 `latest` 呈現於映像檔名稱。
+- Most of the images correspond with the above name description, but a few of them are additionally marked with the applicable package name, e.g. `digits-19.08-tensorflow:latest`; or use the original version name of the image, e.g. `matlab-r2019b:latest`.
+- `v1` indicates the optimized version of TWCC.
+- You can customize the identification tag for Custom Image instead of `latest` displayed in the image name.
 :::
 
+<br/>
 
-## 版本與功能
+## Versions and features
 
-- [容器複本](/docs/ccs-interactive-container/user-guides/duplicate-backup/duplicates.md)：19.08 (含)後之版本才有支援此功能。
-- SSL 加密：20.xx 後之版本才有支援此功能。
-- Jupyter Notebook：20.xx 後之版本才有支援此功能。
-- 指令操作紀錄：21.08 (含) 後之版本，可使用 `history` 指令檢視紀錄。
+- Container duplicates: Only supported in versions after 19.08 (inclusive).
+- SSL encryption: Only supported in versions after 20.xx.
+- Jupyter Notebook: Only supported in versions after 20.xx.
+- Command log: For versions 21.08 and later, you can use the command history to view the logs.

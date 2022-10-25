@@ -1,85 +1,78 @@
 ---
-sidebar_position: 11
-sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-gpu-burn-testing-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-gpu-burn-testing-zh' 
+sidebar_position: 10
+sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-launch-tensorboard-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-launch-tensorboard-en' 
 ---
 
-# 檢視運算資源概況－GPU Burn Testing
+# Start TensorBoard in the container - ML experiment visualization tool
 
+In order to increase the recognition accuracy of machine learning models, observing model training changes and removing errors are all necessary but complicated tasks. TensorBoard visualizes the changes of TensorFlow model data in the form of a web page, and have the ability to draw a variety of graphics, allowing data scientists to easily examine and understand the structure of the neural network and experimental results, also quickly find solutions to optimize the model.
 
-提供使用 GPU 壓力測試工具的教學，讓 GPU 在滿載的情況下，檢查 GPU 是否運作正常
-最後的結果若為 `OK` 則代表 GPU 工作執行正常；`FAULTY` 則表示 GPU 出現問題
+TensorBoard has been installed in the TWCC container environment for users. This article will show you how to start the TensorBoard tool. For more introduction and usage of Tensorboard, please refer to [TensorFlow Official website](https://www.tensorflow.org/tensorboard).
 
-<br/>
-
-## Step 1. 登入 TWCC
-
-- 若尚無帳號，請參考 [註冊 TWS / TWCC 帳號](/docs/member/user-guides/member-key-quota/sign-up-for-twcc.md)
-
-<br/>
-
-## Step 2. 建立開發型容器
-
-- 請參考 [開發型容器](../user-guides/create-connect/create-container.md) 建立開發型容器
-- 映像檔類型請選擇 TensorFlow、映像檔選擇支援 Python 3 的版本、硬體選擇支援 1 顆 GPU 的設定即可
-
-<br/>
-
-## Step 3. 連線容器、下載訓練程式
-
-- 使用 Jupyter Notebook 連線容器，開啟 Terminal
-
-:::info
-:book: [<ins>連線容器 - Jupyter Notebook</ins>](../user-guides/create-connect/connect-container.md#jupyter-notebook)
+:::tip
+It is recommended to start in the TensorFlow container to better utilize the functionality of TensorBoard, which will be limited in other containers.
 :::
 
-- 輸入以下指令，將 [NCHC_GitHub](https://github.com/TW-NCHC/AI-Services/tree/V3Training) training 程式下載到容器
-
-```bash
-git clone https://github.com/TW-NCHC/AI-Services.git
-```
-
 <br/>
 
- 
-## Step 4. 進行 GPU Burn Testing
+## Step 1. Connect to your Interactive Container
 
-- 輸入以下指令，進入 **Tutorial_Two** 目錄
-
-```bash
-cd AI-Services/Tutorial_Two
-```
- 
-- 輸入以下指令，下載 GPU_Burn 程式並開始執行
-
-```bash
-bash gpu_testing.sh
-```
+Please refer to the [<ins>Connection method</ins>](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/connect-to-your-container) to connect to your Interactive Container.
 
 <br/>
 
 
-## Step 5. 取得基礎運算資訊
+## Step 2. Activate TensorBoard
 
-- **檢視計算能力**<br/>
-GPU 容器服務所使用之 GPU 皆為 NVIDIA V100 32GB，具有強大之計算能力。使用 gpu-burn 所測試之結果為 13198 Gflop/s。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cefd6041539673437d78918f9f444ed6.png)
-
-- **監控資源運行狀況**
-
-a. 容器使用者界面監控：GPU用量、記憶體使用量
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4e2d1540341ff81fef49dad87774f4c3.png)
-
-b. 容器 Jupyter Notebook 之 Terminal 內：執行以下程式，可監控 GPU 溫度及電量
+Enter the following command to activate the TensorBoard service.
 
 ```bash
-nvidia-smi
+tensorboard --logdir=~/logdir --port 5000
 ```
 
-`GPU數量` 以編號 0 遞增顯示，下圖範例為 1 顆 GPU<br/>
-`GPU溫度` 以攝氏溫度呈現，下圖範例為 31 度 C<br/>
-`GPU電量` 以瓦數呈現，下圖範例為 43W<br/>
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_33abbf06c6561af711929eee558586c5.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_412e74892656a239328ed35fea78c191.png)
+:::info
+1. You need to specify a port for TensorBoard web services. <br/>In the container environment of TWCC, there are three ports available, namely `5000`, `5001`, and `5002`. Here we take port `5000` as an example. <br/>For more information, please refer to [<ins>Configure the service port of Interactive Containers</ins>](https://man.twcc.vip/en/docs/ccs/tutorials/configure-service-ports/#associate-service-ports). 
+3. The `--logdir` in the above command is the storage location of the log file, you can set it by yourself. In this article, we use `~/logdir` as an example.
+:::
+
+<br/>
+
+
+## Step 3. Associate container service ports
+
+Please associate the port used by TensorBoard with the container port, and then you can use the TensorBoard service from your local web page.
+
+- On the TWCC container information page, click **Associate**.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_89aeaf9804fa985f97c53a9079df84a1.png)
+
+- In the Association Service Port selection window, select **5000** and click OK.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_68fc744ec4a0630942f6a1c3e0b32544.png)
+
+
+- After confirmation, the **Port** on the container information page will show one more piece of information about the target port 5000 and the public port. Take the following figure as an example, the public port of target port 5000 is 56674.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_99e217be234e88b2d6bfa1652d157d1b.png)
+
+<br/>
+
+
+## Step 4. Connect to Tensorboard
+- Get the container's **Public IP** on the container information page.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a972e0bb5cd199a1fb3d38ea2cfc7d4b.png)
+
+- Open the web browser and enter **`Container IP: Public Port`** in the address bar, such as `xxx.xxx.xxx.xxx:56674` in this example, then you can connect to Tensorboard.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_efab9cdf24eb0d8abbc3b75bd60e3eac.png)
+
+<br/>
+
+
+:::info
+For more Tensorboard introduction and usages, please refer to [<ins>TensorFlow official website</ins>](https://www.tensorflow.org/tensorboard).
+:::

@@ -1,60 +1,54 @@
 ---
 sidebar_position: 1
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cfs-dataset-mngmnt-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cfs-dataset-mngmnt-zh'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cfs-dataset-mngmnt-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cfs-dataset-mngmnt-en'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 資料集管理
+# Dataset Management
 
-雲端檔案服務儲存的階層可分為三大類：(1) 資料集 (2) 第一層資料夾 (3)子資料夾。
-首次使用請先建立[熱儲存區](../../concepts/intro-to-hot-cold-storage.md)資料集，以將您的檔案上傳至雲端檔案服務。
-
-## 開始之前
-
-- 若尚未註冊使用帳號，請先[註冊 TWCC](https://www.twcc.ai/)。
-- 若選擇使用 TWCC 入口網站操作，請先登入 [TWCC 入口網站](https://www.twcc.ai/)。
-- 若選擇使用 TWCC CLI 操作，請先<a href="https://github.com/twcc/TWCC-CLI" target="_blank"><ins>安裝 TWCC CLI</ins></a>、並<a href="https://github.com/twcc/TWCC-CLI" target="_blank"><ins>登入</ins></a>
+The level of the Cloud File Service (CFS) can be divided into three categories: (1) Dataset (2) First-level folders (3)Sub-folders.
+Please create a [hot storage](https://man.twcc.ai/@twccdocs/concept-cfs-hot-and-cold-en) dataset to upload your file into CFS for first time use.
 
 
-## 建立資料集
+## Before we get started
+
+- If you haven't sign up for a user account, please [sign up for TWCC](https://www.twcc.ai/) first.
+- If you would like to operate with TWCC portal, please sign in to [TWCC portal ](https://www.twcc.ai/)first.
+- If you would like to operate with TWCC CLI, please <ins><a target="_blank" href = "https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-2-%E5%AE%89%E8%A3%9DTWCC-CLI">install TWCC CLI</a></ins> first, and then <ins><a target="_blank" href = "https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-3-%E9%80%B2%E5%85%A5-TWCC_CLI-%E7%92%B0%E5%A2%83%E4%B8%A6%E9%96%8B%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8B%99">sign in</a></ins>.
 
 
-* 請在「**檔案儲存管理**」頁面點擊「**＋建立資料集**」。
+## Create dataset
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a3a55a2722d9892af217baea915100fa.png)
+* Click the **CREATE DATASET** button on **File Storage Management** page.
 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_05fe774c3e494caaf61a4263891b1de4.png)
 
-* 出現「**建立資料集**」視窗後，輸入資料集名稱後點擊「**確認**」。
+* After the **Create Dataset** window appears, enter your dataset name and click the **OK** button.
 
 :::info
-
-資料集名稱請填入 1~16 個字元以內的小寫英文字母或數字，且第一個字須為英文字母。
-
+Please enter lowercase English letters or numbers within 1~16 characters for the dataset name, and the first character must be an English letter.
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_93e58e0110b78bc573f5a09f3682a9db.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7a564ae607ff285aef4374be32d5622b.png)
 
-* 資料集建立完成後會出現在「**檔案儲存管理**」的列表中，點擊該列表進入資料集內容頁面即可開始使用。
+* The dataset will be listed on **File Storage Management** page after it has been created. Click the dataset to enter dataset details page and start using it.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2c453d058d136d110f1c9489a8e94408.png)
-
-
-## 删除資料集
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bb089055fe7ced3cee84dd1c87107847.png)
 
 
-* 勾選欲删除的資料集，再點選上方的「**刪除**」按鈕，亦可勾選多個資料集一起删除。
+## Delete dataset
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5fc0a31f1f0b557438e805cc26618777.png)
+* Select the dataset you want to delete and click the **DELETE** button. You can also select multiple datasets to delete together.
 
-* 點擊「**確認**」按鈕。
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c1d2dffafb467961f5c02c99f90b30c6.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_398409bf3687ab6faabb2f99e88c9a10.png)
+* Click the **OK** button.
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_78b91716936bfa3970488e7621147416.png)
 
 :::caution
-
-資料集一旦删除，資料將無法恢復，刪除後將會停止計算費用。
-
+Once dataset has been deleted, the data can not be recovered and the calculation of fees will stop .
 :::
