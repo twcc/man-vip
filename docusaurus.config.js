@@ -35,7 +35,7 @@ const config = {
   projectName: "Manual", // Usually your repo name.
 
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: "zh-Hant",
     locales: ["en", "zh-Hant"],
   },
   plugins: [
