@@ -1,0 +1,33 @@
+---
+-
+  hosts: localhost
+  become: true
+  tasks:
+    - name: create ramdisk folder
+      file:
+        path: /var/www/ramdisk
+        state: directory
+        mode: '0755'
+        owner: ubuntu
+        group: ubuntu
+
+    - name: create ramdisk folder
+      mount: 
+        name: /var/www/ramdisk 
+        src: tmpfs 
+        fstype: tmpfs 
+        opts: nodev,nosuid,size=2048m
+        state: mounted
+
+    - name: mkdir folder for pages
+      file:
+        path: /var/www/ramdisk/{{ item }}
+        state: directory
+        mode: '0755'
+        owner: ubuntu
+        group: ubuntu
+      loop:
+        - production
+        - preview
+        - staging
+        - html

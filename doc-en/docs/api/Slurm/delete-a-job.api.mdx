@@ -1,0 +1,33 @@
+---
+id: delete-a-job
+title: "Delete a job"
+description: "Delete a job"
+sidebar_label: Delete a job
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["job"],"description":"Delete a job","parameters":[{"name":"job_id","in":"path","description":"Job ID","required":true,"schema":{"type":"integer","format":"int32"}},{"name":"x-api-host","in":"header","description":"Authentication Required Parameters","required":true,"schema":{"type":"string","default":"slurm-taichung-default"}}],"responses":{"204":{"description":"No Content","content":{}}},"method":"delete","path":"/jobs/{job_id}/","servers":[{"url":"https://{apigateway}/api/v3/{ApiHost}/","variables":{"apigateway":{"default":"apigateway.twcc.ai"},"ApiHost":{"default":"slurm-taichung-default"}}}],"security":[{"ApiKeyAuth":[]}],"securitySchemes":{"ApiKeyAuth":{"type":"apiKey","in":"header","name":"x-api-key"}},"info":{"version":"1.2.0","title":"Slurm API","description":"This is Slurm API.\n"},"postman":{"name":"Delete a job","description":{"content":"Delete a job","type":"text/plain"},"url":{"path":["jobs",":job_id",""],"host":["{{baseUrl}}"],"query":[],"variable":[{"disabled":false,"description":{"content":"(Required) Job ID","type":"text/plain"},"type":"any","value":"","key":"job_id"}]},"header":[{"disabled":false,"description":{"content":"(Required) Authentication Required Parameters","type":"text/plain"},"key":"x-api-host","value":""}],"method":"DELETE"}}
+sidebar_class_name: "delete api-method"
+info_path: docs/api/Slurm/slurm-api
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem"
+import SchemaTabs from "@theme/SchemaTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import TabItem from "@theme/TabItem";
+
+## Delete a job
+
+
+
+Delete a job
+
+<details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Path Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"job_id","in":"path","description":"Job ID","required":true,"schema":{"type":"integer","format":"int32"}}}></ParamsItem></ul></div></details><details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Header Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"x-api-host","in":"header","description":"Authentication Required Parameters","required":true,"schema":{"type":"string","default":"slurm-taichung-default"}}}></ParamsItem></ul></div></details><div><ApiTabs><TabItem label={"204"} value={"204"}><div>
+
+No Content
+
+</div><div></div></TabItem></ApiTabs></div>
+      
