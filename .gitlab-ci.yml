@@ -3,11 +3,18 @@ stages:
   - test
   - sync
 
+cache:
+  key:
+    files:
+      - package.json
+  paths:
+    - node_modules/
+
 .ssh_config_and_build: &standard_operation
-  image: node:alpine3.16
+  image: node:18-alpine3.16
   artifacts:
     paths:
-      - build/*
+      - ./*/build/*
     expire_in: 1 week
   before_script:
     - apk add --no-cache rsync openssh
@@ -15,27 +22,27 @@ stages:
     - echo "$MAN_SERVER_SSH_KEY" >> ~/.ssh/id_dsa
     - chmod 600 ~/.ssh/id_dsa
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-    - npm install --legacy-peer-deps
-  cache:
-    key:
-      files:
-        - package.json
-    paths:
-      - node_modules/
 
 sync-openapi:
-  <<: *standard_operation
-  stage: test
+  <<: *standard_sync_operation
+  stage: sync
   script:
     - apk add --no-cache git
     - git clone https://github.com/twcc/openapidoc.git
-    - git clone https://${SEAN_USERNAME}:${SEAN_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git
-    - cd manual
-    - git checkout docusaurus-dev
     - export TZ=Asia/Taipei
     - export VERSION=`date +"openapi-sync-%Y%m%d_%H%M"`
+    # - git clone https://${SEAN_USERNAME}:${SEAN_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git
+    # - cd manual
+    # - git checkout docusaurus-dev
     - git checkout -b $VERSION
+    - cd /doc-zh/
     - cp -r ../openapidoc/Main/yaml/. ./openapi
+    - npm install --legacy-peer-deps
+    - npm run clear-api
+    - npm run gen-api
+    - cd /doc-en/
+    - cp -r ../openapidoc/Main/yaml/. ./openapi
+    - npm install --legacy-peer-deps
     - npm run clear-api
     - npm run gen-api
     - git config --global user.email "sean.chang@twsc.io"
@@ -49,6 +56,7 @@ test-build:
   <<: *standard_operation
   stage: test
   script:
+    - npm install --legacy-peer-deps
     - npm run staging
   only:
     - merge_requests
@@ -57,6 +65,8 @@ deploy-staging:
   <<: *standard_operation
   stage: deploy
   script:
+    - cd doc-zh
+    - npm install --legacy-peer-deps
     - npm run staging
     - rsync -ravz --exclude en --delete build/ ubuntu@man.twcc.vip:/var/www/staging/
   only:
@@ -67,6 +77,8 @@ deploy-staging-en:
   <<: *standard_operation
   stage: deploy
   script:
+    - cd doc-en
+    - npm install --legacy-peer-deps
     - npm run staging -- --locale en
     - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/staging/en/
   only:
@@ -78,6 +90,8 @@ deploy-preview:
   <<: *standard_operation
   stage: deploy
   script:
+    - cd doc-zh
+    - npm install --legacy-peer-deps
     - npm run preview
     - rsync -ravz --exclude en --delete build/ ubuntu@man.twcc.vip:/var/www/preview/
   only:
@@ -88,6 +102,8 @@ deploy-preview-en:
   <<: *standard_operation
   stage: deploy
   script:
+    - cd doc-en
+    - npm install --legacy-peer-deps
     - npm run preview -- --locale en
     - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/preview/en/
   only:
@@ -98,6 +114,8 @@ deploy-production:
   <<: *standard_operation
   stage: deploy
   script:
+    - cd doc-zh
+    - npm install --legacy-peer-deps
     - npm run production
     - ls -alh build
     - rsync -ravz --exclude en --delete build/ ubuntu@man.twcc.vip:/var/www/production/
@@ -109,6 +127,8 @@ deploy-production-en:
   <<: *standard_operation
   stage: deploy
   script:
+    - cd doc-en
+    - npm install --legacy-peer-deps
     - npm run production -- --locale en
     - ls -alh build
     - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/production/en
@@ -118,7 +138,7 @@ deploy-production-en:
 
 
 send-to-GitHub:
-  image: alpine
+  image: alpine:3.16
   stage: sync
   script:
     - apk update && apk add github-cli && apk add git
@@ -135,7 +155,6 @@ send-to-GitHub:
     - gh release create "v$CI_COMMIT_SHORT_SHA" --title "v$CI_COMMIT_SHORT_SHA"
   only:
     - docusaurus-master
-    - docusaurus-master-en
   when: manual
 
 sync-from-GitHub:
