@@ -58,8 +58,11 @@ test-build:
   <<: *standard_operation
   stage: test
   script:
+    - cd doc-zh
     - npm install --legacy-peer-deps
     - npm run staging
+  cache:
+    <<: *global_cache
   only:
     - merge_requests
 
