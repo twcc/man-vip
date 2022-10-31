@@ -9,11 +9,11 @@ const env_list = {
   },
   set_edit_url = (locale, versionDocsDirPath, docPath) => {
   const baseUrl = `https://github.dev/twcc/man-vip/blob/tws-sync`,
-        zhUrl = `${baseUrl}/${versionDocsDirPath}/${docPath}`;
+        zhUrl = `${baseUrl}/doc-zh/${versionDocsDirPath}/${docPath}`;
   if (docPath === 'releaseNotes.md') return zhUrl;
   const rdir = i18nDirPath[versionDocsDirPath];
   // if (locale !== "zh-Hant" && rdir) return `${baseUrl}/i18n/${locale}/${versionDocsDirPath.replace(versionDocsDirPath,rdir)}/${docPath}`;
-  if (locale !== "zh-Hant" && rdir) return `${baseUrl}-${locale}/${versionDocsDirPath}/${docPath}`;
+  if (locale !== "zh-Hant") return `${baseUrl}/doc-${locale}/${versionDocsDirPath}/${docPath}`;
   return zhUrl
 };
 
