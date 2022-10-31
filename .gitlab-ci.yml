@@ -3,7 +3,7 @@ stages:
   - test
   - sync
 
-cache:
+cache: &global_cache
   key:
     files:
       - package.json
@@ -22,6 +22,8 @@ cache:
     - echo "$MAN_SERVER_SSH_KEY" >> ~/.ssh/id_dsa
     - chmod 600 ~/.ssh/id_dsa
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+  cache:
+    <<: *global_cache
 
 sync-openapi:
   image: node:18-alpine3.16
@@ -35,12 +37,12 @@ sync-openapi:
     # - cd manual
     # - git checkout docusaurus-dev
     - git checkout -b $VERSION
-    - cd /doc-zh/
+    - cd doc-zh/
     - cp -r ../openapidoc/Main/yaml/. ./openapi
     - npm install --legacy-peer-deps
     - npm run clear-api
     - npm run gen-api
-    - cd /doc-en/
+    - cd ../doc-en/
     - cp -r ../openapidoc/Main/yaml/. ./openapi
     - npm install --legacy-peer-deps
     - npm run clear-api
@@ -50,6 +52,8 @@ sync-openapi:
     - git add .
     - git commit -m $VERSION
     - git push -u origin $VERSION
+  cache:
+    <<: *global_cache
   when: manual
 
 test-build:
