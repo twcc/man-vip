@@ -22,7 +22,6 @@ cache: &global_cache
     - echo "$MAN_SERVER_SSH_KEY" >> ~/.ssh/id_dsa
     - chmod 600 ~/.ssh/id_dsa
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-  cache:
     <<: *global_cache
 
 sync-openapi:
@@ -45,6 +44,8 @@ sync-openapi:
     - npm install --legacy-peer-deps
     - npm run clear-api
     - npm run gen-api
+    - git config --global user.email "sean.chang@twsc.io"
+    - git config --global user.name "sean.chang@twsc.io"
     - git add .
     - git commit -m $VERSION
     - git push -u gitSean $VERSION
@@ -83,7 +84,6 @@ deploy-staging-en:
     - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/staging/en/
   only:
     - merge_requests
-    - docusaurus-dev-en
   when: manual
 
 deploy-preview:
@@ -107,7 +107,7 @@ deploy-preview-en:
     - npm run preview -- --locale en
     - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/preview/en/
   only:
-    - docusaurus-dev-en
+    - docusaurus-dev
   when: manual
 
 deploy-production:
@@ -133,7 +133,7 @@ deploy-production-en:
     - ls -alh build
     - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/production/en
   only:
-    - docusaurus-master-en
+    - docusaurus-master
   when: manual
 
 
