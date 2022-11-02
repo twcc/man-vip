@@ -1,0 +1,4713 @@
+openapi: 3.0.3
+servers:
+  - url: https://{apigateway}/api/v3/{ApiHost}/
+    variables:
+      apigateway:
+        default: apigateway.twcc.ai
+      ApiHost:
+        default: openstack-taichung-default-2
+info:
+  version: 1.5.0
+  title: VCS API
+  description: |
+    This is VCS API.
+security:
+  - ApiKeyAuth: []
+tags:
+  - name: project
+  - name: flavor
+  - name: image
+  - name: keypair
+  - name: load balancer
+  - name: security group
+  - name: network
+  - name: ip
+  - name: volume
+  - name: snapshot
+  - name: server
+  - name: site
+  - name: firewall
+  - name: secret
+  - name: availability zone
+  - name: auto scaling policy
+paths:
+  /projects/:
+    get:
+      tags:
+        - project
+      summary: List projects
+      description: List projects
+      parameters:
+        - in: query
+          name: name
+          description: The name of the project
+          required: false
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GroupSerializer'
+        401:
+          $ref: '#/components/responses/401Unauthorized'
+        500:
+          $ref: '#/components/responses/500InternalServerError'
+  /projects/{project_id}/:
+    get:
+      tags:
+        - project
+      summary: Get details of a project
+      description: Get details of a project
+      parameters:
+        - $ref: '#/components/parameters/ProjectInPathParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupDetailSerializer'
+        404:
+          $ref: '#/components/responses/40401NOTFOUND'
+        401:
+          $ref: '#/components/responses/401Unauthorized'
+        500:
+          $ref: '#/components/responses/500InternalServerError'
+        503:
+          $ref: '#/components/responses/50301SERVICEUNAVAILABLE'
+  /projects/{project_id}/solutions/:
+    get:
+      tags:
+        - project
+      summary: Get solutions of a project
+      description: Get solutions of a project
+      parameters:
+        - $ref: '#/components/parameters/ProjectInPathParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  solutions:
+                    type: array
+                    items:
+                      type: integer
+        401:
+          $ref: '#/components/responses/401Unauthorized'
+        403:
+          $ref: '#/components/responses/403FORBIDDEN'
+        404:
+          $ref: '#/components/responses/40401NOTFOUND'
+        500:
+          $ref: '#/components/responses/500InternalServerError'
+  /projects/{project_id}/solutions/{solutions_id}/:
+    get:
+      tags:
+        - project
+      summary: Get extra properties of a solution for a project
+      parameters:
+        - $ref: '#/components/parameters/ProjectInPathParam'
+        - $ref: '#/components/parameters/SolutionsIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                  site_extra_prop:
+                    $ref: '#/components/schemas/site_extra_prop'
+        401:
+          $ref: '#/components/responses/401Unauthorized'
+        403:
+          $ref: '#/components/responses/403FORBIDDEN'
+        404:
+          $ref: '#/components/responses/40401NOTFOUND'
+        500:
+          $ref: '#/components/responses/500InternalServerError'
+  /projects/reports/:
+    get:
+      tags:
+        - project
+      summary: Get assets reports for the projects.
+      description: Get assets reports for the projects.
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - name: begin_time
+          in: query
+          description: Default is two hours before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the util before the end time. Default is now.
+          schema:
+            type: string
+        - name: user
+          in: query
+          description: user UUID
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupAssetsSerializer'
+  /project_quotas/:
+    get:
+      tags:
+        - project
+      summary: get project quotas
+      description: get project quotas
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProjectQuotaSerializer'
+  /projects/{project_id}/user_quotas/:
+    get:
+      tags:
+        - project
+      summary: get user quotas
+      description: get user quotas
+      parameters:
+        - $ref: '#/components/parameters/ProjectInPathParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserQuotaSerializer'
+  /projects/{project_id}/business_network/:
+    get:
+      tags:
+        - project
+      summary: get a business network info
+      description: get a business network info in a openstack project
+      parameters:
+        - $ref: '#/components/parameters/ProjectInPathParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GroupBusinessNetworkSerializer'
+  /flavors/:
+    get:
+      tags:
+        - flavor
+      summary: List flavors
+      parameters:
+        - in: query
+          name: is_public
+          description: Flavor is_public
+          required: false
+          schema:
+            type: boolean
+        - in: query
+          name: project
+          description: Project ID to filter matchLabels
+          required: false
+          schema:
+            type: integer
+            format: int32
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FlavorSerializer'
+  /flavors/{flavor_id}/:
+    get:
+      tags:
+        - flavor
+      summary: Get details of a flavor
+      parameters:
+        - $ref: '#/components/parameters/FlavorIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FlavorDetailSerializer'
+  /images/:
+    get:
+      tags:
+        - image
+      summary: List images
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+        - name: sol_categ
+          in: query
+          description: Solution Categories
+          schema:
+            type: string
+        - name: solution
+          in: query
+          description: Get image list of a solution
+          schema:
+            type: integer
+            format: int32
+        - name: name
+          in: query
+          description: Image Nmae
+          schema:
+            type: string
+        - name: os
+          in: query
+          description: Image OS Name
+          schema:
+            type: string
+        - name: os_version
+          in: query
+          description: Image OS Version
+          schema:
+            type: string
+        - name: desc
+          in: query
+          description: Image Description
+          schema:
+            type: string
+        - name: user__username
+          in: query
+          description: Image's User Name
+          schema:
+            type: string
+        - name: create_time_start
+          in: query
+          description: Create Time Start
+          schema:
+            type: string
+        - name: create_time_end
+          in: query
+          description: Create Time End
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ImageSerializer'
+  /images/{image_id}/:
+    get:
+      tags:
+        - image
+      summary: Get details of a image
+      description: |-
+        Image is not public if it was saved from an server or
+        was uploaded by a tenant admin.
+      parameters:
+        - $ref: '#/components/parameters/ImageIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImageDetailSerializer'
+    patch:
+      tags:
+        - image
+      summary: Patch details of a image
+      description: Patch details of a image
+      parameters:
+        - $ref: '#/components/parameters/ImageIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                desc:
+                  type: string
+                  description: Image description
+                  maximum: 200
+                is_public:
+                  type: boolean
+                  description: Image visibility. Only the system admin can update
+                    this field
+            examples:
+                example:
+                  summary: with Patch details of a image example
+                  value:
+                    desc: images test
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImageSerializer'
+    delete:
+      tags:
+        - image
+      summary: Delete an image
+      parameters:
+        - $ref: '#/components/parameters/ImageIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
+  /images/{server_id}/save/:
+    put:
+      tags:
+        - image
+      summary: Save an instance as an image
+      description: |-
+        Save an image for server <server_id>.
+        os can be "Linux" or "Windows" depends on image of the server
+        Image is not public if it saved from an server.
+      parameters:
+        - $ref: '#/components/parameters/ServerIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: Post
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Image name
+                os_version:
+                  type: string
+                os:
+                  type: string
+                desc:
+                  type: string
+                  description: Image description
+                  maximum: 200
+        required: true
+      responses:
+        201:
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImagePostSerializer'
+  /keypairs/:
+    get:
+      tags:
+      - keypair
+      summary: List Keypairs
+      parameters:
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/KeypairSerializer'
+    post:
+      tags:
+      - keypair
+      summary: Create a Keypair
+      parameters:
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+              - name
+              properties:
+                name:
+                  type: string
+                  description: The name of the keypair
+                public_key:
+                  type: string
+                  description: Public key of the keypair
+      responses:
+        200:
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /keypairs/{key_name}/:
+    get:
+      tags:
+      - keypair
+      summary: Get Keypair Detail
+      parameters:
+      - name: key_name
+        in: path
+        description: Keypair Name
+        required: true
+        schema:
+          type: string
+      - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/KeypairSerializer'
+                - type: object
+                properties:
+                  public_key:
+                    type: string
+                  create_time:
+                    type: string
+                    format: date-time
+    delete:
+      tags:
+      - keypair
+      summary: Delete a Keypair
+      parameters:
+      - name: key_name
+        in: path
+        description: Keypair Name
+        required: true
+        schema:
+          type: string
+      - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
+  /loadbalancers/:
+    get:
+      tags:
+      - load balancer
+      summary: Lists load balancers
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LBSerializer'
+    post:
+      tags:
+      - load balancer
+      summary: Creates a load balancer
+      parameters:
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: TestLBS (required)
+                desc:
+                  type: string
+                  example: This LBS is for .... (optional)
+                ip:
+                  type: integer
+                  format: int32
+                private_net:
+                  type: integer
+                  format: int32
+                pools:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/PoolData'
+                listeners:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/ListenerData'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LBSerializer'
+  /loadbalancers/{loadbalancer_id}/:
+    get:
+      tags:
+      - load balancer
+      summary: Shows details for a load balancer
+      description: Shows details for a load balancer.
+      parameters:
+        - $ref: '#/components/parameters/LoadBalancerIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LBDetailSerializer'
+    delete:
+      tags:
+      - load balancer
+      summary: Delete a load balancer
+      description: Delete a load balancer.
+      parameters:
+        - $ref: '#/components/parameters/LoadBalancerIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
+    patch:
+      tags:
+      - load balancer
+      summary: Updates a load balancer
+      description: Updates a load balancer
+      parameters:
+        - $ref: '#/components/parameters/LoadBalancerIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: PATCH
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                pools:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/PoolData'
+                listeners:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/ListenerData'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LBDetailSerializer'
+  /loadbalancers/reports/:
+    get:
+      tags:
+      - load balancer
+      summary: Shows report for a load balancer member
+      description: Shows report for a load balancer member.
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - name: begin_time
+          in: query
+          description: Default is one month before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the report before the end time. Default is now.
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LBReportSerializer'
+  /loadbalancers/{loadbalancer_id}/action/:
+    put:
+      tags:
+      - load balancer
+      summary: Shows details for a load balancer
+      description: Shows details for a load balancer.
+      parameters:
+        - $ref: '#/components/parameters/LoadBalancerIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+              - action
+              properties:
+                action:
+                  type: string
+                  description: Action for a server
+                  default: updateListenerParams
+                  enum:
+                  - associateIP
+                  - disassociateIP
+                  - updateListenerParams
+                ip:
+                  type: integer
+                  description: STATIC type IP ID for associateIP
+                  format: int32
+                listener_name:
+                  type: string
+                  description: Listener name for updateListenerParams
+                timeout_client_data:
+                  type: integer
+                  description: 'Listener frontend client inactivity timeout in milliseconds.
+                    Default: 50000.'
+                  format: int32
+                timeout_member_connect:
+                  type: integer
+                  description: 'Listener backend member connection timeout in milliseconds.
+                    Default: 5000.'
+                  format: int32
+                timeout_member_data:
+                  type: integer
+                  description: 'Listener backend member inactivity timeout in milliseconds.
+                    Default: 50000.'
+                  format: int32
+                timeout_tcp_inspect:
+                  type: integer
+                  description: 'Listener time, in milliseconds, to wait for additional
+                    TCP packets for content inspection. Default: 0.'
+                  format: int32
+            examples:
+              associateIP example:
+                summary: Example with associateIP
+                value:
+                  action: associateIP
+                  ip: 0.0.0.0
+              disassociateIP example:
+                summary: Example with disassociateIP
+                value:
+                  action: disassociateIP
+              updateListenerParams example:
+                summary: Example with updateListenerParams
+                value:
+                  action: updateListenerParams
+                  listener_name: pool-0
+                  timeout_client_data: 50000
+                  timeout_member_connect: 5000
+                  timeout_member_data: 50000
+                  timeout_tcp_inspect: 0
+      responses:
+        202:
+          description: Accepted
+          content: {}
+  /loadbalancers/{loadbalancer_id}/reports/:
+    get:
+      tags:
+      - load balancer
+      summary: Shows report for a load balancer member
+      description: Shows report for a load balancer member.
+      parameters:
+        - $ref: '#/components/parameters/LoadBalancerIDParam'
+        - name: member
+          in: query
+          description: Member ip
+          required: true
+          schema:
+            type: string
+        - name: begin_time
+          in: query
+          description: Default is one month before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the report before the end time. Default is now.
+          schema:
+            type: string
+        - name: method
+          in: query
+          description: Calculate method
+          schema:
+            type: string
+            default: sum
+            enum:
+            - sum
+            - avg
+        - name: interval
+          in: query
+          description: Calculate time interval
+          schema:
+            type: integer
+            format: int32
+            default: 5
+        - name: unit
+          in: query
+          description: Unit of calculated time interval
+          schema:
+            type: string
+            default: m
+            enum:
+            - s
+            - m
+            - h
+            - d
+            - w
+            - M
+            - y
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LBDetailSerializer'
+              examples:
+                loadbalancer_member_bytes_read:
+                  summary: loadbalancer member bytes_read
+                  value: [
+                            {
+                              "bytes_read": 37,
+                              "time": "2018-09-25T09:55:00.771000",
+                            }
+                          ]
+  /security_groups/:
+    get:
+      tags:
+      - security group
+      summary: List security rules of a server
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ServerInQueryParam'
+        - $ref: '#/components/parameters/LoadBalancerInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SecurityGroupSerializer'
+  /security_groups/{security_group_id}/:
+    patch:
+      tags: 
+      - security group
+      summary: Add a security rule to a security group.
+      parameters: 
+        - $ref: '#/components/parameters/SecurityGroupIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                direction:
+                  type: string
+                  enum: [egress, ingress]
+                project:
+                  type: integer
+                port_range_max:
+                  type: integer
+                  minimum: 1
+                  maximum: 65535
+                port_range_min:
+                  type: integer
+                  minimum: 1
+                  maximum: 65535
+                protocol:
+                  type: string
+                  enum: [tcp, udp, udplite, sctp, icmp, dccp]
+                remote_ip_prefix:
+                  type: string
+      responses:
+        201:
+          description: Created
+          content: {}
+  /security_group_rules/{rule_id}/:
+    delete:
+      tags: 
+      - security group
+      summary: Delete a rule in a security group.
+      parameters: 
+        - $ref: '#/components/parameters/RuleIDParam'
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        202:
+          description: No Content
+          content: {}
+  /networks/:
+    get:
+      tags:
+      - network
+      summary: Lists networks
+      parameters: 
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/NetworkSerializer'
+    post:
+      tags: 
+      - network
+      summary: Creates a network
+      parameters: 
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NetworkPostSerializer'
+      responses:
+        201:
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NetworkSerializer'
+  /networks/{network_id}/:
+    get:
+      tags: 
+      - network
+      summary: Shows details for a network
+      parameters:
+        - $ref: '#/components/parameters/NetworkIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NetworkDetailSerializer'
+    delete:
+      tags: 
+      - network
+      summary: Deletes a network
+      parameters: 
+        - $ref: '#/components/parameters/NetworkIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        202:
+          description: No Content
+          content: {}
+    patch:
+      tags: 
+      - network
+      summary: Update a network
+      parameters: 
+        - $ref: '#/components/parameters/NetworkIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                name:
+                  type: string
+                  description: The new network name
+                nameservers:
+                  type: array
+                  description: The new network nameservers list
+                  items:
+                    type: string
+      responses:
+        202:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NetworkDetailSerializer'
+  /networks/{network_id}/security_group_rules/:
+    get:
+      tags: 
+      - network
+      summary: Get security group rules by a network
+      parameters:
+        - $ref: '#/components/parameters/NetworkIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                example: |-
+                  {
+                    "192.168.110.6": [
+                      {
+                        "id": "69623c7b-8fdf-402c-8fed-3c777ced2132",
+                        "security_group": "48f8a650-242a-494d-9401-051b1b82b128",
+                        "direction": "ingress",
+                        "ethertype": "IPv4",
+                        "port_range_min": 22,
+                        "port_range_max": 22,
+                        "protocol": "tcp",
+                        "remote_ip_prefix": "0.0.0.0/0"
+                      }
+                    ],
+                    "192.168.110.23": [
+                      {
+                        "id": "5c5a2f0c-5584-46f0-9af4-3d5230604105",
+                        "security_group": "8703c262-16b7-4d67-825b-477d5f128e48",
+                        "direction": "egress",
+                        "ethertype": "IPv6",
+                        "port_range_min": null,
+                        "port_range_max": null,
+                        "protocol": null,
+                        "remote_ip_prefix": "::/0"
+                      }
+                    ]
+                  }
+  /ips/:
+    get:
+      tags: 
+      - ip
+      summary: List IPs
+      parameters:
+          - $ref: '#/components/parameters/ProjectInQueryParam'
+          - name: address
+            in: query
+            description: IP Address
+            schema:
+              type: string
+          - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IPSerializer'
+    post:
+      tags: 
+      - ip
+      summary: Create a STATIC Elastic IP
+      description: Create a STATIC Elastic IP
+      parameters: 
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+              - project
+              properties:
+                project:
+                  type: integer
+                  description: Project ID
+                  format: int32
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IPSerializer'
+  /ips/{ip_id}/:
+    get:
+      tags: 
+      - ip
+      summary: Get a Elastic IP detail
+      parameters: 
+        - $ref: '#/components/parameters/IPIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IPSerializer'
+    patch:
+      tags: 
+      - ip
+      summary: Update a Elastic IP's Description
+      description: Update a Elastic IP's description
+      parameters: 
+        - $ref: '#/components/parameters/IPIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: PATCH
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                desc:
+                  type: string
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IPSerializer'
+    delete:
+      tags: 
+      - ip
+      summary: Unsubscribe a STATIC Elastic IP
+      description: Unsubscribe a STATIC Elastic IP
+      parameters: 
+        - $ref: '#/components/parameters/IPIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
+  /volumes/:
+    get:
+      tags:
+      - volume
+      summary: List volumes
+      description: List volumes
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/VolumeSerializer'
+    post:
+      tags:
+      - volume
+      summary: Create a volume
+      description: Create a volume
+      parameters:
+      - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/VolumePostSerializer'
+              - type: object
+              properties:
+                desc:
+                  type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/VolumePostSerializer'
+                - type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                  platform:
+                    type: string
+  /volumes/{volume_id}/:
+    get:
+      tags:
+      - volume
+      summary: Get details of a volume
+      parameters:
+        - $ref: '#/components/parameters/VolumeIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VolumeSerializer'
+    delete:
+      tags: 
+      - volume
+      summary: Delete a volume
+      parameters:
+        - $ref: '#/components/parameters/VolumeIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
+  /volumes/{volume_id}/action/:
+    put:
+      tags: 
+      - volume
+      summary: Update status or extend size of a volume
+      parameters: 
+        - $ref: '#/components/parameters/VolumeIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: Volume action body
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                server:
+                  type: integer
+                status:
+                  type: string
+                  enum:
+                  - attach
+                  - detach
+                  - extend
+                size:
+                  type: integer
+            examples:
+              attachServer example:
+                summary: Example with attach Server
+                value:
+                  server: 0
+                  status: attach
+              detachServer example:
+                summary: Example with detach Server
+                value:
+                  server: 0
+                  status: detach
+              extendSize example:
+                summary: Example with extend Size
+                value:
+                  size: 0
+                  status: extend
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  mountpoint:
+                    type: string
+                  server_id:
+                    type: integer
+                  volume_id:
+                    type: integer
+  /volumes/reports/:
+    get:
+      tags:
+      - volume
+      summary: Get volume report of all groups.
+      description: Get volume report of all groups
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - name: user
+          in: query
+          description: User ID.
+          schema:
+            type: string
+        - name: begin_time
+          in: query
+          description: Default is one month before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the report before the end time. Default is now.
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VolumeReportSerializer'
+  /snapshots/:
+    get:
+      tags: 
+      - snapshot
+      summary: Get snapshots
+      parameters: 
+        - name: status
+          in: query
+          description: Snapshot Status
+          required: false
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SnapshotSerializer'
+    post:
+      tags: 
+      - snapshot
+      summary: Take a snapshot
+      parameters: 
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+              - name
+              - volume
+              properties:
+                name:
+                  type: string
+                  description: Snapshot name
+                desc:
+                  type: string
+                  description: Description
+                volume:
+                  type: integer
+                  description: Source volume ID
+                  format: int32
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SnapshotSerializer'
+  /snapshots/{snapshot_id}/:
+    get:
+      tags: 
+      - snapshot
+      summary: Get details of a snapshot
+      parameters: 
+        - $ref: '#/components/parameters/SnapshotIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SnapshotSerializer'
+    delete:
+      tags: 
+      - snapshot
+      summary: Delete a snapshot
+      parameters: 
+        - $ref: '#/components/parameters/SnapshotIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
+  /snapshots/reports/:
+    get:
+      tags:
+      - snapshot
+      summary: Get snapshots report
+      description: Get snapshots report
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - name: user
+          in: query
+          description: User ID.
+          schema:
+            type: string
+        - name: begin_time
+          in: query
+          description: Default is one month before end time.
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Get the report before the end time. Default is now.
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SnapshotReportSerializer'
+  /servers/:
+    get:
+      tags: 
+      - server
+      summary: List servers
+      parameters: 
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ServerSerializer'
+  /servers/{server_id}/:
+    get:
+      tags: 
+      - server
+      summary: Get details of a server
+      parameters: 
+        - $ref: '#/components/parameters/ServerIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServerSerializer'
+  /servers/{server_id}/auto_scaling_policy/:
+    post:
+      tags: 
+      - server
+      summary: Set Auto Scaling Policy On a Server
+      description: Set Auto Scaling Policy On a Server
+      parameters: 
+        - $ref: '#/components/parameters/ServerIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              required:
+              - auto_scaling_policy
+              properties:
+                auto_scaling_policy:
+                  type: integer
+                  description: Auto Scaling Policy ID
+                  format: int32
+                loadbalancer:
+                  type: integer
+                  description: |-
+                    Load Balancer ID. The servers will be automatically added to the
+                    load balancer except for the original server
+                  format: int32
+                protocol_port:
+                  type: integer
+                  description: |-
+                    Port number where server listens.
+                    The default is the same as the load balancer
+                  format: int32
+                scaleup_action:
+                  type: string
+                  description: |-
+                    User define alarm high notification url.
+                    Only support http POST request, not support trust+
+                scaledown_action:
+                  type: string
+                  description: |-
+                    User define alarm low notification url.
+                    Only support http POST request, not support trust+
+      responses:
+        201:
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  auto_scaling_policy:
+                    type: integer
+                    format: int32
+                  loadbalancer:
+                    type: integer
+                    format: int32
+    delete:
+      tags:
+      - server
+      summary: Remove Auto Scaling Policy From a Server
+      description: Remove Auto Scaling Policy From a Server
+      parameters: 
+        - $ref: '#/components/parameters/ServerIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
+  /servers/{server_id}/action/:
+    put:
+      tags: 
+      - server
+      summary: Execute an action to a server
+      description: Execute an action to a server
+      parameters: 
+        - $ref: '#/components/parameters/ServerIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              required:
+              - action
+              properties:
+                action:
+                  type: string
+                  description: Action for a server, such as start/stop/reboot/associateIP/disassociateIP/shelve/unshelve
+                reboot_type:
+                  type: string
+                  description: SOFT for a software-level reboot, or HARD for a virtual
+                    power cycle hard reboot. Default is SOFT. This parameter only
+                    available for reboot action.
+                ip:
+                  type: string
+                  description: STATIC type IP ID for associateIP
+            examples:
+              start example:
+                summary: Example with start
+                value:
+                  action: start
+              stop example:
+                summary: Example with stop
+                value:
+                  action: stop
+              reboot example:
+                summary: Example with reboot
+                value:
+                  action: reboot
+                  reboot_type: SOFT
+              shelve example:
+                summary: Example with shelve
+                value:
+                  action: shelve
+              unshelve example:
+                summary: Example with unshelve
+                value:
+                  action: unshelve
+              associateIP example:
+                summary: Example with associateIP
+                value:
+                  action: associateIP
+                  ip: 0.0.0.0
+              disassociateIP example:
+                summary: Example with disassociateIP
+                value:
+                  action: disassociateIP
+        required: true
+      responses:
+        202:
+          description: Accepted
+          content: {}
+  /servers/{server_id}/cpu/:
+    get:
+      tags: 
+      - server
+      summary: Get a Server CPU Utilization
+      parameters: 
+        - name: begin_time
+          in: query
+          description: Query start time
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Query finish time
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ServerIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ServerCPUUtilSerializer'
+  /servers/{server_id}/disk/:
+    get:
+      tags: 
+      - server
+      summary: Get a Server Disk Utilization
+      parameters: 
+        - name: meter_name
+          in: query
+          description: Query meter name
+          required: true
+          schema:
+            type: string
+            enum: [disk_read_bytes_rate ,disk_write_bytes_rate]
+        - name: begin_time
+          in: query
+          description: Query start time
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Query finish time
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ServerIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ServerDiskReadUtilSerializer'
+  /servers/{server_id}/memory/:
+    get:
+      tags: 
+      - server
+      summary: Get a Server Memory Utilization
+      parameters: 
+        - name: begin_time
+          in: query
+          description: Query start time
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Query finish time
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ServerIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ServerMemoryUtilSerializer'
+  /servers/{server_id}/net/:
+    get:
+      tags: 
+      - server
+      summary: Get a Server Network Utilization
+      parameters: 
+        - name: begin_time
+          in: query
+          description: Query start time
+          schema:
+            type: string
+        - name: end_time
+          in: query
+          description: Query finish time
+          schema:
+            type: string
+        - name: meter_name
+          in: query
+          description: Query meter name
+          required: true
+          schema:
+            type: string
+            enum: [network_incoming_bytes_rate, network_outgoing_bytes_rate]
+        - $ref: '#/components/parameters/ServerIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ServerNetworkIncomingSerializer'
+  /sites/:
+    get:
+      tags:
+      - site
+      summary: List sites
+      description: List sites
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - name: sol_categ
+          in: query
+          description: Solution Categories
+          schema:
+            type: string
+            default: os
+        - name: all_users
+          in: query
+          description: List resources of all users. 租戶管理員使用
+          schema:
+            type: integer
+            format: int32
+            enum: [ 0, 1]
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SiteSerializer'
+    post:
+      tags:
+      - site
+      summary: Create a site
+      description: Create a site
+      parameters:
+        - name: x-extra-property-image
+          in: header
+          description: The extra property of image (Just for example)
+          schema:
+            type: string
+        - name: x-extra-property-flavor
+          in: header
+          description: The extra property of flavor (Just for example)
+          schema:
+            type: string
+        - name: x-extra-property-keypair
+          in: header
+          description: Required when use linux os，choose at least one with x-extra-property-password
+          schema:
+            type: string
+        - name: x-extra-property-password
+          in: header
+          description: Required when use windows os，choose at least one with x-extra-property-keypair
+          schema:
+            type: string
+        - name: x-extra-property-private-network
+          in: header
+          description: The extra property of private-network (Just for example)
+          schema:
+            type: string
+        - name: x-extra-property-floating-ip
+          in: header
+          description: The extra property of floating-ip (Just for example)
+          schema:
+            type: string
+            enum:
+              - floating
+              - nofloating
+        - name: x-extra-property-volume-size
+          in: header
+          description: Volume Size
+          schema:
+            type: integer
+        - name: x-extra-property-volume-type
+          in: header
+          description: Volume Type
+          schema:
+            type: string
+            enum:
+              - hdd
+              - ssd
+              - LUKS-hdd
+              - LUKS-ssd
+            default: hdd
+        - name: x-extra-property-system-volume-size
+          in: header
+          description: System Volume Size
+          schema:
+            type: integer
+        - name: x-extra-property-system-volume-type
+          in: header
+          description: System Volume Type
+          schema:
+            type: string
+            enum:
+              - local_disk
+              # - block_storage-ssd-thick
+              - block_storage-hdd
+            default: block_storage-hdd
+        - name: x-extra-property-availability-zone
+          in: header
+          description: The extra property of availability-zone
+          schema:
+            type: string
+            default: nova
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: body
+        content:
+          application/json:
+            schema:
+              required:
+              - name
+              - project
+              - solution
+              type: object
+              properties:
+                project:
+                  type: integer
+                desc:
+                  type: string
+                  example: Description (optional)
+                solution:
+                  type: integer
+                name:
+                  type: string
+                  example: TestSite (required)
+      responses:
+        201:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SiteSerializer'                  
+  /sites/{site_id}/:
+    get:
+      tags:
+      - site
+      summary: Get details of a site
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                 $ref: '#/components/schemas/SiteSerializer'
+    delete:
+      tags:
+      - site
+      summary: Delete a site
+      description: Delete a site
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
+    put:
+      tags:
+      - site
+      summary: Update site extra-property
+      description: Update site extra-property，This API no request body
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - name: x-extra-property-flavor
+          in: header
+          description: The extra property of flavor (Just for example)
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: no request body
+        required: false
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                 $ref: '#/components/schemas/SiteDetailSerializer'
+    patch:
+      tags:
+      - site
+      summary: Patch details of a site
+      description: Patch details of a site
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                desc:
+                  type: string
+                  description: Site description
+                termination_protection:
+                  type: boolean
+                  description: Site termination protection
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                 $ref: '#/components/schemas/SiteDetailSerializer'
+  /sites/{site_id}/parameters/:
+    get:
+      tags:
+      - site
+      summary: Get parameters of a site
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  image:
+                    type: string
+                  floating_ip:
+                    type: string
+                  volume_type:
+                    type: string
+                  static_ip:
+                    type: string
+                  volume_size:
+                    type: string
+                  env:
+                    type: object
+                  private_network:
+                    type: string
+                  system_volume_type:
+                    type: string
+                  flavor:
+                    type: string
+                  ports:
+                    type: string
+  /sites/{site_id}/event_logs/:
+    get:
+      tags:
+      - site
+      summary: Get event logs of a site
+      description: Get event logs of a site
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SiteEventLogSerializer'
+  /sites/{site_id}/action/:
+    put:
+      tags:
+      - site
+      summary: Action status of a site
+      description: Action status of a site
+      parameters:
+        - $ref: '#/components/parameters/SiteIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: |-
+          Action for site status
+          Available values : start, stop, reboot, suspend, resume, shelve, unshelve
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SiteActionSerializer'
+            examples:
+              start example:
+                summary: Example with start
+                value:
+                  status: start
+              stop example:
+                summary: Example with stop
+                value:
+                  status: stop
+              reboot example:
+                summary: Example with reboot
+                value:
+                  status: reboot
+              suspend example:
+                summary: Example with suspend
+                value:
+                  status: suspend
+              resume example:
+                summary: Example with resume
+                value:
+                  status: resume
+              shelve example:
+                summary: Example with shelve
+                value:
+                  status: shelve
+              unshelve example:
+                summary: Example with unshelve
+                value:
+                  status: unshelve
+      responses:
+        202:
+          description: Accepted
+          content: {}
+  /firewalls/:
+    get:
+      tags:
+      - firewall
+      summary: get firewalls list
+      description: get firewalls list
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FirewallSerializer'
+    post:
+      tags:
+      - firewall
+      summary: create a firewall
+      description: Create a firewall, 'rules' is an optional parameter to define filrewall
+        rules list for this firewall. And 'associate_networks' is another optional
+        parameter to define which private networks list associate to this firewall.
+      parameters:
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: Post
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                project:
+                  type: integer
+                  format: int32
+                rules:
+                  type: array
+                  items:
+                    type: integer
+                    format: int32
+                associate_networks:
+                  type: array
+                  items:
+                    type: integer
+                    format: int32
+                desc:
+                  type: string
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FirewallSerializer'
+  /firewalls/{firewall_id}/:
+    get:
+      tags:
+      - firewall
+      summary: get a firewall detail
+      description: get a firewall detail
+      parameters:
+        - $ref: '#/components/parameters/FirewallIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FirewallDetailSerializer'
+    patch:
+      tags:
+      - firewall
+      summary: update a firewall
+      description: update a firewall
+      parameters:
+        - $ref: '#/components/parameters/FirewallIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: Patch
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rules:
+                  type: array
+                  items:
+                    type: integer
+                    format: int32
+                associate_networks:
+                  type: array
+                  items:
+                    type: integer
+                    format: int32
+                desc:
+                  type: string
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FirewallDetailSerializer'
+    delete:
+      tags:
+      - firewall
+      summary: delete a firewall
+      description: delete a firewall
+      parameters:
+        - $ref: '#/components/parameters/FirewallIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
+  /firewall_rules/:
+    get:
+      tags:
+      - firewall
+      summary: get firewall rules list
+      description: get firewall rules list
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FirewallRuleSerializer'
+    post:
+      tags:
+      - firewall
+      summary: create a firewall rule
+      description: create a firewall rule
+      parameters:
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: Post
+        content:
+          application/json:
+            schema:
+              required:
+              - name
+              - project
+              properties:
+                name:
+                  type: string
+                  description: Firewall rule name
+                project:
+                  type: integer
+                  description: Project ID
+                  format: int32
+                protocol:
+                  type: string
+                  description: Firewall rule IP protocol
+                  enum:
+                  - icmp
+                  - tcp
+                  - udp
+                action:
+                  type: string
+                  description: The action that the API performs on traffic
+                  enum:
+                  - allow
+                  - deny
+                  - reject
+                destination_ip_address:
+                  type: string
+                  description: The destination IPv4 or IPv6 address or CIDR
+                destination_port:
+                  type: string
+                  description: 'The destination port or port range ex: (80:90)'
+                source_ip_address:
+                  type: string
+                  description: The source IPv4 or IPv6 address or CIDR
+                source_port:
+                  type: string
+                  description: 'The source port or port range ex: (80:90)'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FirewallRuleSerializer'
+  /firewall_rules/{firewall_rule_id}/:
+    get:
+      tags:
+      - firewall
+      summary: get firewall rules list
+      description: get firewall rules list
+      parameters:
+        - $ref: '#/components/parameters/FirewallRuleIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FirewallRuleDetailSerializer'
+    delete:
+      tags:
+      - firewall
+      summary: delete a firewall rule
+      description: delete a firewall rule
+      parameters:
+        - $ref: '#/components/parameters/FirewallRuleIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
+    patch:
+      tags:
+      - firewall
+      summary: update a firewall rule
+      description: update a firewall rule
+      parameters:
+        - $ref: '#/components/parameters/FirewallRuleIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: Patch
+        content:
+          application/json:
+            schema:
+              properties:
+                protocol:
+                  type: string
+                  description: Firewall rule IP protocol
+                  enum:
+                  - icmp
+                  - tcp
+                  - udp
+                action:
+                  type: string
+                  description: The action that the API performs on traffic
+                  enum:
+                  - allow
+                  - deny
+                  - reject
+                destination_ip_address:
+                  type: string
+                  description: The destination IPv4 or IPv6 address or CIDR
+                destination_port:
+                  type: string
+                  description: 'The destination port or port range ex: (80:90)'
+                source_ip_address:
+                  type: string
+                  description: The source IPv4 or IPv6 address or CIDR
+                source_port:
+                  type: string
+                  description: 'The source port or port range ex: (80:90)'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FirewallRuleDetailSerializer'
+  /secrets/:
+    get:
+      tags:
+        - secret
+      summary: List Barbican Secrets
+      description: List Secrets
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SecretSerializer'
+    post:
+      tags:
+        - secret
+      summary: Create a Barbican Secret
+      description: Create a Secret
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+              - name
+              - payload
+              properties:
+                name:
+                  type: string
+                  description: Secret name
+                payload:
+                  type: string
+                  description: Secret base64 encoding content
+                expire_time:
+                  type: string
+                  description: Secret expire time
+                  format: date-time
+                desc:
+                  type: string
+                  description: Secret description
+      responses:
+        200:
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SecretSerializer'
+  /secrets/{secret_id}/:
+    get:
+      tags:
+        - secret
+      summary: Get a Secret Detail
+      description: Get a secret detail
+      parameters:
+        - $ref: '#/components/parameters/SecretIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SecretSerializer'
+    delete:
+      tags:
+        - secret
+      summary: Delete a Secret
+      description: Delete a secret
+      parameters:
+        - $ref: '#/components/parameters/SecretIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
+  /availability_zones/:
+    get:
+      tags:
+        - availability zone
+      summary: List availability zones
+      description: List availability zones
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AZSerializer'
+  /availability_zones/{az_id}/:
+    get:
+      tags:
+        - availability zone
+      summary: Get availability zone details
+      description: Get availability zone details
+      parameters:
+        - $ref: '#/components/parameters/AZIDParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AZDetailSerializer'
+  /auto_scaling_policies/:
+    get:
+      tags:
+        - auto scaling policy
+      summary: get auto scaling policies list
+      description: get auto scaling policies list
+      parameters:
+        - $ref: '#/components/parameters/ProjectInQueryParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AutoScalingPolicySerializer'
+    post:
+      tags:
+        - auto scaling policy
+      summary: create an auto scaling policy
+      description: create an auto scaling policy
+      parameters:
+        - $ref: '#/components/parameters/ApiHostParam'
+      requestBody:
+        description: |-
+          create an auto scaling policy  
+          meter_name values : cpu_util,memory.usage, disk.read.bytes.rate,
+                    disk.write.bytes.rate, network.incoming.bytes.rate, network.outgoing.bytes.rate
+        content:
+          application/json:
+            schema:
+              required:
+              - meter_name
+              - name
+              - project
+              - scale_max_size
+              - scaleup_threshold
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: TestASP (required)
+                meter_name:
+                  type: string
+                  enum: [cpu_util,memory.usage, disk.read.bytes.rate,
+                    disk.write.bytes.rate, network.incoming.bytes.rate, network.outgoing.bytes.rate]
+                scaleup_threshold:
+                  type: integer
+                scaledown_threshold:
+                  type: integer
+                scale_max_size:
+                  type: integer
+                project:
+                  type: integer
+                desc:
+                  type: string
+                  example: This ASP is for... (optional)
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AutoScalingPolicySerializer'
+  /auto_scaling_policies/{auto_scaling_policy_id}:
+    get:
+      tags:
+        - auto scaling policy
+      summary: get an auto scaling policy detail
+      description: get an auto scaling policy detail
+      parameters:
+        - $ref: '#/components/parameters/AutoScalingPolicyID'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AutoScalingPolicySerializer'
+    delete:
+      tags:
+        - auto scaling policy
+      summary: delete an auto scaling policy
+      description: delete an auto scaling policy
+      parameters:
+        - $ref: '#/components/parameters/AutoScalingPolicyID'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        204:
+          description: No Content
+          content: {}
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-api-key
+  schemas:
+    site_extra_prop:
+      type: object
+      properties:
+        static-ip:
+          type: array
+          items:
+            type: string
+        locale:
+          type: array
+          items:
+            type: string
+        image:
+          type: array
+          items:
+            type: string
+        private-network:
+          type: array
+          items:
+            type: string
+        timezone:
+          type: array
+          items:
+            type: string
+        system-volume-type:
+          type: array
+          items:
+            type: string
+        floating-ip:
+          type: array
+          items:
+            type: string
+        flavor:
+          type: array
+          items:
+            type: string
+        volume-type:
+          type: array
+          items:
+            type: string
+        password:
+          type: string
+        ports:
+          type: string
+        volume-size:
+          type: string
+    FlavorDetailSerializer:
+      required:
+      - desc
+      - id
+      - metadata
+      - name
+      - platform
+      - resource
+      type: object
+      properties:
+        desc:
+          type: string
+        id:
+          type: integer
+          format: int64
+        metadata:
+          type: object
+          properties: {}
+        name:
+          type: string
+        platform:
+          type: string
+        is_enabled:
+          type: boolean
+        is_public:
+          type: boolean
+        reason:
+          type: string
+        labels:
+          type: array
+          items:
+            type: string
+        resource:
+          type: object
+          properties:
+            cpu:
+              type: integer
+              format: int64
+            memory:
+              type: integer
+              format: int64
+            disk:
+              type: integer
+              format: int64
+            gpu:
+              type: number
+              format: float
+            shm:
+              type: integer
+              format: int64
+            nic:
+              type: integer
+              format: int64
+    FlavorSerializer:
+      required:
+      - id
+      - metadata
+      - name
+      - platform
+      - resource
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        metadata:
+          type: object
+          properties: 
+            gpu_type:
+              type: string
+        name:
+          type: string
+        platform:
+          type: string
+        is_public:
+          type: boolean
+        labels:
+          type: array
+          items:
+            type: string
+        is_enabled:
+          type: boolean
+        reason:
+          type: string
+        resource:
+          type: object
+          properties:
+            cpu:
+              type: integer
+              format: int64
+            memory:
+              type: integer
+              format: int64
+            disk:
+              type: integer
+              format: int64
+            gpu:
+              type: integer
+              format: int64
+            nic:
+              type: integer
+              format: int64
+            shm:
+              type: integer
+              format: int64
+    ImageDetailSerializer:
+      type: object
+      properties:
+        base_image:
+          format: int64
+          type: integer
+        create_time:
+          format: date-time
+          type: string
+        delete_time:
+          format: date-time
+          type: string
+        desc:
+          type: string
+        id:
+          format: int64
+          type: integer
+        is_deleted:
+          type: boolean
+        is_enabled:
+          type: boolean
+        is_public:
+          type: boolean
+        license_type:
+          type: string
+        name:
+          type: string
+        os:
+          type: string
+        os_version:
+          type: string
+        platform:
+          type: string
+        ref_img_id:
+          type: string
+        server:
+          $ref: '#/components/schemas/ServerFieldSerializer'
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+        status:
+          type: string
+        status_reason:
+          type: string
+      required:
+        - id
+        - name
+        - platform
+        - ref_img_id
+        - is_enabled
+        - is_deleted
+        - status
+        - status_reason
+        - is_public
+        - create_time
+        - delete_time
+        - desc
+        - os
+        - os_version
+        - server
+    ImagePostSerializer:
+      required:
+      - create_time
+      - id
+      - is_public
+      - name
+      - platform
+      type: object
+      properties:
+        create_time:
+          type: string
+          format: date-time
+        id:
+          type: integer
+          format: int64
+        is_public:
+          type: boolean
+        name:
+          type: string
+        platform:
+          type: string
+        disk_format:
+          type: string
+        project:
+          type: integer
+          format: int64
+    ImageSerializer:
+      required:
+      - create_time
+      - id
+      - is_public
+      - name
+      - platform
+      - server
+      - status
+      type: object
+      properties:
+        create_time:
+          type: string
+          format: date-time
+        id:
+          type: integer
+          format: int64
+        is_public:
+          type: boolean
+        name:
+          type: string
+        platform:
+          type: string
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+        server:
+          $ref: '#/components/schemas/ServerFieldSerializer'
+        desc:
+          type: string
+        project:
+          type: object
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+        status:
+          type: string
+    ServerFieldSerializer:
+      required:
+      - hostname
+      - id
+      type: object
+      properties:
+        hostname:
+          type: string
+        id:
+          type: integer
+          format: int64
+    UserSerializer:
+      required:
+      - display_name
+      - email
+      - id
+      - username
+      type: object
+      properties:
+        id:
+          type: string
+        display_name:
+          type: string
+        username:
+          type: string
+        email:
+          type: string
+    KeypairSerializer:
+      required:
+      - fingerprint
+      - name
+      - platform
+      - user
+      type: object
+      properties:
+        name:
+          type: string
+        fingerprint:
+          type: string
+        platform:
+          type: string
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+    SecurityGroupSerializer:
+      required:
+      - id
+      - name
+      - platform
+      - security_group_rules
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        platform:
+          type: string
+        security_group_rules:
+          type: array
+          items:
+            $ref: '#/components/schemas/SecurityRuleSerializer'
+    SecurityRuleSerializer:
+      required:
+      - direction
+      - ethertype
+      - id
+      - port_range_max
+      - port_range_min
+      - protocol
+      - remote_ip_prefix
+      type: object
+      properties:
+        direction:
+          type: string
+          enum: [egress, ingress]
+        ethertype:
+          type: string
+        id:
+          type: string
+        port_range_max:
+          type: integer
+          minimum: 1
+          maximum: 65535
+        port_range_min:
+          type: integer
+          minimum: 1
+          maximum: 65535
+        protocol:
+          type: string
+          enum: [tcp, udp, udplite, sctp, icmp, dccp]
+        remote_ip_prefix:
+          type: string
+    NetworkSerializer:
+      required:
+      - cidr
+      - create_time
+      - ext_net
+      - gateway
+      - id
+      - ip_version
+      - name
+      - nameservers
+      - project
+      - status
+      - with_router
+      type: object
+      properties:
+        cidr:
+          type: string
+        ext_net:
+          type: string
+        gateway:
+          type: string
+        nameservers:
+          type: array
+          items:
+            type: string
+        id:
+          type: integer
+          format: int64
+        ip_version:
+          type: integer
+          format: int64
+        name:
+          type: string
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+        project:
+          type: integer
+          format: int64
+        status:
+          type: string
+        with_router:
+          type: boolean
+        create_time:
+          type: string
+          format: date-time
+        dns_domain:
+          type: string
+    IPSerializer:
+      required:
+      - address
+      type: object
+      properties:
+        address:
+          type: string
+        create_time:
+          type: string
+          format: date-time
+        desc:
+          type: string
+        id:
+          type: integer
+          format: int64
+        occupied_resource:
+          $ref: '#/components/schemas/OccupiedResourceSerializer'
+        project:
+          $ref: '#/components/schemas/ProjectFieldSerializer'
+        status:
+          type: string
+        status_reason:
+          type: string
+        type:
+          type: string
+          enum:
+          - FLOATING
+          - STATIC
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+    OccupiedResourceSerializer:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        type:
+          type: string
+    ProjectFieldSerializer:
+      required:
+      - id
+      - name
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+    VolumeSerializer:
+      required:
+      - attached_host
+      - create_time
+      - id
+      - is_attached
+      - is_bootable
+      - mountpoint
+      - name
+      - platform
+      - project
+      - size
+      - status
+      - user
+      type: object
+      properties:
+        attached_host:
+          $ref: '#/components/schemas/AttachedHostSerializer'
+        mountpoint:
+          type: array
+          items:
+            type: string
+        is_attached:
+          type: boolean
+        create_time:
+          type: string
+          format: date-time
+        id:
+          type: integer
+          format: int64
+        is_bootable:
+          type: boolean
+        name:
+          type: string
+        platform:
+          type: string
+        project:
+          $ref: '#/components/schemas/ProjectFieldSerializer'
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+        size:
+          maximum: 2147483647
+          minimum: -2147483648
+          type: integer
+          format: int64
+        status:
+          type: string
+    AttachedHostSerializer:
+      required:
+      - hostname
+      - id
+      type: object
+      properties:
+        hostname:
+          type: string
+        id:
+          type: integer
+          format: int64
+    VolumePostSerializer:
+      required:
+      - name
+      - platform
+      - project
+      - size
+      type: object
+      properties:
+        name:
+          type: string
+        project:
+          type: integer
+          format: int64
+        size:
+          type: integer
+          format: int64
+        volume_type:
+          type: string
+    SnapshotSerializer:
+      required:
+      - create_time
+      - desc
+      - id
+      - name
+      - platform
+      - status
+      - user
+      - volume
+      type: object
+      properties:
+        create_time:
+          type: string
+          format: date-time
+        desc:
+          type: string
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        platform:
+          type: string
+        status:
+          type: string
+        volume:
+          $ref: '#/components/schemas/listSnapShotVolSerializer'
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+    listSnapShotVolSerializer:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+    ServerSerializer:
+      required:
+      - auto_scaling_policy
+      - availability_zone
+      - flavor
+      - fqdn
+      - hostname
+      - id
+      - image
+      - keypair
+      - os
+      - os_version
+      - platform
+      - private_nets
+      - public_nets
+      - site
+      - status
+      type: object
+      properties:
+        auto_scaling_policy:
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int64
+            name:
+              type: string
+            status:
+              type: string
+            status_reason:
+              type: string
+        availability_zone:
+          type: string
+        flavor:
+          type: string
+        desc:
+          type: string
+        hostname:
+          type: string
+        id:
+          type: integer
+          format: int64
+        image:
+          type: string
+        os:
+          type: string
+        os_version:
+          type: string
+        keypair:
+          type: string
+        platform:
+          type: string
+        private_nets:
+          type: array
+          items:
+            $ref: '#/components/schemas/ServerNetObject'
+        public_nets:
+          type: array
+          items:
+            $ref: '#/components/schemas/ServerNetObject'
+        site:
+          type: integer
+          format: int64
+        status_reason:
+          type: string
+        status:
+          type: string
+          enum:
+            - MIGRATING
+            - ASSOCIATING
+            - DISASSOCIATING
+            - SUSPENDED
+            - REBOOT
+            - STOPPING
+            - SHUTOFF
+            - SHUTOFF
+            - STARTING
+            - RESIZE
+            - VERIFY_RESIZE
+            - REVERT_RESIZE
+            - ERROR
+            - DELETED
+            - SHELVING
+            - SHELVED_OFFLOADED
+            - QUEUEING
+            - SPAWNING
+        fqdn:
+          type: string
+    ServerNetObject:
+      required:
+      - ip
+      - name
+      type: object
+      properties:
+        name:
+          type: string
+        ip:
+          type: string
+        id:
+          type: integer
+          format: int64
+        type:
+          type: string
+          enum:
+          - FLOATING
+          - STATIC
+    ServerCPUUtilSerializer:
+      required:
+      - cpu_util
+      - timestamp
+      - unit
+      type: object
+      properties:
+        cpu_util:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+        unit:
+          type: string
+    ServerDiskReadUtilSerializer:
+      required:
+      - disk_read_bytes_rate
+      - timestamp
+      - unit
+      type: object
+      properties:
+        disk_read_bytes_rate:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+        unit:
+          type: string
+    ServerMemoryUtilSerializer:
+      required:
+      - memory_usage
+      - timestamp
+      - unit
+      type: object
+      properties:
+        memory_usage:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+        unit:
+          type: string
+    ServerNetworkIncomingSerializer:
+      required:
+      - network_incoming_bytes_rate
+      - timestamp
+      - unit
+      type: object
+      properties:
+        network_incoming_bytes_rate:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+        unit:
+          type: string
+    SiteSerializer:
+      required:
+      - callback
+      - create_time
+      - id
+      - is_preemptive
+      - name
+      - platform
+      - progress
+      - project
+      - public_ip
+      - solution
+      - status
+      - termination_protection
+      - user
+      type: object
+      properties:
+        callback:
+          type: string
+        create_time:
+          type: string
+          format: date-time
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        platform:
+          type: string
+        progress:
+          type: integer
+          format: int64
+        project:
+          type: integer
+          format: int64
+        public_ip:
+          type: string
+        solution:
+          type: integer
+          format: int64
+        status:
+          type: string
+          description: may be null
+          enum: 
+            - Unshelving
+            - Shelving
+            - Starting
+            - Ready
+            - Error
+            - Suspending
+            - Stopping
+            - Deleting
+            - NotReady
+            - Updating
+            - Resuming
+            - Deleted
+            - Initializing
+            - Queueing
+            - null
+        is_preemptive:
+          type: boolean
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+        servers:
+          type: array
+          items:
+            type: object
+            properties:
+              flavor_id:
+                type: integer
+                format: int64
+              id:
+                type: integer
+                format: int64
+              hostname:
+                type: string
+              status:
+                type: string
+        termination_protection:
+          type: boolean
+    SiteDetailSerializer:
+      required:
+      - callback
+      - create_time
+      - desc
+      - id
+      - is_preemptive
+      - name
+      - platform
+      - progress
+      - project
+      - public_ip
+      - servers
+      - solution
+      - status
+      - status_reason
+      - termination_protection
+      - user
+      type: object
+      properties:
+        callback:
+          type: string
+        create_time:
+          type: string
+          format: date-time
+        desc:
+          type: string
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        platform:
+          type: string
+        progress:
+          type: integer
+          format: int64
+        project:
+          type: integer
+          format: int64
+        public_ip:
+          type: string
+        servers:
+          type: array
+          items:
+            type: object
+            properties:
+              flavor_id:
+                type: integer
+                format: int64
+              id:
+                type: integer
+                format: int64
+              hostname:
+                type: string
+              status:
+                type: string
+        solution:
+          type: integer
+          format: int64
+        status:
+          type: string
+        status_reason:
+          type: string
+        is_preemptive:
+          type: boolean
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+        termination_protection:
+          type: boolean
+    SiteActionSerializer:
+      required:
+      - status
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [start, stop, reboot, suspend, resume, shelve, unshelve]
+    GroupDetailSerializer:
+      type: object
+      properties:
+        desc:
+          type: string
+        id:
+          format: int64
+          type: integer
+        matchLabels:
+          type: array
+          items:
+            type: string
+            example: twsc
+        name:
+          type: string
+          example: ENT123456
+        status:
+          type: string
+          example: Ready
+        status_reason:
+          type: string
+        tm_uuid:
+          type: string
+        transparent_mode:
+          type: boolean
+          example: false
+        uuid:
+          type: string
+          format: uuid
+      required:
+        - desc
+        - id
+        - matchLabels
+        - name
+        - status
+        - status_reason
+        - tm_uuid
+        - transparent_mode
+        - uuid
+    GroupSerializer:
+      type: object
+      properties:
+        matchLabels:
+          type: array
+          items:
+            type: string
+        id:
+          format: int64
+          type: integer
+        name:
+          type: string
+        platform:
+          type: string
+        transparent_mode:
+          type: boolean
+      required:
+        - matchLabels
+        - id
+        - name
+        - platform
+        - transparent_mode
+    VolumeReportSerializer:
+      type: object
+      properties:
+        begin_time:
+          type: string
+          format: date-time
+        end_time:
+          type: string
+          format: date-time
+        projects:
+          type: array
+          items:
+            $ref: '#/components/schemas/VolumeReportObject'
+    VolumeReportObject:
+      required:
+      - detail
+      - name
+      - summery
+      type: object
+      properties:
+        name:
+          type: string
+        summery:
+          type: object
+          properties:
+            total_volume_num:
+              type: integer
+              format: int64
+        detail:
+          type: object
+          properties:
+            VOLUME:
+              type: array
+              items:
+                $ref: '#/components/schemas/VolumeReportDetailObject'
+    VolumeReportDetailObject:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        size:
+          type: integer
+          format: int64
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+        name:
+          type: string
+        create_time:
+          type: string
+          format: date-time
+        delete_time:
+          type: string
+          format: date-time
+    SnapshotReportSerializer:
+      required:
+      - begin_time
+      - end_time
+      - projects
+      type: object
+      properties:
+        begin_time:
+          type: string
+          format: date-time
+        end_time:
+          type: string
+          format: date-time
+        projects:
+          type: array
+          items:
+            $ref: '#/components/schemas/SnapshotReportProjectObject'
+    SnapshotReportProjectObject:
+      required:
+      - detail
+      - name
+      - summery
+      type: object
+      properties:
+        name:
+          type: string
+        summery:
+          type: object
+          properties:
+            total_snapshot_num:
+              type: integer
+              format: int64
+        detail:
+          type: object
+          properties:
+            SNAPSHOT:
+              type: array
+              items:
+                $ref: '#/components/schemas/ReportDetailObject'
+    ReportDetailObject:
+      required:
+      - create_time
+      - delete_time
+      - id
+      - name
+      - user
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        create_time:
+          type: string
+          format: date-time
+        delete_time:
+          type: string
+          format: date-time
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+    NetworkPostSerializer:
+      type: object
+      properties:
+        name:
+          type: string
+        project:
+          type: integer
+          format: int64
+        cidr:
+          type: string
+        gateway:
+          type: string
+        # nameservers:
+        #   type: array
+        #   items:
+        #     type: string
+        with_router:
+          type: boolean
+        dns_domain:
+          type: string
+        # additional_ipv6_subnet:
+        #   type: boolean
+    NetworkDetailSerializer:
+      required:
+      - cidr
+      - create_time
+      - ext_net
+      - gateway
+      - id
+      - ip_version
+      - name
+      - nameservers
+      - platform
+      - project
+      - status
+      - status_reason
+      - user
+      - with_router
+      type: object
+      properties:
+        cidr:
+          type: string
+        create_time:
+          type: string
+          format: date-time
+        ext_net:
+          type: string
+        gateway:
+          type: string
+        nameservers:
+          type: array
+          items:
+            type: string
+        id:
+          type: integer
+          format: int64
+        ip_version:
+          type: integer
+          format: int64
+        name:
+          type: string
+        platform:
+          type: string
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+        project:
+          type: integer
+          format: int64
+        status:
+          type: string
+        status_reason:
+          type: string
+        with_router:
+          type: boolean
+        firewall:
+          $ref: '#/components/schemas/FirewallDetailObject'
+    FirewallDetailObject:
+      required:
+      - id
+      - name
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+    FirewallSerializer:
+      required:
+      - desc
+      - id
+      - name
+      - platform
+      - project
+      - status
+      - user
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+        name:
+          type: string
+        project:
+          type: integer
+          format: int64
+        status:
+          type: string
+        platform:
+          type: string
+        desc:
+          type: string
+    SiteEventLogSerializer:
+      required:
+      - event_time
+      - resource_name
+      - status
+      - status_reason
+      type: object
+      properties:
+        resource_name:
+          type: string
+        event_time:
+          type: string
+          format: date-time
+        status:
+          type: string
+        status_reason:
+          type: string
+    PoolData:
+      required:
+      - method
+      - name
+      - protocol
+      type: object
+      properties:
+        name:
+          type: string
+          example: TestPool (required)
+        protocol:
+          type: string
+          example: TCP, HTTP, or HTTPS (required)
+        members:
+          type: array
+          items:
+            $ref: '#/components/schemas/PoolMemberData'
+        method:
+          type: string
+          example: ROUND_ROBIN, LEAST_CONNECTIONS, or SOURCE_IP (required)
+        delay:
+          type: integer
+          format: int32
+        max_retries:
+          type: integer
+          format: int32
+        timeout:
+          type: integer
+          format: int32
+        monitor_type:
+          type: string
+          example: HTTP, HTTPS, PING, or TCP (optional)
+        expected_codes:
+          type: string
+          example: 200, 200,202 or 200-204 (optional)
+        http_method:
+          type: string
+          example: CONNECT, DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT, or TRACE
+            (optional)
+        url_path:
+          type: string
+          example: / (optional)
+    ListenerData:
+      type: object
+      properties:
+        name:
+          type: string
+          example: TestListener (required)
+        pool_name:
+          type: string
+          example: TestPool (required)
+        protocol:
+          type: string
+          example: TCP, HTTP, HTTPS, or TERMINATED_HTTPS (required)
+        protocol_port:
+          type: integer
+          format: int32
+        default_tls_container_ref:
+          type: integer
+          format: int32
+        sni_container_refs:
+          type: array
+          items:
+            type: integer
+            format: int32
+    PoolMemberData:
+      type: object
+      properties:
+        ip:
+          type: string
+        port:
+          type: integer
+          format: int64
+        weight:
+          type: integer
+          format: int64
+    LBSerializer:
+      required:
+      - create_time
+      - desc
+      - id
+      - listeners
+      - name
+      - pools
+      - private_net
+      - status
+      - user
+      type: object
+      properties:
+        create_time:
+          type: string
+          format: date-time
+        desc:
+          type: string
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        private_net:
+          $ref: '#/components/schemas/NetworkFieldSerializer'
+        status:
+          type: string
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+        listeners:
+          type: array
+          items:
+            $ref: '#/components/schemas/ListenerSerializer'
+        pools:
+          type: array
+          items:
+            $ref: '#/components/schemas/PoolSerializer'
+    PoolSerializer:
+      required:
+      - id
+      - method
+      - name
+      - protocol
+      - status
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        status:
+          type: string
+        protocol:
+          type: string
+        method:
+          type: string
+    ListenerSerializer:
+      required:
+      - default_tls_container_ref
+      - name
+      - pool
+      - protocol
+      - protocol_port
+      - sni_container_refs
+      - status
+      type: object
+      properties:
+        name:
+          type: string
+        status:
+          type: string
+        protocol:
+          type: string
+        protocol_port:
+          type: integer
+          format: int64
+        pool:
+          type: integer
+          format: int64
+        sni_container_refs:
+          type: array
+          items:
+            type: integer
+            format: int64
+        default_tls_container_ref:
+          type: integer
+          format: int64
+    NetworkFieldSerializer:
+      required:
+      - id
+      - name
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+    LBDetailSerializer:
+      allOf:
+      - $ref: '#/components/schemas/LBSerializer'
+      - type: object
+        properties:
+          pools:
+            type: array
+            items:
+              $ref: '#/components/schemas/PoolDetailSerializer'
+          status_reason:
+            type: string
+          vip:
+            type: string
+          waf:
+            $ref: '#/components/schemas/ServerFieldSerializer'
+          total_connections:
+            type: integer
+            format: int64
+          active_connections:
+            type: integer
+            format: int64
+    LBDetailReportSerializer:
+      required:
+      - bytes_read
+      - time
+      type: object
+      properties:
+        bytes_read:
+          type: integer
+        time:
+          type: string
+          format: date-time
+    LBReportSerializer:
+      required:
+      - begin_time
+      - end_time
+      - projects
+      type: object
+      properties:
+        begin_time:
+          type: string
+          format: date-time
+        end_time:
+          type: string
+          format: date-time
+        projects:
+          type: array
+          items:
+            $ref: '#/components/schemas/LBReportProjectObject'
+    LBReportProjectObject:
+      required:
+      - detail
+      - name
+      - summery
+      type: object
+      properties:
+        name:
+          type: string
+        summery:
+          type: object
+          properties:
+            total_lb_num:
+              type: integer
+              format: int64
+        detail:
+          type: object
+          properties:
+            LB:
+              type: array
+              items:
+                $ref: '#/components/schemas/ReportDetailObject'
+    PoolDetailSerializer:
+      allOf:
+      - $ref: '#/components/schemas/PoolSerializer'
+      - type: object
+        properties:
+          monitor:
+            $ref: '#/components/schemas/LBHealthMonitorSerializer'
+          members:
+            $ref: '#/components/schemas/PoolMemberSerializer'
+    LBHealthMonitorSerializer:
+      type: object
+      properties:
+        delay:
+          type: integer
+          format: int64
+        max_retries:
+          type: integer
+          format: int64
+        timeout:
+          type: integer
+          format: int64
+        monitor_type:
+          type: string
+        expected_codes:
+          type: string
+        http_method:
+          type: string
+        url_path:
+          type: string
+    PoolMemberSerializer:
+      type: object
+      properties:
+        ip:
+          type: string
+        port:
+          type: integer
+          format: int64
+        weight:
+          type: integer
+          format: int64
+        status:
+          type: string
+    SecretSerializer:
+      required:
+      - create_time
+      - desc
+      - expire_time
+      - id
+      - name
+      - project
+      - status
+      - user
+      type: object
+      properties:
+        create_time:
+          type: string
+          format: date-time
+        desc:
+          type: string
+        expire_time:
+          type: string
+          format: date-time
+        id:
+          type: string
+        name:
+          type: string
+        project:
+          $ref: '#/components/schemas/ProjectFieldSerializer'
+        status:
+          type: string
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+    GroupAssetsSerializer:
+      required:
+      - begin_time
+      - end_time
+      - projects
+      type: object
+      properties:
+        begin_time:
+          type: string
+          format: date-time
+        end_time:
+          type: string
+          format: date-time
+        projects:
+          type: array
+          items:
+            $ref: '#/components/schemas/AssetsProjectObject'
+    AssetsProjectObject:
+      required:
+      - detail
+      - name
+      - summary
+      type: object
+      properties:
+        name:
+          type: string
+        detail:
+          $ref: '#/components/schemas/AssetsDetailObject'
+        summary:
+          type: object
+          properties:
+            VM:
+              type: array
+              items:
+                $ref: '#/components/schemas/AssetsSummaryObject'
+    AssetsDetailObject:
+      type: object
+      properties:
+        HOST:
+          type: array
+          items:
+            $ref: '#/components/schemas/AssetsHostObject'
+        VM:
+          type: array
+          items:
+            $ref: '#/components/schemas/AssetsVMObject'
+    AssetsSummaryObject:
+      required:
+      - total_cpu
+      - total_gpu
+      - total_gpu_hour
+      - total_memory
+      type: object
+      properties:
+        total_cpu:
+          type: integer
+          format: int64
+        total_memory:
+          type: integer
+          format: int64
+        total_disk:
+          type: integer
+          format: int64
+        total_nic:
+          type: integer
+          format: int64
+        total_gpu:
+          type: integer
+          format: int64
+        total_gpu_hour:
+          type: number
+          format: float
+    AssetsHostObject:
+      type: object
+      properties:
+        interval:
+          type: array
+          items:
+            type: array
+            items:
+              type: string
+        total_dedicate_hours:
+          type: number
+          format: float
+        az_name:
+          type: string
+    AssetsVMObject:
+      required:
+      - cpu
+      - disk
+      - end_time
+      - gpu
+      - gpu_hour
+      - memory
+      - nic
+      - server_id
+      - server_name
+      - site_id
+      - solution_id
+      - start_time
+      - user
+      type: object
+      properties:
+        server_id:
+          type: integer
+          format: int64
+        server_name:
+          type: string
+        site_id:
+          type: integer
+          format: int64
+        site_name:
+          type: string
+        solution_id:
+          type: integer
+          format: int64
+        cpu:
+          type: integer
+          format: int64
+        memory:
+          type: integer
+          format: int64
+        disk:
+          type: integer
+          format: int64
+        nic:
+          type: integer
+          format: int64
+        gpu:
+          type: integer
+          format: int64
+        gpu_hour:
+          type: number
+          format: float
+        start_time:
+          type: string
+          format: date-time
+        end_time:
+          type: string
+          format: date-time
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+    ProjectQuotaSerializer:
+      required:
+      - cpu
+      - gpu
+      - memory
+      - project
+      type: object
+      properties:
+        project:
+          $ref: '#/components/schemas/GroupSerializer'
+        gpu:
+          type: integer
+          format: int64
+        cpu:
+          type: integer
+          format: int64
+        memory:
+          type: integer
+          format: int64
+        ipvs_port:
+          type: integer
+          format: int64
+        floatingip:
+          type: integer
+          format: int32
+    GroupBusinessNetworkSerializer:
+      type: object
+      properties:
+        available_ip:
+          type: integer
+          format: int64
+        used_ip:
+          type: integer
+          format: int64
+        business_net:
+          type: string
+    FirewallDetailSerializer:
+      required:
+      - associate_networks
+      - desc
+      - id
+      - name
+      - platform
+      - project
+      - rules
+      - status
+      - status_reason
+      - user
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+        name:
+          type: string
+        project:
+          type: integer
+          format: int64
+        status:
+          type: string
+        status_reason:
+          type: string
+        platform:
+          type: string
+        rules:
+          type: array
+          items:
+            $ref: '#/components/schemas/FirewallDetailRuleObject'
+        associate_networks:
+          type: array
+          items:
+            $ref: '#/components/schemas/FirewallDetailNetworkObject'
+        create_time:
+          type: string
+          format: date-time
+        desc:
+          type: string
+    FirewallDetailRuleObject:
+      required:
+      - id
+      - name
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+    FirewallDetailNetworkObject:
+      required:
+      - id
+      - name
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+    FirewallRuleSerializer:
+      required:
+      - action
+      - destination_ip_address
+      - destination_port
+      - id
+      - ip_version
+      - name
+      - platform
+      - project
+      - protocol
+      - source_ip_address
+      - source_port
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        ip_version:
+          type: integer
+          format: int64
+        name:
+          type: string
+        project:
+          type: integer
+          format: int64
+        platform:
+          type: string
+        protocol:
+          type: string
+        action:
+          type: string
+        destination_ip_address:
+          type: string
+        destination_port:
+          type: string
+        source_ip_address:
+          type: string
+        source_port:
+          type: string
+    FirewallRuleDetailSerializer:
+      required:
+      - action
+      - create_time
+      - destination_ip_address
+      - destination_port
+      - id
+      - ip_version
+      - name
+      - platform
+      - project
+      - protocol
+      - source_ip_address
+      - source_port
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        ip_version:
+          type: integer
+          format: int64
+        name:
+          type: string
+        project:
+          type: integer
+          format: int64
+        platform:
+          type: string
+        protocol:
+          type: string
+        action:
+          type: string
+        destination_ip_address:
+          type: string
+        destination_port:
+          type: string
+        source_ip_address:
+          type: string
+        source_port:
+          type: string
+        create_time:
+          type: string
+          format: date-time
+    UserQuotaSerializer:
+      required:
+      - cpu
+      - gpu
+      - memory
+      - user
+      type: object
+      properties:
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+        gpu:
+          type: integer
+          format: int64
+        cpu:
+          type: integer
+          format: int64
+        memory:
+          type: integer
+          format: int64
+        ipvs_port:
+          type: integer
+          format: int64
+        floatingip:
+          type: integer
+          format: int32
+    AZSerializer:
+      required:
+      - create_time
+      - host_num
+      - id
+      - is_default
+      - is_preemptive
+      - is_public
+      - name
+      - owner
+      - platform
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        is_public:
+          type: boolean
+        is_default:
+          type: boolean
+        platform:
+          type: string
+        create_time:
+          type: string
+          format: date-time
+        host_num:
+          type: integer
+          format: int64
+        owner:
+          type: integer
+          format: int64
+        is_preemptive:
+          type: boolean
+    AZDetailSerializer:
+      required:
+      - create_time
+      - desc
+      - hosts
+      - id
+      - is_default
+      - is_preemptive
+      - is_public
+      - name
+      - owner
+      - platform
+      - projects
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        desc:
+          type: string
+        is_public:
+          type: boolean
+        is_default:
+          type: boolean
+        projects:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProjectFieldSerializer'
+        hosts:
+          type: array
+          items:
+            $ref: '#/components/schemas/AZHostSerializer'
+        create_time:
+          type: string
+          format: date-time
+        platform:
+          type: string
+        owner:
+          type: integer
+          format: int64
+        is_preemptive:
+          type: boolean
+    AZHostSerializer:
+      type: object
+      properties:
+        hostname:
+          type: string
+        host_ip:
+          type: string
+    AutoScalingPolicySerializer:
+      required:
+      - id
+      - meter_name
+      - name
+      - platform
+      - project
+      - scale_max_size
+      - scaledown_threshold
+      - scaleup_threshold
+      - user
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        project:
+          type: integer
+          format: int64
+        description:
+          type: string
+        meter_name:
+          type: string
+          enum:
+          - cpu_util
+          - memory.usage
+          - disk.read.bytes.rate
+          - disk.write.bytes.rate
+          - network.incoming.bytes.rate
+          - network.outgoing.bytes.rate
+        scaleup_threshold:
+          type: integer
+          format: int64
+        scaledown_threshold:
+          type: integer
+          format: int64
+        scale_max_size:
+          type: integer
+          format: int64
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+        platform:
+          type: string
+  parameters:
+    ProjectInPathParam:
+      name: project_id
+      in: path
+      description: Project ID
+      required: true
+      schema:
+        type: integer
+    ProjectInQueryParam:
+      name: project
+      in: query
+      description: Project ID is required to request
+      required: true
+      schema:
+        type: integer
+    ServerInQueryParam:
+      name: server
+      in: query
+      description: server ID，choose at least one with loadbalancer ID
+      required: false
+      schema:
+        type: integer
+    LoadBalancerInQueryParam:
+      name: loadbalancer
+      in: query
+      description: loadbalancer ID，choose at least one with server ID
+      required: false
+      schema:
+        type: integer
+    SolutionsIDParam:
+      name: solutions_id
+      in: path
+      description: Solution ID
+      required: true
+      schema:
+        type: integer
+    IPIDParam:
+      name: ip_id
+      in: path
+      description: IP ID
+      required: true
+      schema:
+        type: integer
+    SecurityGroupIDParam:
+      name: security_group_id
+      in: path
+      description: Security Group ID
+      required: true
+      schema:
+        type: string
+    RuleIDParam:
+      name: rule_id
+      in: path
+      description: rule ID
+      required: true
+      schema:
+        type: string
+    FlavorIDParam:
+      name: flavor_id
+      in: path
+      description: flavor ID
+      required: true
+      schema:
+        type: integer
+    ImageIDParam:
+      name: image_id
+      in: path
+      description: image ID
+      required: true
+      schema:
+        type: integer
+    VolumeIDParam:
+      name: volume_id
+      in: path
+      description: Volume ID
+      required: true
+      schema:
+        type: integer
+    SnapshotIDParam:
+      name: snapshot_id
+      in: path
+      description: Snapshot ID
+      required: true
+      schema:
+        type: integer
+    ServerIDParam:
+      name: server_id
+      in: path
+      description: Server ID
+      required: true
+      schema:
+        type: integer
+    SiteIDParam:
+      name: site_id
+      in: path
+      description: Site ID
+      required: true
+      schema:
+        type: integer
+    NetworkIDParam:
+      name: network_id
+      in: path
+      description: Network ID
+      required: true
+      schema:
+        type: integer
+    LoadBalancerIDParam:
+      name: loadbalancer_id
+      in: path
+      description: load balancer ID
+      required: true
+      schema:
+        type: integer
+    SecretIDParam:
+      name: secret_id
+      in: path
+      description: secret ID
+      required: true
+      schema:
+        type: integer
+    FirewallIDParam:
+      name: firewall_id
+      in: path
+      description: firewall ID
+      required: true
+      schema:
+        type: integer
+    FirewallRuleIDParam:
+      name: firewall_rule_id
+      in: path
+      description: firewall rule ID
+      required: true
+      schema:
+        type: integer
+    AZIDParam:
+      name: az_id
+      in: path
+      description: availability zones ID
+      required: true
+      schema:
+        type: integer
+    AutoScalingPolicyID:
+      name: auto_scaling_policy_id
+      in: path
+      description: Auto scaling policy ID
+      required: true
+      schema:
+        type: integer
+        format: int32
+    ApiHostParam:
+      name: x-api-host
+      in: header
+      description: Authentication Required Parameters
+      required: true
+      schema:
+        type: string
+        default: openstack-taichung-default-2
+      # examples:
+      #   production:
+      #     summary: production
+      #     value: openstack-taichung-default-2
+      #   staging:
+      #     summary: staging
+      #     value: openstack-taichung-default
+  responses:
+    200NotRoute:
+      description: no route and no API found with those values
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+            example: 
+              message: no route and no API found with those values
+    401Unauthorized:
+      description: request is unauthorized
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+            example: 
+              message: Your request is unauthorized
+    403FORBIDDEN:
+      description: do not have permission to perform this action
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+            example: 
+              message: "40301: You do not have permission to perform this action."
+    40401NOTFOUND:
+      description: Project not found
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+            example: 
+              message: "40401: Project {project_id} not found"
+    50301SERVICEUNAVAILABLE:
+      description: The project does not exist
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+            example: 
+              message: "50301: The project {project_id} does not exist"
+    40000BadRequest:
+      description: Non-system admin
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/ServerDiskReadUtilSerializer'
+    500InternalServerError:
+      description: Internal Server Error
+      content: {}

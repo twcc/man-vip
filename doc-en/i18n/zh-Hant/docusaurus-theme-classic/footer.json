@@ -1,0 +1,34 @@
+{
+  "link.title.Docs": {
+    "message": "文件",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Members": {
+    "message": "用戶指南",
+    "description": "The title of the footer links column with title=Members in the footer"
+  },
+  "link.title.More": {
+    "message": "更多",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.Overview": {
+    "message": "簡介",
+    "description": "The label of footer link with label=Introduction linking to /docs/introduction"
+  },
+  "link.item.label.Academic Users": {
+    "message": "學員用戶",
+    "description": "The label of footer link with label=Academic Users linking to https://iservice.nchc.org.tw"
+  },
+  "link.item.label.Enterprise Users": {
+    "message": "企業用戶",
+    "description": "The label of footer link with label=Enterprise Users linking to https://tws.twcc.ai"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/twcc/man-vip"
+  },
+  "copyright": {
+    "message": "Copyright © 2022 TWCC, Inc. Built with TWS.",
+    "description": "The footer copyright"
+  }
+}

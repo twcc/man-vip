@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "",
+    "description": "The title in the navbar"
+  },
+  "item.label.Docs": {
+    "message": "文件",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.API": {
+    "message": "API",
+    "description": "Navbar item with label API"
+  },
+  "item.label.FAQ": {
+    "message": "常見問題集",
+    "description": "Navbar item with label API"
+  },
+  "item.label.Pricing": {
+    "message": "價目表",
+    "description": "商品價格頁面"
+  },
+  "item.label.Release Notes": {
+    "message": "版本發布通知",
+    "description": "更新紀錄"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

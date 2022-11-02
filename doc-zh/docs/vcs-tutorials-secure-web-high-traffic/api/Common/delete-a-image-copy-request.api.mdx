@@ -1,0 +1,33 @@
+---
+id: delete-a-image-copy-request
+title: "Delete a image copy request"
+description: "Delete a image copy request"
+sidebar_label: Delete a image copy request
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["image requests"],"description":"Delete a image copy request","parameters":[{"name":"image_request_id","in":"path","description":"image request ID","required":true,"schema":{"type":"integer","format":"int32"}},{"name":"x-api-host","in":"header","description":"Authentication Required Parameters","required":true,"schema":{"type":"string","default":"goc"}}],"responses":{"204":{"description":"No Content","content":{}}},"method":"delete","path":"/image_requests/{image_request_id}/","servers":[{"url":"https://{apigateway}/api/v3/","variables":{"apigateway":{"default":"apigateway.twcc.ai"}}}],"security":[{"ApiKeyAuth":[]}],"securitySchemes":{"ApiKeyAuth":{"type":"apiKey","in":"header","name":"x-api-key"}},"info":{"version":"1.2.0","title":"Common API","description":"This is Common API.\n"},"postman":{"name":"Delete a image copy request","description":{"content":"Delete a image copy request","type":"text/plain"},"url":{"path":["image_requests",":image_request_id",""],"host":["{{baseUrl}}"],"query":[],"variable":[{"disabled":false,"description":{"content":"(Required) image request ID","type":"text/plain"},"type":"any","value":"","key":"image_request_id"}]},"header":[{"disabled":false,"description":{"content":"(Required) Authentication Required Parameters","type":"text/plain"},"key":"x-api-host","value":""}],"method":"DELETE"}}
+sidebar_class_name: "delete api-method"
+info_path: docs/api/Common/common-api
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem"
+import SchemaTabs from "@theme/SchemaTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import TabItem from "@theme/TabItem";
+
+## Delete a image copy request
+
+
+
+Delete a image copy request
+
+<details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Path Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"image_request_id","in":"path","description":"image request ID","required":true,"schema":{"type":"integer","format":"int32"}}}></ParamsItem></ul></div></details><details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Header Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"x-api-host","in":"header","description":"Authentication Required Parameters","required":true,"schema":{"type":"string","default":"goc"}}}></ParamsItem></ul></div></details><div><ApiTabs><TabItem label={"204"} value={"204"}><div>
+
+No Content
+
+</div><div></div></TabItem></ApiTabs></div>
+      

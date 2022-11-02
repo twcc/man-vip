@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: clean old NGINX config
+      command: rm -rf /etc/nginx
+    - name: copy config for NGINX
+      copy:
+        src: nginx
+        dest: /etc
+        mode: '0644'
+    - name: test current config 
+      shell: nginx -t
+    - name: start nginx
+      systemd:
+        name: nginx
+        state: restarted
+    
+

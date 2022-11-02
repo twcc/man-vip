@@ -1,0 +1,281 @@
+openapi: 3.0.0
+servers:
+  - url: https://{apigateway}/api/v3/{ApiHost}/
+    variables:
+      apigateway:
+        default: apigateway.twcc.ai
+      ApiHost:
+        default: ceph-taichung-default
+info:
+  version: 1.0.0
+  title: Ceph API
+  description: |
+    This is Ceph API.
+security:
+  - ApiKeyAuth: []
+tags:
+  - name: project
+paths:
+  /projects/:
+    get:
+      tags:
+        - project
+      summary: List projects
+      description: List projects
+      parameters:
+        - in: query
+          name: name
+          description: The name of the project
+          required: false
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GroupSerializer'
+  /projects/{project_id}/:
+    get:
+      tags:
+        - project
+      summary: Get details of a project
+      description: Get details of a project
+      parameters:
+        - $ref: '#/components/parameters/ProjectInPathParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GroupDetailSerializer'
+  /projects/{project_id}/key/:
+    get:
+      tags:
+      - project
+      summary: Get ceph subuser's key from a project
+      description: Get ceph subuser's key from a project
+      parameters:
+        - $ref: '#/components/parameters/ProjectInPathParam'
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProjectKeySerializer'
+    put:
+        tags:
+        - project
+        summary: Renew ceph subuser's public key from a project
+        description: Renew ceph subuser's public key from a project
+        parameters:
+          - $ref: '#/components/parameters/ProjectInPathParam'
+          - $ref: '#/components/parameters/ApiHostParam'
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    example: default (Name for private s3, not given for public)
+                  all:
+                    type: boolean
+                    default: false
+        responses:
+          200:
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/ProjectKeySerializer'
+    post:
+        tags:
+        - project
+        summary: Create ceph subuser's private key from a project
+        description: Create ceph subuser's private key from a project
+        parameters:
+          - $ref: '#/components/parameters/ProjectInPathParam'
+          - $ref: '#/components/parameters/ApiHostParam'
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    example: default (Private S3 name)
+        responses:
+          200:
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/ProjectKeySerializer'
+    delete:
+        tags:
+        - project
+        summary: Delete ceph subuser's private key from a project
+        description: Delete ceph subuser's private key from a project
+        parameters:
+          - $ref: '#/components/parameters/ProjectInPathParam'
+          - $ref: '#/components/parameters/ApiHostParam'
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    example: default (private s3 name)
+        responses:
+          200:
+            description: OK
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/ProjectKeySerializer'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-api-key
+  schemas:
+    GroupSerializer:
+      type: object
+      properties:
+        matchLabels:
+          type: array
+          items:
+            type: string
+        id:
+          format: int64
+          type: integer
+        name:
+          type: string
+        platform:
+          type: string
+        transparent_mode:
+          type: boolean
+      required:
+        - matchLabels
+        - id
+        - name
+        - platform
+        - transparent_mode
+    GroupDetailSerializer:
+      type: object
+      properties:
+        desc:
+          type: string
+        id:
+          format: int64
+          type: integer
+        matchLabels:
+          type: array
+          items:
+            type: string
+            example: twsc
+        name:
+          type: string
+          example: ENT123456
+        status:
+          type: string
+          example: Ready
+        status_reason:
+          type: string
+        tm_uuid:
+          type: string
+        transparent_mode:
+          type: boolean
+          example: false
+        uuid:
+          type: string
+          format: uuid
+      required:
+        - desc
+        - id
+        - matchLabels
+        - name
+        - status
+        - status_reason
+        - tm_uuid
+        - transparent_mode
+        - uuid
+    KeySerializer:
+      type: object
+      properties:
+        name:
+          type: string
+        secret_key:
+          type: string
+        access_key:
+          type: string
+    ProjectKeySerializer:
+      type: object
+      properties:
+        public:
+          $ref: '#/components/schemas/KeySerializer'
+        private:
+          type: array
+          items:
+            $ref: '#/components/schemas/KeySerializer'
+  parameters:
+    ProjectInQueryParam:
+      name: project
+      in: query
+      description: Harbor project ID
+      required: true
+      schema:
+        type: integer
+    ProjectInPathParam:
+      name: project_id
+      in: path
+      description: Project ID
+      required: true
+      schema:
+        type: integer
+    ImageNameParam:
+      name: image_name
+      in: path
+      description: Image name. You can find it in Image List API
+      required: true
+      schema:
+        type: string
+    TagNameParam:
+      name: tag_name
+      in: path
+      description: Tag name to be deleted
+      required: true
+      schema:
+        type: string
+    ApiHostParam:
+      name: x-api-host
+      in: header
+      description: Authentication Required Parameters
+      required: true
+      schema:
+        type: string
+        default: ceph-taichung-default
+      # examples:
+      #   production:
+      #     summary: production
+      #     value: ceph-taichung-default
+      #   staging:
+      #     summary: staging
+      #     value: ceph-taichung-default
