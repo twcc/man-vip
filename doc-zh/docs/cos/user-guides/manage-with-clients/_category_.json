@@ -1,0 +1,10 @@
+{
+  "label": "使用第三方軟體管理檔案",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "5 minutes to learn the most important Docusaurus concepts.",
+    "title": "使用其他軟體管理檔案",
+    "slug": "/cos/manage/other"
+  }
+}

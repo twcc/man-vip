@@ -1,0 +1,33 @@
+---
+id: get-cpu-utilization-of-a-pod
+title: "Get CPU utilization of a pod"
+description: "Get CPU utilization of a pod"
+sidebar_label: Get CPU utilization of a pod
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["site"],"description":"Get CPU utilization of a pod","parameters":[{"name":"site_id","in":"path","description":"Site ID","required":true,"schema":{"type":"integer"}},{"name":"pod_name","in":"query","description":"Pod name","required":true,"schema":{"type":"string"}},{"name":"begin_time","in":"query","description":"Default is two hours before end time.","schema":{"type":"string"}},{"name":"end_time","in":"query","description":"Get the util before the end time. Default is now.","schema":{"type":"string"}},{"name":"x-api-host","in":"header","description":"Authentication Required Parameters","required":true,"schema":{"type":"string","default":"k8s-taichung-default"}}],"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"array","items":{"required":["cpu_util","timestamp","unit"],"type":"object","properties":{"cpu_util":{"type":"string","example":"66.2"},"timestamp":{"type":"string","format":"date-time"},"unit":{"type":"string"}}}}}}}},"method":"get","path":"/sites/{site_id}/container/cpu/","servers":[{"url":"https://{apigateway}/api/v3/{ApiHost}/","variables":{"apigateway":{"default":"apigateway.twcc.ai"},"ApiHost":{"default":"k8s-taichung-default"}}}],"security":[{"ApiKeyAuth":[]}],"securitySchemes":{"ApiKeyAuth":{"type":"apiKey","in":"header","name":"x-api-key"}},"info":{"version":"1.5.1","title":"CCS API","description":"This is CCS API.\n"},"postman":{"name":"Get CPU utilization of a pod","description":{"content":"Get CPU utilization of a pod","type":"text/plain"},"url":{"path":["sites",":site_id","container","cpu",""],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) Pod name","type":"text/plain"},"key":"pod_name","value":""},{"disabled":false,"description":{"content":"Default is two hours before end time.","type":"text/plain"},"key":"begin_time","value":""},{"disabled":false,"description":{"content":"Get the util before the end time. Default is now.","type":"text/plain"},"key":"end_time","value":""}],"variable":[{"disabled":false,"description":{"content":"(Required) Site ID","type":"text/plain"},"type":"any","value":"","key":"site_id"}]},"header":[{"disabled":false,"description":{"content":"(Required) Authentication Required Parameters","type":"text/plain"},"key":"x-api-host","value":""},{"key":"Accept","value":"application/json"}],"method":"GET"}}
+sidebar_class_name: "get api-method"
+info_path: docs/api/CCS/ccs-api
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem"
+import SchemaTabs from "@theme/SchemaTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import TabItem from "@theme/TabItem";
+
+## Get CPU utilization of a pod
+
+
+
+Get CPU utilization of a pod
+
+<details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Path Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"site_id","in":"path","description":"Site ID","required":true,"schema":{"type":"integer"}}}></ParamsItem></ul></div></details><details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Query Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"pod_name","in":"query","description":"Pod name","required":true,"schema":{"type":"string"}}}></ParamsItem><ParamsItem className={"paramsItem"} param={{"name":"begin_time","in":"query","description":"Default is two hours before end time.","schema":{"type":"string"}}}></ParamsItem><ParamsItem className={"paramsItem"} param={{"name":"end_time","in":"query","description":"Get the util before the end time. Default is now.","schema":{"type":"string"}}}></ParamsItem></ul></div></details><details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Header Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"x-api-host","in":"header","description":"Authentication Required Parameters","required":true,"schema":{"type":"string","default":"k8s-taichung-default"}}}></ParamsItem></ul></div></details><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
+
+OK
+
+</div><div><MimeTabs schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs groupId={"schema-tabs"}><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong><span style={{"opacity":"0.6"}}> array</span></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"cpu_util"} required={false} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"timestamp"} required={false} schemaDescription={undefined} schemaName={"date-time"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"unit"} required={false} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"[\n  {\n    \"cpu_util\": \"66.2\",\n    \"timestamp\": \"2022-10-25\",\n    \"unit\": \"string\"\n  }\n]"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div>
+      

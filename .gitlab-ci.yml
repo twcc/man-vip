@@ -1,13 +1,20 @@
 stages:
-  - build
   - deploy
   - test
+  - sync
+
+cache: &global_cache
+  key:
+    files:
+      - package.json
+  paths:
+    - node_modules/
 
 .ssh_config_and_build: &standard_operation
-  image: node:alpine3.16
+  image: node:18-alpine3.16
   artifacts:
     paths:
-      - build/*
+      - ./*/build/*
     expire_in: 1 week
   before_script:
     - apk add --no-cache rsync openssh
@@ -15,28 +22,25 @@ stages:
     - echo "$MAN_SERVER_SSH_KEY" >> ~/.ssh/id_dsa
     - chmod 600 ~/.ssh/id_dsa
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-
-test-build:
-  <<: *standard_operation
-  stage: test
-  script:
-    - npm install --legacy-peer-deps
-    - npm run staging
-  only:
-    - merge_requests
+  cache:
+    <<: *global_cache
 
 sync-openapi:
-  <<: *standard_operation
-  stage: test
+  image: node:18-alpine3.16
+  stage: sync
   script:
     - apk add --no-cache git
+    - git remote add gitSean https://${SEAN_USERNAME}:${SEAN_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git
     - git clone https://github.com/twcc/openapidoc.git
-    - git clone https://${SEAN_USERNAME}:${SEAN_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git
-    - cd manual
-    - git checkout docusaurus-dev
     - export TZ=Asia/Taipei
     - export VERSION=`date +"openapi-sync-%Y%m%d_%H%M"`
     - git checkout -b $VERSION
+    - cd doc-zh/
+    - cp -r ../openapidoc/Main/yaml/. ./openapi
+    - npm install --legacy-peer-deps
+    - npm run clear-api
+    - npm run gen-api
+    - cd ../doc-en/
     - cp -r ../openapidoc/Main/yaml/. ./openapi
     - npm install --legacy-peer-deps
     - npm run clear-api
@@ -45,16 +49,43 @@ sync-openapi:
     - git config --global user.name "sean.chang@twsc.io"
     - git add .
     - git commit -m $VERSION
-    - git push -u origin $VERSION
+    - git push -u gitSean $VERSION
+  cache:
+    <<: *global_cache
   when: manual
+
+test-build:
+  <<: *standard_operation
+  stage: test
+  script:
+    - cd doc-zh
+    - npm install --legacy-peer-deps
+    - npm run staging
+  cache:
+    <<: *global_cache
+  only:
+    - merge_requests
 
 deploy-staging:
   <<: *standard_operation
-  stage: build
+  stage: deploy
   script:
+    - cd doc-zh
     - npm install --legacy-peer-deps
     - npm run staging
-    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/staging/
+    - rsync -ravz --exclude en --delete build/ ubuntu@man.twcc.vip:/var/www/staging/
+  only:
+    - merge_requests
+  when: manual
+
+deploy-staging-en:
+  <<: *standard_operation
+  stage: deploy
+  script:
+    - cd doc-en
+    - npm install --legacy-peer-deps
+    - npm run staging -- --locale en
+    - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/staging/en/
   only:
     - merge_requests
   when: manual
@@ -63,9 +94,22 @@ deploy-preview:
   <<: *standard_operation
   stage: deploy
   script:
+    - cd doc-zh
     - npm install --legacy-peer-deps
     - npm run preview
-    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/preview/
+    - rsync -ravz --exclude en --delete build/ ubuntu@man.twcc.vip:/var/www/preview/
+  only:
+    - docusaurus-dev
+  when: manual
+
+deploy-preview-en:
+  <<: *standard_operation
+  stage: deploy
+  script:
+    - cd doc-en
+    - npm install --legacy-peer-deps
+    - npm run preview -- --locale en
+    - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/preview/en/
   only:
     - docusaurus-dev
   when: manual
@@ -74,17 +118,32 @@ deploy-production:
   <<: *standard_operation
   stage: deploy
   script:
+    - cd doc-zh
     - npm install --legacy-peer-deps
     - npm run production
     - ls -alh build
-    - rsync -ravz --delete build/ ubuntu@man.twcc.vip:/var/www/production/
+    - rsync -ravz --exclude en --delete build/ ubuntu@man.twcc.vip:/var/www/production/
   only:
     - docusaurus-master
   when: manual
 
+deploy-production-en:
+  <<: *standard_operation
+  stage: deploy
+  script:
+    - cd doc-en
+    - npm install --legacy-peer-deps
+    - npm run production -- --locale en
+    - ls -alh build
+    - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/production/en
+  only:
+    - docusaurus-master
+  when: manual
+
+
 send-to-GitHub:
-  image: alpine
-  stage: test
+  image: alpine:3.16
+  stage: sync
   script:
     - apk update && apk add github-cli && apk add git
     - export GH_TOKEN=$GITHUB_APIKEY
@@ -104,10 +163,10 @@ send-to-GitHub:
 
 sync-from-GitHub:
   image: python:3.9
-  stage: build
+  stage: sync
   script:
     - git remote add github https://${GITHUB_USRERNAME}:${GITHUB_APIKEY}@github.com/twcc/man-vip
-    - git remote add gitAug http://${AUG_USERNAME}:${AUG_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git
+    - git remote add gitAug https://${AUG_USERNAME}:${AUG_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git
     - git fetch --unshallow github
     - git checkout github/tws-sync
     - export TZ=Asia/Taipei

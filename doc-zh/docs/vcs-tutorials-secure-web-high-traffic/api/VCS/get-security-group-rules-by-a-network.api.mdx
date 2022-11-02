@@ -1,0 +1,33 @@
+---
+id: get-security-group-rules-by-a-network
+title: "Get security group rules by a network"
+description: "Get security group rules by a network"
+sidebar_label: Get security group rules by a network
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["network"],"parameters":[{"name":"network_id","in":"path","description":"Network ID","required":true,"schema":{"type":"integer"}},{"name":"x-api-host","in":"header","description":"Authentication Required Parameters","required":true,"schema":{"type":"string","default":"openstack-taichung-default-2"}}],"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","example":"{\n  \"192.168.110.6\": [\n    {\n      \"id\": \"69623c7b-8fdf-402c-8fed-3c777ced2132\",\n      \"security_group\": \"48f8a650-242a-494d-9401-051b1b82b128\",\n      \"direction\": \"ingress\",\n      \"ethertype\": \"IPv4\",\n      \"port_range_min\": 22,\n      \"port_range_max\": 22,\n      \"protocol\": \"tcp\",\n      \"remote_ip_prefix\": \"0.0.0.0/0\"\n    }\n  ],\n  \"192.168.110.23\": [\n    {\n      \"id\": \"5c5a2f0c-5584-46f0-9af4-3d5230604105\",\n      \"security_group\": \"8703c262-16b7-4d67-825b-477d5f128e48\",\n      \"direction\": \"egress\",\n      \"ethertype\": \"IPv6\",\n      \"port_range_min\": null,\n      \"port_range_max\": null,\n      \"protocol\": null,\n      \"remote_ip_prefix\": \"::/0\"\n    }\n  ]\n}"}}}}},"description":"Get security group rules by a network","method":"get","path":"/networks/{network_id}/security_group_rules/","servers":[{"url":"https://{apigateway}/api/v3/{ApiHost}/","variables":{"apigateway":{"default":"apigateway.twcc.ai"},"ApiHost":{"default":"openstack-taichung-default-2"}}}],"security":[{"ApiKeyAuth":[]}],"securitySchemes":{"ApiKeyAuth":{"type":"apiKey","in":"header","name":"x-api-key"}},"info":{"version":"1.5.0","title":"VCS API","description":"This is VCS API.\n"},"postman":{"name":"Get security group rules by a network","description":{"type":"text/plain"},"url":{"path":["networks",":network_id","security_group_rules",""],"host":["{{baseUrl}}"],"query":[],"variable":[{"disabled":false,"description":{"content":"(Required) Network ID","type":"text/plain"},"type":"any","value":"","key":"network_id"}]},"header":[{"disabled":false,"description":{"content":"(Required) Authentication Required Parameters","type":"text/plain"},"key":"x-api-host","value":""},{"key":"Accept","value":"application/json"}],"method":"GET"}}
+sidebar_class_name: "get api-method"
+info_path: docs/api/VCS/vcs-api
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem"
+import SchemaTabs from "@theme/SchemaTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import TabItem from "@theme/TabItem";
+
+## Get security group rules by a network
+
+
+
+Get security group rules by a network
+
+<details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Path Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"network_id","in":"path","description":"Network ID","required":true,"schema":{"type":"integer"}}}></ParamsItem></ul></div></details><details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Header Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"x-api-host","in":"header","description":"Authentication Required Parameters","required":true,"schema":{"type":"string","default":"openstack-taichung-default-2"}}}></ParamsItem></ul></div></details><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
+
+OK
+
+</div><div><MimeTabs schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs groupId={"schema-tabs"}><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><li><div><strong>object</strong></div></li></ul></details></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div>
+      

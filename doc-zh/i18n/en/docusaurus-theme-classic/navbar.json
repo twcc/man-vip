@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "",
+    "description": "The title in the navbar"
+  },
+  "item.label.Docs": {
+    "message": "Docs",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.API": {
+    "message": "API",
+    "description": "Navbar item with label API"
+  },
+  "item.label.FAQ": {
+    "message": "FAQ",
+    "description": "Q&A"
+  },
+  "item.label.Pricing": {
+    "message": "Pricing",
+    "description": "Product price"
+  },
+  "item.label.Release Notes": {
+    "message": "Release Notes",
+    "description": "更新紀錄"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}
