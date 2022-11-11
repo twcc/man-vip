@@ -1,0 +1,16 @@
+{
+  "name": "manual",
+  "version": "1.0.0",
+  "description": "The TWCC manual well-prepared for VIPs.\r =======",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.twcc.ai/twcc/manual.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

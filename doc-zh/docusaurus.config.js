@@ -154,6 +154,11 @@ const config = {
         },
         items: [
           {
+            label: "使用指南",
+            position: "left",
+            to: "/docs/docs/cc"
+          },
+          {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             label: "Docs",
