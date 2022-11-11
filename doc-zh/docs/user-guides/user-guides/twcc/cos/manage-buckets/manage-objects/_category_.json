@@ -2,7 +2,7 @@
   "label": "資料夾/檔案",
   "position": 3,
   "link": {
-    "type": "generated-index",
-    "description": "5 minutes to learn the most important Docusaurus concepts."
+    "type": "category",
+    "description": "we test type=category"
   }
 }
