@@ -73,9 +73,10 @@ deploy-staging:
     - cd doc-zh
     - npm install --legacy-peer-deps
     - npm run staging
-    - rsync -ravz --exclude en --delete build/ ubuntu@man.twcc.vip:/var/www/staging/
+    - rsync -ravz --exclude en --delete build/ ubuntu@man.twcc.vip:/var/www/ramdisk/staging/
   only:
     - merge_requests
+    - 427-change-cd-flow-to-ramdisk
   when: manual
 
 deploy-staging-en:
@@ -85,9 +86,10 @@ deploy-staging-en:
     - cd doc-en
     - npm install --legacy-peer-deps
     - npm run staging -- --locale en
-    - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/staging/en/
+    - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/ramdisk/staging/en/
   only:
     - merge_requests
+    - 427-change-cd-flow-to-ramdisk
   when: manual
 
 deploy-preview:
@@ -97,7 +99,7 @@ deploy-preview:
     - cd doc-zh
     - npm install --legacy-peer-deps
     - npm run preview
-    - rsync -ravz --exclude en --delete build/ ubuntu@man.twcc.vip:/var/www/preview/
+    - rsync -ravz --exclude en --delete build/ ubuntu@man.twcc.vip:/var/www/ramdisk/preview/
   only:
     - docusaurus-dev
   when: manual
@@ -109,7 +111,7 @@ deploy-preview-en:
     - cd doc-en
     - npm install --legacy-peer-deps
     - npm run preview -- --locale en
-    - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/preview/en/
+    - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/ramdisk/preview/en/
   only:
     - docusaurus-dev
   when: manual
@@ -122,7 +124,7 @@ deploy-production:
     - npm install --legacy-peer-deps
     - npm run production
     - ls -alh build
-    - rsync -ravz --exclude en --delete build/ ubuntu@man.twcc.vip:/var/www/production/
+    - rsync -ravz --exclude en --delete build/ ubuntu@man.twcc.vip:/var/www/ramdisk/production/
   only:
     - docusaurus-master
   when: manual
@@ -135,7 +137,7 @@ deploy-production-en:
     - npm install --legacy-peer-deps
     - npm run production -- --locale en
     - ls -alh build
-    - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/production/en
+    - rsync -ravz --exclude "zh-Hant" --delete build/ ubuntu@man.twcc.vip:/var/www/ramdisk/production/en
   only:
     - docusaurus-master
   when: manual
