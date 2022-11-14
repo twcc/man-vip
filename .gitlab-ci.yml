@@ -178,3 +178,15 @@ sync-from-GitHub:
   only:
     - merge_requests
   when: manual
+
+sync-to-nchc:
+  image: python:3.9
+  stage: sync
+  script:
+    - cd syncer/
+    - pip install -r requirements.txt
+    - python do-sync.py -tws  /home/fychao/work/manual/doc-zh/
+    - python do-sync.py -tws  /home/fychao/work/manual/doc-en/
+  only:
+    - merge_requests
+  when: manual
