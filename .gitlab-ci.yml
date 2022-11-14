@@ -185,8 +185,8 @@ sync-to-nchc:
   script:
     - cd syncer/
     - pip install -r requirements.txt
-    - python do-sync.py -tws  /home/fychao/work/manual/doc-zh/
-    - python do-sync.py -tws  /home/fychao/work/manual/doc-en/
+    - python do-sync.py -tws  ./doc-zh/
+    - python do-sync.py -tws  ./doc-en/
   only:
     - merge_requests
   when: manual
