@@ -1,12 +1,11 @@
 ---
 sidebar_position: 4
 title: '雲端檔案服務 (CFS)'
-sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-cfs-zh' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-cfs-zh'
-nchc: https://man.twcc.ai/9n6lOherRFqVq6g4bOPhBg
+sync_original_production: 'https://man.twcc.ai/9n6lOherRFqVq6g4bOPhBg'
+sync_original_preview: 'https://man.twcc.ai/9n6lOherRFqVq6g4bOPhBg'
 ---
 
-# TWCC FAQs | 雲端檔案服務 (CFS)
+# TWCC FAQs - 雲端檔案服務 (CFS)
 
 <details>
 
