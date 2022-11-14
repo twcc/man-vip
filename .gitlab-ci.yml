@@ -181,7 +181,7 @@ sync-from-GitHub:
 
 sync-to-nchc:
   image: python:3.9
-  stage: sync
+  stage: deploy
   script:
     - cd syncer/
     - pip install -r requirements.txt
