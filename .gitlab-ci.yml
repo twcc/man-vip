@@ -181,12 +181,12 @@ sync-from-GitHub:
 
 sync-to-nchc:
   image: python:3.9
-  stage: sync
+  stage: deploy
   script:
     - cd syncer/
     - pip install -r requirements.txt
-    - python do-sync.py -tws  /home/fychao/work/manual/doc-zh/
-    - python do-sync.py -tws  /home/fychao/work/manual/doc-en/
+    - python do-sync.py -tws  ../doc-zh/
+    - python do-sync.py -tws  ../doc-en/
   only:
     - merge_requests
   when: manual
