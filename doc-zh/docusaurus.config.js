@@ -131,7 +131,11 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
         },
-      }),
+        gtag: {
+          trackingID: 'G-F5GVR17GX6',
+          anonymizeIP: true,
+        }
+      })
     ],
   ],
 
@@ -153,6 +157,11 @@ const config = {
           src: "img/TWS-Logo.svg",
         },
         items: [
+          {
+            label: "使用指南",
+            position: "left",
+            to: "/docs/docs/cc"
+          },
           {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",

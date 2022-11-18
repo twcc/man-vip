@@ -1,35 +1,35 @@
 openapi: 3.0.3
 servers:
-  - url: https://{apigateway}/api/v3/{ApiHost}/
+  - url: '{apigateway}/api/v3/{ApiHost}/'
     variables:
       apigateway:
-        default: apigateway.twcc.ai
+        default: https://apigateway.twcc.ai
       ApiHost:
         default: openstack-taichung-default-2
 info:
-  version: 1.5.0
+  version: 1.5.2
   title: VCS API
   description: |
     This is VCS API.
 security:
   - ApiKeyAuth: []
 tags:
-  - name: project
+  - name: auto scaling policy
+  - name: availability zone
+  - name: firewall
   - name: flavor
   - name: image
+  - name: ip
   - name: keypair
   - name: load balancer
-  - name: security group
   - name: network
-  - name: ip
-  - name: volume
-  - name: snapshot
-  - name: server
-  - name: site
-  - name: firewall
+  - name: project
   - name: secret
-  - name: availability zone
-  - name: auto scaling policy
+  - name: security group
+  - name: site
+  - name: server
+  - name: snapshot
+  - name: volume
 paths:
   /projects/:
     get:
@@ -1117,6 +1117,42 @@ paths:
       description: List volumes
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
+        - name: attached_host
+          in: query
+          description: Server ID
+          schema:
+            type: integer
+            format: int32
+        - name: name
+          in: query
+          description: Volume Name
+          schema:
+            type: string
+        - name: volume_type
+          in: query
+          description: Volume Type
+          schema:
+            type: string
+        - name: user__username
+          in: query
+          description: Volume's User Name
+          schema:
+            type: string
+        - name: create_time_start
+          in: query
+          description: Create Time Start
+          schema:
+            type: string
+        - name: create_time_end
+          in: query
+          description: Create Time End
+          schema:
+            type: string
+        # - name: page
+        #   in: query
+        #   description: Page Number
+        #   schema:
+        #     type: string
         - $ref: '#/components/parameters/ApiHostParam'
       responses:
         200:
@@ -2226,6 +2262,9 @@ paths:
           application/json:
             schema:
               properties:
+                name:
+                  type: string
+                  description: Firewall rule name
                 protocol:
                   type: string
                   description: Firewall rule IP protocol
@@ -2663,6 +2702,10 @@ components:
           type: string
         ref_img_id:
           type: string
+        size:
+          type: integer
+          format: int64
+          description: The unit is bytes
         server:
           $ref: '#/components/schemas/ServerFieldSerializer'
         user:
@@ -2687,6 +2730,7 @@ components:
         - os
         - os_version
         - server
+        - size
     ImagePostSerializer:
       required:
       - create_time
@@ -2722,6 +2766,7 @@ components:
       - platform
       - server
       - status
+      - size
       type: object
       properties:
         create_time:
@@ -2742,6 +2787,10 @@ components:
           $ref: '#/components/schemas/ServerFieldSerializer'
         desc:
           type: string
+        size:
+          type: integer
+          format: int64
+          description: The unit is bytes
         project:
           type: object
           properties:
@@ -3119,6 +3168,7 @@ components:
           type: string
         status:
           type: string
+          description: may be null
           enum:
             - MIGRATING
             - ASSOCIATING
@@ -3138,6 +3188,7 @@ components:
             - SHELVED_OFFLOADED
             - QUEUEING
             - SPAWNING
+            - null
         fqdn:
           type: string
     ServerNetObject:
@@ -3256,7 +3307,6 @@ components:
           format: int64
         status:
           type: string
-          description: may be null
           enum: 
             - Unshelving
             - Shelving
@@ -3272,7 +3322,6 @@ components:
             - Deleted
             - Initializing
             - Queueing
-            - null
         is_preemptive:
           type: boolean
         user:
@@ -3292,6 +3341,27 @@ components:
                 type: string
               status:
                 type: string
+                description: may be null
+                enum:
+                  - MIGRATING
+                  - ASSOCIATING
+                  - DISASSOCIATING
+                  - SUSPENDED
+                  - REBOOT
+                  - STOPPING
+                  - SHUTOFF
+                  - SHUTOFF
+                  - STARTING
+                  - RESIZE
+                  - VERIFY_RESIZE
+                  - REVERT_RESIZE
+                  - ERROR
+                  - DELETED
+                  - SHELVING
+                  - SHELVED_OFFLOADED
+                  - QUEUEING
+                  - SPAWNING
+                  - null
         termination_protection:
           type: boolean
     SiteDetailSerializer:

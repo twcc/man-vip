@@ -1,9 +1,9 @@
 openapi: 3.0.0
 servers:
-  - url: https://{apigateway}/api/v3/{ApiHost}/
+  - url: '{apigateway}/api/v3/{ApiHost}/'
     variables:
       apigateway:
-        default: apigateway.twcc.ai
+        default: https://apigateway.twcc.ai
       ApiHost:
         default: tcr
 info:
@@ -323,6 +323,56 @@ components:
         update_time:
           type: string
           format: date-time
+    HarborArtifactSerializer:
+      type: object
+      properties:
+        digest:
+          type: string
+        pull_time:
+          type: string
+          format: date-time
+        push_time:
+          type: string
+          format: date-time
+        scan_overview:
+          $ref: '#/components/schemas/HarborScanSerializer'
+        size:
+          type: string
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/HarborTagSerializer'
+    HarborScanSerializer:
+      type: object
+      properties:
+        complete_percent:
+          type: integer
+          format: int64
+        end_time:
+          type: string
+          format: date-time
+        severity:
+          type: string
+        start_time:
+          type: string
+          format: date-time
+        scan_status:
+          type: string
+    HarborTagSerializer:
+      type: object
+      properties:
+        immutable:
+          type: boolean
+        name:
+          type: string
+        pull_time:
+          type: string
+          format: date-time
+        push_time:
+          type: string
+          format: date-time
+        signed:
+          type: boolean
   parameters:
     ProjectInQueryParam:
       name: project

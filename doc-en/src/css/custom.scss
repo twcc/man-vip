@@ -33,6 +33,10 @@
   --alf-bg-color-primary: #00000f;
 }
 
+h1:first-child {
+  --ifm-h1-font-size: 2rem !important;
+}
+
 
 /* Sidebar Method labels */
 .api-method>.menu__link {
