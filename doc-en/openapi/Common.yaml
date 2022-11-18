@@ -1,9 +1,9 @@
 openapi: 3.0.3
 servers:
-  - url: https://{apigateway}/api/v3/
+  - url: '{apigateway}/api/v3/'
     variables:
       apigateway:
-        default: apigateway.twcc.ai
+        default: https://apigateway.twcc.ai
 info:
   # description: This is a simple API
   version: 1.2.0
@@ -13,12 +13,12 @@ info:
 security:
   - ApiKeyAuth: []
 tags:
-  - name: solution
   - name: image requests
   - name: image commit
-  - name: version
-  - name: token request
   - name: project
+  - name: solution
+  - name: token request
+  - name: version
 paths:
   /version/:
     get:
@@ -403,7 +403,7 @@ paths:
               properties:
                 status :
                   type: string
-                  enum: [approved, failed, finished, requested]
+                  enum: [requested, approved, finished, failed]
         required: true
       responses:
         200:
@@ -415,7 +415,7 @@ paths:
                 properties:
                   status:
                     type: string
-                    enum: [approved, failed, finished, requested]
+                    enum: [requested, approved, finished, failed]
 components:
   securitySchemes:
     ApiKeyAuth:
