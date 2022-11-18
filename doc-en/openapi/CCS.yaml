@@ -1,23 +1,23 @@
 openapi: 3.0.0
 servers:
-  - url: https://{apigateway}/api/v3/{ApiHost}/
+  - url: '{apigateway}/api/v3/{ApiHost}/'
     variables:
       apigateway:
-        default: apigateway.twcc.ai
+        default: https://apigateway.twcc.ai
       ApiHost:
         default: k8s-taichung-default
 info:
-  version: 1.5.1
+  version: 1.5.2
   title: CCS API
   description: |
     This is CCS API.
 security:
   - ApiKeyAuth: []
 tags:
-  - name: project
   - name: flavor
-  - name: site
   - name: job
+  - name: project
+  - name: site
 paths:
   /projects/:
     get:
@@ -432,6 +432,26 @@ paths:
           required: true
           schema:
             type: string
+        - name: since_time
+          in: query
+          description: Show logs after a specific time in ISO 8601 format
+          schema:
+            type: string
+        - name: tail_lines
+          in: query
+          description: The number of lines from the end of the logs to show
+          schema:
+            type: integer
+            format: int32
+            default: 10000
+        - name: limit_bytes
+          in: query
+          description: The number of bytes to read from the server before terminating
+            the log output
+          schema:
+            type: integer
+            format: int32
+            default: 800000
         - $ref: '#/components/parameters/ApiHostParam'
       responses:
         200:
@@ -1036,19 +1056,19 @@ paths:
         - $ref: '#/components/parameters/RunIDParam'
         - name: tail_lines
           in: query
-          description: 
+          description: The number of lines from the end of the logs to show
           schema:
             type: string
             default: 800000
         - name: limit_bytes
           in: query
-          description: 
+          description: The number of bytes to read from the server before terminating the log output
           schema:
             type: string
             default: 10000
         - name: since_time
           in: query
-          description: 
+          description: Show logs after a specific time in ISO 8601 format
           schema:
             type: string
         - $ref: '#/components/parameters/ApiHostParam'
