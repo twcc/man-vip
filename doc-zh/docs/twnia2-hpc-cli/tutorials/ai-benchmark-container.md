@@ -227,7 +227,8 @@ srun $SINGULARITY $HOROVOD
     例：
     > 索取 1 GPU，會自動配置 90  GB Memory
       索取 8 GPU，會自動配置 720 GB Memory
-3. 更多 Queue 資訊，請參考 [<ins>Queue 與計算資源使用說明</ins>](../user-guides/queues/queues-computing-resources.md)。
+3. 請勿指定使用特定運算節點，系統將會自動分配運算資源。
+4. 更多 Queue 資訊，請參考 [<ins>Queue 與計算資源使用說明</ins>](../user-guides/queues/queues-computing-resources.md)。
 :::
 
 <br/>
