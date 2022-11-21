@@ -4,7 +4,7 @@
     "description": "The title of the footer links column with title=Docs in the footer"
   },
   "link.title.Members": {
-    "message": "用戶指南",
+    "message": "會員中心",
     "description": "The title of the footer links column with title=Members in the footer"
   },
   "link.title.More": {

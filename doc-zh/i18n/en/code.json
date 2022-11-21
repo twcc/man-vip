@@ -231,7 +231,7 @@
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "homepage.title": {
-    "message": "TWS",
+    "message": "TWCC Enterprise Document",
     "description": "首頁標題"
   },
   "homepage.tagline": {
@@ -246,12 +246,44 @@
     "message": "Rapid & Lightweight Deployment",
     "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
   },
+  "homepage.services.GPU.start": {
+    "message": "Quick Start",
+    "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
+  },
+  "homepage.services.GPU.create": {
+    "message": "Create Container",
+    "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
+  },
+  "homepage.services.GPU.link": {
+    "message": "Link into your container",
+    "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
+  },
+  "homepage.services.GPU.training": {
+    "message": "Trainning by container",
+    "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
+  },
   "homepage.services.GPU.desc": {
     "message": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%.",
     "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
   },
   "homepage.services.HPC.title": {
     "message": "Effective Command & Control",
+    "description": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency."
+  },
+  "homepage.services.HPC.start": {
+    "message": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency.",
+    "description": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency."
+  },
+  "homepage.services.HPC.link": {
+    "message": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency.",
+    "description": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency."
+  },
+  "homepage.services.HPC.queue": {
+    "message": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency.",
+    "description": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency."
+  },
+  "homepage.services.HPC.cross": {
+    "message": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency.",
     "description": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency."
   },
   "homepage.services.HPC.desc": {
@@ -262,12 +294,44 @@
     "message": "Smart & Speedy Computations in One",
     "description": "Create a safe, secure, and flexible Virtual Compute Service instance in short order."
   },
+  "homepage.services.VM.start": {
+    "message": "Create a safe, secure, and flexible Virtual Compute Service instance in short order.",
+    "description": "Create a safe, secure, and flexible Virtual Compute Service instance in short order."
+  },
+  "homepage.services.VM.create": {
+    "message": "Create a safe, secure, and flexible Virtual Compute Service instance in short order.",
+    "description": "Create a safe, secure, and flexible Virtual Compute Service instance in short order."
+  },
+  "homepage.services.VM.link": {
+    "message": "Create a safe, secure, and flexible Virtual Compute Service instance in short order.",
+    "description": "Create a safe, secure, and flexible Virtual Compute Service instance in short order."
+  },
+  "homepage.services.VM.host": {
+    "message": "Create a safe, secure, and flexible Virtual Compute Service instance in short order.",
+    "description": "Create a safe, secure, and flexible Virtual Compute Service instance in short order."
+  },
   "homepage.services.VM.desc": {
     "message": "Create a safe, secure, and flexible Virtual Compute Service instance in short order.",
     "description": "Create a safe, secure, and flexible Virtual Compute Service instance in short order."
   },
   "homepage.services.HSS.title": {
     "message": "Secure Data Repository",
+    "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
+  },
+  "homepage.services.HSS.start": {
+    "message": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!",
+    "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
+  },
+  "homepage.services.HSS.store": {
+    "message": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!",
+    "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
+  },
+  "homepage.services.HSS.upload": {
+    "message": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!",
+    "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
+  },
+  "homepage.services.HSS.sync": {
+    "message": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!",
     "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
   },
   "homepage.services.HSS.desc": {

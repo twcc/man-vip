@@ -3,7 +3,7 @@
  * and scoped locally.
  */
 
-.heroBanner {
+ .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
@@ -21,4 +21,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.bg_color {
+  background-color: var(--alf-bg-color-primary);
 }
