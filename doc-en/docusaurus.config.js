@@ -30,7 +30,7 @@ const config = {
   baseUrl: "/en/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "../img/favicon-150x150.ico",
 
   organizationName: "TWS Co. Ltd.", // Usually your GitHub org/user name.
   projectName: "Manual", // Usually your repo name.
@@ -160,7 +160,7 @@ const config = {
           {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
-            label: "Docs",
+            label: "Guidance",
             position: "left",
             /**type: "doc",
             label: "Docs",
@@ -168,15 +168,21 @@ const config = {
             position: "left",*/
           },
           {
-            label: "API",
-            position: "left",
-            to: "/docs/api/CCS"
-          },
-          {
             type: "docSidebar",
             sidebarId: "faq",
             label: "FAQ",
             position: "left",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "faq",
+            label: "tutorial",
+            position: "left",
+          },
+          {
+            label: "API",
+            position: "left",
+            to: "/docs/api/CCS"
           },
           {
             type:"doc",
@@ -193,13 +199,8 @@ const config = {
           {
             type: "localeDropdown",
             position: "right",
-          },
-          {
-            href: "https://github.com/twcc/man-vip/",
-            label: "GitHub",
-            position: "right",
-          },
-        ],
+          }
+        ]
       },
       footer: {
         style: "dark",
