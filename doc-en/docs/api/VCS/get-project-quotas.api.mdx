@@ -1,11 +1,11 @@
 ---
 id: get-project-quotas
-title: "get project quotas"
+title: "GetProjectQuotas"
 description: "get project quotas"
-sidebar_label: "get project quotas"
+sidebar_label: "GetProjectQuotas"
 hide_title: true
 hide_table_of_contents: true
-api: {"tags":["project"],"description":"get project quotas","parameters":[{"name":"project","in":"query","description":"Project ID is required to request","required":true,"schema":{"type":"integer"}},{"name":"x-api-host","in":"header","description":"Authentication Required Parameters","required":true,"schema":{"type":"string","default":"openstack-taichung-default-2"}}],"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"array","items":{"required":["cpu","gpu","memory","project"],"type":"object","properties":{"project":{"type":"object","properties":{"matchLabels":{"type":"array","items":{"type":"string"}},"id":{"format":"int64","type":"integer"},"name":{"type":"string"},"platform":{"type":"string"},"transparent_mode":{"type":"boolean"}},"required":["matchLabels","id","name","platform","transparent_mode"]},"gpu":{"type":"integer","format":"int64"},"cpu":{"type":"integer","format":"int64"},"memory":{"type":"integer","format":"int64"},"ipvs_port":{"type":"integer","format":"int64"},"floatingip":{"type":"integer","format":"int32"}}}}}}}},"method":"get","path":"/project_quotas/","servers":[{"url":"{apigateway}/api/v3/{ApiHost}/","variables":{"apigateway":{"default":"https://apigateway.twcc.ai"},"ApiHost":{"default":"openstack-taichung-default-2"}}}],"security":[{"ApiKeyAuth":[]}],"securitySchemes":{"ApiKeyAuth":{"type":"apiKey","in":"header","name":"x-api-key"}},"info":{"version":"1.5.2","title":"VCS API","description":"This is VCS API.\n"},"postman":{"name":"get project quotas","description":{"content":"get project quotas","type":"text/plain"},"url":{"path":["project_quotas",""],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) Project ID is required to request","type":"text/plain"},"key":"project","value":""}],"variable":[]},"header":[{"disabled":false,"description":{"content":"(Required) Authentication Required Parameters","type":"text/plain"},"key":"x-api-host","value":""},{"key":"Accept","value":"application/json"}],"method":"GET"}}
+api: {"tags":["project"],"description":"get project quotas","parameters":[{"name":"project","in":"query","description":"Project ID is required to request","required":true,"schema":{"type":"integer"}},{"name":"x-api-host","in":"header","description":"Authentication Required Parameters","required":true,"schema":{"type":"string","default":"openstack-taichung-default-2"}}],"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"array","items":{"required":["cpu","gpu","memory","project"],"type":"object","properties":{"project":{"type":"object","properties":{"matchLabels":{"type":"array","items":{"type":"string"}},"id":{"format":"int64","type":"integer"},"name":{"type":"string"},"platform":{"type":"string"},"transparent_mode":{"type":"boolean"}},"required":["matchLabels","id","name","platform","transparent_mode"]},"gpu":{"type":"integer","format":"int64"},"cpu":{"type":"integer","format":"int64"},"memory":{"type":"integer","format":"int64"},"ipvs_port":{"type":"integer","format":"int64"},"floatingip":{"type":"integer","format":"int32"}}}}}}}},"method":"get","path":"/project_quotas/","servers":[{"url":"{apigateway}/api/v3/{ApiHost}/","variables":{"apigateway":{"default":"https://apigateway.twcc.ai"},"ApiHost":{"default":"openstack-taichung-default-2"}}}],"security":[{"ApiKeyAuth":[]}],"securitySchemes":{"ApiKeyAuth":{"type":"apiKey","in":"header","name":"x-api-key"}},"info":{"version":"1.5.3","title":"VCS API","description":"This is VCS API.\n"},"postman":{"name":"GetProjectQuotas","description":{"content":"get project quotas","type":"text/plain"},"url":{"path":["project_quotas",""],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) Project ID is required to request","type":"text/plain"},"key":"project","value":""}],"variable":[]},"header":[{"disabled":false,"description":{"content":"(Required) Authentication Required Parameters","type":"text/plain"},"key":"x-api-host","value":""},{"key":"Accept","value":"application/json"}],"method":"GET"}}
 sidebar_class_name: "get api-method"
 info_path: docs/api/VCS/vcs-api
 ---
@@ -19,7 +19,7 @@ import SchemaTabs from "@theme/SchemaTabs";
 import DiscriminatorTabs from "@theme/DiscriminatorTabs";
 import TabItem from "@theme/TabItem";
 
-## get project quotas
+## GetProjectQuotas
 
 
 

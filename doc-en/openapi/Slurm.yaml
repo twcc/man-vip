@@ -7,7 +7,7 @@ servers:
       ApiHost:
         default: slurm-taichung-default
 info:
-  version: 1.2.0
+  version: 1.2.1
   title: Slurm API
   description: |
     This is Slurm API.
@@ -1047,7 +1047,7 @@ components:
           description: Job
         depends_on:
           type: array
-          description: Specify the name of the steps on which this step depends. Only suppored by Slurm platform.
+          description: Specify the name of the steps on which this step depends.
           items:
             type: string
         dependency_policy:
@@ -1152,9 +1152,6 @@ components:
           type: string
         subpath:
           description: subpath mount source(This value takes effect on HOSTPATH)
-          type: string
-        bucket:
-          description: Ceph bucket Name(This value takes effect only on the type CEPH)
           type: string
         mountPath:
           description: mount destination
