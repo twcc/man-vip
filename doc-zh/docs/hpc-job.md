@@ -112,6 +112,9 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7a9928ea5db2d6d8d3c82b71f38b0fa4.png)
 
+:::info
+您可以[連線檔案傳輸節點](./hfs/user-guides/connect-data-transfer-node.md)，至 `/work/{{主機帳號}}/slurm_log` 路徑檢視所有高速運算任務的運算紀錄。
+:::
 
 ## HPC 高速運算任務監控
 * 點選左側「HPC 高速運算任務監控」，可查看本系統為 HPC 高速運算任務監控提供監控資訊服務，包括計畫的總累計使用量、特定使用者的累計使用量、GPU 的使用數量和使用時間等。
