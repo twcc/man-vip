@@ -7,7 +7,7 @@ servers:
       ApiHost:
         default: tcr
 info:
-  version: 1.0.0-beta
+  version: 1.0.0-beta.1
   title: Harbor API
   description: |
     This is Harbor API.
@@ -162,6 +162,7 @@ paths:
       tags:
         - project
       summary: Remove a tag of harbor image
+      description: Remove a tag of harbor image.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/ProjectInPathParam'
         - $ref: '#/components/parameters/ImageNameParam'
@@ -195,8 +196,8 @@ paths:
     patch:
       tags:
         - project
-      summary: Update quotas of the specified S3 private key
-      description: Update quotas of the specified S3 private key
+      summary: Update quotas of the specified harbor
+      description: Update quotas of the specified harbor
       parameters:
         - $ref: '#/components/parameters/ProjectInPathParam'
         - $ref: '#/components/parameters/ApiHostParam'

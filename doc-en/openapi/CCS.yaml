@@ -5,9 +5,9 @@ servers:
       apigateway:
         default: https://apigateway.twcc.ai
       ApiHost:
-        default: k8s-taichung-default
+        default: k8s-D-twcc
 info:
-  version: 1.5.2
+  version: 2.0.0
   title: CCS API
   description: |
     This is CCS API.
@@ -2101,11 +2101,6 @@ components:
         availability_zone:
           type: string
           description: Job
-        depends_on:
-          type: array
-          description: Specify the name of the steps on which this step depends. Only suppored by Slurm platform.
-          items:
-            type: string
         dependency_policy:
           type: string
           description: The policy of the dependency
@@ -2118,7 +2113,7 @@ components:
           description: The command need to be executed in the image
         env:
           type: object
-          description: 任務容器環境變數，預設為{}
+          description: Task container environment variables, the default is {}
           properties: {}
         image:
           type: string
@@ -2143,7 +2138,7 @@ components:
       type: object
       properties:
         callback:
-          description: 自動停止任務的迴叫網址
+          description: Callback URL for auto-stop tasks
           type: string
         name:
           description: Job name
@@ -2192,7 +2187,7 @@ components:
         #       items:
         #         $ref: '#/components/schemas/WriteJobVolumeSerializer'
         tag:
-          description: 過濾用任務標籤
+          description: filter task tag
           type: string
     WriteJobVolumeSerializer:
       required:
@@ -2208,9 +2203,6 @@ components:
           type: string
         subpath:
           description: subpath mount source(This value takes effect on HOSTPATH)
-          type: string
-        bucket:
-          description: Ceph bucket Name(This value takes effect only on the type CEPH)
           type: string
         mountPath:
           description: mount destination
@@ -2425,11 +2417,4 @@ components:
       required: true
       schema:
         type: string
-        default: k8s-taichung-default
-      # examples:
-      #   production:
-      #     summary: production
-      #     value: k8s-taichung-default
-      #   staging:
-      #     summary: staging
-      #     value: k8s-taichung-default
+        default: k8s-D-twcc
