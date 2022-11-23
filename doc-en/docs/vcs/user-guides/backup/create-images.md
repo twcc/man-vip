@@ -50,7 +50,7 @@ Create the image manually.
 * Read the instructions in the window, and enter a name and description for the image, then click **OK**.
 * It takes several minutes to create the image. After the **Processing...** prompt disappears, you can continue with other tasks.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_42f2babff73c99d87f6f87c2e2b3ace7.png)
+![](https://user-images.githubusercontent.com/67446293/203542732-f8d5493a-11b7-4516-94ec-1f05532c73d6.png)
 
 * You will be directed to **VCS Instance Image Management** page. Wait for the image state to change from **`QUEUED`** > **`SAVING`** > finally to **`ACTIVE`** before using it.
 
