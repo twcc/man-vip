@@ -210,7 +210,8 @@ python $(your command)
 2. The ratio of the requested resources will be based on the number of GPUs you assign, and will be allocated based on the ratio of 1 GPU: 4 CPU: 90 GB Memory. For examples,
     > Request 1 GPU, you will get 4 CPU cores and 90 GB Memory automatically allocated.<br/>
     > Request 8 GPUs, you will get 32 CPU cores and 720 GB Memory automatically allocated.
-3. For more information about queue, please refer to [<ins>Usage instructions of queue and computing resources</ins>](https://www.twcc.ai/doc?page=hpc_cli#4-Queue-%E8%88%87%E8%A8%88%E7%AE%97%E8%B3%87%E6%BA%90%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E).
+3. Please do not specify a specific computing node, as the system will automatically allocate computing resources.
+4. For more information about queue, please refer to [<ins>Usage instructions of queue and computing resources</ins>](../user-guides/queues/queues-computing-resources.md).
 :::
 
 <br/>
