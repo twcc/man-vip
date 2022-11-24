@@ -22,7 +22,6 @@ TWCC 提供 NGC Maxine 立即可用的工作環境。內含 Maxine Linux Audio E
 
 <summary><b>點我參考詳細版本套件資訊</b></summary>
 
-- [NGC Maxine Audio Effect SDK](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/maxine/collections/maxine
-) 
+- [NGC Maxine Audio Effect SDK](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/maxine/collections/maxine) 
 
 </details>
