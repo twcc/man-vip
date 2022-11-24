@@ -18,7 +18,7 @@ We will use the Singularity container to wrap the packages needed for computing 
 :::info
 [1] NVIDIA provides many [<ins>deep learning examples</ins>](https://github.com/NVIDIA/DeepLearningExamples) to improve the accessibility.<br/>
 [2] NGC version numbers consist of **year.month**: `NGC 20.09` is the version released in September 2020. Refer to [<ins>NGC Support Matrix</ins>](https://docs.nvidia.com/deeplearning/frameworks/support-matrix/index.html) to know more about the differences between NGC's AI frameworks and packages versions.<br/>
-[3] You may also download containers from Docker Hub or other container registry, for more information, please refer to [<ins>Create TWNIA2 containers</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-en).
+[3] You may also download containers from Docker Hub or other container registry, for more information, please refer to [<ins>Create TWNIA2 containers</ins>](./create-twnia2-containers.md).
 :::
 
 <br/>
@@ -79,7 +79,7 @@ Stage: build
 ```
 
 :::info 
-[5] For more information about how to customize the container, please refer to [<ins>Customize Singularity Containers</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-en#2-%E5%AE%A2%E8%A3%BD%E5%8C%96-Singularity-%E5%AE%B9%E5%99%A8).<br/>
+[5] For more information about how to customize the container, please refer to [<ins>Customize Singularity Containers</ins>](./create-twnia2-containers.md#step-2-customize-a-singularity-container).<br/>
 [6] For the containers from NGC, TensorFlow has already installed Horovod, but PyTorch has not. So, additional installation is required for PyTorch.
 :::
 
@@ -91,7 +91,7 @@ Stage: build
 TensorFlow, PyTorch and MXNet provided by NVIDIA are able to enable Automatic Mixed Precision, which helps improving the computing speed. Please refer to NVIDIA [Automatic Mixed Precision for Deep Learning](https://developer.nvidia.com/automatic-mixed-precision) if needed.
 
 :::info
-You may also refer to [<ins>Enable TensorFlow Automatic Mixed Precision and run benchmarks</ins>](https://www.twcc.ai/doc?page=howto_ctn6) using TWCC container service.
+You may also refer to [<ins>Enable TensorFlow Automatic Mixed Precision and run benchmarks</ins>](../../ccs-interactive-container/tutorials/activate-tensorflow-amp.md) using TWCC container service.
 :::
 
 <br/>
@@ -209,7 +209,7 @@ srun --mpi=pmix $SINGULARITY $HOROVOD
     > Request 1 GPU, you will get 4 CPU cores and 90 GB Memory automatically allocated.<br/>
     > Request 8 GPUs, you will get 32 CPU cores and 720 GB Memory automatically allocated.
 3. Please do not specify a specific computing node, as the system will automatically allocate computing resources.
-4. For more information about queue, please refer to [<ins>Usage instructions of queue and computing resources</ins>](https://www.twcc.ai/doc?page=hpc_cli#4-Queue-%E8%88%87%E8%A8%88%E7%AE%97%E8%B3%87%E6%BA%90%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E).
+4. For more information about queue, please refer to [<ins>Usage instructions of queue and computing resources</ins>](../user-guides/queues/queues-computing-resources.md).
 :::
 
 <br/>
@@ -240,7 +240,7 @@ tail -f slurm_<JOB_ID>.out
 ```
 
 :::info
-For more commonly used commands, please refer to [<ins>Slurm command</ins>](https://www.twcc.ai/doc?page=hpc_cli#6-Slurm%E6%8C%87%E4%BB%A4): 
+For more commonly used commands, please refer to [<ins>Slurm command</ins>](/en/docs/category/slurm-指令/): 
 1. Use `squeue -u $USER` to view the running job.
 2. Use `sacct -X` to check today's running job and state to make sure whether it is still running or has already finished.
 :::
