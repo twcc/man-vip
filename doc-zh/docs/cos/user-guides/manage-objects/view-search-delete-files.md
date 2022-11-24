@@ -25,6 +25,10 @@ import TabItem from '@theme/TabItem';
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_72adbc230af97db5e02ca24de1bf2fd0.png)
 
+:::info
+TWCC 入口網站最多僅能顯示 1000 筆資料 (儲存體、資料夾、檔案)，若需檢視完整資料，請使用 TWCC CLI 或第三方軟體。
+:::
+
 
 * 進入檔案內容頁面後，即可檢視檔案的基本資訊。
 
