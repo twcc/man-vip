@@ -34,6 +34,10 @@ You can click on the star <i class="fa fa-star-o" aria-hidden="true"></i> on the
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f74c2852f3828639d7ba6f7381fd053a.png)
 
 
+:::info
+The TWCC portal can only display up to 1000 data items (storages, folders, files). To view the complete data, please use the TWCC CLI or third-party software.
+:::
+
 
   </TabItem>
   <TabItem value="TWCC CLI" label="TWCC CLI">

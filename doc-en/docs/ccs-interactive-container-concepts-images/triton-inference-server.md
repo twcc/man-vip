@@ -8,11 +8,11 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-
 
 #  <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f55059e9d0a6ac45c44bcc0ec1bebff5.png' /> Triton Inference Server
 
-TWCC provides pay-as-you-go working environment of NGC’s TensorRT Inference Server. The TensorRT inference server provides an inference service via an HTTP endpoint, allowing remote clients to request inferencing for any model that is being managed by the server. The TensorRT inference server itself is included in the TensorRT inference server container. External to the container, there are additional C++ and Python client libraries, and additional documentation at GitHub: Inference Server.
+TWCC provides pay-as-you-go working environment of NGC’s Tensor Inference Server. The Triton inference server provides an inference service via an HTTP endpoint, allowing remote clients to request inferencing for any model that is being managed by the server. The Triton inference server itself is included in the Triton inference server container. External to the container, there are additional C++ and Python client libraries, and additional documentation at GitHub: Inference Server.
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">Information of Image file version</span> 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_406447ea29f101fc48b37000ddd0fbe6.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_406cf90172b776c8c6dfbf40edc60aec.png)
 
 
 
@@ -24,6 +24,8 @@ TWCC provides pay-as-you-go working environment of NGC’s TensorRT Inference Se
 
 <summary><b>Detailed package version information</b></summary>
 
+- [tritonserver-22.08-py3](https://docs.nvidia.com/deeplearning/triton-inference-server/release-notes/rel_22-05.html#rel_22-08)
+- [tritonserver-22.05-py3](https://docs.nvidia.com/deeplearning/triton-inference-server/release-notes/rel_22-05.html#rel_22-05)
 - [tritonserver-22.02-py3](https://docs.nvidia.com/deeplearning/triton-inference-server/release-notes/rel_22-02.html#rel_22-02)
 - [tritonserver-21.11-py3](https://docs.nvidia.com/deeplearning/triton-inference-server/release-notes/rel_21-11.html#rel_21-11)
 - [tritonserver-21.08-py3](https://docs.nvidia.com/deeplearning/triton-inference-server/release-notes/rel_21-08.html#rel_21-08)

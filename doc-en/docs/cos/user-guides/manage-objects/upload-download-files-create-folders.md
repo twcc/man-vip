@@ -168,7 +168,9 @@ You can create folders to manage your files:
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dacce4d5bd1a1d9e95020154e382575f.png)
 
-
+:::info
+The TWCC portal can only display up to 1000 data items (storages, folders, files). To view the complete data, please use the TWCC CLI or third-party software.
+:::
 
   </TabItem>
 </Tabs>
