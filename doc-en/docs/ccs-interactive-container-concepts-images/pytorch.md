@@ -17,8 +17,17 @@ TWCC provides 10 ready-to-use working environments of NGC optimized PyTorch. PyT
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">Image version information</span> 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a7588de317f7bb27b056f5de1be5186e.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ac4c56692871174e3238f4924238ceb4.png)
 
+
+<details>
+
+<summary>21.02 Previous Versions</summary>
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_32149a22aca76584f6105f73574ec585.png)
+
+
+</details>
 
 :::info
 `py3` and `py2` are different Python versions.
@@ -30,6 +39,8 @@ TWCC provides 10 ready-to-use working environments of NGC optimized PyTorch. PyT
 
 <summary><b>Detailed package version information</b></summary>
 
+- [pytorch-22.08-py3](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_22-08.html#rel_22-08)
+- [pytorch-22.05-py3](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_22-05.html#rel_22-05)
 - [pytorch-22.02-py3](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_22-02.html#rel_22-02)
 - [pytorch-21.11-py3](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_21-11.html#rel_21-11)
 - [pytorch-21.08-py3](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel_21-08.html#rel_21-08)
