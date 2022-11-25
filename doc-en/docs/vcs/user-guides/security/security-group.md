@@ -14,7 +14,7 @@ With TWCC Security Group, users can control the network security of the VCS inst
 
 :::info
 - Security Group is designed to set individual security rules for each VCS instance. Therefore, at least one available VCS instance must be created before setting the security group rules.
-- For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh#%E5%AE%89%E5%85%A8%E6%80%A7%E7%BE%A4%E7%B5%84).
+- For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-en#%E5%AE%89%E5%85%A8%E6%80%A7%E7%BE%A4%E7%B5%84).
 :::
 
 
