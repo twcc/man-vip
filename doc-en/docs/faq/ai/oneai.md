@@ -24,19 +24,19 @@ Use of the OneAI service will incur subscription fees, as well as costs associat
 
 <details>
 
-<summary> Q2. OneAI 為何無法訂閱？</summary>
+<summary> Q2. Why can't I subscribe to OneAI?</summary>
 
-1. 專案限制：若專案該月到期，或是專案可用額度小於100，將無法訂閱。
-2. 身分限制：需租戶管理員才能進行訂閱，租戶使用者將無法訂閱。
+1. Project Restrictions. If the item expires during the month, or if the available credit for the item is less than 100, the item cannot be subscribed.
+2. Identity restrictions. Subscriptions can only be made by the tenant admin and will not be available to tenant users.
 
-請參閱 [<ins>OneAI訂閱政策</ins>](https://man.twcc.ai/@twccdocs/doc-oneai-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Foneai-subscription-policy-zh) 了解詳細資訊。
+Please refer to [<ins>OneAI Subscription Policies</ins>](https://man.twcc.ai/@twccdocs/doc-oneai-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Foneai-subscription-policy-zh) for  more information.
 
 </details>
 
 
 <details>
 
-<summary> Q3. 如何查看 OneAI 服務的分項費用？</summary>
+<summary> Q3. How do I view the itemized costs of OneAI services?</summary>
 
 您可以在會員中心查看 OneAI 的分項費用。從會員中心選擇欲查看的專案，在上方選單選擇「額度用量」，從下拉式清單選取「OneAI」，即可根據商品項目可逐一查看分項費用：
 
