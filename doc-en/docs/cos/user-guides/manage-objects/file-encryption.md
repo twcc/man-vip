@@ -42,7 +42,7 @@ When you download the file, the system will automatically get the decryption key
 
 ### Encrypted Uploads
 
-Same steps as [<ins>uploading a file</ins>](https://man.twcc.ai/@twccdocs/guide-cos-upload-download-files-zh#%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88), please check **Encrypt** and then click **UPLOAD** to encrypt the file.
+Same steps as [<ins>uploading a file</ins>](upload-download-files-create-folders.md#upload-files), please check **Encrypt** and then click **UPLOAD** to encrypt the file.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_af965af915450fa5d94de1fae5b0bbbb.png)
 
@@ -63,7 +63,7 @@ After a file has been encrypted and uploaded, the encrypted properties of the fi
 
 ### Preparation
 
-Please [<ins>download S3 Browser, complete the connection to TWCC Cloud Object Storage, create the storage</ins>](https://man.twcc.ai/@twccdocs/guide-cos-s3browser-zh), and obtain the <a href="#加密金鑰-ID"><ins>Encryption Key ID</ins></a>.
+Please [<ins>download S3 Browser, complete the connection to TWCC Cloud Object Storage, create the storage</ins>](../manage-with-clients/s3-browser.md), and obtain the <a href="#加密金鑰-ID"><ins>Encryption Key ID</ins></a>.
 
 
 ### Set encryption function
@@ -103,7 +103,7 @@ After uploading the file, right-click on File > Properties > View File Encryptio
 
 :::info
 - In this document, we use S3 Browser as an example of client software, you can choose other software
-- For more tutorials on using S3 Browser's Cloud Object Storage, refer to [<ins>Manage files with third-party software - S3 Browser</ins>](https://man.twcc.ai/@twccdocs/guide-cos-s3browser-zh)
+- For more tutorials on using S3 Browser's Cloud Object Storage, refer to [<ins>Manage files with third-party software - S3 Browser</ins>](../manage-with-clients/s3-browser.md#manage-buckets-and-files)
 :::
 
   </TabItem>
