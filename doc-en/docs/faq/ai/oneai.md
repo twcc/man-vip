@@ -1,5 +1,5 @@
 ---
-title : FAQ-oneai
+title : TWCC FAQs | FAQ-oneai
 GA: UA-155999456-1
 sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-oneai-en' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-oneai-en'
@@ -38,7 +38,7 @@ Please refer to [<ins>OneAI Subscription Policies</ins>](https://man.twcc.ai/@tw
 
 <summary> Q3. How do I view the itemized costs of OneAI services?</summary>
 
-您可以在會員中心查看 OneAI 的分項費用。從會員中心選擇欲查看的專案，在上方選單選擇「額度用量」，從下拉式清單選取「OneAI」，即可根據商品項目可逐一查看分項費用：
+You can view OneAI's itemized fees in the Member Center. Select the item you want to view from the Member Center, select **Credits Usage** from the top menu, and then select **OneAI** from the drop-down list to view the fees by product item:
 
 
 <font style={{'background-color':'#008ad8', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px'}}><font style={{'color':'white'}}> <b>&nbsp;Enterprise&nbsp;</b></font></font>
@@ -46,149 +46,149 @@ Please refer to [<ins>OneAI Subscription Policies</ins>](https://man.twcc.ai/@tw
 
 ![](https://i.imgur.com/dsFrIcC.png)
 
-<font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px'}}><font style={{'color':'white'}}> <b>&nbsp;Academic&nbsp;</b></font></font> 與 Enterprise 步驟雷同，選擇「OneAI」前，需先選擇服務「TWCC」。
+<font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px'}}><font style={{'color':'white'}}> <b>&nbsp;Academic&nbsp;</b></font></font> is similar to the Enterprise step in that you need to select the <b>TWCC</b> service before selecting <b>OneAI</b>.
 
 </details>
 
 
-## 服務功能
+## Service Functions
 
 <details>
 
-<summary> Q1. 什麼是筆記本服務？</summary>
+<summary> Q1. What is Notebook Service?</summary>
 
-OneAI筆記本服務整合了主流的深度學習框架（TensorFlow、PyTorch、 MXNet）與套件以及支援資料科學語言（Julia、R）與數據分析引擎（Spark）的預置映像檔，是一個彈性、受管的 JupyterLab 互動式協作開發環境。請參閱 [<ins>OneAI筆記本服務</ins>](https://docs.oneai.twcc.ai/s/Z8LdmjL9M#%E7%AD%86%E8%A8%98%E6%9C%AC%E6%9C%8D%E5%8B%99) 了解更多內容。
-
-</details>
-
-<details>
-
-<summary> Q2. OneAI AI Maker 已預先建置哪些解決方案？</summary>
-
-OneAI AI Maker 提供 8 種公用範本可應用在物件偵測、圖像分類、醫學影像、分類問題、回歸問題、行人屬性辨識等領域：YOLOv3、YOLOv4、Nvidia Clara Train 3.0、Nvidia Clara Train 4.0、Scikit-learn: regression、Scikit-learn: classification、Image-classification、PAR。可參閱 [<ins>案例教學</ins>](https://docs.oneai.twcc.ai/s/xKNcU3O5D#%E6%A1%88%E4%BE%8B%E6%95%99%E5%AD%B8) 了解詳細資訊。
+The OneAI Notebook Service integrates leading deep learning frameworks(TensorFlow、PyTorch、 MXNet), suites with pre-built images supporting data science languages(Julia、R) and data analysis engines(Spark) in a flexible, manageable JupyterLab interactive and collaborative development environment. Please refer to [<ins>OneAI Notebook Service</ins>](https://docs.oneai.twcc.ai/s/Z8LdmjL9M#%E7%AD%86%E8%A8%98%E6%9C%AC%E6%9C%8D%E5%8B%99) for more information.
 
 </details>
 
 <details>
 
-<summary> Q3. OneAI AI Maker 與 AI Maker (搶鮮版) 有何不同？</summary>
+<summary> Q2. What solutions are pre-made by OneAI AI Maker?</summary>
 
-AI Maker (搶鮮版) 功能增加了 整合 MLflow 去管理模型訓練的細節。
-1. [<ins>AI Maker (搶鮮版) > MLflow 模型</ins>](https://docs.oneai.twcc.ai/s/3uxGFglX0#%E6%A8%A1%E5%9E%8B%E7%AE%A1%E7%90%86) 可管理模型生命週期。
-2. AI Maker (搶鮮版) > 訓練任務中內建的範本訓練模型時，會自動套用 MLflow 來提供更詳盡的 AI/ML 研究過程；使用自定義訓練程式碼需在程式碼中手動配置 [MLflow Logging Function <i class="fa fa-external-link" aria-hidden="true"></i>](https://mlflow.org/docs/latest/tracking.html#logging-functions) ，則可通過 OneAI 的使用者介面統一管理模型。
-
-請參閱 [<ins>OneAI AI Maker (搶鮮版)</ins>](https://docs.oneai.twcc.ai/s/3uxGFglX0#AI-Maker%EF%BC%88%E6%90%B6%E9%AE%AE%E7%89%88%EF%BC%89) 了解詳細資訊。
+OneAI AI Maker provides 8 public templates for object detection, image classification, medical imaging, classification problems, regression problems, pedestrian attribute recognition, etc: YOLOv3、YOLOv4、Nvidia Clara Train 3.0、Nvidia Clara Train 4.0、Scikit-learn: regression、Scikit-learn: classification、Image-classification、PAR. Please refer to [<ins>Case Study</ins>](https://docs.oneai.twcc.ai/s/xKNcU3O5D#%E6%A1%88%E4%BE%8B%E6%95%99%E5%AD%B8) for more information.
 
 </details>
 
 <details>
 
-<summary> Q4. 是否可讓非專案成員進行標註作業？</summary>
+<summary> Q3. What is the difference between OneAI AI Maker and AI Maker(Beta)?</summary>
 
-可透過 [<ins>CVAT 標註工具</ins>](https://docs.oneai.twcc.ai/s/QFn7N5R-H#%E6%A8%99%E8%A8%BB%E5%B7%A5%E5%85%B7) 派發標註作業給非專案成員使用。您須自行提供非專案成員使用：
-1. CVAT 標註工具進入點網址如下圖示意：
+AI Maker(Beta) feature adds MLflow integration to manage the details of model training.
+1. [<ins>AI Maker(Beta) > MLflow Tracking</ins>](https://docs.oneai.twcc.ai/s/3uxGFglX0#%E6%A8%A1%E5%9E%8B%E7%AE%A1%E7%90%86) manageable model lifecycle.
+2. AI Maker(Beta) > Training Job for a task the built-in template training model automatically applies MLflow to provide a more detailed AI/ML research process: using custom training codes requires manual configuration in the code. [MLflow Logging Function <i class="fa fa-external-link" aria-hidden="true"></i>](https://mlflow.org/docs/latest/tracking.html#logging-functions)feature provides centralized management of models through OneAI user interface.
+
+Please refer to [<ins>OneAI AI Maker(Beta)</ins>](https://docs.oneai.twcc.ai/s/3uxGFglX0#AI-Maker%EF%BC%88%E6%90%B6%E9%AE%AE%E7%89%88%EF%BC%89) for more information.
+
+</details>
+
+<details>
+
+<summary> Q4. Is it possible for non-project members to use the annotation tool?</summary>
+
+[<ins>CVAT annotation tool</ins>](https://docs.oneai.twcc.ai/s/QFn7N5R-H#%E6%A8%99%E8%A8%BB%E5%B7%A5%E5%85%B7) can be used to assign tagging jobs to non-project members. You must provide access for your own non-project members:
+1. The entry point for the CVAT annotation tool is shown in the figure below:
 ![](https://i.imgur.com/f2cEHEV.png)
-2. CVAT 標註工具的帳號密碼設定方式請參閱 [<ins>操作指南</ins>](https://hackmd.io/@6Na-9uAFTYa8-bo874eWrA/S1mZuWyc5) 以了解相關設定。
+2. For account and password settings of CVAT annotation tool, please refer to the [<ins>relevant settings</ins>](https://hackmd.io/@6Na-9uAFTYa8-bo874eWrA/S1mZuWyc5) in the operation guide.
 
 </details>
 
 
-## 容器使用
+## Container usage
 
 <details>
 
-<summary> Q1. OneAI 容器服務 port 範圍？</summary>
+<summary> Q1. What is the scope of OneAI Container Service Port?</summary>
 
-OneAI 容器服務 提供 Static Port 的範圍 30000-32767。請參閱 [<ins>OneAI容器服務 > 網路設定</ins>](https://docs.oneai.twcc.ai/s/yGbG4JJyi#3-%E7%B6%B2%E8%B7%AF%E8%A8%AD%E5%AE%9A) 了解更多內容。
-
-</details>
-
-<details>
-
-<summary> Q2. OneAI 容器映像檔該如何產生？</summary>
-
-準備好您的容器映像檔即可使用 Docker CLI 來 push 容器映像檔至 OneAI容器映像檔。Docker CLI 詳細資訊至 [Docker官方文件 <i class="fa fa-external-link" aria-hidden="true"></i>](https://docs.docker.com/get-started/#cli-references)查看。
+OneAI Container Services offers a range of static ports from  30000-32767。please refer to [<ins>OneAI Container Services > Network Setting</ins>](https://docs.oneai.twcc.ai/s/yGbG4JJyi#3-%E7%B6%B2%E8%B7%AF%E8%A8%AD%E5%AE%9A) for more information.
 
 </details>
 
 <details>
 
-<summary> Q3. OneAI 容器服務是否可以使用 SSH 連線？</summary>
+<summary> Q2. How should the OneAI container image be generated?</summary>
 
-依據映像檔來源會限制 SSH 連線。系統內建的 nvidia-official-images 公用映像檔可用 SSH 連線。用戶自行上傳的私人映像檔則依照映像檔內容，若要使用 SSH 連線則建議須在映像檔[安裝sshd相關套件 <i class="fa fa-external-link" aria-hidden="true"></i>](https://docs.docker.com/samples/running_ssh_service/)。OneAI 容器服務 使用 SSH 連線方式請參閱 [<ins>使用手冊</ins>](https://docs.oneai.twcc.ai/s/yGbG4JJyi#%E4%BD%BF%E7%94%A8-SSH-%E7%99%BB%E5%85%A5%E9%80%A3%E7%B7%9A) 以了解操作步驟。
-
-</details>
-
-<details>
-
-<summary> Q4. 為何從本地環境上傳的容器映像檔容量會變小？</summary>
-
-OneAI 容器映像檔會將您上傳的容器映像檔進行壓縮，導致容器映像檔的容量變小，其內容則無影響。
-
-</details>
-
-## 資料儲存
-
-<details>
-
-<summary> Q1. OneAI 適用何種資料儲存服務 ？</summary>
-
-OneAI 使用 [<ins>OneAI 儲存服務</ins>](https://docs.oneai.twcc.ai/s/_F4C_EzEa#%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99) 作為資料儲存、管理的工具，提供安全、可靠與 Amazon S3 相容之儲存服務，也支援第三方工具 (S3 browser)，使得在 OneAI 的服務之間或與其他專案成員分享資料。
-</details>
-
-<details>
-
-<summary> Q2. OneAI 容器服務掛載的儲存空間有多少 ？</summary>
-
-建立容器的儲存空間以掛載 OneAI 儲存服務的儲存體的大小為主。
-</details>
-
-<details>
-
-<summary> Q3. OneAI 儲存服務可存放哪種資料？</summary>
-
-可存放的資料不限格式、不限類型。
-</details>
-
-<details>
-
-<summary> Q4. OneAI 儲存服務存放空間和檔案數量上限是多少？</summary>
-
-OneAI 儲存服務可以存放的總資料量和物件數量無使用上限制。
-</details>
-
-
-## 訓練模型
-
-<details>
-
-<summary> Q1. OneAI 是否支援多 GPU 訓練？</summary>
-
-OneAI AI Maker 公用範本可以自動在多 GPU 中分配深度學習模型和大型訓練集，自定義訓練程式碼需手動調整程式碼調用 GPU，調用方式會依深度學習框架有所不同。
+Prepare your container image and use the Docker CLI to push the container image file to OneAI container image. Docker CLI information can be found in the [official Docker documentation<i class="fa fa-external-link" aria-hidden="true"></i>](https://docs.docker.com/get-started/#cli-references).
 
 </details>
 
 <details>
 
-<summary> Q2. 透過 OneAI AI Maker SmartML 訓練任務 可調整哪些模型？</summary>
+<summary> Q3. Can OneAI Container Service use SSH connection?</summary>
 
-[<ins>SmartML 訓練任務</ins>](https://docs.oneai.twcc.ai/s/QFn7N5R-H#%E8%A8%93%E7%B7%B4%E4%BB%BB%E5%8B%99) 提供 4 種演算法：Bayesian、TPE、Grid、Random，來執行模型訓練的優化策略。若您不是使用公用範本，須在訓練程式碼中，使用 `os.environ` 來[<ins>手動配置變數設定</ins>](https://docs.oneai.twcc.ai/s/QFn7N5R-H#23-%E8%A8%AD%E5%AE%9A%E8%B6%85%E5%8F%83%E6%95%B8)，可調整超參數、模型種類等，更多資訊可參考[<ins>公用範本 image-classification 案例教學</ins>](https://docs.oneai.twcc.ai/s/6FCAc5sdI#AI-Maker-%E6%A1%88%E4%BE%8B%E6%95%99%E5%AD%B8---%E5%BD%B1%E5%83%8F%E5%88%86%E9%A1%9E%E6%A8%A1%E5%9E%8B%E6%87%89%E7%94%A8)的設定。
-
-</details>
-
-<details>
-
-<summary> Q3. OneAI AI Maker 模型可匯入哪些模型種類？</summary>
-
-OneAI 模型可存放不限種類的模型。在匯入前，您須將模型打包成 ZIP 檔並上傳到 OneAI 儲存服務。可參閱 [<ins>AI Maker 模型</ins>](https://docs.oneai.twcc.ai/s/QFn7N5R-H#%E6%A8%A1%E5%9E%8B) 了解詳細資訊。
+Depending on the image, the source will restrict SSH connections. The system's built-in nvidia-official-images public image is available through an SSH connection. If you want to use SSH connection, it is recommended that you [install the sshd related packages<i class="fa fa-external-link" aria-hidden="true"></i>](https://docs.docker.com/samples/running_ssh_service/) in the image. OneAI Container Service uses SSH connection, please refer to the [<ins>user manual</ins>](https://docs.oneai.twcc.ai/s/yGbG4JJyi#%E4%BD%BF%E7%94%A8-SSH-%E7%99%BB%E5%85%A5%E9%80%A3%E7%B7%9A) for more information.
 
 </details>
 
 <details>
 
-<summary> Q4. 如何確認有使用到 GPU 資源？</summary>
+<summary> Q4. Why does the size of the container image get smaller when I upload from my local environment?</summary>
 
-- OneAI 筆記本服務、容器服務、推論服務 所使用到的運算資源可透過 [<ins>OneAI 資源監控</ins>](https://docs.oneai.twcc.ai/s/gEQO9lvF8) 檢視。
-- OneAI 訓練任務可查詢 7 天內的運算資源情形，請洽詢客服查詢並取得監控資料。
+The OneAI container image will compress the container image file you uploaded, resulting in a smaller container image file with no effect on its contents.
+
+</details>
+
+## Data Storage
+
+<details>
+
+<summary> Q1. What kind of data storage services are available for OneAI?</summary>
+
+OneAI uses the [<ins>OneAI Storage Service</ins>](https://docs.oneai.twcc.ai/s/_F4C_EzEa#%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99) as a data storage and management tool, providing secure and reliable storage compatible with Amazon S3 and supporting third-party tools(S3 browser)that enable data sharing between OneAI's services or with other project members.
+</details>
+
+<details>
+
+<summary> Q2. How much storage is installed on the OneAI Container Service?</summary>
+
+The storage space for creating containers is based on the size of the storage body mounted by the OneAI Storage Service.
+</details>
+
+<details>
+
+<summary> Q3. What kind of data can OneAI Storage Service store?</summary>
+
+Data can be stored in any format and of any type.
+</details>
+
+<details>
+
+<summary> Q4. What is the maximum amount of space and files that can be stored in the OneAI storage service?</summary>
+
+There is no usage limit on the total amount of data and objects that can be stored by the OneAI Storage Service.
+</details>
+
+
+## Training Model
+
+<details>
+
+<summary> Q1. Does OneAI support multi-GPU training?</summary>
+
+OneAI AI Maker public templates automatically distribute deep learning models and large training sets across multiple GPUs, while custom training code needs to be manually tuned to invoke GPUs, and the invocation method will vary depending on the deep learning framework.
+
+</details>
+
+<details>
+
+<summary> Q2. Which models can be tuned with the OneAI AI Maker SmartML training task?</summary>
+
+[<ins>SmartML Training Tasks</ins>](https://docs.oneai.twcc.ai/s/QFn7N5R-H#%E8%A8%93%E7%B7%B4%E4%BB%BB%E5%8B%99) has 4 types of algorithms to choose from:Bayesian, TPE, Grid, Random to perform optimization strategies for model training. If you don't use public template, you must use `os.environ` in your training code to [<ins>Manually configure variable settings</ins>](https://docs.oneai.twcc.ai/s/QFn7N5R-H#23-%E8%A8%AD%E5%AE%9A%E8%B6%85%E5%8F%83%E6%95%B8) to set tunable hyperparameters, model types, etc. For more information, please refer to [<ins>Public template image-classification case study</ins>](https://docs.oneai.twcc.ai/s/6FCAc5sdI#AI-Maker-%E6%A1%88%E4%BE%8B%E6%95%99%E5%AD%B8---%E5%BD%B1%E5%83%8F%E5%88%86%E9%A1%9E%E6%A8%A1%E5%9E%8B%E6%87%89%E7%94%A8) setup.
+
+</details>
+
+<details>
+
+<summary> Q3. What model types can be imported into OneAI AI Maker models?</summary>
+
+OneAI models can store unlimited types of models. Before importing, you need to package the model as a ZIP file and upload it to OneAI storage service. Please refer to [<ins>AI Maker models</ins>](https://docs.oneai.twcc.ai/s/QFn7N5R-H#%E6%A8%A1%E5%9E%8B) for more information.
+
+</details>
+
+<details>
+
+<summary> Q4. How can I confirm that GPU resources are being used?</summary>
+
+- The compute resources used by OneAI Notebook Service, Container Service and Inference Service can be monitored through [<ins>OneAI Resources</ins>](https://docs.oneai.twcc.ai/s/gEQO9lvF8).
+- For OneAI training assignments, you can check the status of your computing resources within 7 days, please contact customer service and get monitoring data.
 
 </details>

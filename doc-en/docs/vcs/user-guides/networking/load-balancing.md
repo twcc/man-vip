@@ -76,8 +76,15 @@ After creating, [<ins>attach the load balancer to VCS instances</ins>](#attach-l
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_849d210541eb085a1601cd22d7e63aff.png)
 
-* On the load balancer details page, you can view the basic information and the configuration for network connections, or execute actions including **EDIT**, **DELETE**, **REFRESH**, etc.
-* Once the load balancer is created, a VIP (Virtual IP) will be generated for external services, and private IP will be provided for maintenance purpose.
+* On the load balancer details page, you can view the basic information and the configuration for network connections, or execute actions including **EDIT**, **DELETE**, **REFRESH**, **ASSIGN/DELETE** Public IP, etc.
+* IP-related field description:
+    * Public IP:Depending on your choice, either a floating IP or a static IP will be configured for your external service. By choosing not to configure an IP, you can also reconfigure a floating or static IP.
+    * Private IP:A set of private IPs under the same network segment will be automatically configured based on the virtual network you select.
+Once the load balancer is created, a VIP (Virtual IP) will be generated for external services, and private IP will be provided for maintenance purpose.
+
+:::info
+If your service does not need to be provided externally, but only for internal use, it is recommended that you can provide the service by creating a load balancer with a private IP (no need to configure a public IP) and creating a back-end VCS instance.
+:::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a63efa359922aa5902b9843766a79f87.png)
 
@@ -85,6 +92,10 @@ After creating, [<ins>attach the load balancer to VCS instances</ins>](#attach-l
 
 
 ### Update Load balancer's SSL certificate
+
+:::info
+Currently, there is only the ability to renew SSL certificates, there is no ability to delete SSL certificates. If you need to delete a certificate, please delete the load balancer and recreate it.
+:::
 
 SSL certificates have a validity period. You can create a new certificate to replace the certificate about to expire:
 
@@ -94,7 +105,12 @@ SSL certificates have a validity period. You can create a new certificate to rep
 
 * Select the newly created certificate name for the existing HTTPS with SSL listener, and then click **OK**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c9b1bc7ab92f0c4a685a66afae087905.png)
+![](https://i.imgur.com/kcErbig.png)
+
+:::info
+- If the load balancer has a certificate installed, only the certificate owner can view the certificate name.
+- If you are a Tenant Admin or load balancer builder, you can click on the drop down menu for SSL certificates and select and replace the certificate you have built. If the drop-down menu shows `No Data`, this means that you have not yet created an SSL certificate, please first <ins>[Create SSL certificates](#create-ssl-certificates)</ins>.
+:::
 
 * After the update, you will be directed to the **Load Balancer Details** page. You can see the name of the new SSL certificate, and its state wll change to the **`ACTIVE`** when it is successfully renewed.
 

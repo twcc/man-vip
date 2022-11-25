@@ -14,7 +14,7 @@ With TWCC Security Group, users can control the network security of the VCS inst
 
 :::info
 - Security Group is designed to set individual security rules for each VCS instance. Therefore, at least one available VCS instance must be created before setting the security group rules.
-- For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-en#%E5%AE%89%E5%85%A8%E6%80%A7%E7%BE%A4%E7%B5%84).
+- For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh#%E5%AE%89%E5%85%A8%E6%80%A7%E7%BE%A4%E7%B5%84).
 :::
 
 
@@ -27,7 +27,7 @@ With TWCC Security Group, users can control the network security of the VCS inst
 
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-* Click **Security Group** from the service list to go to the **Security Group Management (VCS Instances)** page, and click on the available VCS instance.
+* From the list of services, click on **Virtual Computing Service** > select **Network & Security** on the left > **Security Group Management (VCS Instances)** page, and click on the available VCS instance.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1dfbdda8636a9cf517c1ab718d8e3853.png)
 
@@ -83,6 +83,38 @@ Due to frequent security incidents, if your connection comes from the following 
 
 If you need to connect to TWCC Windows instances, please contact Customer Service.
 :::
+
+
+<details>
+
+<summary> Default Security Group Rules for Load Balancing</summary>
+
+<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **Info：**
+
+- TWCC application load balancing (listener protocol is HTTP) preset open input/output rules:
+
+| Direction | Network Type | Port (min) | Port (max)| Protocol|CIDR |
+| -------- | -------- | -------- |-------- | -------- | -------- |
+| ingress     | IPv4     |   80   | 80 |tcp | 0.0.0.0/0|
+| ingress     | IPv4     |   1025   | 1025 |tcp | 0.0.0.0/0|
+| ingress     | IPv4     |      | | 51|0.0.0.0/0 |
+| ingress     | IPv4     |      | | 112|0.0.0.0/0 |
+| egress     | IPv4     |      | |ANY |0.0.0.0/0 |
+| egress     | IPv6     |      | |ANY |::/0 |
+
+
+- TWCC application load balancing (listener protocol is HTTP), Network Load Balancing (listener protocol is TCP) preset open input/output rules:
+
+| Direction | Network Type | Port (min) | Port (max)| Protocol|CIDR |
+| -------- | -------- | -------- |-------- | -------- | -------- |
+| ingress     | IPv4     |   443   | 443 |tcp | 0.0.0.0/0|
+| ingress     | IPv4     |   1025   | 1025 |tcp | 0.0.0.0/0|
+| ingress     | IPv4     |      | | 51|0.0.0.0/0 |
+| ingress     | IPv4     |      | | 112|0.0.0.0/0 |
+| egress     | IPv4     |      | |ANY |0.0.0.0/0 |
+| egress     | IPv6     |      | |ANY |::/0 |
+
+</details>
 
 
 <br/>
@@ -164,10 +196,11 @@ twccli ls vcs -secg -s 892486
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
 Go to the **Security Group Rules Management** page> Select rules> click **DELETE** above.
+Refer to View the Security Group rules of VCS instances(#view-the-security-group-rules-of-vcs-instances) to go to the **Security Group Management** page of the VCS instances/Load Balancing > Select rules > click "**Delete**" above.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b9ae7ca9d9f718eb07b29583dc844cb9.png)
 
-- Or click the &nbsp;<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>&nbsp; menu button on the right side of the rule, and click **DELETE**.
+Or click the &nbsp;<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>&nbsp; menu button on the right side of the rule, and click **DELETE**.
 
 </TabItem>
 
