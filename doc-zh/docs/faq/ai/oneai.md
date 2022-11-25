@@ -1,5 +1,5 @@
 ---
-title : FAQ-oneai | zh
+title : FAQ-oneai
 GA: UA-155999456-1
 sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-oneai-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-oneai-zh'
@@ -17,7 +17,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-oneai-zh'
 
 使用 OneAI 服務將會產生訂閱費用，以及用於使用標註工具、託管筆記本、訓練模型、執行推論、資料儲存和資料處理資源相關費用。請參閱 OneAI 定價頁了解詳細資訊：
 
-<a href="https://man.twcc.ai/@twsdocs/pricing-zh#%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%EF%BC%9AOneAI"><b><font style={{'background-color':'#008ad8', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16p'}}"><font style={{'color':'white'}}> &nbsp;Enterprise&nbsp;</font></font></b></a> <a href="https://man.twcc.ai/@twccdocs/SJWlN3YDr#%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7"><font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16p'}}"><font style={{'color':'white'}}> <b>&nbsp;Academic&nbsp;</b></font></font></a> 
+<a href="https://man.twcc.ai/@twsdocs/pricing-zh#%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%EF%BC%9AOneAI"><font style={{'background-color':'#008ad8', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px'}}><font style={{'color':'white'}}> <b>&nbsp;Enterprise&nbsp;</b></font></font></a> <a href="https://man.twcc.ai/@twccdocs/SJWlN3YDr#%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7"><font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px'}}><font style={{'color':'white'}}> <b>&nbsp;Academic&nbsp;</b></font></font></a> 
 
 </details>
 
@@ -41,12 +41,12 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-oneai-zh'
 您可以在會員中心查看 OneAI 的分項費用。從會員中心選擇欲查看的專案，在上方選單選擇「額度用量」，從下拉式清單選取「OneAI」，即可根據商品項目可逐一查看分項費用：
 
 
-<font style={{'background-color':'#008ad8', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16p'}}><font style={{'color':'white'}}> <b>&nbsp;Enterprise&nbsp;</b></font></font>
+<font style={{'background-color':'#008ad8', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px'}}><font style={{'color':'white'}}> <b>&nbsp;Enterprise&nbsp;</b></font></font>
 
 
 ![](https://i.imgur.com/dsFrIcC.png)
 
-<font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16p'}}"><font style={{'color':'white'}}> <b>&nbsp;Academic&nbsp;</b></font></font> 與 Enterprise 步驟雷同，選擇「OneAI」前，需先選擇服務「TWCC」。
+<font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px'}}><font style={{'color':'white'}}> <b>&nbsp;Academic&nbsp;</b></font></font> 與 Enterprise 步驟雷同，選擇「OneAI」前，需先選擇服務「TWCC」。
 
 </details>
 
@@ -191,3 +191,4 @@ OneAI 模型可存放不限種類的模型。在匯入前，您須將模型打�
 - OneAI 筆記本服務、容器服務、推論服務 所使用到的運算資源可透過 [<ins>OneAI 資源監控</ins>](https://docs.oneai.twcc.ai/s/gEQO9lvF8) 檢視。
 - OneAI 訓練任務可查詢 7 天內的運算資源情形，請洽詢客服查詢並取得監控資料。
 
+</details>
