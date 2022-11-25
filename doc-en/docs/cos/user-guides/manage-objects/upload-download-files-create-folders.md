@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 # Upload/download files and create folders
 
 :::tip
-The following operation methods are only applicable to the [<ins>**public COS**<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@preview-twccdocs/doc-cos-main-en/%2F%40TWSC%2Fcos-overview-en) of the project. For managing your [<ins>**private COS**<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@preview-twccdocs/doc-cos-main-en/%2F%40TWSC%2Fcos-overview-en), please use [<ins>**third-party software**</ins>](https://man.twcc.ai/@preview-twccdocs/doc-cos-main-en/https%3A%2F%2Fman.twcc.ai%2F%40TWSC%2Fguide-cos-connect-info-en).
+The following operation methods are only applicable to the [<ins>**public COS**<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](../../overview.md) of the project. For managing your [<ins>**private COS**<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](../../overview.md), please use [<ins>**third-party software**</ins>](../../../category/使用第三方軟體管理檔案).
 :::
 
 
@@ -39,7 +39,7 @@ Upload files to Cloud Object Storage (COS) bucket from your local computer:
 * After selecting the file you want to upload, you can check the **Encryption** box on the left to encrypt the file with a key. Then click **UPLOAD**.
 
 :::info
-For more information on file encryption, please refer to: [<ins>File Encryption</ins>](https://man.twcc.ai/@TWSC/guide-cos-encryption-zh).
+For more information on file encryption, please refer to: [<ins>File Encryption</ins>](file-encryption.md).
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c2fc1e6c5d53307bb8950987f2d238e5.png)
