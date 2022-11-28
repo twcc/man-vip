@@ -40,7 +40,7 @@ You can create VCS instances with default configurations in just a few steps or 
 
 <br/><br/>
 
-The above images are available except for Windows 10 (BYOL), which is not available, and Windows Server, which comes with a license version.
+The above images are available except for Windows 10 (BYOL), and Windows Server comes with a license version. In addition, SQL Server Web is also available.
 
 - Please refer to [TWCC pricing (TWS users)](https://man.twcc.ai/@twsdocs/pricing-zh#%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Virtual-Compute-Service-VCS) for specific instance specifications.
 

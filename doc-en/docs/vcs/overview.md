@@ -16,7 +16,7 @@ Virtual Compute Service Instance is a traditional general host rental service pr
 
 #### <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fdddc2308f91f4689d5765a35b457c72.png" width="35" height="25"/> Built on the cloud with many options
 
-With just a few moves and clicks of the mouse, you can have your dedicated working environment in no time. We provide Linux Ubuntu, CentOS, Rocky Linux, Windows 10, Windows Server 2016... You can choose from a wide range of operating systems as well as the number of CPUs, memory capacity, and hardware resources.
+With just a few moves and clicks of the mouse, you can have your dedicated working environment in no time. We provide Linux Ubuntu, CentOS, Rocky Linux, SQL Server Web (<font style={{'background-color':'#008ad8', 'border-radius': '40px', 'padding': '0.2em', 'font-size': '8px'}}><font style={{'color':'white'}}>**&nbsp;Enterprise&nbsp;**</font></font>), Windows 10, Windows Server 2016... You can choose from a wide range of operating systems as well as the number of CPUs, memory capacity, and hardware resources.
 
 <br/>
 
