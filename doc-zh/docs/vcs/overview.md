@@ -17,7 +17,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-overview-zh'
 
 #### <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fdddc2308f91f4689d5765a35b457c72.png" width="35" height="25"/> 雲端佈建，多重選擇
 
-動動手指、點點滑鼠，即刻間擁有您專屬的工作環境。提供 Linux Ubuntu、CentOS、Rocky Linux、SQL Server Web (<font style={{'background-color':'#008ad8', 'border-radius': '40px', 'padding': '0.2em', 'font-size': '8p'}}><font style={{'color':'white'}}>**&nbsp;Enterprise&nbsp;**</font></font>)、Windows 10、Windows Server 2016...等多種作業系統供您建立，CPU 數量、記憶體容量、硬體資源任您選擇！
+動動手指、點點滑鼠，即刻間擁有您專屬的工作環境。提供 Linux Ubuntu、CentOS、Rocky Linux、SQL Server Web (<font style={{'background-color':'#008ad8', 'border-radius': '40px', 'padding': '0.2em', 'font-size': '8px'}}><font style={{'color':'white'}}>**&nbsp;Enterprise&nbsp;**</font></font>)、Windows 10、Windows Server 2016...等多種作業系統供您建立，CPU 數量、記憶體容量、硬體資源任您選擇！
 
 <br/>
 
