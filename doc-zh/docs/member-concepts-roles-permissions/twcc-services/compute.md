@@ -40,7 +40,6 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-compute-zh'
 
 
 :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 
 - 其他相關服務權限：
     - 高速檔案系統、雲端物件儲存角色權限請參考[<ins>此說明</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-zh)。
     - 容器連線安全角色權限請參考[<ins>此說明</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh#%E5%AE%B9%E5%99%A8%E9%80%A3%E7%B7%9A%E5%AE%89%E5%85%A8)。
@@ -114,7 +113,6 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-compute-zh'
 -->
 
 :::info
-<i class="fa fa-paperclip fa-20" aria-hidden="true"></i> **附註：** 
 - 其他相關服務權限：
     - 虛擬磁碟請參考[<ins>此說明</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-zh#%E5%8D%80%E5%A1%8A%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99)。
     - 虛擬網路 <!-- - 、VPN-->、負載平衡、Auto Scaling、進階安全請參考[<ins>此說明</ins>](https://man.twcc.ai/@twccdocs/role-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh)。
