@@ -27,21 +27,21 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-compute-en'
 |Monitor personal container|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
 |Monitor all containers in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|
 
-- Container duplicate
+- Container image
 
 | Function | Tenant Admin | Tenant User |
 | -------- | -------- | -------- |
-|Create container duplicate|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
-|View personal container duplicate|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|View all container duplicates in the project|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|
-|Use personal container duplicate|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|Use all container duplicates in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
+|Create container image|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
+|View personal container image|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View all container images in the project|<i class="fa fa-times" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>|
+|Use personal container image|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Use all container images in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>|
 
 
 :::info
 - Role permissions of other services：<br/>
-    - For role permissions of Hyper File System(HFS) and Cloud Object Storage(COS), please refer to <ins><a href = "https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-zh">this doc</a></ins>。
-    - For role permissions of Container Security, please refer to <a href = "https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh#%E5%AE%B9%E5%99%A8%E9%80%A3%E7%B7%9A%E5%AE%89%E5%85%A8">this doc</a>。
+    - For role permissions of Hyper File System(HFS) and Cloud Object Storage(COS), please refer to [<ins>this doc</ins>](storage.md).
+    - For role permissions of Container Security, please refer to [<ins>this doc</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh#%E5%AE%B9%E5%99%A8%E9%80%A3%E7%B7%9A%E5%AE%89%E5%85%A8).
 - Role permissions that using TWCC CLI or portal is the same.
 :::
 
@@ -96,10 +96,24 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-compute-en'
 |Delete all images in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 |Delete images shared by the source project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 
+<!-- 
+- Custom image
+
+| Function | Tenant Admin | Tenant User |
+| -------- | -------- | -------- |
+|Upload custom image|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View personal custom image information|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View all custom images information in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Use uploaded personal custom image|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Use all custom images in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Delete personal custom image||<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Delete all custom images in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+-->
+
 :::info
 - Role permission of other services：
-    - For Virtual Disk, please refer to [<ins>this doc</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-zh#%E5%8D%80%E5%A1%8A%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99).
-    - For virtual network(VNW), load balancing service(LBS), auto scaling, and advanced security service(ADS), please refer to [<ins>this doc</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-en).
+    - For Virtual Disk, please refer to [<ins>this doc</ins>](storage.md).
+    - For virtual network(VNW)<!-- - , VPN-->, load balancing service(LBS), auto scaling, and advanced security service(ADS), please refer to [<ins>this doc</ins>](networking-security.md).
 - Role permissions that using TWCC CLI or portal is the same.
 :::
 
