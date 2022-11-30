@@ -4,7 +4,7 @@
     "description": "The title in the navbar"
   },
   "item.label.Guidance": {
-    "message": "User Guidance",
+    "message": "User Guides",
     "description": "Navbar item with label Docs"
   },
   "item.label.FAQ": {
@@ -12,7 +12,7 @@
     "description": "Q&A"
   },
   "item.label.tutorial": {
-    "message": "Tutorials",
+    "message": "Concepts & Tutorials",
     "description": "Q&A"
   },
   "item.label.API": {

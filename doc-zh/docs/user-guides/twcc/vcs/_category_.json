@@ -1,0 +1,10 @@
+{
+  "label": "虛擬運算服務",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "提供服務概觀、使用指南，快速認識服務與了解服務建立、管理等基礎操作。",
+    "slug": "/user-guides/twcc/vcs"
+
+  }
+}

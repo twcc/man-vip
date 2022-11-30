@@ -170,27 +170,24 @@ const config = {
         },
         items: [
           {
-            type: "docSidebar",
-            sidebarId: "tutorialSidebar",
             label: "Guidance",
             position: "left",
+            to: "/docs/user-guides"			
             /**type: "doc",
             label: "Docs",
             docId: "introduction",
             position: "left",*/
           },
           {
-            type: "docSidebar",
-            sidebarId: "faq",
             label: "FAQ",
             position: "left",
+            to: "/docs/faqs/member-center"		
           },
-          {
-            type: "docSidebar",
-            sidebarId: "faq",
+          /**{
             label: "tutorial",
             position: "left",
-          },
+			to: "/docs/concepts-tutorials/services",
+          },*/
           {
             label: "API",
             position: "left",
