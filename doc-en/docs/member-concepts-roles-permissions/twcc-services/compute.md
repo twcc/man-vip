@@ -41,7 +41,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-compute-en'
 :::info
 - Role permissions of other services：<br/>
     - For role permissions of Hyper File System(HFS) and Cloud Object Storage(COS), please refer to [<ins>this doc</ins>](storage.md).
-    - For role permissions of Container Security, please refer to [<ins>this doc</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-zh#%E5%AE%B9%E5%99%A8%E9%80%A3%E7%B7%9A%E5%AE%89%E5%85%A8).
+    - For role permissions of Container Security, please refer to [<ins>this doc</ins>](docs/vcs/user-guides/security/security-group.md).
 - Role permissions that using TWCC CLI or portal is the same.
 :::
 
