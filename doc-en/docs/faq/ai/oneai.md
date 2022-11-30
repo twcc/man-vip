@@ -9,13 +9,13 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-oneai-en'
 # TWCC FAQs | OneAI 
 
 
-## 訂閱收費
+## Subscription Fee
 
 <details>
 
 <summary> Q1. What are the fees associated with using OneAI and how are they charged?</summary>
 
-Use of the OneAI service will incur subscription fees, as well as costs associated with using tagging tools, hosting notebooks, training models, performing inference, data storage, and data processing resources.請參閱 OneAI 定價頁了解詳細資訊：
+Use of the OneAI service will incur subscription fees, as well as costs associated with using tagging tools, hosting notebooks, training models, performing inference, data storage, and data processing resources. Please refer to OneAI Subscription Fee for  more information:
 
 <a href="https://man.twcc.ai/@twsdocs/pricing-zh#%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%EF%BC%9AOneAI"><font style={{'background-color':'#008ad8', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px'}}><font style={{'color':'white'}}> <b>&nbsp;Enterprise&nbsp;</b></font></font></a> <a href="https://man.twcc.ai/@twccdocs/SJWlN3YDr#%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7"><font style={{'background-color':'#FF0000', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px'}}><font style={{'color':'white'}}> <b>&nbsp;Academic&nbsp;</b></font></font></a> 
 
@@ -24,9 +24,9 @@ Use of the OneAI service will incur subscription fees, as well as costs associat
 
 <details>
 
-<summary> Q2. Why can't I subscribe to OneAI?</summary>
+<summary> Q2. Why can't I subscribe OneAI?</summary>
 
-1. Project Restrictions. If the item expires during the month, or if the available credit for the item is less than 100, the item cannot be subscribed.
+1. Project Restrictions. If the item expires during the month, or if the wallet balance for the item is less than 100, the item cannot be subscribed.
 2. Identity restrictions. Subscriptions can only be made by the tenant admin and will not be available to tenant users.
 
 Please refer to [<ins>OneAI Subscription Policies</ins>](https://man.twcc.ai/@twccdocs/doc-oneai-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Foneai-subscription-policy-zh) for  more information.
@@ -38,7 +38,7 @@ Please refer to [<ins>OneAI Subscription Policies</ins>](https://man.twcc.ai/@tw
 
 <summary> Q3. How do I view the itemized costs of OneAI services?</summary>
 
-You can view OneAI's itemized fees in the Member Center. Select the item you want to view from the Member Center, select **Credits Usage** from the top menu, and then select **OneAI** from the drop-down list to view the fees by product item:
+You can view OneAI's itemized fees in the Member Center. Select the item you want to view from the Member Center, select **Usage** from the top menu, and then select **OneAI** from the drop-down list to view the fees by product item:
 
 
 <font style={{'background-color':'#008ad8', 'border-radius': '30px', 'padding': '0.3em', 'font-size': '16px'}}><font style={{'color':'white'}}> <b>&nbsp;Enterprise&nbsp;</b></font></font>
@@ -57,7 +57,7 @@ You can view OneAI's itemized fees in the Member Center. Select the item you wan
 
 <summary> Q1. What is Notebook Service?</summary>
 
-The OneAI Notebook Service integrates leading deep learning frameworks(TensorFlow、PyTorch、 MXNet), suites with pre-built images supporting data science languages(Julia、R) and data analysis engines(Spark) in a flexible, manageable JupyterLab interactive and collaborative development environment. Please refer to [<ins>OneAI Notebook Service</ins>](https://docs.oneai.twcc.ai/s/Z8LdmjL9M#%E7%AD%86%E8%A8%98%E6%9C%AC%E6%9C%8D%E5%8B%99) for more information.
+OneAI Notebook Service integrates with leading deep learning frameworks(TensorFlow, PyTorch, MXNet) and suites. It supports pre-built image of data science languages(Julia, R) and data analysis engines(Spark), and it's a flexible, managed JupyterLab interactive collaborative development environment. Please refer to [<ins>OneAI Notebook Service</ins>](https://docs.oneai.twcc.ai/s/Z8LdmjL9M#%E7%AD%86%E8%A8%98%E6%9C%AC%E6%9C%8D%E5%8B%99) for more information.
 
 </details>
 
