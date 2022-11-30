@@ -5,6 +5,8 @@ hide_table_of_contents: false
 keywords:
   - twcc
   - faq
+sidebar_label: 'TWCC 常見問題'
+slug: '/faqs'
 ---
 # TWCC FAQs
 

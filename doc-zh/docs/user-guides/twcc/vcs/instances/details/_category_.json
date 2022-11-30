@@ -1,0 +1,10 @@
+{
+  "label": "詳細資訊",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "請點擊以下分類、文件以了解更多服務詳細資訊。",
+    "slug": "/user-guides/twcc/vcs/instances/details"
+  }
+
+}
