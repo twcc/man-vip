@@ -60,7 +60,7 @@ singularity exec --nv oras://registry.twcc.ai/singularity/<套件名>:<版本號
 - 本篇以 **[<ins>TWCC 虛擬運算個體</ins>](../../vcs/overview.md)** 示範，系統選用 CentOS 7。
 
 :::caution
-由於客製化 Singularity 容器映像檔需使用 sudo 權限，台灣杉二號 (命令列介面, HPC CLI) 服務為避免造成實體機損壞，恕無法提供 sudo 權限給用戶，建議使用 **[<ins>TWCC 虛擬運算個體</ins>](../../vcs/overview.md)** 環境編譯您的容器映像檔，完成後即可刪除。
+由於客製化 Singularity 容器映像檔需使用 sudo 權限，台灣杉二號 (命令列介面, HPC CLI) 服務為保持使用環境的一致性與用戶資料安全的保護，恕無法提供 sudo 權限給用戶，由於客製化 Singularity 容器映像檔需使用 sudo 權限，台灣杉二號 (命令列介面, HPC CLI) 服務為避免造成實體機損壞，恕無法提供 sudo 權限給用戶，建議使用 **[<ins>TWCC 虛擬運算個體</ins>](../../vcs/overview.md)** 環境編譯您的容器映像檔，完成後即可刪除。
 :::
 :::tip
 因為容器映像檔系統多使用 Ubuntu，建議虛擬運算個體環境選用 CentOS，較好判斷環境是容器之內或是之外。
