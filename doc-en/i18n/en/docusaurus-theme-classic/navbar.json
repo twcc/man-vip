@@ -3,17 +3,21 @@
     "message": "",
     "description": "The title in the navbar"
   },
-  "item.label.Docs": {
-    "message": "Docs",
+  "item.label.Guidance": {
+    "message": "User Guidance",
     "description": "Navbar item with label Docs"
-  },
-  "item.label.API": {
-    "message": "API",
-    "description": "Navbar item with label API"
   },
   "item.label.FAQ": {
     "message": "FAQ",
     "description": "Q&A"
+  },
+  "item.label.tutorial": {
+    "message": "Tutorials",
+    "description": "Q&A"
+  },
+  "item.label.API": {
+    "message": "API",
+    "description": "Navbar item with label API"
   },
   "item.label.Pricing": {
     "message": "Pricing",

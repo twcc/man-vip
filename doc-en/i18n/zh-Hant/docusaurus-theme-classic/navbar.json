@@ -3,16 +3,20 @@
     "message": "",
     "description": "The title in the navbar"
   },
-  "item.label.Docs": {
-    "message": "文件",
+  "item.label.Guidance": {
+    "message": "使用指南",
     "description": "Navbar item with label Docs"
+  },
+  "item.label.FAQ": {
+    "message": "常見問題",
+    "description": "Navbar item with label API"
+  },
+  "item.label.tutorial": {
+    "message": "概念詳解 & 案例教學",
+    "description": "Q&A"
   },
   "item.label.API": {
     "message": "API",
-    "description": "Navbar item with label API"
-  },
-  "item.label.FAQ": {
-    "message": "常見問題集",
     "description": "Navbar item with label API"
   },
   "item.label.Pricing": {

@@ -37,6 +37,11 @@ h1:first-child {
   --ifm-h1-font-size: 2rem !important;
 }
 
+.flex-center {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
 
 /* Sidebar Method labels */
 .api-method>.menu__link {

@@ -17,9 +17,9 @@ function HomepageHeader() {
           <Translate>homepage.title</Translate>
           {/* {siteConfig.title} */}
         </h1>
-        <p className="hero__subtitle">
+        {/* <p className="hero__subtitle">
           <Translate>homepage.tagline</Translate>
-          {/* {siteConfig.tagline} */}
+          {siteConfig.tagline}
           </p>
         <div className={styles.buttons}>
           <Link
@@ -27,7 +27,7 @@ function HomepageHeader() {
             to="/docs/overview">
             <Translate>homepage.getStarted</Translate>⏱️
           </Link>
-        </div>
+        </div> */}
       </div>
     </header>
   );
@@ -38,7 +38,8 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`Welcome to ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Description will go into a meta tag in <head />"
+      wrapperClassName={ styles.bg_color}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
