@@ -65,7 +65,7 @@ OneAI Notebook Service integrates with leading deep learning frameworks(TensorFl
 
 <summary> Q2. What solutions are pre-made by OneAI AI Maker?</summary>
 
-OneAI AI Maker provides 8 public templates for object detection, image classification, medical imaging, classification problems, regression problems, pedestrian attribute recognition, etc: YOLOv3、YOLOv4、Nvidia Clara Train 3.0、Nvidia Clara Train 4.0、Scikit-learn: regression、Scikit-learn: classification、Image-classification、PAR. Please refer to [<ins>Case Study</ins>](https://docs.oneai.twcc.ai/s/xKNcU3O5D#%E6%A1%88%E4%BE%8B%E6%95%99%E5%AD%B8) for more information.
+OneAI AI Maker provides 8 public templates for object detection, image classification, medical imaging, classification problems, regression problems, pedestrian attribute recognition, etc: YOLOv3, YOLOv4, Nvidia Clara Train 3.0, Nvidia Clara Train 4.0, Scikit-learn: regression, Scikit-learn: classification, Image-classification, PAR. Please refer to [<ins>Case Study</ins>](https://docs.oneai.twcc.ai/s/xKNcU3O5D#%E6%A1%88%E4%BE%8B%E6%95%99%E5%AD%B8) for more information.
 
 </details>
 
