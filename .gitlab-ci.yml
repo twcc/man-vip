@@ -31,17 +31,18 @@ sync-openapi:
   script:
     - apk add --no-cache git
     - git remote add gitSean https://${SEAN_USERNAME}:${SEAN_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git
+    - cd ../
     - git clone https://github.com/twcc/openapidoc.git
+    - cp -r ./openapidoc/Main/yaml/. ./manual/doc-zh/openapi
+    - cp -r ./openapidoc/Main/yaml/. ./manual/doc-en/openapi
     - export TZ=Asia/Taipei
     - export VERSION=`date +"openapi-sync-%Y%m%d_%H%M"`
     - git checkout -b $VERSION
-    - cd doc-zh/
-    - cp -r ../openapidoc/Main/yaml/. ./openapi
+    - cd manual/doc-zh/
     - npm install --legacy-peer-deps
     - npm run clear-api
     - npm run gen-api
     - cd ../doc-en/
-    - cp -r ../openapidoc/Main/yaml/. ./openapi
     - npm install --legacy-peer-deps
     - npm run clear-api
     - npm run gen-api
