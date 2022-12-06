@@ -32,12 +32,10 @@ sync-openapi:
     - apk add --no-cache git
     - git remote add gitSean https://${SEAN_USERNAME}:${SEAN_ACCESS_TOKEN}@git.twcc.ai/twcc/manual.git
     - cd ../
-    - ls
     - git clone https://github.com/twcc/openapidoc.git
     - cp -r ./openapidoc/Main/yaml/. ./manual/doc-zh/openapi
     - cp -r ./openapidoc/Main/yaml/. ./manual/doc-en/openapi
     - cd manual/doc-zh/
-    - ls
     - export TZ=Asia/Taipei
     - export VERSION=`date +"openapi-sync-%Y%m%d_%H%M"`
     - git checkout -b $VERSION
@@ -50,6 +48,7 @@ sync-openapi:
     - npm run gen-api
     - git config --global user.email "sean.chang@twsc.io"
     - git config --global user.name "sean.chang@twsc.io"
+    - cd ../
     - git add .
     - git commit -m $VERSION
     - git push -u gitSean $VERSION
