@@ -1,0 +1,9 @@
+{
+  "label": "System introduction",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Check the categories or documents below to learn more about the service.",
+    "slug": "/user-guides/twcc/twnia2-hpc-cli/system-intro"
+  }
+}

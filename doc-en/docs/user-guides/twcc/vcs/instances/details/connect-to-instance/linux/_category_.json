@@ -1,0 +1,9 @@
+{
+  "label": "Linux instance",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Check the categories or documents below for more service details.",
+    "slug": "/user-guides/twcc/vcs/connect-to-linux-instance"
+  }
+}

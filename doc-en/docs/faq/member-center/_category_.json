@@ -1,0 +1,9 @@
+{
+  "label": "TWS Member Center",
+  "position": 4,
+  "collapsible": false,
+  "link": {
+    "type": "generated-index",
+    "slug": "/faqs/tws-member-center"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "label": "TAIWANIA2 (HPC CLI)",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Check the overview and user guides of TWCC TAIWANIA2 (HPC CLI) to quickly understand the basic operations, such as job creation and management.",
+    "slug": "/user-guides/twcc/twnia2-hpc-cli"
+
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "label": "Instances",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Check the categories or documents below for more details of VCS instance.",
+    "slug": "/user-guides/twcc/vcs/instances"
+  }
+}

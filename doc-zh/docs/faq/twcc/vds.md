@@ -1,6 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 7
 title: '虛擬磁碟服務 (VDS)'
+sidebar_label: '虛擬磁碟服務'
+slug: '/faqs/twcc/vcs/vds'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-bss-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-bss-zh'
 ---

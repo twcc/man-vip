@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 sidebar_label: 'Console-除錯與維護工具'
-slug: '/user-guides/twcc/vcs/instances/details-console'
+slug: '/user-guides/twcc/vcs/instances/console'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-debug-tool-console-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-debug-tool-console-zh' 
 ---

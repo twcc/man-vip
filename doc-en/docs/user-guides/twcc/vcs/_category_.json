@@ -1,0 +1,10 @@
+{
+  "label": "Virtual Compute Service",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Check the overview and user guides of TWCC Virtual Compute Service to quickly understand the basic operations, such as instance creation and management.",
+    "slug": "/user-guides/twcc/vcs"
+
+  }
+}

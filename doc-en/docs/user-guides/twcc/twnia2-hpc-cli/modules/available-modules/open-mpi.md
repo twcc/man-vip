@@ -1,0 +1,65 @@
+---
+sidebar_position: 6
+sidebar_label: 'Open MPI'
+slug: '/user-guides/twcc/twnia2-hpc-cli/mocule-open-mpi'
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-twnia2-module-open-mpi-zh' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-module-open-mpi-zh' 
+---
+
+
+# Open MPI
+
+- Package official website
+  - [Open MPI](https://www.open-mpi.org/)
+  - [Open MPI github](https://github.com/open-mpi/ompi)
+- Release note
+  - [Open MPI 4.1.x NEWS](https://raw.githubusercontent.com/open-mpi/ompi/v4.1.x/NEWS)
+- Package source: Official Tar file compiles by the system administrator
+- If you need to re-compile Open MPI, you can select the compiled UCX to proceed.
+
+<br/>
+
+
+## Open MPI 4.1.1 module matrix
+
+| CUDA | module name    | usage                       |
+| ---- | -------------- | --------------------------- |
+| 11.3 | openmpi4/4.1.1 | ml cuda/11.3 openmpi4/4.1.1 |
+| 11.2 | openmpi4/4.1.1 | ml cuda/11.2 openmpi4/4.1.1 |
+| 11.1 | openmpi4/4.1.1 | ml cuda/11.1 openmpi4/4.1.1 |
+| 11.0 | openmpi4/4.1.1 | ml cuda/11.0 openmpi4/4.1.1 |
+| 10.2 | openmpi4/4.1.1 | ml cuda/10.2 openmpi4/4.1.1 |
+| 10.1 | openmpi4/4.1.1 | ml cuda/10.1 openmpi4/4.1.1 |
+| 10.0 | openmpi4/4.1.1 | ml cuda/10.0 openmpi4/4.1.1 |
+| 9.2  | openmpi4/4.1.1 | ml cuda/9.2 openmpi4/4.1.1  |
+| 9.0  | N/A            | N/A                         |
+
+
+- Open MPI 4.1.1 Compile-dependent environment
+
+| Open MPI | CUDA       | UCX    | GCC   | pmix     | hwloc    | libevent | CentOS |
+| -------- | ---------- | ------ | ----- | -------- | -------- | -------- | ------ |
+| 4.1.1    | 9.2 - 11.3 | 1.10.1 | 4.8.5 | internal | internal | internal | 7.8    |
+
+- Open MPI 4.1.1 Compilation parameters
+```bash
+./configure \
+--prefix="$specify_install_path" \
+--with-ucx="$specify_ucx_path" \
+--with-cuda="$specify_cuda_path" \
+--disable-getpwuid \
+--disable-static \
+--enable-shared \
+--enable-mpi-fortran \
+--enable-mpi-cxx \
+--enable-mpi1-compatibility \
+--without-xpmem \
+--without-hcoll \
+--with-slurm \
+--with-zlib \
+--with-pmi \
+--with-pmix=internal \
+--with-hwloc=internal \
+--with-libevent=internal \
+--with-platform=contrib/platform/mellanox/optimized
+```

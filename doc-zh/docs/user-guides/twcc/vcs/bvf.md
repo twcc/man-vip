@@ -1,6 +1,8 @@
 ---
 sidebar_position: 11
 title: '基礎虛擬防火牆'
+sidebar_label: '基礎虛擬防火牆'
+slug: '/user-guides/twcc/vcs/bvf'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vnf-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vnf-zh'
 ---

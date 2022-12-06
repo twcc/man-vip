@@ -231,7 +231,7 @@
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "homepage.title": {
-    "message": "TWCC 企業用戶文件",
+    "message": "TWCC 企業版文件",
     "description": "首頁標題"
   },
   "homepage.tagline": {
@@ -251,11 +251,11 @@
     "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
   },
   "homepage.services.GPU.create": {
-    "message": "建立開發型容器",
+    "message": "建立第一個開發型容器",
     "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
   },
   "homepage.services.GPU.link": {
-    "message": "連線容器",
+    "message": "連線您的容器",
     "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
   },
   "homepage.services.GPU.training": {
@@ -279,7 +279,7 @@
     "description": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency."
   },
   "homepage.services.HPC.queue": {
-    "message": "Queueru 計算資源",
+    "message": "Queue 與計算資源",
     "description": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency."
   },
   "homepage.services.HPC.cross": {
@@ -299,11 +299,11 @@
     "description": "Create a safe, secure, and flexible Virtual Compute Service instance in short order."
   },
   "homepage.services.VM.create": {
-    "message": "建立虛擬運算個體",
+    "message": "建立第一個虛擬運算個體",
     "description": "Create a safe, secure, and flexible Virtual Compute Service instance in short order."
   },
   "homepage.services.VM.link": {
-    "message": "連線個體",
+    "message": "連線您的個體",
     "description": "Create a safe, secure, and flexible Virtual Compute Service instance in short order."
   },
   "homepage.services.VM.host": {
@@ -323,11 +323,11 @@
     "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
   },
   "homepage.services.HSS.create": {
-    "message": "建立儲存體",
+    "message": "建立第一個 COS 儲存體",
     "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
   },
   "homepage.services.HSS.upload": {
-    "message": "上傳檔案",
+    "message": "將您的檔案上傳",
     "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
   },
   "homepage.services.HSS.sync": {

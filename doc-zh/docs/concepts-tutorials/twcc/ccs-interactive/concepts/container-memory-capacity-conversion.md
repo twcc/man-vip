@@ -1,5 +1,5 @@
 ---
-slug: '/concepts/twcc/ccs/container-memory-capacity-conversion'
+slug: '/concepts-tutorials/twcc/ccs/concepts/container-memory-capacity-conversion'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/concept-ccs-memory-conversion-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/concept-ccs-memory-conversion-zh'
 ---

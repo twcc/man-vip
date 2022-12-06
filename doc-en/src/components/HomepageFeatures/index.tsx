@@ -19,88 +19,88 @@ const FeatureList: FeatureItem[] = [
     title: 'homepage.services.GPU.title',
     Svg: require('@site/static/img/GPGPU.svg').default,
     description: [
-      {
-        name: 'homepage.services.GPU.start',
-        url: 'docs/overview'
-      },
+      //{
+      //  name: 'homepage.services.GPU.start',
+      //  url: 'docs/overview'
+      //},
       {
         name: 'homepage.services.GPU.create',
-        url: 'docs/overview'
+        url: 'docs/user-guides/twcc/ccs-interactive-container/create-container'
       },
       {
         name: 'homepage.services.GPU.link',
-        url: 'docs/overview'
+        url: 'docs/user-guides/twcc/ccs-interactive-container/connect-to-container'
       },
-      {
-        name: 'homepage.services.GPU.training',
-        url: 'docs/overview'
-      }
+      //{
+      //  name: 'homepage.services.GPU.training',
+      //  url: 'docs/overview'
+      //}
     ]
   },
   {
     title: 'homepage.services.HPC.title',
     Svg: require('@site/static/img/HPC.svg').default,
     description: [
-      {
-        name: 'homepage.services.HPC.start',
-        url: 'docs/overview'
-      },
+      //{
+      //  name: 'homepage.services.HPC.start',
+      //  url: 'docs/overview'
+      //},
       {
         name: 'homepage.services.HPC.link',
-        url: 'docs/overview'
+        url: 'docs/user-guides/twcc/twnia2-hpc-cli/connection'
       },
       {
         name: 'homepage.services.HPC.queue',
-        url: 'docs/overview'
+        url: 'docs/user-guides/twcc/twnia2-hpc-cli/queues'
       },
-      {
-        name: 'homepage.services.HPC.cross',
-        url: 'docs/overview'
-      }
+      //{
+      //  name: 'homepage.services.HPC.cross',
+      //  url: 'docs/overview'
+      //}
     ]
   },
   {
     title: 'homepage.services.VM.title',
     Svg: require('@site/static/img/VM.svg').default,
     description: [
-      {
-        name: 'homepage.services.VM.start',
-        url: 'docs/overview'
-      },
+      //{
+      //  name: 'homepage.services.VM.start',
+      //  url: 'docs/overview'
+      //},
       {
         name: 'homepage.services.VM.create',
-        url: 'docs/overview'
+        url: 'docs/user-guides/twcc/vcs/create-instance'
       },
       {
         name: 'homepage.services.VM.link',
-        url: 'docs/overview'
+        url: 'docs/user-guides/twcc/vcs/connect-to-instance'
       },
-      {
-        name: 'homepage.services.VM.host',
-        url: 'docs/overview'
-      }
+      //{
+      //  name: 'homepage.services.VM.host',
+      //  url: 'docs/overview'
+      //}
     ]
   },
   {
     title: 'homepage.services.HSS.title',
     Svg: require('@site/static/img/HSS.svg').default,
     description:  [
-      {
-        name: 'homepage.services.HSS.start',
-        url: 'docs/overview'
-      },
+      //{
+      //  name: 'homepage.services.HSS.start',
+      //  url: 'docs/overview'
+      //},
       {
         name: 'homepage.services.HSS.create',
-        url: 'docs/overview'
+        url: 'docs/user-guides/twcc/cos/create-delete-buckets'
       },
       {
         name: 'homepage.services.HSS.upload',
-        url: 'docs/overview'
+        url: 'docs/user-guides/twcc/cos/upload-download-files-create-folders'
       },
-      {
-        name: 'homepage.services.HSS.sync',
-        url: 'docs/overview'
-      }
+      //{
+      //  name: 'homepage.services.HSS.sync',
+      //  url: 'docs/overview'
+      //}
     ]
   },
 ];

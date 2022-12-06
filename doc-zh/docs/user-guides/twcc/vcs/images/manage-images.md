@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 sidebar_label: '映像檔管理'
-slug: '/user-guides/twcc/vcs/image-management'
+slug: '/user-guides/twcc/vcs/manage-images'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-vds-manage-instance-image-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-vds-manage-instance-image-zh'
 ---
@@ -33,6 +33,9 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_186918c503fa42eae342f88955c2bea3.png)
 
+:::info
+您可以點選右側 「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 並選擇「**編輯**」更新映像檔描述。
+:::
 
 </TabItem>
 
@@ -67,7 +70,7 @@ twccli ls vcs -cus-img -s 2580765
 
 <br/>
 
-## 分享映像檔
+## 分享映像檔、分享管理
 
 TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客製化部署完成的個體，在建立成映像檔後，分享複製給目標計畫使用，相同的環境可以跨計畫建立。
 
@@ -86,11 +89,13 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 
 <TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
+**分享映像檔**
+
 * 進入映像檔管理頁後，選擇一映像檔，點選右側 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> 選單按鈕，再選擇「**分享**」。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9cba50a5788cf4a04152d259a29c296f.png)
 
-* 選擇分享的專案 (接收此分享的目標計畫)、建立映像檔名稱後，點選「**確定**」即跳轉至「**[映像檔分享管理](sharing-history.md)**」頁，進行分享的程序。
+* 選擇分享的專案 (接收此分享的目標計畫)、建立映像檔名稱後，點選「**確定**」即跳轉至「**映像檔分享管理**」頁，進行分享的程序。
 
 ![](https://i.imgur.com/g2HnQk6.png)
 
@@ -98,6 +103,18 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 
 映像檔名稱前方預設帶有您所屬的計畫 (來源計畫) 編號，後方為原映像檔的名稱 (可編輯)，方便目標計畫了解映像檔分享來源。
 
+:::
+
+**分享管理**
+
+進入「**映像檔分享管理**」頁面可檢視已分享的映像檔名稱、分享的專案、分享狀態、分享建立時間。
+
+分享後，映像檔即進入 **`approved`** (分享中) 狀態，分享完成後呈現 **`finished`** (分享完成) 狀態，目標計畫即可選用此分享的映像檔[建立客製化個體](../create/create-custom-instances.md)。
+
+![](https://i.imgur.com/vhE9VAy.png)
+
+:::info
+僅租戶管理員能檢視本人 (非全計畫) 的映像檔分享資訊。
 :::
 
 :::tip

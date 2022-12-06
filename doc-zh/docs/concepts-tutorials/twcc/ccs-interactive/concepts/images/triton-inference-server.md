@@ -9,11 +9,11 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/ccs-concept-image-
 
 # <img style={{width:55+'px'}} src='https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f55059e9d0a6ac45c44bcc0ec1bebff5.png' /> Triton Inference Server
 
-TWCC 提供 NGC’s TensorRT Inference Server 立即可用的工作環境。TensorRT 推理伺服器透過 HTTP 端點提供推理服務，能讓遠端的用戶對伺服器管理的各式模型提出推理運算的需求。除了提供 TensorRT 推理服務的容器環境，亦提供 C++ 與 Python 的用戶端函式庫，以及 GitHub 上推理伺服器的相關文件。
+TWCC 提供 NGC’s Triton Inference Server 立即可用的工作環境。Triton 推理伺服器透過 HTTP 端點提供推理服務，能讓遠端的用戶對伺服器管理的各式模型提出推理運算的需求。除了提供 Triton 推理服務的容器環境，亦提供 C++ 與 Python 的用戶端函式庫，以及 GitHub 上推理伺服器的相關文件。
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">映像檔版本資訊</span> 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_406447ea29f101fc48b37000ddd0fbe6.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_406cf90172b776c8c6dfbf40edc60aec.png)
 
 
 
@@ -27,6 +27,8 @@ TWCC 提供 NGC’s TensorRT Inference Server 立即可用的工作環境。Tens
 
 <summary><b>點我參考詳細版本套件資訊</b></summary>
 
+- [tritonserver-22.08-py3](https://docs.nvidia.com/deeplearning/triton-inference-server/release-notes/rel_22-05.html#rel_22-08)
+- [tritonserver-22.05-py3](https://docs.nvidia.com/deeplearning/triton-inference-server/release-notes/rel_22-05.html#rel_22-05)
 - [tritonserver-22.02-py3](https://docs.nvidia.com/deeplearning/triton-inference-server/release-notes/rel_22-02.html#rel_22-02)
 - [tritonserver-21.11-py3](https://docs.nvidia.com/deeplearning/triton-inference-server/release-notes/rel_21-11.html#rel_21-11)
 - [tritonserver-21.08-py3](https://docs.nvidia.com/deeplearning/triton-inference-server/release-notes/rel_21-08.html#rel_21-08)

@@ -2,7 +2,6 @@
 title: HPC 高速運算任務
 sidebar_label: 'HPC 高速運算任務'
 sidebar_position: 3
-GA: UA-155999456-1
 sync_original_production: 'https://man.twcc.ai/@twccdocs/doc-hpc-job-main-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-hpc-job-main-zh'
 ---
@@ -18,7 +17,7 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 本 HPC 高速運算任務搭配 Singularity 來運行容器，用戶可使用本服務提供的 Docker 映像檔來進行相關 AI 運算。
 
 :::info
-:book: 若需使用 8 顆以上 GPU 或執行跨節點高速運算，請使用[<ins>台灣杉二號(命令列介面)</ins>](twnia2-hpc-cli/overview.md)，並參考以下教學案例：
+若需使用 8 顆以上 GPU 或執行跨節點高速運算，請使用[<ins>台灣杉二號(命令列介面)</ins>](twnia2-hpc-cli/overview.md)，並參考以下教學案例：
 - [<ins>HowTo：建立 TWNIA2 容器</ins>](twnia2-hpc-cli/tutorials/create-twnia2-containers.md)
 - [<ins>HowTo：容器跨節點高速運算－AI Benchmark</ins>](twnia2-hpc-cli/tutorials/ai-benchmark-container.md)
 :::
@@ -42,7 +41,7 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 * 接著在任務 1 區塊選擇映像檔版本/快照、硬體規格及輸入指令，當容器啟動後會自動執行該指令的內容或程式。
  
 :::info
-:bulb: 提示：請先使用 [「HFS 儲存服務」](hfs/overview.md)上傳欲執行的程式內容。
+請先使用 [「高速檔案系統」](hfs)上傳欲執行的程式內容。
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e7968b03779782ea62894123f90a592c.png)
@@ -55,26 +54,25 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 
 
 :::info 
-:book: 參見
-* [雲端物件儲存服務](cos/overview.md)
-* [HFS 儲存服務](hfs/overview.md)
+* [雲端物件儲存服務](cos)
+* [高速檔案系統](hfs)
 :::
 
-* HPC 高速運算任務服務可設定多項運算任務，按一下「+新增任務」，可展開任務 2 設定區塊，繼續設定其他任務。
+* HPC 高速運算任務服務可設定多項運算任務，按一下「**+新增任務**」，可展開任務 2 設定區塊，繼續設定其他任務。
 
 :::info
-:bulb: 提示：目前 HPC 高速運算一次最多能設定五個任務。每個任務最多能跑四天。
+目前 HPC 高速運算一次最多能設定五個任務。每個任務最多能跑四天。
 :::
 
-* 接著重覆任務 1 的操作，選擇映像檔版本/快照、硬體規格、輸入指令及儲存資訊設定多項運算任務。任務設定完成後接著點擊「下一步：排程>」。
+* 接著重覆任務 1 的操作，選擇映像檔版本/快照、硬體規格、輸入指令及儲存資訊設定多項運算任務。任務設定完成後接著點擊「**下一步：排程>**」。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0ea8ef0842f5f3602baaead2bd02b2c8.png)
 
 
-* 排程設定提供「啟動後立即執行」及「啟動後在指定任務時間開始執行」兩種選擇，選擇任務的執行排程後接著點擊「下一步：檢閱+建立>」。
+* 排程設定提供「**啟動後立即執行**」及「**啟動後在指定任務時間開始執行**」兩種選擇，選擇任務的執行排程後接著點擊「**下一步：檢閱+建立>**」。
 
 :::info
-:bulb: 提示：指定時間的任務最快可從設定時的下一個整點開始執行，此任務需手動啟動，才會開始執行任務（包括已排程任務）。
+指定時間的任務最快可從設定時的下一個整點開始執行，此任務需手動啟動，才會開始執行任務（包括已排程任務）。
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2673b4fab8dc081225d8d6b64983d1df.png)
@@ -82,7 +80,7 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_07c8012659af88030c30c044e51fb6ad.png)
 
 
-* 檢視 HPC 高速運算任務的配置、命令、排程及預計使用額度等資訊，確認後按下「建立」即完成。
+* 檢視 HPC 高速運算任務的配置、命令、排程及預計使用額度等資訊，確認後按下「**建立**」即完成。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_64556c6ec8631e8d1248ca5aa060b9e0.png)
 
@@ -90,7 +88,7 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 
 ## HPC 高速運算任務管理
 
-* 任務建立後，會出現在 HPC 高速運算任務管理列表的最上方，請務必「啟動」任務，待狀態從 Inactive 變為 Ready 時，任務將立即執行，或在指定時間執行運算
+* 任務建立後，會出現在 HPC 高速運算任務管理列表的最上方，請務必「**啟動**」任務，待狀態從 Inactive 變為 Ready 時，任務將立即執行，或在指定時間執行運算
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_99d308c271599172e402f292797b32a1.png)
 
@@ -99,26 +97,29 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_433de813c78b4174d620b873754955bb.png)
 
 
-* 進入HPC 高速運算任務詳細資料「配置」頁面，可以檢視任務的基本資訊、 連線資訊及任務詳細規格，或執行「啟動」、「停止」、「刪除」和「重新整理」等功能。
+* 進入HPC 高速運算任務詳細資料「**配置**」頁面，可以檢視任務的基本資訊、 連線資訊及任務詳細規格，或執行「**啟動**」、「**停止**」、「**刪除**」和「**重新整理**」等功能。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8af1bf00e626d2040e4e68104c9e184b.png)
 
 
-* 點擊「任務列表」可查看任務的運算開始時間、結束時間及狀態。
+* 點擊「**任務列表**」可查看任務的運算開始時間、結束時間及狀態。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_40da7f4c2b4cb5ee07370c5d314926af.png)
 
 
-* 點擊「查看 LOG」可查看任務執行的詳細 LOG 資訊。
+* 點擊「**查看 LOG**」可查看任務執行的詳細 LOG 資訊。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7a9928ea5db2d6d8d3c82b71f38b0fa4.png)
 
+:::info
+您可以[連線檔案傳輸節點](./hfs/user-guides/connect-data-transfer-node.md)，至 `/work/{{主機帳號}}/slurm_log` 路徑檢視所有高速運算任務的運算紀錄。
+:::
 
 ## HPC 高速運算任務監控
-* 點選左側「HPC 高速運算任務監控」，可查看本系統為 HPC 高速運算任務監控提供監控資訊服務，包括計畫的總累計使用量、特定使用者的累計使用量、GPU 的使用數量和使用時間等。
+* 點選左側「**HPC 高速運算任務監控**」，可查看本系統為 HPC 高速運算任務監控提供監控資訊服務，包括計畫的總累計使用量、特定使用者的累計使用量、GPU 的使用數量和使用時間等。
 
 :::info
-:bulb: 提示：計畫使用者僅能看到自己資源使用資訊，計畫管理者可以看到計畫內所有使用者資源使用情形，以便控管整個專案的資源使用額度。
+租戶使用者僅能看到自己資源使用資訊，租戶管理員可以看到專案內所有使用者資源使用情形，以便控管整個專案的資源使用額度。
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c1fe85aae907eb8ca655a93d4e8a2cf0.png)
@@ -135,13 +136,13 @@ TWCC HPC 高速運算任務使用國際開源軟體 Slurm 作為 HPC 的資源�
 ### 連線資料傳輸節點 
 
 :::info
-:book: 參見 [HFS 高速儲存服務](hfs/overview.md)，使用 SFTP + FileZilla 以圖形化的操作介面，連線並傳輸檔案。
+[高速檔案系統](hfs)，使用 SFTP + FileZilla 以圖形化的操作介面，連線並傳輸檔案。
 :::
 
 ### 連線登入節點
 
 :::info
-:book: 參見 [登入「登入節點」](twnia2-hpc-cli/user-guides/service-overview/login-node-data-transfer-node.md)，連線登入節點
+[登入「登入節點」](twnia2-hpc-cli/user-guides/service-overview/login-node-data-transfer-node.md)，連線登入節點
 :::
 
 * 登入成功之後，可直接使用 Slurm 的基本指令 `sinfo -V`，應會返回此服務的版本資訊，以確認此帳號可以正常使用 Slurm 的功能。

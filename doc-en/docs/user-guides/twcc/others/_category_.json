@@ -1,0 +1,10 @@
+{
+  "label": "General operations",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "description": "Check the overview and user guides of TWCC general operations to quickly understand the basic operations.",
+    "slug": "/user-guides/twcc/general"
+
+  }
+}

@@ -11,7 +11,7 @@ slug: /user-guides/twcc/oneai
 
 :::caution 建置中
 
-請您點擊[此連結](https://man.twcc.ai/@twccdocs/doc-oneai-main-zh)以檢視 OneAI 各式最新手冊、資訊。
+文件建置中並即將發布，請您點擊[此連結](https://man.twcc.ai/@twccdocs/doc-oneai-main-zh)以檢視 OneAI 各式最新手冊、資訊。
 
 :::
 

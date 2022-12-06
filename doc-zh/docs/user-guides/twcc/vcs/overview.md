@@ -2,6 +2,7 @@
 sidebar_position: 1
 title: '服務概觀'
 sidebar_label: '服務概觀'
+slug: '/user-guides/twcc/vcs/overview'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-overview-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-overview-zh' 
 ---
@@ -17,7 +18,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-overview-zh'
 
 #### <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fdddc2308f91f4689d5765a35b457c72.png" width="35" height="25"/> 雲端佈建，多重選擇
 
-動動手指、點點滑鼠，即刻間擁有您專屬的工作環境。提供 Linux Ubuntu、CentOS、Rocky Linux、Windows 10、Windows Server 2016...等多種作業系統供您建立，CPU 數量、記憶體容量、硬體資源任您選擇！
+動動手指、點點滑鼠，即刻間擁有您專屬的工作環境。提供 Linux Ubuntu、CentOS、Rocky Linux、SQL Server Web (<font style={{'background-color':'#008ad8', 'border-radius': '40px', 'padding': '0.2em', 'font-size': '8px'}}><font style={{'color':'white'}}>**&nbsp;Enterprise&nbsp;**</font></font>)、Windows 10、Windows Server 2016...等多種作業系統供您建立，CPU 數量、記憶體容量、硬體資源任您選擇！
 
 <br/>
 
@@ -38,9 +39,3 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-overview-zh'
 擁有負載平衡機制，可設定系統資源使用條件，自動偵測並彈性擴展縮減處理環境、調配資源，無需時時擔心計算工作因系統超載而被迫中斷。
 
 <br/>
-
-
-## 使用介面
-
-- [TWCC 入口網站](https://www.twcc.ai)
-- [TWCC CLI](https://github.com/twcc/TWCC-CLI)
