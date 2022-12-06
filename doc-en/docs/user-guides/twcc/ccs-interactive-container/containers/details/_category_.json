@@ -1,0 +1,9 @@
+{
+  "label": "Container details",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Check the categories or documents below for more details of the functions on the container details page.",
+    "slug": "/user-guides/twcc/ccs-interactive-container/container-details"
+  }
+}

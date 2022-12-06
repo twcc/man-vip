@@ -1,0 +1,33 @@
+---
+id: get-project-quotas
+title: "get project quotas"
+description: "get project quotas"
+sidebar_label: "get project quotas"
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["project"],"description":"get project quotas","parameters":[{"name":"project","in":"query","description":"Project ID is required to request","required":true,"schema":{"type":"integer"}},{"name":"x-api-host","in":"header","description":"Authentication Required Parameters","required":true,"schema":{"type":"string","default":"k8s-D-twcc"}}],"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"array","items":{"required":["cpu","gpu","memory","project"],"type":"object","properties":{"project":{"type":"object","properties":{"matchLabels":{"type":"array","items":{"type":"string"}},"id":{"format":"int64","type":"integer"},"name":{"type":"string"},"platform":{"type":"string"},"transparent_mode":{"type":"boolean"}},"required":["matchLabels","id","name","platform","transparent_mode"]},"gpu":{"type":"integer","format":"int64"},"cpu":{"type":"integer","format":"int64"},"memory":{"type":"integer","format":"int64"},"ipvs_port":{"type":"integer","format":"int64"},"floatingip":{"type":"integer","format":"int32"}}}}}}}},"method":"get","path":"/project_quotas/","servers":[{"url":"{apigateway}/api/v3/{ApiHost}/","variables":{"apigateway":{"default":"https://apigateway.twcc.ai"},"ApiHost":{"default":"k8s-D-twcc"}}}],"security":[{"ApiKeyAuth":[]}],"securitySchemes":{"ApiKeyAuth":{"type":"apiKey","in":"header","name":"x-api-key"}},"info":{"version":"2.0.0","title":"CCS API","description":"This is CCS API.\n"},"postman":{"name":"get project quotas","description":{"content":"get project quotas","type":"text/plain"},"url":{"path":["project_quotas",""],"host":["{{baseUrl}}"],"query":[{"disabled":false,"description":{"content":"(Required) Project ID is required to request","type":"text/plain"},"key":"project","value":""}],"variable":[]},"header":[{"disabled":false,"description":{"content":"(Required) Authentication Required Parameters","type":"text/plain"},"key":"x-api-host","value":""},{"key":"Accept","value":"application/json"}],"method":"GET"}}
+sidebar_class_name: "get api-method"
+info_path: docs/api/CCS/ccs-api
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem"
+import SchemaTabs from "@theme/SchemaTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import TabItem from "@theme/TabItem";
+
+## get project quotas
+
+
+
+get project quotas
+
+<details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Query Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"project","in":"query","description":"Project ID is required to request","required":true,"schema":{"type":"integer"}}}></ParamsItem></ul></div></details><details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Header Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"x-api-host","in":"header","description":"Authentication Required Parameters","required":true,"schema":{"type":"string","default":"k8s-D-twcc"}}}></ParamsItem></ul></div></details><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
+
+OK
+
+</div><div><MimeTabs schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong><span style={{"opacity":"0.6"}}> array</span></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={true} className={"schemaItem"}><details style={{}}><summary style={{}}><strong>project</strong><span style={{"opacity":"0.6"}}> object</span></summary><div style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"matchLabels"} required={false} schemaDescription={undefined} schemaName={"string[]"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"id"} required={false} schemaDescription={undefined} schemaName={"int64"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"name"} required={false} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"platform"} required={false} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"transparent_mode"} required={false} schemaDescription={undefined} schemaName={"boolean"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem></div></details></SchemaItem><SchemaItem collapsible={false} name={"gpu"} required={false} schemaDescription={undefined} schemaName={"int64"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"cpu"} required={false} schemaDescription={undefined} schemaName={"int64"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"memory"} required={false} schemaDescription={undefined} schemaName={"int64"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"ipvs_port"} required={false} schemaDescription={undefined} schemaName={"int64"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"floatingip"} required={false} schemaDescription={undefined} schemaName={"int32"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"[\n  {\n    \"project\": {\n      \"matchLabels\": [\n        \"string\"\n      ],\n      \"id\": 0,\n      \"name\": \"string\",\n      \"platform\": \"string\",\n      \"transparent_mode\": true\n    },\n    \"gpu\": 0,\n    \"cpu\": 0,\n    \"memory\": 0,\n    \"ipvs_port\": 0,\n    \"floatingip\": 0\n  }\n]"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div>
+      

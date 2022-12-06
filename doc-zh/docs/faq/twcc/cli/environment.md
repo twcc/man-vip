@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 title: '部署環境'
+slug: '/faqs/twcc/cli/deploy'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-cli-deploy-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-cli-deploy-zh'
 ---

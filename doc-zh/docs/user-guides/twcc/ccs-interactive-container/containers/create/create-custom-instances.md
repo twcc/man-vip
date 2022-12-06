@@ -16,15 +16,15 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-* 由服務列表點選「**開發型容器**」，在「**開發型容器管理**」頁面，點擊「**＋建立**」。
+* 進入[開發型容器管理](/docs/user-guides/twcc/ccs-interactive-container/containers/manage-containers.md)頁，並點擊「**＋建立**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8085ef8c082d3387eb95477be448a38a.png)
+![](https://i.imgur.com/lpBLaPf.png)
 
 * 在選擇映像檔類型頁面，點選「**Custom Image**」
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_81035131a533a3a71a3df759542725c3.png)
 
-* 填寫容器基本資訊與硬體規格配置，並選擇自訂的映像檔，接著點擊「**下一步：儲存資訊>**」，其他步驟同建立開發型容器。
+* 填寫容器基本資訊與硬體規格配置，並選擇自訂的映像檔，接著點擊「**下一步：儲存資訊>**」，其他步驟同[建立開發型容器](/docs/user-guides/twcc/ccs-interactive-container/containers/create/create-container.md)。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_eb232de503b359b00ddf85467ca46c87.png)
 

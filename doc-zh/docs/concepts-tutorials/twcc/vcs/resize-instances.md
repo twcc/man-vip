@@ -42,13 +42,13 @@ import TabItem from '@theme/TabItem';
 
 - 輸入***映像檔名稱*** 並且點選「**確認**」。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e5a610cd361317db4582d2fbce6dfb86.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6db5bf42a2241b5cb33d06ca66e47d57.png)
 
 
 - 完成建立虛擬運算個體映像檔
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e0e853a829b12733cfb22ab94b103d59.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b56086ae6e9bd6eb94bf72f918e8d80.png)
 
 
 <br/>

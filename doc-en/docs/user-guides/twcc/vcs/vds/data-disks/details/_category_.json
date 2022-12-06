@@ -1,0 +1,10 @@
+{
+  "label": "Disk details",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Check the categories or documents below for more details of the functions on the disk details page.",
+    "slug": "/user-guides/twcc/vcs/vds/data-disk-details"
+  }
+
+}

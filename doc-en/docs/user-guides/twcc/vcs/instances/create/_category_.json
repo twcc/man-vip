@@ -1,0 +1,10 @@
+{
+  "label": "Create instances",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Check the categories or documents below for more details on creating VCS instances.",
+    "slug": "/user-guides/twcc/vcs/instances/create-instances"
+  }
+
+}

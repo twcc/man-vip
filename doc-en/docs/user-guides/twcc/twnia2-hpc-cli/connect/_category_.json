@@ -1,0 +1,9 @@
+{
+  "label": "Connection methods",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Check the categories or documents below to learn more about the service.",
+    "slug": "/user-guides/twcc/twnia2-hpc-cli/connection"
+  }
+}

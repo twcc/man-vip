@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 ## 建立客製化個體
 
-選用計畫內建立的映像檔、其他計畫分享的映像檔，建立個體步驟不同，請依適用情境參以下操作步驟。
+可選用計畫內建立的映像檔、其他計畫分享的映像檔，建立客製化個體，請依適用情境參以下操作步驟。
 
 <br/>
 
@@ -42,10 +42,11 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-建立步驟同 [建立虛擬運算個體](./create-instances.md)，僅「**映像檔**」改選擇所要回復的映像檔版本 `(private)xxx您自訂的映像檔名稱xxx`，即可完成建立。
+建立步驟同 [<ins>建立虛擬運算個體</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh)，並請注意：
+- 「**映像檔類型**」：需依映像檔的來源個體作業系統選擇。
+- 「**映像檔**」：選擇所要回復的映像檔版本，請選用計畫內建立的映像檔 (`(private)xxx您自訂的映像檔名稱xxx`)或來源計畫分享的映像檔 (`(private)來源計畫ID-xxx您自訂的映像檔名稱xxx`)。
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_020639a28b42ede29aa4ca4ceb1612a5.png)
-
 
 :::tip
 <details>

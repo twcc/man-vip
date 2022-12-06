@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+sidebar_label: '容器 DNS'
 slug: '/user-guides/twcc/ccs-interactive-container/dns'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-dns-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-dns-zh' 

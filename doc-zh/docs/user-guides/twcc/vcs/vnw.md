@@ -1,6 +1,8 @@
 ---
 sidebar_position: 6
 title: '虛擬網路'
+sidebar_label: '虛擬網路'
+slug: '/user-guides/twcc/vcs/vnw'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-vnw-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-vnw-zh'
 ---
