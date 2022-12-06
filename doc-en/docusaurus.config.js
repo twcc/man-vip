@@ -9,7 +9,7 @@ const env_list = {
   },
   set_edit_url = (locale, versionDocsDirPath, docPath) => {
   const baseUrl = `https://github.dev/twcc/man-vip/blob/tws-sync`,
-        zhUrl = `${baseUrl}/doc-zh/${versionDocsDirPath}/${docPath}`;
+  zhUrl = `${baseUrl}/doc-zh/${versionDocsDirPath}/${docPath}`;
   if (docPath === 'releaseNotes.md') return zhUrl;
   const rdir = i18nDirPath[versionDocsDirPath];
   // if (locale !== "zh-Hant" && rdir) return `${baseUrl}/i18n/${locale}/${versionDocsDirPath.replace(versionDocsDirPath,rdir)}/${docPath}`;
@@ -30,7 +30,7 @@ const config = {
   baseUrl: "/en/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
-  favicon: "../img/favicon-150x150.ico",
+  favicon: "img/favicon-150x150.ico",
 
   organizationName: "TWS Co. Ltd.", // Usually your GitHub org/user name.
   projectName: "Manual", // Usually your repo name.
@@ -170,27 +170,24 @@ const config = {
         },
         items: [
           {
-            type: "docSidebar",
-            sidebarId: "tutorialSidebar",
             label: "Guidance",
             position: "left",
+            to: "/docs/user-guides"			
             /**type: "doc",
             label: "Docs",
             docId: "introduction",
             position: "left",*/
           },
           {
-            type: "docSidebar",
-            sidebarId: "faq",
             label: "FAQ",
             position: "left",
+            to: "/docs/faqs"		
           },
-          {
-            type: "docSidebar",
-            sidebarId: "faq",
+          /**{
             label: "tutorial",
             position: "left",
-          },
+			to: "/docs/concepts-tutorials/services",
+          },*/
           {
             label: "API",
             position: "left",
@@ -222,7 +219,7 @@ const config = {
             items: [
               {
                 label: "Overview",
-                to: "/docs/overview",
+                to: "docs/user-guides",
               },
             ],
           },
@@ -255,7 +252,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-    })
+    }),
 };
 
 module.exports = config;

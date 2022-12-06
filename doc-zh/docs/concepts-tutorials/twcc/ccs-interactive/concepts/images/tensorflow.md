@@ -16,7 +16,7 @@ TWCC 提供 NGC optimized TensorFlow 共 20 種立即可用的工作環境。Ten
 
 ## <i class="fa fa-sticky-note" aria-hidden="true"></i> <span class="ccsimglist">映像檔版本資訊</span> 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7bdfd7263f5b129d2e0da835859cbd62.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1af3ce1ae4ebece05af6d07226a56038.png)
 
 <details>
 <summary>21.02 以前版本</summary>
@@ -37,6 +37,8 @@ TWCC 提供 NGC optimized TensorFlow 共 20 種立即可用的工作環境。Ten
 
 <summary><b>點我參考詳細版本套件資訊</b></summary>
 
+- [tensorflow-22.08-tf1/tf2-py3](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_22-08.html#rel_22-08)
+- [tensorflow-22.05-tf1/tf2-py3](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_22-05.html#rel_22-05)
 - [tensorflow-22.02-tf1/tf2-py3](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_22-02.html#rel_22-02)
 - [tensorflow-21.11-tf1/tf2-py3](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_21-11.html#rel_21-11)
 - [tensorflow-21.08-tf1/tf2-py3](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_21-08.html#rel_21-08)

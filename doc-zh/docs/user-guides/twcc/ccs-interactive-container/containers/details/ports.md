@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+sidebar_label: '容器連接埠'
 slug: '/user-guides/twcc/ccs-interactive-container/ports'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-port-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-port-zh' 

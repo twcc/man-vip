@@ -29,12 +29,12 @@ const FeatureList: FeatureItem[] = [
       },
       {
         name: 'homepage.services.GPU.link',
-        url: 'docs/user-guides/twcc/ccs-interactive-container/containers/details/connect-to-container'
+        url: 'docs/user-guides/twcc/ccs-interactive-container/connect-to-container'
       },
-      {
-        name: 'homepage.services.GPU.training',
-        url: 'docs/overview'
-      }
+      // {
+      // name: 'homepage.services.GPU.training',
+      // url: 'docs/overview'
+      // }
     ]
   },
   {
@@ -47,16 +47,16 @@ const FeatureList: FeatureItem[] = [
       // },
       {
         name: 'homepage.services.HPC.link',
-        url: 'docs/overview'
+        url: 'docs/user-guides/twcc/twnia2-hpc-cli/connection'
       },
       {
         name: 'homepage.services.HPC.queue',
-        url: 'docs/overview'
+        url: 'docs/user-guides/twcc/twnia2-hpc-cli/queues'
       },
-      {
-        name: 'homepage.services.HPC.cross',
-        url: 'docs/overview'
-      }
+      // {
+      // name: 'homepage.services.HPC.cross',
+      // url: 'docs/overview'
+      // }
     ]
   },
   {
@@ -75,10 +75,10 @@ const FeatureList: FeatureItem[] = [
         name: 'homepage.services.VM.link',
         url: 'docs/user-guides/twcc/vcs/connect-to-instance'
       },
-      {
-        name: 'homepage.services.VM.host',
-        url: 'docs/overview'
-      }
+      // {
+      // name: 'homepage.services.VM.host',
+      // url: 'docs/overview'
+      // }
     ]
   },
   {
@@ -97,10 +97,10 @@ const FeatureList: FeatureItem[] = [
         name: 'homepage.services.HSS.upload',
         url: 'docs/user-guides/twcc/cos/upload-download-files-create-folders'
       },
-      {
-        name: 'homepage.services.HSS.sync',
-        url: 'docs/overview'
-      }
+      // {
+      // name: 'homepage.services.HSS.sync',
+      // url: 'docs/overview'
+      // }
     ]
   },
 ];

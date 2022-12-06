@@ -1,11 +1,13 @@
 ---
-sidebar_position: 1
+sidebar_position: 10
 title: '虛擬網路'
+sidebar_label: '虛擬網路'
+slug: '/faqs/twcc/vcs/vnw'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-vnw-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-vnw-zh'
 ---
 
-# TWCC FAQs | 虛擬網路
+# TWCC FAQs | 虛擬網路 (VNW)
 
 <details>
 

@@ -1,6 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: '虛擬運算服務 (VCS)'
+sidebar_label: '虛擬運算服務'
+slug: '/faqs/twcc/vcs'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-vcs-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-vcs-zh'
 ---
@@ -489,5 +491,20 @@ TWCC 沒有對虛擬運算個體內的網速進行限制，如果您發現傳輸
 
 若是分享由 2021/3/27 前建立之虛擬運算個體所產生的映像檔，此類映像檔因效能尚未優化，將會導致分享的時間過長而失敗。
 有分享需求請洽詢技術支援：[isupport@twcc.ai](isupport@twcc.ai)。
+
+</details>
+
+<details>
+
+<summary> Q7. 為何使用映像檔所建立之 Linux 個體，無法進行連線？</summary>
+
+請您使用以下指令確認映像檔來源個體中預載的 cloud-init 套件是否已被刪除：
+
+```bash
+python3 -c "from cloudinit import log"
+```
+
+- 若回傳 `ModuleNotFoundError: No module named 'cloudinit'` 錯誤訊息表示套件已刪除，導致以此個體製作的映像檔所建立的個體無法連線，請您於 TWCC 重建立一個體，重新安裝設定所需套件，再製作映像檔使用，**並請留意勿刪除 cloud-init 套件**。
+- 若確認無刪除 cloud-init，但仍無法連線，請洽詢技術支援：<a href = "mailto: isupport@twcc.ai">isupport@twcc.ai</a>。
 
 </details>

@@ -1,6 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 title: '容器運算服務 (CCS)'
+sidebar_label: '容器運算服務'
+slug: '/faqs/twcc/ccs'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-ccs-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-ccs-zh'
 ---
@@ -98,7 +100,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 <summary> Q1. 如何暫停容器？</summary>
 
 目前系統不支援容器暫停的功能，您可依需求選擇任一節省計算成本的方案：
-1. 您可製作容器複本保留工作環境，並刪除容器，待需要使用容器時再以複本建立新容器。
+1. 您可製作容器映像檔保留工作環境，並刪除容器，待需要使用容器時再以映像檔建立新容器。
 2. 您可參考[此文件](/docs/ccs-interactive-container/tutorials/use-cli-automate-compute-delete.md)，編寫腳本自動執行運算、刪除容器。
 
 </details>
@@ -430,11 +432,11 @@ TWCC 容器所使用的儲存系統為高速檔案系統 (HFS)，目前不支援
 </details>
 <div style={{height:10+'px'}}></div>
 
-## 容器複本
+## 容器映像檔
 
 <details>
 
-<summary> Q1. 容器複本如何下載？ </summary>
+<summary> Q1. 容器映像檔如何下載？ </summary>
 
 目前系統尚未支援此功能。
 
@@ -450,7 +452,7 @@ TWCC 容器所使用的儲存系統為高速檔案系統 (HFS)，目前不支援
 
 可能是 dataset 問題或是容器所處的節點較為繁忙：
 1. 若您的 dataset 為許多小檔案，且 dataset 佔了大量空間，我們建議您將小檔案集合成大檔案，以減少 I/O 壓力。
-2. 製作容器複本，再以複本開一個新的容器，若系統整體負載仍有餘裕，可以將容器安排建立在較不繁忙的節點。
+2. 製作容器映像檔，再以映像檔開一個新的容器，若系統整體負載仍有餘裕，可以將容器安排建立在較不繁忙的節點。
 
 </details>
 
@@ -478,7 +480,7 @@ TWCC 容器所使用的儲存系統為高速檔案系統 (HFS)，目前不支援
    - **Step 3.** 若有安裝 Anaconda 或 Miniconda，也請移除或重新命名。  
    - **Step 4.** 重新建立一個新的容器，選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到每個映像檔的環境設定，選擇適合的映像檔。
 2. 若您的 dataset 為許多小檔案，且 dataset 佔了大量空間，我們建議您將小檔案集合成大檔案，以減少 I/O 壓力。
-3. 製作容器複本，再以複本開一個新的容器，若系統整體負載仍有餘裕，可以將容器安排建立在較不繁忙的節點。
+3. 製作容器映像檔，再以映像檔開一個新的容器，若系統整體負載仍有餘裕，可以將容器安排建立在較不繁忙的節點。
 
 </details>
 <div style={{height:10+'px'}}></div>

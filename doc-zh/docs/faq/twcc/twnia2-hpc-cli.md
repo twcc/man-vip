@@ -1,6 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 title: '台灣杉二號 (命令列介面) (TWNIA2)'
+sidebar_label: '台灣杉二號 (命令列介面)'
+slug: '/faqs/twcc/twnia2-hpc-cli'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-twnia2-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-zh'
 ---

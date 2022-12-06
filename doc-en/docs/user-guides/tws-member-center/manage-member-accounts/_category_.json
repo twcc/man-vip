@@ -1,0 +1,10 @@
+{
+  "label": "Manage your member account",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Please select a category or a document below for more detailed information on our services.",
+    "slug": "/user-guides/tws-member-center/manage-member-accounts"
+
+  }
+}

@@ -2,7 +2,7 @@
 sidebar_position: 3
 title: '會員、專案與帳務'
 sidebar_label: '會員、專案與帳務'
-slug: '/faqs/twcc/member-center'
+slug: '/faqs/tws-member-center/membership-project-billing'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-membership-project-billing-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-membership-project-billing-zh'
 ---
@@ -46,14 +46,14 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-membership-pro
 </details>
 <div style={{height:10+'px'}}></div>
 
-## 計畫相關
+## 專案相關
 
 <details>
 
-<summary> Q1. 如果計畫到期，存在裡面的資料會不見嗎？</summary>
+<summary> Q1. 如果專案到期，存在裡面的資料會不見嗎？</summary>
 
-- 高速檔案系統 (HFS) 為個人之空間，因此資料不受計畫期限影響。
-- 儲存於雲端物件儲存服務 (COS) 、虛擬磁碟服務 (VDS) 及各計算資源中的資料，**在計畫到期後，請盡快聯絡客服人員詢問相關事宜。**
+- 高速檔案系統 (HFS) 為個人之空間，因此資料不受專案期限影響。
+- 儲存於雲端物件儲存服務 (COS) 、虛擬磁碟服務 (VDS) 及各計算資源中的資料，**在專案到期後，請盡快聯絡客服人員詢問相關事宜。**
 
 </details>
 <div style={{height:10+'px'}}></div>

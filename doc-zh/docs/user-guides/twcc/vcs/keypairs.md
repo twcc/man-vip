@@ -1,5 +1,8 @@
 ---
 sidebar_position: 4
+title: '鑰匙對'
+sidebar_label: '鑰匙對'
+slug: '/user-guides/twcc/vcs/keypairs'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-keypair-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-keypair-zh'
 ---

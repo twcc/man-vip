@@ -1,0 +1,10 @@
+{
+  "label": "TWS Member Center",
+  "position": 2,
+  "collapsible": false,
+  "link": {
+    "type": "generated-index",
+    "description": "Browse and select a TWS Member Center service for an overview and basic user guides.",
+    "slug": "/user-guides/tws-member-center"
+  }
+}

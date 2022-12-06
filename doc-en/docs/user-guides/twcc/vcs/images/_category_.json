@@ -1,0 +1,9 @@
+{
+  "label": "Images",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Check the categories or documents below to learn more about VCS images.",
+    "slug": "/user-guides/twcc/vcs/images"
+  }
+}
