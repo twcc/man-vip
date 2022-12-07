@@ -13,8 +13,9 @@ import TabItem from '@theme/TabItem';
 虛擬運算個體映像檔功能可以保留某一時間點個體的狀態、作業系統內建的硬碟的檔案與資料，通常在進行重要的系統更新或特殊軟體安裝前會先建立映像檔，以便需要時可以回復到該時間點的狀態。
 
 :::info
-1. **虛擬運算個體刪除後，100 GB 的系統磁碟資料將會隨之消失，若您需保存此空間的資料，請參考以下步驟為個體建立映像檔，再刪除個體。**
-2. 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/compute#虛擬運算服務)。
+1. **虛擬運算個體刪除後，系統磁碟資料將會隨之消失，若您需保存此空間的資料，請參考以下步驟為個體建立映像檔，再刪除個體。**
+2. 映像檔大小與您建立虛擬運算個體所選擇的系統磁碟容量相同。映像檔建立後，以虛擬磁碟 (HDD) 費率計費。
+3. 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/compute#虛擬運算服務)。
 :::
 
 <br/>
@@ -48,7 +49,7 @@ import TabItem from '@theme/TabItem';
 
 * 頁面跳轉至虛擬運算個體映像檔管理頁，並等映像檔狀態由 **`QUEUED`** > **`SAVING`**  > 最後變為 **`ACTIVE`** 後即可使用。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6b56086ae6e9bd6eb94bf72f918e8d80.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c89770549b8741ccde5d9e26a56bcd20.png)
 
 </TabItem>
 
