@@ -1,41 +1,41 @@
 openapi: 3.0.3
 servers:
-  - url: https://{apigateway}/api/v3/{ApiHost}/
+  - url: '{apigateway}/api/v3/{ApiHost}/'
     variables:
       apigateway:
-        default: apigateway.twcc.ai
+        default: https://apigateway.twcc.ai
       ApiHost:
         default: openstack-taichung-default-2
 info:
-  version: 1.5.0
+  version: 1.5.4
   title: VCS API
   description: |
     This is VCS API.
 security:
   - ApiKeyAuth: []
 tags:
-  - name: project
+  - name: auto scaling policy
+  - name: availability zone
+  - name: firewall
   - name: flavor
   - name: image
+  - name: ip
   - name: keypair
   - name: load balancer
-  - name: security group
   - name: network
-  - name: ip
-  - name: volume
-  - name: snapshot
+  - name: project
+  - name: secret
+  - name: security group
   - name: server
   - name: site
-  - name: firewall
-  - name: secret
-  - name: availability zone
-  - name: auto scaling policy
+  - name: snapshot
+  - name: volume
 paths:
   /projects/:
     get:
       tags:
         - project
-      summary: List projects
+      summary: ListProjects
       description: List projects
       parameters:
         - in: query
@@ -62,7 +62,7 @@ paths:
     get:
       tags:
         - project
-      summary: Get details of a project
+      summary: GetProjectDetail
       description: Get details of a project
       parameters:
         - $ref: '#/components/parameters/ProjectInPathParam'
@@ -86,7 +86,7 @@ paths:
     get:
       tags:
         - project
-      summary: Get solutions of a project
+      summary: GetSolutionsOfProject
       description: Get solutions of a project
       parameters:
         - $ref: '#/components/parameters/ProjectInPathParam'
@@ -115,7 +115,8 @@ paths:
     get:
       tags:
         - project
-      summary: Get extra properties of a solution for a project
+      summary: GetPropertiesOfSolutionForProject
+      description: Get extra properties of a solution for a project
       parameters:
         - $ref: '#/components/parameters/ProjectInPathParam'
         - $ref: '#/components/parameters/SolutionsIDParam'
@@ -145,7 +146,7 @@ paths:
     get:
       tags:
         - project
-      summary: Get assets reports for the projects.
+      summary: GetAssetsReportsForProjects
       description: Get assets reports for the projects.
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
@@ -176,7 +177,7 @@ paths:
     get:
       tags:
         - project
-      summary: get project quotas
+      summary: GetProjectQuotas
       description: get project quotas
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
@@ -198,6 +199,12 @@ paths:
       description: get user quotas
       parameters:
         - $ref: '#/components/parameters/ProjectInPathParam'
+        - name: user
+          in: query
+          description: User UUID，tenant user is required
+          schema:
+            type: string
+            format: uuid
         - $ref: '#/components/parameters/ApiHostParam'
       responses:
         200:
@@ -212,8 +219,8 @@ paths:
     get:
       tags:
         - project
-      summary: get a business network info
-      description: get a business network info in a openstack project
+      summary: GetBusinessNetworkInfo
+      description: get a business network info in a openstack project.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/ProjectInPathParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -230,7 +237,8 @@ paths:
     get:
       tags:
         - flavor
-      summary: List flavors
+      summary: ListFlavor
+      description: List flavors
       parameters:
         - in: query
           name: is_public
@@ -259,7 +267,8 @@ paths:
     get:
       tags:
         - flavor
-      summary: Get details of a flavor
+      summary: GetFlavorDetail
+      description: Get details of a flavor
       parameters:
         - $ref: '#/components/parameters/FlavorIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -274,7 +283,8 @@ paths:
     get:
       tags:
         - image
-      summary: List images
+      summary: ListImages
+      description: List images
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -337,9 +347,9 @@ paths:
     get:
       tags:
         - image
-      summary: Get details of a image
+      summary: GetImageDetail
       description: |-
-        Image is not public if it was saved from an server or
+        Get details of a image,Image is not public if it was saved from an server or
         was uploaded by a tenant admin.
       parameters:
         - $ref: '#/components/parameters/ImageIDParam'
@@ -354,7 +364,7 @@ paths:
     patch:
       tags:
         - image
-      summary: Patch details of a image
+      summary: UpdateImageDetail
       description: Patch details of a image
       parameters:
         - $ref: '#/components/parameters/ImageIDParam'
@@ -368,10 +378,10 @@ paths:
                   type: string
                   description: Image description
                   maximum: 200
-                is_public:
-                  type: boolean
-                  description: Image visibility. Only the system admin can update
-                    this field
+                # is_public:
+                #   type: boolean
+                #   description: Image visibility. Only the system admin can update
+                #     this field
             examples:
                 example:
                   summary: with Patch details of a image example
@@ -387,7 +397,8 @@ paths:
     delete:
       tags:
         - image
-      summary: Delete an image
+      summary: DeleteImage
+      description: Delete an image
       parameters:
         - $ref: '#/components/parameters/ImageIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -399,7 +410,7 @@ paths:
     put:
       tags:
         - image
-      summary: Save an instance as an image
+      summary: SaveInstanceImage
       description: |-
         Save an image for server <server_id>.
         os can be "Linux" or "Windows" depends on image of the server
@@ -437,7 +448,8 @@ paths:
     get:
       tags:
       - keypair
-      summary: List Keypairs
+      summary: ListKeypairs
+      description: List Keypairs
       parameters:
         - $ref: '#/components/parameters/ApiHostParam'
       responses:
@@ -452,7 +464,8 @@ paths:
     post:
       tags:
       - keypair
-      summary: Create a Keypair
+      summary: CreateKeypair
+      description: Create a Keypair
       parameters:
         - $ref: '#/components/parameters/ApiHostParam'
       requestBody:
@@ -481,6 +494,7 @@ paths:
       tags:
       - keypair
       summary: Get Keypair Detail
+      description: Get Keypair Detail
       parameters:
       - name: key_name
         in: path
@@ -507,7 +521,8 @@ paths:
     delete:
       tags:
       - keypair
-      summary: Delete a Keypair
+      summary: GetKeypairDetail
+      description: Delete a Keypair
       parameters:
       - name: key_name
         in: path
@@ -524,7 +539,8 @@ paths:
     get:
       tags:
       - load balancer
-      summary: Lists load balancers
+      summary: ListsLoadBalancers
+      description: Lists load balancers
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -540,7 +556,8 @@ paths:
     post:
       tags:
       - load balancer
-      summary: Creates a load balancer
+      summary: CreatesLoadBalancer
+      description: Creates a load balancer
       parameters:
         - $ref: '#/components/parameters/ApiHostParam'
       requestBody:
@@ -583,7 +600,7 @@ paths:
     get:
       tags:
       - load balancer
-      summary: Shows details for a load balancer
+      summary: GetLoadBalancerDetail
       description: Shows details for a load balancer.
       parameters:
         - $ref: '#/components/parameters/LoadBalancerIDParam'
@@ -598,7 +615,7 @@ paths:
     delete:
       tags:
       - load balancer
-      summary: Delete a load balancer
+      summary: DeleteLoadBalancer
       description: Delete a load balancer.
       parameters:
         - $ref: '#/components/parameters/LoadBalancerIDParam'
@@ -610,7 +627,7 @@ paths:
     patch:
       tags:
       - load balancer
-      summary: Updates a load balancer
+      summary: UpdatesLoadBalancer
       description: Updates a load balancer
       parameters:
         - $ref: '#/components/parameters/LoadBalancerIDParam'
@@ -642,7 +659,7 @@ paths:
     get:
       tags:
       - load balancer
-      summary: Shows report for a load balancer member
+      summary: GetLoadBalancersReports
       description: Shows report for a load balancer member.
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
@@ -668,8 +685,8 @@ paths:
     put:
       tags:
       - load balancer
-      summary: Shows details for a load balancer
-      description: Shows details for a load balancer.
+      summary: ExecuteActionLoadBalancer
+      description: Execute an action to a load balancer
       parameters:
         - $ref: '#/components/parameters/LoadBalancerIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -721,7 +738,7 @@ paths:
                 summary: Example with associateIP
                 value:
                   action: associateIP
-                  ip: 0.0.0.0
+                  ip: 0
               disassociateIP example:
                 summary: Example with disassociateIP
                 value:
@@ -743,13 +760,13 @@ paths:
     get:
       tags:
       - load balancer
-      summary: Shows report for a load balancer member
-      description: Shows report for a load balancer member.
+      summary: GetLoadBalancerReortByMemberIP
+      description: Shows report for a load balancer member IP.
       parameters:
         - $ref: '#/components/parameters/LoadBalancerIDParam'
         - name: member
           in: query
-          description: Member ip
+          description: Member IP
           required: true
           schema:
             type: string
@@ -814,7 +831,8 @@ paths:
     get:
       tags:
       - security group
-      summary: List security rules of a server
+      summary: ListSecurityRulesByServer
+      description: List security rules of a server
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
         - $ref: '#/components/parameters/ServerInQueryParam'
@@ -833,7 +851,8 @@ paths:
     patch:
       tags: 
       - security group
-      summary: Add a security rule to a security group.
+      summary: AddSecurityRuleBySecurityGroup.
+      description: Add a security rule to a security group.
       parameters: 
         - $ref: '#/components/parameters/SecurityGroupIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -869,7 +888,8 @@ paths:
     delete:
       tags: 
       - security group
-      summary: Delete a rule in a security group.
+      summary: DeleteRuleInSecurityGroup.
+      description: Delete a rule in a security group.
       parameters: 
         - $ref: '#/components/parameters/RuleIDParam'
         - $ref: '#/components/parameters/ProjectInQueryParam'
@@ -882,7 +902,8 @@ paths:
     get:
       tags:
       - network
-      summary: Lists networks
+      summary: ListsNetworks
+      description: Lists networks
       parameters: 
         - $ref: '#/components/parameters/ProjectInQueryParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -898,7 +919,8 @@ paths:
     post:
       tags: 
       - network
-      summary: Creates a network
+      summary: CreatesNetwork
+      description: Creates a network.Only tenant admin can use
       parameters: 
         - $ref: '#/components/parameters/ApiHostParam'
       requestBody:
@@ -918,7 +940,8 @@ paths:
     get:
       tags: 
       - network
-      summary: Shows details for a network
+      summary: GetNetworkDetail
+      description: Shows details for a network.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/NetworkIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -932,7 +955,8 @@ paths:
     delete:
       tags: 
       - network
-      summary: Deletes a network
+      summary: DeletesNetwork
+      description: Deletes a network.Only tenant admin can use
       parameters: 
         - $ref: '#/components/parameters/NetworkIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -943,7 +967,8 @@ paths:
     patch:
       tags: 
       - network
-      summary: Update a network
+      summary: UpdateNetwork
+      description: Update a network.Only tenant admin can use
       parameters: 
         - $ref: '#/components/parameters/NetworkIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -971,7 +996,8 @@ paths:
     get:
       tags: 
       - network
-      summary: Get security group rules by a network
+      summary: GetSGRulesByNetwork
+      description: Get security group rules by a network.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/NetworkIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -1013,7 +1039,8 @@ paths:
     get:
       tags: 
       - ip
-      summary: List IPs
+      summary: ListStaticElasticIP
+      description: List Elastic IPs
       parameters:
           - $ref: '#/components/parameters/ProjectInQueryParam'
           - name: address
@@ -1034,8 +1061,8 @@ paths:
     post:
       tags: 
       - ip
-      summary: Create a STATIC Elastic IP
-      description: Create a STATIC Elastic IP
+      summary: SubscribeStaticElasticIP
+      description: Create a STATIC Elastic IP.Only tenant admin can use
       parameters: 
         - $ref: '#/components/parameters/ApiHostParam'
       requestBody:
@@ -1061,7 +1088,8 @@ paths:
     get:
       tags: 
       - ip
-      summary: Get a Elastic IP detail
+      summary: UnsubscribeStaticElasticIP
+      description: Unsubscribe a STATIC Elastic IP
       parameters: 
         - $ref: '#/components/parameters/IPIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -1075,7 +1103,7 @@ paths:
     patch:
       tags: 
       - ip
-      summary: Update a Elastic IP's Description
+      summary: UpdateStaticElasticIP
       description: Update a Elastic IP's description
       parameters: 
         - $ref: '#/components/parameters/IPIDParam'
@@ -1100,8 +1128,8 @@ paths:
     delete:
       tags: 
       - ip
-      summary: Unsubscribe a STATIC Elastic IP
-      description: Unsubscribe a STATIC Elastic IP
+      summary: UnsubscribeStaticElasticIP
+      description: Unsubscribe a STATIC Elastic IP.Only tenant admin can use
       parameters: 
         - $ref: '#/components/parameters/IPIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -1113,10 +1141,46 @@ paths:
     get:
       tags:
       - volume
-      summary: List volumes
+      summary: ListVolumes
       description: List volumes
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
+        - name: attached_host
+          in: query
+          description: Server ID
+          schema:
+            type: integer
+            format: int32
+        - name: name
+          in: query
+          description: Volume Name
+          schema:
+            type: string
+        - name: volume_type
+          in: query
+          description: Volume Type
+          schema:
+            type: string
+        - name: user__username
+          in: query
+          description: Volume's User Name
+          schema:
+            type: string
+        - name: create_time_start
+          in: query
+          description: Create Time Start
+          schema:
+            type: string
+        - name: create_time_end
+          in: query
+          description: Create Time End
+          schema:
+            type: string
+        # - name: page
+        #   in: query
+        #   description: Page Number
+        #   schema:
+        #     type: string
         - $ref: '#/components/parameters/ApiHostParam'
       responses:
         200:
@@ -1130,7 +1194,7 @@ paths:
     post:
       tags:
       - volume
-      summary: Create a volume
+      summary: CreateVolume
       description: Create a volume
       parameters:
       - $ref: '#/components/parameters/ApiHostParam'
@@ -1164,7 +1228,8 @@ paths:
     get:
       tags:
       - volume
-      summary: Get details of a volume
+      summary: GetVolumeDetail
+      description: Get details of a volume
       parameters:
         - $ref: '#/components/parameters/VolumeIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -1178,7 +1243,8 @@ paths:
     delete:
       tags: 
       - volume
-      summary: Delete a volume
+      summary: DeleteVolume
+      description: Delete a volume
       parameters:
         - $ref: '#/components/parameters/VolumeIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -1190,7 +1256,8 @@ paths:
     put:
       tags: 
       - volume
-      summary: Update status or extend size of a volume
+      summary: UpdateParametersOfVolume
+      description: Update status or extend size of a volume
       parameters: 
         - $ref: '#/components/parameters/VolumeIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -1245,8 +1312,8 @@ paths:
     get:
       tags:
       - volume
-      summary: Get volume report of all groups.
-      description: Get volume report of all groups
+      summary: GetVolumeReportOfAllGroups.
+      description: Get volume report of all groups.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
         - name: user
@@ -1276,7 +1343,8 @@ paths:
     get:
       tags: 
       - snapshot
-      summary: Get snapshots
+      summary: ListSnapshots
+      description: Get snapshots
       parameters: 
         - name: status
           in: query
@@ -1298,7 +1366,8 @@ paths:
     post:
       tags: 
       - snapshot
-      summary: Take a snapshot
+      summary: CreateSnapshot
+      description: Take a snapshot
       parameters: 
         - $ref: '#/components/parameters/ApiHostParam'
       requestBody:
@@ -1331,7 +1400,8 @@ paths:
     get:
       tags: 
       - snapshot
-      summary: Get details of a snapshot
+      summary: GetSnapshotDetail
+      description: Get details of a snapshot
       parameters: 
         - $ref: '#/components/parameters/SnapshotIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -1345,7 +1415,8 @@ paths:
     delete:
       tags: 
       - snapshot
-      summary: Delete a snapshot
+      summary: DeleteSnapshot
+      description: Delete a snapshot
       parameters: 
         - $ref: '#/components/parameters/SnapshotIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -1357,7 +1428,7 @@ paths:
     get:
       tags:
       - snapshot
-      summary: Get snapshots report
+      summary: GetSnapshotsReport
       description: Get snapshots report
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
@@ -1388,7 +1459,8 @@ paths:
     get:
       tags: 
       - server
-      summary: List servers
+      summary: ListServers
+      description: List servers
       parameters: 
         - $ref: '#/components/parameters/ProjectInQueryParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -1405,7 +1477,8 @@ paths:
     get:
       tags: 
       - server
-      summary: Get details of a server
+      summary: GetServerDetail
+      description: Get details of a server
       parameters: 
         - $ref: '#/components/parameters/ServerIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -1420,7 +1493,7 @@ paths:
     post:
       tags: 
       - server
-      summary: Set Auto Scaling Policy On a Server
+      summary: SetAutoScalingPolicyOnServer
       description: Set Auto Scaling Policy On a Server
       parameters: 
         - $ref: '#/components/parameters/ServerIDParam'
@@ -1475,7 +1548,7 @@ paths:
     delete:
       tags:
       - server
-      summary: Remove Auto Scaling Policy From a Server
+      summary: DeleteAutoScalingPolicyFromServer
       description: Remove Auto Scaling Policy From a Server
       parameters: 
         - $ref: '#/components/parameters/ServerIDParam'
@@ -1488,7 +1561,7 @@ paths:
     put:
       tags: 
       - server
-      summary: Execute an action to a server
+      summary: ExecuteActionServer
       description: Execute an action to a server
       parameters: 
         - $ref: '#/components/parameters/ServerIDParam'
@@ -1537,7 +1610,7 @@ paths:
                 summary: Example with associateIP
                 value:
                   action: associateIP
-                  ip: 0.0.0.0
+                  ip: 0
               disassociateIP example:
                 summary: Example with disassociateIP
                 value:
@@ -1551,7 +1624,8 @@ paths:
     get:
       tags: 
       - server
-      summary: Get a Server CPU Utilization
+      summary: GetCPUUtilizationByServer
+      description: Get a Server CPU Utilization
       parameters: 
         - name: begin_time
           in: query
@@ -1578,7 +1652,8 @@ paths:
     get:
       tags: 
       - server
-      summary: Get a Server Disk Utilization
+      summary: GetDiskUtilizationByServer
+      description: Get a Server Disk Utilization
       parameters: 
         - name: meter_name
           in: query
@@ -1612,7 +1687,8 @@ paths:
     get:
       tags: 
       - server
-      summary: Get a Server Memory Utilization
+      summary: GetMemoryUtilizationByServer
+      description: Get a Server Memory Utilization
       parameters: 
         - name: begin_time
           in: query
@@ -1639,7 +1715,8 @@ paths:
     get:
       tags: 
       - server
-      summary: Get a Server Network Utilization
+      summary: GetNetworkUtilizationByServer
+      description: Get a Server Network Utilization
       parameters: 
         - name: begin_time
           in: query
@@ -1673,7 +1750,7 @@ paths:
     get:
       tags:
       - site
-      summary: List sites
+      summary: Listsites
       description: List sites
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
@@ -1685,7 +1762,7 @@ paths:
             default: os
         - name: all_users
           in: query
-          description: List resources of all users. 租戶管理員使用
+          description: List resources of all users. Tenant admin use
           schema:
             type: integer
             format: int32
@@ -1703,7 +1780,7 @@ paths:
     post:
       tags:
       - site
-      summary: Create a site
+      summary: CreateSite
       description: Create a site
       parameters:
         - name: x-extra-property-image
@@ -1809,7 +1886,8 @@ paths:
     get:
       tags:
       - site
-      summary: Get details of a site
+      summary: GetSiteDetail
+      description: List sites
       parameters:
         - $ref: '#/components/parameters/SiteIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -1823,7 +1901,7 @@ paths:
     delete:
       tags:
       - site
-      summary: Delete a site
+      summary: DeleteSite
       description: Delete a site
       parameters:
         - $ref: '#/components/parameters/SiteIDParam'
@@ -1835,7 +1913,7 @@ paths:
     put:
       tags:
       - site
-      summary: Update site extra-property
+      summary: UpdateSiteExtraProperty
       description: Update site extra-property，This API no request body
       parameters:
         - $ref: '#/components/parameters/SiteIDParam'
@@ -1858,7 +1936,7 @@ paths:
     patch:
       tags:
       - site
-      summary: Patch details of a site
+      summary: UpdateSiteDetail
       description: Patch details of a site
       parameters:
         - $ref: '#/components/parameters/SiteIDParam'
@@ -1885,7 +1963,8 @@ paths:
     get:
       tags:
       - site
-      summary: Get parameters of a site
+      summary: GetParametersOfSite
+      description: List sites
       parameters:
         - $ref: '#/components/parameters/SiteIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -1921,7 +2000,7 @@ paths:
     get:
       tags:
       - site
-      summary: Get event logs of a site
+      summary: GetEventLogsOfSite
       description: Get event logs of a site
       parameters:
         - $ref: '#/components/parameters/SiteIDParam'
@@ -1939,7 +2018,7 @@ paths:
     put:
       tags:
       - site
-      summary: Action status of a site
+      summary: ActionStatusOfSite
       description: Action status of a site
       parameters:
         - $ref: '#/components/parameters/SiteIDParam'
@@ -1989,8 +2068,8 @@ paths:
     get:
       tags:
       - firewall
-      summary: get firewalls list
-      description: get firewalls list
+      summary: ListFirewall
+      description: get firewalls list.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -2006,10 +2085,10 @@ paths:
     post:
       tags:
       - firewall
-      summary: create a firewall
+      summary: CreateFirewall
       description: Create a firewall, 'rules' is an optional parameter to define filrewall
         rules list for this firewall. And 'associate_networks' is another optional
-        parameter to define which private networks list associate to this firewall.
+        parameter to define which private networks list associate to this firewall.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/ApiHostParam'
       requestBody:
@@ -2048,8 +2127,8 @@ paths:
     get:
       tags:
       - firewall
-      summary: get a firewall detail
-      description: get a firewall detail
+      summary: GetFirewallDetail
+      description: get a firewall detail.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/FirewallIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -2063,8 +2142,8 @@ paths:
     patch:
       tags:
       - firewall
-      summary: update a firewall
-      description: update a firewall
+      summary: UpdateFirewall
+      description: update a firewall.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/FirewallIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -2098,8 +2177,8 @@ paths:
     delete:
       tags:
       - firewall
-      summary: delete a firewall
-      description: delete a firewall
+      summary: DeleteFirewall
+      description: delete a firewall.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/FirewallIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -2111,8 +2190,8 @@ paths:
     get:
       tags:
       - firewall
-      summary: get firewall rules list
-      description: get firewall rules list
+      summary: ListFirewallRules
+      description: get firewall rules list.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -2128,8 +2207,8 @@ paths:
     post:
       tags:
       - firewall
-      summary: create a firewall rule
-      description: create a firewall rule
+      summary: CreateFirewallRule
+      description: create a firewall rule.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/ApiHostParam'
       requestBody:
@@ -2186,8 +2265,8 @@ paths:
     get:
       tags:
       - firewall
-      summary: get firewall rules list
-      description: get firewall rules list
+      summary: GetFirewallRuleDetail
+      description: get firewall rules list.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/FirewallRuleIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -2203,8 +2282,8 @@ paths:
     delete:
       tags:
       - firewall
-      summary: delete a firewall rule
-      description: delete a firewall rule
+      summary: DeleteFirewallRule
+      description: delete a firewall rule.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/FirewallRuleIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -2215,8 +2294,8 @@ paths:
     patch:
       tags:
       - firewall
-      summary: update a firewall rule
-      description: update a firewall rule
+      summary: UpdateFirewallRule
+      description: update a firewall rule.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/FirewallRuleIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -2226,6 +2305,9 @@ paths:
           application/json:
             schema:
               properties:
+                name:
+                  type: string
+                  description: Firewall rule name
                 protocol:
                   type: string
                   description: Firewall rule IP protocol
@@ -2264,8 +2346,8 @@ paths:
     get:
       tags:
         - secret
-      summary: List Barbican Secrets
-      description: List Secrets
+      summary: ListSecrets
+      description: List Barbican Secrets
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -2281,8 +2363,8 @@ paths:
     post:
       tags:
         - secret
-      summary: Create a Barbican Secret
-      description: Create a Secret
+      summary: CreateSecret
+      description: Create a Barbican Secret
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -2319,7 +2401,7 @@ paths:
     get:
       tags:
         - secret
-      summary: Get a Secret Detail
+      summary: GetSecretDetail
       description: Get a secret detail
       parameters:
         - $ref: '#/components/parameters/SecretIDParam'
@@ -2334,7 +2416,7 @@ paths:
     delete:
       tags:
         - secret
-      summary: Delete a Secret
+      summary: DeleteSecret
       description: Delete a secret
       parameters:
         - $ref: '#/components/parameters/SecretIDParam'
@@ -2347,7 +2429,7 @@ paths:
     get:
       tags:
         - availability zone
-      summary: List availability zones
+      summary: ListAvailabilityZones
       description: List availability zones
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
@@ -2365,7 +2447,7 @@ paths:
     get:
       tags:
         - availability zone
-      summary: Get availability zone details
+      summary: GetAvailabilityZoneDetail
       description: Get availability zone details
       parameters:
         - $ref: '#/components/parameters/AZIDParam'
@@ -2381,7 +2463,7 @@ paths:
     get:
       tags:
         - auto scaling policy
-      summary: get auto scaling policies list
+      summary: ListAutoScalingPolicies
       description: get auto scaling policies list
       parameters:
         - $ref: '#/components/parameters/ProjectInQueryParam'
@@ -2398,7 +2480,7 @@ paths:
     post:
       tags:
         - auto scaling policy
-      summary: create an auto scaling policy
+      summary: CreateAutoScalingPolicy
       description: create an auto scaling policy
       parameters:
         - $ref: '#/components/parameters/ApiHostParam'
@@ -2447,7 +2529,7 @@ paths:
     get:
       tags:
         - auto scaling policy
-      summary: get an auto scaling policy detail
+      summary: GetAutoScalingPolicyDetail
       description: get an auto scaling policy detail
       parameters:
         - $ref: '#/components/parameters/AutoScalingPolicyID'
@@ -2462,7 +2544,7 @@ paths:
     delete:
       tags:
         - auto scaling policy
-      summary: delete an auto scaling policy
+      summary: DeleteAutoScalingPolicy
       description: delete an auto scaling policy
       parameters:
         - $ref: '#/components/parameters/AutoScalingPolicyID'
@@ -2663,6 +2745,10 @@ components:
           type: string
         ref_img_id:
           type: string
+        size:
+          type: integer
+          format: int64
+          description: The unit is bytes
         server:
           $ref: '#/components/schemas/ServerFieldSerializer'
         user:
@@ -2687,6 +2773,7 @@ components:
         - os
         - os_version
         - server
+        - size
     ImagePostSerializer:
       required:
       - create_time
@@ -2722,6 +2809,7 @@ components:
       - platform
       - server
       - status
+      - size
       type: object
       properties:
         create_time:
@@ -2742,6 +2830,10 @@ components:
           $ref: '#/components/schemas/ServerFieldSerializer'
         desc:
           type: string
+        size:
+          type: integer
+          format: int64
+          description: The unit is bytes
         project:
           type: object
           properties:
@@ -3119,6 +3211,7 @@ components:
           type: string
         status:
           type: string
+          description: may be null
           enum:
             - MIGRATING
             - ASSOCIATING
@@ -3138,6 +3231,7 @@ components:
             - SHELVED_OFFLOADED
             - QUEUEING
             - SPAWNING
+            - null
         fqdn:
           type: string
     ServerNetObject:
@@ -3256,7 +3350,6 @@ components:
           format: int64
         status:
           type: string
-          description: may be null
           enum: 
             - Unshelving
             - Shelving
@@ -3272,7 +3365,6 @@ components:
             - Deleted
             - Initializing
             - Queueing
-            - null
         is_preemptive:
           type: boolean
         user:
@@ -3292,6 +3384,27 @@ components:
                 type: string
               status:
                 type: string
+                description: may be null
+                enum:
+                  - MIGRATING
+                  - ASSOCIATING
+                  - DISASSOCIATING
+                  - SUSPENDED
+                  - REBOOT
+                  - STOPPING
+                  - SHUTOFF
+                  - SHUTOFF
+                  - STARTING
+                  - RESIZE
+                  - VERIFY_RESIZE
+                  - REVERT_RESIZE
+                  - ERROR
+                  - DELETED
+                  - SHELVING
+                  - SHELVED_OFFLOADED
+                  - QUEUEING
+                  - SPAWNING
+                  - null
         termination_protection:
           type: boolean
     SiteDetailSerializer:
@@ -4335,20 +4448,50 @@ components:
         user:
           $ref: '#/components/schemas/UserSerializer'
         gpu:
-          type: integer
-          format: int64
+          type: object
+          properties:
+            usage:
+              type: integer
+              format: int64
+            quota:
+              type: integer
+              format: int64
         cpu:
-          type: integer
-          format: int64
+          type: object
+          properties:
+            usage:
+              type: integer
+              format: int64
+            quota:
+              type: integer
+              format: int64
         memory:
-          type: integer
-          format: int64
+          type: object
+          properties:
+            usage:
+              type: integer
+              format: int64
+            quota:
+              type: integer
+              format: int64
         ipvs_port:
-          type: integer
-          format: int64
+          type: object
+          properties:
+            usage:
+              type: integer
+              format: int64
+            quota:
+              type: integer
+              format: int64
         floatingip:
-          type: integer
-          format: int32
+          type: object
+          properties:
+            usage:
+              type: integer
+              format: int64
+            quota:
+              type: integer
+              format: int64
     AZSerializer:
       required:
       - create_time
@@ -4637,13 +4780,6 @@ components:
       schema:
         type: string
         default: openstack-taichung-default-2
-      # examples:
-      #   production:
-      #     summary: production
-      #     value: openstack-taichung-default-2
-      #   staging:
-      #     summary: staging
-      #     value: openstack-taichung-default
   responses:
     200NotRoute:
       description: no route and no API found with those values

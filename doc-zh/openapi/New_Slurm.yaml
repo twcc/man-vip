@@ -1,9 +1,9 @@
 openapi: 3.0.0
 servers:
-  - url: https://{apigateway}/api/v3/{ApiHost}/
+  - url: '{apigateway}/api/v3/{ApiHost}/'
     variables:
       apigateway:
-        default: apigateway.twcc.ai
+        default: https://apigateway.twcc.ai
       ApiHost:
         default: slurm-D-twcc
 info:
@@ -14,9 +14,9 @@ info:
 security:
   - ApiKeyAuth: []
 tags:
+  - name: global
   - name: project
   - name: job
-  - name: global
 paths:
   /projects/:
     get:

@@ -1,13 +1,13 @@
 openapi: 3.0.0
 servers:
-  - url: https://{apigateway}/api/v3/{ApiHost}/
+  - url: '{apigateway}/api/v3/{ApiHost}/'
     variables:
       apigateway:
-        default: apigateway.twcc.ai
+        default: https://apigateway.twcc.ai
       ApiHost:
         default: ceph-taichung-default
 info:
-  version: 1.0.0
+  version: 1.1.0
   title: Ceph API
   description: |
     This is Ceph API.
@@ -149,6 +149,73 @@ paths:
               application/json:
                 schema:
                   $ref: '#/components/schemas/ProjectKeySerializer'
+  /projects/{project_id}/buckets/:
+    get:
+      tags:
+      - project
+      summary: Get buckets of a user
+      description: Get buckets of a user
+      parameters:
+        - $ref: '#/components/parameters/ProjectInPathParam'
+        - name: all
+          in: query
+          description: Get buckets for all public and private keys
+          schema:
+            type: boolean
+            default: false
+            enum: [false, true]
+        - name: key_name
+          in: query
+          description: |-
+            Get buckets for the specific private key.
+            If it is not specified and all is false,
+            only the public buckets will be returned
+          schema:
+            type: string
+        - name: bucket_name
+          in: query
+          description: Get buckets with the specific name
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProjectBucketSerializer'
+  /projects/{project_id}/buckets_util/:
+    get:
+      tags:
+      - project
+      summary: Get buckets total usages of a user
+      description: Get buckets total usages of a user
+      parameters:
+        - $ref: '#/components/parameters/ProjectInPathParam'
+        - name: all
+          in: query
+          description: Get buckets utilization for all public and private keys
+          schema:
+            type: boolean
+            default: false
+            enum: [false, true]
+        - name: key_name
+          in: query
+          description: |-
+            Get buckets utilization for the specific private key.
+            If it is not specified and all is false,
+            only the public buckets utilization will be returned
+          schema:
+            type: string
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProjectBucketUtilSerializer'
 components:
   securitySchemes:
     ApiKeyAuth:
@@ -235,6 +302,73 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/KeySerializer'
+    BucketSerializer:
+      required:
+      - bucket_name
+      - bucket_used_space
+      - last_modified_time
+      - num_objects
+      type: object
+      properties:
+        bucket_name:
+          type: string
+        last_modified_time:
+          type: string
+          format: date-time
+        bucket_used_space:
+          type: integer
+        num_objects:
+          type: integer
+    PrivateKeyBucketsSerializer:
+      required:
+      - buckets
+      - key_name
+      type: object
+      properties:
+        key_name:
+          type: string
+        buckets:
+          type: array
+          items:
+            $ref: '#/components/schemas/BucketSerializer'
+    ProjectBucketSerializer:
+      required:
+      - private
+      - public
+      type: object
+      properties:
+        public:
+          type: array
+          items:
+            $ref: '#/components/schemas/BucketSerializer'
+        private:
+          type: array
+          items:
+            $ref: '#/components/schemas/PrivateKeyBucketsSerializer'
+    BucketUtilSerializer:
+      required:
+      - total_objects
+      - total_used_space
+      type: object
+      properties:
+        key_name:
+          type: string
+        total_used_space:
+          type: integer
+        total_objects:
+          type: integer
+    ProjectBucketUtilSerializer:
+      required:
+      - private
+      - public
+      type: object
+      properties:
+        public:
+          $ref: '#/components/schemas/BucketUtilSerializer'
+        private:
+          type: array
+          items:
+            $ref: '#/components/schemas/BucketUtilSerializer'
   parameters:
     ProjectInQueryParam:
       name: project
