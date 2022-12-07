@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 12
 title: '基礎虛擬防火牆 (BVF)'
 sidebar_label: '基礎虛擬防火牆'
 slug: '/faqs/twcc/vcs/bvf'

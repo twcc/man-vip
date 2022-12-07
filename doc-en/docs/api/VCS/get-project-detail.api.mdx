@@ -1,0 +1,49 @@
+---
+id: get-project-detail
+title: "GetProjectDetail"
+description: "Get details of a project"
+sidebar_label: "GetProjectDetail"
+hide_title: true
+hide_table_of_contents: true
+api: {"tags":["project"],"description":"Get details of a project","parameters":[{"name":"project_id","in":"path","description":"Project ID","required":true,"schema":{"type":"integer"}},{"name":"x-api-host","in":"header","description":"Authentication Required Parameters","required":true,"schema":{"type":"string","default":"openstack-taichung-default-2"}}],"responses":{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"desc":{"type":"string"},"id":{"format":"int64","type":"integer"},"matchLabels":{"type":"array","items":{"type":"string","example":"twsc"}},"name":{"type":"string","example":"ENT123456"},"status":{"type":"string","example":"Ready"},"status_reason":{"type":"string"},"tm_uuid":{"type":"string"},"transparent_mode":{"type":"boolean","example":false},"uuid":{"type":"string","format":"uuid"}},"required":["desc","id","matchLabels","name","status","status_reason","tm_uuid","transparent_mode","uuid"]}}}},"401":{"description":"request is unauthorized","content":{"application/json":{"schema":{"type":"object","properties":{"message":{"type":"string"}},"example":{"message":"Your request is unauthorized"}}}}},"404":{"description":"Project not found","content":{"application/json":{"schema":{"type":"object","properties":{"message":{"type":"string"}},"example":{"message":"40401: Project {project_id} not found"}}}}},"500":{"description":"Internal Server Error","content":{}},"503":{"description":"The project does not exist","content":{"application/json":{"schema":{"type":"object","properties":{"message":{"type":"string"}},"example":{"message":"50301: The project {project_id} does not exist"}}}}}},"method":"get","path":"/projects/{project_id}/","servers":[{"url":"{apigateway}/api/v3/{ApiHost}/","variables":{"apigateway":{"default":"https://apigateway.twcc.ai"},"ApiHost":{"default":"openstack-taichung-default-2"}}}],"security":[{"ApiKeyAuth":[]}],"securitySchemes":{"ApiKeyAuth":{"type":"apiKey","in":"header","name":"x-api-key"}},"info":{"version":"1.5.4","title":"VCS API","description":"This is VCS API.\n"},"postman":{"name":"GetProjectDetail","description":{"content":"Get details of a project","type":"text/plain"},"url":{"path":["projects",":project_id",""],"host":["{{baseUrl}}"],"query":[],"variable":[{"disabled":false,"description":{"content":"(Required) Project ID","type":"text/plain"},"type":"any","value":"","key":"project_id"}]},"header":[{"disabled":false,"description":{"content":"(Required) Authentication Required Parameters","type":"text/plain"},"key":"x-api-host","value":""},{"key":"Accept","value":"application/json"}],"method":"GET"}}
+sidebar_class_name: "get api-method"
+info_path: docs/api/VCS/vcs-api
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem"
+import SchemaTabs from "@theme/SchemaTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import TabItem from "@theme/TabItem";
+
+## GetProjectDetail
+
+
+
+Get details of a project
+
+<details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Path Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"project_id","in":"path","description":"Project ID","required":true,"schema":{"type":"integer"}}}></ParamsItem></ul></div></details><details style={{"marginBottom":"1rem"}} data-collapsed={false} open={true}><summary style={{}}><strong>Header Parameters</strong></summary><div><ul><ParamsItem className={"paramsItem"} param={{"name":"x-api-host","in":"header","description":"Authentication Required Parameters","required":true,"schema":{"type":"string","default":"openstack-taichung-default-2"}}}></ParamsItem></ul></div></details><div><ApiTabs><TabItem label={"200"} value={"200"}><div>
+
+OK
+
+</div><div><MimeTabs schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"desc"} required={false} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"id"} required={false} schemaDescription={undefined} schemaName={"int64"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"matchLabels"} required={false} schemaDescription={undefined} schemaName={"string[]"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"name"} required={false} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"status"} required={false} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"status_reason"} required={false} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"tm_uuid"} required={false} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"transparent_mode"} required={false} schemaDescription={undefined} schemaName={"boolean"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem><SchemaItem collapsible={false} name={"uuid"} required={false} schemaDescription={undefined} schemaName={"uuid"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{\n  \"desc\": \"string\",\n  \"id\": 0,\n  \"matchLabels\": [\n    \"twsc\"\n  ],\n  \"name\": \"ENT123456\",\n  \"status\": \"Ready\",\n  \"status_reason\": \"string\",\n  \"tm_uuid\": \"string\",\n  \"transparent_mode\": false,\n  \"uuid\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem><TabItem label={"401"} value={"401"}><div>
+
+request is unauthorized
+
+</div><div><MimeTabs schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"message"} required={false} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{\n  \"message\": \"Your request is unauthorized\"\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem><TabItem label={"404"} value={"404"}><div>
+
+Project not found
+
+</div><div><MimeTabs schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"message"} required={false} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{\n  \"message\": \"40401: Project {project_id} not found\"\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem><TabItem label={"500"} value={"500"}><div>
+
+Internal Server Error
+
+</div><div></div></TabItem><TabItem label={"503"} value={"503"}><div>
+
+The project does not exist
+
+</div><div><MimeTabs schemaType={"response"}><TabItem label={"application/json"} value={"application/json"}><SchemaTabs><TabItem label={"Schema"} value={"Schema"}><details style={{}} data-collapsed={false} open={true}><summary style={{"textAlign":"left"}}><strong>Schema</strong></summary><div style={{"textAlign":"left","marginLeft":"1rem"}}></div><ul style={{"marginLeft":"1rem"}}><SchemaItem collapsible={false} name={"message"} required={false} schemaDescription={undefined} schemaName={"string"} qualifierMessage={undefined} defaultValue={undefined}></SchemaItem></ul></details></TabItem><TabItem label={"Example (from schema)"} value={"Example (from schema)"}><ResponseSamples responseExample={"{\n  \"message\": \"50301: The project {project_id} does not exist\"\n}"} language={"json"}></ResponseSamples></TabItem></SchemaTabs></TabItem></MimeTabs></div></TabItem></ApiTabs></div>
+      

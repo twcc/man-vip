@@ -9,7 +9,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cfs-move-ret
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## Download cold data
+# Download cold data
 
 * Enter the **Download Cold Data** page, and the accessable file from Cold Storage will be temporarily stored in here. Select the **Available** file and move your cursor to the right panel of <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> button, then click the **DOWNLOAD** button to download file to your localhost. 
 
