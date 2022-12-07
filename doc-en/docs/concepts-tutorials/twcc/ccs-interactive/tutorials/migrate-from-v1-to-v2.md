@@ -1,5 +1,6 @@
 ---
 sidebar_position: 14
+slug: '/concepts-tutorials/twcc/ccs/tutorials/migrate-from-v1-to-v2'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-migrate-container-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-migrate-container-zh' 
 ---

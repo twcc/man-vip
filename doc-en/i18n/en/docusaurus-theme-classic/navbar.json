@@ -8,7 +8,7 @@
     "description": "Navbar item with label Docs"
   },
   "item.label.FAQ": {
-    "message": "FAQ",
+    "message": "FAQs",
     "description": "Q&A"
   },
   "item.label.tutorial": {
