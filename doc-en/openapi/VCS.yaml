@@ -7,7 +7,7 @@ servers:
       ApiHost:
         default: openstack-taichung-default-2
 info:
-  version: 1.5.3
+  version: 1.5.4
   title: VCS API
   description: |
     This is VCS API.
@@ -196,9 +196,15 @@ paths:
       tags:
         - project
       summary: get user quotas
-      description: get user quotas.Only tenant admin can use
+      description: get user quotas
       parameters:
         - $ref: '#/components/parameters/ProjectInPathParam'
+        - name: user
+          in: query
+          description: User UUID，tenant user is required
+          schema:
+            type: string
+            format: uuid
         - $ref: '#/components/parameters/ApiHostParam'
       responses:
         200:
@@ -732,7 +738,7 @@ paths:
                 summary: Example with associateIP
                 value:
                   action: associateIP
-                  ip: 0.0.0.0
+                  ip: 0
               disassociateIP example:
                 summary: Example with disassociateIP
                 value:
@@ -1604,7 +1610,7 @@ paths:
                 summary: Example with associateIP
                 value:
                   action: associateIP
-                  ip: 0.0.0.0
+                  ip: 0
               disassociateIP example:
                 summary: Example with disassociateIP
                 value:
@@ -4442,20 +4448,50 @@ components:
         user:
           $ref: '#/components/schemas/UserSerializer'
         gpu:
-          type: integer
-          format: int64
+          type: object
+          properties:
+            usage:
+              type: integer
+              format: int64
+            quota:
+              type: integer
+              format: int64
         cpu:
-          type: integer
-          format: int64
+          type: object
+          properties:
+            usage:
+              type: integer
+              format: int64
+            quota:
+              type: integer
+              format: int64
         memory:
-          type: integer
-          format: int64
+          type: object
+          properties:
+            usage:
+              type: integer
+              format: int64
+            quota:
+              type: integer
+              format: int64
         ipvs_port:
-          type: integer
-          format: int64
+          type: object
+          properties:
+            usage:
+              type: integer
+              format: int64
+            quota:
+              type: integer
+              format: int64
         floatingip:
-          type: integer
-          format: int32
+          type: object
+          properties:
+            usage:
+              type: integer
+              format: int64
+            quota:
+              type: integer
+              format: int64
     AZSerializer:
       required:
       - create_time

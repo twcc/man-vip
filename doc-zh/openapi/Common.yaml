@@ -1,24 +1,24 @@
 openapi: 3.0.3
 servers:
-  - url: https://{apigateway}/api/v3/
+  - url: '{apigateway}/api/v3/'
     variables:
       apigateway:
-        default: apigateway.twcc.ai
+        default: https://apigateway.twcc.ai
 info:
   # description: This is a simple API
-  version: 1.2.0
+  version: 1.2.1
   title: Common API
   description: |
     This is Common API.
 security:
   - ApiKeyAuth: []
 tags:
-  - name: solution
   - name: image requests
   - name: image commit
-  - name: version
-  - name: token request
   - name: project
+  - name: solution
+  - name: token request
+  - name: version
 paths:
   /version/:
     get:
@@ -200,7 +200,7 @@ paths:
       tags:
       - image commit
       summary: List image commit
-      description: List image commit request.
+      description: List image commit request.Only tenant admin can use
       parameters: 
         # - $ref: '#/components/parameters/ProjectInQueryParam'
         - ProjectInQueryParam:
@@ -232,7 +232,7 @@ paths:
       tags:
       - image commit
       summary: Create image commit request
-      description: Create image commit request
+      description: Create image commit request.Only tenant admin can use
       parameters: 
         - $ref: '#/components/parameters/ApiHostParam'
       requestBody:
@@ -265,7 +265,7 @@ paths:
       tags:
       - image commit
       summary: Delete a image commit
-      description: Delete a image commit
+      description: Delete a image commit.Only tenant admin can use
       parameters:
       - $ref: '#/components/parameters/ImageCommitIDParam'
       - $ref: '#/components/parameters/ApiHostParam'
@@ -277,7 +277,7 @@ paths:
       tags:
       - image commit
       summary: PATCH the image commit.
-      description: PATCH the image commit.
+      description: PATCH the image commit.Only tenant admin can use
       parameters:
       - $ref: '#/components/parameters/ImageCommitIDParam'
       - $ref: '#/components/parameters/ApiHostParam'
@@ -308,7 +308,7 @@ paths:
       tags: 
         - image requests
       summary: List image copy request
-      description: List image copy requests.
+      description: List image copy requests.Only tenant admin can use
       parameters: 
         - name: status
           in: query
@@ -342,7 +342,7 @@ paths:
       tags: 
         - image requests
       summary: Create image copy request
-      description: Create image copy request
+      description: Create image copy request.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/ApiHostParam'
       requestBody:
@@ -366,7 +366,7 @@ paths:
       tags: 
         - image requests
       summary: Get a image copy request
-      description: Get a image copy request
+      description: Get a image copy request.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/ImageRequestIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -381,7 +381,7 @@ paths:
       tags:
         - image requests
       summary: Delete a image copy request
-      description: Delete a image copy request
+      description: Delete a image copy request.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/ImageRequestIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -393,6 +393,7 @@ paths:
       tags:
         - image requests
       summary: PATCH the image copy request status to requested.
+      description: PATCH the image copy request status to requested.Only tenant admin can use
       parameters:
         - $ref: '#/components/parameters/ImageRequestIDParam'
         - $ref: '#/components/parameters/ApiHostParam'
@@ -403,7 +404,7 @@ paths:
               properties:
                 status :
                   type: string
-                  enum: [approved, failed, finished, requested]
+                  enum: [requested, approved, finished, failed]
         required: true
       responses:
         200:
@@ -415,7 +416,7 @@ paths:
                 properties:
                   status:
                     type: string
-                    enum: [approved, failed, finished, requested]
+                    enum: [requested, approved, finished, failed]
 components:
   securitySchemes:
     ApiKeyAuth:
