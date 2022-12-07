@@ -9,7 +9,7 @@ keywords:
 slug: '/faqs'
 ---
 
-# <i class="fa fa-question-circle" aria-hidden="true"></i> FAQ
+# <i class="fa fa-question-circle" aria-hidden="true"></i> FAQs
 
 Browse and select a service for Q&A of the TWS Member Center or TWCC cloud platform.<br/><br/>
 
