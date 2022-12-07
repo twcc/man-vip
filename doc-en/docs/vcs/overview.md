@@ -8,7 +8,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-overview-en'
 
 # <img class="icon" src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_af58322eb82b649d1f29aca1f201a117.png" width="25" height="25"/> Service overview
 
-Virtual Compute Service Instance is a traditional general host rental service provided by TWCC. It can be quickly deployed and recycled through automated tools and processes, and has the ability to mount multiple virtual disks at the same time, create data disks, and freely and flexibly allocate instance storage space, which makes it the best choice for both intelligent calculation and cost-saving.
+Virtual Compute Service Instance is a traditional general host rental service provided by TWCC. It can be quickly deployed and recycled through automated tools and processes, with the flexibility to select system disk capacity (5 options: 100GB~500GB), mounting of multiple virtual disks at the same time, and flexibly allocate instance storage space, which makes it the best choice for both intelligent calculation and cost-saving.
 
 <br/>
 
