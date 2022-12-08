@@ -39,7 +39,7 @@ import TabItem from '@theme/TabItem';
 
 <br/><br/>
 
-除 Windows 10 (BYOL) 未提供、Windows Server 提供附帶授權版本，上述映像檔皆有提供。
+除 Windows 10 (BYOL) 未提供、Windows Server 提供附帶授權版本，上述映像檔皆有提供之外，另提供 SQL Server Web。
 
 - 個體規格請參考 [TWCC 價目表 (TWS 用戶)](/docs/pricing.mdx#虛擬運算服務-virtual-compute-service-vcs)
 

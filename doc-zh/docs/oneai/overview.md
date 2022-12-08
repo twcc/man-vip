@@ -32,9 +32,13 @@ TWCC OneAI 提供：
 
 提供共用的儲存空間，可在 AI Maker 的服務之間或與計畫成員分享資料。
 
-### [容器映像檔](https://docs.aimaker.twcc.ai/s/WAoPe4Au5)  
+### [容器映像檔](https://docs.oneai.twcc.ai/s/WAoPe4Au5)  
 
 提供簡單創建容器映像檔的倉庫，可助您確保容器映像檔的分享安全與團隊的協作便利。
+
+### [映像檔產生器](https://docs.oneai.twcc.ai/s/sdOS688P4)
+
+提供圖形化介面的簡易操作流程，可用來維護、更新容器映像檔的內容，產生新的容器映像檔。
 
 ### [容器服務](https://docs.oneai.twcc.ai/s/yGbG4JJyi)  
 
