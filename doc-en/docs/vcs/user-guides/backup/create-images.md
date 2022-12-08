@@ -27,7 +27,7 @@ VCS instance images can preserve the state of an instance and the system disk wi
 ## Create an image
 
 :::caution
-1. **<ins>Before creating an image, it is strongly recommended that you refer to [Best practices to create a VCS instance images](https://man.twcc.vip/en/docs/vcs/user-guides/backup/best-practice-to-create-images/) to ensure effective acquisition of the image.</ins>**
+1. **<ins>Before creating an image, it is recommended that you refer to the [Best practices to create VCS instance images](./best-practice-create-images.md) and verify according to the content of the document to avoid excessive waiting time or failure to obtain a valid image.</ins>**
 2. If the image state is stuck in **`QUEUED`** and does not change to **`ACTIVE`** for a long time, please contact the Technical Support: <a href="mailto:isupport@twcc.ai">isupport@twcc. ai</a> for help.
 :::
 
@@ -50,7 +50,7 @@ Create the image manually.
 * Read the instructions in the window, and enter a name and description for the image, then click **OK**.
 * It takes several minutes to create the image. After the **Processing...** prompt disappears, you can continue with other tasks.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_42f2babff73c99d87f6f87c2e2b3ace7.png)
+![](https://user-images.githubusercontent.com/67446293/203542732-f8d5493a-11b7-4516-94ec-1f05532c73d6.png)
 
 * You will be directed to **VCS Instance Image Management** page. Wait for the image state to change from **`QUEUED`** > **`SAVING`** > finally to **`ACTIVE`** before using it.
 

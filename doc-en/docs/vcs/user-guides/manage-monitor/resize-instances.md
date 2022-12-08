@@ -45,7 +45,7 @@ Please refer to [<ins>TWCC FAQ VCS > Instance Image File > Q2</ins>](https://man
 
 - Enter ***Image File Name*** and click **OK**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3b733ce5cd7d55bfffc16244e38f328f.png)
+![](https://user-images.githubusercontent.com/67446293/203542732-f8d5493a-11b7-4516-94ec-1f05532c73d6.png)
 
 - Complete the creation of a VCS instance image.
 

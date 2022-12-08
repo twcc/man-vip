@@ -32,6 +32,9 @@ The project number (e.g. `GOVxxxxxx-`) in front of the name indicates that the i
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0e433efbd1c4cc5ad0f2a9116987ac93.png)
 
+:::info
+You can update the image description by clicking on the " <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> " to the right and selecting "**EDIT**".
+:::
 
 </TabItem>
 
