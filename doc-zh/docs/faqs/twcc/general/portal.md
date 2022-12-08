@@ -1,12 +1,12 @@
 ---
 sidebar_position: 2
-title: '使用者網站'
+title: 'TWCC 入口網站'
 slug: '/faqs/twcc/general/portal'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-portal-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-portal-zh'
 ---
 
-# TWCC FAQs | 使用者網站
+# TWCC FAQs | TWCC 入口網站
 
 <details>
 

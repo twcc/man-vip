@@ -9,7 +9,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-vcs-zh'
 
 # TWCC FAQs | Virtual Compute Service (VCS)
 
-## Connect to the VCS instance
+## Connect to a VCS instance
+
 <details>
 
 <summary> Q1. What open source clients are available for connecting to TWCC resources, like CCS, VCS and HPC?</summary>
@@ -131,7 +132,7 @@ There is no default password, you need to create a separate password before usin
 <div style={{height:10+'px'}}></div>
 
 
-## VCS instance management
+## Manage VCS instances
 
 <details>
 
@@ -374,7 +375,7 @@ If the server (VCS instance) is hosting only one external service, you can first
 
 <div style={{height:10+'px'}}></div>
 
-### Virtual network
+### Virtual Network
 
 <details>
 
@@ -423,7 +424,7 @@ TWCC does not limit the speed of the network within the virtual computing entity
 
 <div style={{height:10+'px'}}></div>
 
-### Auto scaling
+### Auto Scaling
 
 <details>
 
@@ -443,7 +444,7 @@ Follow the steps above, the auto scaling will use the template to scale out inst
 <div style={{height:10+'px'}}></div>
 
 
-## Image
+## Images
 
 <details>
 
