@@ -11,8 +11,6 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/cfs-overview-zh'
 
 # <img src="https://i.imgur.com/THr1zxE.png" width="25" height="25"/> 服務概觀
 
-
-
 ## 雲端管理與共享檔案，提供 TWCC 服務存取資料，以進行 AI/ML pipeline、資料分析等工作
 
 ### 冷熱儲存

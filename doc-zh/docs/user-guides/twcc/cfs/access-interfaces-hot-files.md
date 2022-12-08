@@ -83,7 +83,7 @@ import TabItem from '@theme/TabItem';
     - 連接埠：22  
 
 :::info
-若忘記**主機帳號**或**主機密碼**，請參考：[<ins>查詢主機帳密與 OTP 認證碼</ins>](../../../member/user-guides/member-key-quota/hpc-account-password-otp.md)。
+若忘記**主機帳號**或**主機密碼**，請參考：[<ins>查詢主機帳密與 OTP 認證碼</ins>](/user-guides/tws-member-center/manage-member-accounts/system-account-password-otp.md)。
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1f63040fedd3e99613ad7da2f3667230.png)

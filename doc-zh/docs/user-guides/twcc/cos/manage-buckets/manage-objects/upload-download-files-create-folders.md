@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 # 上傳、下載檔案、建立資料夾
 
 :::tip
-以下操作方式僅限計畫之 [「<ins>**公共空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](../../overview.md) 適用， [「<ins>**私有空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](../../overview.md) 之檔案管理請透過 [<ins>**第三方軟體**</ins>](../../../category/使用第三方軟體管理檔案) 操作。
+以下操作方式僅限專案之 [「<ins>**公共空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](/user-guides/twcc/cos/overview.md) 適用， [「<ins>**私有空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](/user-guides/twcc/cos/overview.md) 之檔案管理請透過 [<ins>**第三方軟體**</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cos-connect-info-zh) 操作。
 :::
 
 
@@ -41,14 +41,14 @@ import TabItem from '@theme/TabItem';
 * 選擇好欲上傳的檔案後，可勾選左上「**加密**」將檔案使用金鑰加密。完成後，點擊「**上傳**」。
 
 :::info
-更多檔案加密說明，請參考：[<ins>檔案加密</ins>](file-encryption.md)。
+更多檔案加密說明，請參考：[<ins>檔案加密</ins>](/user-guides/twcc/cos/manage-buckets/manage-objects/file-encryption.md)。
 :::
 
 ![](https://i.imgur.com/fCSF7DS.png)
 
 
     
-* 出現上傳完成後提示後點擊「完成」。
+* 出現上傳完成後提示後點擊「**完成**」。
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9bcdf1d73e3d33fe0fcbc8ac42fcfb24.png)
 
@@ -62,7 +62,7 @@ import TabItem from '@theme/TabItem';
 
 
 :::tip
-上傳檔案可藉『相對路徑』、『絕對路徑』擷取資料傳入儲存體<br/>
+上傳檔案可藉「**相對路徑**」、「**絕對路徑**」擷取資料傳入儲存體<br/>
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_66f6bc7fd0b69de7274d2a3251a5a817.png)
 :::
 

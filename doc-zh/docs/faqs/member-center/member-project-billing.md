@@ -16,7 +16,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-membership-pro
 
 <summary> Q1. 如何進入會員中心?</summary>
 
-進入會員中心之方式，請參考[<ins>此文件</ins>](/docs/member/user-guides/member-key-quota/go-to-member-center.md)。
+進入會員中心之方式，請參考[<ins>此文件</ins>](/user-guides/tws-member-center/manage-member-accounts/access-tws-member-center.md)。
 
 </details>
 

@@ -16,7 +16,7 @@ After image is created, you can create a new container from an image when needed
 <Tabs>
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-* Go to [Interactive Container Management](/docs/user-guides/twcc/ccs-interactive-container/containers/manage-containers.md) page, and click **＋CREATE**.
+* Go to [Interactive Container Management](/user-guides/twcc/ccs-interactive-container/containers/manage-containers.md) page, and click **＋CREATE**.
 
 ![](https://i.imgur.com/Cp7Bvz9.png)
 

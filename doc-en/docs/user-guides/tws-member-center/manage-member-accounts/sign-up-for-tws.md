@@ -73,5 +73,5 @@ Verify your email address and phone to complete the registration!
 
 
 :::info
-Once you have signed up for your TWS account, refer to [<ins>Apply for free trial project/purchase TWCC services</ins>](../manage-projects/apply-projects-credits.md) to get started with TWCC!
+Once you have signed up for your TWS account, refer to [<ins>Apply for free trial project/purchase TWCC services</ins>](/user-guides/tws-member-center/manage-projects/apply-projects-credits.md) to get started with TWCC!
 :::

@@ -13,7 +13,7 @@ TWCC 入口網站共有兩處可檢視容器監控的資訊，可監控 CPU、GP
 1. 「**開發型容器詳細資料**」頁：可觀察一指定容器。
 2. 「**開發型容器監控**」頁：可快速切換多個容器的監控資訊，並可檢視個人 GPU 資源總數、已使用的時間長度。
 
-本篇說明第一種監控方式，第二種監控方式，請參考[監控容器](/docs/user-guides/twcc/ccs-interactive-container/monitor-container.md)了解更多。
+本篇說明第一種監控方式，第二種監控方式，請參考[監控容器](/user-guides/twcc/ccs-interactive-container/monitor-container.md)了解更多。
 
 ## 監控資訊
 

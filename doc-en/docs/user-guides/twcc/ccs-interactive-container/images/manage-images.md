@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # Manage images
 
-After creating a custom image, you can view the image information or delete the image you no longer use on the **Image Management** page.
+After [creating a custom image](/user-guides/twcc/ccs-interactive-container/containers/details/create-image.md), you can view the image information or delete the image you no longer use on the **Image Management** page.
 
 ## View information
 

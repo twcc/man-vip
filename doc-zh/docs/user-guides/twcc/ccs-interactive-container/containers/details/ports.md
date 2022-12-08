@@ -15,16 +15,16 @@ TWCC 開發型容器開放 22、8888、5000、5001、5002，5 個**目標埠**�
 
 容器已預設將 SSH 設置在 22 埠、Jupyter Notebook 設置在 8888 埠，並自動完成關聯，因此容器建立完成後，您即可立即使用這兩種方式連線操作容器。
 
-您可以自行運用的**目標埠**為：5000、5001、5002。將架設於容器內服務的 daemon 設置在其中一個目標埠，並關聯對外埠，完成後，系統將配置一個對應的**對外埠 (50000 ~ 60000)**，您即可於透過公用 IP 和對外埠，對外提供該服務 (例：[AI 推論服務](../../tutorials/tensorflow-inception-v3-image-recognition.md)或是[網站服務](../../tutorials/configure-service-ports.md))。
+您可以自行運用的**目標埠**為：5000、5001、5002。將架設於容器內服務的 daemon 設置在其中一個目標埠，並關聯對外埠，完成後，系統將配置一個對應的**對外埠 (50000 ~ 60000)**，您即可於透過公用 IP 和對外埠，對外提供該服務 (例：[AI 推論服務](https://man.twcc.ai/@twccdocs/howto-ccs-tensorflow-inception-v3-port-zh)或是[網站服務](https://man.twcc.ai/@twccdocs/howto-ccs-config-service-port-zh))。
 
 <br/>
 
 
 ## 準備工作
 
-- [建立開發型容器](../create-connect/create-container.md)。
+- [建立開發型容器](/user-guides/twcc/ccs-interactive-container/containers/create/create-container.md)。
 - 若選擇使用 TWCC 入口網站操作，容器建立後，請於「**開發型容器管理頁**」點選欲連線的容器，進入「**開發型容器詳細資料頁**」。
-- 若選擇使用 TWCC CLI 操作，請先取得[容器 ID](../manage-monitor/manage-container.md#檢視資訊)。
+- 若選擇使用 TWCC CLI 操作，請先取得容器 ID。
 
 <br/>
 
@@ -59,7 +59,7 @@ twccli ls ccs -p -s 886330
 
 ## 關聯服務埠
 
-您可以將容器關聯 5000、5001、5002 **目標埠**，完成後系統將配置相對應的**對外埠**。您可以透過此機制，對外提供容器服務 (例：[AI 推論服務](../../tutorials/tensorflow-inception-v3-image-recognition.md)或是[網站服務](../../tutorials/configure-service-ports.md))。
+您可以將容器關聯 5000、5001、5002 **目標埠**，完成後系統將配置相對應的**對外埠**。您可以透過此機制，對外提供容器服務 (例：[AI 推論服務](https://man.twcc.ai/@twccdocs/howto-ccs-tensorflow-inception-v3-port-zh)或是[網站服務](https://man.twcc.ai/@twccdocs/howto-ccs-config-service-port-zh))。
 
 <Tabs>
 <TabItem value="TWCC 入口網站" label="TWCC 入口網站">

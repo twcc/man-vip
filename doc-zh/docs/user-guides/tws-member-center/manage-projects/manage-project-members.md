@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 # 管理 TWS 專案成員
 
 :::info
-- 使用 TWCC 服務前請確認您已有可用專案與額度：[<ins>確認已有可用專案</ins>](./available-projects.md)。
+- 使用 TWCC 服務前請確認您已有可用專案與額度：[<ins>確認已有可用專案</ins>](/user-guides/tws-member-center/manage-projects/available-projects.md)。
 - 僅「**專案主持人（建立者）**」、「**專案管理員**」有權限管理專案成員。
 :::
 

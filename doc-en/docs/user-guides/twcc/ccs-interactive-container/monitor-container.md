@@ -26,7 +26,7 @@ Here we will walk you through the second monitoring method. For the first monito
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_47106f0a7964568d93422cdf31e4d5b3.png)
 
-- Like **Interactive Container Details** page, you can download the monitoring figures and observe the changes in container resource utilization within a certain period of time. In addition, you can also view personal **Total GPU Numbers(pcs) and Total GPU Hour(s)** within a certain period of time.
+- Like in [**Interactive Container Details**](/docs/user-guides/twcc/ccs-interactive-container/containers/details/details-monitor-container.md) page, you can download the monitoring figures and observe the changes in container resource utilization within a certain period of time. In addition, you can also view personal **Total GPU Numbers(pcs) and Total GPU Hour(s)** within a certain period of time.
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6411c83470541a125399dab70f789b79.png)

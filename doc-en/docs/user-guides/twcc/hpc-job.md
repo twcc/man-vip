@@ -17,12 +17,12 @@ TWCC HPC Job uses the international open source software Slurm as the resource s
 This HPC Job runs containers with Singularity, and users can use the Docker image files provided by this service to perform related AI operations.
 
 :::info
-:book: If you need to use more than 8 GPUs or do cross-node high speed computing, please use [<ins>Taiwania2 (HPC CLI)</ins>](https://www.twcc.ai/doc?page=hpc_cli&euqinu=true) and refer to the following tutorial examples:
-- [<ins>Create TAIWANIA2 containers</ins>](https://www.twcc.ai/doc?page=howto-twnia2-create-sglrt-container)
-- [<ins>Run parallel computing with multi-nodes on containers －AI Benchmark</ins>](https://www.twcc.ai/doc?page=howto-twnia2-run-parallel-job-container)
+:book: If you need to use more than 8 GPUs or do cross-node high speed computing, please use [<ins>Taiwania2 (HPC CLI)</ins>](/docs/user-guides/twcc/twnia2-hpc-cli) and refer to the following tutorial examples:
+- [<ins>Create TAIWANIA2 containers</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-en)
+- [<ins>Run parallel computing with multi-nodes on containers －AI Benchmark</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-run-parallel-job-container-en)
 :::
 
-## Create HPC Job
+## Create a HPC Job
 
 * Enter **HPC Job** Service, and on the **HPC Job Management** page click **CREATE**.
 
@@ -41,7 +41,7 @@ You can click on the star <i class="fa fa-star-o" aria-hidden="true"></i> on the
 * Then select the image version/snapshot, hardware specification and input command in the Job 1 block. The content of the command or the program will be executed automatically when the container starts.
  
 :::info
-:bulb: Tip: Please use the [**Hyper File System (HFS)**](https://www.twcc.ai/doc?page=hfs) to upload the content of the program you want to run first.
+:bulb: Tip: Please use the [**Hyper File System (HFS)**](/docs/user-guides/twcc/hfs) to upload the content of the program you want to run first.
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7bc4ee16088fec1795883d3d426f5615.png)
@@ -54,9 +54,8 @@ You can click on the star <i class="fa fa-star-o" aria-hidden="true"></i> on the
 
 
 :::info 
-:book: Refer to
-* [Cloud Object Storage (COS)](https://www.twcc.ai/doc?page=object)
-* [Hyper File System (HFS)](https://www.twcc.ai/doc?page=hfs)
+* [Cloud Object Storage (COS)](/docs/user-guides/twcc/cos)
+* [Hyper File System (HFS)](/docs/user-guides/twcc/hfs)
 :::
 
 * HPC jobs can be set up with multiple calculation tasks. Click **ADD JOB** to expand the Job 2 setup block and continue setting up other jobs.
@@ -87,7 +86,7 @@ You can click on the star <i class="fa fa-star-o" aria-hidden="true"></i> on the
 
 
 
-## HPC Job Management
+## Manage HPC Jobs 
 
 * Once job is created, it will appear at the top of the HPC Job Management list. Make sure to **START** the job and it will be executed immediately or at the specified time when the status changes from **Inactive** to **Active**.
 
@@ -113,10 +112,10 @@ You can click on the star <i class="fa fa-star-o" aria-hidden="true"></i> on the
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7a9928ea5db2d6d8d3c82b71f38b0fa4.png)
 
 :::info
-You can [connect to the data transfer node](./hfs/user-guides/connect-data-transfer-node.md) to the path `/work/{{supercomputer account}}/slurm_log` to view the computing history of all HPC jobs.
+You can [connect to the data transfer node](/user-guides/twcc/hfs/connect-data-transfer-node.md) to the path `/work/{{supercomputer account}}/slurm_log` to view the computing history of all HPC jobs.
 :::
 
-## Monitoring HPC Job
+## Monitoring a HPC Job
 * Click **Monitor** on the left side to view the monitoring information service provided by the system for monitoring HPC work, including the cumulative usage of projects, cumulative usage of specific users, total number of GPUs and total GPU time, etc.
 
 :::info
@@ -126,7 +125,7 @@ You can [connect to the data transfer node](./hfs/user-guides/connect-data-trans
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5c169240a4bb66bd95bb5923c3d4ebd6.png)
 
 
-## Connection Usage
+## Connection methods
 
 * HPC Job provides data transfer node (xdata1.twcc.ai) and login node (ln01.twcc.ai), using SSH and SFTP connections respectively.
 
@@ -134,16 +133,16 @@ You can [connect to the data transfer node](./hfs/user-guides/connect-data-trans
 
 
 
-### Connected Data Transmission Nodes  
+### Connect to the data transfer node 
 
 :::info
-Refer to [Hyper File System](https://www.twcc.ai/doc?page=hfs) for using Filezilla with GUI to connect data transfer node and transfer datacd with SFTP.
+Refer to [Hyper File System](/docs/user-guides/twcc/hfs) for using Filezilla with GUI to connect data transfer node and transfer datacd with SFTP.
 :::
 
-### Connect To The Node
+### Connect to the login node
 
 :::info
-:book: Refer to[Login node](https://www.twcc.ai/doc?page=hpc_cli#2-%E7%99%BB%E5%85%A5%E3%80%8C%E7%99%BB%E5%85%A5%E7%AF%80%E9%BB%9E%E3%80%8D), connect to the node
+:book: Refer to[Login node](/user-guides/twcc/twnia2-hpc-cli/connect/login-logout.md), connect to the node
 :::
 
 * After a successful login, you can directly use Slurm basic command `sinfo -V`, which should return version information for this service and confirm that this account can use Slurm features properly.
@@ -154,7 +153,7 @@ sinfo -V
 ![image](https://user-images.githubusercontent.com/46370453/184616633-9ed85f25-b638-40c4-9102-a16c0c52db8f.png)
 
 
-## Introduction Of Slurm Basic Commands
+## Introduction to Slurm basic commands
 
 This chapter explains the basic Slurm commands and their usage. Users who are already familiar with Slurm can skip these commands. The following is a list of basic Slurm commands. The full usage and descriptions can be found by following the commands with **--help**.
 
@@ -173,7 +172,7 @@ This chapter explains the basic Slurm commands and their usage. Users who are al
 |srun|srun is used to submit tasks, or as individual jobs within a job step. srun has various options for specifying resource requirements, including: minimum and maximum number of nodes, number of CPUs, whether to use specific nodes, and the characteristics of specific nodes (e.g., memory size, hard disk space, certain required features, etc.) A job can contain multi-step tasks that can run continuously or in parallel on independent or shared nodes, depending on the resources of the nodes assigned to them.|
 |strigger|The strigger is used to set, get or view event triggers. Event triggers include events such as a node closing or working close to its time limit.|
 
-### Use Sinfo To View Node Status
+### View node status with `sinfo`
  
 The following example directly uses the `sinfo` command to see four states of the node (STATE field), namely drain*, drain, idle, and down, with the "*" asterisk indicating that the node can accept and execute tasks if it does not return to the following example, while down means that the node information is lost.
 
@@ -190,7 +189,7 @@ sinfo
 
 
 
-### Submit, View And Delete Single Job
+### Submit, view and delete a job
 
 * Use the `srun` command to schedule a job named demo, sleep 100.
 
@@ -223,7 +222,7 @@ sacct
 ![image](https://user-images.githubusercontent.com/109254397/184207841-fb9b8111-f814-48ca-8222-baee3da121ea.png)
 
 
-### Using Sbatch With Singularity Submit Container Jobs
+### Submit container jobs with `sbatch` and Singularity
 
 Use the sbatch command to submit the job and use the wrap option to wrap the content to be run. The content is a singulatiry command that uses the ``docker://registry.twcc.ai/ngc/nvidia/ubuntu-v1:flatest'' image file to enable the container and runs the ``**date** command inside the container. id is 1963.
 

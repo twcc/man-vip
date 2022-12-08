@@ -13,7 +13,7 @@ There are two ways to monitor container in TWCC portal. You can monitor the util
 1. **Interactive Container Details** page: Monitor a specified container.
 2. **Monitoring Interactive Container** page: Quickly switch the monitoring information between multiple containers, and view the total GPU number(pcs) and total GPU hour(s) of personal use.
 
-Here we will walk you through the first monitoring method. For the first monitoring method, please refer to [monitoring container](/docs/user-guides/twcc/ccs-interactive-container/containers/details/details-monitor-container.md) for more information.
+Here we will walk you through the first monitoring method. For the first monitoring method, please refer to [monitoring container]/user-guides/twcc/ccs-interactive-container/monitor-container.md) for more information.
 
 ## Monitoring information
 

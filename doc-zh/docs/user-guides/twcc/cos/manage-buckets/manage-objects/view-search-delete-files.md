@@ -11,9 +11,9 @@ import TabItem from '@theme/TabItem';
 
 # 檢視、搜尋、刪除檔案
 
-:::tip
-以下操作方式僅限計畫之 [「<ins>**公共空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](../../overview.md) 適用， [「<ins>**私有空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](../../overview.md) 之檔案管理請透過 [<ins>**第三方軟體**</ins>](../../../category/使用第三方軟體管理檔案) 操作。
-:::
+- 若尚未註冊使用帳號，請先[註冊 TWS](/user-guides/tws-member-center/manage-member-accounts/sign-up-for-tws.md)。
+- 若選擇使用 TWCC 入口網站操作，請先登入 [TWCC 入口網站](https://tws.twcc.ai/)，並進入[開發型容器管理](/user-guides/twcc/ccs-interactive-container/containers/manage-containers.md)頁。
+- 若選擇使用 TWCC CLI 操作，請先[安裝 TWCC CLI](https://github.com/twcc/TWCC-CLI) 、並[登入](https://github.com/twcc/TWCC-CLI)。
 
 ## 檢視檔案內容
 
@@ -32,7 +32,7 @@ TWCC 入口網站最多僅能顯示 1000 筆資料 (儲存體、資料夾、檔�
 :::
 
 
-* 進入檔案內容頁面後，即可檢視檔案的基本資訊。
+* 進入檔案內容頁面後，即可檢視如下檔案的基本資訊。
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e1ecd57f58ba34c49be88e324efa6f13.png)
@@ -76,7 +76,7 @@ twccli ls cos -bkt bk_cli
   <TabItem value="TWCC 入口網站" label="TWCC 入口網站" default>
 
 
-* 進入儲存體內容後，點擊該檔案列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>  選單按鈕，再按一下「刪除」即可。亦可點擊勾選欄選擇多個檔案，再點擊上方的「删除」。
+* 進入儲存體內容後，點擊該檔案列表後的 <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>  選單按鈕，再按一下「**刪除**」即可。亦可點擊勾選欄選擇多個檔案，再點擊上方的「**删除**」。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_53380d4b55caf0a78c19c91ec5006700.png)
 

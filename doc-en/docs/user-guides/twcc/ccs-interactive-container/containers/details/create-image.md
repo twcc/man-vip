@@ -13,8 +13,8 @@ import TabItem from '@theme/TabItem';
 
 
 :::caution
-1. The scope of the container image does not include the data in the default directories /home and /work of the container. Please note the installation location of the packages before creating a image. Python package installation notes can be found at [<ins>Python package installation guide</ins>](https://man.twcc.vip/en/docs/ccs/tutorials/python-package-installation-guide).
-2. When you store more than 10 GB of data in the container system directory (not /home or /work directory of [<ins>Hyper File System (HFS)</ins>](https://man.twcc.vip/en/docs/hfs/intro)), the container image might not be created normally.<br/>
+1. The scope of the container image does not include the data in the default directories /home and /work of the container. Please note the installation location of the packages before creating a image. Python package installation notes can be found at [<ins>Python package installation guide</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh).
+2. When you store more than 10 GB of data in the container system directory (not /home or /work directory of [<ins>Hyper File System (HFS)</ins>](/docs/user-guides/twcc/hfs)), the container image might not be created normally.<br/>
 You can check used capacity of the container system catalog `/` by entering the command `df -h`.
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_eeeecf274c536f0c7c8ce65c910ec9a5.png)<br/>
 If there are any questions, please contact our Technical Support or Customer Service, thank you!
