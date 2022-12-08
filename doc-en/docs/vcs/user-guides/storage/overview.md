@@ -28,8 +28,8 @@ Virtual Disk Service (VDS) plays a significant role in Virtual Compute Service (
 
 ### VCS instance storage
 
-- **System disks**: We provide a system disk with a built-in 100 GB hard disk drive (HDD) in a VCS instance.
-- **Data disks**: VCS instances can mount multiple data disks to expand the storage. VDS provides the following two disk types:
+- **System disks**<br/>We provide a system disk with 5 options: 100 GB ~ 500 GB (HDD) in a VCS instance.
+- **Data disks**<br/>VCS instances can mount multiple data disks to expand the storage. VDS provides the following two disk types:
     - **Solid-state drive (SSD)**:
         - Provides low-latency services (less than 10 milliseconds), efficient and stable transfers (from 3 IOPS/GB to 16 IOPS/GB) to enhance the reliability and scalability of applications. SSD is well-suited for enterprise applications that require high performance and high-throughput computations with big data.
         - Provides a maximum transfer capability of 2,375 MB/sec for each VCS instance.

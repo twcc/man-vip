@@ -16,7 +16,8 @@ VCS instance images can preserve the state of an instance and the system disk wi
 :::info
 
 1. **After deleting a VCS instance, the data in the 100 GB system disk will disappear. To back up the system disk, please refer to the following steps to create an image for the instance before deleting it.**
-2. For the difference between Tenant Admin and Tenant User for using VCS instance, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務).
+2. The size of the image is the same as the size of the system disk you selected to create your virtual instance. After the image been created, it will be billed at the virtual disk (HDD) rate.
+3. For the difference between Tenant Admin and Tenant User for using VCS instance, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務).
 
 :::
 
@@ -54,7 +55,7 @@ Create the image manually.
 
 * You will be directed to **VCS Instance Image Management** page. Wait for the image state to change from **`QUEUED`** > **`SAVING`** > finally to **`ACTIVE`** before using it.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c4a06905f071589d1866542c3a7e6985.png)
+![](https://i.imgur.com/cfPfnDH.png)
 
 </TabItem>
 

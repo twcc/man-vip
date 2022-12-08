@@ -103,9 +103,15 @@ If "Deletion Protection" is enabled, before deleting a resource, you need to dis
 2. The creation of VNWs is restricted to **Tenant Admins**. If you are a **Tenant User**, please contact the **Tenant Admins** of your project for assistance.
 :::
 
-* On the storage information page, setup the storage size (GB) and type of the data disk (4 data disk types are provided: HDD, SSD, HDD encryption, and SSD encryption).
+* On the Storage Information page, set the following disk information:
+    * System Disk：
+        * System Disk Size (GB): 5 disk sizes are provided - 100GB, 200GB, 300GB, 400GB, 500 GB.
+        * System Disk Type: HDD only.
+    * Data Disk：
+        * Data Disk Size (GB):You can freely set the disk size (up to 16TB).
+        * Data Disk Type: 4 data disk types are provided - HDD, SSD, HDD encryption, and SSD encryption.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_36fee82524d80b8c3ba86320896bb815.png)
+![](https://i.imgur.com/i3bPSM8.png)
 
 :::caution
 - [<ins>Auto Scaling</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-auto-sacling-en) scales out new instances whose configuration is identical to the connected instance. Therefore,
@@ -155,8 +161,7 @@ TWCC is not responsible for recording and managing your key pair. Please be sure
 
 * Then, click "**Next: Review & Create>**" to review the settings and estimated cost of the VCS instance. Click "**Create**" to complete, and wait a few minutes, the connection can be started when the state of the instance becomes **`Ready`**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9e598e7a540443a0396874b127090992.png)
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_20ed16cf36603d91503ca375aba54e92.png)
+![](https://i.imgur.com/JoB2Bf1.png)
 
 
 </TabItem>
@@ -264,9 +269,15 @@ If "Deletion Protection" is enabled, before deleting a resource, you need to dis
 2. The creation of VNWs is restricted to **Tenant Admins**. If you are a **Tenant User**, please contact the **Tenant Admins** of your project for assistance.
 :::
 
-* On the storage information page, setup the storage size (GB) and type of the data disk (4 data disk types are provided: HDD, SSD, HDD encryption, and SSD encryption).
+* On the Storage Information page, set the following disk information:
+    * System Disk：
+        * System Disk Size (GB): 5 disk sizes are provided - 100GB, 200GB, 300GB, 400GB, 500 GB.
+        * System Disk Type: HDD only.
+    * Data Disk：
+        * Data Disk Size (GB):You can freely set the disk size (up to 16TB).
+        * Data Disk Type: 4 data disk types are provided - HDD, SSD, HDD encryption, and SSD encryption.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_36fee82524d80b8c3ba86320896bb815.png)
+![](https://i.imgur.com/OwoCthG.png)
 
 :::caution
 - [<ins>Auto Scaling</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-auto-sacling-en) scales out new instances whose configuration is identical to the connected instance. Therefore,
@@ -289,8 +300,7 @@ If "Deletion Protection" is enabled, before deleting a resource, you need to dis
 
 * Then, click "**Next: Review & Create>**" to review the settings and estimated cost of the VCS instance. Click "**Create**" to complete, and wait a few minutes, the connection can be started when the state of the instance becomes **`Ready`**.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9e598e7a540443a0396874b127090992.png)
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_20ed16cf36603d91503ca375aba54e92.png)
+![](https://i.imgur.com/JoB2Bf1.png)
 
 
 </TabItem>
