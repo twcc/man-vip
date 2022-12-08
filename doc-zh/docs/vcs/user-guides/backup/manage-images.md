@@ -32,6 +32,9 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_186918c503fa42eae342f88955c2bea3.png)
 
+:::info
+您可以點選右側 「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 並選擇「**編輯**」更新映像檔描述。
+:::
 
 </TabItem>
 

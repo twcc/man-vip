@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 ## 建立映像檔
 
 :::caution
-1. **<ins>建立映像檔前，強烈建議請您參考[建立虛擬運算個體映像檔的最佳做法](./best-practice-create-images.md)，先執行相關工作，以確保有效取得映像檔。</ins>**
+1. **<ins>建立映像檔前，建議您參考[建立虛擬運算個體映像檔的最佳做法](./best-practice-create-images.md)，依文件內容進行檢核，避免耗費過多等待時間或無法取得有效映像檔。</ins>**
 2. 若映像檔狀態停止於 **`QUEUED`** 且久未轉為 **`ACTIVE`**，請洽詢技術支援團隊：<a href="mailto:isupport@twcc.ai">isupport@twcc.ai</a>，我們將協助您解決。
 :::
 
@@ -44,7 +44,7 @@ import TabItem from '@theme/TabItem';
 * 確認視窗提示的資訊，並輸入映像檔的名稱、描述後按「**確定**」。
 * 建立映像檔需數分鐘，等待「**系統需求處理中...**」提示消失後，即可繼續進行其他工作。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ed2e50a4cd9980029e9dd4d291761ede.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6db5bf42a2241b5cb33d06ca66e47d57.png)
 
 * 頁面跳轉至虛擬運算個體映像檔管理頁，並等映像檔狀態由 **`QUEUED`** > **`SAVING`**  > 最後變為 **`ACTIVE`** 後即可使用。
 
