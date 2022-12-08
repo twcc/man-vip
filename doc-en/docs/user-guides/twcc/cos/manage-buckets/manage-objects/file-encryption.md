@@ -18,7 +18,7 @@ When uploading files to TWCC Cloud Object Storage, you can choose the file encry
 - Keys are centrally managed by TWCC and currently do not support the deletion, change or use BYOK.
 :::
 
-## Encryption Key ID
+## Encryption key ID
 
 When uploading files using third-party software, the files need to be encrypted using the Encryption Key ID (user sites are automatically encrypted by the system).：
 
@@ -29,7 +29,7 @@ Login to TWCC > enter the service list and select **Cloud Object Storage** > ent
 
 
 
-## How To Encrypt The Files?
+## How To encrypt files?
 
 TWCC encrypts your files when you upload them to cloud object storage, as described below.
 When you download the file, the system will automatically get the decryption key and you don't need to perform additional operations.
@@ -42,14 +42,14 @@ When you download the file, the system will automatically get the decryption key
 
 
 
-### Encrypted Uploads
+### Upload a file with encryption
 
-Same steps as [<ins>uploading a file</ins>](https://man.twcc.ai/@twccdocs/guide-cos-upload-download-files-zh#%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88), please check **Encrypt** and then click **UPLOAD** to encrypt the file.
+Same steps as [<ins>uploading a file</ins>](/user-guides/twcc/cos/manage-buckets/manage-objects/upload-download-files-create-folders.md), please check **Encrypt** and then click **UPLOAD** to encrypt the file.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_af965af915450fa5d94de1fae5b0bbbb.png)
 
 
-### Verify That The File Is Encrypted
+### Verify that the file is encrypted
 
 
 After a file has been encrypted and uploaded, the encrypted properties of the file will be displayed when you go to the file details page.
@@ -68,10 +68,10 @@ After a file has been encrypted and uploaded, the encrypted properties of the fi
 Please [<ins>download S3 Browser, complete the connection to TWCC Cloud Object Storage, create the storage</ins>](https://man.twcc.ai/@twccdocs/guide-cos-s3browser-zh), and obtain the <a href="#加密金鑰-ID"><ins>Encryption Key ID</ins></a>.
 
 
-### Set encryption function
+### Set up encryption
 
 
-**Step 1. Enter the settings page**
+**Step 1. Go to the settings page**
 
 Click **Tools** > **Server-Side-Encryption** > **+Add**
 
@@ -81,7 +81,7 @@ Click **Tools** > **Server-Side-Encryption** > **+Add**
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ceacfeaf972f12ddfb327fef7e180e65.png)
 
 
-**Step 2. Set the encryption content**
+**Step 2. Set up encryption**
 
 - Bucket name or mask：Enter the "**Bucket**" name of the file to be encrypted.
 - Encryption type：Select **Server-Side-Encrption with Customer Keys Stored in AWS KMS (SSE-KMS)**
@@ -96,7 +96,7 @@ Click **Tools** > **Server-Side-Encryption** > **+Add**
 
 
 
-### Verify that the file is encrypted
+### Verify the file is encrypted
 
 After uploading the file, right-click on File > Properties > View File Encryption Properties.
 
@@ -104,7 +104,7 @@ After uploading the file, right-click on File > Properties > View File Encryptio
 
 
 :::info
-- In this document, we use S3 Browser as an example of client software, you can choose other software
+- In this document, we use S3 Browser as an example of client software, you can choose other software.
 - For more tutorials on using S3 Browser's Cloud Object Storage, refer to [<ins>Manage files with third-party software - S3 Browser</ins>](https://man.twcc.ai/@twccdocs/guide-cos-s3browser-zh)
 :::
 

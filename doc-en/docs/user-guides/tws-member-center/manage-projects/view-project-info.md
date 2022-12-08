@@ -32,7 +32,7 @@ After signing in, you can view the project information on the overview page, whi
 
 
 :::info
-For the difference in permissions between the Tenant admins and Tenant Users using TWCC, please refer to [<ins>User permissions comparison</ins>](https://man.twcc.ai/@twccdocs/role-main-en).
+For the difference in permissions between the Tenant admins and Tenant Users using TWCC, please refer to [<ins>User permissions comparison</ins>](https://man.twcc.ai/@twsdocs/role-main-en).
 :::
 
 

@@ -13,7 +13,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-ccs-scheduled-
 
 ## 建立任務型容器
 
-* 由服務列表點選「任務型容器」，在「任務型容器管理」頁面，點擊「**＋建立**」。
+* 由服務列表點選「**任務型容器**」，在「**任務型容器管理**」頁面，點擊「**＋建立**」。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7f595947850ed201ee76b916360e797a.png)
 
@@ -28,7 +28,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-ccs-scheduled-
 * 填寫容器基本資訊、選擇映像檔、基本設定及輸入執行程式的指令；當任務型容器啟動後會自動執行該指令的內容，接著點擊「**下一步：儲存資訊>**」進入儲存資訊頁面。
 
 :::tip
-請先使用 [「高速檔案系統」](hfs)上傳欲執行運算的程式內容。
+請先使用 [「高速檔案系統」](/docs/user-guides/twcc/hfs)上傳欲執行運算的程式內容。
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f06710efd7d9ee81c80149fc11b663bb.png)
@@ -40,8 +40,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-ccs-scheduled-
 * 點擊「**下一步：排程**」，設定任務執行排程。
 
 :::info 
-* [雲端物件儲存服務](cos)
-* [高速檔案系統](hfs)
+* [雲端物件儲存服務](/docs/user-guides/twcc/cos)
+* [高速檔案系統](/docs/user-guides/twcc/hfs)
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1b2b5540a2ac2d584332e9ad1b96cf74.png)
@@ -63,7 +63,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-ccs-scheduled-
 
 
 ## 任務型容器管理
-* 容器建立後，會出現任務型容器管理的容器列表中，請務必「啟動」容器，待狀態從 Inactive 變為 Ready 時，容器將立即執行運算，或在指定時間執行運算。
+* 容器建立後，會出現任務型容器管理的容器列表中，請務必「**啟動**」容器，待狀態從 Inactive 變為 Ready 時，容器將立即執行運算，或在指定時間執行運算。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b3d31b1f4dc578713d6902ba76ca8425.png)
 
@@ -90,7 +90,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/doc-ccs-scheduled-
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f64b3640255755955947cdfba9fa7f5b.png)
 
 :::caution
-- 「**任務 log**」功能無法確保您的所有紀錄在容器結束運行後，仍可保存及取得，建議您將 log 轉存至 [高速檔案系統](hfs) 或 上傳到 [雲端物件儲存](cos) 中，以確保紀錄可用性。
+- 「**任務 log**」功能無法確保您的所有紀錄在容器結束運行後，仍可保存及取得，建議您將 log 轉存至 [高速檔案系統](/docs/user-guides/twcc/hfs) 或 上傳到 [雲端物件儲存](/docs/user-guides/twcc/cos) 中，以確保紀錄可用性。
 - 若希望由 TWCC 維運人員協助您取得完整紀錄，請您來信授權處理 (isupport@twcc.io)，並請勿存放機敏資料。
 :::
 

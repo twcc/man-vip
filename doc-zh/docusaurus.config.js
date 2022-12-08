@@ -215,33 +215,37 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "TWS",
             items: [
               {
-                label: "Overview",
-                to: "/docs/user-guides",
+                label: "Official",
+                href: "https://tws.twcc.ai/",
+              },
+              {
+                label: "Contact Us",
+                href: "https://tws.twcc.ai/contact-us/",
               },
             ],
           },
           {
-            title: "Members",
+            title: "Member Center",
             items: [
+              {
+                label: "Enterprise Users",
+                href: "https://login.twcc.ai/nchc_service/multi_login.php?site=tws",
+              },
               {
                 label: "Academic Users",
                 href: "https://iservice.nchc.org.tw",
               },
-              {
-                label: "Enterprise Users",
-                href: "https://tws.twcc.ai",
-              },
             ],
           },
           {
-            title: "More",
+            title: "Feedback",
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/twcc/man-vip",
+                href: "https://github.com/twcc/man-vip/issues/new?assignees=&labels=question&template=questions.md&title=%5BDISCUSS%5D+-+",
               },
             ],
           },

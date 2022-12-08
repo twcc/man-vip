@@ -13,7 +13,8 @@ import TabItem from '@theme/TabItem';
 
 Life Cycle Management provides a variety of file life cycle management rules. You can set filters based on file type, name, size, creation date and the files that unchanged for a long time(by days), etc. Life Cycle Management can perform actions on files, including **Move to Cold Storage**, **Move to Hot Storage** and **Deletion**.
 
-## Edit life cycle rules 
+## Edit lifecycle rules 
+
 * On **File Storage Management** page, move cursor to <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> button on right side of dataset, and click **EDIT LIFE CYCLE RULES**.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dceb595fc66961bb7ec5a0d8ed62d95d.png)

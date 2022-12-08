@@ -72,7 +72,7 @@ There are several ways to obtain the OTP authentication code. The following prov
 
 ### 1. Obtain via [<ins>TWS Member Center</ins>](https://tws.twcc.ai/)
 
-**Step 1.** Please go to **Unix Account Information** page as mentioned in [System account](#Supercomputer-account).
+**Step 1.** Please go to **Unix Account Information** page as mentioned in [System account](#system-account).
 
 **Step 2.** Click **Show**, then you can see the OTP authentication code.
 

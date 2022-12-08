@@ -19,12 +19,12 @@ Besides TWCC portal, S3 and SFTP protocol are provided as ways to access CFS hot
 
 ## S3
 
-Please create a bucket correspond to dataset for S3 protocol access, and download connection software(i.e., S3 browser or Cyberduck), then enter connection information to access dataset.
+Please create a bucket correspond to your dataset for S3 protocol accessing, and download connection software (i.e., S3 browser or Cyberduck), then enter connection information to access your dataset via S3 protocol.
 
 
-### Create S3 dataset
+### Create a S3 dataset
 
-* Click the **+Create** button under S3 access settings, enter S3 bucket name select corresponding dataset and click **OK**.
+* Click the **+CREATE** button under S3 access settings, enter S3 bucket name select corresponding dataset and click **OK**.
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a6c88ae4f46653cf74092f2803a3cf7a.png)
@@ -33,15 +33,14 @@ Please create a bucket correspond to dataset for S3 protocol access, and downloa
 
 ### Get S3 service connection information
 
-
-* After entering **S3 Service** page, you may obtain connection information including service endpoint (using SSL connection): **`cfss3.twcc.ai`**, Signature Version, Access Key and Secret Key.
-* Click **CREATE KEY** button to generate Access Key and Secret Key. Key can be regenerate by clicking **RENEW KEY** button.
+* After entering **S3 Service** page, you may obtain connection information including the service endpoint (using SSL connection): **`cfss3.twcc.ai`**, Signature Version, Access Key and Secret Key.
+* Click **CREATE KEY** button to generate your Access Key and Secret Key. Key can be regenerate by clicking **RENEW KEY** button.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c9a848865dcb0b1d76ea91e9ea45c029.png)
 
-### Use third-party software to connect
+### Third-party tools for connection
 
-* Similar to TWCC Cloud Object Storage (COS), you can also manage the items stored in Cloud File Service (CFS) through common third-party software such as [S3 Browser](http://s3browser.com/) or [Cyberduck](https://cyberduck.io/).
+* Similar to TWCC Cloud Object Storage (COS), you can also manage the files stored in Cloud File Service (CFS) through common third-party software, such as [S3 Browser](http://s3browser.com/) or [Cyberduck](https://cyberduck.io/).
 * Take S3 Browser as an example, the connection information is set as follows:
 
 ![](https://i.imgur.com/eZJGnXL.png)
@@ -52,25 +51,24 @@ Please create a bucket correspond to dataset for S3 protocol access, and downloa
 
 
 
-* After successfully connect, you can see the created bucket on CFS.
+* After successful connection, you can see the created bucket of CFS.
 
 :::info
-If you are using other third-party software, please set the following information to ensure a successful connection.
+If you are using other third-party tools, please set the following information to ensure a successful connection.
 - Region：us-east-1
 - Signature Version：V4
 :::
 
-### Delete S3 Dataset
+### Delete a S3 dataset
 
-* If S3 dataset is no longer needed, please select the bucket and click the **DELETE** button.
+* If a S3 dataset is no longer needed, you can delete it by selecting the bucket and click the **DELETE** button.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3246037a6309e6713d244e1f0cc3341d.png)
 
 
 ## SFTP
 
-
-CFS also provides SFTP access interface, you can use SFTP client software (e.g., FileZilla) to access the items stored in CFS.
+CFS also provides SFTP accessing service, you can use SFTP client software (e.g., FileZilla) to access the files stored in CFS.
 
 * Click **SFTP Service** to obtain SFTP service connection information, including SFTP service host address: **`sftp://cfs.twcc.ai`** and port information.
 
@@ -83,7 +81,7 @@ CFS also provides SFTP access interface, you can use SFTP client software (e.g.,
     - Port: 22 
 
 :::info
-If you forgot your **Supercomputer account** or **supercomputer password**, please refer to [<ins>Inquire supercomputer account, reset password and obtain OTP authentication code</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en) for more information.
+If you forgot your **system account** or **system password**, please refer to [<ins>Find system account, reset password and obtain OTP authentication code</ins>](/user-guides/tws-member-center/manage-member-accounts/system-account-password-otp.md) for more information.
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a5e51cd889a7f5d12061441474228eaa.png)

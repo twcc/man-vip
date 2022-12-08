@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # 資料夾與檔案管理
 
-請先 [建立資料集](manage-datasets.md#建立資料集) 再參考以下步驟進行資料夾與檔案管理。
+請先 [建立資料集](/user-guides/twcc/cfs/manage-datasets/create-datasets.md) 再參考以下步驟進行資料夾與檔案管理。
 
 ## 建立資料夾
 
@@ -57,12 +57,10 @@ import TabItem from '@theme/TabItem';
 :::info
 
 - 檔案上傳限制：單一檔案不得超過 1GB，總檔案數不得超過 1000。
-- 請參考[<ins>版本紀錄</ins>](metadata-search-versioning.md#版本紀錄)了解檔案紀錄說明。
+- 請參考[<ins>版本紀錄</ins>](/user-guides/twcc/cfs/manage-datasets/manage-folders-files/metadata-search-versioning.md#版本紀錄)了解檔案紀錄說明。
+:::
 
 ## 檢視檔案
-
-
-
 
 
 * 在資料集的內容頁面，點選欲檢視的檔案列表。
@@ -82,9 +80,9 @@ import TabItem from '@theme/TabItem';
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8646437146760e77ce21f2140ebb8a7e.png)
 
 :::info
-- 目前透過 TWCC 入口網站一次僅能下載一個檔案，如欲下載多個檔案，可透過左側功能列之 <ins>[「**存取介面管理**」](https://man.twcc.ai/@twccdocs/guide-cfs-access-interface-mngmnt-zh)</ins> 透過第三方軟體下載。
+- 目前透過 TWCC 入口網站一次僅能下載一個檔案，如欲下載多個檔案，可透過左側功能列之 <ins>[「**存取介面管理**」](/user-guides/twcc/cfs/access-interfaces-hot-files.md)</ins> 透過第三方軟體下載。
 
-- 請參考[<ins>版本紀錄</ins>](metadata-search-versioning.md#版本紀錄)了解如何取用舊檔案。
+- 請參考[<ins>版本紀錄</ins>](/user-guides/twcc/cfs/manage-datasets/manage-folders-files/metadata-search-versioning.md#版本紀錄)了解如何取用舊檔案。
 
 :::
 
@@ -96,7 +94,7 @@ import TabItem from '@theme/TabItem';
 
 :::info
 
-正在 <ins>[搬移](../move-files/move-retrieve-files.md)</ins> 的檔案無法删除。
+正在 <ins>[搬移](/user-guides/twcc/cfs/manage-datasets/manage-folders-files/move-fetch-files.md)</ins> 的檔案無法删除。
 
 :::
 

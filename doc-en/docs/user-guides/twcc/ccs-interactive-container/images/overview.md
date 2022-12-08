@@ -17,7 +17,7 @@ TWCC provides a variety of [NGC](https://www.nvidia.com/zh-tw/gpu-cloud/containe
 
 TensorFlow, PyTorch, CUDA, Matlab (BYOL), Caffe, CNTK, MXNet, Caffe2, TensorRT, Triton Inference Server, Theano, Torch, DIGITS, NeMo, Clara Train SDK, RAPIDS, Merlin Training, and Merlin Inference.
 
-Refer to [detailed image concept](xxx) for more information on the AI training framework and package versions for each TWCC image.
+Refer to [detailed image concept](/user-guides/twcc/ccs-interactive-container/images/overview.md) for more information on the AI training framework and package versions for each TWCC image.
 
 - ### Image name description
 
@@ -39,7 +39,7 @@ Refer to [detailed image concept](xxx) for more information on the AI training f
 
 ## Custom images
 
-With [custom images](xxx), you are able to keep the self-deployed container settings and packges built based on TWCC images. After the container image is created, all project members can share it. With this service, all software requires only one installation, providing you with the convenience of quickly copying and deploying the same environment.
+With [custom images](/user-guides/twcc/ccs-interactive-container/images/overview.md), you are able to keep the self-deployed container settings and packges built based on TWCC images. After the container image is created, all project members can share it. With this service, all software requires only one installation, providing you with the convenience of quickly copying and deploying the same environment.
 
-Moreover, since billing starts when a container is created, if a container is no longer needed, you can image it to store its settings, then delete it to reduce your cost and restore the container from the image on the next time you need it. In addition, you can use container images as a disaster recovery for container damage.
+Moreover, the billing starts when a container is created. You can create an image to store container settings and then delete it when the container is no longer needed to reduce your cost. Just restore the container from the image the next time you need it. In addition, you can use container images as a disaster recovery for container damage.
 

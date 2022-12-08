@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 sidebar_label: 'Move and fetch'
-slug: '/user-guides/twcc/cfs/move-retrieve-data'
+slug: '/user-guides/twcc/cfs/move-fetch-data'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cfs-move-retrieve-data-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cfs-move-retrieve-data-zh'
 ---
@@ -50,12 +50,12 @@ It will takes a while to transfer a file to the hot storage. After the file is m
 ## Fetch cold storage files
 
 
-* Select one of the file in Cold Storage in the dataset contents page, click the **ACCESS** button on right panel to make a copy of the file to Cold Data Downloads.
+* Select one of the file in Cold Storage in the dataset details page, click the **ACCESS** button on right panel to make a copy of the file to Cold Data Downloads.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9ed5f9b00d74fec0a00c8e9379ef58de.png)
 
 * Click the **OK** button after the **Access the cold data** prompt window appears.
 
 :::info
-It may take several hours to access the cold data. Please go to the **Download Cold Data** list page to check the progress of the access.
+It may take several hours to fetch the cold data. Please go to the **[Download cold data](/user-guides/twcc/cfs/download-cold-data.md)*** list page to check the fetching progress.
 :::

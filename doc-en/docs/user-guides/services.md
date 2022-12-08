@@ -53,10 +53,11 @@ Browse and select a service for an overview and basic user guides of the TWS Mem
 
 ### Artifical Intellignce
 
-<img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a997c10eb5d383ad9ec2ae25a359f64e.png" width="20" height="20"/> <a href="/docs/user-guides/twcc/oneai">OneAI</a>
+<img src="https://i.imgur.com/3gwFOFA.png" width="20" height="20"/> <a href="/docs/user-guides/twcc/oneai">OneAI</a>
 
 <br/><br/>
 
 ### Common services
 
 - [General operations](/docs/user-guides/twcc/general)
+

@@ -37,7 +37,7 @@ import TabItem from '@theme/TabItem';
 <br/><br/>
 
 :::info
-租戶管理員與租戶使用者使用 TWCC 之功能權限差異，請參考[<ins>使用者權限比較</ins>](../../concepts/overview.md)。
+租戶管理員與租戶使用者使用 TWCC 之功能權限差異，請參考[<ins>使用者權限比較</ins>](https://man.twcc.ai/@twsdocs/role-main-zh)。
 :::
 
 <br/>

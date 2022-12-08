@@ -18,6 +18,7 @@ slug: '/faqs'
 
 - [會員、專案與帳務](/docs/faq/member-center/member-project-billing.md)
 
+---
 
 ## TWCC 雲端平台
 
@@ -35,7 +36,7 @@ slug: '/faqs'
 
 ### 人工智慧
 
-- <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a997c10eb5d383ad9ec2ae25a359f64e.png" width="20" height="20"/> <a href="/docs/faq/twcc/oneai">OneAI</a><br/>
+- <img src="https://i.imgur.com/3gwFOFA.png" width="20" height="20"/> <a href="/docs/faq/twcc/oneai">OneAI</a><br/>
 
 <br/>
 

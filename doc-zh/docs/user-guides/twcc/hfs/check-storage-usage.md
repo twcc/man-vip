@@ -20,5 +20,5 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-hfs-check-st
 
 
 :::info
-若空間不敷使用您可以擴充容量，購買價格與調整方式請參考[<ins>價目表</ins>](../../pricing.mdx)。
+若空間不敷使用您可以擴充容量，購買價格與調整方式請參考[<ins>價目表</ins>](/docs/pricing.mdx#高速檔案系統-hyper-file-system-hfs)。
 :::

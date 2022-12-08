@@ -16,7 +16,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="TWCC 入口網站" label="TWCC 入口網站">
 
-* 進入[開發型容器管理](/docs/user-guides/twcc/ccs-interactive-container/containers/manage-containers.md)頁，並點擊「**＋建立**」。
+* 進入[開發型容器管理](/user-guides/twcc/ccs-interactive-container/containers/manage-containers.md)頁，並點擊「**＋建立**」。
 
 ![](https://i.imgur.com/lpBLaPf.png)
 
@@ -24,12 +24,12 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_81035131a533a3a71a3df759542725c3.png)
 
-* 填寫容器基本資訊與硬體規格配置，並選擇自訂的映像檔，接著點擊「**下一步：儲存資訊>**」，其他步驟同[建立開發型容器](/docs/user-guides/twcc/ccs-interactive-container/containers/create/create-container.md)。
+* 填寫容器基本資訊與硬體規格配置，並選擇自訂的映像檔，接著點擊「**下一步：儲存資訊>**」，其他步驟同[建立開發型容器](/user-guides/twcc/ccs-interactive-container/containers/create/create-container.md)。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_eb232de503b359b00ddf85467ca46c87.png)
 
 :::info
-同計畫內的成員皆可以共享使用複本，在映像檔下拉清單內可見計畫下所有的容器複本。
+同專案內的成員皆可以共享使用複本，在映像檔下拉清單內可見專案下所有的容器複本。
 :::
 
 </TabItem>

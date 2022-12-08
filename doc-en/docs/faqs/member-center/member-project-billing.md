@@ -15,7 +15,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-membership-pro
 
 <summary>  Q1. How to enter member center?</summary>
 
-Please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-service-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twsdocs%2Fhowto-service-access-service-en) for more information about entering member center.
+Please refer to [<ins>this document</ins>](/user-guides/tws-member-center/manage-member-accounts/access-tws-member-center.md) for more information about entering member center.
 
 </details>
 

@@ -11,8 +11,8 @@ slug: /user-guides/twcc/oneai
 
 :::caution Under Construction
 
-The document is under construction and will be available soon. 
-Please click [here](https://man.twcc.ai/@twccdocs/doc-oneai-main-en) to check the latest document and  information for OneAI.
+The documentation is under construction and will be available soon. 
+Click [here](https://man.twcc.ai/@twccdocs/doc-oneai-main-en) to get the latest OneAI documentation  and information.
 
 :::
 

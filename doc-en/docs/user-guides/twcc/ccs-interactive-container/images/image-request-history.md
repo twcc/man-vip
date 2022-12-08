@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # Image request history
 
-* After the container image is [created](xxx), it will appear in the list of **Image Request History** page. It takes a few minutes to finish the creation of container image. At this time, the image is in **`requested`** state.
+* When you finish [creating a container image](/user-guides/twcc/ccs-interactive-container/containers/details/create-image.md), it will appear in the list of **Image Request History** page. It takes a few minutes to finish the creation of a container image, and the image will be in the **`requested`** state when it is created.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_37224305b2932aa939c56b73f3916cc4.png)
 

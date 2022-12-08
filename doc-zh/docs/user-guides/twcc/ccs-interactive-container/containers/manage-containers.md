@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
 
 - 點擊「**＋建立**」，開始建立您的第一個容器，更多說明請參考[建立容器](/docs/user-guides/twcc/ccs-interactive-container/create-containers)。
 - 檢視已建立的容器清單與容器基本資訊、單一或批次刪除容器。
-- 點選任一容器，進入「**容器詳細資料頁**」，檢視容器細節資訊、連線並進一步設定容器，更多資訊請參考[容器詳細資訊](/docs/user-guides/twcc/ccs-interactive-container/containers/details)。
+- 點選任一容器，進入「**容器詳細資料頁**」，檢視容器細節資訊、連線並進一步設定容器，更多資訊請參考[容器詳細資訊](/docs/user-guides/twcc/ccs-interactive-container/container-details)。
 
 ![](https://i.imgur.com/xphAvyh.png)
 

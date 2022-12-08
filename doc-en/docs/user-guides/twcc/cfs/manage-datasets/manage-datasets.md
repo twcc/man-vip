@@ -17,9 +17,9 @@ Please create a [hot storage](https://man.twcc.ai/@twccdocs/concept-cfs-hot-and-
 
 ## Before we get started
 
-- If you haven't sign up for a user account, please [sign up for TWCC](https://www.twcc.ai/) first.
+- If you haven't sign up for a user account, please [sign up for TWS](https://www.twcc.ai/) first.
 - If you would like to operate with TWCC portal, please sign in to [TWCC portal ](https://www.twcc.ai/)first.
-- If you would like to operate with TWCC CLI, please <ins><a target="_blank" href = "https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-2-%E5%AE%89%E8%A3%9DTWCC-CLI">install TWCC CLI</a></ins> first, and then <ins><a target="_blank" href = "https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-3-%E9%80%B2%E5%85%A5-TWCC_CLI-%E7%92%B0%E5%A2%83%E4%B8%A6%E9%96%8B%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8B%99">sign in</a></ins>.
+- If you would like to operate with TWCC CLI, please <ins><a target="_blank" href = "https://github.com/twcc/TWCC-CLI">install TWCC CLI</a></ins> first, and then <ins><a target="_blank" href = "https://github.com/twcc/TWCC-CLI">sign in</a></ins>.
 
 
 ## Create dataset

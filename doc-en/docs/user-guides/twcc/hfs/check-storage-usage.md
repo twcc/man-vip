@@ -18,5 +18,5 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-hfs-check-st
 
 
 :::info
-If the storage space is insufficient, you can expand the capacity. Please refer to the [<ins>Price List</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS) for pricing and adjustment method.
+If the storage space is insufficient, you can expand the capacity. Please refer to the [<ins>Price List</ins>](/docs/pricing.mdx#hyper-file-system-hfss) for pricing and adjustment method.
 :::

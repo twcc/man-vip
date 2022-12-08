@@ -17,6 +17,8 @@ Browse and select a service for Q&A of the TWS Member Center or TWCC cloud platf
 
 - [Membership, Project and Billing](xx)
 
+---
+
 
 ## TWCC Cloud Platform
 
@@ -35,7 +37,7 @@ Browse and select a service for Q&A of the TWS Member Center or TWCC cloud platf
 
 ### Artifical Intellignce
 
-- <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a997c10eb5d383ad9ec2ae25a359f64e.png" width="20" height="20"/> <a href="/docs/user-guides/twcc/oneai">OneAI</a><br/>
+- <img src="https://i.imgur.com/3gwFOFA.png" width="20" height="20"/> <a href="/docs/user-guides/twcc/oneai">OneAI</a><br/>
 
 <br/>
 
