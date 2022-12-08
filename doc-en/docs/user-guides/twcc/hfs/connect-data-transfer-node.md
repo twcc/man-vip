@@ -8,7 +8,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-hfs-connect-
 
 # Connect to the data transfer node
 
-You can use the following method to connect to the data transfer node using **Key** or **Supercomputer Password + OTP Authentication Code**.
+You can use the following method to connect to the data transfer node using **Key** or **system Password + OTP Authentication Code**.
 
 After connecting to the data transfer node and entering HFS storage space, you can upload files to the space through SFTP protocol, or download the files from HFS to the your local machine.
 
@@ -36,8 +36,8 @@ The following example demonstrates with Windows + [<ins>FileZilla</ins>](https:/
 
 :::info
 See the connection method:
-- [<ins>Interactive Container</ins>](https://www.twcc.ai/doc?page=container&euqinu=true#%E9%80%A3%E7%B7%9A%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F)
-- [<ins>Taiwania 2 (HPC CLI)</ins>](https://man.twcc.ai/s/B15nJXe-B#2-%E7%99%BB%E5%85%A5%E3%80%8C%E7%99%BB%E5%85%A5%E7%AF%80%E9%BB%9E%E3%80%8D)
+- [<ins>Interactive Container</ins>](/docs/user-guides/twcc/ccs-interactive-container)
+- [<ins>Taiwania 2 (HPC CLI)</ins>](/user-guides/twcc/twnia2-hpc-cli/connect/login-logout.md)
 :::
 
 <b>Step 2. Save the SSH private key to the local machine</b>
@@ -85,7 +85,7 @@ macOS：TextEdit software is available
 Protocol: SFTP
 Host: xdata1.twcc.ai
 Logon Type: Key file
-User: supercomputer account
+User: system account
 Key file: directory of the key file
 ```
 - Click **Connect** to login successfully
@@ -104,11 +104,11 @@ Key file: directory of the key file
 
 <details class="docspoiler">
 
-<summary><b>2. Connect using supercomputer password + OTP </b></summary>
+<summary><b>2. Connect using system password + OTP </b></summary>
 
 <br/>
 
-In addition to the above login method using the key, HFS can also login using **password + [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC)**. Please refer to the following instructions:
+In addition to the above login method using the key, HFS can also login using **password + [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](/docs/user-guides/tws-member-center/system-account-password-otp/#obtain-otp-authentication-code)**. Please refer to the following instructions:
 <div style={{height:8+'px'}}></div>
 
 <b>Step 1. Download software that supports SFTP connection and 2-Step verification</b>
@@ -128,7 +128,7 @@ The following uses [<ins>Filezilla</ins>](https://filezilla-project.org/) as an 
 2. Protocol: select **SFTP- SSH File Transfer Protocol**
 3. Host: enter **xdata1.twcc.ai**
 4. Logon type: select **Interactive**
-5. User: enter your supercomputer account
+5. User: enter your system account
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6af475d537006f37c20a1507621518cf.png)
@@ -143,14 +143,14 @@ After checking, when multiple files are being transferred, only one file can be 
 
 8. Click **Connect**.
 
-<b>Step 3. Enter your supercomputer password and [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC) </b>
+<b>Step 3. Enter your system password and [OTP <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](/docs/user-guides/tws-member-center/system-account-password-otp/#obtain-otp-authentication-code) </b>
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3f6b415f290b3987e835b219c3c0d173.png)
 
 
 
-9. Enter your supercomputer password
+9. Enter your system password
 10. Click **Connect**
 
 
@@ -162,9 +162,9 @@ After checking, when multiple files are being transferred, only one file can be 
 
 
 :::info
-1. [<ins>Forget supercomputer account?</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC)
-2. [<ins>Forget password?</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC)
-3. [<ins>How to obtain OTP?</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-en#%E5%8F%96%E5%BE%97-OTP-%E8%AA%8D%E8%AD%89%E7%A2%BC)
+1. [<ins>Forget system account?</ins>](/docs/user-guides/tws-member-center/system-account-password-otp#system-account)
+2. [<ins>Forget password?</ins>](/docs/user-guides/tws-member-center/system-account-password-otp#reset-system-password)
+3. [<ins>How to obtain OTP?</ins>](/docs/user-guides/tws-member-center/system-account-password-otp#obtain-otp-authentication-code)
 :::
 
 

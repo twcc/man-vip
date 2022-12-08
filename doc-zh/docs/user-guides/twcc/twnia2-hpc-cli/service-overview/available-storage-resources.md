@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # 可用儲存資源
 
-計算節點可透過高速網路存取[高速檔案系統 (HFS)](/docs/hfs/overview.md)，為 PB 等級儲存空間，能夠針對大檔案能夠提供高吞吐量的 I/O，並對每筆資料快速存取操作，使用體驗佳。
+計算節點可透過高速網路存取[高速檔案系統 (HFS)](/docs/user-guides/twcc/hfs)，為 PB 等級儲存空間，能夠針對大檔案能夠提供高吞吐量的 I/O，並對每筆資料快速存取操作，使用體驗佳。
 
 
 | 儲存區域 | 掛載點 | 每位使用者免費空間容量 |
@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 此空間為計算工作儲存設計，而非長期儲存用。為了維持 /work 穩定且高效的狀態，本中心將定期執行自動清除的工作。
 
 :::caution
-使用 HFS 請注意相關 [<ins>空間管理政策</ins>](/docs/hfs/others/backup-synchronize-restore.md)。
+使用 HFS 請注意相關 [<ins>空間管理政策</ins>](https://man.twcc.ai/@twsdocs/guide-hfs-zh?type=view#HFS-%E7%A9%BA%E9%96%93%E7%AE%A1%E7%90%86%E6%94%BF%E7%AD%96)。
 :::
 
 

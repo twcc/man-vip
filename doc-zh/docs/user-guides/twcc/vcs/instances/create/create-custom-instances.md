@@ -12,19 +12,19 @@ import TabItem from '@theme/TabItem';
 
 # 建立客製化個體
 
-建立 TWCC 虛擬運算個體後，您可以進入個體部署您需要的工具、打造您專屬的客製化環境，並建立[**映像檔**](../backup/create-images.md)保存工作環境，即可重複建立相同客製化的環境，也可以作為備份個體設定之措施，避免個體毀損遺失。
+建立 TWCC 虛擬運算個體後，您可以進入個體部署您需要的工具、打造您專屬的客製化環境，並建立[**映像檔**](/user-guides/twcc/vcs/instances/details/create-image.md)保存工作環境，即可重複建立相同客製化的環境，也可以作為備份個體設定之措施，避免個體毀損遺失。
 
 :::info
-租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/compute.md#虛擬運算服務)。
+租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twsdocs/role-main-zh)。
 :::
 
 <br/>
 
 ## 開始之前
 
-- 若尚未註冊使用帳號，請先[註冊 TWS / TWCC 帳號](/docs/member/user-guides/member-key-quota/sign-up-for-twcc.md)。
-- 若選擇使用 TWCC 入口網站操作，請先登入[TWCC 入口網站](https://www.twcc.ai/)。
-- 若選擇使用 TWCC CLI 操作，請先[安裝 TWCC CLI](https://github.com/twcc/TWCC-CLI)、並[登入](https://github.com/twcc/TWCC-CLI)。
+- 若尚未註冊使用帳號，請先[註冊 TWS](/user-guides/tws-member-center/manage-member-accounts/sign-up-for-tws.md)。
+- 若選擇使用 TWCC 入口網站操作，請先登入 [TWCC 入口網站](https://tws.twcc.ai/)，並進入[開發型容器管理](/user-guides/twcc/ccs-interactive-container/containers/manage-containers.md)頁。
+- 若選擇使用 TWCC CLI 操作，請先[安裝 TWCC CLI](https://github.com/twcc/TWCC-CLI) 、並[登入](https://github.com/twcc/TWCC-CLI)。
 - [建立虛擬運算個體](./create-instances.md)，部署工作環境，並建立個體[映像檔](../backup/create-images.md)；或請來源計畫將映像檔[分享](../backup/manage-images.md#分享映像檔分享管理)至您的計畫。
 
 <br/>

@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 # 檢視儲存體
 
 :::tip
-以下操作方式僅限計畫之 [「<ins>**公共空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](../../overview.md) 適用， [「<ins>**私有空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](../../overview.md) 之檔案管理請透過 [<ins>**第三方軟體**</ins>](../../../category/使用第三方軟體管理檔案) 操作。
+以下操作方式僅限專案之 [「<ins>**公共空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](/docs/user-guides/twcc/cos/overview) 適用， [「<ins>**私有空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](/docs/user-guides/twcc/cos/overview) 之檔案管理請透過 [<ins>**第三方軟體**</ins>](/docs/user-guides/twcc/cos/connection-info) 操作。
 :::
 
 檢視您計畫內所有的儲存體：

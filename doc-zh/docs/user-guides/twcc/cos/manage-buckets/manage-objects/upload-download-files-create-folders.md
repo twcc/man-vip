@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 # 上傳、下載檔案、建立資料夾
 
 :::tip
-以下操作方式僅限專案之 [「<ins>**公共空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](/user-guides/twcc/cos/overview.md) 適用， [「<ins>**私有空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](/user-guides/twcc/cos/overview.md) 之檔案管理請透過 [<ins>**第三方軟體**</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cos-connect-info-zh) 操作。
+以下操作方式僅限專案之 [「<ins>**公共空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](/docs/user-guides/twcc/cos/overview) 適用， [「<ins>**私有空間<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>**」</ins>](/docs/user-guides/twcc/cos/overview) 之檔案管理請透過 [<ins>**第三方軟體**</ins>](/docs/user-guides/twcc/cos/connection-info) 操作。
 :::
 
 

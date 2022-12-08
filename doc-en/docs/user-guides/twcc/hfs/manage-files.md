@@ -7,6 +7,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-hfs-manage-f
 ---
 
 # Manage files
+
 The following file management operation method using FileZilla as an example. If you use other software to connect, please follow the operation method of that software.
 
 ## Change directory

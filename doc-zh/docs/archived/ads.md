@@ -26,12 +26,12 @@ TWCC 進階安全提供國際知名商用的新世代防火牆與威脅防護功
 ## 準備工作
 
 建立進階安全防火牆前，請您先建立以下資源：
-1. 建立 2 段 [虛擬網路](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-vnw-zh)：信任網路與非信任網路
+1. 建立 2 段 [虛擬網路](/user-guides/twcc/vcs/vnw.md)：信任網路與非信任網路
 
 ![](https://i.imgur.com/kboz5iR.png)
 
 
-2. 建立[虛擬運算個體](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-create-zh)：跳板機 1 台、受防火牆保護之個體數台 (以下稱 **受保護個體**，請選擇信任網路建立)
+2. 建立 [虛擬運算個體](/user-guides/twcc/vcs/create-instance.md)：跳板機 1 台、受防火牆保護之個體數台 (以下稱 **受保護個體**，請選擇信任網路建立)
 
 
 ![](https://i.imgur.com/0dIX68J.png)

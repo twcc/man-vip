@@ -64,7 +64,7 @@ slug: '/faqs'
 
 <br/>
 
-### 共通服務
+### 通用服務
 
 - [TWCC 入口網站](/faqs/twcc/general/portal.md)
 

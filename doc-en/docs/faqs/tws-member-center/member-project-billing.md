@@ -7,7 +7,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-membership-project-
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-membership-project-billing-zh'
 ---
 
-# TWCC FAQs | Membership, Project and Billing
+# TWCC FAQs | Membership, project, and billing
 
 ## About membership
 

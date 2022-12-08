@@ -110,7 +110,7 @@ By default, the image name has your project (source project) number in front of 
 
 Go to the **Image Sharing Management** page to view the name, target project, state and creation time of the shared images.
 
-Once shared, the image state changes to **`approved`** (still in the process of sharing), and shows **`finished`** (sharing complete) after the sharing is over. Members in the target project can use the shared image to [Create custom instances](https://man.twcc.vip/en/docs/vcs/user-guides/creation/custom-instances).
+Once shared, the image state changes to **`approved`** (still in the process of sharing), and shows **`finished`** (sharing complete) after the sharing is over. Members in the target project can use the shared image to [Create a custom instance](/user-guides/twcc/vcs/instances/create/create-custom-instances.md).
 
 ![](https://i.imgur.com/vhE9VAy.png)
 
@@ -172,4 +172,4 @@ To ensure the instance can be created from the image completely, **please do not
 
 ## Create instances from images
 
-Please refer to [Create custom instances](https://man.twcc.vip/en/docs/vcs/user-guides/creation/custom-instances) to create a customized instance from the image created in the project or from an image shared by other projects.
+Please refer to [Create a custom instance](/user-guides/twcc/vcs/instances/create/create-custom-instances.md) to create a customized instance from the image created in the project or from an image shared by other projects.
