@@ -85,22 +85,22 @@ const config = {
               categoryLinkSource: "tag"
             }
           },
-          Harbor: {
-            specPath: "openapi/Harbor.yaml",
-            outputDir: "docs/api/Harbor",
-            sidebarOptions: {
-              groupPathsBy: "tag",
-              categoryLinkSource: "tag"
-            }
-          },
-          Slurm: {
-            specPath: "openapi/Slurm.yaml",
-            outputDir: "docs/api/Slurm",
-            sidebarOptions: {
-              groupPathsBy: "tag",
-              categoryLinkSource: "tag"
-            }
-          },
+          // Harbor: {
+          //   specPath: "openapi/Harbor.yaml",
+          //   outputDir: "docs/api/Harbor",
+          //   sidebarOptions: {
+          //     groupPathsBy: "tag",
+          //     categoryLinkSource: "tag"
+          //   }
+          // },
+          // Slurm: {
+          //   specPath: "openapi/Slurm.yaml",
+          //   outputDir: "docs/api/Slurm",
+          //   sidebarOptions: {
+          //     groupPathsBy: "tag",
+          //     categoryLinkSource: "tag"
+          //   }
+          // },
           VCS: {
             specPath: "openapi/VCS.yaml",
             outputDir: "docs/api/VCS",
