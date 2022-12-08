@@ -30,7 +30,7 @@ For the permission differences in VCS instance between Tenant Admins and Tenant 
 
 ## Create a custom instance
 
-Depending on the image created in the selected project or the image shared by other projects, the creation steps are different, so please refer to the following steps according to the applicable situation.
+You can depend on the image created in the selected project or the image shared by other projects. To create a custom instance, please refer to the following steps according to the applicable situation.
 
 <br/>
 
@@ -40,7 +40,9 @@ Depending on the image created in the selected project or the image shared by ot
 
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-The creation procedure is the same as [<ins>Create VCS instances</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/creation/vcs-instances), only **Image** should be changed to select `(private)xxx, xxx is your custome image file name`, then you can complete the creation.
+The creation procedure is the same as [<ins>Create VCS instances</ins>](create-instances.md), and please notice that:
+- **Image Type**: Need to select according to the operating system of where the source image comes from.
+- **Image**: Choose the version of image to be restored. Please use the image created in the project `(private)xxx, xxx is your custome image file name`, or the image shared by the source project `(private)[source project ID]-xxx, xxx is your custome image file name`.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0dcb4912bb77fb6de9f67c58d74bf47a.png)
 
