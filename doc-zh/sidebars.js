@@ -30,10 +30,10 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Ceph",
+      label: "COS",
       link: {
         type: "generated-index",
-        title: "Ceph API",
+        title: "COS API",
         /**description:
           "This is a Ceph.",*/
         slug: "/api/Ceph"
@@ -54,32 +54,32 @@ const sidebars = {
       // @ts-ignore
       items: require("./docs/api/Common/sidebar.js")
     },
-    {
-      type: "category",
-      label: "Harbor",
-      link: {
-        type: "generated-index",
-        title: "Harbor API",
-        /**description:
-          "This is a Harbor.",*/
-        slug: "/api/Harbor"
-      },
-      // @ts-ignore
-      items: require("./docs/api/Harbor/sidebar.js")
-    },
-    {
-      type: "category",
-      label: "Slurm",
-      link: {
-        type: "generated-index",
-        title: "Slurm API",
-        /**description:
-          "This is a Slurm.",*/
-        slug: "/api/Slurm"
-      },
-      // @ts-ignore
-      items: require("./docs/api/Slurm/sidebar.js")
-    },
+    // {
+    //   type: "category",
+    //   label: "Harbor",
+    //   link: {
+    //     type: "generated-index",
+    //     title: "Harbor API",
+    //     /**description:
+    //       "This is a Harbor.",*/
+    //     slug: "/api/Harbor"
+    //   },
+    //   // @ts-ignore
+    //   items: require("./docs/api/Harbor/sidebar.js")
+    // },
+    // {
+    //   type: "category",
+    //   label: "Slurm",
+    //   link: {
+    //     type: "generated-index",
+    //     title: "Slurm API",
+    //     /**description:
+    //       "This is a Slurm.",*/
+    //     slug: "/api/Slurm"
+    //   },
+    //   // @ts-ignore
+    //   items: require("./docs/api/Slurm/sidebar.js")
+    // },
     {
       type: "category",
       label: "VCS",
