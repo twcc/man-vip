@@ -109,9 +109,15 @@ import TabItem from '@theme/TabItem';
 2. 建立虛擬網路僅限由「**租戶管理者**」操作，因此若您身份為「**租戶使用者**」，請您聯繫所屬計畫之「**租戶管理者**」協助操作。
 :::
 
-* 在儲存資訊頁面，設定外掛資料磁碟 大小（GB）及類型（提供 4 種磁碟類型：HDD、SSD、HDD 加密、SSD 加密）。
+* 在儲存資訊頁面，設定以下磁碟資訊：
+    * 系統磁碟：
+        * 磁碟容量：提供 5 種容量選擇 - 100 GB、200 GB、300 GB、400 GB、500 GB。
+        * 磁碟類型：僅提供 HDD。
+    * 資料磁碟：
+        * 磁碟容量（GB）：可自由設定容量 (上限為 16 TB)。
+        * 磁碟類型：提供 4 種類型選擇：HDD、SSD、HDD 加密、SSD 加密。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d9dafe55ac87c92b4b0c06678699c836.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0c92d33d3da32e5baa4ebd50f6649605.png)
 
 :::caution
 - [<ins>Auto Scaling</ins>](../networking/auto-scaling.md) 會依據所連結虛擬運算個體建立時的設定而新增個體，因此：
@@ -159,8 +165,7 @@ TWCC 不負責紀錄及管理您的鑰匙對，請務必下載並妥善保存此
 
 * 接著點擊「**下一步：檢閱 + 建立>**」，檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後 等個體狀態變成 **`Ready`** 後即可開始[連線](../connecting/linux/from-windows.md)使用。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9b35befff1c8ee37bdf68d147362453a.png)
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0627e4962946edeb20fa029eb2b7c4e7.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_616ce1ee568ddc41b550c2b770d138a6.png)
 
 </TabItem>
 
@@ -262,9 +267,15 @@ twccli ls vcs -ptype    # 檢視所有產品型號與規格
 2. 建立虛擬網路僅限由「**租戶管理者**」操作，因此若您身份為「**租戶使用者**」，請您聯繫所屬計畫之「**租戶管理者**」協助操作。
 :::
 
-* 在儲存資訊頁面，設定外掛資料磁碟 大小（GB）及類型（提供 4 種磁碟類型：HDD、SSD、HDD 加密、SSD 加密）。
+* 在儲存資訊頁面，設定以下磁碟資訊：
+    * 系統磁碟：
+        * 磁碟容量：提供 5 種容量選擇 - 100 GB、200 GB、300 GB、400 GB、500 GB。
+        * 磁碟類型：僅提供 HDD。
+    * 資料磁碟：
+        * 磁碟容量（GB）：可自由設定容量 (上限為 16 TB)。
+        * 磁碟類型：提供 4 種類型選擇：HDD、SSD、HDD 加密、SSD 加密。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_184b6aaa90135456196d14a9d016539f.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0c92d33d3da32e5baa4ebd50f6649605.png)
 
 :::caution
 - [<ins>Auto Scaling</ins>](../networking/auto-scaling.md) 會依據所連結虛擬運算個體建立時的設定而新增個體，因此：
@@ -291,8 +302,7 @@ twccli ls vcs -ptype    # 檢視所有產品型號與規格
 
 * 檢視整個虛擬運算個體的設定和預估使用額度，按下「**建立**」即完成，幾分鐘後，等個體狀態變成 **`Ready`** 後，再等候一些時間即可開始[連線](../connecting/windows/from-windows.md)使用。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a18e03678c8f5b6aab82049ae19cb021.png)
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_16b71ba4b7fafa65b9a4d60f56bf975c.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_06fbfdc1183eef255e2018fd899288df.png)
 
 </TabItem>
 
