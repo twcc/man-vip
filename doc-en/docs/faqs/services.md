@@ -6,6 +6,7 @@ sidebar_label: 'Services'
 keywords:
   - twcc
   - faq
+title: 'FAQs'
 slug: '/faqs'
 ---
 
@@ -15,58 +16,57 @@ Browse and select a service for Q&A of the TWS Member Center or TWCC cloud platf
 
 ## TWS Member Center
 
-- [Membership, Project and Billing](xx)
+- [Membership, project and billing](/faqs/tws-member-center/member-project-billing.md)
 
 ---
 
 
 ## TWCC Cloud Platform
 
-- [Service overview](..)
+- [Service overview](/faqs/twcc/service-overview.md)
 
 <br/>
 
 ### Compute
 
-- <img src="https://i.imgur.com/DPC5gPG.png" width="20" height="20"/> Container Compute Service (CCS)
-<br/>
-- <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_af58322eb82b649d1f29aca1f201a117.png" width="20" height="20"/> <a href="/docs/user-guides/twcc/vcs"> Virtual Compute Service (VCS)</a>
-- [TAIWANIA2 (HPC CLI)](/docs/user-guides/twcc/twnia2-hpc-cli)
+- <img src="https://i.imgur.com/DPC5gPG.png" width="20" height="20"/> <a href="/docs/faqs/twcc/ccs">Container Compute Service (CCS) </a><br/>
+- <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_af58322eb82b649d1f29aca1f201a117.png" width="20" height="20"/> <a href="/docs/faqs/twcc/vcs"> Virtual Compute Service (VCS)</a>
+- [TAIWANIA2 (HPC CLI)](/faqs/twcc/twnia2-hpc-cli.md)
 
 <br/>
 
 ### Artifical Intellignce
 
-- <img src="https://i.imgur.com/3gwFOFA.png" width="20" height="20"/> <a href="/docs/user-guides/twcc/oneai">OneAI</a><br/>
+- <img src="https://i.imgur.com/3gwFOFA.png" width="20" height="20"/> <a href="/docs/faqs/twcc/oneai">OneAI</a><br/>
 
 <br/>
 
 ### Storage
 
-- <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a798c7edb1b5032ecf92265a3150a7ec.png" width="20" height="20"/> <a href="/docs/user-guides/twcc/cos">Cloud Object Storage (COS)</a>
-- <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a62be3bdf4bc257526e95e16b063a777.png" width="20" height="20"/> <a href="/docs/user-guides/twcc/vcs/vds">Virtual Disk Service (VDS)</a>
-- [Hyper File System (HFS)](/docs/user-guides/twcc/hfs)
-- <img src="https://i.imgur.com/HmCCsr5.png" width="20" height="20"/> <a href="/docs/user-guides/twcc/cfs">Cloud File Service (CFS)</a>
+- <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a798c7edb1b5032ecf92265a3150a7ec.png" width="20" height="20"/> <a href="/docs/faqs/twcc/cos">Cloud Object Storage (COS)</a>
+- <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a62be3bdf4bc257526e95e16b063a777.png" width="20" height="20"/> <a href="/docs/faqs/twcc/vcs/vds">Virtual Disk Service (VDS)</a>
+- [Hyper File System (HFS)](/faqs/twcc/hfs.md)
+- <img src="https://i.imgur.com/HmCCsr5.png" width="20" height="20"/> <a href="/docs/faqs/twcc/cfs">Cloud File Service (CFS)</a>
 
 <br/>
 
 ### Networking & Security
 
-- <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c7ecced96f77b12664677d4cef97a3cc.png" width="20" height="20"/> <a href="/docs/user-guides/twcc/vcs/vnw">Virtual Network (VNW)</a>
-- [Security Group](/docs/user-guides/twcc/vcs/security-group)
-- <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5eaf2d8a3b112a4b8c49a853eaab60d8.png" width="20" height="20"/> <a href="/docs/user-guides/twcc/vcs/lbs">Load Blancing Service (LBS)</a>
-- <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fe3143064a67e3d04615d38683938427.png" width="20" height="20"/> <a href="/docs/user-guides/twcc/vcs/auto-scaling">Auto Scaling</a>
-- <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db2be9ff86eff33624e32feceedf17e7.png" width="20" height="20"/> <a href="/docs/user-guides/twcc/vcs/bvf"> Basic Virtual Firewall (BVF)</a>
+- <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c7ecced96f77b12664677d4cef97a3cc.png" width="20" height="20"/> <a href="/docs/faqs/twcc/vcs##virtual-network">Virtual Network (VNW)</a>
+- <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fe3143064a67e3d04615d38683938427.png" width="20" height="20"/> <a href="/docs/faqs/twcc/vcs#auto-scaling">Auto Scaling</a>
 
 <br/>
 
 
 
-### [TWCC CLI](..)
+### TWCC CLI
+
+- [Deploy TWCC CLI](/faqs/twcc/cli/deploy.md)
+- [Cloud Object Storage (COS)](/faqs/twcc/cli/cos.md)
 
 <br/>
 
 ### Common services
 
-- [User portal](/docs/user-guides/twcc/general)
+- [TWCC portal](/faqs/twcc/general/portal.md)
 
