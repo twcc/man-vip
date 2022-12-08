@@ -15,13 +15,13 @@ import TabItem from '@theme/TabItem';
 The following operation methods are only applicable to the [<ins>**public space**<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](../../overview.md) of the project. For managing your [<ins>**private space**<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](../../overview.md), please use [<ins>**third-party software**</ins>](../../../category/使用第三方軟體管理檔案).
 :::
 
-## View the contents of files
+## View file details
 
 <Tabs>
   <TabItem value="TWCC Portal" label="TWCC Portal" default>
     
 
-*  Select the bucket and enter the Content page of the bucket. Click the file you want to view.
+*  Select a bucket and go to the bucket details page, and select a file to check more.
 
     
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_60bb078885449dafd077a7088b5285ae.png)
@@ -31,7 +31,7 @@ The following operation methods are only applicable to the [<ins>**public space*
 The TWCC portal can only display up to 1000 data items (storages, folders, files). To view the complete data, please use the TWCC CLI or third-party software.
 :::
 
-* After entering Content page of the file, you can view the basic information of the file.
+* On the file detail page, you can view some file basic information as follows.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6ed682e3c8ff6c67711ad5193d61e773.png)
 
@@ -58,8 +58,7 @@ twccli ls cos -bkt bk_cli
     
 
     
-Enter the keyword of the file you want to search in the **Search bar** to automatically return the files that meet your filter criteria.
-
+Enter a keyword of the file in the **Search bar**, and will automatically filter the matching files for you.
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ef11962501081ea103f62a0afca28b3d.png)
@@ -81,8 +80,6 @@ Deleting unnecessary files can save storage space. **Once deleted, the lost data
 * After entering Content page of the bucket, click <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> menu button of the file list, and click **DELETE** to delete the file. You can also select multiple files, and then click **DELETE** at the top to delete multiple files at a time.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_68f69182d158e71d0eaa1063ae2f0b93.png)
-
-
 
 
 * Double-check the selected files. Once deleted, the lost data cannot be recovered!

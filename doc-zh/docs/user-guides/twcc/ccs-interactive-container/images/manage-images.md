@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # 容器映像檔管理
 
-[建立自訂映像檔](xxx)完成後，您可以在「**映像檔管理**」頁，檢視映像檔資訊或刪除不再使用的映像檔。
+[建立自訂映像檔](/user-guides/twcc/ccs-interactive-container/containers/details/create-image.md)完成後，您可以在「**映像檔管理**」頁，檢視映像檔資訊或刪除不再使用的映像檔。
 
 
 ## 檢視資訊

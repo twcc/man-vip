@@ -1,12 +1,10 @@
-# man-vip
-The TWCC manual well-prepared for VIPs.
+# Docs.twcc.ai
+TWCC Enterprise Documentation
 =======
-
-# Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-## how to start (easy)
+## Get started
 
 ```bash=
 git clone https://git.twcc.ai/twcc/manual

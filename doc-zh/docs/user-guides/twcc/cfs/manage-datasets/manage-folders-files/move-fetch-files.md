@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 sidebar_label: '搬移與取用'
-slug: '/user-guides/twcc/cfs/move-retrieve-data'
+slug: '/user-guides/twcc/cfs/move-fetch-data'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-cfs-move-retrieve-data-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cfs-move-retrieve-data-zh'
 ---
@@ -53,5 +53,5 @@ import TabItem from '@theme/TabItem';
 * 出現「**取用冷儲存**」提示視窗後點擊「**確認**」。
     
 :::info
-冷資料取用，可能將耗費數小時，請至「**[冷資料下載](../cfs/download-cold-data)**」列表查詢取用進度。
+冷資料取用，可能將耗費數小時，請至「**[冷資料下載](/user-guides/twcc/cfs/download-cold-data.md)**」列表查詢取用進度。
 :::

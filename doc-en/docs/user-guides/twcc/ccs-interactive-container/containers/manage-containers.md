@@ -25,7 +25,7 @@ On the **Interactive Container Management** page, we provide shortcut buttons fo
 
 - Click **＋CREATE** to create your first container. Check [Create a container](/docs/user-guides/twcc/ccs-interactive-container/create-containers) for more creation details.
 - View a list of created containers with basic container information, and delete a single container or batch deletion.
-- Click on any container and go to the **Interactive Container Details** page to view the container details, connect to the container, or chnage the container configuration. Check [Container details](/docs/user-guides/twcc/ccs-interactive-container/containers/details) for more information.
+- Click on any container and go to the **Interactive Container Details** page to view the container details, connect to the container, or chnage the container configuration. Check [Container details](/docs/user-guides/twcc/ccs-interactive-container/container-details) for more information.
 
 ![](https://i.imgur.com/hCFPDfJ.png)
 

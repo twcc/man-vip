@@ -16,9 +16,9 @@ When the container state is **`Ready`**, you can start to use it. You can connec
 <br/>
 
 ## Prerequisites
-- Create an [interactive container](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/create-an-interactive-container).
+- Create an [interactive container](/user-guides/twcc/ccs-interactive-container/containers/create/create-container.md).
 - If you choose to use TWCC portal, after the container is created, please click the container you want to connect to on the **Interactive Container Management** page and enter the **Interactive Container Details** page.
-- If you choose to use TWCC CLI operation, please obtain the [Container's ID](https://man.twcc.vip/en/docs/ccs/user-guides/management-and-monitoring/manage-your-container/#view-the-information) first.
+- If you choose to use TWCC CLI operation, please obtain the container's ID first.
 
 <br/>
 
@@ -39,7 +39,7 @@ You can connect to your container using Jupyter Notebook or SSH.
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a61c058a0a3db394855196861227bf63.png)
 
 
-- **Step 2.** Then click "**New**" > "**Terminal**"  to access the container environment. Then you can start AI computing in the container.
+- **Step 2.** Then click **New** > **Terminal**  to access the container environment. Then you can start AI computing in the container.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4d710c1fb912cf901ebfae96d73c06d2.png)
 
@@ -57,7 +57,7 @@ twccli ls ccs -s 1249374 -gjpnb
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_619c5fad19ccb469b5368895935ae48b.png)
 
 
-- **Step 3.** Click "**New**" > "**Terminal**" to access the container environment.
+- **Step 3.** Click **New** > **Terminal** to access the container environment.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4d710c1fb912cf901ebfae96d73c06d2.png)
 
@@ -99,5 +99,5 @@ twccli ls ccs -s 1249374 -gssh
 ---
 
 :::info
-[<ins>Forget your supercomputer password?</ins>](https://man.twcc.vip/en/docs/member/user-guides/member-key-quota/hpc-account-password-otp#reset-supercomputer-password)
+[<ins>Forget your supercomputer password?</ins>](/user-guides/tws-member-center/manage-member-accounts/system-account-password-otp.md)
 :::

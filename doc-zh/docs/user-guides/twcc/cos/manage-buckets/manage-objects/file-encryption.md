@@ -44,7 +44,7 @@ TWCC 會在上傳檔案至雲端物件儲存空間時，為您的檔案進行加
 
 ### 加密上傳
 
-步驟同 [<ins>上傳檔案</ins>](upload-download-files-create-folders.md#上傳檔案)，上傳前請先勾選 「**加密**」再點選 「**上傳**」，即可將檔案加密。
+步驟同 [<ins>上傳檔案</ins>](/user-guides/twcc/cos/manage-buckets/manage-objects/upload-download-files-create-folders.md)，上傳前請先勾選 「**加密**」再點選 「**上傳**」，即可將檔案加密。
 
 ![](https://i.imgur.com/fCSF7DS.png)
 

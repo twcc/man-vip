@@ -10,7 +10,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-ccs-zh'
 # TWCC FAQs | Container Compute Service (CCS)
 
 
-## Before using CCS
+## Before you begin
 
 <details>
 
@@ -49,7 +49,7 @@ Both services can run on GPU containerized environments:
 <div style={{height:10+'px'}}></div>
 
 
-## Connection
+## Connect to a container
 
 <details>
 
@@ -93,7 +93,7 @@ Please refer to the following 2 methods:
 <div style={{height:10+'px'}}></div>
 
 
-## Container Management
+## Manage containers
 
 <details>
 
@@ -450,7 +450,7 @@ Currently TWCC containers do not support the deployment of VPN services (e.g. Op
 <div style={{height:10+'px'}}></div>
 
 
-## Container duplicates
+## Container images
 
 <details>
 

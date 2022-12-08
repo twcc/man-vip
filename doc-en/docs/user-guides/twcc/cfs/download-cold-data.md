@@ -11,7 +11,8 @@ import TabItem from '@theme/TabItem';
 
 # Download cold data
 
-* Enter the **Download Cold Data** page, and the accessable file from Cold Storage will be temporarily stored in here. Select the **Available** file and move your cursor to the right panel of <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> button, then click the **DOWNLOAD** button to download file to your localhost. 
+* Before downloading cold data, please [fetch files in the cold storage](/user-guides/twcc/cfs/manage-datasets/manage-folders-files/move-fetch-files.md).
+* Go to the **Download Cold Data** page, and the accessable file from Cold Storage will be temporarily stored in here. Select the **Available** file and move your cursor to the right panel of <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> button, then click the **DOWNLOAD** button to download file to your localhost. 
 
 :::info
 The files will be temporarily stored in the cold data download area and deleted after 3 days, please download within the time limit.

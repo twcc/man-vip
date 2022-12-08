@@ -11,11 +11,11 @@ import TabItem from '@theme/TabItem';
 
 # Metadata, search and version history
 
-## Metadata Management
+## Manage metadata
 
 You can add descriptive metadata to the file for precise searches or to facilitate context-specific processing of the program.
 
-### Edit Metadata
+### Edit metadata
 
 * Move cursor to the file's right panel <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> menu button and click **EDIT METADATA** button on dataset page.
 
@@ -35,7 +35,7 @@ The limit metadata for a single file is 10.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_24af374f8fe53752d99927d8dc84f882.png)
 
-## File Search
+## File search
 
 File Management Service provides two types of file search method, including **Search** (All dataset or specify dataset keyword) and **Advanced Search** (In specify dataset).
 
@@ -45,7 +45,7 @@ Enter keyword in **Search Bar** to filter out the criteria matching results in a
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fada13b19b1d6b5dbda94f8290033ec0.png)
 
-### Advanced Search
+### Advanced search
 
 * Click the **ADVANCED SEARCH** button on the right upper corner of dataset page.
 
@@ -68,7 +68,7 @@ Enter keyword in **Search Bar** to filter out the criteria matching results in a
 
     ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cc0bf302116d8b7d080dfbc6913dad55.png)
 
-## Version History
+## Version history
 
 
 * After entering file list page, move your cursor to the right panel of <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> menu button, and click **VERSION HISTORY** to view the file's version.
@@ -81,7 +81,7 @@ Enter keyword in **Search Bar** to filter out the criteria matching results in a
 :::info
 - Archives of older versions can only be kept for 30 days.
 - If you need to restore the file from an old version, please download the old version and re-upload it.
-- Upload a file with the same name as the cold storage:New files will be stored in the hot storage and displayed on the file storage management;the original file is still stored in cold storage and can be viewed/accessed by clicking on the version record on the right.
+- Upload a file with the same name as the cold storage:New files will be stored in the hot storage and displayed on the file storage management; the original file is still stored in cold storage and can be viewed/accessed by clicking on the version record on the right.
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2a989dd79afff11bcfc096b1d6ff677b.png)

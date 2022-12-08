@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # 映像檔申請紀錄
 
-* 容器映像檔建立後，會出現在開發型容器映像檔管理的列表中，建立容器映像檔需要幾分鐘的時間，此時映像檔狀態顯示為 **`Requested`**。
+* [建立容器映像檔](/user-guides/twcc/ccs-interactive-container/containers/details/create-image.md)完成後，會出現在開發型容器映像檔管理的列表中，建立容器映像檔需要幾分鐘的時間，此時映像檔狀態顯示為 **`Requested`**。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f36cf3e5cf63128e325e43ae57b0c9a2.png)
 

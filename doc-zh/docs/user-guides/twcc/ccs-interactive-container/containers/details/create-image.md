@@ -13,8 +13,8 @@ import TabItem from '@theme/TabItem';
 
 
 :::caution
-1. 容器映像檔範圍不包含容器預設目錄 /home 與 /work 之資料，製作映像檔前請您留意套件安裝位置。Python 套件安裝注意事項請參考：[<ins>TWCC 開發型容器 - Python 套件安裝指南</ins>](../../tutorials/python-package-installation.md)。
-2. 當您存放超過 10 GB 資料在容器系統目錄 (非[<ins>高速檔案系統 (HFS) 服務</ins>](/docs/hfs/overview.md)之 /home 或 /work 目錄)，進行容器映像檔時可能會有無法建立的情況。<br/>
+1. 容器映像檔範圍不包含容器預設目錄 /home 與 /work 之資料，製作映像檔前請您留意套件安裝位置。Python 套件安裝注意事項請參考：[<ins>TWCC 開發型容器 - Python 套件安裝指南</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)。
+2. 當您存放超過 10 GB 資料在容器系統目錄 (非[<ins>高速檔案系統 (HFS) 服務</ins>](/docs/user-guides/twcc/hfs)之 /home 或 /work 目錄)，進行容器映像檔時可能會有無法建立的情況。<br/>
 您可以輸入 `df -h` 指令檢視容器系統目錄 `/` 已使用容量：
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_eeeecf274c536f0c7c8ce65c910ec9a5.png)<br/>
 如有任何問題請與我們的技術支援團隊或客服人員連絡，謝謝！

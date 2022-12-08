@@ -66,7 +66,7 @@ import TabItem from '@theme/TabItem';
 2. 會員密碼長度至少需12字元，不可過於簡單。
 3. 會員密碼可為數字、英文字母(大小寫視為2種)、其他特殊字元等4種型式，至少須包含3種。
 4. 本中心資訊服務帳號密碼（會員或主機帳號）最長有效期限為 180 天。
-5. 當密碼即將到期前（期前七天、前三天，當天）會寄發密碼提醒通知，請用戶撥冗登入[<ins>會員中心</ins>](./go-to-member-center.md)進行變更。
+5. 當密碼即將到期前（期前七天、前三天，當天）會寄發密碼提醒通知，請用戶撥冗登入[<ins>會員中心</ins>](/user-guides/tws-member-center/manage-member-accounts/access-tws-member-center.md)進行變更。
 :::
 
 <br/>

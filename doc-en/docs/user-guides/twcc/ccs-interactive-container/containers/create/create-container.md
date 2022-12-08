@@ -13,15 +13,15 @@ import TabItem from '@theme/TabItem';
 
 You can create an interactive container with the default setting using a single command, or choose a container type according to your needs.
 
-For the detailed information of container types (including the number of GPUs and other resource sizes), please refer to [TWCC Pricing](https://www.twcc.ai/doc?page=price#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS)。
+For the detailed information of container types (including the number of GPUs and other resource sizes), please refer to [TWCC Pricing](/pricing.mdx/#container-compute-service-ccs)。
 
 <br/>
 
 ## Before we get started
 
-- If you haven't sign up for a user account, please [sign up for TWCC](https://www.twcc.ai/) first.
-- If you would like to operate with TWCC portal, please first sign in to [TWCC portal](https://www.twcc.ai/), and go to [Interactive Container Management](/docs/user-guides/twcc/ccs-interactive-container/containers/manage-containers.md) page.
-- If you would like to operate with TWCC CLI, please [install TWCC CLI](https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-2-%E5%AE%89%E8%A3%9DTWCC-CLI) first, and then [sign in](https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-3-%E9%80%B2%E5%85%A5-TWCC_CLI-%E7%92%B0%E5%A2%83%E4%B8%A6%E9%96%8B%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8B%99).
+- If you haven't sign up for a user account, please [sign up for TWS](/user-guides/tws-member-center/manage-member-accounts/sign-up-for-tws.md) first.
+- If you would like to operate with TWCC portal, please first sign in to [TWCC portal](https://tws.twcc.ai/), and go to [Interactive Container Management](/user-guides/twcc/ccs-interactive-container/containers/manage-containers.md) page.
+- If you would like to operate with TWCC CLI, please [install TWCC CLI](https://github.com/twcc/TWCC-CLI) first, and then [sign in](https://github.com/twcc/TWCC-CLI).
 
 <br/>
 
@@ -31,7 +31,7 @@ For the detailed information of container types (including the number of GPUs an
 <Tabs>
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-* Go to [Interactive Container Management](/docs/user-guides/twcc/ccs-interactive-container/containers/manage-containers.md) page, and click **＋CREATE**.
+* Go to [Interactive Container Management](/user-guides/twcc/ccs-interactive-container/containers/manage-containers.md) page, and click **＋CREATE**.
 
 ![](https://i.imgur.com/Cp7Bvz9.png)
 
@@ -40,7 +40,7 @@ For the detailed information of container types (including the number of GPUs an
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8a53c677b248ea69b8d219cbc5f34464.png)
 
 :::tip
-1. For the NGC container image type, version and packages provided by TWCC, please refer to [<ins>Container Images</ins>](https://man.twcc.vip/en/docs/ccs_framwork_image/intro).
+1. For the NGC container image type, version and packages provided by TWCC, please refer to [<ins>Container Images</ins>](/user-guides/twcc/ccs-interactive-container/images/overview.md).
 2. After the first selection, system would record and display the image in **Recent Used** block to speed up your next selection. (Clearing the browser history will also clear this record.)
 :::
 
@@ -56,7 +56,7 @@ If "Deletion Protection" is enabled, before deleting a resource, you need to dis
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_71287b579154f911fb08860a9746be0e.png)
 
-* Then click **NEXT : ENVIRONMENT VARIABLES>** to set the environment variables that meet your needs. For detailed explanation and setting examples, please refer to [<ins>Setting Environment Variables</ins>](https://man.twcc.vip/en/docs/ccs/tutorials/add-python3-kernel-to-jupyter-notebook).
+* Then click **NEXT : ENVIRONMENT VARIABLES>** to set the environment variables that meet your needs. For detailed explanation and setting examples, please refer to [<ins>Setting Environment Variables</ins>](https://man.twcc.ai/@twccdocs/howto-ccs-vcs-setup-env-variable-en).
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_78faad93eaa1e43c081cfd1200daf530.png)
 
@@ -85,7 +85,7 @@ If you do not input any parameters, the container will be created with the defau
 | -------- | -------- | -------- |
 | TensorFlow (latest environment)    | twcc-cli     | c.super (1 GPU + 04 cores + 90 GB memory) |
 
-For detailed explanation and setting examples, please refer to [<ins>Setting Environment Variables</ins>](https://man.twcc.vip/en/docs/ccs/tutorials/add-python3-kernel-to-jupyter-notebook).
+For detailed explanation and setting examples, please refer to [<ins>Setting Environment Variables</ins>](https://man.twcc.ai/@twccdocs/howto-ccs-vcs-setup-env-variable-en).
 :::
 
 <br/>
@@ -114,9 +114,9 @@ twccli mk ccs -itype "Caffe2" -img "caffe2-18.08-py3-v1:latest" -gpu 2 -n cusccs
 ---
 
 :::info
-1. For more information about the images, please refer to [<ins>TWCC Container Image</ins>](https://man.twcc.vip/en/docs/ccs_framwork_image/intro).
-2. For more information about the container types, resource ratio and pricing, please refer to [<ins>TWCC Pricing</ins>](https://www.twcc.ai/doc?page=price#%E5%AE%B9%E5%99%A8%E9%81%8B%E7%AE%97%E6%9C%8D%E5%8B%99-Container-Compute-Service-CCS).
-3. If **available memory capacity** of containers is calculated in GiB (1 GiB =  2<sup>30</sup> bytes), take c.super as an example, its available memory capacity will be 84 GiB. For more information, please refer to [<ins>Memory capacity conversion</ins>](https://man.twcc.ai/@twccdocs/concept-ccs-memory-conversion-en) for more details.
+1. For more information about the images, please refer to [<ins>TWCC Container Image</ins>]/user-guides/twcc/ccs-interactive-container/images/overview.md).
+2. For more information about the container types, resource ratio and pricing, please refer to [<ins>TWCC Pricing</ins>](/pricing.mdx/#container-compute-service-ccs).
+3. If **available memory capacity** of containers is calculated in GiB (1 GiB =  2<sup>30</sup> bytes), take c.super as an example, its available memory capacity will be 84 GiB. For more information, please refer to [<ins>Memory capacity conversion</ins>](/concepts-tutorials/twcc/ccs-interactive/concepts/container-memory-capacity-conversion.md) for more details.
 :::
 
 :::caution
@@ -125,5 +125,5 @@ twccli mk ccs -itype "Caffe2" -img "caffe2-18.08-py3-v1:latest" -gpu 2 -n cusccs
 :::
 
 :::info **Related documents** 
-- <a href="https://man.twcc.vip/en/docs/cos/intro/"><ins>Cloud Object Storage (COS)</ins></a>, <a href="https://man.twcc.vip/en/docs/hfs/intro/"><ins>Hyper File System (HFS)</ins></a>
+- <a href="/docs/user-guides/twcc/cos"><ins>Cloud Object Storage (COS)</ins></a>, <a href="/docs/user-guides/twcc/hfs"><ins>Hyper File System (HFS)</ins></a>
 :::

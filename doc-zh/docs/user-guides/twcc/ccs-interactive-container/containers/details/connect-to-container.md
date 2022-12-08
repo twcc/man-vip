@@ -17,9 +17,9 @@ import TabItem from '@theme/TabItem';
 
 ## 準備工作
 
-- [建立開發型容器](./create-container.md)。
-- 若選擇使用 TWCC 入口網站操作，容器建立後，請於「**開發型容器管理頁**」點選欲連線的容器，進入「**開發型容器詳細資料頁**」。
-- 若選擇使用 TWCC CLI 操作，請先取得[容器 ID](../manage-monitor/manage-container.md#檢視資訊)。
+- [建立開發型容器](/user-guides/twcc/ccs-interactive-container/containers/create/create-container.md)。
+- 若選擇使用 TWCC 入口網站操作，容器建立後，請於「**開發型容器管理**」頁點選欲連線的容器，進入「**開發型容器詳細資料**」頁。
+- 若選擇使用 TWCC CLI 操作，請先取得 容器 ID。
 
 <br/>
 
@@ -97,5 +97,5 @@ twccli ls ccs -s 1249374 -gssh
 ---
 
 :::info
-[<ins>忘記主機密碼？</ins>](/member/user-guides/member-key-quota/hpc-account-password-otp.md#重置主機密碼)
+[<ins>忘記主機密碼？</ins>](/user-guides/tws-member-center/manage-member-accounts/system-account-password-otp.md)
 :::

@@ -15,7 +15,7 @@ TWCC interactive containers provide 5 **target ports**, port 22, 8888, 5000, 500
 
 By default, the container has SSH server run on port 22 and Jupyter Notebook run on port 8888 with association done automatically, so you can use both ways to connect and operate the container immediately after the container is created.
 
-The custom **target ports** are: 5000, 5001, and 5002. You can set the daemon of the service running on a container to one of the target ports, and associate it with the public port. After that, the system will configure a corresponding **public port (50000 ~ 60000)**. You can expose your service with using the public IP and the public port. (e.g., [AI inference](https://man.twcc.vip/en/docs/ccs/tutorials/tensorflow-mnist-trainign) or [Website service](https://man.twcc.vip/en/docs/ccs/tutorials/configure-service-ports))
+The custom **target ports** are: 5000, 5001, and 5002. You can set the daemon of the service running on a container to one of the target ports, and associate it with the public port. After that, the system will configure a corresponding **public port (50000 ~ 60000)**. You can expose your service with using the public IP and the public port. (e.g., [AI inference](https://man.twcc.ai/@twccdocs/howto-ccs-tensorflow-inception-v3-port-en) or [Website service](https://man.twcc.ai/@twccdocs/howto-ccs-config-service-port-en))
 
 <br/>
 
@@ -23,7 +23,7 @@ The custom **target ports** are: 5000, 5001, and 5002. You can set the daemon of
 ## Prerequisites
 - Create [Interactive Containers](https://man.twcc.vip/en/docs/ccs/user-guides/creation-and-connection/create-an-interactive-container).
 - If you choose to use TWCC portal, after the container is created, please click the container you want to connect to on the **Interactive Container Management** page and enter the **Interactive Container Details** page.
-- If you choose to use TWCC CLI operation, please obtain the [Container's ID](https://man.twcc.vip/en/docs/ccs/user-guides/management-and-monitoring/manage-your-container/#view-the-information) first.
+- If you choose to use TWCC CLI operation, please obtain the container's ID first.
 
 <br/>
 
@@ -58,12 +58,12 @@ twccli ls ccs -p -s 886330
 
 ## Associate the service port
 
-You can associate the container with **target ports** 5000, 5001, 5002, and the system will configure a corresponding **public port (50000 ~ 60000)**. You can provide the external services through this mechanism. (e.g., [AI inference](https://man.twcc.vip/en/docs/ccs/tutorials/tensorflow-mnist-trainign) or [Website service](https://man.twcc.vip/en/docs/ccs/tutorials/configure-service-ports)).
+You can associate the container with **target ports** 5000, 5001, 5002, and the system will configure a corresponding **public port (50000 ~ 60000)**. You can provide the external services through this mechanism. (e.g., [AI inference](https://man.twcc.ai/@twccdocs/howto-ccs-tensorflow-inception-v3-port-en) or [Website service](https://man.twcc.ai/@twccdocs/howto-ccs-config-service-port-en)).
 
 <Tabs>
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-- Click "**ASSOCIATE**" service port :arrow_right: Select the target port of the service daemon `5002` :arrow_right: Click  "**OK**"
+- Click **ASSOCIATE** service port :arrow_right: Select the target port of the service daemon `5002` :arrow_right: Click  **OK**.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3d1e8b0a33edbe2ee0bdc3b0dd9171b3.png)
         

@@ -327,7 +327,7 @@
     "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
   },
   "homepage.services.HSS.upload": {
-    "message": "將您的檔案上傳",
+    "message": "上傳您的檔案",
     "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
   },
   "homepage.services.HSS.sync": {

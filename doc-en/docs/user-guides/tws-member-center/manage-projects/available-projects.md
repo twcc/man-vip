@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 ### Step 1. Sign in Member Center 
 
 Sign in to [TWS Member Center](https://tws.twcc.ai/). 
-If you have not registered yet, refer to [Sign up for a TWS account](../membership/sign-up-for-tws.md) for more information.
+If you have not registered yet, refer to [Sign up for a TWS account](user-guides/tws-member-center/manage-member-accounts/sign-up-for-tws.md) for more information.
 
 
 <br/>
@@ -28,6 +28,6 @@ Select <span>&#10102;</span> Member Center :arrow_right: <span>&#10103;</span> P
 
 :::info
 If there are no projects available for using TWCC, you may:
-  - Ask the project host (creator) or Tenant Admins to add you to the project, refer to [<ins>Manage project members</ins>](./manage-project-members.md) for more information.
-  - [Apply for a free trial project, purchase services, or contact TWS Sales](./apply-projects-credits.md)。
+  - Ask the project host (creator) or Tenant Admins to add you to the project, refer to [<ins>Manage project members</ins>](/user-guides/tws-member-center/manage-projects/manage-project-members.md) for more information.
+  - [Apply for a free trial project, purchase services, or contact TWS Sales](/user-guides/tws-member-center/manage-projects/apply-projects-credits.md)。
 :::

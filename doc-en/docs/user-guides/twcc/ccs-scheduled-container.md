@@ -28,7 +28,7 @@ You can click on the asterisk <i class="fa fa-star-o" aria-hidden="true"></i> on
 * Fill in the basic information of the container, select the image, basic configuration, and enter the command; the command will be executed automatically when the task-based container starts, and then click **NEXT: STROAGE>** to enter the STROAGE page.
 
 :::tip
-Please use [**Hyper File System**](hfs) to upload the content of the program you want to run.
+Please use [**Hyper File System**](/docs/user-guides/twcc/hfs) to upload the content of the program you want to run.
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2a06e1c9e7661e89d4ec3ebd0f732c0f.png)
@@ -40,8 +40,8 @@ Please use [**Hyper File System**](hfs) to upload the content of the program you
 * Click **NEXT: SCHEDULE** to set the schedule.
 
 :::info 
-* [Cloud Object Storage](cos)
-* [Hyper File System](hfs)
+* [Cloud Object Storage](/docs/user-guides/twcc/cos)
+* [Hyper File System](/docs/user-guides/twcc/hfs)
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dbefe7f8061967cb70f90ea6556d91f7.png)
@@ -90,7 +90,7 @@ Then, review the specifications and price of the entire container and click "Cre
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2d29c01333ad958dc30c533964e3fd56.png)
 
 :::caution
-- The **Scheduled Log** feature does not ensure that all your logs are saved and available at the end of a container run. It is recommended that you dump your logs to [Hyper File System](hfs) or upload them to [Cloud Object Storage](cos) to ensure their availability.
+- The **Scheduled Log** feature does not ensure that all your logs are saved and available at the end of a container run. It is recommended that you dump your logs to [Hyper File System](hfs) or upload them to [Cloud Object Storage](/docs/user-guides/twcc/cos) to ensure their availability.
 - If you would like TWCC maintenance staff to assist you in obtaining complete records, please write to Authorization Processing (isupport@twcc.io) and do not store sensitive data.
 :::
 

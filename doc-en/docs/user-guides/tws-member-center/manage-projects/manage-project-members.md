@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 # Manage TWS project members
 
 :::info
-- Before using TWCC service, please make sure you have available projects and credits: [<ins>Available projects</ins>](./available-projects.md)。
+- Before using TWCC service, please make sure you have available projects and credits: [<ins>Available projects</ins>](/user-guides/tws-member-center/manage-projects/available-projects.md)。
 - Only the **Project Host (creator)** and **Project Admins** have the permission to manage project members.
 :::
 
