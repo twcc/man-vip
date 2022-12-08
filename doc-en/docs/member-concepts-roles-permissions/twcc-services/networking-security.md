@@ -20,12 +20,12 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/role-netndsec-en'
 
 | Function | Tenant Admin | Tenant User |
 | -------- | -------- | -------- |
-|Create Security Group rule of personal VCS instance|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|Create Security Group rule of all VCS instances in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|View Security Group rule of personal VCS instance|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|View Security Group rule of all VCS instances in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
-|Delete Security Group rule of personal VCS instance|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
-|Delete Security Group rule of all VCS instances in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Create Security Group rule of personal VCS instance/Load Balancer|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Create Security Group rule of all VCS instances/Load Balancer in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|View Security Group rule of personal VCS instance/Load Balancer|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|View Security Group rule of all VCS instances/Load Balancer in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
+|Delete Security Group rule of personal VCS instance/Load Balancer|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-check" aria-hidden="true"></i>
+|Delete Security Group rule of all VCS instances/Load Balancer in the project|<i class="fa fa-check" aria-hidden="true"></i>|<i class="fa fa-times" aria-hidden="true"></i>
 
 ## Load Balancing Service (LBS)
 

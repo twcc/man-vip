@@ -52,6 +52,12 @@ Please create a bucket correspond to dataset for S3 protocol access, and downloa
 
 * After successfully connect, you can see the created bucket on CFS.
 
+:::info
+If you are using other third-party software, please set the following information to ensure a successful connection.
+- Region：us-east-1
+- Signature Version：V4
+:::
+
 ### Delete S3 Dataset
 
 * If S3 dataset is no longer needed, please select the bucket and click the **DELETE** button.
