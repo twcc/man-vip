@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 sidebar_label: 'From Windows'
-slug: '/user-guides/twcc/vcs/connect-to-windows-instance-from-windows'
+slug: '/user-guides/twcc/vcs/connect-to-linux-instance-from-windows'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-to-linux-from-windows-zh' 
 ---
@@ -34,7 +34,7 @@ Open your local command prompt and type `ssh -V` to check if you have an SSH cli
 
 **Step 2. Change the permissions of the key pair**
     
-Follow the steps in [<ins>Prerequisites</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/connection/prerequisites) to obtain the connection information and enter commands to change the key pair permissions.
+Follow the steps in [<ins>Prerequisites</ins>](/user-guides/twcc/vcs/instances/details/connect-to-instance/prerequisites.md) to obtain the connection information and enter commands to change the key pair permissions.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_02120b912a3077ba14f49054f320b674.png)
 
@@ -42,7 +42,7 @@ Follow the steps in [<ins>Prerequisites</ins>](https://man.twcc.vip/en/docs/vcs/
 
 **Step 3. Connect to your VCS instance**
 
-Enter the commands obtained by following the [<ins>Prerequisites</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/connection/prerequisites) to SSH into your instance.
+Enter the commands obtained by following the [<ins>Prerequisites</ins>](/user-guides/twcc/vcs/instances/details/connect-to-instance/prerequisites.md) to SSH into your instance.
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_112f272ffc1d5fac6b569fd1c501af54.png)
@@ -209,7 +209,7 @@ Please download [<ins>VScode</ins>](https://code.visualstudio.com/Download) and 
 
 <br/>
 
-**Step 2. Install SSH package**
+**Step 2. Install SSH extension**
 
 
 Click **Extensions** > search for *remote ssh* > select **Remote- SSH** and click **Install**.
@@ -251,7 +251,7 @@ Host <INSTANCE_NAME>            # Enter the name of the VCS instance
 
 <br/>
 
-**Step 4. Connect to VCS instance**
+**Step 4. Connect to the VCS instance**
 
 - In VScode, click the icon in the lower left corner > select **Remote-SSH: Connect to Host...**.
 
@@ -282,7 +282,7 @@ Host <INSTANCE_NAME>            # Enter the name of the VCS instance
 <br/>
 
 :::info
-For urgent debugging/system maintenance, it is recommended to [<ins>connect via Console</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/management-and-monitoring/console) to speed up the workflow.
+For urgent debugging/system maintenance, it is recommended to [<ins>connect via Console</ins>](/user-guides/twcc/vcs/instances/details/console.md) to speed up the workflow.
 :::
 
 :::caution

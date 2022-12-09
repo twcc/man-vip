@@ -17,7 +17,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/twnia2-overview-zh
 ![](https://twcc-wordpress-file.cos.twcc.ai/wp-content/uploads/2019/09/19130553/1-2.png)
 
 
-為提供多元服務類型，台灣杉二號主機上提供[開發型容器服務](../ccs-interactive-container/overview.md)、[任務型容器服務](../ccs-scheduled-container.md)及 [HPC 高速運算任務](../hpc-job.md)、台灣杉二號(命令列介面) (本服務)。
+為提供多元服務類型，台灣杉二號主機上提供[開發型容器服務](/user-guides/twcc/ccs-interactive-container)、[任務型容器服務](/user-guides/twcc/ccs-scheduled-container.md)及 [HPC 高速運算任務](/user-guides/twcc/hpc-job)、台灣杉二號(命令列介面) (本服務)。
 
 
 ## 台灣杉二號 (命令列介面) - 運算服務

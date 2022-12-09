@@ -10,13 +10,13 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-queue
 
 Available queues for submitting jobs in Taiwania 2 (HPC CLI):
 
-| Queue name | Maximum walltime (hours) | High priority | Maximum number of jobs per user | Applicable project       | Node type   |
-| ---------- | ------------------ | -------- | ---------------- | -------------- | ------------ |
-| gp1d       | 24                 |          | 20               | all projects   | GPU compute nodes |
-| gp2d       | 48                 |          | 20               | all projects   | GPU compute nodes|
-| gp4d       | 96                 |          | 20               | all projects   | GPU compute nodes |
-| gtest      | 0.5                |          | 5                | all projects   | GPU compute nodes |
-| express    | 96                 | v        | 20               | Industrial and personal projects | GPU compute nodes |
+| Queue name | Maximum walltime (hours) | High priority | Maximum number of jobs per user | Applicable project       | Node type   | Maximum number of GPUs per user |
+| ---------- | ------------------ | -------- | ---------------- | -------------- | ------------ | ------------ |
+| gp1d       | 24                 |          | 20               | all projects   | GPU compute nodes | 40 |
+| gp2d       | 48                 |          | 20               | all projects   | GPU compute nodes| 40 |
+| gp4d       | 96                 |          | 20               | all projects   | GPU compute nodes | 40 |
+| gtest      | 0.5                |          | 5                | all projects   | GPU compute nodes | 40 |
+| express    | 96                 | v        | 20               | Industrial and personal projects | GPU compute nodes | 256 |
 
 :::info
 - The compute nodes in Taiwania 2 (HPC CLI) are all GPU nodes. Every single node has 8 GPUs and 36 CPUs. The model names for GPUs is NVIDIA Tesla V100-SXM2-32GB and Intel(R) Xeon(R) Gold 6154 for CPUs.

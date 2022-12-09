@@ -7,7 +7,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-hfs-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-hfs-zh'
 ---
 
-# TWCC FAQs | Hyper File System (HFS)
+# FAQs | Hyper File System (HFS)
 
 <details>
 
@@ -19,8 +19,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-hfs-zh'
     ```
  
 - The temporary files generated during the computing process may also be the cause of your full storage. Temporary files will be stored in the following two hidden directories:
-    - /home/supercomputer account/.cache/ 
-    - /home/supercomputer account/.local/ 
+    - /home/system account/.cache/ 
+    - /home/system account/.local/ 
   
     You can switch to the above two directories and execute the following command to view the files in the directory: 
     ```
@@ -38,7 +38,7 @@ Q2. Why can't I log into the data transfer node (xdata1.twcc.ai) with SFTP proto
 
 </summary>
 
-Please make sure that you use the SSH private key as the login credential, not your supercomputer password. If you confirm that the login credentials are correct but you still have problems logging in, please contact Customer Service.
+Please make sure that you use the SSH private key as the login credential, not your system password. If you confirm that the login credentials are correct but you still have problems logging in, please contact Customer Service.
 
 </details>
 
@@ -47,7 +47,7 @@ Please make sure that you use the SSH private key as the login credential, not y
 
 <summary> Q3. How to upload files to HFS? </summary>
 
-Please refer to <ins><a href = "https://www.twcc.ai/doc?page=hfs">this document</a></ins> to obtain the key through the container environment, and then use the SFTP client (e.g., FileZilla) to connect to the data transfer node (xdata1.twcc.ai).
+Please refer to <ins><a href = "/docs/user-guides/twcc/hfs">this document</a></ins> to obtain the key through the container environment, and then use the SFTP client (e.g., FileZilla) to connect to the data transfer node (xdata1.twcc.ai).
 
 </details>
 
@@ -55,7 +55,7 @@ Please refer to <ins><a href = "https://www.twcc.ai/doc?page=hfs">this document<
 
 <summary> Q4. How to share files to other users?</summary>
 
-Please refer to <ins><a href = "https://man.twcc.ai/@twccdocs/doc-hfs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-hfs-share-files-between-user-accounts-zh)">this document</a></ins> and share it by uploading it to TWCC COS or by opening HFS file permissions.
+Please refer to <ins><a href = "https://man.twcc.ai/@twccdocs/howto-hfs-share-files-between-user-accounts-zh)">this document</a></ins> and share it by uploading it to TWCC COS or by opening HFS file permissions.
 
 </details>
 
@@ -63,7 +63,7 @@ Please refer to <ins><a href = "https://man.twcc.ai/@twccdocs/doc-hfs-main-zh/ht
 
 <summary> Q5. How to purchase additional Hyper File System storage space?</summary>
 
-For the price and purchasing method, please refer to the paragraph **View Details** and **HFS Storage Management Policy** in [<ins>this document</ins>](https://www.twcc.ai/doc?page=hfs).
+For the price and purchasing method, please refer to the paragraph **View Details** and **HFS Storage Management Policy** in [<ins>this document</ins>](/docs/user-guides/twcc/hfs).
 
 </details>
 
@@ -87,8 +87,8 @@ For the price and purchasing method, please refer to the paragraph **View Detail
     ```
  
 - he temporary files generated during the computing process may also be the cause of your full storage. Temporary files will be stored in the following two hidden directories:
-    - /home/supercomputer account/.cache/ 
-    - /home/supercomputer account/.local/ 
+    - /home/system account/.cache/ 
+    - /home/system account/.local/ 
   
     You can switch to the above two directories and execute the following command to view the files in the directory: 
     ```
@@ -102,7 +102,7 @@ For the price and purchasing method, please refer to the paragraph **View Detail
 
 <summary> Q8. How long does it take for the additional purchase of the Hyper File System to take effect?</summary>
 
-- After purchasing additional storage space in  [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh), wait for 15 minutes before you can use it.
+- After purchasing additional storage space in  [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](/docs/user-guides/tws-member-center/access-tws-member-center), wait for 15 minutes before you can use it.
 
 </details>
 
@@ -119,6 +119,6 @@ The used capacity shown on the page will take some time to update, please check 
 <summary> Q10. Why doesn't Jupyter Notebook free up space immediately after deleting a file?</summary>
 
 - When you delete a file in the Jupyter notebook UI, the file is not deleted immediately, but is moved to `/home/<host account>/.local/share/Trash`.
-- If you need to delete the file and free up space immediately, you need to run `rm -r /home/<host account>/.local/share/Trash` in a Jupyter Terminal, or connect to HFS and delete the file by [other means](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh/%2F%40twccdocs%2Fguide-hfs-connect-to-data-transfer-node-zh) to free up space immediately.
+- If you need to delete the file and free up space immediately, you need to run `rm -r /home/<host account>/.local/share/Trash` in a Jupyter Terminal, or connect to HFS and delete the file by [other methods](/docs/user-guides/twcc/hfs/connect-data-transfer-node) to free up space immediately.
 
 </details>

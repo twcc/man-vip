@@ -7,7 +7,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-membership-project-
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-membership-project-billing-zh'
 ---
 
-# TWCC FAQs | Membership, Project and Billing
+# FAQs | Membership, project, and billing
 
 ## About membership
 
@@ -30,9 +30,9 @@ Please refer to [<ins>this document</ins>](/user-guides/tws-member-center/manage
 
 <details>
 
-<summary>  Q3. What can I do if I forget the supercomputer password?</summary>
+<summary>  Q3. What can I do if I forget the system password?</summary>
 
-Since we do not record the user's supercomputer password, please reset your password through the service website. Please refer to 
+Since we do not record the user's system password, please reset your password through the service website. Please refer to 
 [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-service-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-hostname-pwd-otp-en#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC) for the detailed resetting steps.
 
 </details>

@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # Connect to a Windows instance from macOS
 
-Having completed the [prerequisites and obtained connection information](https://man.twcc.vip/en/docs/vcs/user-guides/connection/prerequisites), please refer to the following method to connect to Windows instance from macOS.
+Having completed the [prerequisites and obtained connection information](/user-guides/twcc/vcs/instances/details/connect-to-instance/prerequisites.md), please refer to the following method to connect to Windows instance from macOS.
 
 :::info
 Please note that after the instance has been created and changed to the **`Ready`** state, it will take some time for the remote connection to become available.
@@ -46,5 +46,5 @@ password: user-defined instance password
 :::
 
 :::info
-For urgent debugging/system maintenance, it is recommended to [<ins>connect via Console</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/management-and-monitoring/console) to speed up the workflow.
+For urgent debugging/system maintenance, it is recommended to [<ins>connect via Console</ins>](/user-guides/twcc/vcs/instances/details/console.md) to speed up the workflow.
 :::

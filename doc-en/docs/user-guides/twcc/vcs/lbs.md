@@ -10,13 +10,13 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-lbs-zh'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5eaf2d8a3b112a4b8c49a853eaab60d8.png) Load Balancing
+# ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5eaf2d8a3b112a4b8c49a853eaab60d8.png) Load Balancing Service
 
 TWCC Load Balancing Service offers **Application Load Balancer (HTTP and HTTPs with SSL)** and **Network Load Balancer (TCP)**. When network traffic becomes heavy, the Load Balancer automatically distributes traffic to different VCS instances to keep the service flexible, scalable and highly available.
 
 
 :::info
-- For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務).
+- For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twsdocs/role-main-en).
 - TWCC CLI currently does not support this feature.
 :::
 
@@ -51,7 +51,7 @@ You can click on the asterisk to the left of the service in "**All Services**" <
     * **Assign Public IP**: You can choose not to assign it, auto-assign a floating IP, or assign a static IP**. Please refer to [<ins>Elastic IP</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/networking/elastic-ip) for usage details.
 
 :::info
-*To use a **HTTPS with SSL** listener, please [<ins>create SSL Certificate</ins>](#create-ssl-certificates) first.<br/>
+*To use a **HTTPS with SSL** listener, please [<ins>create SSL Certificate</ins>](#create-a-ssl-certificate) first.<br/>
 **After creation, you can adjust the IP selection on the "Load Balancer Details" page. If you have assigned IPs, you need to detach them before you can select other IPs.
 :::
 
@@ -86,7 +86,7 @@ After creating, [<ins>attach the load balancer to VCS instances</ins>](#attach-l
 <br/>
 
 
-### Update Load balancer's SSL certificate
+### Update load balancer's SSL certificate
 
 SSL certificates have a validity period. You can create a new certificate to replace the certificate about to expire:
 
@@ -141,7 +141,7 @@ You can use the search bar with keywords to find your load balancer if too many 
 
 
 
-## SSL Certificates
+## SSL certificates
 
 
 Deploy SSL certificates on your load balancers can help you build trust with customers by encrypting and securing communications between the web server and the client browser, preventing criminals from reading or modifying information transferred.
@@ -154,7 +154,7 @@ In order to comply with the information security requirements, only the TLS 1.2 
 <br/>
 
 
-### Create SSL certificates
+### Create a SSL certificate
 
 * Click **SSL Certificate** on the left side > Click **+CREATE** in the **SSL Certificate Management** page.
 
@@ -165,7 +165,7 @@ In order to comply with the information security requirements, only the TLS 1.2 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_efe577b9eebbb33d3fb36fde5dd1890e.png)
 
 :::info
-TWCC currently supports only PKCS#12 format, please refer to [<ins>Convert SSL certificate format</ins>](https://man.twcc.vip/en/docs/vcs/tutorials/convert-ssl-certificate) for more information.
+TWCC currently supports only PKCS#12 format, please refer to [<ins>Convert SSL certificate format</ins>](https://man.twcc.ai/@twccdocs/howo-lb-convert-cert-en) for more information.
 :::
 
 * Review SSL certificate configuration, and then click **CREATE**.
@@ -191,7 +191,7 @@ TWCC currently supports only PKCS#12 format, please refer to [<ins>Convert SSL c
 <br/>
 
 
-### Delete SSL certificates
+### Delete a SSL certificate
 
 * Go to the **SSL Certificate Management** page, select the SSL certificate you want to delete, and then click the **DELTE** button.
 

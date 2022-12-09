@@ -195,7 +195,7 @@ paths:
     get:
       tags:
         - project
-      summary: get user quotas
+      summary: GetUserQuotas
       description: get user quotas
       parameters:
         - $ref: '#/components/parameters/ProjectInPathParam'
@@ -493,7 +493,7 @@ paths:
     get:
       tags:
       - keypair
-      summary: Get Keypair Detail
+      summary: GetKeypairDetail
       description: Get Keypair Detail
       parameters:
       - name: key_name
@@ -521,7 +521,7 @@ paths:
     delete:
       tags:
       - keypair
-      summary: GetKeypairDetail
+      summary: DeleteKeypair
       description: Delete a Keypair
       parameters:
       - name: key_name

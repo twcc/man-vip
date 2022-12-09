@@ -56,6 +56,8 @@ slug: /user-guides
 
 <br/><br/>
 
-### 共通服務
+### 通用服務
 
-- [一般性操作](/docs/user-guides/twcc/general)
+- [API 金鑰管理](/docs/user-guides/twcc/general/api-keys)
+- [資源配額管理](/docs/user-guides/twcc/general/resource-quota)
+- [檢視服務使用歷史紀錄](/docs/user-guides/twcc/general/activity-history)

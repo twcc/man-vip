@@ -17,7 +17,7 @@ TWCC 虛擬運算服務 (VCS) 提供 Console，讓您無需在本地端安裝 Cl
 
 ## 開啟 Console 連線虛擬運算個體
 
-### Step 1. 進入詳細資料頁
+### Step 1. 進入個體詳細資料頁
 
 建立虛擬運算個體後，點選個體並進入「**虛擬運算個體詳細資料**」頁。
 
@@ -26,7 +26,7 @@ TWCC 虛擬運算服務 (VCS) 提供 Console，讓您無需在本地端安裝 Cl
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_536acdd31b059748dd7befc1f6f62dac.png)
 
 :::info
-首次使用 Console，請您先使用金鑰透過 **[<ins>SSH 連線個體</ins>](../connecting/linux/from-windows.md)** 並使用以下指令設定登入密碼，後續才可使用帳密，透過 Console 連線進入個體。
+首次使用 Console，請您先使用金鑰透過 **[<ins>SSH 連線個體</ins>](/docs/user-guides/twcc/vcs/connect-to-linux-instance)** 並使用以下指令設定登入密碼，後續才可使用帳密，透過 Console 連線進入個體。
 
 
 ```bash
@@ -45,7 +45,7 @@ sudo passwd ubuntu  # 以 Ububtu 為範例設定登入密碼
 <br/>
 
 
-### Step 2. 開啟 Console
+### Step 2. 開啟 VCS Console
 
 - 頁面下拉至「**網路與連線**」區塊，點選「**連線**」，即可開啟 Console。
 

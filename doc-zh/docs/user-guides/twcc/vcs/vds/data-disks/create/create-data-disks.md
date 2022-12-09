@@ -19,7 +19,7 @@ import TabItem from '@theme/TabItem';
 
 **1. 建立虛擬運算個體時建立**
 
-- 您可於[建立虛擬運算個體](../create/create-instances.md)時，於「儲存」頁籤指定建立資料磁碟 (僅能建立 1 個磁碟，並僅能選擇類型、容量，無法指定名稱)。
+- 您可於[建立虛擬運算個體](/docs/user-guides/twcc/vcs/instances/create-instances)時，於「儲存」頁籤指定建立資料磁碟 (僅能建立 1 個磁碟，並僅能選擇類型、容量，無法指定名稱)。
 
 **2. 於資料磁碟管理頁建立**
 

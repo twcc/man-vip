@@ -7,7 +7,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-hfs-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-hfs-zh'
 ---
 
-# TWCC FAQs | 高速檔案系統 (HFS)
+# FAQs | 高速檔案系統 (HFS)
 
 <details>
 
@@ -41,7 +41,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-hfs-zh'
 
 <summary> Q3. 如何將檔案上傳到高速檔案系統？</summary>
 
-請先利用容器環境取得金鑰，再利用 SFTP 軟體 (例：Filezilla) 連線到資料傳輸節點(xdata1.twcc.ai)，請參考[此文件](/docs/hfs/user-guides/connect-data-transfer-node.md)。
+請先利用容器環境取得金鑰，再利用 SFTP 軟體 (例：Filezilla) 連線到資料傳輸節點(xdata1.twcc.ai)，請參考[此文件](/docs/user-guides/twcc/hfs/connect-data-transfer-node)。
 
 </details>
 
@@ -49,7 +49,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-hfs-zh'
 
 <summary> Q4. 如何將檔案分享給其他用戶？</summary>
 
-請參考[此文件](/docs/hfs/tutorials/share-files-between-user-accounts.md)，透過上傳至 TWCC COS 或開放 HFS 檔案權限的方式分享。
+請參考[此文件](https://man.twcc.ai/@twccdocs/howto-hfs-share-files-between-user-accounts-zh)，透過上傳至 TWCC COS 或開放 HFS 檔案權限的方式分享。
 
 </details>
 
@@ -57,7 +57,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-hfs-zh'
 
 <summary> Q5. 如何增購高速檔案系統空間？</summary>
 
-請參考[此文件](/docs/hfs/overview.md)中「**查看容量**」及「**HFS空間管理政策**」兩個段落，即可得知價格以及增購空間的方法。
+請參考[此文件](/docs/user-guides/twcc/hfs)中「**查看容量**」及「**HFS空間管理政策**」兩個段落，即可得知價格以及增購空間的方法。
 
 </details>
 
@@ -93,7 +93,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-hfs-zh'
 
 <summary> Q8. 增購高速檔案系統空間後多久生效？</summary>
 
-- 在[會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](/docs/member/user-guides/member-key-quota/go-to-member-center.md) 完成增購空間步驟後，稍等 15 分鐘後即可使用。
+- 在[會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i>](/docs/user-guides/tws-member-center/access-tws-member-center) 完成增購空間步驟後，稍等 15 分鐘後即可使用。
 
 </details>
 
@@ -110,6 +110,6 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-hfs-zh'
 <summary> Q10. Jupyter Notebook 刪除檔案後沒有立即釋放空間？</summary>
 
 - 在 Jupyter Notebook UI 介面上刪除檔案，檔案不會立即刪除，而會移至 `/home/<主機帳號>/.local/share/Trash` 下。
-- 若需立即刪除檔案並釋放空間，則需在 Jupyter Terminal 執行 `rm -r /home/<主機帳號>/.local/share/Trash`，或是透過[其他方式](/docs/hfs/user-guides/connect-data-transfer-node.md)連線 HFS 並刪除檔案，即可立即釋放空間。
+- 若需立即刪除檔案並釋放空間，則需在 Jupyter Terminal 執行 `rm -r /home/<主機帳號>/.local/share/Trash`，或是透過[其他方式](/docs/user-guides/twcc/hfs/connect-data-transfer-node)連線 HFS 並刪除檔案，即可立即釋放空間。
 
 </details>

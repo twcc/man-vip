@@ -34,7 +34,7 @@ Web 應用程式防火牆服務，採用國際知名 Networks Web Application Fi
 
 * 選擇欲使用的虛擬網路，接著點擊「**下一步：密碼>**」。
 :::info
-更多資訊，請參考[虛擬網路](https://www.twcc.ai/doc?page=virtual_network)
+更多資訊，請參考[虛擬網路](/docs/user-guides/twcc/vcs/vnw.md)
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_21aa40489b432d0f9ebf92f0d17878bc.png)

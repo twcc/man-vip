@@ -26,32 +26,33 @@ TWCC 虛擬磁碟加密可保護用戶資料安全，以符合組織所需的安
 
 ### 建立加密磁碟
 
-- 您可以在[建立虛擬運算個體](../create/create-instances.md)時，於儲存頁建立加密資料磁碟，可選擇 HDD 加密，或 SSD 加密磁碟，並設定磁碟容量。
+- 您可以在[建立虛擬運算個體](/docs/user-guides/twcc/vcs/instances/create-instances)時，於儲存頁建立加密資料磁碟，可選擇 HDD 加密，或 SSD 加密磁碟，並設定磁碟容量。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cf9fc17017c6637a459907a36a787297.png)
   
-- 或是於虛擬磁碟管理頁建立加密磁碟，再將磁碟[連結至虛擬運算個體](./view-attach-delete-disks.md#連結至虛擬運算個體)。
+- 或是於虛擬磁碟管理頁建立加密磁碟，再將磁碟[連結至虛擬運算個體](/user-guides/twcc/vcs/vds/data-disks/details/view-attach-delete-data-disk.md#連結至虛擬運算個體)。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_71e884dbfb16fc5c694c477d0847b305.png)
 
 
 :::info
 建立完成，參考下方文件將磁碟初始化後即可使用：
-- [<ins>初始化磁碟- Linux</ins>](../../tutorials/data-disk-init-linux.md)
-- [<ins>初始化磁碟- Windows</ins>](../../tutorials/data-disk-init-windows.md)
+- [<ins>初始化磁碟- Linux</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-zh)
+- [<ins>初始化磁碟- Windows</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-zh)
 :::
 
 <br/>
 
 ### 將舊磁碟資料搬移至加密磁碟
 
-若您想將無加密磁碟升級為安全性較高的加密磁碟，請參考[變更資料磁碟](../../tutorials/replace-data-disk.md)，在建立並連結加密磁碟後，將您的資料搬移至新磁碟，再刪除舊磁碟即可完成更換。
+若您想將無加密磁碟升級為安全性較高的加密磁碟，請參考[變更資料磁碟](https://man.twcc.ai/@twccdocs/howto-bss-replace-data-vol-zh)，在建立並連結加密磁碟後，將您的資料搬移至新磁碟，再刪除舊磁碟即可完成更換。
 
 <br/>
 
 ### 磁碟快照
 
-很抱歉，加密磁碟[快照](./disk-snapshots.md)功能目前不開放使用，待用戶體驗完整優化後將再行開放。
+很抱歉，加密[磁碟快照](/user-guides/twcc/vcs/vds/data-disks/details/create-data-disk-snapshot.md)功能目前不開放使用，待用戶體驗完整優化後將再行開放。
+
 
 <br/>
 

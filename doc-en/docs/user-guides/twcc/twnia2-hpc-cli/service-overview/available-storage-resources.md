@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # Available storage resources
 
-Compute nodes access [Hyper File System (HFS)](https://man.twcc.ai/@twccdocs/doc-hfs-main-en) via high-speed network. HFS is a petabyte (PB)-level storage space with a great user experience that provides high-throughput I/O for large files and quickly access and operates each data.
+Compute nodes access [Hyper File System (HFS)](/docs/user-guides/twcc/hfs) via high-speed network. HFS is a petabyte (PB)-level storage space with a great user experience that provides high-throughput I/O for large files and quickly access and operates each data.
 
 
 | Storage directory | Mount point | Free space capacity per user |
@@ -33,5 +33,5 @@ This space is designed for computing jobs, not for long-term storage. To maintai
 
 
 :::caution
-When using HFS, please note related [<ins>Space management policy</ins>](https://man.twcc.ai/@twccdocs/doc-hfs-main-en/%2F%40twccdocs%2Fterms-hfs-storage-mngmt-policies-en).
+When using HFS, please note related [<ins>Space management policy</ins>](https://man.twcc.ai/@twsdocs/guide-hfs-zh?type=view#HFS-%E7%A9%BA%E9%96%93%E7%AE%A1%E7%90%86%E6%94%BF%E7%AD%96).
 :::

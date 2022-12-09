@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # Manage data disk snapshots
 
-[資料磁碟建立](/data-disks/create/create-data-disks.md)完成後，您可以進入「**資料磁碟快照管理**」頁面進行以下操作。
+Once you finish [creating a data disk](/docs/user-guides/twcc/vcs/vds/create-disks) you can perform following actions on the **Data Disk Snapshot Management** page.
 
 ## View a snapshot
 
@@ -21,7 +21,7 @@ View snapshot information such as ID, name, created time, and creator, etc.
 
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-* Enter **Data Disk Snapshot Management** page, you will see all the snapshot information in the list, including **ID**, **snapshot name**, **source disk name**, **snapshot state**, **created time** and **creator**. The last created snapshot will be listed at the top. Click the column name to sort or change the sort by the column value.
+* Go to **Data Disk Snapshot Management** page, you will see all the snapshot information in the list, including **ID**, **snapshot name**, **source disk name**, **snapshot state**, **created time** and **creator**. The last created snapshot will be listed at the top. Click the column name to sort or change the sort by the column value.
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_34b936c59f84cfc3e8c1670e9800db45.png)

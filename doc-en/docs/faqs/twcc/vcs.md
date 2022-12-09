@@ -7,7 +7,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-vcs-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-vcs-zh'
 ---
 
-# TWCC FAQs | Virtual Compute Service (VCS)
+# FAQs | Virtual Compute Service (VCS)
 
 ## Connect to a VCS instance
 
@@ -424,7 +424,7 @@ TWCC does not limit the speed of the network within the virtual computing entity
 
 <div style={{height:10+'px'}}></div>
 
-### Auto Scaling
+## Auto Scaling
 
 <details>
 
@@ -497,5 +497,18 @@ The image sharing function only supports the creation of CPU VCS instances in th
 
 If you share images generated from VCS instances created before 2021/3/27, such images will take too long to share and will fail due to unoptimized performance.
 For sharing requests, please contact technical support:[isupport@twcc.ai](isupport@twcc.ai)。
+
+</details>
+
+<details>
+
+<summary> Q7. Why can't I connect to a Linux instance created with an image?</summary>
+Please use the following command to verify that the cloud-init package pre-installed in the image from the source entity has been removed:
+```bash
+python3 -c "from cloudinit import log"
+```
+
+- If the `ModuleNotFoundError: No module named 'cloudinit'` error message is returned, it means that the package has been deleted, which means that instances created from the image of that instance cannot be connected. Please create a new instance in TWCC, reinstall the required packages, and then create an image file for use **and be careful not to delete the cloud-init package**.
+- If you confirm that cloud-init has not been deleted, but you still cannot connect, please contact technical support:<a href = "mailto: isupport@twcc.ai">isupport@twcc.ai</a>。
 
 </details>

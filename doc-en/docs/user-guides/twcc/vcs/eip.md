@@ -16,7 +16,7 @@ TWCC Elastic IP supports IPv4 public IP, which allows you to assign public IP to
 
 <br/>
 
-## Elastic IP Specifications
+## Elastic IP specifications
 
 You can assign static IP or floating IP to the resources:
 - **Static IP**: Once subscribed, the resource becomes exclusive to the project until you stop subscribing, and can be freely assigned to different resources of the project.
@@ -28,7 +28,7 @@ There is no guarantee that you will get the same IP when the resource is assigne
 
 <br/>
 
-## Elastic IP Subscription Policy
+## Elastic IP subscription policies
 
 | Specifications | Subscription | Per Plan Quota Cap | Billing and Pricing |
 | -------- | -------- | -------- | -------- |
@@ -43,15 +43,15 @@ There is no guarantee that you will get the same IP when the resource is assigne
 
 <br/>
 
-## Manage Elastic IP
+## Manage Elastic IPs
 
-### Subscribe, unsubscribe to static IP
+### Subscribe and unsubscribe to static IP
 
-Before starting to use Static IP, please subscribe to the Static IP.
+ Subscribe Before you use static IPs.
 
 :::info
-- Before subscribing to a static IP, please make sure your project has a default virtual network in place, otherwise the subscription will fail.
-- Floating IPs are managed centrally by TWCC and you can only view their status and associated resources on the management page.
+- Before subscribing to a static IP, please ensure your project has a [default virtual network](https://man.twcc.ai/@twccdocs/howto-vnw-create-default-network-en), otherwise, the subscription will fail.
+- Floating IPs are managed by TWCC and you can only view their status and associated resources on the management page.
 :::
 
 Click **Virtual Compute Services (VCS)** on the home page > click **Elastic IP** on the left > On the **Elastic IP Management** page, click **+Subscribe static IP** on the top.
@@ -73,33 +73,33 @@ You can only subscribe 10 times a day.
 <br/>
 
 
-### Assign elastic IP to resources
+### Assign Elastic IPs to resources
 
 You can assign elastic IP to a VCS instance or Load Balancer in the following ways.
 
 <br/>
 
-#### VCS instances
+#### Assign to a VCS instance
 
-1. [While creating VCS instances](https://man.twcc.vip/en/docs/vcs/user-guides/creation/vcs-instances):
+1. [Assign while creating a VCS instance](/docs/user-guides/twcc/vcs/instances/create-instances):
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8c896c79f9bea20564576502d637833a.png)
 
-2. After creating the VCS instance, enter the VCS instance details page and assign public IP.
+2. Assign a public IP on the VCS instance details page after creating VCS instance creation:
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_677478ed507a27f03a9ab277b6d391dd.png)
 
 :::caution
 After a VCS instance is **stopped**, the floating IP will be released back to the resource pool and a new floating IP will be acquired after the instance is started again.<br/>
-For more information about the impact of VCS instance actions on floating IP, please refer to [<ins>Instance Management: stop/start/shutdown/restart/delete</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/management-and-monitoring/management).
+For more information about the impact of VCS instance actions on floating IP, please refer to [<ins>Stop/start/shutdown/restart/delete an instance</ins>](/user-guides/twcc/vcs/instances/details/stop-start-reboor-shutdown-delete-instance.md).
 :::
 
 <br/>
 
 
-#### Load Balancer
+#### Assign to a load balancer
 
-1. [While creating Load Balancers](https://man.twcc.vip/en/docs/vcs/user-guides/networking/load-balancing#create-load-balancers):
+1. [Assign while creating a load balancer](/user-guides/twcc/vcs/lbs.md):
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ecc993fd71e9657b662501aefdc8958b.png)
 
@@ -110,7 +110,7 @@ For more information about the impact of VCS instance actions on floating IP, pl
 <br/>
 
 
-### Detach elastic IP from resources
+### Detach Elastic IPs from resources
 
 - Static IP: You can detach the assigned IPs from the **VCS Instance Details** page or **Load Balancer Details** page.
 

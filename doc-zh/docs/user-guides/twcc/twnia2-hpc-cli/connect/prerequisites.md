@@ -27,10 +27,10 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-prere
 
 ## 註冊帳號
 
-請至 [TWCC](https://www.twcc.ai/) 使用者網站註冊並設定您的 TWCC 使用者網站帳號/密碼、主機帳號/密碼。步驟可參考[註冊 TWCC 帳號](https://www.twcc.ai/doc?page=register_account)。 
+請至 [TWS 官方網站](https://tws.twcc.ai/) 註冊並設定您的 TWCC 入口網站帳號/密碼、主機帳號/密碼。步驟可參考[註冊 TWS 會員](/user-guides/tws-member-center/manage-member-accounts/sign-up-for-tws.md)。 
 
 :::info
-TWCC 使用者網站、TWCC CLI 操作有依使用者身分區分不同使用權限，**台灣杉二號 (命令列介面) 服務則無角色權限之區分**。更多資訊，請參考[<ins>使用者角色權限比較</ins>](/docs/member/concepts/overview.md)。
+TWCC 使用者網站、TWCC CLI 操作有依使用者身分區分不同使用權限，**台灣杉二號 (命令列介面) 服務則無角色權限之區分**。更多資訊，請參考[<ins>使用者角色權限比較</ins>](https://man.twcc.ai/@twsdocs/role-main-zh)。
 :::
 
 ## 主機帳號、密碼、OTP 認證碼
@@ -41,10 +41,10 @@ TWCC 使用者網站、TWCC CLI 操作有依使用者身分區分不同使用權
 - 密碼：「**主機密碼**」、「**OTP 認證碼**」
 
 :::info
-1. 若忘記**主機帳號**或**主機密碼**，請參考：[<ins>查詢主機帳密與 OTP 認證碼</ins>](/docs/member/user-guides/member-key-quota/hpc-account-password-otp.md)。
+1. 若忘記**主機帳號**或**主機密碼**，請參考：[<ins>查詢主機帳密與 OTP 認證碼</ins>](/docs/user-guides/tws-member-center/system-account-password-otp)。
 2. **OTP (One Time Password) 認證碼**
     - 為一次性密碼，又稱為動態密碼。具高度安全性，30 秒更新一次，保障用戶存取安全性，確保達到 2FA (Two-Factor Authentication)。
-    - 查詢方式，請參考：[<ins>查詢主機帳密與 OTP 認證碼</ins>](/docs/member/user-guides/member-key-quota/hpc-account-password-otp.md)。
+    - 查詢方式，請參考：[<ins>查詢主機帳密與 OTP 認證碼</ins>](/docs/user-guides/tws-member-center/system-account-password-otp)。
 :::
 
 ## 連線工具

@@ -6,7 +6,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-cli-deploy-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-cli-deploy-zh'
 ---
 
-# TWCC FAQs | TWCC CLI: Deploy the environment
+# FAQs | TWCC CLI: Deploy the environment
 
 <details>
 
@@ -30,7 +30,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-cli-deploy-zh'
 
 <summary> Q3. How to fix credential error?</summary>
 
-When credential error occurs, please run the following command to clear credential file, then [<ins>enter TWCC CLI </ins>](https://man.twcc.ai/@twccdocs/doc-cli-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-signin-en) again.
+When credential error occurs, please run the following command to clear credential file, then [<ins>sign into TWCC CLI </ins>](https://man.twcc.ai/@twccdocs/guide-cli-signin-zh) again.
 
 ```bash
 rm -rf $HOME/.twcc_data

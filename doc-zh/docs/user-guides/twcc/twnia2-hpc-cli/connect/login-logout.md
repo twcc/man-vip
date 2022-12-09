@@ -113,9 +113,9 @@ Windows 用戶請下載 SSH client 軟體 (例：[PuTTY](https://www.chiark.gree
 <br/>
 
 :::info
-1. [<ins>忘記主機帳號？</ins>](/docs/member/user-guides/member-key-quota/hpc-account-password-otp.md#查詢主機帳號)
-2. [<ins>忘記密碼？</ins>](/docs/member/user-guides/member-key-quota/hpc-account-password-otp.md#重置主機密碼)
-3. [<ins>如何取得 OTP？</ins>](/docs/member/user-guides/member-key-quota/hpc-account-password-otp.md#取得-otp-認證碼)
+1. [<ins>忘記主機帳號？</ins>](/docs/user-guides/tws-member-center/system-account-password-otp#查詢主機帳號)
+2. [<ins>忘記密碼？</ins>](/docs/user-guides/tws-member-center/system-account-password-otp#重置主機密碼)
+3. [<ins>如何取得 OTP？</ins>](/docs/user-guides/tws-member-center/system-account-password-otp#取得-otp-認證碼)
 :::
 
 

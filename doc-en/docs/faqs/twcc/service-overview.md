@@ -7,7 +7,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-product-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-product-zh'
 ---
 
-# TWCC FAQs | Service overview
+# FAQs | Service overview
 
 <details>
 

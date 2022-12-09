@@ -58,7 +58,7 @@ import TWSLogo from '../static/img/TWS-Logo.svg';
   <tr>
     <td className="tg-3ze5" colspan="8"><ul style={{'list-style-type':'circle'}}>
     <li>服務項目包含開發型容器、任務型容器。</li><li>配備 8 個 NVIDIA® Tesla V100 GPU，加速人工智慧訓練、推論與高效能運算，支援 5120 個 CUDA 核心與 640 個 Tensor 核心，並支援 NVLink 進行 GPU 之間的資料傳輸，加速人工智慧訓練、推論與高效能運算。</li>
-    <li><a href="https://www.twcc.ai/intro/GPU"><span style={{'font-weight':'bold','color':'rgb(255, 72, 67)'}}>了解更多</span></a></li></ul></td>
+    <li><a href="/docs/user-guides/twcc/ccs-interactive-container"><span style={{'font-weight':'bold','color':'rgb(255, 72, 67)'}}>了解更多</span></a></li></ul></td>
   </tr>
   <tr>
     <td className="tg-9gig" style={{'color':'white'}}>容器類別</td>
@@ -160,7 +160,7 @@ import TWSLogo from '../static/img/TWS-Logo.svg';
     <td className="tg-3ze5" colspan="8"><ul style={{'list-style-type':'circle'}}>
     <li>服務類型包含 HPC 高速運算任務、台灣杉二號。&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;&emsp;&emsp;</li>
     <li>配備 NVIDIA®Tesla V100 GPU，加速人工智慧訓練、推論與高效能運算。</li>
-    <li><a href="https://www.twcc.ai/intro/HPC"><span style={{'font-family':'sans-serif , Microsoft JhengHei', 'font-weight':'bold', 'color':'rgb(255, 72, 67)'}}>了解更多</span></a></li></ul>
+    <li><a href="/docs/user-guides/twcc/hpc-job"><span style={{'font-family':'sans-serif , Microsoft JhengHei', 'font-weight':'bold', 'color':'rgb(255, 72, 67)'}}>了解更多</span></a></li></ul>
     </td>
   </tr>
   <tr>
@@ -227,7 +227,7 @@ import TWSLogo from '../static/img/TWS-Logo.svg';
     <li hidden><b>vgv 系列個體</b>配備 8 個 NVIDIA® Tesla V100 GPU，支援 5120 個 CUDA 核心與 640 個 Tensor 核心，每秒具 125 兆次浮點運算 (TOPS) 的推論效能，並支援 NVLink 進行 GPU 之間的資料傳輸，加速人工智慧訓練、推論與高效能運算。</li>
     <li>VCS 提供虛擬運算個體多種不同容量的系統磁碟。此外，您可使用虛擬磁碟服務，建立附加資料磁碟，自由彈性調配個體的儲存空間，也可建立儲存個體映像檔以備份與復原。費率請參考<a href="#虛擬磁碟服務-virtual-disk-service-vds"><ins>虛擬磁碟服務 (Virtual Disk Service, VDS)</ins></a>。</li>
     <li>可訂閱靜態 IP 或浮動 IP。費率請參考<a href="#彈性-ip-elastic-ip-eip"><ins>彈性 IP (Elastic IP, EIP)</ins></a>。</li>
-    <li><a href="https://www.twcc.ai/intro/VM"><span style={{'font-weight':'bold', 'color':'rgb(255, 72, 67)'}}>了解更多</span></a></li></ul></span></td>
+    <li><a href="/docs/user-guides/twcc/vcs/"><span style={{'font-weight':'bold', 'color':'rgb(255, 72, 67)'}}>了解更多</span></a></li></ul></span></td>
   </tr>
   <tr>
     <td className="tg-y29t" rowspan="2" style={{'color':'white'}}>個體系列</td>
@@ -532,7 +532,7 @@ import TWSLogo from '../static/img/TWS-Logo.svg';
     <td class="tg-3ze5" colspan="9"><ul style={{'list-style-type':'circle'}}>
     <li>透過網際網路存放和存取各種資料類型，安全並耐久。可獨立作為一般資料儲存空間，並適用於 TWCC 容器運算服務、高速運算服務的運算資料存放與傳輸。</li>
     <li>儲存定價已包含流量傳輸與檔案操作，無須另行支付。</li>
-    <li><a href="https://www.twcc.ai/intro/STORAGE"><span style={{'font-weight':'bold' , 'color':'rgb(255, 72, 67)'}}>了解更多</span></a></li></ul></td>
+    <li><a href="/docs/user-guides/twcc/cos"><span style={{'font-weight':'bold' , 'color':'rgb(255, 72, 67)'}}>了解更多</span></a></li></ul></td>
   </tr>
   <tr>
     <td class="tg-9gig" colspan="8" style={{'color':'white'}}>規格</td>
@@ -568,7 +568,7 @@ import TWSLogo from '../static/img/TWS-Logo.svg';
           <li>作為資料磁碟，最大可支援 16 TB 的儲存空間。</li>
           </ul></li>
       </ul>
-    <li><a href="https://www.twcc.ai/intro/STORAGE"><span style={{'font-weight':'bold' , 'color':'rgb(255, 72, 67)'}}>了解更多</span></a></li></ul></td>
+    <li><a href="/docs/user-guides/twcc/vcs/vds"><span style={{'font-weight':'bold' , 'color':'rgb(255, 72, 67)'}}>了解更多</span></a></li></ul></td>
   </tr>
 
   <tr>
@@ -608,7 +608,7 @@ import TWSLogo from '../static/img/TWS-Logo.svg';
       <li>加大空間者，提出申請後將立即生效，並會在計畫的可用額度進行扣款。</li>
       <li>減少空間者，僅提供申請一次 (每月)，減量設定則於下月一日生效。</li>
     </ul>
-  <li><a href="https://www.twcc.ai/intro/STORAGE"><span style={{'font-weight':'bold' , 'color':'rgb(255, 72, 67)'}}>了解更多</span></a></li></ul></td>
+  <li><a href="/docs/user-guides/twcc/hfs"><span style={{'font-weight':'bold' , 'color':'rgb(255, 72, 67)'}}>了解更多</span></a></li></ul></td>
 </tr>
 <tr>
   <td class="tg-9gig" colspan="7" style={{'color':'white'}}>儲存空間</td>
