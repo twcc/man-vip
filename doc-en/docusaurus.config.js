@@ -157,7 +157,7 @@ const config = {
       announcementBar: {
         id: "support_us",
         content:
-          'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSc3uAALuDF8nGkpF7VSM2BGZRWgh-SAdvz5X2IgcaTcrM1H2Q/viewform">this survey</a>',
+          'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSc3uAALuDF8nGkpF7VSM2BGZRWgh-SAdvz5X2IgcaTcrM1H2Q/viewform">this survey.</a></a>&ensp; We care what you think!',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: false,

@@ -7,7 +7,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-vcs-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-vcs-zh'
 ---
 
-# TWCC FAQs | 虛擬運算服務 (VCS)
+# FAQs | 虛擬運算服務 (VCS)
 
 ## 連線登入
 <details>
@@ -24,8 +24,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-vcs-zh'
 
 請檢查個體的安全性群組或防火牆規則是否阻擋連線，相關文件請參考：
 
-- [安全性群組](/docs/vcs/user-guides/security/security-group.md)
-- [基礎虛擬防火牆](/docs/vcs/user-guides/security/virtual-network-firewall.md)
+- [安全性群組](/docs/user-guides/twcc/vcs/security-group)
+- [基礎虛擬防火牆](/docs/user-guides/twcc/vcs/bvf)
 
 </details>
 
@@ -77,7 +77,7 @@ Use DNS no
 
 <summary> Q6. 如何使用帳號密碼連線 Linux 個體？</summary>
 
-請參考[此文件](/docs/vcs/tutorials/create-users.md)操作，即可使用帳號密碼連線 Linux 個體，可預防鑰匙對遺失或檔案毀損。
+請參考[此文件](https://man.twcc.ai/@twccdocs/howto-vcs-create-usr-linux-zh)操作，即可使用帳號密碼連線 Linux 個體，可預防鑰匙對遺失或檔案毀損。
 
 </details>
 
@@ -118,7 +118,7 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 <summary> Q9. 使用 Console 連線虛擬運算個體，是否有預設的密碼？</summary>
 
-無預設密碼，使用 Console 連線 Linux 個體前需先另外建立密碼，Windows 個體則輸入您建立個體時設定的密碼即可，請參考[快速除錯與維護工具：TWCC VCS Console](/docs/vcs/user-guides/manage-monitor/console)。
+無預設密碼，使用 Console 連線 Linux 個體前需先另外建立密碼，Windows 個體則輸入您建立個體時設定的密碼即可，請參考[快速除錯與維護工具：TWCC VCS Console](/docs/user-guides/twcc/vcs/instances/console)。
 
 </details>
 <div style={{height:10+'px'}}></div>
@@ -196,6 +196,31 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 3. 若有特殊需求，請洽客服人員。
      
 </details>
+
+<details>
+
+<summary>
+
+  Q7. 想了解 2022/11/25 前建立的虛擬運算個體系統磁碟收費方式？
+
+</summary>
+
+於 2022/11/25 前建立的系統磁碟提供 100 GB (含) 不收費的優惠，超過 100 GB 的系統磁碟比照虛擬磁碟 HDD 類型費率計費。
+     
+</details>
+
+<details>
+
+<summary>
+
+  Q8. 停止虛擬運算個體時，系統磁碟是否會計費？
+
+</summary>
+
+從使用者介面與指令停止虛擬運算個體時 (狀態為 `Stopped` )，將停止個體運算資源 (CPU/Memory) 用量計費，系統磁碟及資料磁碟則會為使用者保留並持續計費。
+若是在虛擬運算個體中執行關機指令 (個體狀態為 `Shutdown`)，系統將為此個體保留運算及儲存資源，因此仍維持計費。
+
+</details>
 <div style={{height:10+'px'}}></div>
 
 ## 資源配置與監控
@@ -204,7 +229,7 @@ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 <summary> Q1. 如何調整已建立好的虛擬運算個體規格？</summary>
 
-如選用的規格在建立後不符使用需求，需調整至較小規格或更大規格的個體，請參考文件：[HowTo：調整虛擬運算個體規格](/docs/vcs/user-guides/manage-monitor/resize-instances.md)。
+如選用的規格在建立後不符使用需求，需調整至較小規格或更大規格的個體，請參考文件：[HowTo：調整虛擬運算個體規格](https://man.twcc.ai/@twccdocs/howto-vcs-resize-instance-zh)。
 
 </details>
 
@@ -276,7 +301,7 @@ Q2. 對虛擬運算個體安裝套件或進行更新，出現`E: Could not get l
 <summary> Q2. 如何將虛擬運算中資料定期備份至雲端物件儲存 (COS)？ </summary>
 
 您可透過 TWCC-CLI 與 `crontab -e` 進行定時建立映像檔設定。
-- TWCC-CLI 使用詳情請參考 [4-3. 上傳檔案至儲存體](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fcli-overview-zh)。
+- TWCC-CLI 使用詳情請參考 [4-3. 上傳檔案至儲存體](/docs/user-guides/twcc/cos/upload-download-files-create-folders)。
 - `crontab -e` 請參考 [crontab guru](https://crontab.guru/) 或 [crontab(5) - Linux man page](https://linux.die.net/man/5/crontab)。
 
 </details>
@@ -297,10 +322,10 @@ Q2. 對虛擬運算個體安裝套件或進行更新，出現`E: Could not get l
 請參考以下兩種下載方式：
 
 1. 透過雲端物件儲存服務 (COS)傳入本機，此方法不僅能達到資料傳輸的目的，更可以將個體資料備份至 COS：
-    - **Step 1.** [將資料備份到 COS](/docs/cos/tutorials/backup-synchronize-restore.md)。
-    - **Step 2.** 至 TWCC 使用者網站 COS 管理介面[下載檔案](/docs/cos/user-guides/manage-objects/upload-download-files-create-folders.md)，如需要一次下載多個檔案，可搭配[第三方軟體](/docs/category/使用第三方軟體管理檔案)使用。
+    - **Step 1.** [將資料備份到 COS](https://man.twcc.ai/@twccdocs/cosbackup-zh)。
+    - **Step 2.** 至 TWCC 使用者網站 COS 管理介面[下載檔案](/docs/user-guides/twcc/cos/upload-download-files-create-folders)，如需要一次下載多個檔案，可搭配[第三方軟體](/docs/user-guides/twcc/cos/connection-info)使用。
 
-2. [使用 MobaXterm 連線虛擬運算個體](/docs/vcs/user-guides/connecting/linux/from-windows.md)，於頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
+2. [使用 MobaXterm 連線虛擬運算個體](/docs/user-guides/twcc/vcs/connect-to-linux-instance)，於頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
 
 </details>
 
@@ -309,11 +334,11 @@ Q2. 對虛擬運算個體安裝套件或進行更新，出現`E: Could not get l
 <summary> Q5.如何將本機內的資料上傳至虛擬運算個體？</summary>
 
 請參考以下兩種上傳方式：
-1. 透過雲端物件儲存服務 (COS)
-    - **Step 1.** 將本機檔案[上傳至雲端物件儲存服務 (COS)](/docs/cos/user-guides/manage-objects/upload-download-files-create-folders.md)
-    - **Step 2.** [連線進入虛擬運算個體](/docs/vcs/user-guides/connecting/prerequisites.md)
-    - **Step 3.** 透過內建之 TWCC-CLI 工具[將 COS 檔案下載到指定位置](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fcli-overview-zh)。
-3. [使用 MobaXterm 連線虛擬運算個體](/docs/vcs/user-guides/connecting/linux/from-windows.md)，於頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
+1. 透過雲端物件儲存服務 (COS)傳入本機，此方法不僅能達到資料傳輸的目的，更可以將個體資料備份至 COS：
+    - **Step 1.** [將資料備份到 COS](https://man.twcc.ai/@twccdocs/cosbackup-zh)。
+    - **Step 2.** 至 TWCC 使用者網站 COS 管理介面[下載檔案](/docs/user-guides/twcc/cos/upload-download-files-create-folders)，如需要一次下載多個檔案，可搭配[第三方軟體](/docs/user-guides/twcc/cos/connection-info)使用。
+
+2. [使用 MobaXterm 連線虛擬運算個體](/docs/user-guides/twcc/vcs/connect-to-linux-instance)，於頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
 
 </details>
 <div style={{height:10+'px'}}></div>
@@ -332,7 +357,7 @@ Q2. 對虛擬運算個體安裝套件或進行更新，出現`E: Could not get l
 
 停止虛擬運算個體後，浮動 IP (floating IP) 將會釋放回資源池，個體啟動後，將取得新的浮動 IP。
 
-若您的使用情境適用固定 IP，建議您訂閱並使用靜態 IP (static IP)。請參考 [彈性 IP ](/docs/vcs/user-guides/networking/elastic-ip.md) 了解更多。
+若您的使用情境適用固定 IP，建議您訂閱並使用靜態 IP (static IP)。請參考 [彈性 IP ](/docs/user-guides/twcc/vcs/eip) 了解更多。
 
 </details>
 
@@ -342,7 +367,7 @@ Q2. 對虛擬運算個體安裝套件或進行更新，出現`E: Could not get l
 
 浮動 IP 額度使用完後，您可以持續建立虛擬運算個體，但無法配置浮動 IP。若需要額外的 IP，請您訂閱靜態 IP (static IP) 使用。若有特殊需求，請洽客服人員。
 
-請參考 [彈性 IP 訂閱政策](/docs/vcs/user-guides/networking/elastic-ip.md#彈性-ip-訂閱政策) 了解更多。
+請參考 [彈性 IP 訂閱政策](/docs/user-guides/twcc/vcs/eip#彈性-ip-訂閱政策) 了解更多。
 
 </details>
 
@@ -374,7 +399,7 @@ Q2. 對虛擬運算個體安裝套件或進行更新，出現`E: Could not get l
 
 若有啟用基礎虛擬網路防火牆，但不清楚規則是否設定正確，我們建議您先把防火牆關閉，並再次嘗試連線。
 
-有關基礎虛擬網路防火牆的設定，請參考[此文件](/docs/vcs/user-guides/security/virtual-network-firewall.md)，或洽詢技術支援：[isupport@twcc.ai](isupport@twcc.ai)。
+有關基礎虛擬網路防火牆的設定，請參考[此文件](/docs/user-guides/twcc/vcs/bvf)，或洽詢技術支援：[isupport@twcc.ai](isupport@twcc.ai)。
 
 </details>
 
@@ -384,7 +409,7 @@ Q2. 對虛擬運算個體安裝套件或進行更新，出現`E: Could not get l
 
 - Linux 個體預設開啟的埠為： 22、443
 - Windows 個體預設開啟的埠為： 22、443、9833
-  如需開啟額外的埠，請在安全性群組處進行設定，設定方法與步驟請參考[此文件](/docs/vcs/user-guides/security/security-group.md)。
+  如需開啟額外的埠，請在安全性群組處進行設定，設定方法與步驟請參考[此文件](/docs/user-guides/twcc/vcs/security-group)。
 
 </details>
 
@@ -413,7 +438,7 @@ TWCC 沒有對虛擬運算個體內的網速進行限制，如果您發現傳輸
 </details>
 <div style={{height:10+'px'}}></div>
 
-### Auto Scaling
+## Auto Scaling
 
 <details>
 
@@ -506,5 +531,23 @@ python3 -c "from cloudinit import log"
 
 - 若回傳 `ModuleNotFoundError: No module named 'cloudinit'` 錯誤訊息表示套件已刪除，導致以此個體製作的映像檔所建立的個體無法連線，請您於 TWCC 重建立一個體，重新安裝設定所需套件，再製作映像檔使用，**並請留意勿刪除 cloud-init 套件**。
 - 若確認無刪除 cloud-init，但仍無法連線，請洽詢技術支援：<a href = "mailto: isupport@twcc.ai">isupport@twcc.ai</a>。
+
+</details>
+
+<details>
+
+<summary> Q8. 使用客製化映像檔建立虛擬運算個體時，系統碟容量是否有限制？</summary>
+
+
+使用客製化映像檔建立虛擬運算個體，只能選擇大於或是等於映像檔大小的系統磁碟容量。
+
+</details>
+
+<details>
+
+<summary> Q9. 大容量系統磁碟映像檔是否可以分享到其他專案使用？</summary>
+
+
+目前映像檔分享功能僅支援 100 GB 系統磁碟，建議您先使用 100 GB 系統磁碟建立映像檔，將映像檔分享到目的專案後，再使用該映像檔建立較大系統磁碟容量的虛擬運算個體。
 
 </details>

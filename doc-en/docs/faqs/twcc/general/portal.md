@@ -6,7 +6,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-portal-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-portal-zh'
 ---
 
-# TWCC FAQs | Portal
+# FAQs | TWCC Portal
 
 <details>
 
@@ -44,7 +44,7 @@ If you enter the password incorrectly for 3 consecutive times, you will not be a
 
 <summary> Q4. What is the difference between Tenant Admin and Tenant User in using TWCC services?</summary>
 
-The differences between Tenant Admin and Tenant User are role permissions, please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-overview-en) for the differences between the two roles.
+The differences between Tenant Admin and Tenant User are role permissions, please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/role-main-en) for the differences between the two roles.
 
 </details>
 
@@ -53,7 +53,7 @@ The differences between Tenant Admin and Tenant User are role permissions, pleas
 
 <summary> Q5. How to check the limit of GPU usage of the project?</summary>
 
-Please refer to "Quota" of [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-service-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2FHJYrLYukr%3Ftype%3Dview%23%25E8%25B3%2587%25E6%25BA%2590%25E9%2585%258D%25E9%25A1%258D%25E7%25AE%25A1%25E7%2590%2586).
+Please refer to "Quota" of [<ins>this document</ins>](/user-guides/twcc/general/manage-quota.md).
 
 </details>
 

@@ -15,7 +15,7 @@ After a **data disk** is created, you can view the disk information, attach the 
 (*※ System disk currently does not support the following management functions*.)
 
 :::info
-For the differences between Tenant Admins and Tenant Users using VCS instance, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-storage-en#%E8%99%9B%E6%93%AC%E7%A3%81%E7%A2%9F%E6%9C%8D%E5%8B%99).
+For the differences between Tenant Admins and Tenant Users using VCS instance, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twsdocs/role-main-en).
 :::
 
 
@@ -113,19 +113,19 @@ The drop-down list only displays VCS instances that can be attached with data di
 <br/>
 
 
-## Detach from VCS instances
+## Detach from a VCS instance
 
 To delete a data disk or attach it to another VCS instance, please detach it from the original VCS instance before performing other operations.
 
 
-For detailed steps of unmounting and detaching data disks, please refer to [Detach data disks](https://man.twcc.ai/@twccdocs/vcs-vds-guide-detach-data-disk-en).
+For detailed steps of unmounting and detaching data disks, please refer to [Detach a data disk](/user-guides/twcc/vcs/vds/data-disks/details/detach-data-disk.md).
 
 
 <br/>
 
 
 
-## Delete data disks
+## Delete a data disk
 
 You can delete a disk when it is no longer in use. Once deleted, <ins>**it will not be billed anymore**</ins>.
 

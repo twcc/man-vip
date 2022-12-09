@@ -9,7 +9,19 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-vds-manage-ins
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Manage images
+# VCS instance images
+
+VCS instance images can preserve the state of an instance and the system disk with your operating system. We recommend creating an image for your instance before performing a significant system upgrade or installing special software so that you can roll back to a certain time when needed.
+
+:::info
+
+1. **After deleting a VCS instance, the data in the system disk will disappear. To back up the system disk, please refer to [create an image](/user-guides/twcc/vcs/instances/details/create-image.md) to create an image for the instance before deleting it.**
+2. The size of the image is the same as the size of the system disk you selected to create your virtual instance. After the image been created, it will be billed at the virtual disk (HDD) rate.
+3. For the difference between Tenant Admin and Tenant User for using VCS instance, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en).
+
+:::
+
+## Manage images
 
 
 On the **VCS Instance Image Management** page, you can manage the images created by your project and those shared from other projects.
@@ -94,7 +106,7 @@ Also, you can copy instances from an old project to a new project using this fea
 
 **Share images**
 
-* After entering the **Image Management** page, select an image file, click the menu button <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> on the right, and then select **Share**.
+* On the **Image Management** page, select an image file, click the menu button <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> on the right, and then select **Share**.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dc4b70804c2ebccc80ee920eceb5450e.png)
 

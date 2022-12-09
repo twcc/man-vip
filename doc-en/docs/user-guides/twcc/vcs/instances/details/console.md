@@ -11,22 +11,22 @@ import TabItem from '@theme/TabItem';
 
 # Quick debug and maintenance tool: TWCC VCS Console
 
-TWCC Virtual Compute Service (VCS) provides a Console that allows you to quickly connect to your VCS instance through your browser for debugging, setting and maintenance without having to install Client software locally and set up a public IP in advance. The connection is encrypted with TLS 1.2 to ensure a secure connection and protect your sensitive information.
+TWCC Virtual Compute Service (VCS) provides a Console that allows you to quickly connect to your VCS instance through your browser for debugging, setting and maintenance without having to install client software locally and set up a public IP in advance. The connection is encrypted with TLS 1.2 to ensure a secure connection and protect your sensitive information.
 
 <br/>
 
-## Open Console and connect to VCS instance
+## Open VCS Console and connect to your instance
 
-### Step 1. Enter Details page
+### Step 1. Go to VCS instance details page
 
-After creating VCS instance, click the instance and enter "**VCS Instance Details**" page.
+After creating your VCS instance, click the instance and enter **VCS Instance Details** page.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8b971dc1af91154b8a8492411b5fe6d7.png)
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db9d8f9e2f69436f3cfc1d1de1b38f4f.png)
 
 :::info
-For the first time using Console, please use the key to [**connect to instance via SSH**](https://man.twcc.vip/en/docs/vcs/user-guides/connection/linux/from-windows) and use the following command to set the login password so that you can use the account password to connect to the instance via the Console later.
+For the first time using Console, please [**connect to instance via SSH**](/docs/user-guides/twcc/vcs/connect-to-linux-instance) using your key and use the following command to set the login password so that you can use the account password to connect to the instance via the Console later.
 
 ```bash
 sudo passwd ubuntu             # Use Ubuntu as an example to set the login password
@@ -34,7 +34,7 @@ sudo passwd ubuntu             # Use Ubuntu as an example to set the login passw
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a8dc2923f95519849ab536fc51f9a3e7.png)
 
-After the account is created, if there is no need for connecting to the Internet, you can detach the public IP to reduce the cost of resources.
+After the account is created, you can detach the public IP to reduce the cost of resources if there is no need to connect to the Internet.
 :::
 
 :::caution
@@ -43,9 +43,9 @@ To protect the security of your virtual computing, please set the login password
 
 <br/>
 
-## Step 2. Open Console
+## Step 2. Open VCS Console
 
-- Scroll down the page to the "**Networks and Connection**" section and click on "**Connect**" to open the Console.
+- Scroll down the page to the **Networks and Connection** section and click on **Connect** to open the Console.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ab961195932f688d806b1f86c871ebaa.png)
 
@@ -53,12 +53,12 @@ To protect the security of your virtual computing, please set the login password
 
 :::caution
 - Please make sure to log out of the operating system after the work session or before closing the Console to ensure the security of the instance.
-- To avoid security concerns, the connection validity is set to 10 minutes (Console already opened is not subject to this limit), and after the connection expires, please click on "**Update Link**" to get a new connection.
+- To avoid security concerns, the connection validity is set to 10 minutes (Console already opened is not subject to this limit), and after the connection expires, please click on **Update Link** to get a new connection.
 :::
 
 <br/>
 
-## Step 3. Enter the connection information and complete the connection
+## Step 3. Complete the connection settings
 
 - **Linux instance**: Enter your account (ubuntu or centos) and password to connect to the instance.
 

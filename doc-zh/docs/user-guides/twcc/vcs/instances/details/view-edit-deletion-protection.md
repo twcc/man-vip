@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 虛擬運算個體建立後，您可透過以下方式檢視個體資料或編輯個體描述。
 
 :::info
-租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/compute.md#虛擬運算服務)。
+租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twsdocs/role-main-zh)。
 :::
 
 <br/>
@@ -40,7 +40,7 @@ import TabItem from '@theme/TabItem';
 
 - 進入詳細資料配置頁面，可檢視更詳細的個體資訊：**基本資訊**、**詳細規格**、**網路與連線**、**儲存資訊**。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4a18fbcd218e90d9f21b051f2ed08122.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_126e494e4cf6ce40442281d4aa479990.png)
 
 </TabItem>
 

@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 TWCC portal allows you to view the monitoring information of Virtual Compute Service (VCS) instances, including **CPU Utilization**, **Memory Utilization**, **Disk Read/Write rate** and **Network output rate**.
 
 :::info
-- For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務).
+- For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twsdocs/role-main-zh).
 - TWCC CLI currently does not support this feature.
 :::
 
@@ -22,29 +22,29 @@ TWCC portal allows you to view the monitoring information of Virtual Compute Ser
 <br/>
 
 
-## Basic View
+## Monitoring metrics
 
 - Go to the **VCS Instance Management** page, and select an instance.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b9409e6342c46db7233e45ca91f106d3.png)
 
-- Select the **Monitoring** tab on the **VCS Instance Details** page to view the instance monitoring information:
-    - **CPU Utilization(%)**: If the CPU Utilization Rate is displayed as 2 (200%), it means that 2 CPU resources are used up.
-    - **Memory Utilization(MB)**: Memory usage, in Megabytes (MB).
-    - **Disk Reads(B/s)**: View the read/write rate of each disk in Bytes/second (B/s).
-    - **Network Out(B)**: The network traffic of the output of the VCS instance, which is a combination of east-west traffic (horizontal transmission between VCS instances) and north-south traffic (traffic between the client and the VCS instance). The unit is Bytes (B).
+- Select the **Monitoring** tab on the **VCS Instance Details** page to view the instance monitoring metrics:
+    - **CPU Utilization(%)**: CPU usage over the time period For example, 2 (200%) means 2 CPUs are used up.
+    - **Memory Utilization(MB)**: memory usage, in Megabytes (MB).
+    - **Disk Reads(B/s)**: The read/write rate of each disk in Bytes/second (B/s).
+    - **Network Out(B)**: The external network traffic of the VCS instance, a combination of east-west traffic (horizontal transmission between VCS instances) and north-south traffic (traffic between the client and the VCS instance). The unit is Bytes (B).
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_97cfe20cb58d1cb95797b4a3a707b1bc.png)
 
 :::info
-Network traffic on TWCC portal includes the sum of east-west traffic and north-south traffic, while the quota and resource usage records in the [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.vip/en/docs/member/user-guides/member-key-quota/enter-member-center) only show north-south traffic.
+Network traffic on TWCC portal includes the sum of east-west traffic and north-south traffic, while the quota and resource usage records in the [<ins>Member Center <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](/docs/member/user-guides/member-key-quota/go-to-member-center.md) only show north-south traffic.
 :::
 
 
 <br/>
 
 
-## Advanced operation
+## Monitoring settings and chart download
 
 - Move the cursor to the green dot to get the actual value.
 - Move the cursor to any monitoring chart, click the <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i> icon to download the monitoring chart file (`.png`) .

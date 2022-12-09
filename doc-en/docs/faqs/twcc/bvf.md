@@ -7,7 +7,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-bvf-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-bvf-zh'
 ---
 
-# TWCC FAQs | Basic Virtual Firewall (BVF)
+# FAQs | Basic Virtual Firewall (BVF)
 
 <details>
 

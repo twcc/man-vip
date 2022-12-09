@@ -7,6 +7,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-twnia2-prere
 ---
 
 # Prerequisites
+
 This guide shows you how to connect to Taiwania 2 (HPC CLI) **Login node** and **Data transfer node**.
 
  
@@ -25,7 +26,7 @@ This guide shows you how to connect to Taiwania 2 (HPC CLI) **Login node** and *
 Before login to Taiwania 2 (HPC CLI) environment, you need to prepare the data and tools below.
 
 ## Sign up for a TWS account
-Please go to [TWS official website](https://tws.twcc.ai/) to sign up and set your TWCC user account and password, and also system account and system password. Refer to [Sign up for a TWS account](/user-guides/tws-member-center/sign-up-for-tws.md) for more information. 
+Please go to [TWS official website](https://tws.twcc.ai/) to sign up and set your TWCC user account and password, and also system account and system password. Refer to [Sign up for a TWS account](/user-guides/tws-member-center/manage-member-accounts/sign-up-for-tws.md) for more information. 
 
 :::info
 TWCC portal and TWCC CLI operation will be different according to the users and it's permissions. On the other hand, **Taiwania 2 (HPC CLI) service doesn't have difference between users**. Refer to [<ins>Roles and permission</ins>](https://man.twcc.ai/@twccdocs/role-main-en) for more information.

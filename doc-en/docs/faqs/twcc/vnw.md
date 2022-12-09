@@ -7,7 +7,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-vnw-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-vnw-zh'
 ---
 
-# TWCC FAQs | Virtual Network (VNW)
+# FAQs | Virtual Network (VNW)
 
 <details>
 

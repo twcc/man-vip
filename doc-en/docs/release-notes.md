@@ -6,6 +6,14 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/UserPortalHistory_
 
 # TWCC Release Notes
 ## Year 2022
+## Year 2022
+### Dec 09, 2022
+- **UI**
+    - <font style={{'background-color':'#27A5BD','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}> <b>&nbsp;Feature&nbsp;</b></font></font>&ensp;<font style={{'background-color':'#008ad8','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}><b>&nbsp;Enterprise&nbsp;</b></font></font>&ensp; <a href="https://docs.twcc.ai/">TWCC Enterprise Documentation</a> officially released! <a href="https://tws.twcc.ai/">Sign into TWCC</a> and check the new doc links!  
+- **VCS**
+    - <font style={{'background-color':'#FF5722','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp;Added the retry button for sharing images. 
+- **CCS**
+    - <font style={{'background-color':'#2A56C6','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}> <b>&nbsp;Fix&nbsp;</b></font></font> &ensp; Fixed the doc link on Scheduled Container Management (v1) page.
 ### Nov 25, 2022 (version: b97c447e)
 - **AI<sup>2</sup>CS**
     - <font style={{'background-color':'#27A5BD','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}> <b>&nbsp;Feature&nbsp;</b></font></font>&ensp;<font style={{'background-color':'#FF0000','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}><b>&nbsp;Academic&nbsp;</b></font></font>&ensp;

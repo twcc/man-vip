@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 # Key pairs
 
-Key pairs are the credentials for connecting to VCS Linux instances. Before creating an instance, a key pair must be obtained or created before the instance functions can be used.
+Key pairs are the credentials for connecting to VCS Linux instances. Before creating an instance, a key pair must be obtained or created before accessing the instance after creation.
 
 
 <br/>
@@ -34,7 +34,7 @@ TWCC is not responsible for recording and managing your key pairs. Please be sur
 
 **1. Create when creating a VCS instance**
 
-- You may create a key pair on the **Key Pair** tab when you [create a VCS instance](https://man.twcc.ai/@twccdocs/guide-vcs-create-zh).
+- You may create a key pair on the **Key Pair** tab when you [create a VCS instance](/docs/user-guides/twcc/vcs/instances/create-instances).
 
 **2. Create on the Key Pair Management page**
 

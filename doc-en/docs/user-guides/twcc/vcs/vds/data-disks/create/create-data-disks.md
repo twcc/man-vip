@@ -21,10 +21,9 @@ If the storage space of your VCS instance is insufficient, you can create data d
 
 **1. Create a data disk when creating a VCS instance**
 
-- You can create a data disk when creating your [<ins>VCS instance</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/creation/vcs-instances) on the **STORAGE** tab. (Only 1 disk can be created and only type and size can be specified, but no name can be assigned.)
+- You can create a data disk when creating your [<ins>VCS instance</ins>](/docs/user-guides/twcc/vcs/instances/create-instances) on the **STORAGE** tab. (Only 1 disk can be created and only type and size can be specified, but no name can be assigned.)
 
 **2. Create a data disk on Data Disk Management page**
-
 
 If you need to create more disks, please follow the instructions below:
 

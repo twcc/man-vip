@@ -15,14 +15,14 @@ import TabItem from '@theme/TabItem';
 虛擬網路服務主要是為虛擬運算個體提供可自訂的虛擬網路功能。本功能完整存取權限提供給租戶管理員使用，租戶使用者僅具讀取權限。
 
 :::info
-租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/compute#虛擬運算服務)。
+租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twsdocs/role-main-zh)。
 :::
 
 <br/>
 
 ## 建立預設虛擬網路
 
-首次使用 TWCC 所提供的虛擬運算服務，必須先在虛擬網路服務先建立**預設虛擬網路 (Default network)**，才可以開始使用虛擬運算服務。建立步驟請參考：[建立預設虛擬網路](../../tutorials/create-default-network.md)。後續若有使用其它網段的需求，可參考下方[建立自訂虛擬網路](#建立自訂虛擬網路)。
+首次使用 TWCC 所提供的虛擬運算服務，必須先在虛擬網路服務先建立**預設虛擬網路 (Default network)**，才可以開始使用虛擬運算服務。建立步驟請參考：[建立預設虛擬網路](https://man.twcc.ai/@twccdocs/howto-vnw-create-default-network-zh)。後續若有使用其它網段的需求，可參考下方[建立自訂虛擬網路](#建立自訂虛擬網路)。
 
 <br/>
 

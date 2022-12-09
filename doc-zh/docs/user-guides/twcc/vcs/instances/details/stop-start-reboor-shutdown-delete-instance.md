@@ -15,11 +15,11 @@ import TabItem from '@theme/TabItem';
 您可以依需求與使用情境，對虛擬運算個體執行停止、啟動 (與開機)、重開機、關機、刪除之動作。
 
 :::info
-租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/compute.md#虛擬運算服務)。
+租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twsdocs/role-main-zh)。
 :::
 
 :::tip
-更多虛擬運算個體狀態轉換、**計費與否**、服務操作影響之資訊，請參考[<ins>虛擬運算個體生命週期</ins>](../../concepts/instance-lifecycle.md)。
+更多虛擬運算個體狀態轉換、**計費與否**、服務操作影響之資訊，請參考[<ins>虛擬運算個體生命週期</ins>](https://man.twcc.ai/@twccdocs/concept-vcs-lifecycle-zh)。
 :::
 
 <br/>
@@ -166,7 +166,7 @@ import TabItem from '@theme/TabItem';
 若要將個體永久刪除，不再使用，請刪除個體。
 
 其他刪除的注意事項：
-- 作業系統（開機）磁碟內的資料亦將永久刪除，若需保留可[建立個體映像檔](../backup/create-images.md)。
+- 作業系統（開機）磁碟內的資料亦將永久刪除，若需保留可[建立個體映像檔](/docs/user-guides/twcc/vcs/instances/details/create-image.md)。
 - 資料磁碟則會自動分離保留
 
 <Tabs>
@@ -211,5 +211,5 @@ twccli ls vcs
 
 :::info
 - 同一用戶一分鐘內僅能執行各 10 次建立、刪除虛擬運算個體。
-- 若已開啟「[<ins>刪除保護機制</ins>](./view-edit-deletion-protection.md#開啟關閉-刪除保護機制)」，將無法直接刪除資源，請您先關閉後再執行刪除。
+- 若已開啟「[<ins>刪除保護機制</ins>](/user-guides/twcc/vcs/instances/details/view-edit-deletion-protection.md#開啟關閉-刪除保護機制)」，將無法直接刪除資源，請您先關閉後再執行刪除。
 :::

@@ -5,143 +5,143 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/howto-ccs-migrate-conta
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-migrate-container-zh' 
 ---
 
-# TWCC CCS new Container Platform (v2)
+# TWCC CCS 新容器平台 (v2)
 
-## Container Platform Update Description
-
-TWCC has completed the update and integration of the CCS Container Computing Platform (from v1 to v2), upgrading the operating system and necessary packages, as well as fixing platform vulnerabilities to provide users with a more robust container platform.
-In the future, TWCC will rolling upgrade the platform and provide users with more convenient container features.
-
-## Please evaluate the v1 container for renewal
-
-As the new v2 platform has been launched to provide user container services, TWCC will phase out the v1 container platform. Please evaluate whether your using containers on the v1 platform need to be renewed, and remove or migrate them to help us accelerate the process of phasing out.
-
-- **v1 Container - No renewal requirement**: 
-Please delete the container to save your cost and help us speed up the process of removing the v1 platform.
-
-- **v1 Container - Renewal Required**: 
-Since certain container features are only available for v2 platform (please check out [TWCC Portal (VIP) Feature Adjustment Description](#twcc-portal-vip-feature-adjustment-description)), please refer to [How to migrate v1 container to v2 platform?](#how-to-migrate-v1-container-to-v2-platform) and migrate your containers to get full user experience.
-
-
-<!-- ## How to find whether a container is old or new?
-
-You can find out whether a container is built on the v1 or v2 platform by the build time or the TWCC portal site.
-
-- **Build time**
-    - v1 Container: container bulit before 2022/9/x<sup>[1]</sup>
-    - v2 Container: container bulit after 2022/9/x<sup>[1]</sup>
-
-:::info
-<sup>[1]</sup> To VIP user who have migrated their containers: 2022/9/xx is the time to separate the old and new containers.
+:::caution Under construction
+The English version of this document is under construction and will be available soon.
 :::
 
-- **Portal - Container info page**
-    - v1 Container: Show (v1) version
-    > ![](https://i.imgur.com/ZRjInxR.png)
+## 容器平台更新說明
+
+TWCC 已完成 CCS 容器運算平台更新與整合作業 (平台版本由 v1 升級至 v2)，升級作業系統以及必要套件，同時也修正平台漏洞，提供用戶更穩健的容器平台。未來 TWCC 將滾動式升級平台，並提供用戶更多便利的容器功能，請您敬請期待。
+
+
+## 敬請評估 v1 容器是否續用？
+
+由於 v2 新平台已上線提供用戶容器服務，TWCC 將汰除 v1 容器平台，敬請用戶協助評估您使用中並建立於 v1 平台的容器，是否需續用並進行刪除或遷移作業，協助我們加速汰除 v1 平台：
+
+- **v1 容器 - 無續用需求**：敬請您刪除容器，節省您的成本並協助我們加速 v1 舊平台汰除作業。
+- **v1 容器 - 有續用需求**：由於特定容器功能僅適用於 v2 平台 (請參考 [TWCC 入口網站 (VIP) 功能調整說明](#twcc-入口網站-vip-功能調整說明)，敬請您參考[如何將 v1 容器遷移至 v2 平台？](#如何將-v1-容器遷移至-v2-平台)，將容器遷移至 v2 平台，以獲得更完整的使用體驗。
+
+
+<!-- ## 如何判斷容器是舊是新？
+
+您可以透過建立時間或是 TWCC 入口網站判斷容器建立於 v1 版或是 v2 版平台：
+
+- **建立時間**：
+    - v1 舊容器：2022/9/x 前建立之容器<sup>[1]</sup>
+    - v2 新容器：2022/9/x 後建立之容器<sup>[1]</sup>
+
+:::info
+<sup>[1]</sup> 對於已先行遷移容器之 VIP 用戶：2022/9/xx 為新舊容器分隔時間。
+:::
+
+- **入口網站 - 容器詳細資料頁**：
+    - v1 舊容器：顯示 (v1) 版本
+    > ![](https://i.imgur.com/sVQR9w4.png)
     
-    > ![](https://i.imgur.com/MfSEW4N.png)
+    > ![](https://i.imgur.com/DQQ4mY3.png)
 
-    - v2 Container: No version is showed
+    - v2 新容器：無顯示版本
  -->
+ 
+ 
+## 如何將 v1 容器遷移至 v2 平台？
 
-## How to migrate v1 container to v2 platform?
+### 開發型容器
 
-TWCC offers VIP users priority to migrate v1 containers via https://vip.twcc.ai, please use your account and login to the VIP site as the general procedure.
+請為您的 v1 容器建立映像檔，並參考 v1 容器設定，使用映像檔建立 v2 容器。
 
-### Interactive Container
+#### Step 1. 建立 v1 容器的映像檔
 
-Please create a duplicate of your v1 container, and refer to the settings of v1 to create v2 container by the duplicate.
+- 於服務列表選擇「**開發型容器**」。 
+- 進入開發型容器管理頁後，點選 v1 容器，進入詳細資料頁。
+- 請點選「**映像檔**」，為您的 v1 容器建立映像檔，以進行 Step 2. 遷移作業。
 
-#### Step 1. Create a duplicate of v1 container
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_571d3ef84d5ab08633134734d87fcee9.png)
 
-- Select "Interactive Container" in the service list.
-- After entering the interactive container management page, click the v1 container to enter the details page.
-- Please click "DUPLICATE" to create a duplicate of your v1 container and move to Step 2.
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_12328655518d001f13dad1ab83c880f6.png)
 
 :::info
-For more duplicate descriptions, please refer to [container duplicate](docs/ccs-interactive-container/user-guides/duplicate-backup/duplicates.md).
+更多映像檔說明，請參考[容器映像檔](/user-guides/twcc/ccs-interactive-container/images/overview.md)。
 :::
 
 
-#### Step 2. Migration operation: Create v2 container with duplicate
+#### Step 2. 遷移作業：以映像檔建立 v2 容器
 
-- Go back to the interactive container management page and [create new container with duplicate](docs/ccs-interactive-container/user-guides/duplicate-backup/duplicates.md), then you can migrate your v1 container to v2 platform.
+- 回到開發容器管理頁，並[以映像檔新建容器](/user-guides/twcc/ccs-interactive-container/containers/create/create-custom-instances.md)，即可將您的 v1 容器遷移至 v2 平台。
 
 :::info
-You can refer to the v1 container details page to select the same image type, image, specification etc. as the v1 container.
+您可以參考 v1 容器詳細資料頁，選擇與 v1 容器相同的映像檔類型、映像檔、規格...等設定。
 :::
 
-#### Step 3. Delete v1 container
+#### Step 3. 刪除 v1 容器
 
-- After confirming the container has been created with a duplicate (the status is changed to **`Ready`**), go back to the interactive container management page and **please delete the v1 container as soon as possible** to avoid generating additional costs.
+- 確認容器已使用映像檔建立完成後 (狀態轉為 **`Ready`**)，再回到開發型容器管理頁，**請您盡快刪除 v1 容器**，避免產生過多額外費用。
 
-### Scheduled Container
+### 任務型容器
 
-#### Step 1. Refer to v1 container setting
+#### Step 1. 參考 v1 容器設定
 
-- Select "Scheduled Container" in the service list and click "Scheduled Container v1" on the left side to enter the `Scheduled Container Management (v1)` page.
-- Select your v1 container and refer to the v1 container settings (image, type, schedule, command, ... etc.)
+- 於服務列表選擇「任務型容器」，並點選左側「任務型容器 v1」，進入`任務型容器管理 (v1)` 頁。
+- 選擇您的 v1 容器，並參考 v1 容器設定 (映像檔、型號、排程、指令...等)。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1b7df096e44f91d605cdb92a295bde1c.png)
-
-
-#### Step 2. Migration operation: Create v2 container
-
-- Click "Scheduled Container" on the left side to enter the `Scheduled Container Management` page, and click "+CREATE" to create a v2 container. 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bd9b5d48af31ecaef05d731e8bfde0b7.png)
 
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_f7960d203eb6e998c34c3f0483205d58.png)
+#### Step 2. 遷移作業：建立 v2 容器
+
+- 點選左側「任務型容器」，進入`任務型容器管理` 頁，並點選 「**+建立**」，建立 v2 容器。 
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0f7239f231d8b1a713c5dc28dc41fd81.png)
 
 
-- Select the same settings as the v1 container (image, basic settings, commands, scheduling, ... etc.)
-- When the build is doned, you can keep your v1 container commands and migrate to v2 platform.
+- 選擇同 v1 容器的設定 (映像檔、基本設定、指令、排程...等)
+- 建立完成，即可保留您的 v1 容器指令，並遷移至 v2 平台。
 
-#### Step 3. Delete v1 container
+#### Step 3. 刪除 v1 容器
 
-- After confirming the v2 container has been created, go back to the scheduled container (v1) management page and **please delete the v1 container as soon as possible** to avoid generating additional costs.
+- 確認 v2 容器已建立完成後，再回到任務型容器 (v1) 管理頁 ，並**請您盡快刪除 v1 容器**，避免產生過多額外費用。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_19203698251bb5fb824e6f1d7fcd884c.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_45274e7be5153c02f04d5a5ac5a0aead.png)
 
 
-## TWCC Portal (VIP) Feature Adjustment Description
+## TWCC 入口網站 (VIP) 功能調整說明
 
-TWCC provides VIP users with priority for v1 container migration via https://vip.twcc.ai. The adjustments about container-related page of the VIP site for container platform update operations are listed below:
+TWCC 提供 VIP 用戶優先透過 https://vip.twcc.ai 進行 v1 容器遷移。此 VIP 網站針對容器平台更新作業進行的容器相關頁面調整，詳細說明如下：
 
-### Interactive Container
+### 開發型容器
 
-- **Management Page**
-    - Click "+CREATE" on the management page, containers are all built on the v2 platform.
-    - All v1 and v2 containers are listed in the management page. 
-    ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1d1ca6f9ba5fb68e4e59fc8b96e43779.png)
-- **Details Page**
-    - **v1 Container**
-        - The title is labeled as v1 container.
-        - **Services of associating service port and disabling deletion protection are not provided**. Therefore, please [migrate to v2 container](#interactive-container) to get the full user experience.
-        ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_5660c85877d78d9dac6ad37b47f9524a.png)
-    - **v2 Container**: All services are available.
-- **Monitoring page on the left side**
-    - Only shows the monitoring data of v2 container, no monitoring data of v1 container is displayed.
-    ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_12a2305b2e646acb870334925b6b037a.png)
+- **管理頁**：
+    - 點選管理頁之「+建立」，容器皆建立於 v2 平台。
+    - v1 與 v2 容器並存於管理頁列表。 
+    ![](https://i.imgur.com/H5QQ60B.png)
 
-### Scheduled Container
+- **詳細資料頁**：
+    - **v1 容器**：
+        - 標題標示為 v1 容器。
+        - **不提供關聯服務埠、關閉刪除保護機制**。因此敬請您[遷移至 v2 容器](#開發型容器)，以取得完整的使用體驗。 
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_76921f55aada52337f9958c87c159e1e.png)
+    - **v2 容器**：所有功能皆正常開放。
+- **左側監控頁**：
+    - 僅顯示 v2 容器監控資料，無顯示 v1 容器監控資料。
+![](https://i.imgur.com/y5SVgtM.png)
 
-- **Management page**
-    - **v1 Container**
-        - Only displays v1 container.
-        - **Services of creating and starting containers are not provided**. Therefore, please [migrate to v2 container](#scheduled-container) to get the full user experience.
-        ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b83c3c33551a9a3a72cea34d4c83c777.png)
+### 任務型容器
 
-    - **v2 Container**
-        - Only displays v2 container.
-        ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b451721299c3f75b52c1d90bedd2f65b.png)
-- **Details Page**
-    - **v1 Container**
-        - Labeled as a v1 container.
-        - **Service of starting containers is not provided**. Therefore, please [migrate to v2 container](#scheduled-container) to get the full user experience.
-        ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4fa9d27ee389dcb14a58079fc617c5ad.png)
-    - **v2 Container**: All services are available.
-- **Monitoring page on the left side**
-    - Only shows the monitoring data of v2 container, no monitoring data of v1 container is displayed.
-    ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_81d2c8f3dc5d0dd39423452bb654fc6f.png)
+- **管理頁**：
+    - **v1 容器**：
+        - 僅顯示 v1 容器。
+        - **不提供建立、啟動功能**。因此敬請您[遷移至 v2 容器](#任務型容器)，以取得完整的使用體驗。
+        ![](https://i.imgur.com/Uzq7nch.png)
+    - **v2 容器**：
+        - 僅顯示 v2 容器。
+        ![](https://i.imgur.com/lGuwgML.png)
+- **詳細資料頁**：
+    - **v1 容器**：
+        - 標示為 v1 容器。
+        - **不提供啟動功能**。因此敬請您[遷移至 v2 容器](#任務型容器)，以取得完整的使用體驗。
+        ![](https://i.imgur.com/On7xO1v.png)
+    - **v2 容器**：所有功能皆正常開放。
+- **左側監控頁**：
+    - 僅顯示 v2 容器監控資料，無顯示 v1 容器監控資料。
+    ![](https://i.imgur.com/AEDtH6k.png)
