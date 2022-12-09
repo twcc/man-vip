@@ -7,7 +7,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-bss-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-bss-zh'
 ---
 
-# TWCC FAQs | Virtual Disk Service (VDS)
+# FAQs | Virtual Disk Service (VDS)
 
 <details>
 

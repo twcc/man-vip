@@ -9,26 +9,10 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-vds-instance-i
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# VCS instance images
-
-VCS instance images can preserve the state of an instance and the system disk with your operating system. We recommend creating an image for your instance before performing a significant system upgrade or installing special software so that you can roll back to a certain time when needed.
-
-
-:::info
-
-1. **After deleting a VCS instance, the data in the 100 GB system disk will disappear. To back up the system disk, please refer to the following steps to create an image for the instance before deleting it.**
-2. For the difference between Tenant Admin and Tenant User for using VCS instance, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務).
-
-:::
-
-
-<br/>
-
-
-## Create an image
+# Create an image
 
 :::caution
-1. **<ins>Before creating an image, it is strongly recommended that you refer to [Best practices to create a VCS instance images](https://man.twcc.vip/en/docs/vcs/user-guides/backup/best-practice-to-create-images/) to ensure effective acquisition of the image.</ins>**
+1. **<ins>Before creating an image, it is strongly recommended that you refer to [Best practices to create a VCS instance images](/concepts-tutorials/twcc/vcs/best-practice-create-images.md) to ensure effective acquisition of the image.</ins>**
 2. If the image state is stuck in **`QUEUED`** and does not change to **`ACTIVE`** for a long time, please contact the Technical Support: <a href="mailto:isupport@twcc.ai">isupport@twcc. ai</a> for help.
 :::
 
@@ -36,15 +20,13 @@ VCS instance images can preserve the state of an instance and the system disk wi
 <br/>
 
 
-### Create a general image
-
-Create the image manually.
+## Create a general image
 
 <Tabs>
 
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-* Enter **VCS Instance Management** page, click on the instance you want to create an image, then enter **VCS Instance Details** page of the instance, and click **IMAGE**.
+* On the **VCS Instance Management** page, select an instance you want to create an image to keep the settings, and then on the **VCS Instance Details** page, click **IMAGE**.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_449c7b52b1ba61d36cc11e49566bf442.png)
 
@@ -55,7 +37,7 @@ Create the image manually.
 
 * You will be directed to **VCS Instance Image Management** page. Wait for the image state to change from **`QUEUED`** > **`SAVING`** > finally to **`ACTIVE`** before using it.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c4a06905f071589d1866542c3a7e6985.png)
+![](https://i.imgur.com/cfPfnDH.png)
 
 </TabItem>
 
@@ -95,7 +77,7 @@ twccli mk vcs -s 918628 -snap
 ### Create scheduled images
 
 
-Use `crontab` to create an scheduled image automatically and regularly.
+Use `crontab` to automatically and regularly create an scheduled image .
 
 
 <Tabs>
@@ -109,7 +91,7 @@ Use `crontab` to create an scheduled image automatically and regularly.
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
 - Use `crontab -e` to set the schedule of creating images. For more related functions, please refer to [<ins>CronHowTo</ins>](https://help.ubuntu.com/community/CronHowto).
-- Specify a time for creating the image. The example here is 01:01 midnight.
+- Specify a time for creating the image. The example here creates an image at 01:01 midnight.
 ![](https://i.imgur.com/mQp1kUr.png)
 
 

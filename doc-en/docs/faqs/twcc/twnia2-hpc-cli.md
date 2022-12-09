@@ -7,7 +7,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-twnia2-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-zh'
 ---
 
-# TWCC FAQs | Taiwania 2 (HPC CLI)
+# FAQs | Taiwania 2 (HPC CLI)
 
 ## Login
 
@@ -15,7 +15,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-twnia2-zh'
 
 <summary> Q1. How to login to Taiwania 2 (HPC CLI)?</summary>
 
-Login using SSH connection with the login node of ln01.twcc.ai. Enter your supercomputer account and supercomputer password to complete the login. For detailed steps, refer to <ins><a href = "https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-prerequisite-for-connection-zh">this document</a></ins> for more information.
+Login using SSH connection with the login node of ln01.twcc.ai. Enter your system account and system password to complete the login. For detailed steps, refer to <ins><a href = "https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-prerequisite-for-connection-zh">this document</a></ins> for more information.
 
 
 
@@ -33,7 +33,7 @@ Available open-source software includes MobaXterm, PuTTY, VSCode, etc.
 
 <summary> Q3. Failed to log in recently, but able to log in to Taiwania 2 (HPC CLI) half a year ago?</summary>
 
-The validity period of supercomputer password is 180 days. Please reset the expired password in [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) before you can re-login successfully.
+The validity period of system password is 180 days. Please reset the expired password in [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) before you can re-login successfully.
 
 </details>
 

@@ -12,10 +12,10 @@ import TabItem from '@theme/TabItem';
 
 # Create a custom instance
 
-Once you create a TWCC virtual computing environment, you can access it to deploy the tools you need, create your own custom environment, and create an [**VCS instance image**](https://man.twcc.vip/en/docs/vcs/user-guides/backup/creation) to save your working environment so that you can create the same custom environment over and over again, or as a backup measure to avoid losing your personal settings.
+Once you create a TWCC virtual computing environment, you can access it to deploy the tools you need, create your own custom environment, and create a [**VCS instance image**](/user-guides/twcc/vcs/instances/details/create-image.md) to save your working environment so that you can create the same custom environment over and over again, or as a backup measure to avoid losing your personal settings.
 
 :::info
-For the permission differences in VCS instance between Tenant Admins and Tenant Users, please refer to [<ins>User permissions comparison</ins>](https://man.twcc.ai/@twccdocs/role-main-en).
+For the permission differences in VCS instance between Tenant Admins and Tenant Users, please refer to [<ins>Roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en).
 :::
 
 <br/>
@@ -23,16 +23,16 @@ For the permission differences in VCS instance between Tenant Admins and Tenant 
 
 ## Before we get started
 
-- If you haven't sign up for a user account, please [sign up for TWCC](https://www.twcc.ai/) first.
-- If you would like to operate with TWCC portal, please sign in to [TWCC portal](https://www.twcc.ai/) first.
-- If you would like to operate with TWCC CLI, please [install TWCC CLI](https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-2-%E5%AE%89%E8%A3%9DTWCC-CLI) first, and then [sign in](https://man.twcc.ai/XP63CErkQve0tlN0oHxrcA?view#1-3-%E9%80%B2%E5%85%A5-TWCC_CLI-%E7%92%B0%E5%A2%83%E4%B8%A6%E9%96%8B%E5%A7%8B%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8B%99).
-- [Create a VCS instance](https://man.twcc.ai/@twccdocs/guide-vcs-create-en), deploy working environment and create a instance [image file](https://man.twcc.ai/@twccdocs/vcs-vds-instance-image-en).
+- If you haven't sign up for a user account, please [sign up for TWS](/user-guides/tws-member-center/manage-member-accounts/sign-up-for-tws.md) first.
+- If you would like to operate with TWCC portal, please first sign in to [TWCC portal](https://tws.twcc.ai/).
+- If you would like to operate with TWCC CLI, please [install TWCC CLI](https://github.com/twcc/TWCC-CLI) first, and then [sign in](https://github.com/twcc/TWCC-CLI).
+- [Create a VCS instance](/docs/user-guides/twcc/vcs/instances/create-instances), deploy your working environment and create an instance [image](/user-guides/twcc/vcs/instances/details/create-image.md), or you have images [shared](/docs/user-guides/twcc/vcs/images/manage-images.md#share-images-and-sharing-management) from other projects.
 
 <br/>
 
 ## Create a custom instance
 
-Depending on the image created in the selected project or the image shared by other projects, the creation steps are different, so please refer to the following steps according to the applicable situation.
+The creation steps are different depending on the image created in the selected project or the image shared by other projects. Please refer to the following steps according to your situation.
 
 <br/>
 
@@ -42,7 +42,9 @@ Depending on the image created in the selected project or the image shared by ot
 
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-The creation procedure is the same as [<ins>Create VCS instances</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/creation/vcs-instances), only **Image** should be changed to select `(private)xxx, xxx is your custome image file name`, then you can complete the creation.
+The creation procedure is the same as in[<ins>Create a VCS instances</ins>](/docs/user-guides/twcc/vcs/instances/create/create-instances), :
+- Select the **Image type**, the same as the OS of your image.
+- Select an **Image** created in your project`(private)xxxcustome image namexxx`, or the shared image from other project `(private)xxxsource project ID-custome image namexxx`.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0dcb4912bb77fb6de9f67c58d74bf47a.png)
 
@@ -75,7 +77,7 @@ The creation procedure is the same as [<ins>Create VCS instances</ins>](https://
 
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-The creation procedure is the same as [<ins>Create VCS instances</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/creation/vcs-instances), except that "**image type**" needs to be selected from Custom Image Linux or Custom Image Windows depending on the operating system of the image file, and then select the image shared by the source project.
+The creation procedure is the same as in[<ins>Create a VCS instanc</ins>](/docs/user-guides/twcc/vcs/instances/create/create-instances), except that **image type** should select Custom Image Linux or Custom Image Windows depending on the operating system of the image, and then select the image shared by the source project.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_09dbcd06461d854690a0e0d04136673b.png)
 

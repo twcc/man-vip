@@ -34,7 +34,7 @@ This feature requires tenant administrator privileges to use.
 
 * Select the virtual network you want to use, then click "Next: Password>".
 :::info
-Refer to: [virtual network](https://www.twcc.ai/doc?page=virtual_network)
+Refer to: [virtual network](/docs/user-guides/twcc/vcs/vnw.md)
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bdcf37fc211e811c242a3523841a1f8e.png)

@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # 資料磁碟快照管理
 
-[資料磁碟建立](/data-disks/create/create-data-disks.md)完成後，您可以進入「**資料磁碟快照管理**」頁面進行以下操作。
+[資料磁碟建立](/docs/user-guides/twcc/vcs/vds/create-disks)完成後，您可以進入「**資料磁碟快照管理**」頁面進行以下操作。
 
 ## 檢視磁碟快照
 

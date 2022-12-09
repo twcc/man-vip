@@ -14,24 +14,23 @@ Auto Scaling is an automatic and dynamic mechanism for adjusting your resources 
 
 Auto Scaling is an automatic and flexible adjustment monitoring mechanism that <ins>dynamically **increases** or **decreases** the number of VCS instances</ins> under the designated conditions in response to the problem of insufficient resources or service interruptions caused by the increasing workloads to improve the the quality and efficiency of your service.
 
-When the workload reaches the demand value, it increases the number of instances; when the workload falls below the demand value, it immediately decreases the number of instances. Also, with [load balancing](https://man.twcc.vip/en/docs/vcs/user-guides/networking/load-balancing), traffic can be distributed evenly to effectively reduce the cost of idle VCS instances.
+When the workload reaches the demand value, it increases the number of instances; when the workload falls below the demand value, it immediately decreases the number of instances. Also, with [load balancing](/user-guides/twcc/vcs/lbs.md), traffic can be distributed evenly to effectively reduce the cost of idle VCS instances.
 
 :::info
-- For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-netndsec-en#Auto-Scaling).
+- For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twsdocs/role-main-en).
 :::
 
 :::caution
-[<ins>Auto Scaling</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-auto-sacling-en) scales out new instances whose configuration is identical to the connected instance. Therefore,
-- If the scaled out instance <ins>**needs**</ins> to be attached with a new data disk, please create a data disk when **[<ins>Creating an instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-en)**.
-- On the contrary, if the scaled out instance <ins>**doesn't need**</ins> to be automatically attached with a new data disk, please separately **[<ins>Create a instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-create-en)** and [<ins>a data disk</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-vds-create-data-disk-en), and then [<ins>attach the disk to the instance</ins>](https://man.twcc.ai/@twccdocs/guide-vcs-vds-manage-disk-en#%E9%80%A3%E7%B5%90%E8%87%B3%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94).
-
+- [<ins>Auto Scaling</ins>](/user-guides/twcc/vcs/auto-scaling.md) scales out new instances whose configuration is identical to the connected instance. Therefore,
+    - If the scaled out instance <ins>**needs**</ins> to be attached with a new data disk, please create a data disk when **[<ins>creating an instance</ins>](/docs/user-guides/twcc/vcs/instances/create-instances)**.
+    - On the contrary, if the scaled out instance <ins>**doesn't need**</ins> to be automatically attached with a new data disk, please separately **[<ins>create an instance</ins>](/docs/user-guides/twcc/vcs/instances/create-instances)** and [<ins>a data disk</ins>](/user-guides/twcc/vcs/vds/data-disks/create/create-data-disks.md), and then [<ins>attach the disk to the instance</ins>](/user-guides/twcc/vcs/vds/data-disks/details/view-attach-delete-data-disk.md).
 :::
 
 
 <br/>
 
 
-## Create Auto Scaling templates
+## Create an Auto Scaling template
 
 You can create an Auto Scaling template and connect it to multiple VCS instances.
 
@@ -103,10 +102,9 @@ View Auto Scaling information and delete the Auto Scaling.
 <br/>
 
 
+## Attach Auto Scaling to a VCS instance
 
-## Attach Auto Scaling to VCS instances
-
-The attached Auto Scaling should be used with [load balancing](https://man.twcc.vip/en/docs/vcs/user-guides/networking/load-balancing) to automatically balance the workloads of VCS instances.
+The attached Auto Scaling should be used with [load balancing](/user-guides/twcc/vcs/lbs.md) to automatically balance the workloads of VCS instances.
 
 <Tabs>
 

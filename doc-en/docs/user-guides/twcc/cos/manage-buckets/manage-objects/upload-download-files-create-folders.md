@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 # Upload/download files and create folders
 
 :::tip
-The following operation methods are only applicable to the [<ins>**public COS**<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](/user-guides/twcc/cos/overview.md) of the project. For managing your [<ins>**private COS**<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](/user-guides/twcc/cos/overview.md), please use [<ins>**third-party software**</ins>](https://man.twcc.ai/@twccdocs/doc-cos-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cos-connect-info-zh).
+The following operation methods are only applicable to the [<ins>**public COS**<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](/docs/user-guides/twcc/cos/overview) of the project. For managing your [<ins>**private COS**<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](/docs/user-guides/twcc/cos/overview), please use [<ins>**third-party software**</ins>](/docs/user-guides/twcc/cos/connection-info).
 :::
 
 

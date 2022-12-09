@@ -59,5 +59,7 @@ Browse and select a service for an overview and basic user guides of the TWS Mem
 
 ### Common services
 
-- [General operations](/docs/user-guides/twcc/general)
+- [Manage API keys](/docs/user-guides/twcc/general/api-keys)
+- [Manage resource quota](/docs/user-guides/twcc/general/resource-quota)
+- [Service activity history](/docs/user-guides/twcc/general/activity-history.md)
 

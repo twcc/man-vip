@@ -16,7 +16,7 @@ import TabItem from '@theme/TabItem';
 (※ *系統磁碟目前不支援快照功能，若需備份請參考「虛擬運算個體映像檔」*)
 
 :::info
-租戶管理員、租戶使用者對於虛擬磁碟使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/storage.md#虛擬磁碟服務)。
+租戶管理員、租戶使用者對於虛擬磁碟使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twsdocs/role-main-zh)。
 :::
 
 <br/>

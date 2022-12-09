@@ -16,12 +16,12 @@ import TabItem from '@theme/TabItem';
 基礎虛擬防火牆服務提供簡單靈活的架構，在虛擬網路外創建防火牆，對網路內所有虛擬運算個體提供安全防護。
 
 :::info
-租戶管理員、租戶使用者對於基礎虛擬防火牆使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](/docs/member-concepts-roles-permissions/twcc-services/networking-security#基礎虛擬防火牆)。
+租戶管理員、租戶使用者對於基礎虛擬防火牆使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twsdocs/role-main-zh)。
 :::
 
 <br/>
 
-## 建立基礎虛擬防火牆
+## 建立防火牆
 
  * 進入「**基礎虛擬防火牆**」服務，在「**基礎虛擬防火牆管理**」頁面，點擊「**＋建立**」。
 
@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1c47cc938a6750f99e2e4dd3696ebc1d.png)
 
 
-* 輸入名稱及描述，接著點擊「下一步：規則」。
+* 輸入名稱及描述，接著點擊「**下一步：規則**」。
 
 :::tip
 若安全性群組規則已有建立所需的規則，您可先跳過此步驟。在選擇網路後，在進階規則選擇虛擬運算個體 IP，即可將安全性群組規則自動同步至防火牆。

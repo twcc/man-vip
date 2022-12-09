@@ -15,7 +15,7 @@ Once VCS instances are created, you can view the instance information or edit th
 
 
 :::info
-For the permission differences in VCS instance between Tenant Admins and Tenant Users, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務).
+For the permission differences in VCS instance between Tenant Admins and Tenant Users, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twsdocs/role-main-en).
 :::
 
 

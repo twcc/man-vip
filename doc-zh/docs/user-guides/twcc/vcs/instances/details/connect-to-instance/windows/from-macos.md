@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # 連線 Windows 個體：本機為 macOS
 
-完成[準備工作、取得連線資訊](../prerequisites.md)後，請參考以下方式連線進入 Windows 個體(本機為 macOS) 。
+完成[準備工作、取得連線資訊](/user-guides/twcc/vcs/instances/details/connect-to-instance/prerequisites.md)後，請參考以下方式連線進入 Windows 個體(本機為 macOS) 。
 
 :::info
 請注意個體建立後，狀態轉為 **`Ready`**，**需等候一些時間才可遠端連線使用**。
@@ -44,5 +44,5 @@ import TabItem from '@theme/TabItem';
 :::
 
 :::info
-若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](../../manage-monitor/console.md)，可加速工作流程。
+若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](/user-guides/twcc/vcs/instances/details/console.md)，可加速工作流程。
 :::

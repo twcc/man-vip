@@ -7,7 +7,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-cfs-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-cfs-zh'
 ---
 
-# TWCC FAQs | Cloud File Service (CFS)
+# FAQs | Cloud File Service (CFS)
 
 <details>
 

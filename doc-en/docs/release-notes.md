@@ -6,6 +6,14 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/UserPortalHistory_
 
 # TWCC Release Notes
 ## Year 2022
+## Year 2022
+### Dec 09, 2022
+- **UI**
+    - <font style={{'background-color':'#27A5BD','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}> <b>&nbsp;Feature&nbsp;</b></font></font>&ensp;<font style={{'background-color':'#008ad8','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}><b>&nbsp;Enterprise&nbsp;</b></font></font>&ensp; <a href="https://docs.twcc.ai/">TWCC Enterprise Documentation</a> officially released! <a href="https://tws.twcc.ai/">Sign into TWCC</a> and check the new doc links!  
+- **VCS**
+    - <font style={{'background-color':'#FF5722','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp;Added the retry button for sharing images. 
+- **CCS**
+    - <font style={{'background-color':'#2A56C6','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}> <b>&nbsp;Fix&nbsp;</b></font></font> &ensp; Fixed the doc link on Scheduled Container Management (v1) page.
 ### Nov 25, 2022 (version: b97c447e)
 - **AI<sup>2</sup>CS**
     - <font style={{'background-color':'#27A5BD','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}> <b>&nbsp;Feature&nbsp;</b></font></font>&ensp;<font style={{'background-color':'#FF0000','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}><b>&nbsp;Academic&nbsp;</b></font></font>&ensp;
@@ -186,12 +194,12 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/UserPortalHistory_
 - **VCS**
     - <font style={{'background-color':'#27A5BD','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}> 
     
-    <b>&nbsp;Feature&nbsp;</b></font></font>  &ensp; You can now <a href="vcs/user-guides/backup/manage-images#分享映像檔分享管理">share images across projects</a> and use the same image from other projects to <a href="vcs/user-guides/create/create-custom-instances#建立客製化個體-1">create instances</a>.
+    <b>&nbsp;Feature&nbsp;</b></font></font>  &ensp; You can now <a href="/docs/user-guides/twcc/vcs/manage-images/#share-images-and-sharing-management">share images across projects</a> and use the same image from other projects to <a href="/docs/user-guides/twcc/vcs/create-custom-instance">create instances</a>.
     - <font style={{'background-color':'#27A5BD','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}> <b>&nbsp;Feature&nbsp;</b></font></font> &ensp; 
     - Added search box for images to fasten the VCS instance creation process.
 ### Mar 18, 2022 (version: 37705ad2)
 - **CFS**
-    - <font style={{'background-color':'#FF5722','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Added messages to recommend using <ins><a href = "cfs/user-guides/manage-hot-files/access-interfaces-hot-files">S3 or SFTP</a></ins> to upload large files or large numbers of files.
+    - <font style={{'background-color':'#FF5722','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Added messages to recommend using <ins><a href = "/docs/user-guides/twcc/cfs/access-interfaces">S3 or SFTP</a></ins> to upload large files or large numbers of files.
 ### Mar 4, 2022 (version: 64f9a585)
 - **UI**
     - <font style={{'background-color':'#FF5722','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}>  <b>&nbsp;Change&nbsp;</b></font></font> &ensp; Changed links to Member Center.

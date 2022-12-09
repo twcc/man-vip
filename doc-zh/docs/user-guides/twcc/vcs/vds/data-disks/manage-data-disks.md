@@ -21,7 +21,7 @@ import TabItem from '@theme/TabItem';
 
 點選後，即進入「**資料磁碟管理**」頁，此頁提供操作容器的快捷鍵，您可以於此頁面：
 
-- 點擊「**＋建立**」，開始建立您的第一個資料磁碟，更多說明請參考[建立資料磁碟](/docs/user-guides/twcc/ccs-interactive-container/create-containers)。
+- 點擊「**＋建立**」，開始建立您的第一個資料磁碟，更多說明請參考[建立資料磁碟](/docs/user-guides/twcc/vcs/vds/create-disks)。
 - 檢視已建立的資料磁碟清單與資料磁碟基本資訊、刪除資料磁碟。
 - 點選任一個體，進入「**資料磁碟詳細資料**」頁，檢視資料磁碟詳細節資訊、並進一步設定磁碟，更多資訊請參考[資料磁碟詳細資訊](/docs/user-guides/twcc/ccs-interactive-container/containers/details)。
 

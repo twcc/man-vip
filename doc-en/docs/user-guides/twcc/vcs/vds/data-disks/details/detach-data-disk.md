@@ -36,7 +36,7 @@ There are different ways to unmount a disk between Linux and Windows, please fol
 <summary><b>Linux Instance</b></summary>
 
 
-- [Connect to your Linux instance](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-en), and use the following command to unmount the `/dev/vdb` disk.
+- [Connect to your Linux instance](/docs/user-guides/twcc/vcs/connect-to-linux-instance), and use the following command to unmount the `/dev/vdb` disk.
 
 ``` 
 sudo umount -d /dev/vdb
@@ -52,7 +52,7 @@ sudo umount -d /dev/vdb
 <summary><b>Windows Instance</b></summary>
 
 
-- [Connect to your Windows instance](https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-windows-from-windows-en), and search for <i class="fa fa-search" aria-hidden="true"></i> **Computer Management** then open the applicaiton.
+- [Connect to your Windows instance](/docs/user-guides/twcc/vcs/connect-to-windows-instance), and search for <i class="fa fa-search" aria-hidden="true"></i> **Computer Management** then open the applicaiton.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_08e62fd6999de46d9361e5a3bca0a4c7.png)
 

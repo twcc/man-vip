@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # Connect to a Linux instance from Linux / macOS
 
-Having completed the [prerequisites and obtained connection information](https://man.twcc.vip/en/docs/vcs/user-guides/connection/prerequisites), you can use one of the following two methods to connect to the Linux instance from Linux/macOS.
+Having completed the [prerequisites and obtained connection information](/user-guides/twcc/vcs/instances/details/connect-to-instance/prerequisites.md), you can use one of the following two methods to connect to the Linux instance from Linux/macOS.
 
 :::info
 Please note that you can connect to the instance only when its state is **`Ready`**.
@@ -23,7 +23,7 @@ Please note that you can connect to the instance only when its state is **`Ready
 
 <summary><b>1. Built-in command line (Terminal)</b></summary>
 
-Open terminal on your local computer, enter the commands sequentially according to [<ins>obtaining connection information</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/connection/prerequisites/#step-2-obtain-connection-information) to change the permission of the key pair and connect to the VCS instance.
+Open terminal on your local computer, enter the commands sequentially according to [<ins>obtaining connection information</ins>](#step-2-obtain-connection-information) to change the permission of the key pair and connect to the VCS instance.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ab7f8e76a452f95ea2f1e004e10f4e89.png)
 
@@ -51,7 +51,7 @@ Please download [<ins>VScode</ins>](https://code.visualstudio.com/Download) and 
 
 <br/>
 
-**Step 2. Install SSH package**
+**Step 2. Install SSH extension**
 
 
 Click **Extensions** > search for *remote ssh* > select **Remote- SSH** and click **Install**.
@@ -93,7 +93,7 @@ Host <INSTANCE_NAME>            # Enter the name of the VCS instance
 
 <br/>
 
-**Step 4. Connect to VCS instance**
+**Step 4. Connect to the VCS instance**
 
 - In VScode, click the icon in the lower left corner > select **Remote-SSH: Connect to Host...**.
 
@@ -124,7 +124,7 @@ Host <INSTANCE_NAME>            # Enter the name of the VCS instance
 <br/>
 
 :::info
-For urgent debugging/system maintenance, it is recommended to [<ins>connect via Console</ins>](https://man.twcc.vip/en/docs/vcs/user-guides/management-and-monitoring/console) to speed up the workflow.
+For urgent debugging/system maintenance, it is recommended to [<ins>connect via Console</ins>](/user-guides/twcc/vcs/instances/details/console.md) to speed up the workflow.
 :::
 
 :::caution

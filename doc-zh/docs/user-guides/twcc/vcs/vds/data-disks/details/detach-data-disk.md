@@ -29,7 +29,7 @@ Linux、Windows 卸載磁碟方式不同，請依據 OS 選擇操作步驟。
 
 <summary><b>Linux 個體</b></summary>
 
-- [連結進入 Linux 虛擬運算個體](../connecting/linux/from-windows.md)，並使用以下指令來卸載 `/dev/vdb` 磁碟裝置。
+- [連結進入 Linux 虛擬運算個體](/docs/user-guides/twcc/vcs/connect-to-linux-instance)，並使用以下指令來卸載 `/dev/vdb` 磁碟裝置。
 
 ``` 
 sudo umount -d /dev/vdb
@@ -43,7 +43,7 @@ sudo umount -d /dev/vdb
 
 <summary><b>Windows 個體</b></summary>
 
-- [連線進入 Windows 虛擬運算個體](../connecting/windows/from-windows.md)，並在 <i class="fa fa-search" aria-hidden="true"></i> 搜尋「**電腦管理**」，開啟應用程式。
+- [連線進入 Windows 虛擬運算個體](/docs/user-guides/twcc/vcs/connect-to-windows-instance)，並在 <i class="fa fa-search" aria-hidden="true"></i> 搜尋「**電腦管理**」，開啟應用程式。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4dcce52be28b3142c19ab11b731c8f37.png)
 

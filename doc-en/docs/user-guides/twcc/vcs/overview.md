@@ -10,7 +10,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-overview-zh'
 
 # <img class="icon" src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_af58322eb82b649d1f29aca1f201a117.png" width="25" height="25"/> Service overview
 
-Virtual Compute Service Instance is a traditional general host rental service provided by TWCC. It can be quickly deployed and recycled through automated tools and processes, and has the ability to mount multiple virtual disks at the same time, create data disks, and freely and flexibly allocate instance storage space, which makes it the best choice for both intelligent calculation and cost-saving.
+Virtual Compute Service instance is a traditional general host rental service provided by TWCC. It can be quickly deployed and recycled through automated tools and processes, with the flexibility to select system disk capacity (5 options: 100 GB - 500 GB), mounting of multiple virtual disks at the same time, and flexibly allocate instance storage space, which makes it the best choice for both intelligent calculation and cost-saving.
 
 <br/>
 
@@ -18,7 +18,9 @@ Virtual Compute Service Instance is a traditional general host rental service pr
 
 #### <img src="https://cos.twcc.ai/SYS-MANUAL/uploads/upload_fdddc2308f91f4689d5765a35b457c72.png" width="35" height="25"/> Built on the cloud with many options
 
-With just a few moves and clicks of the mouse, you can have your dedicated working environment in no time. We provide Linux Ubuntu, CentOS, Rocky Linux, Windows 10, Windows Server 2016... You can choose from a wide range of operating systems as well as the number of CPUs, memory capacity, and hardware resources.
+<!-- With just a few moves and clicks of the mouse, you can have your dedicated working environment in no time. We provide Linux Ubuntu, CentOS, Rocky Linux, SQL Server Web (<font style={{'background-color':'#008ad8', 'border-radius': '40px', 'padding': '0.2em', 'font-size': '8px'}}><font style={{'color':'white'}}>**&nbsp;Enterprise&nbsp;**</font></font>), Windows 10, Windows Server 2016... You can choose from a wide range of operating systems as well as the number of CPUs, memory capacity, and hardware resources. -->
+
+With just a few moves and clicks of the mouse, you can have your dedicated working environment in no time. We provide Linux Ubuntu, CentOS, Rocky Linux, SQL Server Web, Windows Server 2016... You can choose from a wide range of operating systems as well as the number of CPUs, memory capacity, and hardware resources.
 
 <br/>
 

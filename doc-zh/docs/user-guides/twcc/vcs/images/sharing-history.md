@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 
 進入「**映像檔分享管理**」頁面可檢視已分享的映像檔名稱、分享的專案、分享狀態、分享建立時間。
 
-分享後，映像檔即進入 **`approved`** (分享中) 狀態，分享完成後呈現 **`finished`** (分享完成) 狀態，目標計畫即可選用此分享的映像檔[建立客製化個體](../create/create-custom-instances.md)。
+分享後，映像檔即進入 **`approved`** (分享中) 狀態，分享完成後呈現 **`finished`** (分享完成) 狀態，目標計畫即可選用此分享的映像檔[建立客製化個體](/user-guides/twcc/vcs/instances/create/create-custom-instances.md)。
 
 ![](https://i.imgur.com/vhE9VAy.png)
 

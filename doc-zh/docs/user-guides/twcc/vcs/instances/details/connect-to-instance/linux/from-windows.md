@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 sidebar_label: '本機為 Windows'
-slug: '/user-guides/twcc/vcs/connect-to-windows-instance-from-windows'
+slug: '/user-guides/twcc/vcs/connect-to-linux-instance-from-windows'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/vcs-guide-connect-to-linux-from-windows-zh' 
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-guide-connect-to-linux-from-windows-zh' 
 ---
@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # 連線 Linux 個體：本機為 Windows
 
-完成[準備工作、取得連線資訊](../prerequisites.md)後，以下提供 4 種連線 Linux 個體 (本機為 Windows) 的方法，您可選擇任一工具操作。
+完成[準備工作、取得連線資訊](/user-guides/twcc/vcs/instances/details/connect-to-instance/prerequisites.md)後，以下提供 4 種連線 Linux 個體 (本機為 Windows) 的方法，您可選擇任一工具操作。
 
 :::info
 請注意個體的狀態需為 **`Ready`** 才可連線使用。
@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
 
 **Step 2. 變更鑰匙對存取權限**
     
-依照[<ins>準備工作</ins>](../prerequisites.md)取得的連線資訊，依序輸入指令，變更鑰匙對權限。
+依照[<ins>準備工作</ins>](/user-guides/twcc/vcs/instances/details/connect-to-instance/prerequisites.md)取得的連線資訊，依序輸入指令，變更鑰匙對權限。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a8c1e0e1469023aa30e6b049b00b251c.png)
 
@@ -43,7 +43,7 @@ import TabItem from '@theme/TabItem';
 
 **Step 3. 連線虛擬運算個體**
 
-同樣依照[<ins>準備工作</ins>](../prerequisites.md)取得的連線資訊，使用 SSH 指令連線。
+同樣依照[<ins>準備工作</ins>](/user-guides/twcc/vcs/instances/details/connect-to-instance/prerequisites.md)取得的連線資訊，使用 SSH 指令連線。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c18eb4e0d432f15f82dd4d661f658acc.png)
 
@@ -287,7 +287,7 @@ Host <INSTANCE_NAME>            # 輸入虛擬運算個體的名稱
 <br/>
 
 :::info
-若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](../../manage-monitor/console.md)，可加速工作流程。
+若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](/user-guides/twcc/vcs/instances/details/console.md)，可加速工作流程。
 :::
 
 :::caution

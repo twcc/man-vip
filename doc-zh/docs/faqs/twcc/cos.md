@@ -7,13 +7,13 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-cos-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-cos-zh'
 ---
 
-# TWCC FAQs | 雲端物件儲存 (COS)
+# FAQs | 雲端物件儲存 (COS)
 
 <details>
 
 <summary> Q1. 請問在舊計畫的雲端物件儲存資料，可以直接沿用到新計畫內嗎？</summary>
 
-很抱歉！目前 TWCC 沒有提供雲端物件儲存資料直接移轉至另一計畫的服務，您可以使用第三方軟體將舊計畫資料下載至本地端，再從本機端將資料上傳到新計畫的雲端物件儲存空間，詳細操作方法請參考[此文件](/docs/member/tutorials/project-transfer.md)。
+很抱歉！目前 TWCC 沒有提供雲端物件儲存資料直接移轉至另一計畫的服務，您可以使用第三方軟體將舊計畫資料下載至本地端，再從本機端將資料上傳到新計畫的雲端物件儲存空間，詳細操作方法請參考[此文件](https://man.twcc.ai/@twccdocs/howto-project-data-transfer-zh)。
 
 </details>
 

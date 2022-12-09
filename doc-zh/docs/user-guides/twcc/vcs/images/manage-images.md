@@ -9,7 +9,19 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/vcs-vds-manage-ins
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 管理映像檔
+# 虛擬運算個體映像檔
+
+虛擬運算個體映像檔功能可以保留某一時間點個體的狀態、作業系統內建的硬碟的檔案與資料，通常在進行重要的系統更新或特殊軟體安裝前會先建立映像檔，以便需要時可以回復到該時間點的狀態。
+
+:::info
+1.  **虛擬運算個體刪除後，系統磁碟資料將會隨之消失，若您需保存此空間的資料，請參考 [建立映像檔](/user-guides/twcc/vcs/instances/details/create-image.md) 步驟為個體建立映像檔，再刪除個體。**
+2. 映像檔大小與您建立虛擬運算個體所選擇的系統磁碟容量相同。映像檔建立後，以虛擬磁碟 (HDD) 費率計費。
+3. 租戶管理員、租戶使用者對於虛擬運算個體使用權限之差異，請參考：[<ins>使用者角色與權限</ins>](https://man.twcc.ai/@twsdocs/role-main-zh)。
+:::
+
+<br/>
+
+## 管理映像檔
 
 您可於「**映像檔管理**」頁面，管理計畫建立的映像檔與自其他計畫分享的映像檔。
 
@@ -31,7 +43,7 @@ import TabItem from '@theme/TabItem';
 
 * 進入「**虛擬運算個體映像檔管理**」頁面，可看到所有映像檔的列表資訊，最近建立的映像檔會列在最上面。建立後待狀態從 **`QUEUED`** 變成 **`ACTIVE`** 後，即可使用映像檔建立個體。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_186918c503fa42eae342f88955c2bea3.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c89770549b8741ccde5d9e26a56bcd20.png)
 
 :::info
 您可以點選右側 「<i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>」 並選擇「**編輯**」更新映像檔描述。
@@ -109,7 +121,7 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 
 進入「**映像檔分享管理**」頁面可檢視已分享的映像檔名稱、分享的專案、分享狀態、分享建立時間。
 
-分享後，映像檔即進入 **`approved`** (分享中) 狀態，分享完成後呈現 **`finished`** (分享完成) 狀態，目標計畫即可選用此分享的映像檔[建立客製化個體](../create/create-custom-instances.md)。
+分享後，映像檔即進入 **`approved`** (分享中) 狀態，分享完成後呈現 **`finished`** (分享完成) 狀態，目標計畫即可選用此分享的映像檔[建立客製化個體](/user-guides/twcc/vcs/instances/create/create-custom-instances.md)。
 
 ![](https://i.imgur.com/vhE9VAy.png)
 
@@ -170,4 +182,4 @@ TWCC 提供跨計畫分享虛擬運算個體映像檔的服務，可將您已客
 
 ## 以映像檔建立個體
 
-請參考[建立客製化個體](../create/create-custom-instances.md)，以計畫內所建立的映像檔，或以其他計畫分享的映像檔，建立客製化個體。
+請參考[建立客製化個體](/user-guides/twcc/vcs/instances/create/create-custom-instances.md)，以計畫內所建立的映像檔，或以其他計畫分享的映像檔，建立客製化個體。

@@ -17,7 +17,7 @@ Taiwania2 is an AI supercomputer mainframe, consisting of 2,016 NVIDIA® Tesla®
 ![](https://twcc-wordpress-file.cos.twcc.ai/wp-content/uploads/2019/09/19130553/1-2.png)
 
 
-Taiwania2 provides various services, including  [Interactive Container](https://man.twcc.ai/@twccdocs/doc-ccs-main-en), [Scheduled Container](https://man.twcc.ai/@twccdocs/HyMqnHupV?type=view),  [HPC Job](https://man.twcc.ai/@twccdocs/HyVzTSOpN?type=view) and Taiwania2 (HPC CLI) (This service).
+Taiwania2 provides various services, including  [Interactive Container](/user-guides/twcc/ccs-interactive-container), [Scheduled Container](/user-guides/twcc/ccs-scheduled-container.md),  [HPC Job](/user-guides/twcc/hpc-job) and Taiwania2 (HPC CLI) (This service).
 
 
 ## Taiwania2 (HPC CLI) - The compute service

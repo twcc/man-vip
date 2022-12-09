@@ -17,9 +17,9 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-cos-connect-
 - Click **RENEW KEY** at the top right to renew your key.
 
 
-## Private COS
+## Private buckets
 
-- Click **Private buckets** > **Third-party Software** to get connection information of private COS, including URL (use SSL): cos.twcc.ai, Access Key and Secret Key.
+- Click **Private buckets** > **Third-party Software** to get connection information of private buckets, including URL (use SSL): cos.twcc.ai, Access Key and Secret Key.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_283077038d21de247f3277c58f25923a.png)
 

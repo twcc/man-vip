@@ -30,13 +30,12 @@ The HFS data transfer node, mount path and free quota information are as follows
 
 |Mount path|Free quota|
  | -------- |-------- |
-|/home/(Supercomputer username)|100 GB <sup> [2] </sup>|
-|/work/(Supercomputer username)|100 GB <sup> [1][2] </sup>|
+|/home/(system account)|100 GB <sup> [1] </sup>|
+|/work/(system account)|100 GB <sup> [1] </sup>|
 
 
 :::info
-- [1] From September 1, 2021, temporary working directory area for each account of Ministry of Science and Technology Projects(/work)free quotas, from 100 GB to 1500 GB.
-- [2] If the storage space is insufficient, you can go to [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i ></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) to purchase for expansion. Please refer to [<ins>Price List</ins>](https://www.twcc.ai/doc?page=price#%E9%AB%98%E9%80%9F%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1-Hyper-File-System-HFS) for the pricing and adjustment method.
+- [1] If the storage space is insufficient, you can go to [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i ></ins>](/docs/user-guides/tws-member-center/access-tws-member-center) to purchase for expansion. Please refer to [<ins>Price List</ins>](/pricing.mdx#hyper-file-system-hfs) for the pricing and adjustment method.
 :::
 
 ## Compatible computing services
@@ -45,5 +44,5 @@ On [TWCC](http://www.twcc.ai), HFS will be mounted to the same directory of all 
 
 
 :::info
-HFS is the default storage system for these four services, so HFS data can be used directly after connected, [<ins>Connect to data transfer node</ins>](https://man.twcc.ai/@twccdocs/doc-hfs-main-en/%2F%40TWSC%2Fguide-hfs-connect-to-data-transfer-node-en) **in advanced is no needed**.
+HFS is the default storage system for these four services, so HFS data can be used directly after connected, [<ins>Connect to data transfer node</ins>](h/docs/user-guides/twcc/hfs/connect-data-transfer-node) **in advanced is no needed**.
 :::

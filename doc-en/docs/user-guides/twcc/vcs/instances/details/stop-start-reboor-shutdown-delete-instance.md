@@ -11,22 +11,21 @@ import TabItem from '@theme/TabItem';
 
 # Stop/start/shutdown/restart/delete an instance
 
-You may stop, start, shutdown, restart, and delete Virtual Compute Service(VCS) instance according to your needs and scenarios.
+You may stop, start, shutdown, restart, and delete Virtual Compute Service (VCS) instances according to your needs and scenarios.
 
 :::info
-For the permission differences in VCS instance between Tenant Admins and Tenant Users, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務).
+For the permission differences in VCS instance between Tenant Admins and Tenant Users, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twsdocs/role-main-en).
 :::
 
 :::tip
-For more information regarding state transitions, **billing**, and the impact of service operations on VCS instances, please refer to [<ins>VCS instance lifecycle</ins>](https://man.twcc.vip/en/docs/vcs/concepts/instance-lifecycle).
+For more information regarding state transitions, **billing**, and the impact of service operations on VCS instances, please refer to [<ins>VCS instance lifecycle</ins>](https://man.twcc.ai/@twccdocs/concept-vcs-lifecycle-en).
 :::
 
 
 <br/>
 
 
-
-## Stop instances
+## Stop an instance
 
 If you will not use the instance for a period of time and want to keep the resources, you can click **STOP** to shutdown and release the instance resources. The VCS instance will show **`Stopping`** state, and prepare to enter the **`Stopped`** state, which means that the resource has been released. In the **`Stopped`** state, **<ins>the instance will no longer be billed</ins>**.
 
@@ -78,7 +77,7 @@ Please do not delete a VCS instance when it is in the **`Stopping`** state, othe
 
 
 
-## Start instances (and boot)
+## Start/restart an instance
 
 To resume and use a stopped instance, or to start an instance that has been shutdown, please click **Start**. The state of the instance will be **`Starting`** in the process of reallocating resources, and prepare for entering the **`Ready`** state again.
 
@@ -111,7 +110,7 @@ Most stopped instances will be created on a new physical host when they are star
 
 
 
-## Reboot instances
+## Reboot an instance
 
 To reboot (turn off and then turn on) an instance in the **`Ready`** state, please click **Reboot**. The state of the instance will be **`Rebooting`** in the process of rebooting, and prepare for entering the **`Ready`** state again.
 
@@ -137,14 +136,14 @@ To reboot (turn off and then turn on) an instance in the **`Ready`** state, plea
 </Tabs>
 
 :::info
-Unlike [<ins>stopping instances</ins>](#stop-instances), after rebooting the instances, except for erasing the memory data, **resources are not released back to the resource pool (including floating IP)**, and the stored data are retained and can still be used after rebooting.
+Unlike [<ins>stopping instances</ins>](#stop-an-instance), after rebooting the instances, except for erasing the memory data, **resources are not released back to the resource pool (including floating IP)**, and the stored data are retained and can still be used after rebooting.
 :::
 
 <br/>
 
 
 
-## Shutdown instances
+## Shutdown an instance
 
 After performing a shutdown, the instance will be in the **`Shutdown`** state. In the **`Shutdown`** state, <ins>**the instance will continue to be billed**</ins>.
 
@@ -162,18 +161,18 @@ The operating restrictions after shutdown are as follows.
 - <i class="fa fa-times" aria-hidden="true"></i> Attach/detach Auto Scaling and Load Balancing Service
 
 :::info
-Unlike [<ins>stopping instances</ins>](#stop-instances), after shutting down the instances, except for erasing the memory data, **resources are not released back to the resource pool**. The stored data are retained and can still be used after starting again.
+Unlike [<ins>stopping instances</ins>](#stop-an-instance), after shutting down the instances, except for erasing the memory data, **resources are not released back to the resource pool**. The stored data are retained and can still be used after starting again.
 :::
 
 <br/>
 
 
-## Delete Instances
+## Delete an instance
 
 To permanantly delete an instance and no longer use it again, please delete the instance.
 
 Other considerations for deletion:
-- The data in the operating system (boot) disk will also be permanently deleted. If you need to keep it, you can [create an instance image](https://man.twcc.vip/en/docs/vcs/user-guides/backup/creation).
+- The data in the operating system (boot) disk will also be permanently deleted. If you need to keep it, you can [create an instance image](/docs/user-guides/twcc/vcs/instances/details/create-image.md).
 - The data disk will be automatically unmounted and kept.
 
 <Tabs>
@@ -223,5 +222,5 @@ twccli ls vcs
 
 :::info
 - A user can only create and delete virtual computing entities 10 times in a minute.
-- If [Delete Protection](https://man.twcc.vip/en/docs/vcs/user-guides/management-and-monitoring/viewInfo-editDesc-deletionProtection#enabledisable-deletion-protection) is enabled, you cannot delete the resource directly, please disable it first and then delete it again.
+- If [Delete Protection](/user-guides/twcc/vcs/instances/details/view-edit-deletion-protection.md#enabledisable-deletion-protection) is enabled, you cannot delete the resource directly, please disable it first and then delete it again.
 :::

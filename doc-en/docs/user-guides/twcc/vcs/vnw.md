@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 Virtual Network service is designed to provide custom virtual network function for VCS instances. Full access to this feature is provided to the Tenant Admins and the Tenant Users only have viewing and usage permissions.
 
 :::info
-For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Frole-compute-en#虛擬運算服務).
+For the permission differences between a Tenant Admin and a Tenant User when using VCS instances, please refer to [<ins>User roles and permissions</ins>](https://man.twcc.ai/@twccdocs/role-main-en).
 :::
 
 
@@ -24,7 +24,7 @@ For the permission differences between a Tenant Admin and a Tenant User when usi
 
 ## Create a default virtual network
 
-If you are first-time user of TWCC VCS, you must create a a **default network** in the Virtual Network service before you can get started. Please refer to [<ins>Create a default network</ins>](https://man.twcc.vip/en/docs/vcs/tutorials/create-default-network/) for the creation steps. If you need to use other network segments later, please refer to the following section to [<ins>create custom VNWs</ins>](#create-custom-vnws).
+If you are first-time user of TWCC VCS, you must create a a **default network** in the Virtual Network service before you can get started. Please refer to [<ins>Create a default network</ins>](https://man.twcc.ai/@twccdocs/howto-vnw-create-default-network-en) for the creation steps. If you need to use other network segments later, please refer to the following section to [<ins>create a custom VNW</ins>](#create-a-custom-virtual-network).
 
 
 <br/>
@@ -85,7 +85,6 @@ twccli mk vnet -cidr 172.16.0.0/24 -gw 172.16.0.254
 
 
 ## Manage virtual networks
-
 
 ### View virtual network information
 

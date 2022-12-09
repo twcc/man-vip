@@ -6,7 +6,7 @@ sync_original_production: 'https://man.twcc.ai/@twccdocs/faq-cli-deploy-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-cli-deploy-zh'
 ---
 
-# TWCC FAQs | TWCC CLI：部署環境
+# FAQs | TWCC CLI：部署環境
 
 <details>
 
@@ -30,7 +30,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-cli-deploy-zh'
 
 <summary> Q3. Credential 錯誤該如何處理？</summary>
 
-Credential 檔錯誤，請執行以下指令清除 Credential 檔，並再次「[進入 TWCC CLI 環境](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-signin-zh)」
+Credential 檔錯誤，請執行以下指令清除 Credential 檔，並再次「[進入 TWCC CLI 環境](https://man.twcc.ai/@twccdocs/guide-cli-signin-zh)」
 
 ```bash
 rm -rf $HOME/.twcc_data

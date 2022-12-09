@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # 連線 Linux 個體：本機為 Linux / macOS
 
-完成[準備工作、取得連線資訊](../prerequisites.md)後，以下提供 2 種連線 Linux 個體 (本機為 Linux/macOS) 的方法，您可選擇任一工具操作。
+完成[準備工作、取得連線資訊](/user-guides/twcc/vcs/instances/details/connect-to-instance/prerequisites.md)後，以下提供 2 種連線 Linux 個體 (本機為 Linux/macOS) 的方法，您可選擇任一工具操作。
 
 :::info
 請注意個體的狀態需為 **`Ready`** 才可連線使用。
@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
 
 <summary><b>1. 內建命令提示字元</b></summary>
 
-開啟本機終端機視窗，依照[<ins>取得的連線資訊</ins>](../prerequisites.md#step-2-取得連線資訊)，依序輸入指令，變更鑰匙對權限、連線至虛擬運算個體。
+開啟本機終端機視窗，依照[<ins>取得的連線資訊</ins>](/user-guides/twcc/vcs/prerequisites-connect-to-instance.md#step-2-取得連線資訊)，依序輸入指令，變更鑰匙對權限、連線至虛擬運算個體。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ab7f8e76a452f95ea2f1e004e10f4e89.png)
 
@@ -79,7 +79,7 @@ import TabItem from '@theme/TabItem';
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_237f5babfff7d1265879f96d3262a60f.png)
 
-- 打開 config 檔後，複製並貼上以下格式，填入一[<ins>虛擬運算個體的資訊</ins>](https://man.twcc.ai/@twccdocs/vcs-guide-connect-prerequisite-zh)；若有多個個體，也可以複製貼上數份修改。輸入完成後請存檔。
+- 打開 config 檔後，複製並貼上以下格式，填入一[<ins>虛擬運算個體的資訊</ins>](/user-guides/twcc/vcs/prerequisites-connect-to-instance.md#step-2-取得連線資訊)；若有多個個體，也可以複製貼上數份修改。輸入完成後請存檔。
 
 ```bash
 Host <INSTANCE_NAME>            # 輸入虛擬運算個體的名稱
@@ -123,7 +123,7 @@ Host <INSTANCE_NAME>            # 輸入虛擬運算個體的名稱
 <br/>
 
 :::info
-若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](../../manage-monitor/console.md)，可加速工作流程。
+若需進行緊急除錯/系統維護工作，建議您透過 [<ins>Console 連線</ins>](/user-guides/twcc/vcs/instances/details/console.md)，可加速工作流程。
 :::
 
 :::caution
