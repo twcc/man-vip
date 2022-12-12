@@ -70,7 +70,7 @@ GPU 容器服務所使用之 GPU 皆為 NVIDIA V100 32GB，具有強大之計算
 
 a. 容器使用者界面監控：GPU用量、記憶體使用量
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_4e2d1540341ff81fef49dad87774f4c3.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_698c59629219b57e836820798221b30f.png)
 
 b. 容器 Jupyter Notebook 之 Terminal 內：執行以下程式，可監控 GPU 溫度及電量
 
