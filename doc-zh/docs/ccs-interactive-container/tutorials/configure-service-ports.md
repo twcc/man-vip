@@ -16,7 +16,7 @@ TWCC 容器採用 Port-Forwarding 技術，可將外部連線轉發至相同網�
 
 - 容器建立後，開啟 Jupyter Notebook :arrow_right: Terminal
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7adcd4b991852eb4a7f4d05b98f6adff.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2cf780942b130495ef77f58b574277a1.png)
 
 ## 架設網頁服務、設定服務 port
 
@@ -34,11 +34,11 @@ wget -O - https://bit.ly/TWCC_TestServicePort5002 | bash
         
 - 回到容器詳細資料頁，點選「關聯」服務埠 :arrow_right: 勾選服務 daemon 的所在埠號 `5002` :arrow_right: 點選「確認」
         
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a83708e0a486692acf4221e824667adf.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_45de17f6423b52bb12bd0d6476d8d783.png)
         
-- 完成後，系統將分配一「目標埠」(53055)，對應至對外埠 (5002)
+- 完成後，系統將分配一「目標埠」(52522)，對應至對外埠 (5002)
         
-![](https://i.imgur.com/a9wXd1e.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3641009d5980325fac808cee20058199.png)
 
 ## 使用網頁服務
         

@@ -55,15 +55,11 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-activate
 基本設定　：c.super
 ```
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7f8c824a5a6c6dffee5d5730c0de2167.png)
-
 <br/>
 
 ## SSH 連線進入容器
 
 於「開發型容器管理」頁面待開發型容器的狀態轉為「Ready」時，點選該容器進入「開發型容器詳細資料」頁面。可透過 Jupyter Notebook 或 SSH 連線使用容器。本教學內容採用 SSH 連線，詳細步驟請參閱 [使用 SSH 登入連線](../user-guides/create-connect/connect-container.md#ssh)。
-
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8c81f37d2a9e43f40f56e86233e6a46d.png)
 
 <br/>
 

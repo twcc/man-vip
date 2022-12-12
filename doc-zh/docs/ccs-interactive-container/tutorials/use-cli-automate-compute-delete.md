@@ -88,4 +88,4 @@ bash auto.sh
 
 您可在程式執行完後，在**開發型容器管理頁**確認容器已從列表上刪除。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_6f73878fe713665b83fe7160e460ba57.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2c6502adf7a13de19abb0522ff987d09.png)

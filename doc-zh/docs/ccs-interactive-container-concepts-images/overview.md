@@ -25,7 +25,7 @@ TWCC 提供多種 [NGC](https://www.nvidia.com/zh-tw/gpu-cloud/containers/) AI �
 
 - **自訂映像檔 (Custom Image)**
 
-    使用上述 TWCC 映像檔建立容器後，您可以部署所需套件，並建立[容器複本](/docs/ccs-interactive-container/user-guides/duplicate-backup/duplicates.md)將環境打包成自訂映像檔 (Custom Image)，即可重複建立相同環境。
+    使用上述 TWCC 映像檔建立容器後，您可以部署所需套件，並建立[容器映像檔](/docs/ccs-interactive-container/user-guides/duplicate-backup/duplicates.md)將環境打包成自訂映像檔 (Custom Image)，即可重複建立相同環境。
 
 <br/>
 
@@ -44,7 +44,7 @@ TWCC 提供多種 [NGC](https://www.nvidia.com/zh-tw/gpu-cloud/containers/) AI �
 
 ## 版本與功能
 
-- [容器複本](/docs/ccs-interactive-container/user-guides/duplicate-backup/duplicates.md)：19.08 (含)後之版本才有支援此功能。
+- [容器映像檔](/docs/ccs-interactive-container/user-guides/duplicate-backup/duplicates.md)：19.08 (含)後之版本才有支援此功能。
 - SSL 加密：20.xx 後之版本才有支援此功能。
 - Jupyter Notebook：20.xx 後之版本才有支援此功能。
 - 指令操作紀錄：21.08 (含) 後之版本，可使用 `history` 指令檢視紀錄。

@@ -13,13 +13,13 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/howto-ccs-keep-you
 
 ### Step 1. 在 TWCC 點入已建立的開發型容器
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b80f4c5bd37f84415e70631e909acedf.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_584d42d265240bf0eccf13f5212dec3c.png)
 
 
 
 ### Step 2. 開啟 Jupyter Notebook 連線容器
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9cb4f7a435d9b3ce9753a53980f80923.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_3dd30b3a92dab74d84d47c418c0409ce.png)
 
 
 

@@ -70,7 +70,7 @@ bash V3_training.sh --path ./cifar-10-python.tar.gz
  
 - 在訓練過程中，可在「**開發型容器詳細資料**」頁面可檢視 CPU/GPU、記憶體與網路的資源使用狀況
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_478e0058ec490e285909748ed46c5781.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2ef18233ad6eb992628732bda6d8214b.png)
 
 
  
@@ -111,7 +111,7 @@ bash V3_inference.sh
 
 - 請先至開發型容器詳細資料頁 :arrow_right: 點選「**關聯**」服務埠 :arrow_right: 勾選「**5001**」 :arrow_right: 再按下確定便可開啟 HTTP 網頁服務端點
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e7c40c0c9fce17a0187f1f12be330b80.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d6dbdbe1bae54e92b5dc9a40328e4c32.png)
 
 
 - 開啟瀏覽器 :arrow_right: 在網址列輸入 **`容器公用IP:對外埠`** (如下，可於容器詳細資料頁查詢) 便可開始使用 AI Inference 的服務
@@ -135,5 +135,5 @@ bash V3_inference.sh
 
 **容器建立後即持續計費**，若不再需要執行訓練與推論，您可以從 TWCC 「**開發型容器管理**」頁，勾選容器、點選「**刪除**」，回收資源並停止計費。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a18ff79ec4afc015c2129eb96b44ccb0.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_eaaa9616757a26b4fb84eee8e03265a6.png)
 
