@@ -27,11 +27,11 @@ import TabItem from '@theme/TabItem';
 - 於「**開發型容器管理**」頁可檢視基本資訊。
 - 也可以點選特定容器，進入「**開發型容器詳細資料**」頁檢視更多容器資訊。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_66e8d42357ff675c82a5f267559461c0.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7c026f7985e9529fb766b8089aafec03.png)
 
 
 - 進入開發型容器詳細資料「**配置**」頁面，可以檢視容器的基本資訊、網路、儲存等資訊，連線登入使用該容器
-- 或執行「**複本**」、「**删除**」、「**重新整理**」、查看「**容器日誌**」、啟用或關閉「**刪除保護機制**」等功能。
+- 或執行「**映像檔**」、「**删除**」、「**重新整理**」、查看「**容器日誌**」、啟用或關閉「**刪除保護機制**」等功能。
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cf118734826fcdd287da97a30865c0d5.png)
 
@@ -84,7 +84,7 @@ twccli ls ccs -all
 
 - 另外也可於「**開發型容器詳細資料**」頁，點選上方「**刪除**」刪除容器。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_2881ea99d7be4882eab6634184a14f8d.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8b202031cfadf8615087e2c6ba23e084.png)
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">

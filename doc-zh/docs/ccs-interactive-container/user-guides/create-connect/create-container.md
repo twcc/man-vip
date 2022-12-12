@@ -38,7 +38,7 @@ import TabItem from '@theme/TabItem';
 您可在「**所有服務**」點選服務左邊的星號 <i class="fa fa-star-o" aria-hidden="true"></i>，將常用的服務釘選至「**我的最愛**」，加速使用流程。
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1c43aab7948fc1f045440c590f458fea.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bf66c7b6f9ffb8304d29715d9737f08d.png)
 
 * 選擇映像檔類型：您可瀏覽並選擇 NGC 優化之深度學習框架，或直接於左上方搜尋欲使用的框架名稱 (例：PyTorch, TensorFlow...等)。
 
@@ -68,8 +68,7 @@ import TabItem from '@theme/TabItem';
 
 * 點擊「**下一步：檢閱+建立>**」，檢視整個容器的規格和價格，確定後點選「**建立**」即完成。
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_0eab8ab1660cace6b843aea7cbb1e808.png)
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cb943abf574920c1a1a46b62e4695590.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_db89c4da803f39e1c9b1352df93bb3bf.png)
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
