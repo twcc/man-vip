@@ -39,7 +39,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/concept-ccs-lifecy
 若要將容器永久刪除，不再使用，在點選刪除後，個體狀態將呈現 **`Deleting`** ，<ins>**即不再計費**</ins>，刪除完成後，容器將從列表上消失。
 
 其他刪除的注意事項：
-- 容器系統目錄下的資料將永久刪除，若需保留可建立[容器映像檔](https://man.twcc.ai/@twccdocs/guide-ccs-duplicate-zh)。
+- 容器系統目錄下的資料將永久刪除，若需保留可建立[容器映像檔](./container-images.md)。
 - /home、/work 資料 (高速檔案系統儲存空間) 將會留存，不會隨容器刪除而清除。
 
 :::info
