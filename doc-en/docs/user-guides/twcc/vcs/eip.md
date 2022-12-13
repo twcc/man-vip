@@ -32,7 +32,7 @@ There is no guarantee that you will get the same IP when the resource is assigne
 
 | Specifications | Subscription | Per Plan Quota Cap | Billing and Pricing |
 | -------- | -------- | -------- | -------- |
-| Static IP | Subscription required before assigning it to the resource | Up to 5 subscriptions | [TWS User](https://man.twcc.ai/@twsdocs/pricing-zh#%E5%BD%88%E6%80%A7-IP-Elastic-IP-EIP) |
+| Static IP | Subscription required before assigning it to the resource | Up to 5 subscriptions | [TWS User](/docs/pricing#elastic-ip-eip) |
 | Floating IP | No subscription required, can be assigned directly to the resource | Adjusted to a maximum of 10 from 2022/1/14 | N/A |
 
 :::info
