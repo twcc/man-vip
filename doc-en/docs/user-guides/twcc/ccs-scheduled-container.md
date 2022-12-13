@@ -13,7 +13,7 @@ Scheduled Container allows you to specify the start time of calculations on requ
 
 ## Create a scheduled container
 
-* Click **Scheduled Containers** from the list of services, and then click **CREATE** on the **Scheduled Containers** screen.
+* Click **Scheduled Containers** from the list of services, and then click **CREATE** on the **Scheduled Containers** page.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_aef40da5de183bb3542ebdb3720cb661.png)
 
