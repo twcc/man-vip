@@ -6,8 +6,7 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/UserPortalHistory_
 
 # TWCC Release Notes
 ## Year 2022
-## Year 2022
-### Dec 09, 2022
+### Dec 09, 2022 (version: 1e4cca43)
 - **UI**
     - <font style={{'background-color':'#27A5BD','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}> <b>&nbsp;Feature&nbsp;</b></font></font>&ensp;<font style={{'background-color':'#008ad8','border-radius':'30px','padding':'0.3em','font-size':'12px'}}><font style={{'color':'white'}}><b>&nbsp;Enterprise&nbsp;</b></font></font>&ensp; <a href="https://docs.twcc.ai/">TWCC Enterprise Documentation</a> officially released! <a href="https://tws.twcc.ai/">Sign into TWCC</a> and check the new doc links!  
 - **VCS**

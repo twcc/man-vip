@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+slug: '/concepts-tutorials/twcc/vcs/tutorials/best-practice-create-images'
 title: '建立映像檔最佳作法'
 sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-vcs-snapshot-best-practice-zh'
 sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-vcs-snapshot-best-practice-zh'
