@@ -1,0 +1,9 @@
+{
+  "label": "Containers",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Check the categories or documents below to learn more about containers.",
+    "slug": "/user-guides/twcc/ccs-interactive-container/containers"
+  }
+}

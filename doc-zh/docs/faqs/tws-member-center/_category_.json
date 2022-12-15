@@ -1,0 +1,9 @@
+{
+  "label": "會員中心",
+  "position": 2,
+  "collapsible": false,
+  "link": {
+    "type": "generated-index",
+    "slug": "/faqs/tws-member-center"
+  }
+}

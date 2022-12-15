@@ -231,7 +231,7 @@
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "homepage.title": {
-    "message": "台灣智慧雲端",
+    "message": "TWCC 企業版文件",
     "description": "首頁標題"
   },
   "homepage.tagline": {
@@ -243,15 +243,47 @@
     "description": "首頁"
   },
   "homepage.services.GPU.title": {
-    "message": "快速部署",
+    "message": "開始使用容器",
     "description": "連結至開始"
+  },
+  "homepage.services.GPU.start": {
+    "message": "快速上手",
+    "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
+  },
+  "homepage.services.GPU.create": {
+    "message": "建立第一個開發型容器",
+    "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
+  },
+  "homepage.services.GPU.link": {
+    "message": "連線您的容器",
+    "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
+  },
+  "homepage.services.GPU.training": {
+    "message": "訓練影像辨識模型, 生成推論引擎",
+    "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
   },
   "homepage.services.GPU.desc": {
     "message": "容器運算服務 (CCS) 可快速部署 GPU 處理器的工作環境，提高 29% 的工作效率！",
     "description": "Container Compute Service provides rapid deployment of GPU working environment and improves work efficiency by 29%."
   },
   "homepage.services.HPC.title": {
-    "message": "有效統御",
+    "message": "開始使用 AIHPC",
+    "description": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency."
+  },
+  "homepage.services.HPC.start": {
+    "message": "快速上手",
+    "description": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency."
+  },
+  "homepage.services.HPC.link": {
+    "message": "連線台灣杉二號",
+    "description": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency."
+  },
+  "homepage.services.HPC.queue": {
+    "message": "Queue 與計算資源",
+    "description": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency."
+  },
+  "homepage.services.HPC.cross": {
+    "message": "跨節點高速運算",
     "description": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency."
   },
   "homepage.services.HPC.desc": {
@@ -259,7 +291,23 @@
     "description": "Deploy a multi-node, multi-GPU, distributed high-performance parallel computing environment that produces at least 30% higher efficiency."
   },
   "homepage.services.VM.title": {
-    "message": "智算兼備",
+    "message": "開始使用虛擬機",
+    "description": "Create a safe, secure, and flexible Virtual Compute Service instance in short order."
+  },
+  "homepage.services.VM.start": {
+    "message": "快速上手",
+    "description": "Create a safe, secure, and flexible Virtual Compute Service instance in short order."
+  },
+  "homepage.services.VM.create": {
+    "message": "建立第一個虛擬運算個體",
+    "description": "Create a safe, secure, and flexible Virtual Compute Service instance in short order."
+  },
+  "homepage.services.VM.link": {
+    "message": "連線您的個體",
+    "description": "Create a safe, secure, and flexible Virtual Compute Service instance in short order."
+  },
+  "homepage.services.VM.host": {
+    "message": "架設安全, 可附載高流量的服務",
     "description": "Create a safe, secure, and flexible Virtual Compute Service instance in short order."
   },
   "homepage.services.VM.desc": {
@@ -267,7 +315,23 @@
     "description": "Create a safe, secure, and flexible Virtual Compute Service instance in short order."
   },
   "homepage.services.HSS.title": {
-    "message": "數據匯集",
+    "message": "開始使用儲存",
+    "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
+  },
+  "homepage.services.HSS.start": {
+    "message": "快速上手",
+    "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
+  },
+  "homepage.services.HSS.create": {
+    "message": "建立第一個 COS 儲存體",
+    "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
+  },
+  "homepage.services.HSS.upload": {
+    "message": "上傳您的檔案",
+    "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
+  },
+  "homepage.services.HSS.sync": {
+    "message": "備份/同步, 還原運算資源",
     "description": "Sign up and get 100 GB + 100 GB of free Hyper File System storage!"
   },
   "homepage.services.HSS.desc": {

@@ -1,0 +1,9 @@
+{
+  "label": "TWCC",
+  "position": 3,
+  "collapsible": false,
+  "link": {
+    "type": "generated-index",
+    "slug": "/faqs/twcc"
+  }
+}

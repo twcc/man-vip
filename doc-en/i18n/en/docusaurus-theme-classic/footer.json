@@ -1,15 +1,23 @@
 {
-  "link.title.Docs": {
-    "message": "Docs",
-    "description": "The title of the footer links column with title=Docs in the footer"
+  "link.title.Member Center": {
+    "message": "Member Center",
+    "description": "The title of the footer links column with title=Member Center in the footer"
   },
-  "link.title.Members": {
-    "message": "Members",
-    "description": "The title of the footer links column with title=Members in the footer"
+  "link.title.TWS": {
+    "message": "TWS",
+    "description": "The title of the footer links column with title=TWS in the footer"
   },
-  "link.title.More": {
-    "message": "More",
-    "description": "The title of the footer links column with title=More in the footer"
+  "link.title.Feedback": {
+    "message": "Feedback",
+    "description": "The title of the footer links column with title=Feedback in the footer"
+  },
+  "link.item.label.Official": {
+    "message": "Official Website",
+    "description": "The title of the footer links column with title=Official in the footer"
+  },
+  "link.item.label.Contact Us": {
+    "message": "Contact Us",
+    "description": "The title of the footer links column with title=Contact Us in the footer"
   },
   "link.item.label.Overview": {
     "message": "Overview",

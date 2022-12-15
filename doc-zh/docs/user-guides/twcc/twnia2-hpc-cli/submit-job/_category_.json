@@ -1,0 +1,9 @@
+{
+  "label": "提交工作",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "請點擊以下分類、文件以了解更多服務詳細資訊。",
+    "slug": "/user-guides/twcc/twnia2-hpc-cli/submit-jobs"
+  }
+}

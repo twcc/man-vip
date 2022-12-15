@@ -1,0 +1,9 @@
+{
+  "label": "Data disks",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Check the categories or documents below to learn more about data disks",
+    "slug": "/user-guides/twcc/vcs/vds/data-disks"
+  }
+}

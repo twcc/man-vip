@@ -1,0 +1,9 @@
+{
+  "label": "容器詳細資訊",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "請點擊以下分類、文件以了解更多容器詳細資訊頁的功能。",
+    "slug": "/user-guides/twcc/ccs-interactive-container/container-details"
+  }
+}

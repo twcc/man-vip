@@ -1378,7 +1378,7 @@
     "utility-types" "^3.10.0"
     "webpack" "^5.73.0"
 
-"@docusaurus/plugin-content-docs@^2.0.1", "@docusaurus/plugin-content-docs@2.2.0":
+"@docusaurus/plugin-content-docs@^2.0.0-rc.1", "@docusaurus/plugin-content-docs@^2.0.1", "@docusaurus/plugin-content-docs@2.2.0":
   "integrity" "sha512-BOazBR0XjzsHE+2K1wpNxz5QZmrJgmm3+0Re0EVPYFGW8qndCWGNtXW/0lGKhecVPML8yyFeAmnUCIs7xM2wPw=="
   "resolved" "https://registry.npmjs.org/@docusaurus/plugin-content-docs/-/plugin-content-docs-2.2.0.tgz"
   "version" "2.2.0"
@@ -1560,7 +1560,7 @@
     "tslib" "^2.4.0"
     "utility-types" "^3.10.0"
 
-"@docusaurus/theme-translations@2.2.0":
+"@docusaurus/theme-translations@^2.0.0-rc.1", "@docusaurus/theme-translations@2.2.0":
   "integrity" "sha512-3T140AG11OjJrtKlY4pMZ5BzbGRDjNs2co5hJ6uYJG1bVWlhcaFGqkaZ5lCgKflaNHD7UHBHU9Ec5f69jTdd6w=="
   "resolved" "https://registry.npmjs.org/@docusaurus/theme-translations/-/theme-translations-2.2.0.tgz"
   "version" "2.2.0"
@@ -1596,14 +1596,14 @@
     "webpack" "^5.73.0"
     "webpack-merge" "^5.8.0"
 
-"@docusaurus/utils-common@2.2.0":
+"@docusaurus/utils-common@^2.0.0-rc.1", "@docusaurus/utils-common@2.2.0":
   "integrity" "sha512-qebnerHp+cyovdUseDQyYFvMW1n1nv61zGe5JJfoNQUnjKuApch3IVsz+/lZ9a38pId8kqehC1Ao2bW/s0ntDA=="
   "resolved" "https://registry.npmjs.org/@docusaurus/utils-common/-/utils-common-2.2.0.tgz"
   "version" "2.2.0"
   dependencies:
     "tslib" "^2.4.0"
 
-"@docusaurus/utils-validation@^2.0.1", "@docusaurus/utils-validation@2.2.0":
+"@docusaurus/utils-validation@^2.0.0-rc.1", "@docusaurus/utils-validation@^2.0.1", "@docusaurus/utils-validation@2.2.0":
   "integrity" "sha512-I1hcsG3yoCkasOL5qQAYAfnmVoLei7apugT6m4crQjmDGxq+UkiRrq55UqmDDyZlac/6ax/JC0p+usZ6W4nVyg=="
   "resolved" "https://registry.npmjs.org/@docusaurus/utils-validation/-/utils-validation-2.2.0.tgz"
   "version" "2.2.0"
@@ -1614,7 +1614,7 @@
     "js-yaml" "^4.1.0"
     "tslib" "^2.4.0"
 
-"@docusaurus/utils@^2.0.1", "@docusaurus/utils@2.2.0":
+"@docusaurus/utils@^2.0.0-rc.1", "@docusaurus/utils@^2.0.1", "@docusaurus/utils@2.2.0":
   "integrity" "sha512-oNk3cjvx7Tt1Lgh/aeZAmFpGV2pDr5nHKrBVx6hTkzGhrnMuQqLt6UPlQjdYQ3QHXwyF/ZtZMO1D5Pfi0lu7SA=="
   "resolved" "https://registry.npmjs.org/@docusaurus/utils/-/utils-2.2.0.tgz"
   "version" "2.2.0"
@@ -1634,6 +1634,36 @@
     "tslib" "^2.4.0"
     "url-loader" "^4.1.1"
     "webpack" "^5.73.0"
+
+"@easyops-cn/autocomplete.js@^0.38.1":
+  "integrity" "sha512-drg76jS6syilOUmVNkyo1c7ZEBPcPuK+aJA7AksM5ZIIbV57DMHCywiCr+uHyv8BE5jUTU98j/H7gVrkHrWW3Q=="
+  "resolved" "https://registry.npmjs.org/@easyops-cn/autocomplete.js/-/autocomplete.js-0.38.1.tgz"
+  "version" "0.38.1"
+  dependencies:
+    "cssesc" "^3.0.0"
+    "immediate" "^3.2.3"
+
+"@easyops-cn/docusaurus-search-local@^0.33.5":
+  "integrity" "sha512-3UqsJ42akhHDSlW9SravWQF5ZUI5VEKlzt50djbRRjDdJGefe1v9FpBKVdqHtPPFefcJoagtpfK4/R3dtDeEhw=="
+  "resolved" "https://registry.npmjs.org/@easyops-cn/docusaurus-search-local/-/docusaurus-search-local-0.33.6.tgz"
+  "version" "0.33.6"
+  dependencies:
+    "@docusaurus/plugin-content-docs" "^2.0.0-rc.1"
+    "@docusaurus/theme-translations" "^2.0.0-rc.1"
+    "@docusaurus/utils" "^2.0.0-rc.1"
+    "@docusaurus/utils-common" "^2.0.0-rc.1"
+    "@docusaurus/utils-validation" "^2.0.0-rc.1"
+    "@easyops-cn/autocomplete.js" "^0.38.1"
+    "@node-rs/jieba" "^1.6.0"
+    "cheerio" "^1.0.0-rc.3"
+    "clsx" "^1.1.1"
+    "debug" "^4.2.0"
+    "fs-extra" "^10.0.0"
+    "klaw-sync" "^6.0.0"
+    "lunr" "^2.3.9"
+    "lunr-languages" "^1.4.0"
+    "mark.js" "^8.11.1"
+    "tslib" "^2.4.0"
 
 "@exodus/schemasafe@^1.0.0-rc.2":
   "integrity" "sha512-dGGHpb61hLwifAu7sotuHFDBw6GTdpG8aKC0fsK17EuTzMRvUrH7lEAr6LTJ+sx3AZYed9yZ77rltVDHyg2hRg=="
@@ -1772,6 +1802,35 @@
   "integrity" "sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA=="
   "resolved" "https://registry.npmjs.org/@mdx-js/util/-/util-1.6.22.tgz"
   "version" "1.6.22"
+
+"@node-rs/jieba-linux-x64-gnu@1.6.1":
+  "integrity" "sha512-f6hhlrbi2wel0xZG7m3Wvksimt9MSu1f3aYO2Kwavf4qjMRZqJzLz9HlCJAal6AXB9Qgg+685P+gftsWve47qw=="
+  "resolved" "https://registry.npmjs.org/@node-rs/jieba-linux-x64-gnu/-/jieba-linux-x64-gnu-1.6.1.tgz"
+  "version" "1.6.1"
+
+"@node-rs/jieba-linux-x64-musl@1.6.1":
+  "integrity" "sha512-cTVcdR6zWqpnmdEUyWEII9zfE5lTeWN53TbiOPx8TCA+291/31Vqd7GA8YEPndUO8qgCx5uShSDFStBAEIhYNQ=="
+  "resolved" "https://registry.npmjs.org/@node-rs/jieba-linux-x64-musl/-/jieba-linux-x64-musl-1.6.1.tgz"
+  "version" "1.6.1"
+
+"@node-rs/jieba@^1.6.0":
+  "integrity" "sha512-pISKu8NIYKRvZp7mhYZYA8VCjJMqTsCe+mQcFFnAi3GNJsijGjef2peMFeDcvP72X8MsnNeYeg3rHkAybtefyQ=="
+  "resolved" "https://registry.npmjs.org/@node-rs/jieba/-/jieba-1.6.1.tgz"
+  "version" "1.6.1"
+  optionalDependencies:
+    "@node-rs/jieba-android-arm-eabi" "1.6.1"
+    "@node-rs/jieba-android-arm64" "1.6.1"
+    "@node-rs/jieba-darwin-arm64" "1.6.1"
+    "@node-rs/jieba-darwin-x64" "1.6.1"
+    "@node-rs/jieba-freebsd-x64" "1.6.1"
+    "@node-rs/jieba-linux-arm-gnueabihf" "1.6.1"
+    "@node-rs/jieba-linux-arm64-gnu" "1.6.1"
+    "@node-rs/jieba-linux-arm64-musl" "1.6.1"
+    "@node-rs/jieba-linux-x64-gnu" "1.6.1"
+    "@node-rs/jieba-linux-x64-musl" "1.6.1"
+    "@node-rs/jieba-win32-arm64-msvc" "1.6.1"
+    "@node-rs/jieba-win32-ia32-msvc" "1.6.1"
+    "@node-rs/jieba-win32-x64-msvc" "1.6.1"
 
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="
@@ -3068,7 +3127,7 @@
     "domhandler" "^5.0.3"
     "domutils" "^3.0.1"
 
-"cheerio@^1.0.0-rc.12":
+"cheerio@^1.0.0-rc.12", "cheerio@^1.0.0-rc.3":
   "integrity" "sha512-VqR8m68vM46BNnuZ5NtnGBKIE/DfN0cRIzg9n40EIq9NOv90ayxLBXA8fXC5gquFRGJSTRqBq25Jt2ECLR431Q=="
   "resolved" "https://registry.npmjs.org/cheerio/-/cheerio-1.0.0-rc.12.tgz"
   "version" "1.0.0-rc.12"
@@ -4153,7 +4212,7 @@
   dependencies:
     "ms" "2.0.0"
 
-"debug@^4.0.0", "debug@^4.1.0", "debug@^4.1.1", "debug@^4.3.4", "debug@4":
+"debug@^4.0.0", "debug@^4.1.0", "debug@^4.1.1", "debug@^4.2.0", "debug@^4.3.4", "debug@4":
   "integrity" "sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ=="
   "resolved" "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz"
   "version" "4.3.4"
@@ -4951,7 +5010,7 @@
   "resolved" "https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz"
   "version" "0.5.2"
 
-"fs-extra@^10.1.0":
+"fs-extra@^10.0.0", "fs-extra@^10.1.0":
   "integrity" "sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ=="
   "resolved" "https://registry.npmjs.org/fs-extra/-/fs-extra-10.1.0.tgz"
   "version" "10.1.0"
@@ -5154,7 +5213,7 @@
     "to-readable-stream" "^1.0.0"
     "url-parse-lax" "^3.0.0"
 
-"graceful-fs@^4.1.2", "graceful-fs@^4.1.6", "graceful-fs@^4.2.0", "graceful-fs@^4.2.4", "graceful-fs@^4.2.6", "graceful-fs@^4.2.9":
+"graceful-fs@^4.1.11", "graceful-fs@^4.1.2", "graceful-fs@^4.1.6", "graceful-fs@^4.2.0", "graceful-fs@^4.2.4", "graceful-fs@^4.2.6", "graceful-fs@^4.2.9":
   "integrity" "sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA=="
   "resolved" "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.10.tgz"
   "version" "4.2.10"
@@ -5585,6 +5644,11 @@
   "version" "1.0.2"
   dependencies:
     "queue" "6.0.2"
+
+"immediate@^3.2.3":
+  "integrity" "sha512-HR7EVodfFUdQCTIeySw+WDRFJlPcLOJbXfwwZ7Oom6tjsvZ3bOkCDJHehQC3nxJrv7+f9XecwazynjU8e4Vw3Q=="
+  "resolved" "https://registry.npmjs.org/immediate/-/immediate-3.3.0.tgz"
+  "version" "3.3.0"
 
 "immer@^9.0.7":
   "integrity" "sha512-qenGE7CstVm1NrHQbMh8YaSzTZTFNP3zPqr3YU0S0UY441j4bJTg4A2Hh5KAhwgaiU6ZZ1Ar6y/2f4TblnMReQ=="
@@ -6060,6 +6124,13 @@
   "resolved" "https://registry.npmjs.org/kind-of/-/kind-of-6.0.3.tgz"
   "version" "6.0.3"
 
+"klaw-sync@^6.0.0":
+  "integrity" "sha512-nIeuVSzdCCs6TDPTqI8w1Yre34sSq7AkZ4B3sfOBbI2CgVSB4Du4aLQijFU2+lhAFCwt9+42Hel6lQNIv6AntQ=="
+  "resolved" "https://registry.npmjs.org/klaw-sync/-/klaw-sync-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "graceful-fs" "^4.1.11"
+
 "kleur@^3.0.3":
   "integrity" "sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w=="
   "resolved" "https://registry.npmjs.org/kleur/-/kleur-3.0.3.tgz"
@@ -6209,12 +6280,27 @@
   dependencies:
     "yallist" "^4.0.0"
 
+"lunr-languages@^1.4.0":
+  "integrity" "sha512-BBjKKcwrieJlzwwc9M5H/MRXGJ2qyOSDx/NXYiwkuKjiLOOoouh0WsDzeqcLoUWcX31y7i8sb8IgsZKObdUCkw=="
+  "resolved" "https://registry.npmjs.org/lunr-languages/-/lunr-languages-1.10.0.tgz"
+  "version" "1.10.0"
+
+"lunr@^2.3.9":
+  "integrity" "sha512-zTU3DaZaF3Rt9rhN3uBMGQD3dD2/vFQqnvZCDv4dl5iOzq2IZQqTxu90r4E5J+nP70J3ilqVCrbho2eWaeW8Ow=="
+  "resolved" "https://registry.npmjs.org/lunr/-/lunr-2.3.9.tgz"
+  "version" "2.3.9"
+
 "make-dir@^3.0.0", "make-dir@^3.0.2", "make-dir@^3.1.0":
   "integrity" "sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw=="
   "resolved" "https://registry.npmjs.org/make-dir/-/make-dir-3.1.0.tgz"
   "version" "3.1.0"
   dependencies:
     "semver" "^6.0.0"
+
+"mark.js@^8.11.1":
+  "integrity" "sha512-1I+1qpDt4idfgLQG+BNWmrqku+7/2bi5nLf4YwF8y8zXvmfiTBY3PV3ZibfrjBueCByROpuBjLLFCajqkgYoLQ=="
+  "resolved" "https://registry.npmjs.org/mark.js/-/mark.js-8.11.1.tgz"
+  "version" "8.11.1"
 
 "markdown-escapes@^1.0.0":
   "integrity" "sha512-8z4efJYk43E0upd0NbVXwgSTQs6cT3T06etieCMEg7dRbzCbxUCK/GHlX8mhHRDcp+OLlHkPKsvqQTCvsRl2cg=="

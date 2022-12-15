@@ -1,0 +1,10 @@
+{
+  "label": "Cloud File Service",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Check the overview and user guides of TWCC Cloud File Service to quickly understand the basic operations.",
+    "slug": "/user-guides/twcc/cfs"
+
+  }
+}

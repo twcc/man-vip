@@ -9,7 +9,7 @@ const env_list = {
   },
   set_edit_url = (locale, versionDocsDirPath, docPath) => {
   const baseUrl = `https://github.dev/twcc/man-vip/blob/tws-sync`,
-        zhUrl = `${baseUrl}/doc-zh/${versionDocsDirPath}/${docPath}`;
+  zhUrl = `${baseUrl}/doc-zh/${versionDocsDirPath}/${docPath}`;
   if (docPath === 'releaseNotes.md') return zhUrl;
   const rdir = i18nDirPath[versionDocsDirPath];
   // if (locale !== "zh-Hant" && rdir) return `${baseUrl}/i18n/${locale}/${versionDocsDirPath.replace(versionDocsDirPath,rdir)}/${docPath}`;
@@ -30,7 +30,7 @@ const config = {
   baseUrl: "/en/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon-150x150.ico",
 
   organizationName: "TWS Co. Ltd.", // Usually your GitHub org/user name.
   projectName: "Manual", // Usually your repo name.
@@ -85,22 +85,22 @@ const config = {
               categoryLinkSource: "tag"
             }
           },
-          Harbor: {
-            specPath: "openapi/Harbor.yaml",
-            outputDir: "docs/api/Harbor",
-            sidebarOptions: {
-              groupPathsBy: "tag",
-              categoryLinkSource: "tag"
-            }
-          },
-          Slurm: {
-            specPath: "openapi/Slurm.yaml",
-            outputDir: "docs/api/Slurm",
-            sidebarOptions: {
-              groupPathsBy: "tag",
-              categoryLinkSource: "tag"
-            }
-          },
+          // Harbor: {
+          //   specPath: "openapi/Harbor.yaml",
+          //   outputDir: "docs/api/Harbor",
+          //   sidebarOptions: {
+          //     groupPathsBy: "tag",
+          //     categoryLinkSource: "tag"
+          //   }
+          // },
+          // Slurm: {
+          //   specPath: "openapi/Slurm.yaml",
+          //   outputDir: "docs/api/Slurm",
+          //   sidebarOptions: {
+          //     groupPathsBy: "tag",
+          //     categoryLinkSource: "tag"
+          //   }
+          // },
           VCS: {
             specPath: "openapi/VCS.yaml",
             outputDir: "docs/api/VCS",
@@ -113,7 +113,19 @@ const config = {
       }
     ]
   ],
-  themes: ["docusaurus-theme-openapi-docs"],
+  themes: [
+    "docusaurus-theme-openapi-docs",
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        // For Docs using Chinese, The `language` is recommended to set to:
+        language: ["en", "zh"],
+      })
+    ]
+  ],
   presets: [
     [
       "@docusaurus/preset-classic",
@@ -132,7 +144,7 @@ const config = {
           customCss: require.resolve("./src/css/custom.scss"),
         },
         gtag: {
-          trackingID: 'G-F5GVR17GX6',
+          trackingID: 'G-QT1ZTGMJNS',
           anonymizeIP: true,
         }
       })
@@ -145,7 +157,7 @@ const config = {
       announcementBar: {
         id: "support_us",
         content:
-          'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSc3uAALuDF8nGkpF7VSM2BGZRWgh-SAdvz5X2IgcaTcrM1H2Q/viewform">this survey</a>',
+          'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSc3uAALuDF8nGkpF7VSM2BGZRWgh-SAdvz5X2IgcaTcrM1H2Q/viewform">this survey.</a></a>&ensp; We care what you think!',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: false,
@@ -158,25 +170,28 @@ const config = {
         },
         items: [
           {
-            type: "docSidebar",
-            sidebarId: "tutorialSidebar",
-            label: "Docs",
+            label: "Guidance",
             position: "left",
+            to: "/docs/user-guides"			
             /**type: "doc",
             label: "Docs",
             docId: "introduction",
             position: "left",*/
           },
           {
+            label: "FAQ",
+            position: "left",
+            to: "/docs/faqs"		
+          },
+          /**{
+            label: "tutorial",
+            position: "left",
+			to: "/docs/concepts-tutorials/services",
+          },*/
+          {
             label: "API",
             position: "left",
             to: "/docs/api/CCS"
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "faq",
-            label: "FAQ",
-            position: "left",
           },
           {
             type:"doc",
@@ -193,45 +208,44 @@ const config = {
           {
             type: "localeDropdown",
             position: "right",
-          },
-          {
-            href: "https://github.com/twcc/man-vip/",
-            label: "GitHub",
-            position: "right",
-          },
-        ],
+          }
+        ]
       },
       footer: {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "TWS",
             items: [
               {
-                label: "Overview",
-                to: "/docs/overview",
+                label: "Official",
+                href: "https://tws.twcc.ai/?lang=en",
+              },
+              {
+                label: "Contact Us",
+                href: "https://tws.twcc.ai/contact-us/?lang=en",
               },
             ],
           },
           {
-            title: "Members",
+            title: "Member Center",
             items: [
+              {
+                label: "Enterprise Users",
+                href: "https://login.twcc.ai/nchc_service/multi_login.php?site=tws",
+              },
               {
                 label: "Academic Users",
                 href: "https://iservice.nchc.org.tw",
               },
-              {
-                label: "Enterprise Users",
-                href: "https://tws.twcc.ai",
-              },
             ],
           },
           {
-            title: "More",
+            title: "Feedback",
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/twcc/man-vip",
+                href: "https://github.com/twcc/man-vip/issues/new?assignees=&labels=question&template=questions.md&title=%5BDISCUSS%5D+-+",
               },
             ],
           },
@@ -242,7 +256,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-    })
+    }),
 };
 
 module.exports = config;

@@ -5,9 +5,9 @@ servers:
       apigateway:
         default: https://apigateway.twcc.ai
       ApiHost:
-        default: k8s-taichung-default
+        default: k8s-D-twcc
 info:
-  version: 1.5.2
+  version: 2.1.0
   title: CCS API
   description: |
     This is CCS API.
@@ -150,6 +150,30 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GroupAssetsSerializer'
+  /projects/{project_id}/user_quotas/:
+    get:
+      tags:
+        - project
+      summary: get user quotas
+      description: get user quotas.
+      parameters:
+        - $ref: '#/components/parameters/ProjectInPathParam'
+        - name: user
+          in: query
+          description: User UUID，tenant user is required
+          schema:
+            type: string
+            format: uuid
+        - $ref: '#/components/parameters/ApiHostParam'
+      responses:
+        200:
+          description:  OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserQuotaSerializer'
   /flavors/:
     get:
       tags:
@@ -1195,6 +1219,61 @@ components:
         floatingip:
           type: integer
           format: int32
+    UserQuotaSerializer:
+      required:
+      - cpu
+      - gpu
+      - memory
+      - user
+      type: object
+      properties:
+        user:
+          $ref: '#/components/schemas/UserSerializer'
+        gpu:
+          type: object
+          properties:
+            usage:
+              type: integer
+              format: int64
+            quota:
+              type: integer
+              format: int64
+        cpu:
+          type: object
+          properties:
+            usage:
+              type: integer
+              format: int64
+            quota:
+              type: integer
+              format: int64
+        memory:
+          type: object
+          properties:
+            usage:
+              type: integer
+              format: int64
+            quota:
+              type: integer
+              format: int64
+        ipvs_port:
+          type: object
+          properties:
+            usage:
+              type: integer
+              format: int64
+            quota:
+              type: integer
+              format: int64
+        floatingip:
+          type: object
+          properties:
+            usage:
+              type: integer
+              format: int64
+            quota:
+              type: integer
+              format: int64
     GroupAssetsSerializer:
       required:
       - begin_time
@@ -2101,11 +2180,6 @@ components:
         availability_zone:
           type: string
           description: Job
-        depends_on:
-          type: array
-          description: Specify the name of the steps on which this step depends. Only suppored by Slurm platform.
-          items:
-            type: string
         dependency_policy:
           type: string
           description: The policy of the dependency
@@ -2118,7 +2192,7 @@ components:
           description: The command need to be executed in the image
         env:
           type: object
-          description: 任務容器環境變數，預設為{}
+          description: Task container environment variables, the default is {}
           properties: {}
         image:
           type: string
@@ -2143,7 +2217,7 @@ components:
       type: object
       properties:
         callback:
-          description: 自動停止任務的迴叫網址
+          description: Callback URL for auto-stop tasks
           type: string
         name:
           description: Job name
@@ -2192,7 +2266,7 @@ components:
         #       items:
         #         $ref: '#/components/schemas/WriteJobVolumeSerializer'
         tag:
-          description: 過濾用任務標籤
+          description: filter task tag
           type: string
     WriteJobVolumeSerializer:
       required:
@@ -2208,9 +2282,6 @@ components:
           type: string
         subpath:
           description: subpath mount source(This value takes effect on HOSTPATH)
-          type: string
-        bucket:
-          description: Ceph bucket Name(This value takes effect only on the type CEPH)
           type: string
         mountPath:
           description: mount destination
@@ -2425,11 +2496,4 @@ components:
       required: true
       schema:
         type: string
-        default: k8s-taichung-default
-      # examples:
-      #   production:
-      #     summary: production
-      #     value: k8s-taichung-default
-      #   staging:
-      #     summary: staging
-      #     value: k8s-taichung-default
+        default: k8s-D-twcc
