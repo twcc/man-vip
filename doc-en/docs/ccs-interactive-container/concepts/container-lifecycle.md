@@ -28,7 +28,7 @@ When you create a container, the system allocates resources and initializes the 
 the container enters in the **`Ready`** state, you can perform the following actions:
 
 - <i class="fa fa-check" aria-hidden="true"></i> Connect to the container
-- <i class="fa fa-check" aria-hidden="true"></i> Create container duplicates
+- <i class="fa fa-check" aria-hidden="true"></i> Create container images
 - <i class="fa fa-check" aria-hidden="true"></i> Associate, dissociate service ports... and other operations.
 
 :::info
@@ -41,7 +41,7 @@ Please refer to the creation steps [<ins>Create container</ins>](/@twccdocs/guid
 If you want to delete a container permanently and no longer use it, after clicking delete, the container enters in the **`Deleting`** state, and <ins>**it is not billed anymore**</ins>. After the deletion is complete, the container will disappear from the list.
 
 Notice of deletion:
-- The data in the container system directory will be permanently deleted. If you need to keep it, you can create [Container duplicate](https://man.twcc.ai/@twccdocs/guide-ccs-duplicate-en).
+- The data in the container system directory will be permanently deleted. If you need to keep it, you can create [Container image](https://man.twcc.ai/@twccdocs/guide-ccs-image-en).
 - /home, /work data (Hyper File System storage space) will be retained and will not be removed as the container is deleted.
 
 :::info

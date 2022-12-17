@@ -1,22 +1,26 @@
 ---
 sidebar_position: 1
-sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-duplicate-en' 
-sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-duplicate-en' 
+sync_original_production: 'https://man.twcc.ai/@twccdocs/guide-ccs-image-en' 
+sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/guide-ccs-image-en' 
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-# Container Duplicate
+# Interactive Container image
 
-With TWCC Interactive Container Duplicate, you are able to store the self-deployed container setting. After the container duplicate is created, all project members can share it. With this service, all software requires only one installation, providing you with the convenience of quickly copying and deploying the same environment.
+TWCC provides a variety of optimized container images for NGC AI computation, and also provides the ability to save custom images you have deployed by yourself. All project members can share them. With this service, all software requires only one installation, providing you with the convenience of quickly copying and deploying the same environment.
 
-Moreover, since billing starts when a container is created, if a container is no longer needed, you can duplicate it to store its settings, then delete it to reduce your cost and restore the container from the duplicate on the next time you need it. In addition, you can use container duplicates as a disaster recovery for container damage.
+Moreover, since billing starts when an interactive container is created, if a container is no longer needed, you can use image to store its settings, then delete it to reduce your cost and restore the container from the image on the next time you need it. In addition, you can use container images as a disaster recovery for container damage.
+
+:::info
+About detailed description, please refer to [<ins>TWCC Container Image overview</ins>](/docs/ccs-interactive-container/concepts/container-images.md)。
+:::
 
 :::caution
-1. The scope of the container duplicate does not include the data in the default directories /home and /work of the container. Please note the installation location of the packages before creating a duplicate. Python package installation notes can be found at [<ins>Python package installation guide</ins>](https://man.twcc.vip/en/docs/ccs/tutorials/python-package-installation-guide).
-2. When you store more than 10 GB of data in the container system directory (not /home or /work directory of [<ins>Hyper File System (HFS)</ins>](https://man.twcc.vip/en/docs/hfs/intro)), the container duplicate might not be created normally.<br/>
+1. The scope of the custom image does not include the data in the default directories /home and /work of the container. Please note the installation location of the packages before creating an image. Python package installation notes can be found at [<ins>Python package installation guide</ins>](https://man.twcc.vip/en/docs/ccs/tutorials/python-package-installation-guide).
+2. When you store more than 10 GB of data in the container system directory (not /home or /work directory of [<ins>Hyper File System (HFS)</ins>](https://man.twcc.vip/en/docs/hfs/intro)), the container image might not be created normally.<br/>
 You can check used capacity of the container system catalog `/` by entering the command `df -h`.
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_eeeecf274c536f0c7c8ce65c910ec9a5.png)<br/>
 If there are any questions, please contact our Technical Support or Customer Service, thank you!
@@ -25,26 +29,30 @@ If there are any questions, please contact our Technical Support or Customer Ser
 <br/>
 
 
-## Create Interactive Container duplicate
+## Create Image
 
 <Tabs>
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
-* Click **CONFIGURATIONS** tab in the Interactive Container Details page, and click **DUPLICATE** button above.
+* Click **CONFIGURATIONS** tab in the Interactive Container Details page, and click **IMAGE** button above.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_9ffc1c5c98c6699cba4035298982d1bf.png)
+![](https://i.imgur.com/f3HRAXg.png)
 
-* Enter the tag of the container duplicate, then click OK.
+* Enter the tag of the container image, then click OK.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_68385ca6ce0edbb15e95eca687d23386.png)
+![](https://i.imgur.com/cEGjEsl.png)
 
-* After the container duplicate is created, it will appear in the list of Duplicate Management page. It takes a few minutes to finish the creation of container duplicate. At this time, the duplicate is in **`requested`** state.
+:::info
+If an image has a duplicate tag name, it will overwrite the original completed image and refresh the last update time on the Image Management page.
+:::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_37224305b2932aa939c56b73f3916cc4.png)
+* After the container image is created, it will appear in the list of Image Request History. It takes a few minutes to finish the creation of container image. At this time, the request status shows **`requested`**.
 
-* After a few minutes, you can start using it when the copy status becomes **`resolved`**.
+![](https://i.imgur.com/0IUEcsd.png)
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8b54cc67e44d7a70bc8362dbfd54ba5d.png)
+* After a few minutes, you can start using it when the request status becomes **`resolved`**.
+
+![](https://i.imgur.com/HxvQyQa.png)
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
@@ -67,22 +75,50 @@ twccli ls ccs -dup
 </Tabs>
 
 :::info
-A container duplicate cannot be deleted after creation.
+You can only view your own history on the Image Request History page.
 :::
 
 <br/>
 
+## Container Management
 
-## Create a custom container from a duplicate
+After the custom image is created, you can go to the Image Management page to view image information or delete image you no longer use.
 
-After duplicate is created, you can create a new container from a duplicate when needed.
+<Tabs>
+<TabItem value="TWCC Portal" label="TWCC Portal">
+
+**View Information**
+
+* Click **Interactive Container** from the Services list, and click **Image** on the left side to enter **Image Management** page.
+* You can view image information on this page, including name, tag, size, last updated time, and last retrieved time.
+
+![](https://i.imgur.com/zyIIEFe.png)
+
+</TabItem>
+<TabItem value="TWCC CLI" label="TWCC CLI (TBD)">
+
+</TabItem>
+</Tabs>
+
+:::info
+
+- Last Updated time: If an image has a duplicate tag name, it will overwrite the original completed image and refresh this time.
+- Last Retrieved time: The time of taking image to create a container.
+
+:::
+
+<br/>
+
+## Create a custom container by image
+
+After image is created, you can create a new container from an image when needed.
 
 <Tabs>
 <TabItem value="TWCC Portal" label="TWCC Portal">
 
 * Click **Interactive Container** from the service list, and click **+CREATE** on the **Interactive Container Management** page.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_cfc90926e6b53aeb734b33330124c1ed.png)
+![](https://i.imgur.com/ibeJvnf.png)
 
 * When choosing Image Type, click **Custom Image**.
 
@@ -90,16 +126,16 @@ After duplicate is created, you can create a new container from a duplicate when
 
 * Fill in the basic information and hardware configuration of the container, and select the Custom Image you want to use, then click **NEXT: STORAGE>**. The other steps are the same as creating a Interactive container.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_47b3a134896b78a44dbae3d878dff1c3.png)
+![](https://i.imgur.com/EnU3FJd.png)
 
 :::info
-Duplicates can be shared among members of the same project. All duplicates of the project can be found in the image drop-down list.
+Images can be shared among members of the same project. All container images of the project can be found in the image drop-down list.
 :::
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
 
-- Create a container with the image type `Custom Image`, image configuration and tag `tensorrt-19.08-py3:dup1`, and name the duplicate as `dupcli`.
+- Create a container with the image type `Custom Image`, image configuration and tag `tensorrt-19.08-py3:dup1`, and name the image as `dupcli`.
 
 ```bash
 twccli ls ccs -img "Custom Image"

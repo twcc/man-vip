@@ -57,7 +57,7 @@ For those who are familiar with container technology and want to add other appli
 
 :::caution
 
-Since customizing the Singularity container images requires sudo privileges, TWNIA2 (HPC CLI) is unable to provide users with sudo privileges to avoid damage to the physical server. We suggest you use **[<ins>TWCC VCS instance</ins>](https://www.twcc.ai/doc?page=vm)** to compile your image, and delete it after completion.
+Since customizing the Singularity container images requires sudo privileges, TWNIA2 (HPC CLI) is unable to provide users with sudo privileges, in order to maintain the consistency of the use environment and the protection of user data security. We suggest you use **[<ins>TWCC VCS instance</ins>](https://www.twcc.ai/doc?page=vm)** to compile your image, and delete it after completion.
 
 :::
 :::tip

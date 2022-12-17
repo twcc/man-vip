@@ -16,7 +16,7 @@ The following demonstrates how to set up a web service with Flask in a container
 
 - After the container is created, open Jupyter Notebook :arrow_right: Terminal
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_42fac0b7acc6b4a74b8ba792c022bb5d.png)
+![](https://i.imgur.com/UQ7iUxF.png)
 
 
 ## Configure a web service and a service port
@@ -35,10 +35,10 @@ wget -O - https://bit.ly/TWCC_TestServicePort_5002 | bash
         
 - Back to Interactive Container Details page, click ASSOCIATE:arrow_right: select the port number of the service daemon `5002` :arrow_right: click OK
         
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_384f2febec1ccdaf1c98a3e8b693efb3.png)
+![](https://i.imgur.com/jmisBIH.png)
 
         
-- After that, the system will allocate a **target port** (53055) corresponding to the external port (5002)
+- After that, the system will allocate a **target port** (59344) corresponding to the external port (5002)
         
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_d916b86e079a007d7b2e51a925db2ad5.png)
 

@@ -21,7 +21,7 @@ TWCC Interactive Container service is based on pre-loaded AI framework of [NGC I
 
 You can choose to install in the system directory (as root user) or the user's home directory (Hyper File System, HFS) when installing packages using pip:
 
-- Installing in the system directory: The life cycle of the development environment would be consistent with that of your container. You can create a container duplicate to save these packages, and then create an Interactive Container from the duplicate when needed, then you will get a consistent development environment. However, if you choose another container, you have to reinstall the packages.
+- Installing in the system directory: The life cycle of the development environment would be consistent with that of your container. You can create a container image to save these packages, and then create an Interactive Container from the image when needed, then you will get a consistent development environment. However, if you choose another container, you have to reinstall the packages.
 　　
 - Installing in the user's home directory: In principle, the package will be stored permanently in Hyper File System (HFS). By default, the HFS mounted to TWCC Interactive Container is the user's home directory. In other words, the packages will be brought to the new container without reinstallation when you create a new one. **However, TWCC provides multiple AI Frameworks, and the Python version of them may be different, which may cause package conflicts.**
 

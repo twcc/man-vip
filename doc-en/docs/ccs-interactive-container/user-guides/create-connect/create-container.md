@@ -37,11 +37,11 @@ For the detailed information of container types (including the number of GPUs an
 You can click on the asterisk to the left of the service in "**All Services**" <i class="fa fa-star-o" aria-hidden="true"></i> and pin your frequently used services to "**My Favorite Services**" to speed up the process.
 :::
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_c40df078ec48ab4db3d060f52d37d092.png)
+![](https://i.imgur.com/ibeJvnf.png)
 
 * Choose Image Type: You can browse and select the deep learning framework optimized by NGC, or directly search for the name of the framework in the search bar (e.g. PyTorch, TensorFlow...).
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8a53c677b248ea69b8d219cbc5f34464.png)
+![](https://i.imgur.com/CWmPeUV.png)
 
 :::tip
 1. For the NGC container image type, version and packages provided by TWCC, please refer to [<ins>Container Images</ins>](https://man.twcc.vip/en/docs/ccs_framwork_image/intro).

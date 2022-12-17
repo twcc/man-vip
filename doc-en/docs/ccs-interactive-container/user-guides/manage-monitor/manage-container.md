@@ -29,10 +29,10 @@ View information such as container ID, name, public IP, state, creation time, cr
 - In **Interactive Container Management** page, you can view the basic information.
 - You can also click on a specific container and enter the **Interactive Container Details** page to view more container information.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_ae7be7274e4ae575a119f7bf456fca6d.png)
+![](https://i.imgur.com/7DpbJuA.png)
 
 - Enter the **CONFIGURATIONS** tab of Interactive Container Details, you can view basic information, network, storage and other information of the container, or connect to the container.
-- Also, you can perform functions such as **Duplicate**, **Delete**, **Refresh** and view **Container Log**.
+- Also, you can perform functions such as **Image**, **Delete**, **Refresh** and view **Container Log**.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_e4a812d099355186aa618e3fd462c0c8.png)
 
@@ -83,12 +83,12 @@ If the container is no longer in use, we suggest you delete it to save costs.
 - On the **Interactive Container Management** page, click <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i>  on the right side of the container, then click **DELETE** to delete the container.
 - Or select single or multiple containers at once, and click **DELETE** above to delete the containers.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_bd56c116ab6bc2b6f250f783c234ca79.png)
+![](https://i.imgur.com/BXrhRj0.png)
 
 
 - Also, you can delete the container by clicking **DELETE** in the **Interactive Container Details** page.
 
-![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7fe8c7f2b599f604e198780abca4086b.png)
+![](https://i.imgur.com/t4sXIuZ.png)
 
 </TabItem>
 <TabItem value="TWCC CLI" label="TWCC CLI">
