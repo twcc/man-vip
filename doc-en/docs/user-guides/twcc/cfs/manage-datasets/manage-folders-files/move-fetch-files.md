@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # Move and fetch
 
-You can move in-frequent access data to cold storage, and move data to hot storage when needed.
+You can move infrequently fetched data to cold storage, and move it to hot storage when needed.
 
 ## Move files to Cold Storage
 

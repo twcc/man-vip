@@ -80,7 +80,7 @@ import TabItem from '@theme/TabItem';
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_8646437146760e77ce21f2140ebb8a7e.png)
 
 :::info
-- 目前透過 TWCC 入口網站一次僅能下載一個檔案，如欲下載多個檔案，可透過左側功能列之 <ins>[「**存取介面管理**」](/user-guides/twcc/cfs/access-interfaces-hot-files.md)</ins> 透過第三方軟體下載。
+- 目前透過 TWCC 入口網站一次僅能下載一個檔案，如欲下載多個檔案，可透過左側功能列之 [<ins>「**存取介面管理**」</ins>](/user-guides/twcc/cfs/access-interfaces-hot-files.md) 透過第三方軟體下載。
 
 - 請參考[<ins>版本紀錄</ins>](/user-guides/twcc/cfs/manage-datasets/manage-folders-files/metadata-search-versioning.md#版本紀錄)了解如何取用舊檔案。
 
