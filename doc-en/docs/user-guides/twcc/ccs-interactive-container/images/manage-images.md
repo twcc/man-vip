@@ -33,5 +33,4 @@ On the **Image Management** page, click on the  <i class="fa fa-ellipsis-v fa-20
 :::info
 - Last updated time: Once the tag name is repeatedly created for the same container, the new image will replace the original image with the same tag and update the time.
 - Last retrieved time: The time you used the image to create a container.
-
 :::
