@@ -99,5 +99,5 @@ twccli ls ccs -s 1249374 -gssh
 ---
 
 :::info
-[<ins>Forget your supercomputer password?</ins>](/user-guides/tws-member-center/manage-member-accounts/system-account-password-otp.md)
+[<ins>Forget your system password?</ins>](/user-guides/tws-member-center/manage-member-accounts/system-account-password-otp.md)
 :::
