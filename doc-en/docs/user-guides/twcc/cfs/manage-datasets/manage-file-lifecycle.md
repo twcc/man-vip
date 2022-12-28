@@ -11,15 +11,15 @@ import TabItem from '@theme/TabItem';
 
 # Manage lifecycle
 
-Life Cycle Management provides a variety of file life cycle management rules. You can set filters based on file type, name, size, creation date and the files that unchanged for a long time(by days), etc. Life Cycle Management can perform actions on files, including **Move to Cold Storage**, **Move to Hot Storage** and **Deletion**.
+Lifecycle Management provides a variety of file lifecycle management rules. You can set filters based on file type, name, size, creation date and the files that unchanged for a long time(by days), etc. Lifecycle Management can perform actions on files, including **Move to Cold Storage**, **Move to Hot Storage** and **Deletion**.
 
 ## Edit lifecycle rules 
 
-* On **File Storage Management** page, move cursor to <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> button on right side of dataset, and click **EDIT LIFE CYCLE RULES**.
+* On **File Storage Management** page, move cursor to <i class="fa fa-ellipsis-v fa-20" aria-hidden="true"></i> button on right side of dataset, and click **EDIT LIFECYCLE RULES**.
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dceb595fc66961bb7ec5a0d8ed62d95d.png)
 
-* Enter to **Life Cycle Rules** to setup:
+* Enter to **Lifecycle Rules** to setup:
     * File Name: Enter file name and seperate using comma.
     * Extension: Enter file extension and seperate using comma.
     * File size: Enter file size to larger than given numbres.
@@ -40,7 +40,7 @@ If `File Name` and `Extension` are both ticked, files that meet the criteria wil
 It will takes up to 24 hours to take effect after rule creation or modification.
 :::
 
-* After the update, the settings will be applied to the dataset and life cycle rules will be enabled immediately. Click **STOP** to stop the life cycle rules and the settings will be remained.
+* After the update, the settings will be applied to the dataset and lifecycle rules will be enabled immediately. Click **STOP** to stop the lifecycle rules and the settings will be remained.
 
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a439505a69374b15245e1077eb3eb7ab.png)

@@ -73,8 +73,8 @@ Please [create a dataset](/user-guides/twcc/cfs/manage-datasets/manage-folders-f
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_b99c2b9a8424bc0e82af837bcc20c75f.png)
 
 :::info
-- Currently, only one file can be downloaded at a time through the TWCC portal. You can download multiple files through third-party software <ins>[Access Interface Management](/user-guides/twcc/cfs/access-interfaces-hot-files.md)</ins> on the service list.
-- Please refer to [<ins>the version record</ins>](/user-guides/twcc/cfs/manage-datasets/manage-folders-files/metadata-search-versioning.md#version-history) for the file record description.
+- Currently, only one file can be downloaded at a time through the TWCC portal. You can download multiple files through third-party software by [<ins>Access Interface Management</ins>](/user-guides/twcc/cfs/access-interfaces-hot-files.md) on the service list.
+- Please refer to [<ins>the version record</ins>](/user-guides/twcc/cfs/manage-datasets/manage-folders-files/metadata-search-versioning.md#version-history) to learn how to fetch old files.
 :::
 
 
@@ -84,8 +84,7 @@ Please [create a dataset](/user-guides/twcc/cfs/manage-datasets/manage-folders-f
 * Select files and click the **DELETE** button, you can also select multiple files to delete together.
 
 :::info
-
-<ins>[Moving files](/user-guides/twcc/cfs/manage-datasets/manage-folders-files/move-fetch-files.mdn)</ins> cannot be deleted.
+The files that are being [<ins>migrated</ins>](/user-guides/twcc/cfs/manage-datasets/manage-folders-files/move-fetch-files.md) cannot be deleted.
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1f8e1c3d720b031132331f075956d8f3.png)

@@ -18,8 +18,8 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/cfs-overview-zh'
      A cloud storage solution to store files in TWCC.
   - **File access and management (list/search/versioning/metadata)**
     Provide file version management and metadata search management.
-  - **File Lifecycle Management - Hot and Cold Storage Data Transfer**
-     A policy set by user to automatically or manually move in-frequent access file to cold storage for long-term data storage, and files can be transfer between two types of storage at any time.
+  - **File Lifecycle Management - Hot and Cold Storage Data Migration**
+     A policy set by user to automatically or manually migrate migrate infrequently fetched file to cold storage for long-term data storage, and files can be migration between two types of storage at any time.
 
 ### File Sharing
   - **Set sharing permissions to control access right**
