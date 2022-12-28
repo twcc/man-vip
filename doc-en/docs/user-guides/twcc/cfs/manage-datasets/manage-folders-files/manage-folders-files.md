@@ -84,8 +84,7 @@ Please [create a dataset](/user-guides/twcc/cfs/manage-datasets/manage-folders-f
 * Select files and click the **DELETE** button, you can also select multiple files to delete together.
 
 :::info
-
-<ins>[Moving files](/user-guides/twcc/cfs/manage-datasets/manage-folders-files/move-fetch-files.mdn)</ins> cannot be deleted.
+The files that are being [<ins>migrated</ins>](/user-guides/twcc/cfs/manage-datasets/manage-folders-files/move-fetch-files.md) cannot be deleted.
 :::
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_1f8e1c3d720b031132331f075956d8f3.png)

@@ -86,5 +86,5 @@ If you forgot your **system account** or **system password**, please refer to [<
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_a5e51cd889a7f5d12061441474228eaa.png)
 
-* After successful login, the files in CFS will be displayed and available for file transfer and access (first-level folder name is the project ID by default).
-* Files stored in the cold storage area, will be displayed with `.COLDDATA` suffix and cannot be downloaded, moved, copied or deleted directly through the SFTP software. Please manage files through the TWCC portal.
+* After successful login, the files in CFS will be displayed and available for file migration and fetch (first-level folder name is the project ID by default).
+* Files stored in the cold storage area, will be displayed with `.COLDDATA` suffix and cannot be downloaded, migrated, copied or deleted directly through the SFTP software. Please manage files through the TWCC portal.
