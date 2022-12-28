@@ -26,7 +26,7 @@ In addition to being independently used as a stable and secure data storage spac
 
 :::info
 [1] You need to use TWCC CLI to access the data in Cloud Object Storage from TWCC Interactive Container.<br/>
-[2] Private COS is currently not available through TWCC portal, and files can only be accessed using third-party software.
+[2] Private buckets is currently not available through TWCC portal, and files can only be accessed using third-party software.
 
 
 <!-- - 一般檔案管理 (上傳/下載/Metadata搜尋/設定通知)，可直接透過 TWCC 入口網站操作，參見以下說明。 -->
