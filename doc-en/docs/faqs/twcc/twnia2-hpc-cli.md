@@ -78,7 +78,7 @@ Please make sure the ratio of the resources is based on 1 GPU : 4 CPU : 90 GB Me
 <summary> Q1. How to deploy environment and run my program on Taiwania 2 (HPC CLI)?</summary>
 
 1. Conda: Use simple Conda commands to install packages and switch to your specific virtual environment. Also, with different versions of Python, Conda can reduce the compatibility problems of multiple package versions. For more information, please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-twnia2-conda-manage-packages-submit-job-zh).
-2. Singularity: By using Singularity to pack the packages and programs you need, you can create a container environment on Taiwania 2 (HPC CLI) and deploy, migration and share your packages rapidly. For more information, please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-twnia2-create-sglrt-container-zh).
+2. Singularity: By using Singularity to pack the packages and programs you need, you can create a container environment on Taiwania 2 (HPC CLI) and deploy, migrate and share your packages rapidly. For more information, please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-twnia2-create-sglrt-container-zh).
 
 
 </details>
