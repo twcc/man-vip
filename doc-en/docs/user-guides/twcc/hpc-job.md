@@ -112,7 +112,7 @@ You can click on the star <i class="fa fa-star-o" aria-hidden="true"></i> on the
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_7a9928ea5db2d6d8d3c82b71f38b0fa4.png)
 
 :::info
-You can [connect to the data transfer node](/user-guides/twcc/hfs/connect-data-transfer-node.md) to the path `/work/{{supercomputer account}}/slurm_log` to view the computing history of all HPC jobs.
+You can [connect to the data transfer node](/user-guides/twcc/hfs/connect-data-transfer-node.md) to the path `/work/{{system account}}/slurm_log` to view the computing history of all HPC jobs.
 :::
 
 ## Monitoring a HPC Job

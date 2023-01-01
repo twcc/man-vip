@@ -60,9 +60,11 @@ Please check the email (TWCC-Forget password validation), and click the password
 
 
 :::info
-1. If you have successfully linked your Facebook/Google/EduRoam account, you do not need to enter the member password.
+1. If you have successfully linked your Facebook/Google account, you do not need to enter the member password, but you will still need to periodically change the password for the account you choose to tie to in order to ensure your account is secure.
 2. The length of the password must be at least 12 characters, and not too simple.
 3. The password must contain at least three of the four types mentioned below: numbers, English letters (upper and lower case are different types), and special characters.
+4. The maximum validity of our information service account password (member or system account) is 180 days.
+5. When the password is about to expire (7 days before the expiration date, 3 days before the expiration date or the same day), a password reminder notice will be sent to the user to log in to the [Member Center](/user-guides/tws-member-center/access-tws-member-center.md) to change the password.
 :::
 
 <br/>

@@ -88,7 +88,7 @@ twccli ls ccs -s 1249374 -gjpnb
 ```bash
 twccli ls ccs -s 1249374 -gssh
 ```
-- **Step 2.** Open Terminal in the local device, copy and paste the command > insert the **superaccount password** to launch the container.
+- **Step 2.** Open Terminal in the local device, copy and paste the command > insert the **system account and password** to launch the container.
 
 </TabItem>
 </Tabs>
@@ -99,5 +99,5 @@ twccli ls ccs -s 1249374 -gssh
 ---
 
 :::info
-[<ins>Forget your supercomputer password?</ins>](/user-guides/tws-member-center/manage-member-accounts/system-account-password-otp.md)
+[<ins>Forget your system password?</ins>](/user-guides/tws-member-center/manage-member-accounts/system-account-password-otp.md)
 :::
