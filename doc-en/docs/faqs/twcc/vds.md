@@ -24,7 +24,7 @@ If you are still unable to attach after confirming the above, please contact the
 
 <summary> Q2. Why can't I read the newly attached disk?</summary>
 
-The newly attached disk needs to be initialized to access the data, for initialization steps, please refer to:
+The newly attached disk needs to be initialized to fetch the data, for initialization steps, please refer to:
 [Initialize Linux disks](https://www.twcc.ai/doc?page=howto-bss-init-vol-linux) or [Initialize Windows disks](https://www.twcc.ai/doc?page=howto-bss-init-vol-windows).
 
 </details>

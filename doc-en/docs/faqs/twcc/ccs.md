@@ -29,7 +29,7 @@ TWCC has substantial HPC resources, and you can make use of through the followin
 
 You can use containers to train AI models and generate inference engines. The steps are as follows:
 
-**Step 1.** Upload your model training code and data to HFS under `/home/account` or `/work/account` directory. For more details, refer to [<ins>Hyper File System</ins>](/docs/user-guides/twcc/hfs/manage-files).<br/>
+**Step 1.** Upload your model training code and data to HFS under `/home/system account` or `/work/system account` directory. For more details, refer to [<ins>Hyper File System</ins>](/docs/user-guides/twcc/hfs/manage-files).<br/>
 **Step 2.** Create a container, connect to it ,and run the model training. For more information, refer to [<ins>Interactive Container</ins>](/docs/user-guides/twcc/ccs-interactive-container/create-containers).<br/>
 **Step 3.** You can download required data after the training is completed. For more details, refer to [<ins>Hyper File System</ins>](/docs/user-guides/twcc/hfs/manage-files).<br/>
 **Step 4.** You can generate an inference engine on a [<ins>CCS container</ins>](https://man.twcc.ai/@twccdocs/howto-ccs-tensorflow-inception-v3-port-zh) or on an [<ins>VCS Instance</ins>](/docs/user-guides/twcc/vcs).
@@ -69,9 +69,12 @@ Third-party open source software such as MobaXterm, PuTTY and VSCode,etc.
 
 <details>
 
-<summary> Q3. How to fix SSH `Permission denied` errors while connecting to a container?</summary>
+<summary> 
 
-You might be entering the wrong password. Please re-enter or reset system password in Member Center, refer to [<ins>this document</ins>](/docs/user-guides/tws-member-center/system-account-password-otp) for more information.
+Q3. How to fix SSH `Permission denied` errors while connecting to a container?
+</summary>
+
+You might be entering the wrong system password. Please re-enter or reset system password in Member Center, refer to [<ins>this document</ins>](/docs/user-guides/tws-member-center/system-account-password-otp) for more information.
 
 </details>
 
@@ -82,7 +85,7 @@ You might be entering the wrong password. Please re-enter or reset system passwo
 Please refer to the following 2 methods:
 
 1. Perform the following operations to restore the container to its initial state:
-   - **Step 1.** Clear or move the packages in the `/home/system account/.local/` directory. Refer to [<ins>suggested troubleshooting methods for abnormal program execution</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#程式執行異常的建議排除方式) for more information.<br/>
+   - **Step 1.** Clear or migrate the packages in the `/home/system account/.local/` directory. Refer to [<ins>suggested troubleshooting methods for abnormal program execution</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#程式執行異常的建議排除方式) for more information.<br/>
    - **Step 2.** Enter the `/home/system account/.cache/` directory and clear the temporary files generated during the computing process.<br/>
    - **Step 3.** If you have installed Anaconda or Miniconda, please also remove or rename it.<br/>
    - **Step 4.** Re-create a new container. When selecting the image type, move the cursor to <i class="fa fa-info-circle" aria-hidden="true"></i>, and go to the NGC website to check image information. Select a suitable image to create a new container and launch the Jupyter Notebook.
@@ -112,7 +115,7 @@ Currently CCS does not support container suspension. You can instead choose any 
 
 You can perform the following operations to restore the container to its initial state:
 
-**Step 1.** Clear or move the packages in the `/home/system account/.local/` directory. Refer to [<ins>suggested troubleshooting methods for abnormal program execution</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#程式執行異常的建議排除方式) for more information.<br/>
+**Step 1.** Clear or migrate the packages in the `/home/system account/.local/` directory. Refer to [<ins>suggested troubleshooting methods for abnormal program execution</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#程式執行異常的建議排除方式) for more information.<br/>
 **Step 2.** Enter the `/home/system account/.cache/` directory and clear the temporary files generated during the computing process.<br/>
 **Step 3.** If you have installed Anaconda or Miniconda, please also remove or rename it.<br/>
 **Step 4.** Re-create a new container. When selecting the image type, move the cursor to <i class="fa fa-info-circle" aria-hidden="true"></i>, and go to the NGC website to check image information. Select a suitable image to create a new container and launch the Jupyter Notebook.
@@ -125,7 +128,7 @@ You can perform the following operations to restore the container to its initial
 <summary> Q3. Are the environments in different containers different?</summary>
 
 All containers you create are mounted with the same storage space, [<ins>Hyoer File System (HFS)</ins>](/docs/user-guides/twcc/hfs).
-The life cycle of the HFS storage space follows the user's system account. Therefore, all containers created by one user are mounted with the same HFS storage space.
+The lifecycle of the HFS storage space follows the user's system account. Therefore, all containers created by one user are mounted with the same HFS storage space.
 
 </details>
 
@@ -177,7 +180,7 @@ The following problems may cause the container's GPU to be unavailable:
 
 1. The number of GPUs used by your program does not match the number created. Please make sure that the number of GPUs in the two places match.
 2. The package compatibility issue. Please fix it with the following steps:
-   - **Step 1.** Clear or move the packages in the `/home/system account/.local/` directory. Refer to [<ins>suggested troubleshooting methods for abnormal program execution</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#程式執行異常的建議排除方式) for more information.<br/>
+   - **Step 1.** Clear or migrate the packages in the `/home/system account/.local/` directory. Refer to [<ins>suggested troubleshooting methods for abnormal program execution</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#程式執行異常的建議排除方式) for more information.<br/>
    - **Step 2.** Enter the `/home/system account/.cache/` directory and clear the temporary files generated during the computing process.<br/>
    - **Step 3.** If you have installed Anaconda or Miniconda, please also remove or rename it.<br/>
    - **Step 4.** Re-create a new container. When selecting the image type, move the cursor to <i class="fa fa-info-circle" aria-hidden="true"></i>, and go to the NGC website to check image information. Select a suitable image to create a new container and launch the Jupyter Notebook.
@@ -207,7 +210,6 @@ You can check the memory usage on the portal or in the container:
 <summary> 
 
 Q7. What is the difference between "Memory Utilization" and "GPU Memory Utilization" in the **Monitoring Interactive Container** page?
-
 </summary>
 
 - **Memory Utilization**: The memory usage of the container allocated to you by the system, and its capacity is the specification you selected in the basic settings when you created the container.
@@ -299,7 +301,6 @@ You can use the built-in tools to manage your packages: `apt`, `apt-get`, and `p
 <summary> 
 
 Q7. What should I do if `Unable to change to /home/system account-chdir (13: Permission denied)` occurs when installing the package?
-
 </summary>
 
 To ensure data security, the root user of the container cannot access your /home and /work directories. Please install with your system account and do not switch to the root user.
@@ -325,7 +326,6 @@ TWCC containers do not provide OS-level permissions and therefore cannot be inst
 <summary> Q1. How to upload or download files to or from the container?</summary>
 
 For uploading files to /home or /work of the container, or downloading files to your local machine, refer to [<ins>this document</ins>](/docs/user-guides/twcc/hfs/manage-files) for more information.
-
 </details>
 
 <details>
@@ -376,7 +376,7 @@ If you select a container type with shared memory to create your container, you 
 <i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> <b>Important:</b>
 
 * Since storing data in the shared memory will occupy the space, please consider the storage space required by your program before storing.
-* The data stored here will disappear when the container is deleted. Move the data that need to be saved to `/home/system account` or `/work/system account` directories before deleting the container.
+* The data stored here will disappear when the container is deleted. Migrate the data that need to be saved to `/home/system account` or `/work/system account` directories before deleting the container.
 
 </details>
 
@@ -481,7 +481,7 @@ It might be a dataset problem or the node where the container is located is busy
 <summary> Q2. Why is the performance not as expected when the program is running?</summary>
 
 Follow the steps below to troubleshoot package compatibility issues: <br/>
-**Step 1.** Clear or move the packages in the `/home/system account/.local/` directory. Refer to [<ins>suggested troubleshooting methods for abnormal program execution</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#程式執行異常的建議排除方式) for more information.<br/>
+**Step 1.** Clear or migrate the packages in the `/home/system account/.local/` directory. Refer to [<ins>suggested troubleshooting methods for abnormal program execution</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#程式執行異常的建議排除方式) for more information.<br/>
 **Step 2.** Enter the `/home/system account/.cache/` directory and clear the temporary files generated during the computing process.<br/>
 **Step 3.** If you have installed Anaconda or Miniconda, please also remove or rename it.<br/>
 **Step 4.** Re-create a new container. When selecting the image type, move the cursor to <i class="fa fa-info-circle" aria-hidden="true"></i>, and go to the NGC website to check image information. Select a suitable image to create a new container and launch the Jupyter Notebook.
@@ -495,7 +495,7 @@ Follow the steps below to troubleshoot package compatibility issues: <br/>
 For ways to improve performance, please refer to the following:
 
 1. Troubleshoot package compatibility issues
-   - **Step 1.** Clear or move the packages in the `/home/system account/.local/` directory. Refer to [<ins>suggested troubleshooting methods for abnormal program execution</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#程式執行異常的建議排除方式) for more information.<br/>
+   - **Step 1.** Clear or migrate the packages in the `/home/system account/.local/` directory. Refer to [<ins>suggested troubleshooting methods for abnormal program execution</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#程式執行異常的建議排除方式) for more information.<br/>
    - **Step 2.** Enter the `/home/system account/.cache/` directory and clear the temporary files generated during the computing process.<br/>
    - **Step 3.** If you have installed Anaconda or Miniconda, please also remove or rename it.<br/>
    - **Step 4.** Re-create a new container. When selecting the image type, move the cursor to <i class="fa fa-info-circle" aria-hidden="true"></i>, and go to the NGC website to check image information. Select a suitable image to create a new container and launch the Jupyter Notebook.
@@ -514,7 +514,6 @@ For ways to improve performance, please refer to the following:
 <summary> 
 
 Q1. Shows `insufficient shared memory` when the program is running? 
-
 </summary>
 
 1. If it is a PyTorch container environment, please set the num workers of Dataloader to 0.
@@ -527,11 +526,10 @@ Q1. Shows `insufficient shared memory` when the program is running?
 <summary>
 
 Q2. Shows `bus error` when the program is running? 
- 
 </summary>
 
 Follow the steps below to troubleshoot package compatibility issues: <br/>
-**Step 1.** Clear or move the packages in the `/home/system account/.local/` directory. Refer to [<ins>suggested troubleshooting methods for abnormal program execution</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#程式執行異常的建議排除方式) for more information.<br/>
+**Step 1.** Clear or migrate the packages in the `/home/system account/.local/` directory. Refer to [<ins>suggested troubleshooting methods for abnormal program execution</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#程式執行異常的建議排除方式) for more information.<br/>
 **Step 2.** Enter the `/home/system account/.cache/` directory and clear the temporary files generated during the computing process.<br/>
 **Step 3.** If you have installed Anaconda or Miniconda, please also remove or rename it.<br/>
 **Step 4.** Re-create a new container. When selecting the image type, move the cursor to <i class="fa fa-info-circle" aria-hidden="true"></i>, and go to the NGC website to check image information. Select a suitable image to create a new container and launch the Jupyter Notebook.
@@ -543,7 +541,6 @@ Follow the steps below to troubleshoot package compatibility issues: <br/>
 <summary>
 
 Q3. Why couldn't I load some libraries during program execution (`Could not load dynamic library...`)?
- 
 </summary>
 
 This might because the library version called in the program does not match the version in the container. Please execute the following command to get the library version in the environment, and then modify the library version your program calls: `sudo find / -name [library name]`
@@ -555,7 +552,6 @@ This might because the library version called in the program does not match the 
 <summary> 
 
 Q4. Why does `sudo apt update` occurs `Unable to change to /home/wistron1/ -chdir (13: Permission denied)`?
-
 </summary>
 
 Please switch to root user and execute `apt update`.
@@ -567,11 +563,10 @@ Please switch to root user and execute `apt update`.
 <summary> 
 
 Q5. Why is `kernel busy` displayed in the upper right corner when using Jupyter Notebook?
-
 </summary>
 
 Please follow the procedure below to resolve package compatibility issues:<br/>
-**Step 1.** Clear or move the packages in the `/home/system account/.local/` directory. Refer to [<ins>suggested troubleshooting methods for abnormal program execution</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#程式執行異常的建議排除方式) for more information.<br/>
+**Step 1.** Clear or migrate the packages in the `/home/system account/.local/` directory. Refer to [<ins>suggested troubleshooting methods for abnormal program execution</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#程式執行異常的建議排除方式) for more information.<br/>
 **Step 2.** Enter the `/home/system account/.cache/` directory and clear the temporary files generated during the computing process.<br/>
 **Step 3.** If you have installed Anaconda or Miniconda, please also remove or rename it.<br/>
 **Step 4.** Re-create a new container. When selecting the image type, move the cursor to <i class="fa fa-info-circle" aria-hidden="true"></i>, and go to the NGC website to check image information. Select a suitable image to create a new container and launch the Jupyter Notebook.
