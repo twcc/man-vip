@@ -14,7 +14,6 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-cli-deploy-zh'
 
 1. Use any Python package manager with the `$ pip install -U TWCC-CLI` command. Or, see [<ins>TWCC-CLI v0.5</ins>](https://github.com/TW-NCHC/TWCC-CLI/tree/v0.5) operation manual for installation and usage.
 2. If you are using VCS instance created by image Ubuntu 20.04, TWCC-CLI has been installed in it by default, and can be used directly.
-
 </details>
 
 
@@ -59,7 +58,6 @@ pip install TWCC-CLI
 <summary> 
 
 Q5. What should I do when it occurs `'ascii' codec can't encode characters in position 610-612: ordinal not in range(128)`?
-
 </summary>
 
 This locale environment variables error might occur when updating CLI or reinstalling CLI. Please run the following command to set language environment:
@@ -77,7 +75,6 @@ export LANG=C.UTF-8
 <summary> 
 
 Q6. What should I do when it occurs `twccli: command not found` after installing?
-
 </summary>
 
 - If the error occurs after the installation is successful (as shown below):

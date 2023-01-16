@@ -35,7 +35,6 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-hfs-zh'
 <summary> 
 
 Q2. Why can't I log into the data transfer node (xdata1.twcc.ai) with SFTP protocol?
-
 </summary>
 
 Please make sure that you use the SSH private key as the login credential, not your system password. If you confirm that the login credentials are correct but you still have problems logging in, please contact Customer Service.

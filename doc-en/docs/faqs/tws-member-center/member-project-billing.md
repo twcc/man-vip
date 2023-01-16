@@ -32,7 +32,7 @@ Please refer to [<ins>this document</ins>](/user-guides/tws-member-center/manage
 
 <summary>  Q3. What can I do if I forget the system password?</summary>
 
-Since we do not record the user's system password, please reset your password through the service website. Please refer to 
+Since we do not record the user's system password, please reset system password through the service website. Please refer to 
 [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-service-main-en/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-hostname-pwd-otp-en#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC) for the detailed resetting steps.
 
 </details>

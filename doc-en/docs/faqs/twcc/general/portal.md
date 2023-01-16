@@ -62,7 +62,6 @@ Please refer to "Quota" of [<ins>this document</ins>](/user-guides/twcc/general/
 <summary>
 
 Q6. An error when creating resource:`[i-service] no quota to request resource.user`？
-
 </summary>
 
 

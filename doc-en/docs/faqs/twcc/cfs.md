@@ -11,9 +11,9 @@ sync_original_preview: 'https://man.twcc.ai/@preview-twccdocs/faq-cfs-zh'
 
 <details>
 
-<summary> Q1. When I upload a new version of a file, the file that was in the cold storage is moved to the hot storage?</summary>
+<summary> Q1. When I upload a new version of a file, the file that was in the cold storage is migrated to the hot storage?</summary>
 
-File version management function, after uploading a new version, the original file will become the old version and placed in the original storage area without being moved. The latest version of the file is displayed in the folder file list. Older versions can be viewed by clicking on the **version history** in the directory to the right of the file.
+File version management function, after uploading a new version, the original file will become the old version and placed in the original storage area without being migrated. The latest version of the file is displayed in the folder file list. Older versions can be viewed by clicking on the **version history** in the directory to the right of the file.
 
 </details>
 

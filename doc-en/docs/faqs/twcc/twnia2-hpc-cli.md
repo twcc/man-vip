@@ -33,7 +33,7 @@ Available open-source software includes MobaXterm, PuTTY, VSCode, etc.
 
 <summary> Q3. Failed to log in recently, but able to log in to Taiwania 2 (HPC CLI) half a year ago?</summary>
 
-The validity period of system password is 180 days. Please reset the expired password in [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) before you can re-login successfully.
+The validity period of system password is 180 days. Please reset your system password in [<ins>Member Center<i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) before you can re-login successfully.
 
 </details>
 
@@ -78,7 +78,7 @@ Please make sure the ratio of the resources is based on 1 GPU : 4 CPU : 90 GB Me
 <summary> Q1. How to deploy environment and run my program on Taiwania 2 (HPC CLI)?</summary>
 
 1. Conda: Use simple Conda commands to install packages and switch to your specific virtual environment. Also, with different versions of Python, Conda can reduce the compatibility problems of multiple package versions. For more information, please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-twnia2-conda-manage-packages-submit-job-zh).
-2. Singularity: By using Singularity to pack the packages and programs you need, you can create a container environment on Taiwania 2 (HPC CLI) and deploy, move and share your packages rapidly. For more information, please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-twnia2-create-sglrt-container-zh).
+2. Singularity: By using Singularity to pack the packages and programs you need, you can create a container environment on Taiwania 2 (HPC CLI) and deploy, migrate and share your packages rapidly. For more information, please refer to [<ins>this document</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-twnia2-create-sglrt-container-zh).
 
 
 </details>
@@ -173,7 +173,6 @@ The storage space is bound with your personal account, so the files will not be 
 <summary> 
 
 Q1. Occurs this error `QOSMaxSubmitJobPerUserLimit Error` when using Taiwania 2 (HPC CLI)?
-
 </summary>
 
 This error message showed that you have submitted over 20 computing job (queue **gtest** is for experimental use, only able to submit 5 jobs).
@@ -190,7 +189,6 @@ For instructions on using Queues and computing resources, please refer to <a hre
 <summary>
 
  Q2. Occurs this error `QOSMaxGRESPerUser` in `NODELIST(REASON)` after job submission? 
-
 </summary> 
 
 This error message showed that you have reached the maximum number of GPUs calculated by Taiwania 2 (HPC CLI) (the base system is set to 40 GPUs).
